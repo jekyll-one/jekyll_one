@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>tutorial</title>
+
+  <!-- CSS sources ------------------------------------------------------------- -->
+  <!-- IPython styles -->
+  <link rel="stylesheet" type="text/css" href="/assets/themes/j1/extensions/ipython/css/style.min.css">
+  <!-- Highlighter styles -->
+  <link rel="stylesheet" type="text/css" href="/assets/themes/j1/extensions/ipython/css/highlight.css">
+  <!-- Overrides of notebook CSS for static HTML export -->
+  <link rel="stylesheet" type="text/css" href="/assets/themes/j1/extensions/ipython/css/html_export_overrides.css">
+  <!-- nbInteract styles -->
+  <link rel="stylesheet" type="text/css" href="/assets/themes/j1/extensions/ipython/css/nbinteract.css">
+
+  <!-- JS sources -------------------------------------------------------------- -->
+  <!-- iFrame Resizer Client -->
+  <script src="/assets/themes/j1/extensions/iframe_resizer/js/client/iframeResizer.contentWindow.js"></script>
+  <!-- Require v2.3.6 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration -->
+</head>
+
+<body>
+  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container">
+      
+  <div class="cell text_cell">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+  
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span>
+</pre></div>
+    </div>
+</div>
+</div>
+  </div>
+  
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+</pre></div>
+    </div>
+</div>
+</div>
+  </div>
+  
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">interact</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">10</span><span class="p">);</span>
+</pre></div>
+    </div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+    
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+</div>
+</div>
+</div>
+  </div>
+  
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">interact</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">));</span>
+</pre></div>
+    </div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+    
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+</div>
+</div>
+</div>
+  </div>
+  
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">friends</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> has </span><span class="si">{}</span><span class="s1"> friends!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+</pre></div>
+    </div>
+</div>
+</div>
+  </div>
+  
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">interact</span><span class="p">(</span><span class="n">friends</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Sam&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">));</span>
+</pre></div>
+    </div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+    
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+</div>
+</div>
+</div>
+  </div>
+  
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">interact</span><span class="p">(</span><span class="n">friends</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Sam&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;One&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Five&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;Ten&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">});</span>
+</pre></div>
+    </div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+    
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+</div>
+</div>
+</div>
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here's the complete list of each argument type and the widget it generates:</p>
+<table>
+<thead><tr>
+<th>Keyword argument</th>
+<th>Widget</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>True</code> or <code>False</code></td>
+<td>Checkbox</td>
+</tr>
+<tr>
+<td><code>'Hi there'</code></td>
+<td>Text</td>
+</tr>
+<tr>
+<td>value or (min,max) or (min,max,step) if integers are passed</td>
+<td>IntSlider</td>
+</tr>
+<tr>
+<td>value or (min,max) or (min,max,step) if floats are passed</td>
+<td>FloatSlider</td>
+</tr>
+<tr>
+<td><code>['orange','apple']</code> or <code>{'one':1,'two':2}</code></td>
+<td>Dropdown</td>
+</tr>
+</tbody>
+</table>
+<p>You may also use the widget classes in ipywidgets in the calls to interact to have more fine-grained control over the interface. For more details on using interact, see the <a href="http://ipywidgets.readthedocs.io/en/stable/examples/Using%20Interact.html">official ipywidgets documentation</a>.</p>
+</div>
+</div>
+</div>
+  
+<!-- Loads nbinteract package -->
+<script src="https://unpkg.com/nbinteract-core" async></script>
+<script>
+  (function setupNbinteract() {
+    // If NbInteract hasn't loaded, wait one second and try again
+    if (window.NbInteract === undefined) {
+      setTimeout(setupNbinteract, 1000)
+      return
+    }
+    var interact = new window.NbInteract({
+      spec: 'jekyll-one/jupyter_notebooks/master',
+      baseUrl: 'https://mybinder.org',
+      provider: 'gh',
+    })
+    interact.prepare()
+    window.interact = interact
+  })()
+</script>
+    </div>
+  </div>
+</body>

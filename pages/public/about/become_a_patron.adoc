@@ -1,0 +1,50 @@
+---
+title:                                  Become a patron
+tagline:                                help us to create premium content
+description:                            Help to create premium content
+categories:                             [ pages ]
+
+tags:                                   [ business ]
+index:                                  [ Patron, Premium, Content ]
+categories:                             [ pages ]
+
+permalink:                              /pages/public/about/become_a_patron/
+regenerate:                             false
+
+resources:                              [ lightbox ]
+resource_options:
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+      opacity:                          0.5 
+      slides:
+        - url:                          /assets/images/modules/attics/premium-1920x1280-bw.jpg
+          alt:                          Photo by Anders Nord on Unsplash
+          badge:
+            type:                       unsplash
+            author:                     Anders Nord
+            href:                       https://unsplash.com/@annoand/portfolio
+---
+
+// Page content
+// -----------------------------------------------------------------------------
+
+_Patron_ allows fans -- the *patrons* -- to pay creators for their work. Many 
+of these creators are influencers: photographers on Instagram, comedians 
+on YouTube, podcasters that tweet, creative technicians providing useful 
+software, tools and tutorials.
+
+Simple like this.
+
+
+== Become a Patron
+
+What does that mean? A _Patron_ support a _Creator_ for the provided content
+they love, they like to use: excellent content services -- created with passion. 
+
+What does a creator need to provide outstanding, useful products to the people?
+
+No surprise: time and money. What is, vice versa, quite the same. But that's not 
+all. 
+
+

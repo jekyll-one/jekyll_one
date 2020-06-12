@@ -1,0 +1,138 @@
+---
+title:                                  Roundtrip
+tagline:                                themes
+description:                            J1 Template Roundtrip - Template Themes
+
+tags:                                   [ Page, Roundtrip ]
+index:                                  [ Template, Roundtrip, Bootstrap, Themes ]
+categories:                             [ pages ]
+
+permalink:                              /pages/public/learn/roundtrip/themes/
+regenerate:                             false
+
+resources:                              []
+resource_options:
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+      opacity:                          0.5
+      slides:
+        - url:                          /assets/images/pages/roundtrip/themes-1920x1280-bw.jpg
+          alt:                          Photo by Clem Onojeghuo on Unsplash
+          badge:
+            type:                       unsplash
+            author:                     Clem Onojeghuo
+            href:                       https://unsplash.com/@clemono
+---
+
+// Enable the Liquid Preprocessor
+// -----------------------------------------------------------------------------
+:page-liquid:
+
+// Set other global page attributes here
+// -----------------------------------------------------------------------------
+//:my-asciidoc-attribute:
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture set_env_entry_document %}themes/{{site.template.name}}/procedures/global/set_env_entry_document.proc{%endcapture%}
+
+
+// Initialize entry document environmental attributes
+// -----------------------------------------------------------------------------
+{% include {{set_env_entry_document}} %}
+
+// Load tag, url and data attributes
+// -----------------------------------------------------------------------------
+include::{includedir}/attributes.asciidoc[tag=tags]
+include::{includedir}/attributes.asciidoc[tag=urls]
+include::{includedir}/attributes.asciidoc[tag=data]
+
+// Set local page attributes
+// -----------------------------------------------------------------------------
+// :images-dir:                         {imagesdir}/path/to/page/images
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
+++++
+<!-- page_path:            {{page_path | debug}} -->
+<!-- site.source:          {{site.source | debug}} -->
+<!-- site.source.size:     {{site.source.size | debug}} -->
+++++
+
+The themes feature for J1 Template is in a *alpha status* of the template
+system. Anyway, it makes sense to present what is possible using *different*
+versions of Bootstrap's CSS styles for a website.
+
+== Themes
+
+It is expected that many people will change the template for their needs. To
+really create *unique* websites. Fundamental to do this is are CSS styles 
+defined by Bootstrap.
+
+Modifying the CSS styles of link:{bootstrap-home}[Bootstrap, {window}] is not
+rocket science. But, to be honest, some knowledge is needed of 
+link:{w3org-css-spec}[the CSS technology] to do so. We encourage you to spend
+some time first on learning CSS. To learn what is the 
+link:{w3schools-css-tutorial}[design base, {window}] of each and every website. 
+Independendly from using Bootstrap or any other CSS framwork.
+
+Thanks to the people at link:{bootswatch-home}[Bootswatch, {window}], a great 
+set of already prepared Bootstrap stylesheets in various designs are available 
+at their website. No need to start from the scratch, to re-define all the 
+Bootstrap variables and rebuilt the framework files to create a new theme. Many
+different styles are available. What is already available is at least a good 
+base for your modifications: your unique design.
+
+Beside the bunch of different stylesheets at Bootswatch, an 
+link:{bootswatch-api}[integration API, {window}] is available that helps a lot
+to integrate available designs into a existing site. This API is the base to 
+integrate Bootswatch stylesheets into J1 Template for easy use.
+
+Thanks again the people at Bootswatch for this great work.
+
+
+== Apply a theme
+
+The base for designing pages using J1 Template is the theme *Uno*, a modern 
+light theme that can be used for many types of websites. And what we mentioned
+already, web design is not: one size fits all. The theme *Uno* can be seen as
+good base, a starting point. Combining Uno and a different theme may a fast
+solution for your site!?
+
+You can find all available themes, all stylesheets to be applied to your pages 
+from the menu *Themes*. You're invited to check how a page is changing for 
+their design if other stylesheets, other ideas of web design is used. 
+
+NOTE: Changing BS-based styles is one thing, changing from one theme to the 
+next at runtime a bit more challanging. For the alpha version of J1 Template, 
+many styles are automatically changed for J1 specific components as well, but
+*not* all of them for now. 
+
+Simply select a theme from this menu and a new BS-based stylesheet is 
+automatically applied to your pages.
+
+Have fun!
+
+== Whats next
+
+Hopefully you've enjoyed exploring some of the possibilities J1 offers for
+managing themes. But much, much more can the J1 do for your website.
+
+This was the last place to go for the roundtrip. More details of the most
+common elements of Bootstrap can be found on the previewer for a theme. Have
+a look at the link:{previewer-theme}[Theme previewer].
+
+To make things real for your new site, go for *Web in a day*. This tutorial
+guides you through all the steps how to build a website - your site using
+Jekyll  nd the template system J1. It's really a nice journey to *explore* 
+and  *learn* creating a static web.
+
+Start your journey from here: link:{kickstarter-web-in-a-day}[Web in a day].
+
+

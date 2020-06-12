@@ -1,0 +1,304 @@
+---
+title:                                  Roundtripppp
+tagline:                                present images
+description:                            J1 Template Roundtrip - Present image based data
+
+tags:                                   [ Page, Roundtrip ]
+index:                                  [ Template, Roundtrip, Images ]
+categories:                             [ pages ]
+
+toc:                                    true
+scrollbar:                              false
+
+permalink:                              /pages/public/learn/roundtrip/present_images/
+regenerate:                             false
+
+resources:                              [
+                                          bs_tour, carousel, lightbox,
+                                          justified_gallery, light_gallery
+                                        ]
+resource_options:
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+      opacity:                          0.5
+      slides:
+        - url:                          /assets/images/pages/roundtrip/images-1920x1280-bw.jpg
+          alt:                          Photo by Ricardo Gomez Angel on Unsplash
+          badge:
+            type:                       unsplash
+            author:                     Ricardo Gomez Angel
+            href:                       https://unsplash.com/@ripato/portfolio
+---
+
+// Enable the Liquid Preprocessor
+// -----------------------------------------------------------------------------
+:page-liquid:
+
+// Set other global page attributes here
+// -----------------------------------------------------------------------------
+//:my-asciidoc-attribute:
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture set_env_entry_document %}themes/{{site.template.name}}/procedures/global/set_env_entry_document.proc{%endcapture%}
+
+// Initialize entry document environmental attributes
+// -----------------------------------------------------------------------------
+{% include {{set_env_entry_document}} %}
+
+// Load tag, url and data attributes
+// -----------------------------------------------------------------------------
+include::{includedir}/attributes.asciidoc[tag=tags]
+include::{includedir}/attributes.asciidoc[tag=urls]
+include::{includedir}/attributes.asciidoc[tag=data]
+
+// Set local page attributes
+// -----------------------------------------------------------------------------
+:images-dir:                            {imagesdir}/pages/roundtrip/100_present_images
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
+Welcome to the first preview page focussing the *image module*. This page shows
+you some of the quite useful features of J1 Template to manage your image based
+content using lightboxes, carousels (slider) and galleries.
+
+The *image module* offer complex functionality based on powerful open source
+libraries like the build-in Gallely *gallery* for simple _Bootstrap_ grid-based
+image galleries or *Justified Gallery* for high-end, masonry styled preview
+maps. The build-in carousel app *carousel*, using the jQuery plugin *Owl Carousel*
+as a base, let you present your images as slide shows.
+
+Lightboxes like *LightGallery* or *Lightbox V2* support your web for full image
+views of your *picture* or *video* content. Have a look, a quick tour what J1
+can do. Have fun!
+
+== J1 Lightboxes
+
+A *Lightbox* in general is a helper which displays enlarged, almost
+screen-filling versions of pictures (or videos), while dimming the rest of the
+page. The technique, introduced by Lightbox V2, gained widespread popularity
+due to its simple and elegant style. The term *lightbox* is used since then for
+Javascript libraries to support such functionality.
+
+For J1 Template, two different lightboxes can be used:
+
+* Lightbox V2 (lightbox)
+* LightGallery
+
+The default lightbox used by J1 Template is *Lightbox V2*, a Javascript library
+written by _Lokesh Dhakar_. The name of that (build-in) is simply: *lightbox*.
+For more complex use cases, like a thumbnail gallery preview or video support,
+*LightGallery* can be used alternatively.
+
+NOTE: The name *LightGallery* implies a sort of a Gallery but the library is a
+_lightbox_. And, *LightGallery* provides much more functionality on image-based
+data rather than enlarged displaying of images. See the examples below to check
+for the differences in compare to the more simpler *Lightbox V2* lightbox.
+
+Both lightboxes are fully integrated to be used as standalone modules or to be
+used as helpers _under-the-hood_ by other apps or modules focussing on image
+data like *gallery* or *carousel*, the build-in carousel module.
+
+=== Lightbox Examples
+
+Find below an example of using the lightbox Lightbox *standalone*. See how
+*single* (individual) images are linked for the use with *Lightbox*.
+
+.A Lightbox block for standalone images
+lightbox::example-standalone[ 400, {data-images-standalone} ]
+
+For a *group* of images (image sets), *Lightbox* support image *groups*. Click
+on the images below to see how *Lightbox* manage image groups.
+
+.A Lightbox block for grouped images
+lightbox::example-group[ 400, {data-images-group}, group ]
+
+
+=== LightGallery Example
+
+*LightGallery* provides more complex functions on image data. The lightbox
+supports a gallery-styled thumbnail preview plus image resizing, a dowload
+dialog, sharing provider support and some more helpfull. Check what
+*LightGallery* can do by the following example.
+
+[subs=attributes]
+++++
+  <div id="caption1" style="display:none">
+    <h4 class="notoc">Image 1</h4><p>Golden Gate Bridge with San Francisco in distance</p>
+  </div>
+  <div id="caption2" style="display:none">
+    <h4 class="notoc">Image 2</h4><p>Forest with mountains behind</p>
+  </div>
+  <div id="caption3" style="display:none">
+    <h4 class="notoc">Image 3</h4><p>Bicyclist looking out over hill at ocean</p>
+  </div>
+
+  <div id="lightgallery-roundtrip-example" class="imageblock mb-4" data-sub-html=".caption">
+    <a href="{images-dir}/lightbox-image-1.jpg" data-sub-html="#caption1">
+      <img src="{images-dir}/lightbox-thumb-1.jpg" alt="Golden Gate Bridge with San Francisco in distance">
+    </a>
+    <a href="{images-dir}/lightbox-image-2.jpg" data-sub-html="#caption2">
+      <img src="{images-dir}/lightbox-thumb-2.jpg" alt="Forest with mountains behind">
+    </a>
+    <a href="{images-dir}/lightbox-image-3.jpg" data-sub-html="#caption3">
+      <img src="{images-dir}/lightbox-thumb-3.jpg" alt="Bicyclist looking out over hill at ocean">
+    </a>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      $('#lightgallery-roundtrip-example').lightGallery({
+          thumbnail: true
+      });
+    });
+  </script>
+++++
+
+
+== J1 Carousel App
+
+*J1 Carousel* is based on *OWL Carousel V1* in the latest (and unfortuneatly
+last) version of 1.3.3. OWL Carousel is a clean and neat jQuery slider plugin
+for creating fully responsive and touch-enabled carousel sliders.
+
+NOTE: OWL Carousel V1 is *not* longer available on the Internet; for unknown
+reason. Anyway, J1 Template is using this version of *OWL Carousel* as a
+build-in carousel module because the software does an excellent job, is based
+on a MIT license with no issues using them for private and business use.
+And offers a lot of great features!
+
+/////
+=== Simple Text Carousel
+
+A slider or carousel typically is used for displaying images but the
+implementation for J1 Template support a lot more *sources* to be displayed
+as a slide show: simple *text* for example.
+
+carousel::owl_demo_text_carousel[role="mb-3"]
+
+Important statements or topics can be placed e.g. on top of an article or a
+paragraph to give them a better *visibility*. In one line, you can present
+a bunch of *facts* to know animated for the readers attention within as single
+line - no much space is needed.
+
+=== Parallax Text Carousel
+
+A more *eye-minded* type of a text show is a *parallax* text slider. If you
+want to place emphasis on you personal statements focussing the meaning, this
+type of a slide show may be interesting. Image based slide shows may draw off
+the readers attention from the text, therefor a *pure text based* presentation
+may the better choice.
+
+.Parallax Slider
+// carousel::owl_demo_text_carousel_parallax[role="mb-3"]
+
+++++
+  <div class="parallax-slider__owl_demo_text_carousel_parallax mb-3" style="background-position: 50% 45px">
+    <div id="owl_demo_text_carousel_parallax"></div>
+  </div>
+
+ <script>
+    $('head').append('<style>.parallax-slider__owl_demo_text_carousel_parallax{background:url(/assets/images/quotes/default.png) 50% 0 repeat fixed}</style>');
+    $('head').append('<style>.parallax-slider__owl_demo_text_carousel_parallax{padding:75px 0 75px 25px;position:relative}</style>');
+    $('head').append('<style>.parallax-slider__owl_demo_text_carousel_parallax{color:#e5e5e5;font-size:1.5rem;font-weight:400}</style>');
+    $('head').append('<!-- style>.parallax-slider__owl_demo_text_carousel_parallax{text-align:center}</style -->');
+    $('head').append('<!-- style>.parallax-slider__owl_demo_text_carousel_parallax{text-transform:uppercase}</style -->');
+    $('head').append('<style>.parallax-slider__owl_demo_text_carousel_parallax:before{top:0;left:0;width:100%;height:100%;content:" ";position:absolute;background:url(/assets/images/modules/patterns/gridtile.png) repeat;}</style>');
+    $('head').append('<style>.parallax-slider__owl_demo_text_carousel_parallax:after{top:0;left:0;width:100%;height:100%;content:" ";position:absolute;background:rgba(0,0,0,0.3)}</style>');
+  </script>
+++++
+
+
+Parallax text shows are can be placed as banners on a page. A lot of different
+animations can be used. Internally, J1 Template is using some of the really
+great CSS styles offered by _animate.css_.
+
+TIP: Have a look a https://daneden.github.io/animate.css/[Dan Eden's home page]
+to see all the possible dynamic styles you can create based on pure CSS. *Some*
+of them are implemented for *OWL Carousel* for animation. See the documetation
+for the *CAROUSEL Module* for more details.
+/////
+
+=== Simple Image Carousel
+
+Carousels are mostly used for pictures data to animate the images as series.
+Find with the following some examples how to use a carousel for your image
+data.
+
+A simple image show is useful for example as an animated (or not animated)
+banner presenting interesting things of your site or the products offered.
+
+.Simple Image Carousel
+carousel::owl_demo_simple[role="mb-5"]
+
+=== Carousel + Caption + Lightbox
+
+Carousels can be used for a quite compact form of image galleries. This example
+show some pictures having individual caption text *and* support a lightbox to
+enlarge images full size. For the example below, a quite simple lightbox
+is used: *Lightbox V2*; or short: *lightbox*.
+
+.Nice cats
+carousel::owl_demo_cats[role="mb-5"]
+
+
+The J1 module *lightbox* is a simple Lightbox but offers a bunch of interesting
+features for displaying images. For example, lightbox can display all images
+(of a carousel) as a *group*. If one picture is opened in the lightbox, all
+the other can browsed as well.
+
+=== One Slide Carousel + Lightbox
+
+The build-in Carousel *carousel* supports multiple *and* single image shows.
+Here you find an example of an single image slide show with *controls* enabled
+to browse all images back and forth. An indicator below the slider shows how
+many images the show contains.
+
+.Single Slide Carousel and a Lightbox
+carousel::owl_demo_oneslide[role="mb-5"]
+
+
+== J1 Gallery App
+
+To create *image* and *video* galleries, J1 Template implements the jQuery
+plugin *JustifiedGallery* as the *main* gallery module. Beside Justified
+Gallery, a gallery based on pure _Bootstrap_ code is available with the build-in
+gallery app *gallery*.
+
+*Justified Gallery* is a great jQuery plugin to create responsive, infinite
+and high quality *justified* image galleries. J1 Template combines the gallery
+with the *lightboxes* supported to *enlage* the images of a gallery.
+
+See *Justified Gallery* in action - and for sure all what you see is even
+responsive. Change the size of your current browser window, by width or height, 
+to see what will happen!
+
+=== Justified Gallery
+
+Pictures you've made are typically *not* even in size. Images may have the
+same size (resolution), but some of the are orientated landscape or other
+may portrait. For that reason, a more powerful gallery is needed to create
+so-called *justified* views.
+
+*Justified Gallery* is using a so-called *masonry grid* layout. It works by
+placing elements in an optimal position based on available horizontal and
+vertical space. Sort of like mason fitting stones in a wall. You’ll have
+seen it in use all over the Internet!
+
+.Masonry grid layout of Justified Gallery
+gallery::jg_customizer[]
+
+
+== Whats next
+
+Hopefully you've enjoyed exploring the possibilities J1 offers for managing
+and displaying digital image content. But much, much more can the J1 do for
+your web.
+
+Incredible? See the next example page link:{roundtrip-present-videos}[Present videos].

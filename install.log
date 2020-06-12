@@ -1,0 +1,17 @@
+J1 Project Base modules:  
++ cross-var@1.1.0
++ shx@0.2.2
++ npm-run-all@4.1.5
++ cross-env@5.2.1
++ lnk-cli@1.0.1
+added 241 packages from 117 contributors and audited 241 packages in 50.498s
+found 0 vulnerabilities
+
+J1 Project modules:  
+added 37 packages from 31 contributors and audited 282 packages in 7.636s
+found 0 vulnerabilities
+
+J1 Utility Server modules:  
+added 325 packages from 213 contributors and audited 325 packages in 61.013s
+found 0 vulnerabilities
+

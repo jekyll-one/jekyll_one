@@ -1,0 +1,128 @@
+---
+title:                                  Roundtrip
+tagline:                                advanced bootstrap modals
+description:                            Advanced Bootstrap Modals for J1 Template
+
+tags:                                   [ Page, Roundtrip ]
+index:                                  [ Template, Roundtrip, Bootstrap, advanced, Modal]
+categories:                             [ pages ]
+
+flowtext:                               false
+
+permalink:                              /pages/public/learn/roundtrip/modals/
+regenerate:                             true
+
+resources:                              []
+resource_options:
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+      opacity:                          0.5
+      slides:
+        - url:                          /assets/images/pages/roundtrip/bootstrap-1920x1000-bw.jpg
+          alt:                          bootstrap
+---
+
+// Enable the Liquid Preprocessor
+// -----------------------------------------------------------------------------
+:page-liquid:
+
+// Set other global page attributes here
+// -----------------------------------------------------------------------------
+//:my-asciidoc-attribute:
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture set_env_entry_document %}themes/{{site.template.name}}/procedures/global/set_env_entry_document.proc{%endcapture%}
+
+
+// Initialize entry document environmental attributes
+// -----------------------------------------------------------------------------
+{% include {{set_env_entry_document}} %}
+
+// Load tag, url and data attributes
+// -----------------------------------------------------------------------------
+include::{includedir}/attributes.asciidoc[tag=tags]
+include::{includedir}/attributes.asciidoc[tag=urls]
+include::{includedir}/attributes.asciidoc[tag=data]
+
+// Set local page attributes
+// -----------------------------------------------------------------------------
+// :images-dir:                         {imagesdir}/path/to/page/images
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
+Advanced Bootstrap Modals are based on the free package of 
+link:{mdb-home}[Material Design for Bootstrap, {window}] on version 
+*4.3.2*. This version can be found following this link:
+link:{mdb-bs-modals-legacy}[Enhanced Bootstrap Modals, {window}]. A more 
+current version is available from here: link:{mdb-bs-modals}[Modal examples & templates, {window}].
+
+Bootstrap modals are used to add dialogs to your web pages for user 
+notifications. To highlight important information to your vistors. Modals 
+are positioned over everything else in the document so that the notification 
+gets the users attention.
+
+
+== BS advanced Modals
+
+To improve your visitors experience on important information that shouldn't
+missed, modals are a good choice to bring the users attention on. Using J1 
+Template BS enhanced predefined modal styles, some emotional weight is added
+to the information displayed - ranging from an info level, simple warning to 
+critical messages.
+
+NOTE: For more information on how to use Bootstrap’s JavaScript modal 
+plugin, refer to: link:{bs_doc_components_modal}[Bootstrap Docs, {window}].
+
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+include::{documentsdir}/410_table_3_column.asciidoc[]
+
+//////////
+include::{documentsdir}/410_top_info.asciidoc[]
+include::{documentsdir}/410_top_right_success.asciidoc[]
+include::{documentsdir}/410_top_left_info.asciidoc[]
+include::{documentsdir}/410_bottom_info.asciidoc[]
+include::{documentsdir}/410_bottom_right_danger.asciidoc[]
+include::{documentsdir}/410_bottom_left_warning.asciidoc[]
+include::{documentsdir}/410_full_height_right_success.asciidoc[]
+include::{documentsdir}/410_full_height_left_info.asciidoc[]
+//////////
+
+//////////
+include::{documentsdir}/410_position_and_sizes.asciidoc[]
+include::{documentsdir}/410_contact_form.asciidoc[]
+include::{documentsdir}/410_form_login_with_avatar.asciidoc[]
+include::{documentsdir}/410_omni_login.asciidoc[]
+include::{documentsdir}/410_central_large_info.asciidoc[]
+include::{documentsdir}/410_central_fluid_success.asciidoc[]
+include::{documentsdir}/410_full_height_top_warning.asciidoc[]
+include::{documentsdir}/410_full_height_bottom_danger.asciidoc[]
+include::{documentsdir}/410_full_height_right_success.asciidoc[]
+//////////
+
+== Whats next
+
+Bootstrap is really a great CSS framework that offers in the current V4
+version a complete set of styles to create excellent responsive designs.
+In the sense of: all can be improved, the responsive tables support of BS
+needs some enhancement to display tables on low resolution devices or smaller
+(browser-) window sizes.
+
+A first version for improved responsive tables that scale better is available
+for J1 Template on top of the classic BS CSS styles. Check out what from here
+what the link:{roundtrip-responsive-tables}[BS tables extensions] can do!
+
+
+// Include the modals HTML portion
+// -------------------------------------------------------------------
+
+include::{documentsdir}/419_advanced_modals_html.asciidoc[]
+

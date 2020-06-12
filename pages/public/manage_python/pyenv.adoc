@@ -1,0 +1,117 @@
+---
+title:                                  Manage Python
+tagline:                                anaconda
+description:                            anaconda - An Python environment manager
+
+tags:                                   [ Page, Roundtrip ]
+index:                                  [ Install, pyenv, Python ]
+categories:                             [ pages ]
+
+permalink:                              /pages/public/manage_python/anaconda/
+regenerate:                             false
+
+resources:                              [ lightbox ]
+resource_options:
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+      opacity:                          0.5
+      slides:
+        - url:                          /assets/images/modules/attics/mae-mue-1920x1280-v.jpg  
+          alt:                          Photo by Mae Mu on Unsplash
+          badge:
+            type:                       unsplash
+            author:                     Mae Mu
+            href:                       https://unsplash.com/@picoftasty
+---
+
+// Enable the Liquid Preprocessor
+// -----------------------------------------------------------------------------
+:page-liquid:
+
+// Set other global page attributes here
+// -----------------------------------------------------------------------------
+//:my-asciidoc-attribute:
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture set_env_entry_document %}themes/{{site.template.name}}/procedures/global/set_env_entry_document.proc{%endcapture%}
+
+
+// Initialize entry document environmental attributes
+// -----------------------------------------------------------------------------
+{% include {{set_env_entry_document}} %}
+
+// Load tag, url and data attributes
+// -----------------------------------------------------------------------------
+// include::{includedir}/attributes.asciidoc[tag=tags]
+// include::{includedir}/attributes.asciidoc[tag=urls]
+// include::{includedir}/attributes.asciidoc[tag=data]
+
+// Set local page attributes
+// -----------------------------------------------------------------------------
+// :images-dir:                         {imagesdir}/path/to/page/images
+:experimental:
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+// See: https://cheatography.com/weidadeyue/cheat-sheets/jupyter-notebook/
+
+pyenv lets you easily switch between multiple versions of Python. It's simple,
+unobtrusive, and follows the UNIX tradition of single-purpose tools that do 
+one thing well.
+
+pyenv does...
+
+* Let you change the global Python version on a per-user basis.
+* Provide support for per-project Python versions.
+* Allow you to override the Python version with an environment variable.
+* Search commands from multiple versions of Python at a time. 
+  This may be helpful to test across Python versions with tox.
+
+In contrast with pythonbrew and pythonz, pyenv does not...
+
+* Depend on Python itself. pyenv was made from pure shell scripts. There 
+  is no bootstrap problem of Python.
+* Need to be loaded into your shell. Instead, pyenv's shim approach works by
+  adding a directory to your $PATH.
+* Manage virtualenv. Of course, you can create virtualenv yourself, or 
+  pyenv-virtualenv to automate the process.
+
+
+== Install pyenv
+
+=== Windows
+
+pyenv for python is a great tool but, like rbenv for ruby developers,
+it doesn't support Windows directly. After a bit of research and feedback 
+from python developers, I discovered they wanted a similiar feature for 
+Windows systems.
+
+I got inspired from the pyenv issue for Windows support. Personally, I use 
+Mac and Linux with beautiful pyenv, but some companies still use Windows for 
+development. This library is to help Windows users manage multiple python
+versions.
+
+I found a similar system for rbenv-win for ruby developers. This project 
+was forked from rbenv-win and modified for pyenv. Some command aren't 
+implemented, but it's good enough for basic use.
+
+
+== pyenv-win commands
+
+commands    List all available pyenv commands
+local       Set or show the local application-specific Python version
+global      Set or show the global Python version
+shell       Set or show the shell-specific Python version
+install     Install a Python version using python-build
+uninstall   Uninstall a specific Python version
+rehash      Rehash pyenv shims (run this after installing executables)
+version     Show the current Python version and its origin
+versions    List all Python versions available to pyenv
+exec        Runs an executable by first preparing PATH so that the selected Python
+

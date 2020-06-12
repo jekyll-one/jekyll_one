@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap Tour BS V3</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/j1/extensions/bs_tour/css/bootstrap-tour.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <p>
+      <button type="button" id="demo" class="btn btn-default btn-lg" data-demo="">
+        <span class="glyphicon glyphicon-play"></span>
+        Start the demo
+      </button>
+    </p>
+
+    <h1 id="tour-step-1">Header 1</h1>
+    <p>Welcome to the pages of J1 Template. If your here first time,
+                      hopefully you get on that page first. For sure, there is no better
+                      place to step in.</p>
+
+    <h1 id="tour-step-2">Header 2</h1>
+    <p>Welcome to the pages of J1 Template. If your here first time,
+                      hopefully you get on that page first. For sure, there is no better
+                      place to step in.</p>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="/assets/themes/j1/extensions/bs_tour/js/bootstrap-tour.js"></script>
+
+
+  </body>
+
+  <script>
+  (function() {
+
+    $(function() {
+      // Instance the tour
+      var $demo, duration, remaining, tour;
+      $demo = $("#demo");
+      duration = 5000;
+      remaining = duration;
+      tour = new Tour({
+        onStart: function() {
+          return $demo.addClass("disabled", true);
+        },
+        onEnd: function() {
+          return $demo.removeClass("disabled", true);
+        },
+        debug: true,
+        steps: [
+        {
+          element: "#tour-step-1",
+          title: "Title of my step 1",
+          content: "Content of my step"
+        },
+        {
+          element: "#tour-step-2",
+          title: "Title of my step 2",
+          content: "Content of my step"
+        }
+      ]}).init(); // Initialize the tour
+
+      // Start the tour
+      // tour.start();
+
+      if (tour.ended()) {
+        $('<div class="alert alert-info alert-dismissable"><button class="close" data-dismiss="alert" aria-hidden="true">&times;</button>You ended the demo tour. <a href="#" data-demo>Restart the demo tour.</a></div>').prependTo(".content").alert();
+      }
+
+      $(document).on("click", "[data-demo]", function(e) {
+        e.preventDefault();
+        if ($(this).hasClass("disabled")) {
+          return;
+        }
+        tour.restart();
+        return $(".alert").alert("close");
+      });
+
+    });
+
+  }).call(this);
+  </script>
+
+</html>

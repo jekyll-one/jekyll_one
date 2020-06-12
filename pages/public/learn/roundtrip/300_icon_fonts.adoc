@@ -1,0 +1,435 @@
+---
+title:                                  Roundtrip
+tagline:                                icon fonts
+description:                            J1 Template Roundtrip - Icon Fonts
+
+tags:                                   [ Page, Roundtrip ]
+index:                                  [ Template, Roundtrip, Material, Design, MDI, FontAwesome, Icon, Fonts ]
+categories:                             [ pages ]
+
+permalink:                              /pages/public/learn/roundtrip/mdi_icon_font/
+regenerate:                             false
+
+resources:                              []
+resource_options:
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+      opacity:                          0.5
+      slides:
+        - url:                          /assets/images/pages/roundtrip/icon-fonts-1920x1280-bw.jpg
+          alt:                          Photo by Harpal Singh on Unsplash
+          badge:
+            type:                       unsplash
+            author:                     Harpal Singh
+            href:                       https://unsplash.com/@aquatium
+---
+
+// Enable the Liquid Preprocessor
+// -----------------------------------------------------------------------------
+:page-liquid:
+
+// Set other global page attributes here
+// -----------------------------------------------------------------------------
+//:my-asciidoc-attribute:
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture set_env_entry_document %}themes/{{site.template.name}}/procedures/global/set_env_entry_document.proc{%endcapture%}
+
+
+// Initialize entry document environmental attributes
+// -----------------------------------------------------------------------------
+{% include {{set_env_entry_document}} %}
+
+// Load tag, url and data attributes
+// -----------------------------------------------------------------------------
+include::{includedir}/attributes.asciidoc[tag=tags]
+include::{includedir}/attributes.asciidoc[tag=urls]
+include::{includedir}/attributes.asciidoc[tag=data]
+
+// Set local page attributes
+// -----------------------------------------------------------------------------
+// :images-dir:                         {imagesdir}/path/to/page/images
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
+== Icon Fonts
+
+J1 Template support popular icons font sets out-of-the-box:
+
+* link:{mdi-home}[Material Design Icons, {window}] (MDI)
+* link:{fontawesome-home}[FontAwesome Icons V5, {window}] (FA)
+* link:{iconify-home}[Iconify Icons, {window}] (II)
+
+The icon sets MDI and FA are very good in design and have a rich set of 
+different icons for many categories used for the Web. See below some details 
+for <<Material Design Icons>> and <<FontAwesome Icons>>.
+
+Iconify Icons is not a local stored icon set like MDI or FA. All icons are 
+loaded over the *Internet* using the so-called unified open source icon 
+framework. See section <<Iconify Icons>> for more information.
+
+
+=== Material Design Icons
+
+The primary icon set for J1 Template are link:{mdi-home}[Material Design Icons, {window}], 
+because it is an rich set providing more than 3300+ icons (v3.3.92). From a design 
+prospective, _MDI_ has an excellent Material Design support an comes with the 
+original icon set created by _Google_ build-in.
+
+_Material Design Icons_ (MDI) is a very helpful design resource for Web Design
+that is based on *_Google_'s Material Design*. _MDI_ is a community-driven
+project to create an increased icon-set based on _Google_'s official repository
+and MD style specification.
+
+.Material Design Icons
+[cols="2a,3a,4a,3a", options="header", width="100%", role="rtable_v table-responsive mt-3"]
+|===============================================================================
+|Size |Modifier |Markup |Render
+
+|1x
+|no modifier set
+|All `icon_name` can be found on the Preview page for *MDI Icon Previewer*
+[source, adoc, role="noclip"]
+----
+mdi:account[1x]
+----
+^|mdi:account[1x]
+
+|3x
+|no modifier set
+|All `icon_name` can be found on the Preview page for *MDI Icon Previewer*
+[source, adoc, role="noclip"]
+----
+mdi:account[3x]
+----
+^|mdi:account[3x]
+
+|5x
+|no modifier set
+|All `icon_name` can be found on the Preview page for *MDI Icon Previewer*
+[source, adoc, role="noclip"]
+----
+mdi:account[5x]
+----
+^|mdi:account[5x]
+
+|5x
+|`mdi-rotate-45`
+|Rotate 45 degrees
+[source, adoc, role="noclip"]
+----
+mdi:account[5x mdi-rotate-45]
+----
+^|mdi:account[5x mdi-rotate-45]
+
+|5x
+|`mdi-rotate-315`
+|Rotate 315 degrees
+[source, adoc, role="noclip"]
+----
+mdi:account[5x mdi-rotate-315]
+----
+^|mdi:account[5x mdi-rotate-315]
+
+|5x
+|`mdi-light` +
+`mdi-flip-v`
+|Color set to MDI Light (Grey) and flipped vertical
+[source, adoc, role="noclip"]
+----
+mdi:alert[5x mdi-light mdi-flip-v]
+----
+^|mdi:alert[5x mdi-light mdi-flip-v]
+
+|5x
+|`md-indigo`
+|Color set to MDI Indigo
+[source, adoc, role="noclip"]
+----
+mdi:alert[5x md-indigo]
+----
+^|mdi:account[5x md-indigo]
+
+|5x
+|`md-pink`
+|Color set to MDI Pink
+[source, adoc, role="noclip"]
+----
+mdi:alert[5x md-pink]
+----
+^|mdi:account[5x md-pink]
+
+|5x
+|`mdi-spin`
+|Added animation of type Rotate (Spin)
+[source, adoc, role="noclip"]
+----
+mdi:loading[5x mdi-spin]
+----
+^|mdi:loading[5x mdi-spin]
+
+|5x
+|`md-red-900` +
+`mdi-pulsed`
+|Color set to MDI Dark Red and added animation of type Pulsed
+[source, adoc, role="noclip"]
+----
+mdi:heart[5x md-red-900 mdi-pulsed]
+----
+^|mdi:heart[5x md-red-900 mdi-pulsed]
+
+|===============================================================================
+
+NOTE: Using Material Design Icons with Asciidoc is quite easy as an inline macro 
+`mdi:` is avaialble to place icons where ever you want. See more about
+this in section link:{roundtrip-asciidoc-extensions}#icon-fonts[Asciidoc Extensions]
+
+_MDI_ is a growing collection to allow designers and developers targeting
+various platforms to download icons in the format, color and size they need
+for any project. The repo contains today 2100+ icons plus converted icons from
+the official set created by _Google_.
+
+_J1 Template_ supports the full set of _MDI_ for the Web (Webfont, WOFF). The
+icon set is fully integrated and can be used out-of-the-box.
+
+For MDI a *Preview Page* is available to explore what can be done base on the
+J1 implemetation regarding sizes, colors, animations etc. Go for the
+link:{previewer-mdi}[Preview Page, {window}] and check-out what's
+possible using MDI font icons!
+
+
+
+=== FontAwesome Icons
+
+FontAwesome is a font and icon toolkit based on CSS. It was originally created 
+by Dave Gandy. The previous version 4 was mainly for the use with Twitter 
+Bootstrap V3. The new version V5, released in December 2017, is focussing all 
+frameworks used for web development. Today, FA comes with 2300+ icons included. 
+
+
+[NOTE]
+====
+Since version 5, the icon set comes in two packages: FontAwesome *Free*
+and the *proprietary* FontAwesome *Pro* version available for a license fee.
+
+The free versions (all releases up to 4 and the free version for 5) are
+available under SIL Open Font License 1.1, Creative Commons Attribution 4.0,
+and the MIT License.
+====
+
+.FontAwesome Icons
+[cols="2a,3a,4a,3a", options="header", width="100%", role="rtable_v table-responsive mt-3"]
+|===============================================================================
+|Size |Modifier |Markup |Render
+
+|1x
+|no modifier set
+|All `icon_name` can be found on the Preview page for *MDI Icon Previewer*
+[source, adoc, role="noclip"]
+----
+fas:user[1x]
+----
+^|fas:user[1x mt-4]
+
+|3x
+|no modifier set
+|All `icon_name` can be found on the Preview page for *MDI Icon Previewer*
+[source, adoc, role="noclip"]
+----
+fas:user[3x]
+----
+^|fas:user[3x mt-4]
+
+|5x
+|no modifier set
+|All `icon_name` can be found on the Preview page for *MDI Icon Previewer*
+[source, adoc, role="noclip"]
+----
+fas:user[5x]
+----
+^|fas:user[5x mt-4]
+
+|5x
+|`fa-rotate-45`
+|Rotate 45 degrees
+[source, adoc, role="noclip"]
+----
+fas:user[5x fa-rotate-45]
+----
+^|fas:user[5x fa-rotate-45 mt-4]
+
+|5x
+|`fa-rotate-315`
+|Rotate 315 degrees
+[source, adoc, role="noclip"]
+----
+fas:user[5x fa-rotate-315]
+----
+^|fas:user[5x fa-rotate-315 mt-4]
+
+|5x
+|`mdi-light` +
+`fa-flip-v`
+|Color set to MDI Light (Grey) and flipped vertical
+[source, adoc, role="noclip"]
+----
+fas:exclamation-triangle[5x mdi-light fa-flip-v]
+----
+^|fas:exclamation-triangle[5x mdi-light fa-flip-v mt-4]
+
+|5x
+|`md-indigo`
+|Color set to MDI Indigo
+[source, adoc, role="noclip"]
+----
+fas:alert[5x md-indigo]
+----
+^|fas:user[5x md-indigo mt-4]
+
+|5x
+|`md-pink`
+|Color set to MDI Pink
+[source, adoc, role="noclip"]
+----
+fas:alert[5x md-pink]
+----
+^|fas:user[5x md-pink mt-4]
+
+|5x
+|`fa-spin`
+|Added animation of type Rotate (Spin)
+[source, adoc, role="noclip"]
+----
+fas:circle-notch[5x fa-spin]
+----
+^|fas:circle-notch[5x fa-spin mt-4]
+
+|5x
+|`md-red-900` +
+`fa-pulsed`
+|Color set to MDI Dark Red and added animation of type Pulsed
+[source, adoc, role="noclip"]
+----
+fas:heart[5x md-red-900 fa-pulsed]
+----
+^|fas:heart[5x md-red-900 fa-pulsed mt-4]
+
+|===============================================================================
+
+NOTE: Using FontAwesome with Asciidoc is quite easy as two inline macros 
+`fas:` and `fas:` are avaialble to place icons where ever you want. See more about
+this in section link:{roundtrip-asciidoc-extensions}#icon-fonts[Asciidoc Extensions]
+
+FontAwesome V5 meets the Material Design idea (of _Google_) and in compare to
+Version 4, the current version is much more than a face-lifting. The Version 5
+comes with more than 2300+ icons but many of them are available with the *Pro*
+license only. For the *Free* version, a subset of 900+ icons is available.
+
+NOTE: The CSS styles for FontAwesome V5 has been extended for J1 Template to
+the *same* styles (and their respective *names*) as for other Font Icon sets.
+Already existing styles like `fa-flip-vertical` is available as `fa-flip-v`
+as well. See all styles that can be used with the MDI 
+link:{previewer-mdi}[Preview Page, {window}].
+
+You can checkout what icons available at link:{fontawesome-icons}[FontAwesome Icons,
+{window}]. _FontAwesome_ V5 is fully integrated - no need for additional
+resources to load. But in compare to Version 4 a lot of differences needs to be
+noticed.
+
+If you haven't used V5 yet, it is highly recommended to visit the
+link:{fontawesome-get-started}[Get started, {window}] pages to learn
+the basics and features and styles.
+
+
+=== Iconify Icons
+
+MDI and FA are quite rich icon sets but designed for *general* use. Sometimes
+icons are missing in one of these fonts like specific *brand* or *theme*
+icons.
+
+An interesting solution for using font icons from a *remote* repository is 
+link:{iconify-home}[Iconify, {window}]. Iconify is a so-called unified 
+*open source icon framework* that makes it possible to use icons from different 
+icon sets using one syntax.
+
+To access that framework, a Javascript client is needed. For J1 Template, the 
+client is available with the JS assets (/assets/themes/j1/extensions/iconify)
+and is loaded per default. To see what icon sets available with that framework,
+check the page link:{iconify-icon-sets}[Iconify Icon Sets, {window}].
+
+Currently, over 40,000 vector icons are available for many different use cases.
+Find some examples below.
+
+.Brand Icons
+[cols="2a,3a,4a,3a", options="header", width="100%", role="rtable_v table-responsive mt-3"]
+|===============================================================================
+|Size |Modifier |Markup |Render
+
+|5x
+|no modifier set
+|All `icons` can be found on the preview page at link:{iconify-brand-icons}[SVG Logos, {window}]
+[source, adoc, role="noclip"]
+----
+iconify:logos:opensource[5x]
+----
+^|iconify:logos:opensource[5x]
+
+|3x
+|no modifier set
+|All `icons` can be found on the preview page at link:{iconify-brand-icons}[SVG Logos, {window}]
+[source, adoc, role="noclip"]
+----
+iconify:logos:atom[5x]
+----
+^|iconify:logos:atom[5x]
+
+|===============================================================================
+
+.Medical Icons
+[cols="2a,3a,4a,3a", options="header", width="100%", role="rtable_v table-responsive mt-3"]
+|===============================================================================
+|Size |Modifier |Markup |Render
+
+|3x
+|no modifier set
+|All `icons` can be found on the preview page at link:{iconify-medical-icons}[Medical Icons, {window}]
+[source, adoc, role="noclip"]
+----
+iconify:medical-icon:i-ear-nose-throat[3x]
+----
+^|iconify:medical-icon:i-ear-nose-throat[3x]
+
+|5x
+|no modifier set
+|All `icons` can be found on the preview page at link:{iconify-medical-icons}[Medical Icons, {window}]
+[source, adoc, role="noclip"]
+----
+iconify:medical-icon:i-ear-nose-throat[5x]
+----
+^|iconify:medical-icon:i-ear-nose-throat[5x]
+
+|===============================================================================
+
+NOTE: Using Iconify icons with Asciidoc is quite easy as an inline macro 
+`iconify:` is avaialble to place icons where ever you want. See more about
+this in section link:{roundtrip-asciidoc-extensions}#icon-fonts[Asciidoc Extensions]
+
+== Whats next
+
+Hopefully you've enjoyed the possibilities J1 offers for managing and
+manipulating *Font Icons*. Do you think these Icons sets fit your needs?
+
+Using Iconify, for all topics a icon font should be found. And it's simple,
+is'nt it?
+
+We hope so.
+
+To check more features of the template, go for the link:{roundtrip-asciidoc-extensions}[
+Asciidoc extensions] made for J1!

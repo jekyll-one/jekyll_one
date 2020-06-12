@@ -1,0 +1,31 @@
+
+*Web in a Day* is the first in a series of tutorials to learn how to
+create modern websites using Jekyll. This Kickstarter focus on the basics
+of Jekyll and the J1 Template which all people needs to know for a successful
+way to a modern static website using Jekyll and J1 Template.
+
+It is highly recommended to read and work on this tutorial by everyone - 
+independly from what level of knowledge they begin. Jekyll is different in 
+compare to classic Content Management Systems (CMS) like Joomla, Wordpress 
+or Drupal. No surprise: Jekyll and J1 is different as well.
+
+It sounds much, spending a whole day to get Jekyll to know - yes, it is much.
+You'll find a lot of Blog articles like *Jekyll in 15 minutes*. But what can
+be *learned* in 15 minutes?
+
+To be fair, most of these blogs are intended to help *installing Jekyll* and
+get the very first steps managed out of the box. If you run Jekyll out of the 
+box, the resulting web site (from the build-in theme scaffold) might somewhat 
+disillusioned. You'll get a very simple site created based on Jekyll's theme 
+*minima*.
+
+To not waste time, get through the turorial and find out what is the *Jekyll Way*.
+And if this the way you want to go.
+
+Have a good time, a good day learning Jekyll.
+
+
+== Meet and greet Jekyll
+
+lorem:sentences[5] +
+lorem:sentences[3] +

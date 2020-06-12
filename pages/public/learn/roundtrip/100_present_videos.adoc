@@ -1,0 +1,152 @@
+---
+title:                                  Roundtrip
+tagline:                                present videos
+description:                            J1 Template Roundtrip - Present video based data
+
+tags:                                   [ Page, Roundtrip ]
+index:                                  [ Template, Roundtrip, Video ]
+categories:                             [ pages ]
+
+scrollbar:                              false
+toc:                                    true
+
+permalink:                              /pages/public/learn/roundtrip/present_videos/
+regenerate:                             true
+
+resources:                              [ 
+                                          light_gallery, justified_gallery, video_js, 
+                                          vimeo_player, vimeo_player, vimeo_froogaloop
+                                        ]
+resource_options:
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+      background_color:
+        color_1:                        md_grey_100
+        color_2:                        md_grey_400
+      slides:
+        # Broadway Underground - still image (animate default)
+        - url:                          /assets/videos/headers/still/underground-broadway.png
+          alt:                          Broadway Underground
+          alignY:                       top
+          animateFirst:                 false
+        # Broadway Underground - FAYETTE ST, moved file to Github/LFS
+        - url:                          https://github.com/jekyll-one-org/jekyll-one-lfs/raw/master/videos/underground-broadway.mp4
+          alignY:                       0
+          isVideo:                      true
+          loop:                         false
+          duration:                     12000
+        # Broadway Underground - still image (animate random)
+        - url:                          /assets/videos/headers/still/underground-broadway.png
+          alt:                          Broadway Underground
+          alignY:                       top
+          transition:                   push_left|push_right|cover_up|cover_down|fade|fadeInOut
+
+---
+
+// Enable the Liquid Preprocessor 
+// -----------------------------------------------------------------------------
+:page-liquid:
+
+// Set other global page attributes here
+// -----------------------------------------------------------------------------
+//:my-asciidoc-attribute:
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture set_env_entry_document %}themes/{{site.template.name}}/procedures/global/set_env_entry_document.proc{%endcapture%}
+
+// Initialize entry document environmental attributes
+// -----------------------------------------------------------------------------
+{% include {{set_env_entry_document}} %}
+
+// Load tag, url and data attributes
+// -----------------------------------------------------------------------------
+include::{includedir}/attributes.asciidoc[tag=tags]
+include::{includedir}/attributes.asciidoc[tag=urls]
+include::{includedir}/attributes.asciidoc[tag=data]
+
+// Set local page attributes
+// -----------------------------------------------------------------------------
+:images-dir:                            {imagesdir}/pages/roundtrip/100_present_images
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
+Playing video on a web page seems not that special since you can already
+watch videos on web pages through plugins like _Flash Player_, _Quicktime_
+or _Silverlight_. A new standard goes to *HTML5 Video*, a pure *HTML* way to
+show video on the web; instead of the previous de facto standard of using
+*proprietary* software.
+
+== Video Galleries
+
+*HTML5 Video* open the doors to *your way* presenting video content. Modern
+browsers support the video tag `<video>` for the HTML5 Video standard. Browsers
+have a build-in multimedia framework already for decoding and displaying
+video content. No need to use such proprietary software components anymore!
+
+HTML5 Video support is given by the App *gallery* combined with the Lightbox
+*LightGallery*.
+
+Two types of video sources are supported:
+
+. videos from *local* files (your web space)
+. videos from *online* sources (on the Internet) like YouTube, Vimeo, etc.
+
+The combination of the App *gallery* and the lightbox *LightGallery* is quite
+usable for all the video content you want to present on your site. Galleries
+can be placed elsewhere with your content. You can use them for video blogs
+for example by placing them into your blog articles content.
+
+WARNING: *LightGallery* can be used *for free* for *private use* but for
+business use, a *commercial license* is needed. See link:{light-gallery-license}[Light Gallery license]
+how to use LightGallery for *commercial* webs and projects.
+
+=== Local video content
+
+Digital image content, simple pictures or vidoes, are quite easy to make.
+Today, each and every mobile has a camera - not that bad! Presenting a bunch
+of (digital) pictures is very easy by using *Justified Gallery* for example.
+Videos created by a digi cam or a mobile can played by J1 Template using the
+*HTML5 Video* support of *LightGallery*.
+
+Two players are available with *LightGallery*:
+
+. an internal player used by default
+. http://videojs.com/[video.js], a excellent Javascript video library
+
+NOTE: The HTML5 specification does _not_ define which video and audio formats
+browsers _should_ support. J1 *LightGallery* supports all _typical_ types of
+HTML5 Video formats browsers support today such as *MP4*, *WebM*, and *Ogg*.
+
+.HTML5 video gallery
+gallery::jg_video_html5[role="mb-5"]
+
+=== Online video content
+
+The Internet is full of interesting content. Video content is very popular,
+the number of channels at e.g. _YouTube_ is enormous. If you want to present
+video content from the Internet, e.g. your channnel, the online video
+support of J1 Template may a good choice. Find some enjoyable videos from
+*James Cordon's* channel: *Carpool Karaoke*.
+
+.YouTube Video Gallery - Carpool Karaoke
+gallery::jg_video_online_youtube[role="mb-5"]
+
+.Vimeo Video Gallery - Fashion
+gallery::jg_video_online_vimeo[role="mb-5"]
+
+
+== Whats next
+
+Images and videos are quite *visual* - and could be impressive, for sure.
+But the most visual component is *text* for all pages, for all sites on the
+Internet. To see how text could be presented great for modern responsive 
+websites, check the section *Typography* next.
+
+What? Find out how it works. go for: link:{roundtrip-typography}[Typography].

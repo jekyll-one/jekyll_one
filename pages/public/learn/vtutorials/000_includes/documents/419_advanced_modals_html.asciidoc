@@ -1,0 +1,928 @@
+++++
+<!-- Modal Contact Form -->
+<div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-notify modal-info" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="lead">Contact Form</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="mdi mdi-close mdi-dark mdi-48px"></i>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="modal-body mb-0">
+        <div class="md-form form-sm">
+          <i class="mdi mdi-dark mdi-email"></i>
+          <input type="text" id="form19" class="form-control">
+          <label for="form19">Your name</label>
+        </div>
+        <div class="md-form form-sm">
+          <i class="mdi mdi-dark mdi-lock"></i>
+          <input type="password" id="form20" class="form-control">
+          <label for="form20">Your email</label>
+        </div>
+        <div class="md-form form-sm">
+          <i class="mdi mdi-dark mdi-tag"></i>
+          <input type="text" id="form21" class="form-control">
+          <label for="form21">Subject</label>
+        </div>
+        <div class="md-form form-sm">
+          <i class="mdi mdi-dark mdi-pencil"></i>
+          <textarea type="text" id="form8" class="md-textarea form-control mb-0"></textarea>
+          <label for="form8">Your message</label>
+        </div>
+        <!-- Footer -->
+        <div class="modal-footer mt-5">
+          <a type="button" class="btn btn-primary-modal btn-text">Send<i class="mdi mdi-dark mdi-send ml-1"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Modal Contact Form -->
+
+<!-- Modal Full Height Right Success-->
+<div class="modal fade right" id="fluidModalRightSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-full-height modal-right modal-notify modal-success" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="lead">Modal Success</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="mdi mdi-close mdi-dark mdi-48px"></i>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="modal-body">
+        <div class="text-center">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim, ab officiis totam.</p>
+          <i class="mdi mdi-4x mdi-check mdi-rotateIn mb-1"></i>
+        </div>
+        <ul class="list-group z-depth-0">
+          <li class="list-group-item justify-content-between">
+            Cras justo odio
+            <span class="badge badge-primary badge-pill">14</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Dapibus ac facilisis in
+            <span class="badge badge-primary badge-pill">2</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Morbi leo risus
+            <span class="badge badge-primary badge-pill">1</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Cras justo odio
+            <span class="badge badge-primary badge-pill">14</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Dapibus ac facilisis in
+            <span class="badge badge-primary badge-pill">2</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Morbi leo risus
+            <span class="badge badge-primary badge-pill">1</span>
+          </li>
+        </ul>
+      </div>
+      <!-- Footer -->
+      <div class="modal-footer">
+        <a type="button" class="btn btn-primary-modal mr-2">Yes, please</a>
+        <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal">No, thanks</a>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Full Height Modal Right Success -->
+
+<!-- Modal Top Info -->
+<div class="modal fade top" id="frameModalTopInfoDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+  <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!-- Body -->
+      <div class="modal-body">
+        <div class="row px-4">
+          <p class="pt-1 pr-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nisi quo provident fugiat reprehenderit nostrum quos..</p>
+        </div>
+        <div class="row px-4">
+          <a type="button" class="btn btn-primary-modal mr-2">Yes, please</a>
+          <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal">No, thanks</a>
+        </div>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Modal Top Info -->
+
+<!-- Modal Bottom Success-->
+<div class="modal fade bottom" id="frameModalBottomSuccessDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+  <div class="modal-dialog modal-frame modal-bottom modal-notify modal-success" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!-- Body -->
+      <div class="modal-body">
+        <p class="mt-1 ml-3 mr-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nisi quo provident fugiat reprehenderit nostrum quos..</p><div class="row ml-3">          
+          <a type="button" class="btn btn-primary-modal mr-2">Yes, please</a>
+          <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal">No, thanks<div class="ripple-container"><div class="ripple-decorator ripple-on ripple-out" style="left: 51.4063px; top: 20px; background-color: rgb(1, 211, 107); transform: scale(14.5548);"></div></div></a>
+        </div>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Modal Bottom Success -->
+
+<!-- Side Modal Top Right Success -->
+<div class="modal fade right" id="sideModalTRSuccessDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+  <div class="modal-dialog modal-side modal-top-right modal-notify modal-success" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="lead">Modal Success</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="mdi mdi-close mdi-dark mdi-48px"></i>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="modal-body">
+        <div class="text-center">
+          <i class="mdi mdi-4x mdi-check mdi-rotateIn mb-1"></i>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim, ab officiis totam.
+          </p>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-primary-modal mr-2">Yes, please</a>
+        <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal">No, thanks</a>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Side Modal Top Right Success -->
+
+<!-- Side Modal Top Left Info -->
+<div class="modal fade left" id="sideModalTLInfoDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+  <div class="modal-dialog modal-side modal-top-left modal-notify modal-info" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="lead">Modal Info</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="mdi mdi-close mdi-dark mdi-48px"></i>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="modal-body">
+        <img src="/assets/images/modules/attics/admin-dashboard-bootstrap-1280x600.png" alt="" class="img-fluid">
+        <div class="text-center">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt vero illo error eveniet cum.</p>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-primary-modal mr-2">Yes, please</a>
+        <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal">No, thanks</a>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Side Modal Top Left Info -->
+
+<!-- Side Modal Bottom Right Danger -->
+<div class="modal fade right" id="sideModalBRDangerDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+  <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-danger" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="lead">Modal Danger</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="mdi mdi-close mdi-dark mdi-48px"></i>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-3">
+            <p></p>
+            <p class="text-center"><i class="mdi mdi-cart fa-4x"></i></p>
+          </div>
+          <div class="col-9">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, molestiae provident temporibus sunt earum.</p>
+            <h2 class="notoc"><span class="badge">v52gs1</span></h2>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-primary-modal mr-2">Yes, please</a>
+        <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal">No, thanks</a>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Side Modal Bottom Right Danger -->
+
+<!-- Side Modal Bottom Left Warning -->
+<div class="modal fade left" id="sideModalBLWarningDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+  <div class="modal-dialog modal-side modal-bottom-left modal-notify modal-warning" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="lead">Modal Warning</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="mdi mdi-close mdi-dark mdi-48px"></i>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-3 text-center">
+            <img src="/assets/images/pages/roundtrip/410_bs_modals_extentions/avatar.jpg" alt="avatar.jpg" class="img-fluid z-depth-1-half rounded-circle">
+            <div style="height: 10px"></div>
+            <p class="title mb-0">Jane</p>
+            <p class="text-muted " style="font-size: 13px">Consultant</p>
+          </div>
+          <div class="col-9">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, molestiae provident temporibus sunt earum.</p>
+            <p class="card-text"><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</strong></p>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-primary-modal mr-2">Yes, please</a>
+        <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal">No, thanks</a>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Side Modal Bottom Left Warning -->
+
+<!-- Modal Form Login with Avatar Demo -->
+<div class="modal fade" id="modalLoginAvatarDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <img src="/assets/images/pages/roundtrip/410_bs_modals_extentions/avatar.jpg" alt="avatar.jpg" class="rounded-circle img-responsive">
+      </div>
+      <!-- Body -->
+      <div class="modal-body text-center mb-1">
+        <h5 class="mt-1 mb-2 notoc">Maria Doe</h5>
+        <div class="md-form ml-0 mr-0">
+          <input type="password" type="text" id="form1" class="form-control ml-0">
+          <label for="form1" class="ml-0">Enter password</label>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-cyan mt-1">Login <i class="mdi mdi-login ml-1"></i></button>
+        </div>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!--END Modal Form Login with Avatar Demo -->
+
+<!--Modal Login-Register Form Demo -->
+<div class="modal fade" id="modalLRFormDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!-- Modal cascading tabs -->
+      <div class="modal-c-tabs">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs tabs-2 light-blue darken-3" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#panel17" role="tab"><i class="mdi mdi-account mr-1"></i> Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#panel18" role="tab"><i class="mdi mdi-account-plus mr-1"></i> Register</a>
+          </li>
+        </ul>
+        <!-- Tab panels -->
+        <div class="tab-content">
+          <!--Panel 17-->
+          <div class="tab-pane fade in show active" id="panel17" role="tabpanel">
+            <!-- Body -->
+            <div class="modal-body mb-1">
+              <div class="md-form form-sm">
+                <i class="mdi mdi-email"></i>
+                <input type="text" id="form2" class="form-control">
+                <label for="form2">Your email</label>
+              </div>
+              <div class="md-form form-sm">
+                <i class="mdi mdi-lock"></i>
+                <input type="password" id="form3" class="form-control">
+                <label for="form3">Your password</label>
+              </div>
+              <div class="text-center mt-2">
+                <button class="btn btn-info">Log in <i class="mdi mdi-login ml-1"></i></button>
+              </div>
+            </div>
+            <!-- Footer -->
+            <div class="modal-footer">
+              <div class="options text-center text-md-right mt-1">
+                <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
+                <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info ml-auto" data-dismiss="modal">Close <i class="mdi mdi-close ml-1"></i></button>
+            </div>
+          </div>
+          <!--/.Panel 7-->
+          <!--Panel 18-->
+          <div class="tab-pane fade" id="panel18" role="tabpanel">
+            <!-- Body -->
+            <div class="modal-body">
+              <div class="md-form form-sm">
+                <i class="mdi mdi-email"></i>
+                <input type="text" id="form14" class="form-control">
+                <label for="form14">Your email</label>
+              </div>
+              <div class="md-form form-sm">
+                <i class="mdi mdi-lock"></i>
+                <input type="password" id="form5" class="form-control">
+                <label for="form5">Your password</label>
+              </div>
+              <div class="md-form form-sm">
+                <i class="mdi mdi-lock"></i>
+                <input type="password" id="form6" class="form-control">
+                <label for="form6">Repeat password</label>
+              </div>
+              <div class="text-center form-sm mt-2">
+                <button class="btn btn-info">Sign up <i class="mdi mdi-login ml-1"></i></button>
+              </div>
+              <fieldset class="additional-option">
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">Subscribe me to the newsletter</label>
+              </fieldset>
+            </div>
+            <!-- Footer -->
+            <div class="modal-footer">
+              <div class="options text-right">
+                <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info ml-auto" data-dismiss="modal">Close <i class="mdi mdi-close ml-1"></i></button>
+            </div>
+          </div>
+          <!--/.Panel 8-->
+        </div>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Modal Login-Register Form Demo -->
+
+<!-- Modal Central Large Info -->
+<div class="modal fade" id="centralModalLGInfoDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-notify modal-info" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="lead">Modal Info</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="mdi mdi-close mdi-dark mdi-48px"></i>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="modal-body">
+        <div class="text-center">
+          <i class="mdi mdi-4x mdi-check mdi-rotateIn mb-1"></i>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim, ab officiis totam.
+          </p>
+        </div>
+        <img src="/assets/images/modules/attics/admin-dashboard-bootstrap-1280x600.png" alt="" class="img-fluid">
+      </div>
+      <!-- Footer -->
+      <div class="modal-footer">
+        <a type="button" class="btn btn-primary-modal mr-2">Yes, please</a>
+        <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal">No, thanks</a>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Modal Central Large Info -->
+
+<!-- Modal Central Fluid Success -->
+<div class="modal fade" id="centralModalFluidSuccessDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fluid modal-notify modal-success" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="lead">Modal Success</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="mdi mdi-close mdi-dark mdi-48px"></i>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="modal-body">
+        <div class="text-center">
+          <i class="mdi mdi-4x mdi-check mdi-rotateIn mb-1"></i>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim, ab officiis totam.
+          </p>
+        </div>
+        <ul class="list-group z-depth-0">
+          <li class="list-group-item justify-content-between">
+            Cras justo odio
+            <span class="badge badge-primary badge-pill">14</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Dapibus ac facilisis in
+            <span class="badge badge-primary badge-pill">2</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Morbi leo risus
+            <span class="badge badge-primary badge-pill">1</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Cras justo odio
+            <span class="badge badge-primary badge-pill">14</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Dapibus ac facilisis in
+            <span class="badge badge-primary badge-pill">2</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Morbi leo risus
+            <span class="badge badge-primary badge-pill">1</span>
+          </li>
+        </ul>
+      </div>
+      <!-- Footer -->
+      <div class="modal-footer">
+        <a type="button" class="btn btn-primary-modal mr-2">Yes, please</a>
+        <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal">No, thanks</a>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Modal Central Fluid Success -->
+
+<!-- Modal Full Height Right Success Demo -->
+<div class="modal fade right" id="fluidModalRightSuccessDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+  <div class="modal-dialog modal-full-height modal-right modal-notify modal-success" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="lead">Modal Success</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="mdi mdi-close mdi-dark mdi-48px"></i>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="modal-body">
+        <div class="text-center">
+          <i class="mdi mdi-4x mdi-check mdi-rotateIn mb-1"></i>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim, ab officiis totam.
+          </p>
+        </div>
+        <ul class="list-group z-depth-0">
+          <li class="list-group-item justify-content-between">
+            Cras justo odio
+            <span class="badge badge-primary badge-pill">14</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Dapibus ac facilisis in
+            <span class="badge badge-primary badge-pill">2</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Morbi leo risus
+            <span class="badge badge-primary badge-pill">1</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Cras justo odio
+            <span class="badge badge-primary badge-pill">14</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Dapibus ac facilisis in
+            <span class="badge badge-primary badge-pill">2</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Morbi leo risus
+            <span class="badge badge-primary badge-pill">1</span>
+          </li>
+        </ul>
+      </div>
+      <!-- Footer -->
+      <div class="modal-footer">
+        <a type="button" class="btn btn-primary-modal mr-2">Yes, please</a>
+        <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal">No, thanks</a>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Modal Full Height Right Success Demo -->
+
+<!-- Modal Full Height Left Info Demo -->
+<div class="modal fade left" id="fluidModalLeftInfoDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+  <div class="modal-dialog modal-full-height modal-left modal-notify modal-info" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="lead">Modal Success</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="mdi mdi-close mdi-dark mdi-48px"></i>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="modal-body">
+        <div class="text-center">
+          <i class="mdi mdi-4x mdi-check mdi-rotateIn mb-1"></i>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim, ab officiis totam.
+          </p>
+        </div>
+        <ul class="list-group z-depth-0">
+          <li class="list-group-item justify-content-between">
+            Cras justo odio
+            <span class="badge badge-primary badge-pill">14</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Dapibus ac facilisis in
+            <span class="badge badge-primary badge-pill">2</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Morbi leo risus
+            <span class="badge badge-primary badge-pill">1</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Cras justo odio
+            <span class="badge badge-primary badge-pill">14</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Dapibus ac facilisis in
+            <span class="badge badge-primary badge-pill">2</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Morbi leo risus
+            <span class="badge badge-primary badge-pill">1</span>
+          </li>
+        </ul>
+      </div>
+      <!-- Footer -->
+      <div class="modal-footer">
+        <a type="button" class="btn btn-primary-modal mr-2">Yes, please</a>
+        <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal">No, thanks</a>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Modal Full Height Left Info Demo -->
+
+<!-- Modal Full Height Top Warning Demo -->
+<div class="modal fade top" id="fluidModalTopWarningDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+  <div class="modal-dialog modal-full-height modal-top modal-notify modal-warning" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="lead">Modal Warning</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="mdi mdi-close mdi-dark mdi-48px"></i>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="modal-body">
+        <div class="text-center">
+          <i class="mdi mdi-4x mdi-check mdi-rotateIn mb-1"></i>
+        </div>
+        <ul class="list-group z-depth-0">
+          <li class="list-group-item justify-content-between">
+            Cras justo odio
+            <span class="badge badge-primary badge-pill">14</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Dapibus ac facilisis in
+            <span class="badge badge-primary badge-pill">2</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Morbi leo risus
+            <span class="badge badge-primary badge-pill">1</span>
+          </li>
+        </ul>
+      </div>
+      <!-- Footer -->
+      <div class="modal-footer">
+        <a type="button" class="btn btn-primary-modal mr-2">Yes, please</a>
+        <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal">No, thanks</a>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Modal Full Height Top Warning Demo -->
+
+<!-- Modal Full Height Bottom Danger Demo -->
+<div class="modal fade bottom" id="fluidModalBottomDangerDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+  <div class="modal-dialog modal-full-height modal-bottom modal-notify modal-danger" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="lead">Modal Danger</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="mdi mdi-close mdi-dark mdi-48px"></i>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="modal-body">
+        <div class="text-center">
+          <i class="mdi mdi-4x mdi-check mdi-rotateIn mb-1"></i>
+        </div>
+        <ul class="list-group z-depth-0">
+          <li class="list-group-item justify-content-between">
+            Cras justo odio
+            <span class="badge badge-primary badge-pill">14</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Dapibus ac facilisis in
+            <span class="badge badge-primary badge-pill">2</span>
+          </li>
+          <li class="list-group-item justify-content-between">
+            Morbi leo risus
+            <span class="badge badge-primary badge-pill">1</span>
+          </li>
+        </ul>
+      </div>
+      <!-- Footer -->
+      <div class="modal-footer">
+        <a type="button" class="btn btn-primary-modal mr-2">Yes, please</a>
+        <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal">No, thanks</a>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Modal Full Height Bottom Danger Demo -->
+
+<!-- Modal Central Success Demo -->
+<div class="modal fade" id="centralModalSuccessDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-success" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="lead">Modal Success</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="mdi mdi-close mdi-dark mdi-48px"></i>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="modal-body">
+        <div class="text-center">
+          <i class="mdi mdi-4x mdi-check mdi-rotateIn mb-1"></i>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim, ab officiis totam.
+          </p>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-primary-modal mr-2">Yes, please</a>
+        <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal">No, thanks</a>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Central Success Demo -->
+
+<!-- Modal Central Info Demo -->
+<div class="modal fade" id="centralModalInfoDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-info" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="lead">Modal Info</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="mdi mdi-close mdi-dark mdi-48px"></i>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="modal-body">
+        <img src="/assets/images/modules/attics/admin-dashboard-bootstrap-1280x600.png" alt="" class="img-fluid">
+        <div class="text-center">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt vero illo error eveniet cum.</p>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-primary-modal mr-2">Yes, please</a>
+        <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal">No, thanks</a>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Modal Central Info Demo -->
+
+<!-- Modal Central Danger Demo -->
+<div class="modal fade" id="centralModalDangerDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-danger" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="lead">Modal Danger</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="mdi mdi-close mdi-dark mdi-48px"></i>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-3">
+            <p></p>
+            <p class="text-center"><i class="mdi mdi-cart fa-4x"></i></p>
+          </div>
+          <div class="col-9">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, molestiae provident temporibus sunt earum.</p>
+            <h2 class="notoc"><span class="badge">v52gs1</span></h2>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-primary-modal mr-2">Yes, please</a>
+        <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal">No, thanks</a>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Modal Central Danger Demo -->
+
+<!-- Modal Central Warning Demo -->
+<div class="modal fade" id="centralModalWarningDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-warning" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="lead">Modal Warning</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="mdi mdi-close mdi-dark mdi-48px"></i>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-3 text-center">
+            <img src="/assets/images/pages/roundtrip/410_bs_modals_extentions/avatar.jpg" alt="avatar.jpg" class="img-fluid z-depth-1-half rounded-circle">
+            <div style="height: 10px"></div>
+            <p class="title mb-0">Jane</p>
+            <p class="text-muted " style="font-size: 13px">Consultant</p>
+          </div>
+          <div class="col-9">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, molestiae provident temporibus sunt earum.</p>
+            <p class="card-text"><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</strong></p>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-primary-modal mr-2">Yes, please</a>
+        <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal">No, thanks</a>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Modal Central Warning Demo -->
+
+<!--Modal New User -->
+<div class="modal fade right" id="modalBFDemoNewUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+  <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="lead">Welcome to J1 Template</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true" class="white-text">×</span>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-3 text-center">
+            <img src="/assets/images/pages/roundtrip/410_bs_modals_extentions/avatar.jpg" alt="avatar.jpg" class="img-fluid z-depth-1-half rounded-circle">
+            <div style="height: 10px"></div>
+            <p class="title mb-0">Michal</p>
+            <p class="text-muted " style="font-size: 13px">MDB Founder</p>
+          </div>
+          <div class="col-9">
+            <p><strong>Hey there!</strong></p>
+            <p>We're happy to see that you're getting involved.</p>
+            <p>How about <strong>we help you in getting more</strong> out of all this awesomeness?</p>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="modal-footer justify-content-center">
+        <a href="#" class="btn btn-primary-modal">Start tutorial <i class="mdi mdi-code-tags ml-1"></i></a>
+        <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal">No, thanks</a>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!-- END Modal New User -->
+
+<!--Modal 10% Discount -->
+<div class="modal fade right" id="modalBFDemoDiscount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+  <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-danger" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="lead">Discount offer: <strong>10% off</strong></p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="mdi mdi-close mdi-dark mdi-48px"></i>
+        </button>
+      </div>
+      <!-- Body -->
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-3">
+            <p></p>
+            <p class="text-center"><i class="mdi mdi-gift mdi-4x"></i></p>
+          </div>
+          <div class="col-9">
+            <p>Sharing is caring. Therefore, from time to time we like to give our visitors small gifts. Today is one of those days.</p>
+            <p><strong>Copy the following code and use it at the checkout. It's valid for <u>one day</u>.</strong></p>
+            <h2 class="notoc"><span class="badge">v52gs1</span></h2>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="modal-footer justify-content-center">
+        <a href="#" class="btn btn-primary-modal">Yes, please</a>
+        <a type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal">No, thanks</a>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!--END Modal 10% Discount -->
+
+<!--Modal Subscription -->
+<div class="modal fade" id="modalBFDemoSubscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal z-depth-1" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header light-blue darken-3 white-text">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="title notoc"><i class="mdi mdi-newspaper"></i> Don’t miss important updates</h4>
+      </div>
+      <!-- Body -->
+      <div class="modal-body mb-0">
+        <p class="lead text-center">Subscribe to our newsletter</p>
+        <div class="md-form form-sm">
+          <i class="mdi mdi-lock"></i>
+          <input type="password" id="form16" class="form-control">
+          <label for="form16">Your name</label>
+        </div>
+        <div class="md-form form-sm">
+          <i class="mdi mdi-email"></i>
+          <input type="text" id="form17" class="form-control">
+          <label for="form17">Your email</label>
+        </div>
+        <div class="text-center mt-1-half">
+          <button class="btn btn-info">Submit <i class="mdi mdi-check ml-1"></i></button>
+          <button class="btn btn-outline-info" data-dismiss="modal">No, thanks</button>
+        </div>
+      </div>
+    </div>
+    <!-- END Content -->
+  </div>
+</div>
+<!--END Modal Subscription -->
+++++

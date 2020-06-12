@@ -1,0 +1,40 @@
+---
+title:                                  Abouttt
+tagline:                                J1 Template
+description:                            Things you should know about this site
+categories:                             [ pages ]
+
+tags:                                   [ About ]
+index:                                  []
+categories:                             [ pages ]
+
+permalink:                              /pages/public/about/site/
+regenerate:                             false
+
+resources:                              [ lightbox ]
+resource_options:
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+      opacity:                          0.5
+      slides:
+        - url:                          /assets/images/modules/attics/ian-schneider-1920x1280.jpg
+          alt:                          Photo by Ian Schneider on Unsplash
+          badge:
+            type:                       unsplash
+            author:                     Ian Schneider
+            href:                       https://unsplash.com/@goian
+---
+
+lorem:sentences[3]
+
+lorem:sentences[3]
+
+== About this Site
+
+lorem:sentences[5]
+
+
+== Hall of fame
+
+lorem:sentences[5]

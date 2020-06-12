@@ -1,0 +1,145 @@
+---
+title:                                  Roundtrip
+tagline:                                bootstrap tour
+description:                            J1 Template Roundtrip - Present Bootstrap
+
+tags:                                   [ Page, Roundtrip ]
+index:                                  [ Template, Roundtrip, Images ]
+categories:                             [ pages ]
+
+toc:                                    true
+scrollbar:                              false
+
+permalink:                              /pages/public/learn/roundtrip/bs_tour/
+regenerate:                             false
+
+resources:                              []
+resource_options:
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+      opacity:                          0.5
+      slides:
+        - url:                          /assets/images/pages/roundtrip/images-1920x1280-bw.jpg
+          alt:                          Photo by Ricardo Gomez Angel on Unsplash
+          badge:
+            type:                       unsplash
+            author:                     Ricardo Gomez Angel
+            href:                       https://unsplash.com/@ripato/portfolio
+---
+
+// Enable the Liquid Preprocessor
+// -----------------------------------------------------------------------------
+:page-liquid:
+
+// Set other global page attributes here
+// -----------------------------------------------------------------------------
+//:my-asciidoc-attribute:
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture set_env_entry_document %}themes/{{site.template.name}}/procedures/global/set_env_entry_document.proc{%endcapture%}
+
+// Initialize entry document environmental attributes
+// -----------------------------------------------------------------------------
+{% include {{set_env_entry_document}} %}
+
+// Load tag, url and data attributes
+// -----------------------------------------------------------------------------
+include::{includedir}/attributes.asciidoc[tag=tags]
+include::{includedir}/attributes.asciidoc[tag=urls]
+include::{includedir}/attributes.asciidoc[tag=data]
+
+// Set local page attributes
+// -----------------------------------------------------------------------------
+:images-dir:                            {imagesdir}/pages/roundtrip/100_present_images
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
+Lightboxes like *LightGallery* or *Lightbox V2* support your web for full image
+views of your *picture* or *video* content. Have a look, a quick tour what J1
+can do. Have fun!
+
+++++
+<p>
+  <button type="button" id="demo" class="btn btn-default btn-lg" data-demo="">
+    <span class="glyphicon glyphicon-play"></span>
+    Start the demo
+  </button>
+</p>
+++++
+
+== Tour step 1
+
+A *Lightbox* in general is a helper which displays enlarged, almost
+screen-filling versions of pictures (or videos), while dimming the rest of the
+page. The technique, introduced by Lightbox V2, gained widespread popularity
+due to its simple and elegant style. The term *lightbox* is used since then for
+Javascript libraries to support such functionality.
+
+== Tour step 2
+
+A *Lightbox* in general is a helper which displays enlarged, almost
+screen-filling versions of pictures (or videos), while dimming the rest of the
+page. The technique, introduced by Lightbox V2, gained widespread popularity
+due to its simple and elegant style. The term *lightbox* is used since then for
+Javascript libraries to support such functionality.
+
+++++
+<script>
+(function() {
+
+  $(function() {
+    // Instance the tour
+    var $demo, duration, remaining, tour;
+    $demo = $("#demo");
+    duration = 5000;
+    remaining = duration;
+    tour = new Tour({
+      onStart: function() {
+        return $demo.addClass("disabled", true);
+      },
+      onEnd: function() {
+        return $demo.removeClass("disabled", true);
+      },
+      debug: true,
+      steps: [
+      {
+        element: "#tour-step-1",
+        title: "Title of my step 1",
+        content: "Content of my step"
+      },
+      {
+        element: "#tour-step-2",
+        title: "Title of my step 2",
+        content: "Content of my step"
+      }
+    ]}).init(); // Initialize the tour
+
+    // Start the tour
+    // tour.start();
+
+    if (tour.ended()) {
+      $('<div class="alert alert-info alert-dismissable"><button class="close" data-dismiss="alert" aria-hidden="true">&times;</button>You ended the demo tour. <a href="#" data-demo>Restart the demo tour.</a></div>').prependTo(".content").alert();
+    }
+
+    $(document).on("click", "[data-demo]", function(e) {
+      e.preventDefault();
+      if ($(this).hasClass("disabled")) {
+        return;
+      }
+      tour.restart();
+      return $(".alert").alert("close");
+    });
+
+  });
+
+}).call(this);
+</script>
+++++
+

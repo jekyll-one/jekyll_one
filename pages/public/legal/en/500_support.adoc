@@ -1,0 +1,19 @@
+---
+title:                                  Support
+tagline:                                Where to get help
+description:                            Where to get help and support
+
+tags:                                   [ Support ]
+index:                                  []
+categories:                             [ pages ]
+
+permalink:                              /pages/public/legal/de/support/
+regenerate:                             false
+
+resources:                              []
+resource_options:
+---
+
+== Support
+
+=== Support for ...

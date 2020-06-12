@@ -1,0 +1,141 @@
+---
+title:                                  Introduction Videos
+tagline:                                YouTube
+description:                            Introduction Videos - Learn the basics
+
+tags:                                   [ Page, Videos ]
+index:                                  [ Template, Introduction, Basics, Video ]
+categories:                             [ pages ]
+
+scrollbar:                              false
+toc:                                    true
+
+permalink:                              /pages/public/learn/vtutorials/youtube_basics/
+regenerate:                             false
+
+resources:                              [ 
+                                          light_gallery, justified_gallery, 
+                                          bs_gallery, video_js
+                                        ]
+resource_options:
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+#      background_color:
+#        color_1:                        md_grey_100
+#        color_2:                        md_grey_400
+#      slides:
+#        # Broadway Underground - still image (animate default)
+#        - url:                          /assets/videos/headers/still/underground-broadway.png
+#          alt:                          Broadway Underground
+#          alignY:                       top
+#          animateFirst:                 false
+#        # Broadway Underground - FAYETTE ST, moved file to Github/LFS
+#        - url:                          https://github.com/jekyll-one-org/jekyll-one-lfs/raw/master/videos/underground-broadway.mp4
+#          alignY:                       0
+#          isVideo:                      true
+#          loop:                         false
+#          duration:                     12000
+#        # Broadway Underground - still image (animate random)
+#        - url:                          /assets/videos/headers/still/underground-broadway.png
+#          alt:                          Broadway Underground
+#          alignY:                       top
+#          transition:                   push_left|push_right|cover_up|cover_down|fade|fadeInOut
+---
+
+// Enable the Liquid Preprocessor 
+// -----------------------------------------------------------------------------
+:page-liquid:
+
+// Set other global page attributes here
+// -----------------------------------------------------------------------------
+//:my-asciidoc-attribute:
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture set_env_entry_document %}themes/{{site.template.name}}/procedures/global/set_env_entry_document.proc{%endcapture%}
+
+// Initialize entry document environmental attributes
+// -----------------------------------------------------------------------------
+{% include {{set_env_entry_document}} %}
+
+// Load tag, url and data attributes
+// -----------------------------------------------------------------------------
+include::{includedir}/attributes.asciidoc[tag=tags]
+include::{includedir}/attributes.asciidoc[tag=urls]
+include::{includedir}/attributes.asciidoc[tag=data]
+
+// Set local page attributes
+// -----------------------------------------------------------------------------
+:images-dir:                            {imagesdir}/pages/roundtrip/100_present_images
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
+Playing video on a web page seems not that special since you can already
+watch videos on web pages through plugins like _Flash Player_, _Quicktime_
+or _Silverlight_. A new standard goes to *HTML5 Video*, a pure *HTML* way to
+show video on the web; instead of the previous de facto standard of using
+*proprietary* software.
+
+== YouTube Basics
+
+The Internet is full of interesting content. Video content is very popular,
+the number of channels at e.g. _YouTube_ is enormous. If you want to present
+video content from the Internet, e.g. your channnel, the online video
+support of J1 Template may a good choice. Find some enjoyable videos from
+*James Cordon's* channel: *Carpool Karaoke*.
+
+++++
+  <div id="player"></div>
+
+  <script>
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var player;
+    var videoId = 'M7lc1UVf-VE';
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '360',
+        width: '640',
+        videoId: 'M7lc1UVf-VE',
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+
+      // player.loadVideoById(videoId, 0, "default");
+    }
+
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+
+    // 5. The API calls this function when the player's state changes.
+    //    The function indicates that when playing a video (state=1),
+    //    the player should play for six seconds and then stop.
+    var done = false;
+    function onPlayerStateChange(event) {
+      if (event.data == YT.PlayerState.PLAYING && !done) {
+        setTimeout(stopVideo, 1000);
+        done = true;
+      }
+    }
+    function stopVideo() {
+      player.stopVideo();
+    }
+  </script>
+++++

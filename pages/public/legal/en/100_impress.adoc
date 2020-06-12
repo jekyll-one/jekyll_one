@@ -1,0 +1,51 @@
+---
+title:                                  Impress
+tagline:                                Entries referred to § 5 TMG
+description:                            Impressum
+
+tags:                                   [ Impressum ]
+index:                                  []
+categories:                             [ pages ]
+
+permalink:                              /pages/public/legal/en/impress/
+regenerate:                             false
+
+toc:                                    false
+resources:                              []
+resource_options:
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+      opacity:                          0.5 
+      slides:
+        - url:                          /assets/images/modules/attics/aditya-joshi-1920x1280.jpg
+          alt:                          Photo by Aditya Joshi
+          alignY:                       0.5
+          badge:
+            type:                       unsplash
+            author:                     Aditya Joshi
+            href:                       https://unsplash.com/@adijoshi11
+---
+
+.Postal address
+----
+  Juergen Adams
+  Erasmustrasse 28
+  40223 Duesseldorf
+----
+
+.Contact
+----
+  E-Mail:	webmaster@jekyll.one
+----
+
+.Responsible for the content according to § 55 Abs. 2 RStV:
+----
+  Juergen Adams
+
+  Erasmustrasse 28
+  40223 Duesseldorf
+----
+
+
+

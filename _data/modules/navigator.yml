@@ -1,0 +1,162 @@
+# ------------------------------------------------------------------------------
+# ~/_data/apps/navigator.yml
+# User configuration settings for J1 NAV Module
+# All sub-modules except Main Navigation bar
+#
+# NOTE: For Main Navigation bar, see navigator_menu.yml
+#
+# Product/Info:
+# https://jekyll.one
+#
+# Copyright (C) 2020 Juergen Adams
+#
+# J1 Template is licensed under the MIT License.
+# See: https://github.com/jekyll-one/J1 Template/blob/master/LICENSE
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+# About this configuration (used for J1 CC only)
+#
+about_config:
+  title:                                Navigator
+  scope:                                Default settings
+  location:                             _data/modules/defaults/navigator.yml
+
+# ------------------------------------------------------------------------------
+# User configuration settings
+#
+settings:
+
+  # ----------------------------------------------------------------------------
+  # NavBar
+  #
+  nav_bar:
+    enabled:                            true
+
+    fixed:                              true
+
+  # ----------------------------------------------------------------------------
+  # NavMenu
+  #
+  nav_menu:
+    enabled:                            true
+
+    delay_open_menu:                    250
+
+  # ----------------------------------------------------------------------------
+  # NavQuicklinks
+  #
+  nav_quicklinks:
+    enabled:                            true
+
+    home_url:                           none                                    # none | URL
+    back_url:                           none                                    # none | URL
+
+    r_text_sizer:                       true                                    # true | false
+
+    disqus_url:                         https://disqus.com/
+    github_url:                         https://github.com/jekyll-one
+    patreon_url:                        none                                    # https://www.patreon.com/jekyll_one/posts
+
+  # ----------------------------------------------------------------------------
+  # NavTopsearch
+  #
+  nav_topsearch:
+    enabled:                            true
+
+  # ----------------------------------------------------------------------------
+  # NavSidebar
+  #
+  nav_sidebar:
+    enabled:                            true
+
+    boxes:
+
+      - box:
+          enabled:                      true
+          type:                         user_info
+          title:                        User
+
+          links:
+            - title:                    Provider
+              value:                    ??provider
+              href:                     ??provider-site-url
+              target:                   _blank
+              icon:                     domain
+            - title:                    User
+              icon:                     account
+              value:                    ??user-name
+              href:                     ??provider_member_url
+              target:                   none
+
+            - title:                    Permissions
+              icon:                     account-check
+              value:                    ??provider-permissions
+              href:                     ??provider_member_url
+              target:                   none
+            - title:                    Membership
+              icon:                     account-settings
+              value:                    ??provider-membership
+              href:                     ??provider_member_url
+              target:                   none
+            - title:                    Cookies
+              icon:                     cookie
+              value:                    ??cookie-state
+              href:                     ??provider_privacy_url
+              target:                   none
+
+      - box:
+          enabled:                      true
+          type:                         theme_info
+          title:                        Theme
+          links:
+            - title:                    Name
+              icon:                     face
+              value:                    ??theme-name
+              href:                     /pages/public/previewer/theme/
+              target:                   none
+            - title:                    Author
+              icon:                     grease-pencil
+              value:                    ??theme-author
+              href:                     ??theme-author-url
+              target:                   _blank
+            - title:                    Version
+              icon:                     numeric
+              value:                    ??theme-version
+              href:                     /pages/public/previewer/theme/
+              target:                   none
+
+      - box:
+          enabled:                      true
+          type:                         site_info
+          title:                        Site
+          links:
+            - title:                    About
+              icon:                     home-outline
+              href:                     /pages/public/about/site/
+              target:                   none
+            # - title:                    Become a Patron
+            #   icon:                     patreon
+            #   href:                     /pages/public/about/become_a_patron/
+            #   target:                   _blank
+            - title:                    Impress
+              icon:                     alert-outline
+              href:                     /pages/public/legal/en/impress/
+              target:                   none
+            - title:                    Privacy
+              icon:                     heart
+              href:                     /pages/public/legal/en/privacy/
+              target:                   none
+            - title:                    License
+              icon:                     checkbox-multiple-marked-circle-outline
+              href:                     /pages/public/legal/en/license_agreement/
+              target:                   none
+
+          # - title:                    Contact
+          #   icon:                     contact-mail
+          #   href:                     mailto:contact@jekyll.one
+          #   target:                   none
+
+
+# ------------------------------------------------------------------------------
+# END config
