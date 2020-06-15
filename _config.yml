@@ -224,8 +224,8 @@ doctype:                                html
 #   values:                             boolean (true|false)
 #   default:                            false
 #
-title:                                  J1 Template MDE
-slogan:                                 Starter Web
+title:                                  J1
+slogan:                                 One Template
 description:                            Made for Jekyll · Made for Your Web
 keywords:                               Jekyll, One, Template, Ruby, Asciidoctor,
                                         Asciidoc, Bootstrap, Javascript,
@@ -379,15 +379,15 @@ collections_dir:                        collections
 include:                                [ .htaccess ]
 exclude:                                [
                                           log, vendor, node_modules, utilsrv,
-                                          History.markdown, README.md, 
+                                          History.markdown, README.md,
                                           changelog.md, Rakefile,
                                           Gemfile, Gemfile.lock, Guardfile,
                                           yarn.lock, config.ru,
                                           package-lock.json, package.json,
-                                          '.sass-cache', '.vscode', 
+                                          '.sass-cache', '.vscode',
                                           '.idea', '*.ignore',
                                           '*.bat', '*.sh', '*.tmp', 'dot.*',
-                                          '*.txt', '*.log', '*.ppt*', 
+                                          '*.txt', '*.log', '*.ppt*',
                                           '*.zip', '*.7z', '*.tgz', '*.tar',
                                           '*.a2p', '*.asciidoc'
                                         ]
@@ -596,7 +596,7 @@ collections:
 # Instead of repeating this configuration each time a page is being
 # created, Jekyll provides a way to set these configuration items
 # as defaults in this site configuration (_config.yml).
-# 
+#
 defaults:
 
   # ----------------------------------------------------------------------------
