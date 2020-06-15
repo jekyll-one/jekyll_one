@@ -52,7 +52,7 @@ settings:
     home_url:                           none                                    # none | URL
     back_url:                           none                                    # none | URL
 
-    r_text_sizer:                       true                                    # true | false
+    r_text_sizer:                       false                                   # true | false
 
     disqus_url:                         https://disqus.com/
     github_url:                         https://github.com/jekyll-one
