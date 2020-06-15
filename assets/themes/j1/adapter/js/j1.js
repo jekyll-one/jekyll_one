@@ -176,24 +176,6 @@ var j1 = (function () {
   };
 
   // user STATE cookie (initial values)
-  // var user_state = {
-  //   'theme_css':            default_theme_css,
-  //   'theme_extension_css':  '{{themer_options.includeBootswatch}}',
-  //   'theme_name':           default_theme_name,
-  //   'theme_author':         default_theme_author,
-  //   'theme_author_url':     '{{template_config.theme_author_url}}',
-  //   'theme_link':           default_theme_link,
-  //   'theme_version':        '{{site.version}}',
-  //   'cookies_accepted':     'pending',
-  //   'whitelistedPages':     default_white_listed_pages,
-  //   'deleteOnDecline':      false,
-  //   'showConsentOnPending': false,
-  //   'stopScrolling':        true,
-  //   'session_active':       false,
-  //   'last_session_ts':      '',
-  //   'cc_authenticated':     false
-  // };
-
   var user_state = {
     'theme_css':            default_theme_css,
     'theme_extension_css':  themeExtensionCss,
@@ -308,10 +290,10 @@ var j1 = (function () {
         user_state.last_session_ts    = timestamp_now;
 
         // DANGEROUS (??): delete user session in browser using MULTI_TAB!
-        if (j1.existsCookie(cookie_names.user_session)) {
-          var bla = cookie_names.user_session;
-          j1.deleteCookie(cookie_names.user_session)
-        }
+        // if (j1.existsCookie(cookie_names.user_session)) {
+        //   var bla = cookie_names.user_session;
+        //   j1.deleteCookie(cookie_names.user_session)
+        // }
 
         j1.writeCookie({
           name: cookie_user_state_name,
