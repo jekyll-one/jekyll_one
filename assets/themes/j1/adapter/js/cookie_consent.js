@@ -1,5 +1,5 @@
 ---
-regenerate:                             true
+regenerate:                             false
 ---
 
 {% capture cache %}
@@ -108,13 +108,20 @@ j1.adapter['cookie_consent'] = (function (j1, window) {
 
       _this             = j1.adapter.cookie_consent;
       logger            = log4javascript.getLogger('j1.adapter.cookie_consent');
-      cookie_consent    = j1.existsCookie(user_state_name) ?
-                            j1.readCookie(user_state_name) :
-                            j1.writeCookie({
-                              name:     user_state_name,
-                              data:     cookie_consent,
-                              expires:  365
-                            });
+
+      // TODO:
+      //    CHECK how|what module should initialize the user_state
+      //    cookie. For now disabled here, because cookie is too early
+      //    written. Cause corrupted|imcomplete cookie content if cookie
+      //    does NOT exists already.
+
+      // cookie_consent    = j1.existsCookie(user_state_name) ?
+      //                       j1.readCookie(user_state_name) :
+      //                       j1.writeCookie({
+      //                         name:     user_state_name,
+      //                         data:     cookie_consent,
+      //                         expires:  365
+      //                       });
 
       // -----------------------------------------------------------------------
       // options loader
@@ -130,25 +137,28 @@ j1.adapter['cookie_consent'] = (function (j1, window) {
         logger.info('state: ' + _this.getState());
         logger.info('module is being initialized');
 
-        cookie_consent                      = j1.readCookie(user_state_name);
-        cookie_consent.deleteOnDecline      = moduleOptions.delete_cookies_on_decline;
-        cookie_consent.showConsentOnPending = moduleOptions.show_consent_on_pending;
-        cookie_consent.whitelistedPages     = moduleOptions.whitelisted_pages;
-        cookie_consent.stopScrolling        = moduleOptions.stop_scrolling;
+        if (j1.existsCookie(user_state_name)) {
+          cookie_consent                      = j1.readCookie(user_state_name);
+          cookie_consent.deleteOnDecline      = moduleOptions.delete_cookies_on_decline;
+          cookie_consent.showConsentOnPending = moduleOptions.show_consent_on_pending;
+          cookie_consent.whitelistedPages     = moduleOptions.whitelisted_pages;
+          cookie_consent.stopScrolling        = moduleOptions.stop_scrolling;
 
-        // Update cookie consent
+          // Update cookie consent
+          // TODO: MAKE expiery date configurable
 
-        // j1.writeCookie({
-        //   name:    user_state_name,
-        //   data:    cookie_consent,
-        //   expires: cookie_consent.live_span
-        // });
+          // j1.writeCookie({
+          //   name:    user_state_name,
+          //   data:    cookie_consent,
+          //   expires: cookie_consent.live_span
+          // });
 
-        j1.writeCookie({
-          name:    user_state_name,
-          data:    cookie_consent,
-          expires: 365
-        });
+          j1.writeCookie({
+            name:    user_state_name,
+            data:    cookie_consent,
+            expires: 365
+          });
+        }
 
         // ---------------------------------------------------------------------
         // data loader

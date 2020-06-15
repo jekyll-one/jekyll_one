@@ -89,6 +89,10 @@ regenerate:                             true
  # J1 Template is licensed under the MIT License.
  # For details, see https://jekyll.one
  # -----------------------------------------------------------------------------
+ #  TODO:
+ #    MANAGE themeExtensionCss is to be checked
+ #
+ # -----------------------------------------------------------------------------
  # Adapter generated: {{site.time}}
  # -----------------------------------------------------------------------------
 */
@@ -122,7 +126,7 @@ var j1 = (function () {
   // Theme information
   var themeName;
   var themeCss;
-  var themeExtensionCss;
+  var themeExtensionCss = environment === 'production' ? '/assets/themes/j1/core/css/theme_extensions.min.css' : '/assets/themes/j1/core/css/theme_extensions.css';
 
   // Pathes of J1 data files
   var colors_data_path          = '{{template_config.colors_data_path}}';
@@ -168,20 +172,38 @@ var j1 = (function () {
     'provider_privacy_url': '{{template_config.user.provider_privacy_url}}',
     'requested_page':       'na',
     'previous_page':        'na',
-    'last_pager':           '/pages/public/blog/navigator/'    
+    'last_pager':           '/pages/public/blog/navigator/'
   };
 
   // user STATE cookie (initial values)
+  // var user_state = {
+  //   'theme_css':            default_theme_css,
+  //   'theme_extension_css':  '{{themer_options.includeBootswatch}}',
+  //   'theme_name':           default_theme_name,
+  //   'theme_author':         default_theme_author,
+  //   'theme_author_url':     '{{template_config.theme_author_url}}',
+  //   'theme_link':           default_theme_link,
+  //   'theme_version':        '{{site.version}}',
+  //   'cookies_accepted':     'pending',
+  //   'whitelistedPages':     default_white_listed_pages,
+  //   'deleteOnDecline':      false,
+  //   'showConsentOnPending': false,
+  //   'stopScrolling':        true,
+  //   'session_active':       false,
+  //   'last_session_ts':      '',
+  //   'cc_authenticated':     false
+  // };
+
   var user_state = {
     'theme_css':            default_theme_css,
-    'theme_extension_css':  '{{themer_options.includeBootswatch}}',
+    'theme_extension_css':  themeExtensionCss,
     'theme_name':           default_theme_name,
     'theme_author':         default_theme_author,
     'theme_author_url':     '{{template_config.theme_author_url}}',
     'theme_link':           default_theme_link,
     'theme_version':        '{{site.version}}',
     'cookies_accepted':     'pending',
-    'whitelistedPages':     default_white_listed_pages,     
+    'whitelistedPages':     default_white_listed_pages,
     'deleteOnDecline':      false,
     'showConsentOnPending': false,
     'stopScrolling':        true,
@@ -233,15 +255,15 @@ var j1 = (function () {
         {
           foo: 'foo_option',
           bar: 'bar_option'
-        }, 
-        options 
+        },
+        options
       );
 
       // catch senseless detect url 404 errors (middleware /status)
       // See: https://stackoverflow.com/questions/4687235/jquery-get-or-post-to-catch-page-load-error-eg-404
       $.ajaxSetup({
         // called on `$.get()`, `$.post()`, `$.ajax()`
-        statusCode : {                    
+        statusCode : {
           // raised on response status code 404
           404 : function (jqxhr, textStatus, errorThrown) {
             var interval_count = 0;
@@ -251,7 +273,7 @@ var j1 = (function () {
               if ( j1.adapter.logger.getState() == 'finished' ) {
                 var logger = log4javascript.getLogger('j1.init');
                 clearInterval(dependencies_met_logger);
-                if(jqxhr.responseText.indexOf('GET /status') > -1) { 
+                if(jqxhr.responseText.indexOf('GET /status') > -1) {
                   logger.info('no middleware found on url /status: ignored');
                   logger.info('continue on mode: web');
                 }
@@ -285,11 +307,18 @@ var j1 = (function () {
         user_state.session_active     = false;
         user_state.last_session_ts    = timestamp_now;
 
+        // DANGEROUS (??): delete user session in browser using MULTI_TAB!
+        if (j1.existsCookie(cookie_names.user_session)) {
+          var bla = cookie_names.user_session;
+          j1.deleteCookie(cookie_names.user_session)
+        }
+
         j1.writeCookie({
           name: cookie_user_state_name,
           data: user_state,
           expires: 365
         });
+
 
       });
 
@@ -335,7 +364,7 @@ var j1 = (function () {
         .then(function(data) {
           var logger                  = log4javascript.getLogger('j1.init');
           user_session                = j1.readCookie(cookie_names.user_session);
-          user_session.mode           = 'app';          
+          user_session.mode           = 'app';
           user_session.requested_page = window.location.pathname;
           user_session.timestamp      = timestamp_now;
           user_session                = j1.mergeData(user_session, data);
@@ -855,9 +884,9 @@ var j1 = (function () {
       var providerPermissions = {};
       var provider;
       var previous_page;
-      var appDetected;      
+      var appDetected;
       var categoryAllowed;
-      
+
 
       logger.info('finalize page');
       j1.setCss();
@@ -885,8 +914,8 @@ var j1 = (function () {
           // -------------------------------------------------------------------
           if (
             j1.authEnabled() &&
-            user_session.page_permission !== 'public' && 
-            categoryAllowed === false) 
+            user_session.page_permission !== 'public' &&
+            categoryAllowed === false)
           {
             // redirect to middleware|page_authentication
             if (data.authenticated === 'true') {
@@ -927,7 +956,7 @@ var j1 = (function () {
             $('#quickLinksControlCenterButton').css('display', 'block');
 
             // show|hide signin|out icon
-            if (j1.authEnabled()) {              
+            if (j1.authEnabled()) {
               if (user_session.authenticated === 'true') {
                 // set signout
                 logger.info('show signout icon');
@@ -959,7 +988,7 @@ var j1 = (function () {
             // update sidebar for changed consent|theme data
             logger.info('update sidebar');
             user_state        = j1.readCookie(cookie_names.user_state);
-            current_user_data = j1.mergeData(user_session, user_state);            
+            current_user_data = j1.mergeData(user_session, user_state);
             j1.core.navigator.updateSidebar(current_user_data);
 
             // Set|Log status
@@ -1023,7 +1052,7 @@ var j1 = (function () {
             // update sidebar for changed consent|theme data
             logger.info('update sidebar');
             user_state        = j1.readCookie(cookie_names.user_state);
-            current_user_data = j1.mergeData(user_session, user_state);            
+            current_user_data = j1.mergeData(user_session, user_state);
             j1.core.navigator.updateSidebar(current_user_data);
 
             // Set|Log status
@@ -1165,9 +1194,17 @@ var j1 = (function () {
     //  Returns true if a web session cookie exists
     // -------------------------------------------------------------------------
     appDetected: function () {
-      var user_session = j1.readCookie(cookie_names.user_session);
-      var detected     = user_session.mode === 'app' ? true : false;
+      var user_session;
+      var cookieExists = j1.existsCookie(cookie_names.user_session);
+      var detected = false;
 
+      if (cookieExists) {
+        user_session = j1.readCookie(cookie_names.user_session);
+        detected     = user_session.mode === 'app' ? true : false;
+      } else {
+        // detected = 'unknown';
+        detected = false;
+      }
       return detected;
     }, // END appDetected
 
@@ -1280,7 +1317,7 @@ var j1 = (function () {
 
     // -------------------------------------------------------------------------
     // getRuntimeData: Returns the j1_runtime data object
-    // 
+    //
     // -------------------------------------------------------------------------
     getRuntimeData: function (data_path) {
     var logger = log4javascript.getLogger('j1.getRuntimeData');
@@ -1344,8 +1381,8 @@ var j1 = (function () {
     }, // END getColorData
 
     // -------------------------------------------------------------------------
-    // setColorData: 
-    // 
+    // setColorData:
+    //
     // -------------------------------------------------------------------------
     setColorData: function (color) {
 
@@ -1482,11 +1519,17 @@ var j1 = (function () {
     readCookie: function (name) {
       var data;
       var data_json;
-      data_json = window.atob(Cookies.get(name));
-      data      = JSON.parse(data_json);
+      var cookieExists = j1.existsCookie(name);
 
-      if (data) {
-        return data;
+      if (cookieExists) {
+        data_json = window.atob(Cookies.get(name));
+        data      = JSON.parse(data_json);
+
+        if (data) {
+          return data;
+        } else {
+          return false;
+        }
       } else {
         return false;
       }
@@ -1613,7 +1656,7 @@ var j1 = (function () {
         //see if cookie is in first position
         begin = dc.indexOf(prefix);
         // not found at all or found as a portion of another cookie name
-        if (begin === -1 || begin !== 0 ) return null;
+        if (begin === -1 || begin !== 0 ) return false;
       }
 
       // if ";" is found somewhere after the prefix position then "end" is
@@ -1947,7 +1990,7 @@ var j1 = (function () {
       var tabs_pills_link_color_hover     = j1.setColorData('md_gray_300');     // j1.getStyleValue('btn-secondary', 'background-color');
 
       // nav module
-      // -----------------------------------------------------------------------      
+      // -----------------------------------------------------------------------
       $('head').append('<style>.nav-link:hover { background-color: ' +tabs_pills_link_color_hover+ ' !important; }</style>');
       $('head').append('<style>.nav-link.active { background-color: ' +tabs_pills_link_color_active+ ' !important; }</style>');
 
@@ -2015,10 +2058,10 @@ var j1 = (function () {
     // -------------------------------------------------------------------------
     goHome: function () {
       // most browsers
-      if (typeof window.home == 'function') { 
+      if (typeof window.home == 'function') {
         window.home();
       } else if (document.all) {
-        // for IE 
+        // for IE
         window.location.href = "about:home";
       } else {
         window.location.href = "about:blank";

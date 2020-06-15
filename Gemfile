@@ -46,7 +46,7 @@ gem 'jekyll', '~> 4.0'
 
 # Theme Rubies, default: J1 Template
 #
-gem 'j1-template', '~> 2020.0.0' 
+gem 'j1-template', '~> 2020.0.1'
 
 # ------------------------------------------------------------------------------
 # PRODUCTION: Gem needed for the Jekyll and J1 prod environment
@@ -141,7 +141,7 @@ end
 
 # html-proofer. Automate the process of checking links on your site
 #
-#   bundle exec htmlproofer \ 
+#   bundle exec htmlproofer \
 #     --allow_missing_href \
 #     --allow_hash_href \
 #     --assume_extension \
@@ -177,7 +177,7 @@ gem "puma", '>= 4.3.1'
 # gem 'rack-protection', '~> 2.0'
 # gem 'rack-ssl-enforcer', '~> 0.2'
 # gem 'rest-client', '~> 2.0'
- 
+
 # gem 'omniauth', '>= 1.3.0'
 # gem 'omniauth-oauth2', '~> 1.4'
 

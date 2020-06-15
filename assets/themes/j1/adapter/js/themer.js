@@ -30,6 +30,7 @@ regenerate:                             false
 -------------------------------------------------------------------------------- {% endcomment %}
 {% assign environment       = site.environment %}
 {% assign template_version  = site.version %}
+{% assign asset_path        = "/assets/themes/j1" %}
 
 {% comment %} Process YML config data
 ================================================================================ {% endcomment %}

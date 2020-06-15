@@ -1,5 +1,5 @@
 ---
-regenerate:                             true
+regenerate:                             false
 ---
 
 {% capture cache %}
@@ -156,7 +156,7 @@ j1.adapter['gallery_customizer'] = (function (j1, window) {
       $.when (
         j1.xhrData (
           'j1.adapter.gallery_customizer', {
-          xhr_container_id: customizerOptions.xhr_container_id, 
+          xhr_container_id: customizerOptions.xhr_container_id,
           xhr_data_path:    customizerOptions.xhr_data_path },
           'data_loaded'))
       .then (function (success) {
@@ -260,7 +260,7 @@ j1.adapter['gallery_customizer'] = (function (j1, window) {
                   e.stopPropagation();
                 });
 
-                $('input:checkbox[name="captions"]').on('click', function (e) {                  
+                $('input:checkbox[name="captions"]').on('click', function (e) {
                   var value = $(this).is(':checked');
 
                   $instance.justifiedGallery({captions: value});
@@ -299,7 +299,7 @@ j1.adapter['gallery_customizer'] = (function (j1, window) {
                   e.stopPropagation();
                 });
 
-                $('input:checkbox[name="hide_last_row"]').on('click', function (e) {                  
+                $('input:checkbox[name="hide_last_row"]').on('click', function (e) {
                   var value = $(this).is(":checked");
 
                   if (value == true) {
@@ -316,14 +316,14 @@ j1.adapter['gallery_customizer'] = (function (j1, window) {
                   e.stopPropagation();
                 });
 
-                $('#jg-customizer-form button[name="reset-defaults"]').on('click', function (e) {                  
+                $('#jg-customizer-form button[name="reset-defaults"]').on('click', function (e) {
 
                   $('#rowHeight').val(customizerOptions.gallery_settings.rowHeight);
                   $('#rowHeightMax').val(customizerOptions.gallery_settings.maxRowHeight);
                   $('#margins').val(customizerOptions.gallery_settings.margins);
                   $('#border').val(customizerOptions.gallery_settings.border);
                   $('input:checkbox[name="captions"]').val("on").filter('[value="on"]').prop('checked', customizerOptions.gallery_settings.captions);
-                  $('input:checkbox[name="random"]').val("off").filter('[value="off"]').prop('checked', customizerOptions.gallery_settings.randomize);                  
+                  $('input:checkbox[name="random"]').val("off").filter('[value="off"]').prop('checked', customizerOptions.gallery_settings.randomize);
                   $('input:checkbox[name="justify_last_row"]').val("on").filter('[value="on"]').prop('checked', customizerOptions.gallery_settings.justifyLastRow);
                   $('input:checkbox[name="hide_last_row"]').val("off").filter('[value="off"]').prop('checked', customizerOptions.gallery_settings.hideLastRow);
 
