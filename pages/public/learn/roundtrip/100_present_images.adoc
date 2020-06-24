@@ -1,5 +1,5 @@
 ---
-title:                                  Roundtripppp
+title:                                  Roundtrip
 tagline:                                present images
 description:                            J1 Template Roundtrip - Present image based data
 
@@ -276,7 +276,7 @@ and high quality *justified* image galleries. J1 Template combines the gallery
 with the *lightboxes* supported to *enlage* the images of a gallery.
 
 See *Justified Gallery* in action - and for sure all what you see is even
-responsive. Change the size of your current browser window, by width or height, 
+responsive. Change the size of your current browser window, by width or height,
 to see what will happen!
 
 === Justified Gallery

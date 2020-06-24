@@ -6,10 +6,10 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2020 Juergen Adams
+# Copyright (C) 2019 Juergen Adams
 #
 # J1 Template is licensed under the MIT License.
-# See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
+# See: https://github.com/jekyll-one-org/j1-template/blob/master/LICENSE
 #
 # ------------------------------------------------------------------------------
 # NOTE:
@@ -155,17 +155,6 @@ lanes:
   # ----------------------------------------------------------------------------
 
   # ----------------------------------------------------------------------------
-  # TRANSLATOR connector
-  #
-  - lane:
-      enabled:                          true
-      region:                           body-main
-      type:                             sync
-      base:                             _includes/themes/j1
-      path:                             modules/connectors
-      file:                             translator
-
-  # ----------------------------------------------------------------------------
   # TEASER banner
   #
   - lane:
@@ -173,13 +162,13 @@ lanes:
       id:                               home_teaser_banner
       region:                           body-main
       type:                             async
-      helper_classes:                   mt-5 mb-3
+      helper_classes:                   mt-4 mb-0
 
   # ----------------------------------------------------------------------------
   # DIVIDER banner
   #
   - lane:
-      enabled:                          false
+      enabled:                          true
       id:                               divider-1
       region:                           body-main
       type:                             async
@@ -193,7 +182,7 @@ lanes:
       id:                               home_intro_panel
       region:                           body-main
       type:                             async
-      helper_classes:                   mt-5 mb-4
+      helper_classes:                   mt-4 mb-4
 
   # ----------------------------------------------------------------------------
   # DIVIDER banner
@@ -203,7 +192,6 @@ lanes:
       id:                               divider-2
       region:                           body-main
       type:                             async
-      helper_classes: 
 
   # ----------------------------------------------------------------------------
   # PARALLAX banner
@@ -214,16 +202,6 @@ lanes:
       region:                           body-main
       type:                             async
       helper_classes:                   mb-3
-
-  # ----------------------------------------------------------------------------
-  # TEASER banner
-  #
-  - lane:
-      enabled:                          true
-      id:                               home_welcome_banner
-      region:                           body-main
-      type:                             async
-      helper_classes:                   mt-5 mb-5
 
   # ----------------------------------------------------------------------------
   # IMAGE banner
@@ -253,7 +231,6 @@ lanes:
       id:                               divider-3
       region:                           body-main
       type:                             async
-      helper_classes: 
 
   # ----------------------------------------------------------------------------
   # NEWS panel
@@ -263,8 +240,7 @@ lanes:
       id:                               home_news_panel
       region:                           body-main
       type:                             async
-      helper_classes:                   mt-0 mb-5
+      helper_classes:                   mt-5 mb-5
 
-
-# ------------------------------------------------------------------------------
 # END config
+# ------------------------------------------------------------------------------

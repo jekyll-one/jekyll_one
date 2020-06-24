@@ -40,13 +40,18 @@ ruby RUBY_VERSION
 # NOTE: J1 Template is using Jekyll v3.8 and above
 #
 
+# Support for Ruby version 2.7 (DEC 2019)
+#
+# See: https://github.com/jekyll/jekyll/issues/8049
+# gem "jekyll", github: "jekyll/jekyll"
+
 # Latest stable Jekyll version
 #
 gem 'jekyll', '~> 4.0'
 
 # Theme Rubies, default: J1 Template
 #
-gem 'j1-template', '~> 2020.0.2'
+gem 'j1-template', '~> 2020.0.4'
 
 # ------------------------------------------------------------------------------
 # PRODUCTION: Gem needed for the Jekyll and J1 prod environment
@@ -105,7 +110,7 @@ group :jekyll_plugins do
 # gem 'jekyll-gist', '>= 1.5.0'
 # gem 'jekyll-sitemap', '>= 1.2.0'
 # gem 'jekyll-redirect-from', '>= 0.13.0'
-  gem 'j1-paginator', '>= 2019.1.0'
+  gem 'j1-paginator', '>= 2020.0.2'
   gem 'jekyll-sass-converter', '>= 1.5.1'
 end
 

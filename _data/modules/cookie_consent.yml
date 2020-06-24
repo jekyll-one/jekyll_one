@@ -28,16 +28,16 @@ settings:
 
   modal_type:                           full
   modal_position:                       top
-  stop_scrolling:                       true  
+  stop_scrolling:                       true
   consent_modals_title:                 Privacy
-  whitelisted_pages:                    [
-                                          /,
-                                          /pages/public/about/site/,
-                                          /pages/public/about/become_a_patron/
-                                          /pages/public/legal/en/impress/,
-                                          /pages/public/legal/en/privacy/,
-                                          /pages/public/legal/en/license_agreement/
-                                        ]
+# whitelisted_pages:                    [
+#                                         /,
+#                                         /pages/public/about/site/,
+#                                         /pages/public/about/become_a_patron/
+#                                         /pages/public/legal/en/impress/,
+#                                         /pages/public/legal/en/privacy/,
+#                                         /pages/public/legal/en/license_agreement/
+#                                       ]
 
   strict:                               false                                   # all pages requires a consent (currently NOT supported)
   show_consent_icon:                    true                                    # show the consent icon (in quicklinks)

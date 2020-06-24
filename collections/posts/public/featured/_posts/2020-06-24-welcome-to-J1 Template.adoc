@@ -1,0 +1,160 @@
+---
+title:                                  Welcome
+tagline:                                jekyll for everyone
+description:                            Auto-generated welcome post
+
+date:                                   2020-06-24 13:33:18 +0200
+series:
+adsense:                                false
+image:                                  /assets/images/modules/attics/welcome-1920x1280-bw.jpg
+
+tags:                                   [ Example, Post ]
+index:                                  []
+categories:                             [ featured ]
+
+regenerate:                             false
+
+resources:                              []
+resource_options:
+  - attic:
+      opacity:                          0.5
+      slides:
+        - url:                          /assets/images/modules/attics/welcome-1920x1280-bw.jpg
+          alt:                          Photo by Belinda Fewings on Unsplash
+          alignY:                       0.3
+#         caption:                      
+#           text:                       Photo by Belinda Fewings on Unsplash
+#           href:                       https://unsplash.com/@bel2000a
+          badge:
+            type:                       unsplash
+            author:                     Belinda Fewings
+            href:                       https://unsplash.com/@bel2000a
+---
+
+
+// NOTE:  General Asciidoc page attributes settings
+// -----------------------------------------------------------------------------
+:page-liquid:
+
+// Additional Asciidoc page attributes goes here
+// -----------------------------------------------------------------------------
+// :page-imagesdir: {{page.images.dir}}
+
+
+// NOTE: Place an excerpt at the most top position
+// -----------------------------------------------------------------------------
+If you’re not familiar with Jekyll (or other site generators), Jekyll is a
+so-called static site generator. Think of it like a CMS but without all the 
+complexity and headache. No need to build a giant content strangling Rube 
+Goldberg machine to manage content.
+
+All you’re doing at the end of the day is writing your content and Jekyll does
+all the tricky things needed for a web site: putting out HTML, Javascript
+and CSS. As a result, the site creation process gets out of your way, it's done
+by Jekyll, and allows you to concentrate on what truly matters: your content.
+[role="clearfix mb-3"]
+excerpt__end
+[role="clearfix mb-3"]
+excerpt__end
+
+
+// Page content
+// -----------------------------------------------------------------------------
+[[readmore]]
+== What is a static site?
+
+[role="mb-3"]
+// image::{{page.image}}[{{page.title}}]
+// image::/assets/images/modules/attics/spider-web-1920x1200-bw.png[{{page.title}}, 800]
+
+All you’re doing at the end of the day is writing your content and Jekyll does
+all the tricky things needed for a web site: putting out HTML, Javascript
+and CSS. As a result, the site creation process gets out of your way, it's done
+by Jekyll, and allows you to concentrate on what truly matters: your content.
+
+A static site serve the content straight to the user as it is stored on
+the server side. To put it in another way, in opposition to WordPress
+which use a database to load dynamic content, a static site will display
+the same content to every user as it will directly load the HTML files
+on the server.
+
+=== What is different?
+
+What are the differences between a static site and a dynamic website?
+
+To make it simple, a dynamic website uses a database and PHP/MySQL to
+generate the content of a page when a user will request it. For example,
+building a website using WordPress CMS will result in having a dynamic
+website.
+
+=== Why use a static site?
+
+Wat are the advantages of a static website over a dynamic site?
+You may be wondering “Why should I build a static site when I could do a
+WordPress?”. Well, having a database implies a lot of downsides. Here
+comes the tree main advantages of using a static site over a dynamic
+one.
+
+Static: the better performance and a crazy fast load time!
+
+One the of the main advantages of using a static site is the fact that
+it is crazy fast to load. Indeed, when the user request a page, there is
+no need to request a database and various files in order to generate the
+page itself as all the content is already placed in a one and only file:
+an HTML one. That’s why, by using a static site you will get a boost in
+your loading time that will provide great user experience for the
+internauts. Moreover, we know that more and more people are surfing the
+web using their smartphones with, sometimes, poor internet connections,
+that’s why having fast loading times will participate in making your
+website mobile friendly.
+
+== Security aspects
+
+Having a static website: say goodbye to hacking and security issues!
+
+Tired of getting WordPress notifications about security issues and
+updates every week? No worries, as a static site has no database, there
+are close to no hack possible compared to a WordPress website. Indeed,
+your site will have way less footprints and security issues since it
+will only load plain HTML and CSS files. The security gain in having a
+static website is one the main reason why many famous brands switch to
+static site instead of having their website on Drupal or WordPress.
+
+== Building and Hosting
+
+Building a static site and hosting: you will save you money!
+
+Using a static site, you will only have most of the time only HTML and
+CSS files to host. This kind of files are super light which also means
+that you will not need a powerhouse hosting to have a static site up and
+running. Moreover, if your traffic suddenly increase, your site will not
+go down contrary to a dynamic site which should request the database
+each time for each user.
+
+== Why use a site generator?
+
+Working with HTML files can sometimes be quite annoying. Indeed, if you
+need to make a modification you must manually change every file. If you
+have a website with 10 pages, it can be ok but imagine if you have a
+corporate site with 100+ pages or a blog with thousands of pages?! Using
+a static site generator will solve this issue as it separates the
+content and the template. To say it another way, by using a static site
+generator you will only need to make the modification once and the
+generator will apply it to all your pages.
+
+=== Why Jekyll?
+
+As the popularity of static sites is growing, there are plenty of static
+site generators available on the market. The more famous are Jekyll,
+Middleman and Hugo. Each one has its own specificities and may suits you
+better depending on the programming languages you already are familiar
+with.
+
+Which static site generator should I use?
+
+When I wanted to switch from WordPress to Static I personally
+choose Jekyll as for me it is the best static site generator so far.
+This blog is powered under Jekyll.
+
+Happy Jekylling!
+

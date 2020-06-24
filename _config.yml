@@ -44,16 +44,16 @@
 # ------------------------------------------------------------------------------
 # Sets the build environment of the website
 #
-#   values:                             development|test|production
+#   values:                             development|production
 #   default:                            development
 #
-environment:                            development
+environment:                            production
 
 # version
 # ------------------------------------------------------------------------------
 #   Sets the build version of J1 Template Gem
 #
-version:                                2020.0.2
+version:                                2020.0.4
 
 # version
 # ------------------------------------------------------------------------------
@@ -348,7 +348,7 @@ base_path:                              ""
 #
 protocol:                               http
 host:                                   localhost
-port:                                   4000
+port:                                   14001
 timezone:                               Europe/Berlin
 encoding:                               UTF-8
 
@@ -556,32 +556,6 @@ autopages:
     enabled:                            false
     layouts:                            [ paginator/autopage_collection.html ]
 
-# ------------------------------------------------------------------------------
-# COLLECTION settings
-# See: https://jekyllrb.com/docs/collections/#collections
-#
-collections:
-
-  # ----------------------------------------------------------------------------
-  # Featured articles
-  #
-  featured:
-    output:                             true
-    permalink:                          /collections/:collection/:name/
-
-  # ----------------------------------------------------------------------------
-  # Book shelf
-  #
-  biography:
-    output:                             true
-    permalink:                          /collections/premium/:collection/:name/
-  fantasy:
-    output:                             true
-    permalink:                          /collections/premium/:collection/:name/
-  romance:
-    output:                             true
-    permalink:                          /collections/premium/:collection/:name/
-
 
 # ------------------------------------------------------------------------------
 # FRONTMATTER defaults
@@ -673,43 +647,11 @@ defaults:
             collapseDepth:              2
 
   # ----------------------------------------------------------------------------
-  # PRIVATE - FEATURED
-  #
-  - scope:
-      path:                             posts/private/featured/_posts
-      type:                             posts
-
-    values:
-      layout:                           post
-      scrollbar:                        false
-      author:                           J1 Team
-      toc:                              true
-      resources:                        toccer
-      analytics:                        false
-      advertising:                      false
-      comments:                         true
-
-      robots:
-        index:                          true
-        follow:                         true
-
-      icons:
-  #     category-icon:                  comment-text-outline
-        family:                         MDI
-        color:                          md-indigo
-        size:                           5x
-
-      images:
-  #     category-image:                 img26.jpg
-        dir:                            /assets/images/collections/blog/featured
-
-
-  # ----------------------------------------------------------------------------
-  # SERIES
+  # PUBLIC - SERIES
   #
   - scope:
       type:                             posts
-      path:                             posts/premium/series/_posts
+      path:                             posts/public/series/_posts
 
     values:
       layout:                           post
@@ -737,11 +679,11 @@ defaults:
 
 
   # ----------------------------------------------------------------------------
-  # WIKIPEDIA
+  # PUBLIC - WIKIPEDIA
   #
   - scope:
       type:                             posts
-      path:                             posts/private/wikipedia/_posts
+      path:                             posts/public/wikipedia/_posts
 
     values:
       layout:                           post
@@ -767,75 +709,6 @@ defaults:
       images:
         category-image:
         dir:                            /assets/images/collections/blog/wikipedia
-
-  # ----------------------------------------------------------------------------
-  # Collections
-  #
-
-  # ----------------------------------------------------------------------------
-  # FEATURED Articles
-  #
-  - scope:
-      type:                             featured
-      path:                             collections/_featured
-
-    values:
-      layout:                           page
-      analytics:                        false
-      advertising:                      false
-      scrollbar:                        false
-
-      robots:
-        index:                          true
-        follow:                         true
-
-  # ----------------------------------------------------------------------------
-  # BIOGRAPHY (Book Shelf)
-  #
-  - scope:
-      type:                             biography
-      path:                             collections/_biography
-
-    values:
-      layout:                           page
-      analytics:                        false
-      advertising:                      false
-      scrollbar:                        false
-
-      robots:
-        index:                          true
-        follow:                         true
-
-  # ----------------------------------------------------------------------------
-  # FANTASY (Book Shelf)
-  #
-  - scope:
-      type:                             fantasy
-      path:                             collections/_fantasy
-
-    values:
-      layout:                           page
-      analytics:                        false
-      advertising:                      false
-      scrollbar:                        false
-
-  # ----------------------------------------------------------------------------
-  # ROMANCE (Book Shelf)
-  #
-  - scope:
-      type:                             romance
-      path:                             collections/_romance
-
-    values:
-      layout:                           page
-      analytics:                        false
-      advertising:                      false
-      scrollbar:                        false
-
-      robots:
-        index:                          true
-        follow:                         true
-
 
 # ==============================================================================
 # 6. LAYOUT configuration

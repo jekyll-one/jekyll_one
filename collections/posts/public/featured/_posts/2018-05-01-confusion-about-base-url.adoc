@@ -1,0 +1,105 @@
+---
+title:                                  Jekyll URLs
+tagline:                                what is baseurl
+description:                            Jekyll URL Configuration
+
+date:                                   2018-05-01 00:00:00
+series:
+adsense:                                false
+image:                                  /assets/images/collections/blog/featured/what-is-a-baseurl.jpg
+
+tags:                                   [ Jekyll, Configuration ]
+index:                                  [ Jekyll, Configuration, URL, base_url ]
+categories:                             [ featured ]
+
+regenerate:                             false
+
+resources:                              []
+resource_options:
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+      opacity:                          0.5
+      slides:
+        - url:                          /assets/images/modules/attics/banner/jekyll.1200x600-bw.jpg
+          alt:                          jekyll.1200x600-bw
+---
+
+// NOTE:  General Asciidoc page attributes settings
+// -----------------------------------------------------------------------------
+:page-liquid:
+
+// Additional Asciidoc page attributes goes here
+// -----------------------------------------------------------------------------
+:page-imagesdir: {{page.images.dir}}
+:wikipedia-article:                     https://en.wikipedia.org/wiki/Geography_of_Minneapolis
+
+// Place an excerpt at the most top position
+// -----------------------------------------------------------------------------
+Hey, so there’s been a bit of confusion about what the Jekyll configuration
+option called baseurl is. Part of the beauty of open-source and of Jekyll is
+that there’s a lot of flexibility. Unfortunately, much of this flexibility
+doesn’t apply to `baseurl`. Here’s a quick distillation of its intentions,
+and how to use it.
+
+[role="clearfix mb-3"]
+excerpt__end
+
+// Page content
+// -----------------------------------------------------------------------------
+[[readmore]]
+== Mimic GitHub Pages
+
+[role="mb-3"]
+image::{{page.image}}[{{page.title}}]
+
+// See: link:{parker-blog}[Parker Moore, window="_blank"]
+
+The config parameter `baseurl` was originally added back in 2010 to allow
+“the user to test the website with the internal webserver under the same
+base url it will be deployed to on a production server”.
+
+So let’s say I come up with a cool new project. I want to make documentation
+for a project I’m working on called “example”, and I’ll be deploying it to
+GitHub Pages as a repo under the *@jekyll* username. Its documentation will
+be available at the URL http://jekyll.github.io/example.
+
+In this example, the term *base URL* refers to /example, which I place in
+my _config.yml as:
+
+[source, yaml]
+----
+baseurl: /example
+----
+
+When I go to develop my website, I run jekyll serve like normal, but this
+time I go to http://localhost:4000/example/. What this baseurl has done is
+specified a base path relative to the domain at which the site lives. If you
+navigate to just http://localhost:4000/, you will see an error message. If
+you have hooked up all your links correctly, then you will never see a URL
+in your testing without /example at the beginning of the path.
+
+You might see, for example:
+
+[source, smarty]
+----
+{{ page.path | prepend:site.baseurl }}
+----
+
+
+== Configuring Your Site Properly
+
+. Set baseurl in your _config.yml to match the production URL without
+the host (e.g. /example, not http://jekyll.github.io/example).
+
+. Run jekyll serve and go to `http://localhost:4000/your_baseurl/`, replacing
+`your_baseurl` with whatever you set baseurl to in your _config.yml - and not
+forgetting the trailing slash.
+
+. Make sure everything works. Feel free to prepend your urls with site.baseurl.
+. Push up to your host and see that everything works there, too!
+
+== Now what the heck is site.url?
+
+site.url is used in conjunction with site.baseurl when you want a link to
+something with the full URL to it. One common paradigm

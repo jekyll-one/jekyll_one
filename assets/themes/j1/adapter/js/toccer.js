@@ -188,41 +188,45 @@ j1.adapter['toccer'] = (function () {
       _this.setState('running');
       logger.info('state: ' + _this.getState());
 
+      // jadams, 2020-06-23: TODO, tocbot should be fired if page|mmenu
+      //                     is ready
+      //
+      setTimeout (function () {
+        var bg_primary = j1.getStyleValue('bg-primary', 'background-color');
 
-      var bg_primary = j1.getStyleValue('bg-primary', 'background-color');
+        tocbot.init({
+          log:                    {{ toccer_options.log | json }},
+          activeLinkColor:        {{ toccer_options.activeLinkColor | json }},
+          tocSelector:            {{ toccer_options.tocSelector | json }},
+          headingSelector:        {{ toccer_options.headingSelector | json }},
+          ignoreSelector:         {{ toccer_options.ignoreSelector | json }},
+          contentSelector:        {{ toccer_options.contentSelector | json }},
+          collapseDepth:          settings.collapseDepth,
+          throttleTimeout:        {{ toccer_options.throttleTimeout | json }},
+          includeHtml:            false,
+          linkClass:              'toc-link',
+          extraLinkClasses:       '',
+          activeLinkClass:        'is-active-link',
+          listClass:              'toc-list',
+          extraListClasses:       '',
+          isCollapsedClass:       'is-collapsed',
+          collapsibleClass:       'is-collapsible',
+          listItemClass:          'toc-list-item',
+          positionFixedSelector:  '',
+          positionFixedClass:     'is-position-fixed',
+          fixedSidebarOffset:     'auto',
+          smoothScroll:           {{ toccer_options.smoothScrollEnabled | json }},
+          smoothScrollOffset:     {{ toccer_options.smoothScrollOffset | json }},
+          smoothScrollDuration:   {{ toccer_options.smoothScrollDuration | json }},
+          headingsOffset:         {{ toccer_options.headingsOffset | json }},
+          throttleTimeout:        {{ toccer_options.throttleTimeout | json }}
+        });
 
-      tocbot.init({
-        log:                    {{ toccer_options.log | json }},
-        activeLinkColor:        {{ toccer_options.activeLinkColor | json }},
-        tocSelector:            {{ toccer_options.tocSelector | json }},
-        headingSelector:        {{ toccer_options.headingSelector | json }},
-        ignoreSelector:         {{ toccer_options.ignoreSelector | json }},
-        contentSelector:        {{ toccer_options.contentSelector | json }},
-        collapseDepth:          settings.collapseDepth,
-        throttleTimeout:        {{ toccer_options.throttleTimeout | json }},
-        includeHtml:            false,
-        linkClass:              'toc-link',
-        extraLinkClasses:       '',
-        activeLinkClass:        'is-active-link',
-        listClass:              'toc-list',
-        extraListClasses:       '',
-        isCollapsedClass:       'is-collapsed',
-        collapsibleClass:       'is-collapsible',
-        listItemClass:          'toc-list-item',
-        positionFixedSelector:  '',
-        positionFixedClass:     'is-position-fixed',
-        fixedSidebarOffset:     'auto',
-        smoothScroll:           {{ toccer_options.smoothScrollEnabled | json }},
-        smoothScrollOffset:     {{ toccer_options.smoothScrollOffset | json }},
-        smoothScrollDuration:   {{ toccer_options.smoothScrollDuration | json }},
-        headingsOffset:         {{ toccer_options.headingsOffset | json }},
-        throttleTimeout:        {{ toccer_options.throttleTimeout | json }}
-      });
-
-      if (tocbot.options.log == true) {
-        // Writes all of the current option settings to JS console
-        console.log(tocbot.options);
-      }
+        if (tocbot.options.log == true) {
+          // Writes all of the current option settings to JS console
+          console.log(tocbot.options);
+        }
+      }, {{toccer_options.delay}});
 
       return true;
     }, // END initToccerCore

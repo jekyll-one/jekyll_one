@@ -63,8 +63,8 @@ include::{includedir}/attributes.asciidoc[tag=data]
 == Typography
 
 Typography serves as one the most crucial branding elements for any business.
-Typography matters for any media presenting text. Text will take on a important 
-role of acting not only as plain text but will also serve as something like 
+Typography matters for any media presenting text. Text will take on a important
+role of acting not only as plain text but will also serve as something like
 images.
 
 === Responsive Text

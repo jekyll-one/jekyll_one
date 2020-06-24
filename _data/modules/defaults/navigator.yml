@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 # ~/_data/apps/j1_navigator.yml
-# Default configuration settings of the J1 NAV Module for all sub-modules 
+# Default configuration settings of the J1 NAV Module for all sub-modules
 # except the main navigation bar
 #
 # Product/Info:
@@ -40,7 +40,7 @@ defaults:
     xhr_container_id:                   navigator_nav_navbar
 
     media_breakpoint:                   lg
-    brand_position:                     right
+    brand_position:                     right                                   # left|right
     brand_type:                         image
     brand_type_collapsed:               text
     fixed:                              true
@@ -54,7 +54,27 @@ defaults:
     background_color_scrolled:          bg-primary
 
   # ----------------------------------------------------------------------------
-  # NavMenu
+  # NavMenu (Mobile)
+  #
+  nav_mmenu:
+    enabled:                            false
+
+    mmenu_plugin:
+      node:                             "null"
+      mediaQuery:                       all
+      max_width:                        100000                                  # set media breakpoint to infinite
+
+    mmenu_navigator:
+      selected:                         Selected
+      slidingSubmenus:                  true
+      title:                            Starter Web
+      theme:                            dark
+
+    mmenu_drawer:
+      position:                         right
+
+  # ----------------------------------------------------------------------------
+  # NavMenu (Desktop)
   #
   nav_menu:
     enabled:                            false
@@ -110,8 +130,7 @@ defaults:
 
     translator_icon:                    flag-variant
 
-    sidebar:                            true
-    sidebar_icon:                       dots-vertical
+    toc_icon:                           wrap
 
     home_icon:                          home-variant
     home_url:                           none
@@ -151,24 +170,6 @@ defaults:
     placeholder:                        QuickSearch
     search_heading_lead:                ""
     result_heading_lead:                ""
-
-  # ----------------------------------------------------------------------------
-  # NavSidebar
-  #
-  nav_sidebar:
-    enabled:                            false
-
-    xhr_container_id:                   navigator_nav_sidebar
-    xhr_data_path:                      /assets/data/sidebar/index.html
-
-    width:                              380
-    icon_family:                        MDI
-    icon_color:                         md_white
-    icon_size:                          mdi-1x
-    sidebar_icon:                       dots-vertical
-    close_icon:                         close
-    background_color:                   md_grey_900
-
 
 # END config
 # ------------------------------------------------------------------------------

@@ -677,6 +677,51 @@ resources:
         js:                             []
         init_function:                  []
 
+  # ----------------------------------------------------------------------------
+  # Algolia
+  #
+  - resource:
+      enabled:                          true
+      id:                               algolia
+      comment:                          Resources used by Algolia Instantsearch
+      region:                           head
+      layout:                           [ page, post, app ]
+      required:                         ondemand
+      script_load:                      sync
+      data:
+        files:                          [
+                                          adapter/js/algolia.js,
+                                          "https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch-theme-algolia.min.css",
+                                          "https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.css",
+                                          "https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.js"
+                                        ]
+        init_function:                  [ j1.adapter.algolia.init ]
+
+  # ----------------------------------------------------------------------------
+  # MMenu Light
+  #
+  - name:                               Mobile Menu
+    resource:
+      id:                               mmenu
+      enabled:                          true
+      comment:                          module mmenu
+      region:                           head
+      layout:                           [ all ]
+      required:                         always
+      script_load:                      sync
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            [                                          
+                                          extensions/mmenu-light/css/mmenu-light,
+                                          extensions/mmenu-light/css/themes/uno
+                                        ]
+        files:                          [ adapter/js/mmenu.js]
+        js:                             [
+                                          extensions/mmenu-light/js/mmenu-light,
+                                          extensions/mmenu-light/js/mmenu-light.polyfills
+                                        ]
+        init_function:                  [ j1.adapter.mmenu.init ]
 
 # ==============================================================================
 # Additional Apps and Modules - loaded ASYCHRONOUSLY (defer)
@@ -706,7 +751,7 @@ resources:
         files:                          []
         js:                             [
                                           extensions/light_gallery/js/core/lightgallery,
-                                          extensions/light_gallery/js/modules/j1/j1-video,                                          
+                                          extensions/light_gallery/js/modules/j1/j1-video,
                                           extensions/light_gallery/js/modules/lg-autoplay,
                                           extensions/light_gallery/js/modules/lg-fullscreen,
                                           extensions/light_gallery/js/modules/lg-hash,
@@ -740,7 +785,7 @@ resources:
                                           extensions/videojs/css/themes/sea
                                         ]
         files:                          []
-        js:                             [  
+        js:                             [
                                           extensions/videojs/js/video
                                         ]
         init_function:                  []
@@ -826,7 +871,7 @@ resources:
       dependencies:                     false
       pass_init_data:                   true
       data:
-        css:                            [ 
+        css:                            [
                                           extensions/justified_gallery/css/justifiedGallery,
                                           extensions/justified_gallery/css/theme/uno
                                         ]
@@ -838,7 +883,7 @@ resources:
 
   # ----------------------------------------------------------------------------
   # Bootstrap Tour - https://github.com/sorich87/bootstrap-tour/
-  # 
+  #
   # - name:                               J1 Bootstrap Tour
   #   resource:
   #     id:                               bs_tour

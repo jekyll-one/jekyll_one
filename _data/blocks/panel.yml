@@ -38,105 +38,143 @@ settings:
         id:                             home_intro_panel
         comment:                        Home Intro Panel
         type:                           intro
-        animate:                        
-        title:                          All in One
-        tagline:                        top features
+        animate:
+        title:                          Publish your site
+        tagline:                        top providers
         description: >
-                                        People quite often ask, if static websites make sense for 
-                                        anything beyond a one-page website. Some other see in static websites
-                                        the stone age of the World Wide Web. What's about of static websites
-                                        today? What's achiveable?
-                                        <br/><br/>
-                                        This board highlights top features, what make static webs not 
-                                        only an option, but an attractive method to create fast, secure 
-                                        and sophisticated websites for many use cases.
+                                        People quite often ask where to place a
+                                        static site on the Internet. Is it possible
+                                        for free?
+                                        <br/>
+                                        This board highlights top providers to
+                                        deploy, to place your static web on the Internet.
+
+                                        <div class="admonitionblock note">
+                                          <table>
+                                            <tbody><tr>
+                                              <td class="icon">
+                                                <i class="fa icon-note" title="Note"></i>
+                                              </td>
+                                              <td class="content">
+                                                If you access one of the provider links below, like
+                                                Github, Netlify or Heroku, you'll be redirected to the
+                                                preview page hosted at the respective provider. To get back
+                                                to this page, click on the home button <i class="mdi mdi-home-variant "></i>
+                                                in the quicklinks bar at the top right.
+                                              </td>
+                                            </tr></tbody>
+                                          </table>
+                                        </div>
+
+                                        Check out these great options to publish your web.
+                                        And good news: all the pages are hosted for <strong>free</strong>.
+
         style:                          flat
         raised:
         lane_span:                      fixed
-        helper_classes:
 
         cards:
 
-          - name:                       Full Responsive
+          - name:                       Github Pages
             card:
               enabled:                  true
               type:                     text
-              title:                    Full Responsive
-              tagline:                  J1 Template
-              icon:                     responsive
-              icon_family:              MDI
+              title:                    Github
+              tagline:
+              icon:                     mdi:github-circle
+              icon_family:              iconify
               icon_size:                3x
-              icon_color:               bg-primary                              # md-indigo
+              icon_color:               bg-primary
               text: >
-                                        The Web is everywhere. J1 Template supports modern 
-                                        web browsers on all devices. For best results on PCs,
-                                        Tablets and SmartPhones.
-
+                                        GitHub Pages is a static site hosting service designed to
+                                        host your personal or project pages directly from a GitHub
+                                        repository for <strong>free</strong>.
+                                        If you use Jekyll as a static site generator with GitHub Pages,
+                                        you may benefit from more support with setting up, updating, and
+                                        troubleshooting your site.
+                                        <br/><br/>
+                                        If you're using GitHub repos to manage your
+                                        site already, a good choice to place your web.
               buttons:
 
-                - name:                 Read More
+                - name:                 View Site
                   button:
                     type:               text
-                    text:               Follow Your Visitors
+                    text:               View at GitHub Pages
                     class:
                     icon:
+                    icon_family:
                     icon_size:
                     icon_color:
-                    href:               /pages/public/panels/intro_panel#responsive-design
+                    href:               https://jekyll-one-org.github.io
+                    target:
 
-          - name:                       HTML5
+          - name:                       Netlify
             card:
               enabled:                  true
               type:                     text
-              title:                    HTML5 &#xB7; CSS3 &#xB7; JS
-              tagline:                  J1 Template
-              icon:                     language-html5
-              icon_family:              MDI
+              title:                    Netlify
+              tagline:
+              icon:                     simple-icons:netlify
+              icon_family:              iconify
               icon_size:                3x
-              icon_color:               bg-primary                              # md-indigo
+              icon_color:               bg-primary
               text: >
-                                        Current Technology and Design. Excellent performance to
-                                        run a website. Use Jekyll One to present your content
-                                        at it's best.
+                                        Netlify provides everything you need to build
+                                        fast, modern websites based on modern static site
+                                        generators like Jekyll (and many others).
+                                        Powerful features like continuous deployment and
+                                        serverless functions support your website for the better.
+                                        <br/><br/>
+                                        Run your site on a purpose-built, multi-cloud infrastructure
+                                        designed for speed, automated to scale, and intrinsically
+                                        secure.
 
               buttons:
-                - name:                 Read More
+                - name:                 View Site
                   button:
                     type:               text
-                    text:               Make your Web Site unique
+                    text:               View at Netlify
                     class:
                     icon:
+                    icon_family:
                     icon_size:
                     icon_color:
-                    href:               /pages/public/panels/intro_panel#current-technology
+                    href:               https://j1-preview.netlify.app/         # https://j1-preview.netlify.com/
+                    target:
 
 
-          - name:                       Start in No Time
+          - name:                       Heroku
             card:
               enabled:                  true
               type:                     text
-              title:                    Start in No Time
-              tagline:                  J1 Template
-              icon:                     clock
-              icon_family:              MDI
+              title:                    Heroku
+              tagline:
+              icon:                     simple-icons:heroku
+              icon_family:              iconify
               icon_size:                3x
-              icon_color:               bg-primary                              # md-indigo
+              icon_color:               bg-primary
               text: >
-                                        No programming is needed to start using J1. The Template 
-                                        provides a large number of building blocks to create 
-                                        modern web pages in minutes.
+                                        Heroku is a cloud platform that lets build, deliver, monitor
+                                        and scale web applications; bypassing all infrastructure headache.
+                                        Heroku focuses relentlessly on web applications and an excellent
+                                        developer experience around apps.
+                                        <br/><br/>
+                                        If you have plans to deploy your J1 based web as an web application,
+                                        really a good home.
 
               buttons:
-                - name:                 Read More
+                - name:                 View Site
                   button:
                     type:               text
-                    text:               Configure whats to be done
+                    text:               View at Heroku
                     class:
                     icon:
+                    icon_family:
                     icon_size:
                     icon_color:
-                    href:               /pages/public/panels/intro_panel#launch-ready
-
+                    href:               https://j1-preview.herokuapp.com
+                    target:
 
   # ----------------------------------------------------------------------------
   # SERVICE Panel
@@ -300,14 +338,14 @@ settings:
         id:                             home_news_panel
         comment:                        Home News Panel
         type:                           news
-        animate:        
+        animate:
         title:                          Creators Blog
         tagline:                        latest news
         helper_classes:
         description: >
                                         Explore the blog and find some interesting articles around Jekyll and
                                         website creation processes in general. And this blog is an excellent
-                                        example how J1 and Jekyll can be used for blogging.                                      
+                                        example how J1 and Jekyll can be used for blogging.
                                         <br/><br/>
                                         Have fun!
 
@@ -335,14 +373,14 @@ settings:
   #       type:                       step
   #       style:                      dark
   #       lane_span:                  fixed
-  # 
+  #
   #       cards:
   #         - card:
   #             title:                Marketing & Consulting
   #             tagline: >
   #                                   Donec id elit non mi porta gravida at eget
   #                                   metus id elit mi egetine. Fusce dapibus
-  
+
 
 # ------------------------------------------------------------------------------
 # END config

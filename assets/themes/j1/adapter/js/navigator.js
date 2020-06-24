@@ -26,6 +26,11 @@ regenerate:                             true
  # Example: var str = JSON.stringify(obj, null, 2); // spacing level = 2
  # See: https://stackoverflow.com/questions/4810841/how-can-i-pretty-print-json-using-javascript
  # -----------------------------------------------------------------------------
+ # NOTE:
+ #  jadams, 2020-06-21:
+ #    J1 Navigator needs a general revision on BS4 code and functionalities
+ #    Current, only base function are tested with BS4 (was coded for BS3)
+ # -----------------------------------------------------------------------------
 {% endcomment %}
 
 {% comment %} Liquid procedures
@@ -67,8 +72,6 @@ regenerate:                             true
 {% assign nav_quicklinks_settings       = navigator_settings.nav_quicklinks %}
 {% assign nav_topsearch_defaults        = navigator_defaults.nav_topsearch %}
 {% assign nav_topsearch_settings        = navigator_settings.nav_topsearch %}
-{% assign nav_sidebar_defaults          = navigator_defaults.nav_sidebar %}
-{% assign nav_sidebar_settings          = navigator_settings.nav_sidebar %}
 {% assign nav_authclient_defaults       = authentication_defaults.auth_client %}
 {% assign nav_authclient_settings       = authentication_settings.auth_client %}
 
@@ -79,12 +82,10 @@ regenerate:                             true
 {% assign nav_menu_options              = nav_menu_defaults | merge: nav_menu_settings %}
 {% assign quicklinks_options            = nav_quicklinks_defaults | merge: nav_quicklinks_settings %}
 {% assign topsearch_options             = nav_topsearch_defaults | merge: nav_topsearch_settings %}
-{% assign sidebar_options               = nav_sidebar_defaults | merge: nav_sidebar_settings %}
 {% assign authclient_options            = nav_authclient_defaults | merge: nav_authclient_settings %}
 
 {% assign nav_bar_id                    = navigator_defaults.nav_bar.id %}
 {% assign nav_menu_id                   = navigator_defaults.nav_menu.id %}
-{% assign nav_sidebar_id                = navigator_defaults.nav_sidebar.id %}
 {% assign nav_quicklinks_id             = navigator_defaults.nav_quicklinks.id %}
 {% assign nav_navbar_media_breakpoint   = navigator_defaults.nav_bar.media_breakpoint %}
 {% assign authclient_modals_id          = navigator_defaults.nav_authclient.xhr_container_id %}
@@ -137,14 +138,12 @@ j1.adapter['navigator'] = (function (j1, window) {
 
   var nav_menu_id                 = '{{nav_menu_id}}';
   var nav_quicklinks_id           = '{{nav_quicklinks_id}}';
-  var nav_sidebar_id              = '{{nav_sidebar_id}}';
   var authclient_modals_id        = '{{authclient_modals_id}}';
 
   var colors_data_path            = '{{template_config.colors_data_path}}';
   var font_size_data_path         = '{{template_config.font_size_data_path}}';
   var nav_menu_data_path          = '{{nav_menu_options.data_path}}';
   var nav_quicklinks_data_path    = '{{quicklinks_options.data_path}}';
-  var nav_sidebar_data_path       = '{{sidebar_options.data_path}}';
   var authclient_modals_data_path = '{{authclient_options.xhr_data_path}}';
 
   var cookie_names                = j1.getCookieNames();
@@ -201,13 +200,11 @@ j1.adapter['navigator'] = (function (j1, window) {
       var navMenuConfig                             = {};
       var navQuicklinksConfig                       = {};
       var navTopsearchConfig                        = {};
-      var navSidebarConfig                          = {};
       var navAuthClientConfig                       = {};
       var navBarOptions                             = {};
       var navMenuOptions                            = {};
       var navQuicklinksOptions                      = {};
       var navTopsearchOptions                       = {};
-      var navSidebarOptions                         = {};
       var navAuthClientOptions                      = {};
       var navAuthMAnagerConfig                      = {};
 
@@ -216,7 +213,6 @@ j1.adapter['navigator'] = (function (j1, window) {
       navMenuConfig                                 = $.extend({}, {{nav_menu_options | replace: '=>', ':' }});
       navQuicklinksConfig                           = $.extend({}, {{quicklinks_options | replace: '=>', ':' }});
       navTopsearchConfig                            = $.extend({}, {{topsearch_options | replace: '=>', ':' }});
-      navSidebarConfig                              = $.extend({}, {{sidebar_options | replace: '=>', ':' }});
       navAuthClientConfig                           = $.extend({}, {{authclient_options | replace: '=>', ':' }});
 
       navAuthMAnagerConfig                          = $.extend({}, {{authentication_options | replace: '=>', ':' }});
@@ -229,7 +225,6 @@ j1.adapter['navigator'] = (function (j1, window) {
       navMenuOptions                                = j1.mergeData(navMenuConfig, navDefaults.nav_menu);
       navQuicklinksOptions                          = j1.mergeData(navQuicklinksConfig, navDefaults.nav_quicklinks);
       navTopsearchOptions                           = j1.mergeData(navTopsearchConfig, navDefaults.nav_topsearch);
-      navSidebarOptions                             = j1.mergeData(navSidebarConfig, navDefaults.nav_sidebar);
       navAuthClientConfig                           = j1.mergeData(navAuthClientConfig, navDefaults.nav_authclient);
 
       // save config settings into the navigator object for global access
@@ -239,7 +234,6 @@ j1.adapter['navigator'] = (function (j1, window) {
       j1.adapter.navigator['navMenuOptions']        = navMenuOptions;
       j1.adapter.navigator['navQuicklinksOptions']  = navQuicklinksOptions;
       j1.adapter.navigator['navTopsearchOptions']   = navTopsearchOptions;
-      j1.adapter.navigator['navSidebarOptions']     = navSidebarOptions;
       j1.adapter.navigator['navAuthClientConfig']   = navAuthClientConfig;
       j1.adapter.navigator['navAuthManagerConfig']  = navAuthMAnagerConfig;
 
@@ -255,27 +249,22 @@ j1.adapter['navigator'] = (function (j1, window) {
       // -----------------------------------------------------------------------
       logger.info('run deferred data load');
       $.when (
-        j1.xhrData (// sidebar
-          'j1.adapter.navigator', {
-          xhr_container_id: navSidebarOptions.xhr_container_id,
-          xhr_data_path:    navSidebarOptions.xhr_data_path },
-          null),
-        j1.xhrData (// quicklinks
+        j1.xhrData ( // quicklinks
           'j1.adapter.navigator', {
           xhr_container_id: navQuicklinksOptions.xhr_container_id,
           xhr_data_path:    navQuicklinksOptions.xhr_data_path },
           null),
-        j1.xhrData (// authclient
+        j1.xhrData ( // authclient
           'j1.adapter.navigator', {
           xhr_container_id: navAuthClientConfig.xhr_container_id,
           xhr_data_path:    navAuthClientConfig.xhr_data_path },
           null),
-        j1.xhrData (// menubar
+        j1.xhrData ( // menubar
           'j1.adapter.navigator', {
           xhr_container_id: navMenuOptions.xhr_container_id,
           xhr_data_path:    navMenuOptions.xhr_data_path },
           'data_loaded'))
-      .done (function (sideBar, quickLinks, authclient, menuBar) {
+      .done (function (quickLinks, authclient, menuBar) {
         // ---------------------------------------------------------------------
         // core initializer
         // ---------------------------------------------------------------------
@@ -325,8 +314,7 @@ j1.adapter['navigator'] = (function (j1, window) {
                 logger.info('apply styles');
                 _this.setCSS (
                   navBarOptions, navMenuOptions,
-                  navQuicklinksOptions, navTopsearchOptions,
-                  navSidebarOptions
+                  navQuicklinksOptions, navTopsearchOptions
                 );
 
                 logger.info('init auth client');
@@ -340,27 +328,28 @@ j1.adapter['navigator'] = (function (j1, window) {
           }
         }, 25); // END 'dependencies_met_navigator_core'
 
-        // -----------------------------------------------------------------------
-        // Register event 'reset on resize' (should moved to core events)
-        // -----------------------------------------------------------------------
+        // --------------------------------------------------------------------
+        // Register event 'reset on resize' to call j1.core.navigator on
+        // manageDropdownMenu to manage the (current) NAV menu for
+        // desktop or mobile
+        // ---------------------------------------------------------------------
         $(window).on('resize', function() {
           j1.core.navigator.manageDropdownMenu(navDefaults, navMenuOptions);
 
+          // Hide|Close topSearch on resize event
           $('.top-search').slideUp();
+
+          // Manage sticky NAV bars
           setTimeout (function(){
             j1.core.navigator.navbarSticky();
           }, 500);
 
-          // Toggle Bars
-          $('button.navigator.navbar-toggler').each (function() {
-            $('.mdi', this).removeClass('mdi-close');
-            $('.mdi', this).addClass('mdi-menu');
-            $(this).removeClass('fixed');
-          });
-
-          $('.navbar-collapse').removeClass('in');
-          $('.navbar-collapse').removeClass('on');
-          $('.navbar-collapse').removeClass('bounceIn');
+          // jadams, 2020-06-21: unclear|forgotten what I'm doing here!
+          // Looks like the old BS3 implementation
+          //
+          // $('.navbar-collapse').removeClass('in');
+          // $('.navbar-collapse').removeClass('on');
+          // $('.navbar-collapse').removeClass('bounceIn');
         });
 
         return true;
@@ -369,12 +358,12 @@ j1.adapter['navigator'] = (function (j1, window) {
 
     // -------------------------------------------------------------------------
     // Initialize JS portion for the dialogs (modals) used by J1AuthClient
-    // NOTE: Currently cookie|sidebar updates NOT processed at the NAV module
+    // NOTE: Currently cookie updates NOT processed at the NAV module
     //       All updates on Cookies are managed by Cookie Consent.
     //       To be considered to re-add cookie updates for the auth state
     // -------------------------------------------------------------------------
     initAuthClient: function(auth_config) {
-      var logger      = log4javascript.getLogger('j1.adapter.navigator.initAuthClient');
+      var logger        = log4javascript.getLogger('j1.adapter.navigator.initAuthClient');
       var user_session  = j1.readCookie(cookie_user_session_name);
 
       _this.modalEventHandler(auth_config);
@@ -502,7 +491,7 @@ j1.adapter['navigator'] = (function (j1, window) {
           logger.info(logText);
           logText = 'initiate signout for provider: ' +provider;
           logger.info(logText);
-          
+
           var route = '/authentication?request=signout&provider=' + provider + '&provider_signout=' + signOut.providerSignOut; // + '/logout/';
           logText = 'call middleware on route : ' +route;
           logger.info(logText);
@@ -526,7 +515,7 @@ j1.adapter['navigator'] = (function (j1, window) {
     // setCSS
     // Set dynamic CSS styles
     // -------------------------------------------------------------------------
-    setCSS: function (navBarOptions, navMenuOptions, navQuicklinksOptions, navTopsearchOptions, navSidebarOptions) {
+    setCSS: function (navBarOptions, navMenuOptions, navQuicklinksOptions, navTopsearchOptions) {
       var logger              = log4javascript.getLogger("j1.adapter.navigator.setCSS");
       var gridBreakpoint_lg   = '992px';
       var gridBreakpoint_md   = '768px';
@@ -571,9 +560,6 @@ j1.adapter['navigator'] = (function (j1, window) {
       navTopsearchOptions.input_color                 = j1.setColorData(navTopsearchOptions.input_color);
       navTopsearchOptions.background_color            = j1.setColorData(navTopsearchOptions.background_color);
 
-      {% comment %} Set|Resolve navSidebarOptions
-      -------------------------------------------------------------------------- {% endcomment %}
-      navSidebarOptions.background_color              = j1.setColorData(navSidebarOptions.background_color);
 
       {% comment %} Set dymanic styles
       -------------------------------------------------------------------------- {% endcomment %}
@@ -669,10 +655,6 @@ j1.adapter['navigator'] = (function (j1, window) {
       $('head').append("<style>.top-search { background-color: " +navTopsearchOptions.background_color+ " !important; }</style>");
       $('head').append("<style>.top-search .input-group-addon { color: " +navTopsearchOptions.input_color+ " !important; }</style>");
       $('head').append("<style>.top-search .input.form-control { color: " +navTopsearchOptions.input_color+ " !important; }</style>");
-
-      {% comment %} navSidebar styles
-      -------------------------------------------------------------------------- {% endcomment %}
-      $('head').append("<style>.side { background-color: " +navSidebarOptions.background_color+ " !important; }</style>");
 
       return true;
     }, // END setCSS

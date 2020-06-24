@@ -7,7 +7,7 @@ tags:                                   [ Support ]
 index:                                  []
 categories:                             [ pages ]
 
-permalink:                              /pages/public/legal/de/support/
+permalink:                              /pages/public/legal/en/support/
 regenerate:                             false
 
 resources:                              []
