@@ -54,7 +54,7 @@ gem 'jekyll', '~> 4.0'
 gem 'j1-template', '~> 2020.0.4'
 
 # ------------------------------------------------------------------------------
-# PRODUCTION: Gem needed for the Jekyll and J1 prod environment
+# PRODUCTION: Gem needed for the Jekyll and J1 prod environment 
 #
 
 # ------------------------------------------------------------------------------
