@@ -210,7 +210,7 @@ settings:
   nav_quicklinks:
     enabled:                            true
 
-    home_url:                           /                                       # none | URL
+    home_url:                           https://jekyll.one/                     # none | URL
     back_url:                           none                                    # none | URL
 
     r_text_sizer:                       false                                   # true | false
