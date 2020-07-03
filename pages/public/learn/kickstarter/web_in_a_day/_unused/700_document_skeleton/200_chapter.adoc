@@ -1,0 +1,60 @@
+---
+# ~/document_base_folder
+# Top Level Entry Document:             200_chapter.asciidoc
+#
+title:                                  Title Chapter 2
+tagline:                                Tagline
+description:
+
+category:                               category_name
+tags:                                   [ Topic, .. ]
+index:                                  [ Title, Tagline, .. ]
+
+resources:                              [ lightbox ]
+permalink:                              /pages/_base_folder_/_title_chapter_2/  # site|root folder set to /pages
+regenerate:                             false
+
+resource_options:
+  - toccer:
+      collapseDepth:                    3
+---
+
+// Set global page attributes
+// -------------------------------------------------------------------
+:page-liquid:
+
+// ~/document_base_folder
+// Top Level Entry Document: 200_chapter.asciidoc
+// -------------------------------------------------------------------
+
+
+//  Load Liquid procedures
+// -------------------------------------------------------------------
+{% capture set_env_entry_document %}themes/{{site.template.name}}/procedures/global/set_env_entry_document.proc{%endcapture%}
+
+// Initialize entry document environmental attributes
+// -------------------------------------------------------------------
+{% include {{set_env_entry_document}} init_folders=all %}
+
+// Load tag, url and data attributes
+// -------------------------------------------------------------------
+include::{includedir}/attributes.asciidoc[tag=tags]
+include::{includedir}/attributes.asciidoc[tag=urls]
+include::{includedir}/attributes.asciidoc[tag=data]
+
+// Set local page attributes
+// -------------------------------------------------------------------
+
+
+// MAIN
+// =============================================================================
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+// Include documents
+// -------------------------------------------------------------------
+
+include::{documentsdir}/200_chapter.asciidoc[]

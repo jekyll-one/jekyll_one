@@ -78,12 +78,12 @@ additional useful extensions to the Markup language *Asciidoc* are made
 especially for documents of the Jekyll content type *pages* (but can be used
 for post or collections as well).
 
-=== Asciidoc Code
+== Asciidoc Code
 
 J1 Template adds a simple *Javascript* based on the `View Result Extension` to
 any `listingblock`. The extension adds an interactive *toggle button* `VIEW`
-to the output of an Asciidoc *listingblock box* placed to the top right of 
-the example box. If a result block `[.result]` is placed under a `listingblock`, 
+to the output of an Asciidoc *listingblock box* placed to the top right of
+the example box. If a result block `[.result]` is placed under a `listingblock`,
 clicking the toggle button `VIEW` displays (or hide) the content given by the
 `result block`.
 
@@ -120,7 +120,7 @@ for *5 seconds*. If the button `VIEW` is clicked, the result box toggles
 between open and close (the result gets hidden). That way, you can *open and
 close* the result box *at any time*.
 
-=== Asciidoc Admonitions
+== Asciidoc Admonitions
 
 All colors for all *default* admonition blocks set to the standard MD color
 set. Find available block types an their colors below.
@@ -141,14 +141,14 @@ WARNING: Icon background-color: yellow
 CAUTION: Icon background-color: red
 
 
-=== Q&A Blocks
+== Q&A Blocks
 
 *Q&A sections* are used quite often to answer popular questions. To make
-such a Q&A section more eye-minded, the additional Admonition Blocks 
+such a Q&A section more eye-minded, the additional Admonition Blocks
 `[QUESTION]` and `[ANSWER]` are available for J1 Template as Asciidoctor
 extentions.
 
-==== Question block
+=== Question block
 
 The admonition *Question block* is an extention to the Asciidoc admonition
 block types that introduce an admonition of type *question*.
@@ -167,7 +167,7 @@ What's the main tool for selecting colors?
 What's the main tool for selecting colors used for J1 Template?
 ====
 
-====  Answer block
+===  Answer block
 
 The Admonition *Answer block* is an extention to the Asciidoc admonition
 block types that introduce an admonition type of *answer* in conjunction
@@ -206,8 +206,8 @@ lightbox::block_id[ images_width, images_data [, group_name] ]
 
 NOTE: For a `lightbox::` block, images are placed in the output document
 *without* any other scaling than in *width* - they are placed using simple
-HTML `img` tags. This is fine for images *even in size*. For images in 
-different sizes, a *gallery* should be used as gallery (apps) rearrange 
+HTML `img` tags. This is fine for images *even in size*. For images in
+different sizes, a *gallery* should be used as gallery (apps) rearrange
 images to make them fit at its best for the available space.
 
 === Standalone Images
@@ -250,7 +250,6 @@ lightbox::images-standalone[ 400, {data-images-standalone} ]
 .Lightbox block for standalone images
 lightbox::images-standalone[ 400, {data-images-standalone} ]
 
-
 === Grouped Images
 
 If more than a single image is given for a `lightbox::` block, the images can be
@@ -279,9 +278,9 @@ All icon fonts are supported:
 * Twitter Emoji
 
 
-=== Material Designs Icons
- 
-*Material Designs Icons* can be used as *inline* icons by using 
+== Material Designs Icons
+
+*Material Designs Icons* can be used as *inline* icons by using
 the `mdi:` inline macro:
 
 [source, adoc, role="noclip"]
@@ -290,7 +289,7 @@ mdi:icon_name[icon_size, modifier] <1> <2> <3>
 ----
 <1> All `icon_name` can be found on the Preview page for *MDI Icon Previewer*
 <2> The `icon_size` attribute can be one of: `xs`, `sm`, `lg` and `1x` to `10x`
-<3> The `modifier` can be used to set the e.g the color (md-blue), an 
+<3> The `modifier` can be used to set the e.g the color (md-blue), an
     animation (fa-pulsed) or the orientation (fa-rotate-45)
 
 .Click on _view result_ to see how it's looks alike
@@ -307,16 +306,16 @@ mdi:font-awesome[2x, ml-3 mr-2 mb-2] Brand icon +
 mdi:apple[2x, md-indigo ml-3 mr-2] Brand icon (colored)
 ====
 
-Find all MDI Icons on page 
+Find all MDI Icons on page
 link:{previewer-mdi}[MDI Icon Previewer, {window}].
 
 NOTE: Parameters `icon_size` and `modifier` are optional. If *not* given,
 the icons `size` is set to default  (`1x`), the color to `black` and *no*
 settings for the `modifier` are applied.
 
-=== Font Awesome Icons
+== Font Awesome Icons
 
-*Font Awesome Icons* can be used as *inline* icons by using 
+*Font Awesome Icons* can be used as *inline* icons by using
 the `fas:` (solid icons) or `fab` (brand icons) inline macro:
 
 [source, adoc, role="noclip"]
@@ -325,7 +324,7 @@ fas:icon_name[icon_size, modifier] <1> <2> <3>
 ----
 <1> All `icon_name` can be found on the Preview page for *FA Icon Previewer*
 <2> The `icon_size` attribute can be one of: `xs`, `sm`, `lg` and `1x` to `10x`
-<3> The `modifier` can be used to set e.g the color (md-blue), an 
+<3> The `modifier` can be used to set e.g the color (md-blue), an
     animation (fa-pulsed) or the orientation (fa-rotate-45) of an icon
 
 .Click on _view result_ to see how it's looks alike
@@ -347,9 +346,9 @@ the icons `size` is set to default  (`1x`), the color to `black` and *no*
 settings for the `modifier` are applied.
 
 
-=== Iconify Icons
+== Iconify Icons
 
-*Iconify Icons* can be used as *inline* icons by using the `iconify:` 
+*Iconify Icons* can be used as *inline* icons by using the `iconify:`
 inline macro:
 
 [source, adoc, role="noclip"]
@@ -358,14 +357,14 @@ iconify:icon_name[icon_size, modifier] <1> <2> <3>
 ----
 <1> All `icon_name` can be found on the Preview page for *FA Icon Previewer*
 <2> The `icon_size` attribute can be one of: `xs`, `sm`, `lg` and `1x` to `10x`
-<3> The `modifier` can be used to set e.g the color (md-blue) or additional 
+<3> The `modifier` can be used to set e.g the color (md-blue) or additional
 positioning classes for margings and padding
 
 .Click on _view result_ to see how it's looks alike
 ----
 iconify:logos:opensource[2x, ml-4 mr-2 mb-2] Brand icon *OpenSource*  +
 iconify:logos:netlify[2x, ml-4 mr-2 mb-2] Brand icon *Netlify* +
-iconify:simple-icons:netlify[2x, md-red ml-4 mr-2] Brand icon *Netlify* 
+iconify:simple-icons:netlify[2x, md-red ml-4 mr-2] Brand icon *Netlify*
 ----
 
 [.result]
@@ -375,7 +374,7 @@ iconify:logos:netlify[2x, ml-4 mb-2] Brand icon *Netlify* +
 iconify:simple-icons:netlify[2x, md-red ml-4] Brand icon *Netlify*, colored
 ====
 
-Find all Iconify Icons available on page 
+Find all Iconify Icons available on page
 link:{iconify-icon-sets}[Iconify Icon Sets, {window}].
 
 [NOTE]
@@ -389,7 +388,7 @@ applied, the color settings will have *no* effect.
 ====
 
 
-=== Twitter Emoji Icons
+== Twitter Emoji Icons
 
 Twitter Emoji's can be used as *inline* icons by using the `emoji:`
 inline macro:
@@ -403,13 +402,13 @@ emoji:icon_name[icon_size] <1> <2>
 
 .Click on _view result_ to see how it's look alike
 ----
-This is an example of how you can emoji:heart[2x, pulsed mt-1] Asciidoctor 
+This is an example of how you can emoji:heart[2x, pulsed mt-1] Asciidoctor
 and Twitter Emoji emoji:smile[].
 ----
 
 [.result]
 ====
-This is an example of how you can emoji:heart[2x, pulsed mt-1] Asciidoctor 
+This is an example of how you can emoji:heart[2x, pulsed mt-1] Asciidoctor
 and Twitter Emoji emoji:smile[].
 ====
 
@@ -510,8 +509,6 @@ lorem:email[]
 
 |===============================================================================
 
-
-
 // Include documents
 // -----------------------------------------------------------------------------
 
@@ -529,7 +526,7 @@ that is needed for modern Web pages based on the Asciidoc Markup language
 generated by Jekyll. For sure!
 
 The next preview is focussing advanced Bootstrap *Modals*. The modals feature
-is currently in *beta* status, but it is a great option to customize your 
+is currently in *beta* status, but it is a great option to customize your
 user dialogs using them!
 
 Have a look for the link:{roundtrip-extended-modals}[BS modal extensions]

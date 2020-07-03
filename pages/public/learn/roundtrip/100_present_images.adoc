@@ -105,7 +105,7 @@ Both lightboxes are fully integrated to be used as standalone modules or to be
 used as helpers _under-the-hood_ by other apps or modules focussing on image
 data like *gallery* or *carousel*, the build-in carousel module.
 
-=== Lightbox Examples
+== Lightbox Examples
 
 Find below an example of using the lightbox Lightbox *standalone*. See how
 *single* (individual) images are linked for the use with *Lightbox*.

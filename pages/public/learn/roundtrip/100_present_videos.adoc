@@ -13,8 +13,8 @@ toc:                                    true
 permalink:                              /pages/public/learn/roundtrip/present_videos/
 regenerate:                             true
 
-resources:                              [ 
-                                          light_gallery, justified_gallery, video_js, 
+resources:                              [
+                                          light_gallery, justified_gallery, video_js,
                                           vimeo_player, vimeo_player, vimeo_froogaloop
                                         ]
 resource_options:
@@ -44,7 +44,7 @@ resource_options:
 
 ---
 
-// Enable the Liquid Preprocessor 
+// Enable the Liquid Preprocessor
 // -----------------------------------------------------------------------------
 :page-liquid:
 
@@ -107,7 +107,7 @@ WARNING: *LightGallery* can be used *for free* for *private use* but for
 business use, a *commercial license* is needed. See link:{light-gallery-license}[Light Gallery license]
 how to use LightGallery for *commercial* webs and projects.
 
-=== Local video content
+== Local video content
 
 Digital image content, simple pictures or vidoes, are quite easy to make.
 Today, each and every mobile has a camera - not that bad! Presenting a bunch
@@ -127,7 +127,7 @@ HTML5 Video formats browsers support today such as *MP4*, *WebM*, and *Ogg*.
 .HTML5 video gallery
 gallery::jg_video_html5[role="mb-5"]
 
-=== Online video content
+== Online video content
 
 The Internet is full of interesting content. Video content is very popular,
 the number of channels at e.g. _YouTube_ is enormous. If you want to present
@@ -141,12 +141,11 @@ gallery::jg_video_online_youtube[role="mb-5"]
 .Vimeo Video Gallery - Fashion
 gallery::jg_video_online_vimeo[role="mb-5"]
 
-
 == Whats next
 
 Images and videos are quite *visual* - and could be impressive, for sure.
 But the most visual component is *text* for all pages, for all sites on the
-Internet. To see how text could be presented great for modern responsive 
+Internet. To see how text could be presented great for modern responsive
 websites, check the section *Typography* next.
 
 What? Find out how it works. go for: link:{roundtrip-typography}[Typography].

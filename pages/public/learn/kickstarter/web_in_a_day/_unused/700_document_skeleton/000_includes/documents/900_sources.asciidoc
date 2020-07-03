@@ -1,0 +1,21 @@
+// ~/document_base_folder/000_includes/documents
+// Sublevel Entry Document: 900_sources.asciidoc
+// -----------------------------------------------------------------------------
+
+== References
+
+Don't leave any main chapter with a *White Section*. By the *References*
+chapter you can give your readers a huge added value, if you (clearly)
+reference the sources you have used for writing.
+
+
+// Include references by chapters
+// -----------------------------------------------------------------------------
+
+include::900_references/000_intro.asciidoc[]
+
+include::900_references/100_chapter_document.asciidoc[]
+
+include::900_references/200_chapter_document.asciidoc[]
+
+include::900_references/900_sources.asciidoc[]

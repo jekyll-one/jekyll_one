@@ -1,0 +1,24 @@
+// ~/document_base_folder/000_includes/documents/100_chapter/
+// Chapter document: 110_chapter_document.asciidoc
+// -----------------------------------------------------------------------------
+
+=== Chapter 1.1
+
+link:https://en.wikipedia.org/wiki/Chapter_(books)[From Wikipedia]
+
+Many novels of great length have chapters. Non-fiction books, especially 
+those used for reference, almost always have chapters for ease of navigation. 
+In these works, chapters are often subdivided into sections. Larger works 
+with a lot of chapters often group them in several *parts* as the main 
+subdivision of the book.
+
+The chapters of reference works are almost always listed in a table of 
+contents. Novels sometimes use a table of contents, but not always. If 
+chapters are used they are normally numbered sequentially; they may also 
+have titles, and in a few cases an epigraph or prefatory quotation. 
+
+In older novels it was a common practice to summarise the content of 
+each chapter in the table of contents and/or in the beginning of the 
+chapter.
+
+

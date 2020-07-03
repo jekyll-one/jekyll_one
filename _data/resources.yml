@@ -690,15 +690,9 @@ resources:
       dependencies:                     false
       pass_init_data:                   false
       data:
-        css:                            [
-                                          extensions/mmenu-light/css/mmenu-light,
-                                          extensions/mmenu-light/css/themes/uno
-                                        ]
+        css:                            []
         files:                          [ adapter/js/mmenu.js ]
-        js:                             [
-                                          extensions/mmenu-light/js/mmenu-light,
-                                          extensions/mmenu-light/js/mmenu-light.polyfills
-                                        ]
+        js:                             []
         init_function:                  [ j1.adapter.mmenu.init ]
 
 # ==============================================================================

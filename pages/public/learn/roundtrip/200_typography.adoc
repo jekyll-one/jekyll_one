@@ -67,7 +67,7 @@ Typography matters for any media presenting text. Text will take on a important
 role of acting not only as plain text but will also serve as something like
 images.
 
-=== Responsive Text
+== Responsive Text
 
 One common flaw seen in many templates and frameworks (sadly to say: the same
 to Bootstrap) is a lack of support for truly *responsive text*. While elements
@@ -124,7 +124,7 @@ will happen in terms of responsiveness.
 To see Responsive Text `r-text` in action, use the button above to toggle on
 and off Responsive Text to see the difference!
 
-=== Scaling Responsive Text
+== Scaling Responsive Text
 
 Responsive Text comes in five different scale factors in a range from 100 to
 500. Scaling `r-text` gives you the flexibility to use `r-text` everywhere. Or
@@ -174,7 +174,7 @@ of the text in action.
 </script>
 ++++
 
-=== Scale factors
+== Scale factors
 
 As mentioned, `r-text` comes in five levels of size. The base of `r-text` are
 the Fibonacci numbers extracted from the Fibonacci series. These numbers are

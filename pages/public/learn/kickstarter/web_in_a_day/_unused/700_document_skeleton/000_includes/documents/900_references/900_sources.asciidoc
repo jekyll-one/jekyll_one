@@ -1,0 +1,68 @@
+// ~/document_base_folder/000_includes/documents/900_sources/
+// Chapter document: 900_sources.asciidoc
+// -----------------------------------------------------------------------------
+
+// URIs may moved to ~/000_includes/attributes.asciidoc
+// -----------------------------------------------------------------------------
+:uri-ref-pdfs-semanticscholar:                    https://pdfs.semanticscholar.org/014c/50f9ec1fbfce103d008573c0b925142ce440.pdf
+:uri-ref-belle-beth-cooper:                       https://blog.bufferapp.com/6-of-the-most-important-aspects-of-successful-writing/
+:uri-ref-stoyan-stefanov-2:                       http://blog.stoyanstefanov.com/asciidoc/
+
+
+=== Sources of Information
+
+Don't leave any main chapter with a *White Section*. By the *Sources of Information*
+chapter you can give your readers a huge added value, if you mention all sources
+you have used for writing.
+
+
+==== Articles
+
+.Sources - Articles
+[cols="3,5a,^1,^1,^1,^1", options="header", width="100%", role="table-responsive mt-3"]
+|===============================================================================
+|Author |Title |Year |Level |Cite |Content
+
+|Alvin M. Liberman
+|{uri-ref-pdfs-semanticscholar}[Why is Speech so Much Easier than Reading and Writing?, {window}]
+|1995
+|{advanced}
+|{y}
+|{n}
+
+|===============================================================================
+
+
+==== HowTos
+
+.Sources - HowTos
+[cols="3,5a,^1,^1,^1,^1", options="header", width="100%", role="table-responsive mt-3"]
+|===============================================================================
+|Author |Title |Year |Level |Cite |Content
+
+|Belle Beth Cooper
+|{uri-ref-belle-beth-cooper}[6 of the Best Pieces of Advice from Successful Writers, {window}]
+|2016
+|{inter}
+|{y}
+|{n}
+
+
+|===============================================================================
+
+
+==== Blogs and Platforms
+
+.Sources - Blogs and Platforms
+[cols="3,5a,^1,^1,^1,^1", options="header", width="100%", role="table-responsive mt-3"]
+|===============================================================================
+|Author |Title |Year |Level |Cite |Content
+
+|Stoyan Stefanov
+|{uri-ref-stoyan-stefanov-2}[AsciiDoc, {window}]
+|2012
+|{beginner}
+|{y}
+|{n}
+
+|===============================================================================

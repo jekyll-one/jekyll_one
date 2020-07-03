@@ -1,0 +1,105 @@
+---
+title:                                  Tester
+tagline:                                VideoJS
+description:                            Tester - Check the use of the VideoJS player
+
+tags:                                   [ Page, Tester, VideoJS ]
+index:                                  [ Template, Tester, Video ]
+categories:                             [ pages ]
+
+scrollbar:                              false
+toc:                                    true
+
+permalink:                              /pages/public/tester/videojs_tester/
+regenerate:                             false
+
+resources:                              [ lightbox, light_gallery, bs_gallery, video_js ]
+resource_options:
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+      background_color:
+        color_1:                        md_grey_100
+        color_2:                        md_grey_400
+      slides:
+        # Broadway Underground - still image (animate default)
+        - url:                          /assets/videos/headers/still/underground-broadway.png
+          alt:                          Broadway Underground
+          alignY:                       top
+          animateFirst:                 false
+        # Broadway Underground - FAYETTE ST, moved file to Github/LFS
+        - url:                          https://github.com/jekyll-one-org/jekyll-one-lfs/raw/master/videos/underground-broadway.mp4
+          alignY:                       0
+          isVideo:                      true
+          loop:                         false
+          duration:                     12000
+        # Broadway Underground - still image (animate random)
+        - url:                          /assets/videos/headers/still/underground-broadway.png
+          alt:                          Broadway Underground
+          alignY:                       top
+          transition:                   push_left|push_right|cover_up|cover_down|fade|fadeInOut
+
+---
+
+// Enable the Liquid Preprocessor 
+// -----------------------------------------------------------------------------
+:page-liquid:
+
+// Set other global page attributes here
+// -----------------------------------------------------------------------------
+//:my-asciidoc-attribute:
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture set_env_entry_document %}themes/{{site.template.name}}/procedures/global/set_env_entry_document.proc{%endcapture%}
+
+// Initialize entry document environmental attributes
+// -----------------------------------------------------------------------------
+{% include {{set_env_entry_document}} %}
+
+// Load tag, url and data attributes
+// -----------------------------------------------------------------------------
+include::{includedir}/attributes.asciidoc[tag=tags]
+include::{includedir}/attributes.asciidoc[tag=urls]
+include::{includedir}/attributes.asciidoc[tag=data]
+
+// Set local page attributes
+// -----------------------------------------------------------------------------
+:images-dir:                            {imagesdir}/pages/roundtrip/100_present_images
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
+== Video.js video
+
+// vjs-default-skin
+// vjs-theme-city
+
+// data-setup="{}"
+// class="video-js vjs-default-skin mb-5"
+// width="640" height="480"
+
+Check parameters used by VideoJS.
+
+++++
+<video id="my-video" 
+    class="video-js lg-html5 vjs-theme-fantasy mb-5"
+    poster="/assets/videos/tutorials/web-erzeugen-poster.jpg" 
+    controls="" 
+    preload="auto"
+    data-setup="{}"
+    width="640" height="480">
+    <source src="/assets/videos/tutorials/web-erzeugen.mp4" type="video/mp4">
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+++++
+
+

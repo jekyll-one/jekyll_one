@@ -1,0 +1,55 @@
+// ~/document_base_folder/000_includes
+//  Asciidoc attribute includes:                 attributes.asciidoc
+// -----------------------------------------------------------------------------
+
+// URLs - References to sources on the Internet
+// -------------------------------------------------------------------
+
+tag::urls[]
+:j1-home:                                         https://jekyll.one
+end::urls[]
+
+
+// Tags - AsciiDoc attributes used internally
+// -------------------------------------------------------------------
+
+tag::tags[]
+:window:                                          window="_blank"
+:no-clipboard:                                    noclip
+:figure-caption:                                  Figure
+:images-dir:                                      pages/roundtrip
+:y:                                               icon:check[role="green"]
+:n:                                               icon:times[role="red"]
+:c:                                               icon:file-alt[role="blue"]
+:beginner:                                        icon:battery-quarter[role="md-blue"]
+:inter:                                           icon:battery-half[role="md-blue"]
+:advanced:                                        icon:battery-full[role="md-blue"]
+:emdash:                                          &#8212;
+:bullet:                                          &bull;
+:bigbullet:                                       &#9679;
+:bigbigbullet:                                    &#11044;
+:dot:                                             &#46;
+:dotdot:                                          &#46;&#46;
+:middot:                                          &middot;:                                               icon:file-alt[role="blue"]
+end::tags[]
+
+// Data - Data elements for Asciidoctor extensions
+// -------------------------------------------------------------------
+
+tag::data[]
+end::data[]
+
+
+// Product|Author - Document (e.g release) and Author information
+// -------------------------------------------------------------------
+
+tag::product_info[]
+:license:                                         e.g. Apache License, Version 2.0
+:revdate:                                         e.g. 2018
+:revnumber:                                       e.g. 1.2.3
+end::product_info[]
+
+
+tag::authors[]
+:uri-author-xxx:                                  https://xxx
+end::authors[]

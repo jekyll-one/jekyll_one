@@ -1,0 +1,4 @@
+
+
+.Title
+image::{images-dir}/sub_folder/image-name.png[Title, 800]
