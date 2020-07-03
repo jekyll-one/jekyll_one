@@ -23,9 +23,9 @@
    ----------------------------------------------------------------------------- */
 
 /* Drawer */
-.mm-ocd {
+/* .mm-ocd {
   top: 80px; /* jadams, 2020-06-20: offset to the NAV bar */
-}
+} */
 
 .mm-ocd--left .mm-ocd__content {
   background-color: #212121;
@@ -33,6 +33,64 @@
 
 .mm-ocd--right .mm-ocd__content {
   background-color: #212121;
+}
+
+/* Responsive */
+/* jadams, 2020-07-02: media query for MMenu
+--------------------------------------------------------------------------------
+NOTE: For unknown reason, style "mm-ocd--left" is NOT applied correctly
+      like "mm-ocd--right" what cause the wrong background-color
+      As a workaround, the background-color is added to the media
+      queries as well (but MUST be removed if fixed!!!)
+-------------------------------------------------------------------------------- */
+
+/* Large desktop */
+@media only screen and (min-width: 1200px) {
+  .mm-ocd {
+    top: 80px; /* drawer top offset to NAV bar */
+  }
+  .mm-ocd__content {
+      background-color: #212121;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 992px) {
+  .mm-ocd {
+    top: 80px; /* drawer top offset to NAV bar */
+  }
+  .mm-ocd__content {
+      background-color: #212121;
+  }
+}
+
+/* Desktop 2 (intermediate|responsive size) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .mm-ocd {
+    top: 68px; /* drawer top offset to NAV bar */
+  }
+  .mm-ocd__content {
+      background-color: #212121;
+  }
+}
+/* Landscape iPad, 768px */
+@media only screen and (min-width: 576px) and (max-width: 768px){
+  .mm-ocd {
+    top: 68px; /* drawer top offset to NAV bar */
+  }
+  .mm-ocd__content {
+      background-color: #212121;
+  }
+}
+
+/* Small devices (landscape phones, up to 576px) */
+@media only screen and (max-width: 576px) {
+  .mm-ocd {
+    top: 68px; /* drawer top offset to NAV bar */
+  }
+  .mm-ocd__content {
+      background-color: #212121;
+  }
 }
 
 /* Navigator */

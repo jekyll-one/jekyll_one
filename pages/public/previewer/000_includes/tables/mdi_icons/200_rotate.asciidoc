@@ -41,7 +41,7 @@
 |
 [source, html]
 ----
-<i class="mdi mdi-3x mdi-account mdi-rotate-45">
+<i class="mdi mdi-3x mdi-account mdi-rotate-180">
 ----
 
 |`mdi-rotate-225`

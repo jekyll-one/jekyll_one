@@ -174,7 +174,6 @@ j1.adapter['mmenu'] = (function (j1, window) {
           j1.adapter.mmenu.mmenuLoader(navMenuOptions);
         }
       }, 25);
-
     }, // END init
 
     // -------------------------------------------------------------------------
@@ -217,7 +216,7 @@ j1.adapter['mmenu'] = (function (j1, window) {
           'j1.adapter.mmenu', {
           xhr_container_id: "{{menu_id}}",
           xhr_data_path:    "{{xhr_data_path}}" },
-          {% if forloop.last %}'data_loaded'{% else %}'data_loaded'{% endif %}){% if forloop.last %}{% else %},{% endif %}
+          {% if forloop.last %}'null'{% else %}'null'{% endif %}){% if forloop.last %}{% else %},{% endif %}
 
       {% endif %}
       {% capture id_list %}{{id_list}}{{menu_id}}{% if forloop.last %}{% else %},{% endif %} {% endcapture %}
@@ -226,6 +225,11 @@ j1.adapter['mmenu'] = (function (j1, window) {
         // ---------------------------------------------------------------------
         // Initialize MMenu Navs and Drawers
         // ---------------------------------------------------------------------
+        // Make sure that Load HTML data (AJAX) is finished
+        setTimeout (function() {
+          _this.setState('data_loaded');
+        }, 300);
+
         var dependencies_met_mmenu_initialized = setInterval (function () {
           if (_this.getState() === 'data_loaded') {
             logger.info('load HTML data (AJAX): finished');
@@ -235,7 +239,15 @@ j1.adapter['mmenu'] = (function (j1, window) {
             j1.adapter.mmenu.mmenuInitializer(mmOptions);
             clearInterval(dependencies_met_mmenu_initialized);
           }
-        }); // END dependencies_met_mmenu_loaded
+        }, 25); // END dependencies_met_mmenu_loaded
+
+        var dependencies_met_all_menu_loaded = setInterval (function () {
+          if ( $('#menu_mmenu').length && $('#sidebar_mmenu').length && $('#toc_mmenu').length ) {
+            _this.setState('finished');
+            logger.info('status: ' + _this.getState());
+            clearInterval(dependencies_met_all_menu_loaded);
+          }
+        }, 25); // END dependencies_met_all_menu_loaded
       }); // END done
     }, // END dataLoader
 
@@ -290,29 +302,34 @@ j1.adapter['mmenu'] = (function (j1, window) {
 
             // Toggle Bars (Hamburger) for the NavBar to open|close
             // the mmenu drawer
-            $('{{item.menu.content.toggler}}').each(function(e) {
+            $('{{item.menu.content.button}}').each(function(e) {
               var $this = $(this);
 
               $this.on('click', function(e){
-                const toggler_{{menu_id}} = this;
+                const button_{{menu_id}} = this;
 
                 // TODO: Animated toggle button
                 //
-                $('{{item.menu.content.toggler}}').toggleClass('fadeIn');
-                $('{{item.menu.content.toggler}}').toggleClass('rotateIn')
+                // $('{{item.menu.content.toggler}}').toggleClass('fadeIn');
+                // $('{{item.menu.content.toggler}}').toggleClass('rotateIn')
 
-                $('.mdi', this).toggleClass('mdi-menu');
-                $('.mdi', this).toggleClass('mdi-close');
+                // $('.mdi', this).toggleClass('mdi-menu');
+                // $('.mdi', this).toggleClass('mdi-close');
+
                 e.preventDefault();
-                (toggler_{{menu_id}}.t = !toggler_{{menu_id}}.t)
-                  ? drawer_{{menu_id}}.open()
-                  : drawer_{{menu_id}}.close();
+
+                // (toggler_{{menu_id}}.t = !toggler_{{menu_id}}.t)
+                //   ? drawer_{{menu_id}}.open()
+                //   : drawer_{{menu_id}}.close();
+
+                drawer_{{menu_id}}.open()
               });
             });
             clearInterval(dependencies_met_{{menu_id}}_loaded);
+            $('#{{item.menu.content.id}}').show();
             logger.info('initializing mmenu finished on id: #{{menu_id}}');
           }; // END mmenu_loaded
-        }); // END dependencies_met_mmenu_loaded
+        }, 25); // END dependencies_met_mmenu_loaded
         {% endif %} // ENDIF content_type: NAVIGATION
 
         {% if item.menu.content.type == "drawer" %}
@@ -339,40 +356,43 @@ j1.adapter['mmenu'] = (function (j1, window) {
                 position: "{{item.menu.drawer.position}}"
               });
 
-              // Toggler for the MMenu tocbar to open|close the toc drawer
-              $('{{item.menu.content.toggler}}').each(function(e) {
+              // button for the MMenu tocbar to open|close the toc drawer
+              $('{{item.menu.content.button}}').each(function(e) {
                 var $this = $(this);
 
                 $this.on('click', function(e) {
-                  var toggler_{{menu_id}} = this;
+                  var button_{{menu_id}} = this;
                   var hasClass;
 
-                  // check if the toggler should be activated
+                  // check if the button should be activated
                   // e.g for TOC only if clas js-toc-content is found
                   //
-                  if ('{{item.menu.content.toggler_activated}}' != 'always') {
-                    hasClass = $('main').hasClass('{{item.menu.content.toggler_activated}}');
+                  if ('{{item.menu.content.button_activated}}' != 'always') {
+                    hasClass = $('main').hasClass('{{item.menu.content.button_activated}}');
                   } else {
                     hasClass = true;
                   }
                   if (hasClass) {
                     // Toggle button animation
-                    $('{{item.menu.content.toggler}}').toggleClass('{{item.menu.content.toggler_animation}}')
+                    //$('{{item.menu.content.toggler}}').toggleClass('{{item.menu.content.toggler_animation}}')
 
                     e.preventDefault();
-                    (toggler_{{menu_id}}.t = !toggler_{{menu_id}}.t)
-                      ? drawer_{{menu_id}}.open()
-                      : drawer_{{menu_id}}.close();
+
+                    // (toggler_{{menu_id}}.t = !toggler_{{menu_id}}.t)
+                    //   ? drawer_{{menu_id}}.open()
+                    //   : drawer_{{menu_id}}.close();
+
+                    drawer_{{menu_id}}.open()
                   } // END if hasclass
                 });
               });
               clearInterval(dependencies_met_{{menu_id}}_loaded);
+              $('#{{item.menu.content.id}}').show();
           }; // END if menu_loaded
-        }); // END dependencies_met_mmenu_loaded
+        }, 25); // END dependencies_met_mmenu_loaded
         logger.info('initializing mmenu finished on id: #{{menu_id}}');
         {% endif %} // ENDIF content_type: DRAWER
         } // END menus|drawers
-
       {% endif %} // ENDIF menu enabled
       {% endfor %} // ENDFOR menus
     }, // END mmenuInitializer

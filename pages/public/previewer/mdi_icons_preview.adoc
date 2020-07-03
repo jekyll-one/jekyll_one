@@ -10,7 +10,7 @@ categories:                             [ pages, manuals ]
 permalink:                              /pages/protected/previewer/mdi_font/
 regenerate:                             false
 
-scrollbar:                              true
+scrollbar:                              false
 
 resources:                              []
 resource_options:
@@ -46,7 +46,7 @@ include::{includedir}/attributes.asciidoc[tag=data]
 
 // Additional Asciidoc page attributes goes here
 // -----------------------------------------------------------------------------
- 
+
 
 // Include documents
 // -----------------------------------------------------------------------------
@@ -88,7 +88,6 @@ include equivalent text either inside the `<i>` tag or right next to it
 (as Twitter for Bootstrap does), then screen readers understand where to
 click to reply, the link is usable if CSS doesn't load, and human readers
 with good eyesight and a decent browser see a pretty icon.
-
 
 == Sizes
 

@@ -351,17 +351,14 @@ resources:
   #   6   n/a                           moment@2.19.2
   #   7   log4javascript                log4javascript@1.4.15
   #   8   clipboard                     clipboard@1.7.1
-  #   9   smoothscroll                  smoothscroll-for-websites@1.4.6
   #   10  bs_material_design            bootstrap-material-design@4.0.0-beta.4
   #   11  j1_template_4                 j1_template_4@0.0.1
-  #   12  tocbot                        tocbot@3.0.2
+  #   12  tocbot                        tocbot@4.11.2
   #   13  jekyll_search                 simple_jekyll_search@1.1.5
-  #   14  back2top                      back2top@1.1
   #   15  bs_theme_switcher             bs_theme_switcher@1.1.5
   #   16  backstretch                   backstretch@2.1.16
   #   17  cookie consent                cookieConsent@2019-07-24
   #   18  bootstrap_datepicker          datepicker@1.7.1
-  #   19  bs_gallery                    bs_gallery@2017-12-27
   #
   # ----------------------------------------------------------------------------
   #   J1 Template Core, integrated CSS Resources
@@ -439,7 +436,7 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
-      script_load:                      defer
+      script_load:                      defer                                   # Warum defer???
       dependencies:                     [ logger ]
       pass_init_data:                   false
       data:
@@ -479,7 +476,7 @@ resources:
       layout:                           [ page, post, collection, blog_archive ]
       region:                           head
       required:                         always
-      script_load:                      defer
+      script_load:                      defer                                   # Warum defer???
       dependencies:                     [ navigator ]
       pass_init_data:                   true
       data:
@@ -487,46 +484,6 @@ resources:
         files:                          [ adapter/js/toccer.js ]
         js:                             []
         init_function:                  [ j1.adapter.toccer.init ]
-
-  # ----------------------------------------------------------------------------
-  # Back2Top
-  #
-  - name:                               J1 Back2Top
-    resource:
-      id:                               back2top
-      enabled:                          true
-      comment:                          module back2top
-      region:                           head
-      layout:                           [ all ]
-      required:                         always
-      script_load:                      defer
-      dependencies:                     [ navigator ]
-      pass_init_data:                   false
-      data:
-        css:                            []
-        files:                          [ adapter/js/back2top.js ]
-        js:                             []
-        init_function:                  [ j1.adapter.back2top.init ]
-
-  # ----------------------------------------------------------------------------
-  # Scroller
-  #
-  - name:                               J1 Scroller
-    resource:
-      id:                               scroller
-      enabled:                          true
-      comment:                          module smoothscroll
-      region:                           head
-      layout:                           [ all ]
-      required:                         always
-      script_load:                      defer
-      dependencies:                     false
-      pass_init_data:                   false
-      data:
-        css:                            []
-        files:                          [ adapter/js/scroller.js ]
-        js:                             []
-        init_function:                  [ j1.adapter.scroller.init ]
 
   # ----------------------------------------------------------------------------
   # Searcher
@@ -567,6 +524,27 @@ resources:
         files:                          [ adapter/js/cookie_consent.js ]
         js:                             []
         init_function:                  [ j1.adapter.cookie_consent.init ]
+
+  # ----------------------------------------------------------------------------
+  # Sticky Side Menu
+  #
+  - name:                               Sticky Side Menu
+    resource:
+      id:                               ssm
+      enabled:                          true
+      comment:                          module ssm
+      region:                           head
+      layout:                           [ page, post, app, collection, blog_archive ]
+      required:                         always
+      script_load:                      defer
+      dependencies:                     false
+      pass_init_data:                   true
+      data:
+        css:                            []
+        files:                          [ adapter/js/ssm.js ]
+        js:                             []
+        init_function:                  [ j1.adapter.ssm.init ]
+
 
 # ==============================================================================
 # J1 Core MODULES initialized 'ondemand' for a layout
@@ -712,11 +690,11 @@ resources:
       dependencies:                     false
       pass_init_data:                   false
       data:
-        css:                            [                                          
+        css:                            [
                                           extensions/mmenu-light/css/mmenu-light,
                                           extensions/mmenu-light/css/themes/uno
                                         ]
-        files:                          [ adapter/js/mmenu.js]
+        files:                          [ adapter/js/mmenu.js ]
         js:                             [
                                           extensions/mmenu-light/js/mmenu-light,
                                           extensions/mmenu-light/js/mmenu-light.polyfills

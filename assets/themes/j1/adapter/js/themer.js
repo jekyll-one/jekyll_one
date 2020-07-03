@@ -116,7 +116,7 @@ j1.adapter['themer'] = (function (j1, window) {
   var logger;
   var logText;
 
-  var default_theme_css           = environment === 'production' ? '/assets/themes/j1/core/css/uno.min.css' : '/assets/themes/j1/core/css/uno.css';
+  var default_theme_css           = (environment == 'production') ? '/assets/themes/j1/core/css/uno.min.css' : '/assets/themes/j1/core/css/uno.css';
   var default_theme_extention_css = '{{themer_options.includeBootswatch}}';
   var default_theme_name          = 'Uno';
   var default_theme_author        = 'J1 Team';

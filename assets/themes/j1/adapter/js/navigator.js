@@ -245,6 +245,18 @@ j1.adapter['navigator'] = (function (j1, window) {
       logger.info('module is being initialized');
 
       // -----------------------------------------------------------------------
+      // Load HTML data (AJAX)
+      // -----------------------------------------------------------------------
+      // jadams, 202-06-24: Promise (chain) if $.when seems NOT to work correctly.
+      // It semms a chain using .then will be a better solution to make it sure
+      // that the last Deferred set the state to 'data_loaded'.
+      // Found the final state randomly set to 'null' what prevent the module
+      // to run mmenuInitializer.
+      // Workaround: Set 'data_loaded' to be returned by all Deferred in
+      // the chain.
+      // See: https://stackoverflow.com/questions/5436327/jquery-deferreds-and-promises-then-vs-done
+      //
+      // -----------------------------------------------------------------------
       // data loader
       // -----------------------------------------------------------------------
       logger.info('run deferred data load');
@@ -268,6 +280,12 @@ j1.adapter['navigator'] = (function (j1, window) {
         // ---------------------------------------------------------------------
         // core initializer
         // ---------------------------------------------------------------------
+
+        // Make sure that Load HTML data (AJAX) is finished
+        // setTimeout (function() {
+        //   _this.setState('data_loaded');
+        // }, 150);
+
         var dependencies_met_navigator_core = setInterval (function () {
           if (_this.getState() === 'data_loaded') {
             _this.setState('processing');
@@ -581,14 +599,14 @@ j1.adapter['navigator'] = (function (j1, window) {
       $('head').append("<style>@media (min-width: " +gridBreakpoint_lg+ ") { nav.navbar.navigator.navbar-scrolled.light { background-color: " +bg_scrolled+ " !important; } }</style>");
 
       // Menubar collapsed (mobile)
-      $('head').append('<style>.navbar-collapse.collapse.show { background-color: ' +bg_scrolled+ ' !important; }</style>');
+//    $('head').append('<style>.navbar-collapse.collapse.show { background-color: ' +bg_scrolled+ ' !important; }</style>');
 
 
       /* Navbar media-queries, LARGE Window|Desktop (>= 1024) */
       /* jadams:  Oversized menu bar fixed by: overflow: hidden */
 //    $('head').append("<style>@media (max-width: " +gridBreakpoint_lg+ ") { nav.navbar.navigator { background-color: " +navBarOptions.background_color_collapsed+ " !important; overflow: hidden; } }</style>");
-      $('head').append("<style>@media (max-width: " +gridBreakpoint_lg+ ") { nav.navbar.navigator { background-color: " +bg_collapsed+ " !important; overflow: hidden; } }</style>");
-      //$('head').append("<style>@media (max-width: 1023px) { row { margin-left: 0 !important; margin-right: 0 !important; } }</style>");
+//    $('head').append("<style>@media (max-width: " +gridBreakpoint_lg+ ") { nav.navbar.navigator { background-color: " +bg_collapsed+ " !important; overflow: hidden; } }</style>");
+//    $('head').append("<style>@media (max-width: 1023px) { row { margin-left: 0 !important; margin-right: 0 !important; } }</style>");
 
       {% comment %} navQuicklinks styles
       -------------------------------------------------------------------------- {% endcomment %}

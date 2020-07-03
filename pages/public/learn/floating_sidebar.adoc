@@ -1,5 +1,5 @@
 ---
-title:                                  Whats up
+title:                                  Floating SideBar
 tagline:                                where to go
 description:                            Where to go
 
@@ -7,13 +7,11 @@ tags:                                   [ Page, Roundtrip ]
 index:                                  [ Start, Template, Whats, Up, Readme, TL;DR ]
 categories:                             [ pages ]
 
-permalink:                              /pages/public/learn/whats_up/
+permalink:                              /pages/public/learn/fsb/
 regenerate:                             false
 
 resources:                              [ lightbox ]
 resource_options:
-  - ssm:
-      mode:                             menu
   - attic:
       padding_top:                      400
       padding_bottom:                   50
@@ -62,6 +60,17 @@ resource_options:
 // Include sub-documents
 // -----------------------------------------------------------------------------
 
+++++
+<div class="sidebar">
+  <div class="floating-div">
+    <p>This "floating div" could be a form, a call to action, an ad,
+      or whatever other content you want to float in sidebar as the user
+      scrolls up and down the page.
+    </p>
+  </div>
+</div>
+++++
+
 Welcome to the pages of J1 Template. If your here first time,
 hopefully you get on that page first. For sure, there is no better
 place to step in.
@@ -82,7 +91,6 @@ countries and cultures go for RTL, but currently we've *no* support for RTL
 implemented.
 
 For that reason, it was a good decision to start from here.
-
 
 == Whats up
 
@@ -116,3 +124,76 @@ You're welcome!
 
 If you like, continue by walking through the roundtrip examples
 link:/pages/public/learn/roundtrip/present_images/[by starting the tour here].
+
+++++
+<style>
+
+  .sidebar {
+    width:33.33%;
+    float:left;
+    padding: 0 10px;
+  }
+
+  .floating-div {
+    background-color: #333;
+    padding: 10px 50px;
+    color:#EEE;
+    font-size: 20px;
+    margin-top:10px;
+    position: absolute;
+    right: -40px;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 150px;
+    right:-40px;
+    margin: 0;
+    width:calc(33.33% - 25px);
+  }
+
+  .abs {
+    position: absolute;
+    bottom: 10px;
+    right:10px;
+    width:calc(33.33% - 20px);
+  }
+</style>
+
+<script>
+  $(document).ready(function() {
+    var dependencies_met_core = setInterval(function() {
+      if (j1.getState() == 'finished') {
+        // variables
+        var main_content      = $('.js-toc-content');
+        var m                 = $(main_content).offset().top;
+        var topPosition       = $('.floating-div').offset().top - 10;
+        var floatingDivHeight = $('.floating-div').outerHeight();
+        var footer            = $('#j1_footer');
+        var footerFromTop     = $('#j1_footer').offset().top;
+        var absPosition       = footerFromTop - floatingDivHeight - 20;
+        var win               = $(window);
+        var floatingDiv       = $('.floating-div');
+
+        win.scroll(function() {
+          if (window.matchMedia('(min-width: 768px)').matches) {
+            if ((win.scrollTop() > topPosition) && (win.scrollTop() < absPosition)) {
+              floatingDiv.addClass('sticky');
+              floatingDiv.removeClass('abs');
+
+            } else if ((win.scrollTop() > topPosition) && (win.scrollTop() > absPosition)) {
+              floatingDiv.removeClass('sticky');
+              floatingDiv.addClass('abs');
+
+            } else {
+              floatingDiv.removeClass('sticky');
+              floatingDiv.removeClass('abs');
+            }
+          }
+        });
+        clearInterval(dependencies_met_core);
+      }
+    }, 25);
+  });
+</script>
+++++

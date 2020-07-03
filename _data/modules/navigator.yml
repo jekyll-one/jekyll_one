@@ -67,10 +67,12 @@ settings:
             position:                   right
 
           content:
+            id:                         menu_mmenu
             type:                       navigation
             title:                      Starter Web
             theme:                      dark
-            toggler:                    "#navbar-toggler"
+            button:                     "#mmenu-button"
+            button_activated:           always
 
       # ------------------------------------------------------------------------
       # DRAWER Sidebar
@@ -85,12 +87,12 @@ settings:
             position:                   left
 
           content:
+            id:                         sidebar_mmenu
             type:                       drawer
             title:                      Site Info
             theme:                      dark
-            toggler:                    "#navbar-brand"
-            toggler_animation:          rotateIn
-            toggler_activated:          always
+            button:                     "#navbar-brand"
+            button_activated:           always
 
             boxes:
 
@@ -195,12 +197,12 @@ settings:
             position:                   right
 
           content:
+            id:                         toc_mmenu
             type:                       drawer
             title:                      Table of Contents
-            theme:                      light
-            toggler:                    "#toc-toggler"
-            toggler_animation:          rotateIn
-            toggler_activated:          "js-toc-content"
+            theme:                      dark
+            button:                     "#ssm_toc"
+            button_activated:           "js-toc-content"
 
   # ----------------------------------------------------------------------------
   # NavQuicklinks
@@ -208,10 +210,8 @@ settings:
   nav_quicklinks:
     enabled:                            true
 
-    home_url:                           https://jekyll.one/                     # none | URL
+    home_url:                           /                                       # none | URL
     back_url:                           none                                    # none | URL
-
-    toc_toggler:                        true
 
     r_text_sizer:                       false                                   # true | false
 

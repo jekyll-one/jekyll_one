@@ -189,7 +189,7 @@ j1.adapter['framer'] = (function (j1, window) {
     // Set the current (processing) state of the module
     // -------------------------------------------------------------------------
     setState: function (stat) {
-      j1.adapter.scroller.state = stat;
+      j1.adapter.framer.state = stat;
     }, // END setState
 
     // -------------------------------------------------------------------------
@@ -197,7 +197,7 @@ j1.adapter['framer'] = (function (j1, window) {
     // Returns the current (processing) state of the module
     // -------------------------------------------------------------------------
     getState: function () {
-      return j1.adapter.scroller.state;
+      return j1.adapter.framer.state;
     } // END state
 
   }; // END return

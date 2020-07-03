@@ -1064,8 +1064,6 @@ var j1 = (function () {
 
       var logText = 'initializing material design finished';
       logger.info(logText);
-
-      return true;
     }, // END initMDB
 
     // -------------------------------------------------------------------------
@@ -1085,7 +1083,6 @@ var j1 = (function () {
           o[p] = a[i][p];
         }
       }
-
       return o;
     },  // END mergeData
 
@@ -1103,61 +1100,41 @@ var j1 = (function () {
     // -------------------------------------------------------------------------
     getLanguage: function () {
       var language = navigator.languages ? navigator.languages[0] : (navigator.language || navigator.userLanguage);
-
-      return language;
     }, // END getLanguage
 
     // -------------------------------------------------------------------------
-    //  returns the template version taken from site config ( _config.yml)
+    //  returns the template version taken from site config (_config.yml)
     // -------------------------------------------------------------------------
     getTemplateVersion: function () {
       return '{{template_version}}';
     }, // END getTemplateVersion
 
     // -------------------------------------------------------------------------
-    // Scrolls smooth to any anchor referenced by an page URL
-    // Values for delay|offset are taken from TOC module (Tocbot)
+    // Scrolls smooth to any anchor referenced by an page URL on
+    // e.g. a page reload. Values for delay|offset are taken from
+    // TOCCER module
     // -------------------------------------------------------------------------
     scrollTo: function () {
-      // Unclear why a offset correction is needed (sometimes ???)
-      var offset_correction = {{toccer_options.headingsOffset}};
-      var offset            = {{toccer_options.smoothScrollOffset}};
-      var anchor_id         = window.location.href.split("#")[1];
+      var anchor    = window.location.href.split("#")[1];
+      var anchor_id = '#' + anchor;
       var selector;
-      var heading;
-      var re;
 
       if (anchor_id) {
-        selector    = $('.' + anchor_id + ', #' + anchor_id +',[name='+anchor_id+']');
-        heading     = selector[0].nodeName;
-
         // scroll only, if an anchor is given with URL
+        selector = $(anchor_id);
         if (selector.length) {
-          var delay     = {{toccer_options.smoothScrollDuration}};
-          var scroll_to = parseInt( selector.offset().top - offset - offset_correction );
-          //var scroll_to = selector.offset().top;
-          $('html,body').animate({scrollTop: scroll_to}, delay,
-            function () {
-              // scroll the page one pixel back and forth
-              // to get the right position for the NAV Module (Tocbot)
-              $(window).scrollTop($(window).scrollTop()+1);
-              $(window).scrollTop($(window).scrollTop()-1);
+          j1.core.scrollSmooth.scroll( anchor_id, {
+            duration: {{toccer_options.scrollSmoothDuration}},
+            offset: {{toccer_options.scrollSmoothOffset}},
+            callback: null
           });
         } else {
-          // TODO: to be checked if this else is needed
-          // scroll the page one pixel back and forth
-          // to get the right position for the NAV Module (Tocbot)
+          // scroll the page one pixel back and forth (trigger)
+          // to get the right position for the Toccer
           $(window).scrollTop($(window).scrollTop()+1);
           $(window).scrollTop($(window).scrollTop()-1);
-        } // selector.length
-      } else {
-        // scroll the page one pixel back and forth
-        // to get the right position for the NAV Module (Tocbot)
-        $(window).scrollTop($(window).scrollTop()+1);
-        $(window).scrollTop($(window).scrollTop()-1);
-      } // END if anchor_id
-
-      return true;
+        } // END if anchor_id
+      }
     }, // END scrollTo
 
     // -------------------------------------------------------------------------

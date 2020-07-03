@@ -118,7 +118,7 @@ cookies:
   user_session:                         j1.user.session
   user_state:                           j1.user.state
 
-    
+
 # ==============================================================================
 # PAGE configuration settings
 #
@@ -132,14 +132,14 @@ cookies:
 #
 #   prettify
 #   ----------------------------------------------------------------------------
-#   If set to true, all generated HTML pages (by Liquid|Jekyll) get 
+#   If set to true, all generated HTML pages (by Liquid|Jekyll) get
 #   formatted "pretty" by layout "default".
 #
 #   NOTE: Used for developent mode ONLY
 #   NOTE: See ~/packages/300_template_src/_layouts/default.html
 #
 # ------------------------------------------------------------------------------
-flicker_timeout:                        250
+flicker_timeout:                        150
 
 # ------------------------------------------------------------------------------
 # HTML PrettyPrint
@@ -159,9 +159,9 @@ user:
   provider:                             j1
   provider_site_url:                    https://jekyll.one
   provider_home_url:                    https://jekyll.one
-  provider_blog_url:                    /pages/public/blog/navigator/ 
+  provider_blog_url:                    /pages/public/blog/navigator/
   provider_member_url:                  /pages/public/learn/whats_up/
-  provider_privacy_url:                 /pages/public/legal/en/privacy/                       
+  provider_privacy_url:                 /pages/public/legal/en/privacy/
   user_name:                            guest
   status:                               active
   provider_membership:                  guest
@@ -191,7 +191,7 @@ fa:
 # Body style settings
 #
 body:
-  scrollbar:                            false 
+  scrollbar:                            false
   background-color:                     md_gray_50
   font-color:                           md_gray_900
   font-size:                            1em
@@ -219,7 +219,7 @@ comments:
   enabled:                              true
   provider:                             disqus
 
-  disqus:    
+  disqus:
     short_name:                         jekyll-one
 
 # facebook:
@@ -228,7 +228,7 @@ comments:
 #   width:                              580
 #   colorscheme:                        light
 
-# custom:    
+# custom:
 #   custom_data:
 
 # ------------------------------------------------------------------------------
@@ -242,7 +242,7 @@ analytics:
   provider:                             google
   google:
     tracking_id:                        'UA-138160879-1'
-  custom:    
+  custom:
     custom_data:
 
 # ------------------------------------------------------------------------------
@@ -254,9 +254,9 @@ analytics:
 advertising:
   enabled:                              false
   provider:                             google
-  google:    
+  google:
     publisher_id:                       ca-pub-6537273267695855
-  custom:    
+  custom:
     custom_data:
 
 # ------------------------------------------------------------------------------
@@ -271,7 +271,7 @@ translation:
 
   google:
     layout:                             default
-    meta_data:                          [google-translate-customization]    
+    meta_data:                          [google-translate-customization]
     page_language:                      en
     translation_languages:              [all]
 
