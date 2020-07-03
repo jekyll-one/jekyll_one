@@ -33,11 +33,14 @@ regenerate:                             true
 
 {% comment %} Set config data
 -------------------------------------------------------------------------------- {% endcomment %}
+{% assign toccer_defaults = modules.defaults.toccer.defaults %}
+{% assign toccer_settings = modules.toccer.settings %}
 {% assign ssm_settings    = modules.ssm.settings %}
 {% assign ssm_defaults    = modules.defaults.ssm.defaults %}
 
 {% comment %} Set config options
 -------------------------------------------------------------------------------- {% endcomment %}
+{% assign toccer_options  = toccer_defaults | merge: toccer_settings %}
 {% assign ssm_options     = ssm_defaults | merge: ssm_settings %}
 
 /*
@@ -269,6 +272,7 @@ j1.adapter['ssm'] = (function (j1, window) {
       var previous_header_id;
       var currentNode;
       var prev_node;
+      var anchor_id;
 
       var index             = 0;
       var maxNode           = $(nodes).length - 1;
@@ -283,19 +287,22 @@ j1.adapter['ssm'] = (function (j1, window) {
           if (index > maxNode) {
             return false
           } else {
-            prev_node = (index > 0) ? nodes[index-1] : nodes[index];
-            previous_header_id = $(prev_node).find(":header").first()[0].id;
+            prev_node           = (index > 0) ? nodes[index-1] : nodes[index];
+            previous_header_id  = $(prev_node).find(":header").first()[0].id;
+            anchor_id           = '#' + previous_header_id;
+
             $('a[href*="' + current_header_id + '"]').removeClass('is-active-link');
             $('a[href*="' + previous_header_id + '"]').addClass('is-active-link');
-            var dest = $('body').scrollTop() + $('#' + previous_header_id).offset().top - 100;
-            $('html, body').animate({
-              scrollTop: dest
-            }, 500);
+
+            j1.core.scrollSmooth.scroll( anchor_id, {
+              duration: {{toccer_options.scrollSmoothDuration}},
+              offset: {{toccer_options.scrollSmoothOffset}},
+              callback: null
+            });
             return false;
           }
         }
         (index < maxNode) ? index++ : index;
-        // (index = 0) ? index : index++;
       });
     }, // END scroll_previous_section
 
@@ -306,6 +313,7 @@ j1.adapter['ssm'] = (function (j1, window) {
       var next_header_id;
       var currentNode;
       var nextNode;
+      var anchor_id;
 
       var index             = 0;
       var maxNode           = $(nodes).length -1;
@@ -315,23 +323,24 @@ j1.adapter['ssm'] = (function (j1, window) {
       // logger.info('eventhandler fired on id: ' + id );
 
       nodes.each(function() {
-        // currentNode = $(this).find(current_header_id);
         currentNode = $(this).find(current_header_id);
         if (currentNode.length) {
           if (index == maxNode) {
             return false
           } else {
             nextNode = nodes[index+1];
-            next_header_id = $(nextNode).closest().find(":header").first();
-            next_header_id = $(nextNode).find(":header").first()[0].id;
+            next_header_id  = $(nextNode).closest().find(":header").first();
+            next_header_id  = $(nextNode).find(":header").first()[0].id;
+            anchor_id       = '#' + next_header_id;
 
             $('a[href*="' + current_header_id + '"]').removeClass('is-active-link');
             $('a[href*="' + next_header_id + '"]').addClass('is-active-link');
 
-            var dest = $('body').scrollTop() + $('#' + next_header_id).offset().top - 100;
-            $('html, body').animate({
-              scrollTop: dest
-            }, 500);
+            j1.core.scrollSmooth.scroll( anchor_id, {
+              duration: {{toccer_options.scrollSmoothDuration}},
+              offset: {{toccer_options.scrollSmoothOffset}},
+              callback: null
+            });
             return false;
           }
         }
