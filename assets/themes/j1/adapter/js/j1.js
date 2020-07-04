@@ -1130,7 +1130,9 @@ var j1 = (function () {
           });
         } else {
           // scroll the page one pixel back and forth (trigger)
-          // to get the right position for the Toccer
+          // to get the right position for the Toccer and adjust the
+          // Navigator to display the (tranparent) navbar correctly
+          //
           $(window).scrollTop($(window).scrollTop()+1);
           $(window).scrollTop($(window).scrollTop()-1);
         } // END if anchor_id
