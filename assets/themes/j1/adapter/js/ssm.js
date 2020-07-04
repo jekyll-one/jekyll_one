@@ -273,14 +273,12 @@ j1.adapter['ssm'] = (function (j1, window) {
     // open mobile menu
     // -------------------------------------------------------------------------
     open_ssm_toc: function () {
-      logger.info('eventhandler fired on id: ' + id );
     }, // END open_ssm_toc
 
     // -------------------------------------------------------------------------
     // reload page
     // -------------------------------------------------------------------------
     reload_page: function () {
-      logger.info('reload page');
       location.reload();
 
     }, // END open_ssm_toc
@@ -297,8 +295,6 @@ j1.adapter['ssm'] = (function (j1, window) {
       var maxNode           = $(nodes).length - 1;
       var $toc              = $("#sidebar");
       var current_header_id = $toc.find(".is-active-link").attr('href');
-
-      // logger.info('eventhandler fired on id: ' + id );
 
       nodes.each(function() {
         currentNode = $(this).find(current_header_id);
@@ -339,8 +335,6 @@ j1.adapter['ssm'] = (function (j1, window) {
       var $toc              = $("#sidebar");
       var current_header_id = $toc.find(".is-active-link").attr('href');
 
-      // logger.info('eventhandler fired on id: ' + id );
-
       nodes.each(function() {
         currentNode = $(this).find(current_header_id);
         if (currentNode.length) {
@@ -373,8 +367,6 @@ j1.adapter['ssm'] = (function (j1, window) {
     scroll_to_top: function () {
       var dest = 0;
 
-      // logger.info('eventhandler fired on id: ' + id );
-
       $('html, body').animate({
         scrollTop: dest
       }, 500);
@@ -390,8 +382,6 @@ j1.adapter['ssm'] = (function (j1, window) {
       var pageHeight      = $page.height() - f - 400;
       var pageHeightOuter = $page.outerHeight()
 
-      // logger.info('eventhandler fired on id: ' + id );
-
       $('html, body').animate({
         scrollTop: pageHeight
       }, 500);
@@ -401,16 +391,15 @@ j1.adapter['ssm'] = (function (j1, window) {
     // scroll to comments (Disqus)
     // -------------------------------------------------------------------------
     scroll_to_comments: function () {
-      // logger.info('eventhandler fired on id: ' + id );
     }, // END scroll_comments
 
     // -------------------------------------------------------------------------
     // create generic alert
     // -------------------------------------------------------------------------
     alert_me: function () {
-      logger.info('eventhandler fired for: alert_me');
       alert ("Hello world!");
     }, // END alert_me
+
     // -------------------------------------------------------------------------
     // messageHandler
     // Manage messages (paylods) send from other J1 modules
