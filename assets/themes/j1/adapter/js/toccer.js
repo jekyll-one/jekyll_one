@@ -174,6 +174,7 @@ j1.adapter['toccer'] = (function () {
             contentSelector:        {{ toccer_options.contentSelector | json }},
             collapseDepth:          settings.collapseDepth,
             throttleTimeout:        {{ toccer_options.throttleTimeout | json }},
+            hasInnerContainers:     false,
             includeHtml:            false,
             linkClass:              'toc-link',
             extraLinkClasses:       '',
@@ -189,7 +190,7 @@ j1.adapter['toccer'] = (function () {
             scrollSmooth:           {{ toccer_options.scrollSmooth | json }},
             scrollSmoothDuration:   {{ toccer_options.scrollSmoothDuration | json }},
             scrollSmoothOffset:     {{ toccer_options.scrollSmoothOffset | json }},
-            headingsOffset:         {{ toccer_options.headingsOffset | json }},
+            headingsOffset:         1,
             throttleTimeout:        {{ toccer_options.throttleTimeout | json }}
           });
           clearInterval(dependencies_met_ajax_load_finished);

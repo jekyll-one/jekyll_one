@@ -259,7 +259,6 @@ j1.adapter['ssm'] = (function (j1, window) {
         } else {
           logger.info('register custom eventhandler on id: {{button_id}}');
         }
-
       } // END items (buttons)
       {% endif %} // menu_type 'top_level_item'
       {% endif %} // ENDIF button_id enabled
@@ -280,7 +279,6 @@ j1.adapter['ssm'] = (function (j1, window) {
     // -------------------------------------------------------------------------
     reload_page: function () {
       location.reload();
-
     }, // END open_ssm_toc
     // -------------------------------------------------------------------------
     // scroll to previous section
@@ -314,7 +312,12 @@ j1.adapter['ssm'] = (function (j1, window) {
               offset: {{toccer_options.scrollSmoothOffset}},
               callback: null
             });
-            return false;
+
+            // scroll the page one pixel back and forth (trigger)
+            // to get the right position for the Toccer
+            //
+            $(window).scrollTop($(window).scrollTop()+1);
+            $(window).scrollTop($(window).scrollTop()-1);
           }
         }
         (index < maxNode) ? index++ : index;
@@ -354,7 +357,12 @@ j1.adapter['ssm'] = (function (j1, window) {
               offset: {{toccer_options.scrollSmoothOffset}},
               callback: null
             });
-            return false;
+
+            // scroll the page one pixel back and forth (trigger)
+            // to get the right position for the Toccer
+            //
+            $(window).scrollTop($(window).scrollTop()+1);
+            $(window).scrollTop($(window).scrollTop()-1);
           }
         }
         (index < maxNode) ? index++ : index;
@@ -370,6 +378,12 @@ j1.adapter['ssm'] = (function (j1, window) {
       $('html, body').animate({
         scrollTop: dest
       }, 500);
+
+      // scroll the page one pixel back and forth (trigger)
+      // to get the right position for the Toccer
+      //
+      $(window).scrollTop($(window).scrollTop()+1);
+      $(window).scrollTop($(window).scrollTop()-1);
     }, // END scroll_top
 
     // -------------------------------------------------------------------------
@@ -385,6 +399,12 @@ j1.adapter['ssm'] = (function (j1, window) {
       $('html, body').animate({
         scrollTop: pageHeight
       }, 500);
+
+      // scroll the page one pixel back and forth (trigger)
+      // to get the right position for the Toccer
+      //
+      $(window).scrollTop($(window).scrollTop()+1);
+      $(window).scrollTop($(window).scrollTop()-1);
     }, // END scroll_bottom
 
     // -------------------------------------------------------------------------

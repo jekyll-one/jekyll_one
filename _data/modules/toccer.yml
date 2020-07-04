@@ -111,20 +111,15 @@ settings:
   #     default:                        50
   #
   # ----------------------------------------------------------------------------
-  tocSelector:                          .js-toc
-  headingSelector:                      "h2, h3, h4, h5"
-  ignoreSelector:                       .notoc
-  contentSelector:                      .js-toc-content
-  activeLinkColor:                      "#212121"                               # md_bluegrey_900
-  collapseDepth:                        2
-  throttleTimeout:                      50
-  includeHtml:                          false
+  tocSelector:                          .js-toc                                 # Where to render the table of contents
+  contentSelector:                      .js-toc-content                         # Where to grab the headings to build the table of contents
+  headingSelector:                      "h2, h3, h4, h5"                        # Which headings to grab inside of the contentSelector element
+  ignoreSelector:                       .notoc                                  # Headings that match the ignoreSelector will be skipped
+  collapseDepth:                        2                                       # How many heading levels should not be collapsed
+  throttleTimeout:                      50                                      # Timeout between firing events to make sure it's not too rapid
   scrollSmooth:                         true
   scrollSmoothDuration:                 300
-  scrollSmoothOffset:                   -80
-  headingsOffset:                       1
-  throttleTimeout:                      50
-
+  scrollSmoothOffset:                   -90
 
 # ------------------------------------------------------------------------------
 # END config

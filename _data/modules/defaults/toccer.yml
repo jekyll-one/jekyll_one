@@ -153,18 +153,14 @@ defaults:
   #
   # ----------------------------------------------------------------------------
   tocSelector:                          .js-toc
-  headingSelector:                      "h2, h3, h4, h5"
-  ignoreSelector:                       .notoc
   contentSelector:                      .js-toc-content
-  activeLinkColor:                      "#3F51B5"                               # MD Indigo
+  headingSelector:                      "h2, h3, h4, h5, h6"
+  ignoreSelector:                       .notoc
   collapseDepth:                        2
   throttleTimeout:                      50
-  includeHtml:                          false
   scrollSmooth:                         true
-  scrollSmoothDuration:                 420
-  scrollSmoothOffset:                   0
-  headingsOffset:                       1
-  throttleTimeout:                      50
+  scrollSmoothDuration:                 300
+  scrollSmoothOffset:                   -90
 
 
 # ------------------------------------------------------------------------------
