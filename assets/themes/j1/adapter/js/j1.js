@@ -1119,7 +1119,7 @@ var j1 = (function () {
       var anchor_id = '#' + anchor;
       var selector;
 
-      if (anchor_id) {
+      if (anchor && anchor_id) {
         // scroll only, if an anchor is given with URL
         selector = $(anchor_id);
         if (selector.length) {

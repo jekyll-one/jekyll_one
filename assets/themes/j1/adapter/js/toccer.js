@@ -54,7 +54,6 @@ regenerate:                             true
 -------------------------------------------------------------------------------- {% endcomment %}
 {% assign toccer_options    = toccer_defaults | merge: toccer_settings %}
 
-
 /*
  # -----------------------------------------------------------------------------
  # ~/assets/themes/j1/adapter/js/toccer.js
@@ -137,40 +136,16 @@ j1.adapter['toccer'] = (function () {
 
       if (isToc) {
         _this.initToccerCore(settings);
-        // jadams, 2020-07-03: use only styles from css
-        // _this.setCss();
-
-        /* jadams, 2011-03-11: For now, no need to adjust the top sticky position */
-        /* leave the code in for future use if needed */
-        /* _this.setTop(); */
-
-        // if comments enabled
-        if (isToc && isComments) {
-          logText = 'connector for disqus successfully initialized';
-          logger.info(logText);
-
-          // NOTE: BS or Tocbot Affix is not used anymore.
-          // Replaced by CSS style "sticky"
-          // j1.adapter.toccer.initAffix();
-          // state = 'finished';
-          // logger.info('state: ' + state); // Set|Log status
-          // logger.info('module initialized successfully');
-
-        } else {
-          // if toc enabled only
-          if (isToc) {
-            // state = 'finished';
-            // logger.info('state: ' + state); // Set|Log status
-            // logger.info('module initialized successfully');
+        // set state finished if tocbot has created the toc
+        var dependencies_met_toccer_initialized = setInterval (function () {
+          if ($('ol.toc-list ').length) {
+            _this.setState('finished');
+            logger.info('state: ' + _this.getState());
+            logger.info('module initialized successfully');
+            clearInterval(dependencies_met_toccer_initialized);
           }
-        } // END if isComments (Disqus enabled)
-      } // END if isToc
-
-      _this.setState('finished');
-      logger.info('state: ' + _this.getState());
-      logger.info('module initialized successfully');
-
-      return true;
+        }, 25);
+      }
     }, // END init
 
     // -------------------------------------------------------------------------
@@ -187,120 +162,40 @@ j1.adapter['toccer'] = (function () {
       _this.setState('running');
       logger.info('state: ' + _this.getState());
 
-      // tocbot fired if page|mmenu is ready
-      //
-        var dependencies_met_j1_page_ready = setInterval (function () {
-          if (j1.getState() === 'finished') {
-            var bg_primary = j1.getStyleValue('bg-primary', 'background-color');
-
-            tocbot.init({
-              log:                    {{ toccer_options.log | json }},
-              activeLinkColor:        {{ toccer_options.activeLinkColor | json }},
-              tocSelector:            {{ toccer_options.tocSelector | json }},
-              headingSelector:        {{ toccer_options.headingSelector | json }},
-              ignoreSelector:         {{ toccer_options.ignoreSelector | json }},
-              contentSelector:        {{ toccer_options.contentSelector | json }},
-              collapseDepth:          settings.collapseDepth,
-              throttleTimeout:        {{ toccer_options.throttleTimeout | json }},
-              includeHtml:            false,
-              linkClass:              'toc-link',
-              extraLinkClasses:       '',
-              activeLinkClass:        'is-active-link',
-              listClass:              'toc-list',
-              extraListClasses:       '',
-              isCollapsedClass:       'is-collapsed',
-              collapsibleClass:       'is-collapsible',
-              listItemClass:          'toc-list-item',
-              positionFixedSelector:  '',
-              positionFixedClass:     'is-position-fixed',
-              fixedSidebarOffset:     'auto',
-              scrollSmooth:           {{ toccer_options.scrollSmooth | json }},
-              scrollSmoothDuration:   {{ toccer_options.scrollSmoothDuration | json }},
-              scrollSmoothOffset:     {{ toccer_options.scrollSmoothOffset | json }},
-              headingsOffset:         {{ toccer_options.headingsOffset | json }},
-              throttleTimeout:        {{ toccer_options.throttleTimeout | json }}
-            });
-            clearInterval(dependencies_met_j1_page_ready);
-        } // END j1 finished
-      }, 25); // END dependencies_met_j1_page_ready
+      // tocbot get fired if HTML portion is loaded (AJAX load finished)
+      var dependencies_met_ajax_load_finished = setInterval (function () {
+        if ($('#toc_mmenu').length) {
+          tocbot.init({
+            log:                    {{ toccer_options.log | json }},
+            activeLinkColor:        {{ toccer_options.activeLinkColor | json }},
+            tocSelector:            {{ toccer_options.tocSelector | json }},
+            headingSelector:        {{ toccer_options.headingSelector | json }},
+            ignoreSelector:         {{ toccer_options.ignoreSelector | json }},
+            contentSelector:        {{ toccer_options.contentSelector | json }},
+            collapseDepth:          settings.collapseDepth,
+            throttleTimeout:        {{ toccer_options.throttleTimeout | json }},
+            includeHtml:            false,
+            linkClass:              'toc-link',
+            extraLinkClasses:       '',
+            activeLinkClass:        'is-active-link',
+            listClass:              'toc-list',
+            extraListClasses:       '',
+            isCollapsedClass:       'is-collapsed',
+            collapsibleClass:       'is-collapsible',
+            listItemClass:          'toc-list-item',
+            positionFixedSelector:  '',
+            positionFixedClass:     'is-position-fixed',
+            fixedSidebarOffset:     'auto',
+            scrollSmooth:           {{ toccer_options.scrollSmooth | json }},
+            scrollSmoothDuration:   {{ toccer_options.scrollSmoothDuration | json }},
+            scrollSmoothOffset:     {{ toccer_options.scrollSmoothOffset | json }},
+            headingsOffset:         {{ toccer_options.headingsOffset | json }},
+            throttleTimeout:        {{ toccer_options.throttleTimeout | json }}
+          });
+          clearInterval(dependencies_met_ajax_load_finished);
+        } // END AJAX load finished
+      }, 25); // END dependencies_met_ajax_load_finished
     }, // END initToccerCore
-
-    // -------------------------------------------------------------------------
-    // Calculate|Set Affix offset Top|Bottom of the Toccer menu
-    // depending on the size of the page header (attic)
-    // -------------------------------------------------------------------------
-    initAffix: function () {
-      var nav_bar         = $('nav.navbar');
-      var side_bar        = $('#j1-sidebar');
-      var header          = $('.attic');
-//    var disqus_id       = $('#disqus');
-      var disqus_id       = $('.bmd-layout-content');
-      var disqus_thread   = $('#disqus_thread');
-      var adblock         = $('#adblock');
-      var footer          = '#' + '{{footer_id}}';
-      var footer_id       = $(footer);
-      var footer_offset   = 100;
-
-      $(side_bar).affix({
-        offset: {
-          top: function() {
-            var c = $(side_bar).offset().top;
-            var a = adblock.length ? adblock.outerHeight() : 0;
-            var e = $(nav_bar).height();
-            var h = $(header).height();
-            var z = c - e;
-            return _this.top = z - a;
-          },
-          bottom: function () {
-            /*  space below the affixed element */
-            if (disqus_id.length) {
-              return (_this.bottom = $(disqus_id).outerHeight(true) + $(footer_id).outerHeight(true) + footer_offset)
-            } else {
-              return (_this.bottom = $(footer_id).outerHeight(true) + footer_offset);
-            }
-          }
-        }
-      });
-
-      return true;
-    }, // END initAffix
-
-    // -------------------------------------------------------------------------
-    // Calculate|Set Top position of the Toccer menu
-    // depending on the size of the page header (attic)
-    // -------------------------------------------------------------------------
-    setTop: function (options) {
-      $(window).scroll(function(event){
-        var navbar    = $('nav.navbar.navigator');
-        var adblock   = $('#adblock');
-        var pagehead  = $('.attic');
-        var offset    = 0;
-        var m         = parseInt(pagehead.css('margin-bottom'), 10);
-        var n         = navbar.outerHeight();
-        var a         = adblock.length ? adblock.outerHeight() : 0;
-        // var o         = n + m + a + offset;
-        var o         = n + m + offset;
-
-        if(navbar.hasClass('navbar-fixed')){
-          $('#j1-sidebar.affix').css('top', o);
-        } else {
-          $('#j1-sidebar.affix').css('top', m);
-        }
-      });
-
-      return true;
-    }, // END setTop
-
-    // -------------------------------------------------------------------------
-    // Set dynamic styles
-    // -------------------------------------------------------------------------
-    setCss: function () {
-
-      var bg_primary  = j1.getStyleValue('bg-primary', 'background-color');
-      $('head').append('<style>.is-active-link::before { background-color: ' +bg_primary+ ' !important; }</style>');
-
-      return true;
-    }, // END setCss
 
     // -------------------------------------------------------------------------
     // messageHandler: MessageHandler for J1 NAV module

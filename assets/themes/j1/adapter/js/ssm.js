@@ -193,9 +193,10 @@ j1.adapter['ssm'] = (function (j1, window) {
         // ---------------------------------------------------------------------
         var dependencies_met_mmenu_initialized = setInterval (function () {
           if (ssm) {
-           if (j1.getState() === 'finished') {
+//         if (j1.getState() === 'finished') {
 //         if ( j1.adapter.navigator.getState() == 'finished' ) {
-              logger.info('load HTML data (AJAX): finished');
+            if ( j1.adapter.toccer.getState() == 'finished' ) {
+              logger.info('initializing toccer: finished');
               _this.setState('processing');
               logger.info('status: ' + _this.getState());
               logger.info('initialize ssm menu');
