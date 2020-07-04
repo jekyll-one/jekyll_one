@@ -38,6 +38,15 @@ settings:
     # --------------------------------------------------------------------------
     # TOPLEVEL items
     #
+    - item:                             Reload Page
+      enabled:                          true
+      id:                               ssm_reload_page
+      href:
+      target:
+      event_handler:                    reload_page
+      icon:                             reload
+      icon_classes:
+
     - item:                             Table of Contents
       enabled:                          true
       id:                               ssm_toc
