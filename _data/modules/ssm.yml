@@ -43,7 +43,7 @@ settings:
       id:                               ssm_toc
       href:
       target:
-      event_handler:                    open_mmenu
+      event_handler:                    open_ssm_toc
       icon:                             wrap
       icon_classes:
 
