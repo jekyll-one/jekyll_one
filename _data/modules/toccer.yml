@@ -121,7 +121,7 @@ settings:
   includeHtml:                          false
   scrollSmooth:                         true
   scrollSmoothDuration:                 300
-  scrollSmoothOffset:                   -90
+  scrollSmoothOffset:                   -80
   headingsOffset:                       1
   throttleTimeout:                      50
 
