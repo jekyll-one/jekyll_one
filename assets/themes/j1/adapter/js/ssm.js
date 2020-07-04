@@ -246,7 +246,6 @@ j1.adapter['ssm'] = (function (j1, window) {
       // Create an eventhandler instance if id exists: {{button_id}}
       if ($('#{{button_id}}').length) {
         eventHandler = "{{item.event_handler}}"
-
         // check if eventhandler configured is a SINGLE word
         if (eventHandler.split(" ").length == 1) {
           logger.info('register pre-configured eventhandler {{item.event_handler}} on id: {{button_id}}');
@@ -259,6 +258,8 @@ j1.adapter['ssm'] = (function (j1, window) {
         } else {
           logger.info('register custom eventhandler on id: {{button_id}}');
         }
+      } else {
+        alert ("Creating Eventhandler failed on: #{{button_id}}");
       } // END items (buttons)
       {% endif %} // menu_type 'top_level_item'
       {% endif %} // ENDIF button_id enabled
