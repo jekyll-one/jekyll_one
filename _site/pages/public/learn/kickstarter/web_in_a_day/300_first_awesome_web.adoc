@@ -1,0 +1,70 @@
+ ---
+title:                                  Web in a Day
+tagline:                                a first awesome web
+description:                            Modern static website in a day
+
+tags:                                   [ Kickstarter, Introduction, Web, Day, Jekyll ]
+index:                                  []
+categories:                             [ pages ]
+
+permalink:                              /pages/public/learn/kickstarter/web_in_a_day/first_awesome_web/
+regenerate:                             true
+
+resources:                              [ lightbox, carousel ]
+resource_options:
+  - toccer:
+      collapseDepth:                    2
+---
+
+// Enable the Liquid Preprocessor 
+// -----------------------------------------------------------------------------
+:page-liquid:
+
+// Set other global page attributes here
+// -----------------------------------------------------------------------------
+
+// Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture set_env_entry_document %}themes/{{site.template.name}}/procedures/global/set_env_entry_document.proc{%endcapture%}
+
+// Initialize entry document paths
+// -----------------------------------------------------------------------------
+{% include {{set_env_entry_document}} init_folders=all %}
+
+// Load tags and urls
+// -----------------------------------------------------------------------------
+include::{includedir}/attributes.asciidoc[tag=tags]
+include::{includedir}/attributes.asciidoc[tag=urls]
+include::{includedir}/attributes.asciidoc[tag=data]
+
+// Additional Asciidoc page attributes goes here
+// -----------------------------------------------------------------------------
+
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+include::{documentsdir}/300_first_awesome_web.asciidoc[]
+
+
+== Summarize!
+
+include::{includedir}/parts.asciidoc[tag=summarize]
+
+=== Recap
+
+include::{includedir}/parts.asciidoc[tag=recap_300_first_awesome_web]
+
+=== Whats Next
+
+include::{includedir}/parts.asciidoc[tag=whats_next_300_first_awesome_web]
+
+/////
+=== All Chapters
+
+include::{includedir}/parts.asciidoc[tag=chapters_200_oauth_overview]
+
+=== Further Reading
+
+include::{includedir}/parts.asciidoc[tag=further_reading_200_preparations]
+/////
+

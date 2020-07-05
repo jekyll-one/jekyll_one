@@ -1,0 +1,16 @@
+
+
+{
+    "xxxlarge": "4.000em",
+    "xxlarge": "3.000em",
+    "xlarge": "2.250em",
+    "larger": "1.750em",
+    "large": "1.500em",
+    "default": "1.000em",
+    "small": "0.875em",
+    "smaller": "0.750em",
+    "xsmall": "0.500em",
+    "xxsmall": "0.375em",
+    "xxxsmall": "0.250em"
+}
+

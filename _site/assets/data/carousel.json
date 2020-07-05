@@ -1,0 +1,123 @@
+
+{
+    "owl_demo_text_carousel" : [
+      {
+        "text"    : "<big>Jekyll One Template</big>         </br> <i>Clean, responsive and fully featured Template made for Jekyll</i>"
+      },
+      {
+        "text"    : "<big>Jekyll meets Bootstrap</big>      </br> <i>Best of open source and commercial software for the Web</i>"
+      },
+      {
+        "text"    : "<big>J1 is Open Source</big>           </br> <i>No pain for private or professional use</i>"
+      },
+      {
+        "text"    : "<big>Explore this site</big>           </br> <i>Learn what's possible if you go the Jekyll Way</i>"
+      },
+      {
+        "text"    : "<big>Create modern static sites</big>  </br> <i>Secure, powerful and fast<i>"
+      }
+    ],
+    "owl_demo_text_carousel_parallax" : [
+      {
+        "text"    : "<big>Jekyll One Template</big>         </br> <i>Clean, responsive and fully featured Template made for Jekyll</i>"
+      },
+      {
+        "text"    : "<big>Jekyll meets Bootstrap</big>      </br> <i>Best of open source and commercial software for the Web</i>"
+      },
+      {
+        "text"    : "<big>J1 is Open Source</big>           </br> <i>No pain for private or professional use</i>"
+      },
+      {
+        "text"    : "<big>Explore this site</big>           </br> <i>Learn what's possible if you go the Jekyll Way</i>"
+      },
+      {
+        "text"    : "<big>Create modern static sites</big>  </br> <i>Secure, powerful and fast<i>"
+      }
+    ],
+    "owl_demo_cats" : [
+      {
+        "lb"         : "true",
+        "lb_caption" : "You see cat no 1",
+        "img"        : "/assets/images/modules/carousel/cats/cat-1.jpg",
+        "alt"        : "Owl Image 1",
+        "href"       : "#"
+      },
+      {
+        "lb"         : "true",
+        "lb_caption" : "You see cat no 2",
+        "img"        : "/assets/images/modules/carousel/cats/cat-2.jpg",
+        "alt"        : "Owl Image 2",
+        "href"       : "#"
+      },
+      {
+        "lb"         : "true",
+        "lb_caption" : "You see cat np 3",
+        "img"        : "/assets/images/modules/carousel/cats/cat-3.jpg",
+        "alt"        : "Owl Image 3",
+        "href"       : "#"
+      },
+      {
+        "lb"         : "true",
+        "lb_caption" : "You see cat no 4",
+        "img"        : "/assets/images/modules/carousel/cats/cat-4.jpg",
+        "alt"        : "Owl Image 4",
+        "href"       : "#"
+      }
+    ],
+    "owl_demo_simple" : [
+      {
+        "img"        : "/assets/images/modules/carousel/mega_cities/andreas-brucker_b.jpg",
+        "alt"        : "Owl Image 1",
+        "href"       : "#"
+      },
+      {
+        "img"        : "/assets/images/modules/carousel/mega_cities/denys-nevozhai-1_b.jpg",
+        "alt"        : "Owl Image 2",
+        "href"       : "#"
+      },
+      {
+        "img"        : "/assets/images/modules/carousel/mega_cities/denys-nevozhai-2_b.jpg",
+        "alt"        : "Owl Image 3",
+        "href"       : "#"
+      },
+      {
+        "img"        : "/assets/images/modules/carousel/mega_cities/luca-bravo_b.jpg",
+        "alt"        : "Owl Image 4",
+        "href"       : "#"
+      },
+      {
+        "img"        : "/assets/images/modules/carousel/mega_cities/thomas-tucker_b.jpg",
+        "alt"        : "Owl Image 5",
+        "href"       : "#"
+      }
+    ],
+    "owl_demo_oneslide" : [
+      {
+        "lb"         : "true",
+        "img"        : "/assets/images/modules/carousel/mega_cities/andreas-brucker_b.jpg",
+        "alt"        : "Owl Image 1"
+      },
+      {
+        "lb"         : "true",
+        "img"        : "/assets/images/modules/carousel/mega_cities/denys-nevozhai-1_b.jpg",
+        "alt"        : "Owl Image 2"
+      },
+      {
+        "lb"         : "true",
+        "img"        : "/assets/images/modules/carousel/mega_cities/denys-nevozhai-2_b.jpg",
+        "alt"        : "Owl Image 3"
+      },
+      {
+        "lb"         : "true",
+        "img"        : "/assets/images/modules/carousel/mega_cities/luca-bravo_b.jpg",
+        "alt"        : "Owl Image 4"
+      },
+      {
+        "lb"         : "true",
+        "img"        : "/assets/images/modules/carousel/mega_cities/thomas-tucker_b.jpg",
+        "alt"        : "Owl Image 5"
+      }
+    ]
+}
+
+

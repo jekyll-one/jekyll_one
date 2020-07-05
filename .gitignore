@@ -45,11 +45,8 @@ tmp/
 
 _data/modules/cc.yml
 
-_site/
+# _site/
 
 .jekyll-cache/
 
 .sass-cache/
-
-
-
