@@ -15,7 +15,7 @@
  # Tocbot is licensed under under the MIT License.
  # For details, see https://tscanlin.github.io/tocbot
  # -----------------------------------------------------------------------------
- # Adapter generated: 2020-07-04 19:52:02 +0200
+ # Adapter generated: 2020-07-05 11:53:10 +0200
  # -----------------------------------------------------------------------------
 */
 'use strict';
@@ -55,7 +55,7 @@ j1.adapter['toccer'] = (function () {
         settings.collapseDepth = 2;
       }
       if (settings.scrollSmoothOffset === undefined) {
-        settings.scrollSmoothOffset = -80;
+        settings.scrollSmoothOffset = -90;
       }
       if (settings.enabled === undefined) {
         settings.enabled = true;
@@ -89,13 +89,14 @@ j1.adapter['toccer'] = (function () {
         if ($('#toc_mmenu').length) {
           tocbot.init({
             log:                    false,
-            activeLinkColor:        "#212121",
+            activeLinkColor:        null,
             tocSelector:            ".js-toc",
             headingSelector:        "h2, h3, h4, h5",
             ignoreSelector:         ".notoc",
             contentSelector:        ".js-toc-content",
             collapseDepth:          settings.collapseDepth,
             throttleTimeout:        50,
+            hasInnerContainers:     false,
             includeHtml:            false,
             linkClass:              'toc-link',
             extraLinkClasses:       '',
@@ -110,7 +111,7 @@ j1.adapter['toccer'] = (function () {
             fixedSidebarOffset:     'auto',
             scrollSmooth:           true,
             scrollSmoothDuration:   300,
-            scrollSmoothOffset:     -80,
+            scrollSmoothOffset:     -90,
             headingsOffset:         1,
             throttleTimeout:        50
           });

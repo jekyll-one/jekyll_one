@@ -17,7 +17,7 @@
  #    MANAGE themeExtensionCss is to be checked
  #
  # -----------------------------------------------------------------------------
- # Adapter generated: 2020-07-04 19:52:02 +0200
+ # Adapter generated: 2020-07-05 11:53:10 +0200
  # -----------------------------------------------------------------------------
 */
 'use strict';
@@ -854,7 +854,7 @@ var j1 = (function () {
         if (selector.length) {
           j1.core.scrollSmooth.scroll( anchor_id, {
             duration: 300,
-            offset: -80,
+            offset: -90,
             callback: null
           });
         } else {
