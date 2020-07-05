@@ -178,7 +178,7 @@ gem "puma", '>= 4.3.1'
 # authentication. For default, the Omniauth (authentication) strategies
 # for Github, Twitter, Facebook and Patreon are implemented.
 #
-# gem 'rack', '>= 2.0.8'
+# gem 'rack', '>= 2.2.3'
 # gem 'rack-protection', '~> 2.0'
 # gem 'rack-ssl-enforcer', '~> 0.2'
 # gem 'rest-client', '~> 2.0'

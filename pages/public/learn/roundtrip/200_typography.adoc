@@ -10,8 +10,12 @@ categories:                             [ pages ]
 permalink:                              /pages/public/learn/roundtrip/typography/
 regenerate:                             false
 
+toc:                                    true
+
 resources:                              []
 resource_options:
+# - ssm:
+#     mode:                             menu
   - attic:
       padding_top:                      400
       padding_bottom:                   50
