@@ -137,7 +137,7 @@ j1.adapter['ssm'] = (function (j1, window) {
       j1.adapter.ssm['moduleOptions'] = moduleOptions;
 
       _this.setState('started');
-      logger.info('state: ' + _this.getState());
+      logger.info('set module state to: ' + _this.getState());
       logger.info('module is being initialized');
 
       // jadams, 2020-06-24: Set max_count to 100 what cause to wait 2.5s
@@ -177,7 +177,7 @@ j1.adapter['ssm'] = (function (j1, window) {
       var isToc = (ssmOptions.toc === 'true');
 
       _this.setState('loading');
-      logger.info('status: ' + _this.getState());
+      logger.info('set module state to: ' + _this.getState());
       logger.info('load HTML data for ssm');
 
       {% assign id_list = "" %}
@@ -190,28 +190,32 @@ j1.adapter['ssm'] = (function (j1, window) {
           xhr_container_id: "{{menu_id}}",
           xhr_data_path:    "{{xhr_data_path}}" },
           'data_loaded')
-      ).done (function (ssm) {
+      ).done (function (ssm_html_loaded) {
         // ---------------------------------------------------------------------
         // Initialize MMenu Navs and Drawers
         // ---------------------------------------------------------------------
         var dependencies_met_mmenu_initialized = setInterval (function () {
-          if (ssm) {
+          if (ssm_html_loaded && $('#{{ssm_options.menu_id}}').length) {
+            _this.setState('loaded');
+            logger.info('set module state to: ' + _this.getState());
+            logger.info('HTML data for ssm: ' + _this.getState());
             if(isToc) {
-              logger.info('toc enabled in page');
+              logger.info('found toc in page: enabled');
               if ( j1.adapter.toccer.getState() == 'finished' ) {
-                logger.info('initializing toccer: finished');
+                logger.info('dependency met for module : toccer');
                 _this.setState('processing');
-                logger.info('status: ' + _this.getState());
+                logger.info('set module state to: ' + _this.getState());
                 logger.info('initialize ssm menu');
-                if ( ssmOptions.mode === 'icon') {
-                  logger.info('icon mode detected');
-                }
+                (ssmOptions.mode === 'icon')
+                  ? logger.info('ssm mode detected: icon')
+                  : logger.info('ssm mode detected: menu');
                 _this.scrollSpy(ssmOptions);
                 _this.buttonInitializer(ssmOptions);
                 clearInterval(dependencies_met_mmenu_initialized);
               }
             } else {
-              logger.info('toc disabled in page');
+              logger.info('found toc in page: disabled');
+              logger.info('disable toc menu button');
               $('#ssm_toc').closest('.ssm-btn').hide()
               _this.scrollSpy(ssmOptions);
               _this.buttonInitializer(ssmOptions);
@@ -317,8 +321,8 @@ j1.adapter['ssm'] = (function (j1, window) {
             // scroll the page one pixel back and forth (trigger)
             // to get the right position for the Toccer
             //
-            $(window).scrollTop($(window).scrollTop()+1);
-            $(window).scrollTop($(window).scrollTop()-1);
+            // $(window).scrollTop($(window).scrollTop()+1);
+            // $(window).scrollTop($(window).scrollTop()-1);
           }
         }
         (index < maxNode) ? index++ : index;
@@ -362,8 +366,8 @@ j1.adapter['ssm'] = (function (j1, window) {
             // scroll the page one pixel back and forth (trigger)
             // to get the right position for the Toccer
             //
-            $(window).scrollTop($(window).scrollTop()+1);
-            $(window).scrollTop($(window).scrollTop()-1);
+            // $(window).scrollTop($(window).scrollTop()+1);
+            // $(window).scrollTop($(window).scrollTop()-1);
           }
         }
         (index < maxNode) ? index++ : index;
@@ -383,8 +387,8 @@ j1.adapter['ssm'] = (function (j1, window) {
       // scroll the page one pixel back and forth (trigger)
       // to get the right position for the Toccer
       //
-      $(window).scrollTop($(window).scrollTop()+1);
-      $(window).scrollTop($(window).scrollTop()-1);
+      // $(window).scrollTop($(window).scrollTop()+1);
+      // $(window).scrollTop($(window).scrollTop()-1);
     }, // END scroll_top
 
     // -------------------------------------------------------------------------
@@ -404,8 +408,8 @@ j1.adapter['ssm'] = (function (j1, window) {
       // scroll the page one pixel back and forth (trigger)
       // to get the right position for the Toccer
       //
-      $(window).scrollTop($(window).scrollTop()+1);
-      $(window).scrollTop($(window).scrollTop()-1);
+      // $(window).scrollTop($(window).scrollTop()+1);
+      // $(window).scrollTop($(window).scrollTop()-1);
     }, // END scroll_bottom
 
     // -------------------------------------------------------------------------

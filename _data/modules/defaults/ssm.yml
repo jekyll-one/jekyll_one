@@ -31,6 +31,7 @@ defaults:
 
   xhr_container_id:                     ssm-container
   xhr_data_path:                        /assets/data/ssm/index.html
+  menu_id:                              ssm_menu
 
   icon_family:                          MDI
   icon_color:                           mdi-md-grey

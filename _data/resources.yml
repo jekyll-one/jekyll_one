@@ -321,7 +321,7 @@ globals:
   base_path:                            /assets/themes/j1
   location:                             local
   dependency_check_cycle:               25
-  dependency_check_timeout:             10
+  dependency_check_timeout:             50
   extensions:
     css_dev:                            css
     css_prod:                           min.css

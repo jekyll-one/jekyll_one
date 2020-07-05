@@ -1,0 +1,137 @@
+{% comment %}
+ # -----------------------------------------------------------------------------
+ # ~/_includes/themes/j1/layouts/content_generator_page.html
+ # Liquid template to create the content portion for pages of type PAGE
+ #
+ # Product/Info:
+ # https://jekyll.one
+ #
+ # Copyright (C) 2020 Juergen Adams
+ #
+ # J1 Template is licensed under the MIT License.
+ # See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
+ # -----------------------------------------------------------------------------
+ # Test data:
+ #    liquid_var:  {{ liquid_var | debug }}
+ # -----------------------------------------------------------------------------
+{% endcomment %}
+
+{% comment %} liquid procedures
+-------------------------------------------------------------------------------- {% endcomment %}
+
+{% comment %} process YML config data
+================================================================================ {% endcomment %}
+
+{% comment %} set config files
+-------------------------------------------------------------------------------- {% endcomment %}
+{% assign site_config       = site %}
+{% assign blocks            = site.data.blocks %}
+{% assign modules           = site.data.modules %}
+
+{% comment %} set config data
+-------------------------------------------------------------------------------- {% endcomment %}
+{% assign template_config   = site.data.template_settings %}
+{% assign toccer_defaults   = modules.defaults.toccer.defaults %}
+{% assign toccer_settings   = modules.toccer.settings %}
+
+{% comment %} set config options
+-------------------------------------------------------------------------------- {% endcomment %}
+{% assign toccer_options    = toccer_defaults | merge: toccer_settings %}
+{% assign tocbot_enabled    = toccer_options.enabled %}
+
+{% assign rtext             = site.data.template_settings.typography.rtext %}
+{% assign page_rtext        = page.rtext %}
+{% assign page_rtext_size   = page.rtext_size %}
+{% assign page_toccer       = page.toccer %}
+{% assign page_toc          = page.toc %}
+
+{% if tocbot_enabled and page_toc or page_toccer %}
+  {% assign sidebar  = true %}
+{% else %}
+  {% assign sidebar  = false %}
+{% endif %}
+
+{% if rtext %}
+  {% assign rtext_size = site.data.template_settings.typography.rtext_size %}
+{% else %}
+  {% assign rtext_size = 0 %}
+{% endif %}
+
+
+{% comment %} Main
+-------------------------------------------------------------------------------- {% endcomment %}
+<!-- [INFO   ] [j1.layout.content_generator_page.html ] [ begin content ] -->
+<div class="container mr-5 mb-5">
+  <div class="row">
+
+    {% if sidebar == false %}
+      <!-- [INFO   ] [j1.layout.content_generator_page.html ] [ start main for full page ] -->
+      <main class="col-md-12 col-xs-12 r-text-{{rtext_size}} js-toc-content">
+        <!-- [INFO   ] [j1.layout.content_generator_page.html ] [ begin place content ] -->
+        {{content}}
+      </main>
+      <!-- [INFO   ] [j1.layout.content_generator_page.html ] [ end main for full page ] -->
+    {% else %}
+      <!-- [INFO   ] [j1.layout.content_generator_page.html ] [ start main for split page (TOC) ] -->
+      <main class="col-md-12 col-xs-12 r-text-{{rtext_size}} js-toc-content">
+      <!-- main class="col-md-9 col-xs-12 r-text-{{rtext_size}} js-toc-content" -->
+        <!-- [INFO   ] [j1.layout.content_generator_page.html ] [ begin place content ] -->
+        {{ content }}
+
+        {% comment %} Place additional headline for comments
+        ------------------------------------------------------------------------ {% endcomment %}
+        {% if page.comments %}
+        <h2 id="comments_leave_comment"> Leave a Comment </h2>
+        {% endif %}
+      </main>
+      <!-- [INFO   ] [j1.layout.content_generator_page.html ] [ end main for split page (TOC) ] -->
+      {% comment %} Place Sidebar|Tocbot
+      -------------------------------------------------------------------------- {% endcomment %}
+      <!-- NOTE: BS or Tocbot Affix is not used anymore. Replaced by CSS style "sticky" -->
+      {% comment %} tocbot and page_navigation (not used anymore)
+      --------------------------------------------------------------------------
+      <aside class="col-md-3 d-none d-md-block sticky">
+        <div id="sidebar">
+          <div id="j1-toc-mgr" class="toc js-toc"></div>
+        </div>
+      </aside>
+      -------------------------------------------------------------------------- {% endcomment %}
+    {% endif %} <!-- endif sidebar -->
+
+  </div> <!-- end row -->
+</div> <!-- end container -->
+<!-- [INFO   ] [j1.layout.content_generator_page.html ] [ end place content ] -->
+
+{% comment %} Calc|Write the Back URL
+-------------------------------------------------------------------------------- {% endcomment %}
+{% if site.permalink == 'none' %}
+  {% capture browser_page_url %}{{page.url}}.html {% endcapture %}
+{% else %}
+  {% capture browser_page_url %}{{page.url}}{% endcapture %}
+{% endif %}
+
+<!-- [INFO   ] [j1.page.{{page.title}}                   ] [Save the current ArticleBrowser page to UserState cookie] -->
+<!-- script>
+  var logger   = log4javascript.getLogger("j1.page.{{page.title|downcase}}.init");
+  var cookieUserState = 'j1.user.state'
+  var log_text = 'Save the current browser page ({{page.title|downcase}}) to cookie: ' +cookieUserState;
+
+  var j1_user_state = {
+    'authenticated' : 'false',
+    'cookies_accepted' : 'false',
+    'theme_css' : 'unknown',
+    'theme_extension_css' : 'unknown',
+    'theme_name' : 'unknown',
+    'last_page' : 'unknown',
+    'last_provider' : 'unknown',
+    'last_signin' : 'unknown',
+    'provider' : 'unknown',
+    'user_name' : 'unknown',
+    'user_id' : 'unknown'
+  };
+
+  // Set|Detect J1 App status
+  j1_user_state.last_page = "{{browser_page_url}}"
+  j1.setUserState( j1_user_state );
+  logger.info(log_text);
+</script -->
