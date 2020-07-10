@@ -453,7 +453,7 @@ All *macro* types available for `lorem:` to be used for blind *text* can be
 found with the following table below.
 
 //.Tabelle
-[cols="5,2,5a", options="header", role="table-responsive mb-2"]
+[cols="5,2,5a", options="header", role="table-responsive-stacked-lg mb-2"]
 |===============================================================================
 |Macro | Type |Example
 

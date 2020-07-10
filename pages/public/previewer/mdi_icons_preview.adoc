@@ -8,7 +8,7 @@ index:                                  []
 categories:                             [ pages, manuals ]
 
 permalink:                              /pages/protected/previewer/mdi_font/
-regenerate:                             false
+regenerate:                             false 
 
 scrollbar:                              false
 

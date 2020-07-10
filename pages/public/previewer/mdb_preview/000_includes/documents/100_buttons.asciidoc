@@ -1,0 +1,170 @@
+## Buttons
+
+See: https://fezvrasta.github.io/bootstrap-material-design/docs/4.0/material-design/buttons/[MD Buttons, window="_blank"]
+
+Buttons communicate the action that will occur when the user touches them.
+
+### Flat buttons
+
+Flat buttons are text-only buttons. They may be used in dialogs, toolbars,
+or inline. They do not lift, but fill with color on press.
+
+Outline buttons, i.e. `.btn-outline-*`, are the equivalent of Material flat
+buttons. For more details, please refer to Components/Buttons documentation.
+
+++++
+<div class="doc-example">
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-link">Link</button>
+</div>
+++++
+
+[source, html]
+----
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-link">Link</button>
+----
+
+### Raised buttons
+
+Raised buttons are rectangular-shaped buttons. They may be used inline. They
+lift and display ink reactions on press.
+
+Default buttons, i.e. `.btn`, are the equivalent of Material raised buttons.
+For more details, please refer to Components/Buttons documentation.
+
+++++
+<div class="doc-example">
+  <button type="button" class="btn btn-raised btn-primary">Primary</button>
+  <button type="button" class="btn btn-raised btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-raised btn-success">Success</button>
+  <button type="button" class="btn btn-raised btn-info">Info</button>
+  <button type="button" class="btn btn-raised btn-warning">Warning</button>
+  <button type="button" class="btn btn-raised btn-danger">Danger</button>
+  <button type="button" class="btn btn-raised btn-link">Link</button>
+</div>
+++++
+
+[source, html]
+----
+  <button type="button" class="btn btn-raised btn-primary">Primary</button>
+  <button type="button" class="btn btn-raised btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-raised btn-success">Success</button>
+  <button type="button" class="btn btn-raised btn-info">Info</button>
+  <button type="button" class="btn btn-raised btn-warning">Warning</button>
+  <button type="button" class="btn btn-raised btn-danger">Danger</button>
+  <button type="button" class="btn btn-raised btn-link">Link</button>
+----
+
+### Floating action buttons
+
+A floating action button represents the primary action in an application,
+it is used for a promoted action.
+
+++++
+<div class="doc-example">
+  <button type="button" class="btn bmd-btn-fab">
+    <i class="mdi mdi-plus mdi-2x"></i>
+  </button>
+</div>
+++++
+
+[source, html]
+----
+  <button type="button" class="btn bmd-btn-fab">
+    <i class="mdi mdi-plus mdi-2x"></i>
+  </button>
+----
+
+#### Colors
+
+++++
+<div class="doc-example">
+  <button type="button" class="btn bmd-btn-fab btn-primary my-1">
+    <i class="mdi mdi-plus mdi-2x"></i>
+  </button>
+  <button type="button" class="btn bmd-btn-fab btn-secondary my-1">
+    <i class="mdi mdi-plus mdi-2x"></i>
+  </button>
+  <button type="button" class="btn bmd-btn-fab btn-danger my-1">
+    <i class="mdi mdi-plus mdi-2x"></i>
+  </button>
+  <button type="button" class="btn bmd-btn-fab btn-info my-1">
+    <i class="mdi mdi-plus mdi-2x"></i>
+  </button>
+  <button type="button" class="btn bmd-btn-fab btn-success my-1">
+    <i class="mdi mdi-plus mdi-2x"></i>
+  </button>
+  <button type="button" class="btn bmd-btn-fab btn-warning my-1">
+    <i class="mdi mdi-plus mdi-2x"></i>
+  </button>
+  <button type="button" class="btn bmd-btn-fab btn-dark my-1">
+    <i class="mdi mdi-plus mdi-2x"></i>
+  </button>
+  <button type="button" class="btn bmd-btn-fab btn-light my-1">
+    <i class="mdi mdi-plus mdi-2x"></i>
+  </button>
+</div>
+++++
+
+[source, html]
+----
+  <button type="button" class="btn bmd-btn-fab btn-primary my-1">
+    <i class="mdi mdi-plus mdi-2x"></i>
+  </button>
+  <button type="button" class="btn bmd-btn-fab btn-secondary my-2">
+    <i class="mdi mdi-plus mdi-2x"></i>
+  </button>
+  ...
+  <button type="button" class="btn bmd-btn-fab btn-dark my-7">
+    <i class="mdi mdi-plus mdi-2x"></i>
+  </button>
+  <button type="button" class="btn bmd-btn-fab btn-light my-8">
+    <i class="mdi mdi-plus mdi-2x"></i>
+  </button>
+----
+
+#### Sizes
+
+A smaller sized, i.e. mini floating action button, is also available.
+
+++++
+<div class="doc-example">
+  <button type="button" class="btn btn-danger bmd-btn-fab bmd-btn-fab-sm">
+    <i class="mdi mdi-plus mdi-sm"></i>
+  </button>
+</div>
+++++
+
+[source, html]
+----
+  <button type="button" class="btn btn-danger bmd-btn-fab bmd-btn-fab-sm">
+    <i class="mdi mdi-plus mdi-sm"></i>
+  </button>
+----
+
+## Recommended button placement
+
+Cards::
+  Buttons are best placed on the left side of a card to increase their
+  visibility. However, as cards have flexible layouts, buttons may be
+  placed in a location suited to the content and context, while
+  maintaining consistency within the product.
+
+Forms::
+  Button alignment on screen: Left. Place the affirmative button on the
+  left, the dismissive button on the right.
+
+Standard dialogs::
+  Button alignment on screen: right. Place the affirmative button on the
+  right, the dismissive button on the left.

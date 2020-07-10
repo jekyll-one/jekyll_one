@@ -1,7 +1,12 @@
 ---
-title:                                  Web in a Day 
+title:                                  Web in a Day
 tagline:                                meet & greet jekyll
-description:                            Modern static website in a day
+description: >
+                                        Web in a Day is the first in a series of tutorials to
+                                        learn how to create modern websites using Jekyll. This
+                                        Kickstarter focus on the basics of Jekyll and the
+                                        J1 Template which all people needs to know for a successful
+                                        way to a modern static website using Jekyll and J1 Template
 
 tags:                                   [ Kickstarter ]
 index:                                  [ Introduction, Web, Website, Jekyll ]
@@ -15,7 +20,7 @@ resource_options:
   - attic:
       padding_top:                      400
       padding_bottom:                   50
-      opacity:                          0.5 
+      opacity:                          0.5
       slides:
         - url:                          /assets/images/pages/kickstarter/web_in_a_day/get-started-1920x1280-bw.jpg
           alt:                          Photo by JESHOOTS.COM on Unsplash
@@ -26,7 +31,7 @@ resource_options:
             href:                       https://unsplash.com/@jeshoots/portfolio
 ---
 
-// Enable the Liquid Preprocessor 
+// Enable the Liquid Preprocessor
 // -----------------------------------------------------------------------------
 :page-liquid:
 

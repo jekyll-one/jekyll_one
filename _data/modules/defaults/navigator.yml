@@ -67,7 +67,7 @@ defaults:
     mmenu_navigator:
       selected:                         Selected
       slidingSubmenus:                  true
-      title:                            Starter Web
+      title:                            Navigation
       theme:                            dark
 
     mmenu_drawer:
@@ -162,11 +162,12 @@ defaults:
     type:                               quicksearch
     icon_family:                        MDI
     icon_color:                         md_white
-    icon_size:                          xxxlarge
+    icon_size:                          mdi-2x
     search_icon:                        magnify
     close_icon:                         close
-    input_color:                        md_grey_900
-    background_color:                   md_grey_400
+    clear_icon:                         notification-clear-all
+    input_color:                        rgba(0, 0, 0, 0.75)
+    background_color:                   md_grey_50
     placeholder:                        QuickSearch
     search_heading_lead:                ""
     result_heading_lead:                ""

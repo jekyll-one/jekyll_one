@@ -61,7 +61,7 @@ Find here is a list of the basic Chocolatey commands used this section.
 And some more related ones. If you'd like to explore the Chocolatey CLI a bit 
 *more*, give it a try before moving on.
 
-[cols="8a,4", options="header", role="table-responsive, full-width"]
+[cols="8a,4", options="header", role="table-responsive-stacked-lg, full-width"]
 |===============================================================================
 |Command |Description
 

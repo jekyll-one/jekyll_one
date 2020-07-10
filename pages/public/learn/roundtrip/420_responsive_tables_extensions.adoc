@@ -74,17 +74,17 @@ for tables viewed on desktop *and* mobile devices, three types of responsive
 tables are implemented:
 
 .Types of responsive tables
-[cols="2a,4a,6a", options="header", width="100%", role="table-responsive-stacked-lg mt-3"]
+[cols="2a,4a,6a", options="header", width="100%", role="table-responsive-stacked-lg-stacked-lg mt-3"]
 |===============================================================================
 |Type |Style |Description
 
 |Bootstrap
-|`table-responsive`
-|The adding the class `table-responsive`, it creates a responsive table based
+|`table-responsive-stacked-lg`
+|The adding the class `table-responsive-stacked-lg`, it creates a responsive table based
 on BS CSS styles. The table will then *scroll horizontally* on small devices.
 Making *any* table responsive across all viewports, the additonal class 
-`table-responsive` is to applied. For specific (Bootstrap) breakpoints, the 
-classes `table-responsive{-sm\|-md\|-lg\|-xl}` are available to have better 
+`table-responsive-stacked-lg` is to applied. For specific (Bootstrap) breakpoints, the 
+classes `table-responsive-stacked-lg{-sm\|-md\|-lg\|-xl}` are available to have better 
 control on what viewport sizes tables are being transformed.
 
 |R Tables
@@ -99,17 +99,17 @@ J1 is `r-text-300`.
 |`no-r-text`
 |If the responsive text feature from J1 is *not* wanted, the CSS class 
 `no-r-text` is to be applied. F (fixed) tables are *not responsive* per 
-default, but in combination with the CSS class `table-responsive` (Bootstrap), 
+default, but in combination with the CSS class `table-responsive-stacked-lg` (Bootstrap), 
 this type behaves like classic Bootstrap responsive table (see above).
 
 |S Tables
-|`table-responsive-stacked`
-|The style `table-responsive-stacked` *rebuilds* a table. The header is set 
+|`table-responsive-stacked-lg-stacked`
+|The style `table-responsive-stacked-lg-stacked` *rebuilds* a table. The header is set 
 to *invisible* and all *columns* gets vertically *stacked* as *rows*. For 
-specific (Bootstrap) breakpoints, the classes `table-responsive-stacked{-sm\|-md\|-lg\|-xl}` 
+specific (Bootstrap) breakpoints, the classes `table-responsive-stacked-lg-stacked{-sm\|-md\|-lg\|-xl}` 
 are available to have better control on what viewport sizes tables are 
-being transformed. The class `table-responsive-stacked` is using the breakpoint
-at *768px* what is the same as `table-responsive-stacked-md`
+being transformed. The class `table-responsive-stacked-lg-stacked` is using the breakpoint
+at *768px* what is the same as `table-responsive-stacked-lg-stacked-md`
 
 |===============================================================================
 
@@ -120,7 +120,7 @@ The styles for responsive tables takes effect for *default* if the viewport
 devices like tablets or mobiles.
 
 The styles for F *and* S Tables can be combined with the *Bootstrap* responsive 
-table approach (`table-responsive`).
+table approach (`table-responsive-stacked-lg`).
 ====
 
 To see the transformation o table in action, resize for desktop devices the 
@@ -141,7 +141,7 @@ on smaller viewports. From a specified breakpoint and up, the table will
 behave normally and do not scroll horizontally.
 
 .Bootstrap F Table (fixed font size)
-[cols="6a,6a", options="header", width="100%", role="table-responsive-lg no-r-text mt-3"]
+[cols="6a,6a", options="header", width="100%", role="table-responsive-stacked-lg-lg no-r-text mt-3"]
 |===============================================================================
 |Variable |Description
 
@@ -163,7 +163,7 @@ Post's front matter by specifying a new date/time in the format
 
 
 .Bootstrap R Table (responsive text size)
-[cols="6a,6a", options="header", width="100%", role="table-responsive-lg mt-3"]
+[cols="6a,6a", options="header", width="100%", role="table-responsive-stacked-lg-lg mt-3"]
 |===============================================================================
 |Variable |Description
 
@@ -184,7 +184,7 @@ Post's front matter by specifying a new date/time in the format
 |===============================================================================
 
 .S table (stacked, responsive text size)
-[cols="6a,6a", options="header", width="100%", role="table-responsive-stacked-lg mt-3"]
+[cols="6a,6a", options="header", width="100%", role="table-responsive-stacked-lg-stacked-lg mt-3"]
 |===============================================================================
 |Variable |Description
 
@@ -209,8 +209,8 @@ Post's front matter by specifying a new date/time in the format
 
 Responsive Bootstrap tables support tables to be *scrolled horizontally* 
 on smaller viewports. Making any table responsive across all viewports, the 
-additonal class `table-responsive` is used. For specific (Bootstrap) 
-breakpoints, the classes `table-responsive{-sm|-md|-lg|-xl}` are available
+additonal class `table-responsive-stacked-lg` is used. For specific (Bootstrap) 
+breakpoints, the classes `table-responsive-stacked-lg{-sm|-md|-lg|-xl}` are available
 to have better control on what viewport sizes table are transformed. 
 From a specified breakpoint and up, the table will behave normally and do 
 not scroll horizontally.
@@ -220,7 +220,7 @@ clips off any content that goes beyond the bottom or top edges of the table.
 In particular, this can clip off dropdown menus and other third-party widgets.
 
 .Bootstrap R Table (fixed text size)
-[cols="2,2,2,3,3", options="header", width="100%", role="no-r-text table-responsive-lg mt-3"]
+[cols="2,2,2,3,3", options="header", width="100%", role="no-r-text table-responsive-stacked-lg-lg mt-3"]
 |===============================================================================
 |Parameter |Type |Default |Description |Example
 
@@ -246,7 +246,7 @@ the form `#RRGGBB`
 
 
 .S table (stacked, responsive text size))
-[cols="2,2,2,3,3", options="header", width="100%", role="table-responsive-stacked-lg mt-3"]
+[cols="2,2,2,3,3", options="header", width="100%", role="table-responsive-stacked-lg-stacked-lg mt-3"]
 |===============================================================================
 |Parameter |Type |Default |Description |Example
 

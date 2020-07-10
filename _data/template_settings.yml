@@ -174,12 +174,32 @@ user:
 # ------------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------------
+# popovers.trigger (tooltips.trigger)
+#
+#   How a popover is triggered. You may pass multiple triggers.
+#   Separate them with a space. Trigger `manual` cannot be combined
+#   with any other trigger. 'manual' indicates that the popover will
+#   be triggered programmatically via the .popover('show'), .popover('hide')
+#   and .popover('toggle') methods.
+#
+#   default:                          hover
+#   values:                           click | hover | focus | manual
+#
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
 # BOOTSTRAP framework settings
 #
 bootstrap:
-  tooltips:                             true
-  popovers:                             true
   default_theme:                        uno
+
+  tooltips:
+    enabled:                            true
+    trigger:                            hover
+
+  popovers:
+    enabled:                            true
+    trigger:                            hover
 
 # ------------------------------------------------------------------------------
 # Font AweSome settings

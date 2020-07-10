@@ -89,7 +89,7 @@ project to create an increased icon-set based on _Google_'s official repository
 and MD style specification.
 
 .Material Design Icons
-[cols="2a,3a,4a,3a", options="header", width="100%", role="rtable_v table-responsive mt-3"]
+[cols="2a,3a,4a,3a", options="header", width="100%", role="table-responsive-stacked-lg mt-3"]
 |===============================================================================
 |Size |Modifier |Markup |Render
 
@@ -223,7 +223,7 @@ and the MIT License.
 ====
 
 .FontAwesome Icons
-[cols="2a,3a,4a,3a", options="header", width="100%", role="rtable_v table-responsive mt-3"]
+[cols="2a,3a,4a,3a", options="header", width="100%", role="table-responsive-stacked-lg mt-3"]
 |===============================================================================
 |Size |Modifier |Markup |Render
 
@@ -366,7 +366,7 @@ Currently, over 40,000 vector icons are available for many different use cases.
 Find some examples below.
 
 .Brand Icons
-[cols="2a,3a,4a,3a", options="header", width="100%", role="rtable_v table-responsive mt-3"]
+[cols="2a,3a,4a,3a", options="header", width="100%", role="table-responsive-stacked-lg mt-3"]
 |===============================================================================
 |Size |Modifier |Markup |Render
 
@@ -391,7 +391,7 @@ iconify:logos:atom[5x]
 |===============================================================================
 
 .Medical Icons
-[cols="2a,3a,4a,3a", options="header", width="100%", role="rtable_v table-responsive mt-3"]
+[cols="2a,3a,4a,3a", options="header", width="100%", role="table-responsive-stacked-lg mt-3"]
 |===============================================================================
 |Size |Modifier |Markup |Render
 

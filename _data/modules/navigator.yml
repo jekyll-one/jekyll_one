@@ -69,7 +69,7 @@ settings:
           content:
             id:                         menu_mmenu
             type:                       navigation
-            title:                      Starter Web
+            title:                      Navigation
             theme:                      dark
             button:                     "#mmenu-button"
             button_activated:           always
@@ -217,7 +217,7 @@ settings:
 
     github_url:                         https://github.com/jekyll-one
     disqus_url:                         none                                    # https://disqus.com/
-    patreon_url:                        none                                    # https://www.patreon.com/jekyll_one/posts
+    patreon_url:                        none
 
   # ----------------------------------------------------------------------------
   # NavTopsearch

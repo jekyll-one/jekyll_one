@@ -1,6 +1,6 @@
 
 .Relative sizes
-[cols="2,1,9a", options="header", role="table-responsive mb-5"]
+[cols="2,^2m,8a", options="header", role="table-responsive-stacked-lg mb-5"]
 |===============================================================================
 |Class |Result |Code
 
@@ -42,46 +42,6 @@
 [source, html]
 ----
 <i class="mdi mdi-5x mdi-account"></i>
-----
-
-|`mdi-6x`
-^|pass:[<i class="mdi mdi-6x mdi-account"></i>]
-|
-[source, html]
-----
-<i class="mdi mdi-6x mdi-account"></i>
-----
-
-|`mdi-7x`
-^|pass:[<i class="mdi mdi-7x mdi-account"></i>]
-|
-[source, html]
-----
-<i class="mdi mdi-7x mdi-account"></i>
-----
-
-|`mdi-8x`
-^|pass:[<i class="mdi mdi-8x mdi-account"></i>]
-|
-[source, html]
-----
-<i class="mdi mdi-1x mdi-account"></i>
-----
-
-|`mdi-9x`
-^|pass:[<i class="mdi mdi-9x mdi-account"></i>]
-|
-[source, html]
-----
-<i class="mdi mdi-9x mdi-account"></i>
-----
-
-|`mdi-10x`
-^|pass:[<i class="mdi mdi-10x mdi-account"></i>]
-|
-[source, html]
-----
-<i class="mdi mdi-10x mdi-account"></i>
 ----
 
 |===============================================================================

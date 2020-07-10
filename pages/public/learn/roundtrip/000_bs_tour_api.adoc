@@ -116,7 +116,7 @@ var tour = Tour({
 });
 ----
 
-[cols="1,1,3a,7a", options="header", width="100%", role="table-responsive"]
+[cols="1,1,3a,7a", options="header", width="100%", role="table-responsive-stacked-lg"]
 |===============================================================================
 |Name |Type |Default |Description
 
@@ -381,7 +381,7 @@ tour.addStep({
 
 // |Name |Type |Description |Default
 
-[cols="1,1,3a,7a", options="header", width="100%", role="table-responsive"]
+[cols="1,1,3a,7a", options="header", width="100%", role="table-responsive-stacked-lg"]
 |===============================================================================
 |Name |Type |Default |Description
 

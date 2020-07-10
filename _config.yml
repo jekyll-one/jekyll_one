@@ -47,13 +47,13 @@
 #   values:                             development|production
 #   default:                            development
 #
-environment:                            development
+environment:                            production
 
 # version
 # ------------------------------------------------------------------------------
 #   Sets the build version of J1 Template Gem
 #
-version:                                2020.0.9
+version:                                2020.0.11
 
 # version
 # ------------------------------------------------------------------------------
@@ -224,8 +224,8 @@ doctype:                                html
 #   values:                             boolean (true|false)
 #   default:                            false
 #
-title:                                  J1
-slogan:                                 One Template
+title:                                  J1 Template MDE
+slogan:                                 Starter Web
 description:                            Made for Jekyll · Made for Your Web
 keywords:                               Jekyll, One, Template, Ruby, Asciidoctor,
                                         Asciidoc, Bootstrap, Javascript,
@@ -251,7 +251,7 @@ robots:
 brand:
   image:                                modules/icons/j1/j1-512x512.png
   image_height:                         64
-  text:                                 One Template
+  text:                                 Starter Web
   text_color:                           "#9E9E9E"
 
 # Set the favicon (located in the asset_path/images) and type
@@ -348,7 +348,7 @@ base_path:                              ""
 #
 protocol:                               http
 host:                                   localhost
-port:                                   14001
+port:                                   4000
 timezone:                               Europe/Berlin
 encoding:                               UTF-8
 

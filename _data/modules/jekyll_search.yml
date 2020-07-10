@@ -32,10 +32,11 @@ settings:
   results_container:                    jss-results
   index_data:                           /assets/data/search.yml
   result_limit:                         1000
+  result_truncate:                      100
   no_results_text:                      The search has no results
   min_search_item_len:                  3
   search_fuzzy:                         false
-  search_exlude:                        [ Impress ]
+  search_exlude:                        [ Impress, License ]
   result_template: >
                                         <li>
                                           <div>
