@@ -49,6 +49,9 @@
         - title:                        BS themes
           href:                         /pages/public/learn/roundtrip/themes/
           icon:                         face
+        - title:                        Material Design for Bootstrap
+          href:                         /pages/public/mdb_preview/
+          icon:                         face
 
     - title:                            Web in a Day
       icon:                             rocket
