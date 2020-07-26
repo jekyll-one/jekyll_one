@@ -53,7 +53,7 @@ environment:                            production
 # ------------------------------------------------------------------------------
 #   Sets the build version of J1 Template Gem
 #
-version:                                2020.0.11
+version:                                2020.0.14
 
 # version
 # ------------------------------------------------------------------------------
@@ -224,7 +224,7 @@ doctype:                                html
 #   values:                             boolean (true|false)
 #   default:                            false
 #
-title:                                  J1 Template MDE
+title:                                  J1 Template
 slogan:                                 Starter Web
 description:                            Made for Jekyll · Made for Your Web
 keywords:                               Jekyll, One, Template, Ruby, Asciidoctor,
@@ -314,7 +314,7 @@ permalink:                              pretty
 # site.url will be set to the value of host, port. This defaults to
 # url: http://localhost:4000.
 #
-url:                                    "http://localhost:40000"
+url:                                    "http://localhost:44440/"
 
 # The subpath of your site, e.g. /blog/. Used in conjunction with
 # site.url (see above) when you want a link to something with the
@@ -341,14 +341,14 @@ base_path:                              ""
 #
 #  Defaults:
 #   protocol:                           http
-#   host:                               localhost | 0.0.0.0
+#   host:                               localhost
 #   port:                               4000
 #   timezone:                           Europe/Berlin
 #   encoding:                           UTF-8
 #
 protocol:                               http
 host:                                   localhost
-port:                                   4000
+port:                                   14000
 timezone:                               Europe/Berlin
 encoding:                               UTF-8
 
@@ -546,8 +546,10 @@ autopages:
 
   tags:
     enabled:                            false
-    layouts:                            [ paginator/autopage_collections_tags.html, paginator/autopage_tags.html ]
-
+    layouts:                            [
+                                          paginator/autopage_collections_tags.html,
+                                          paginator/autopage_tags.html
+                                        ]
   categories:
     enabled:                            false
     layouts:                            [ paginator/autopage_category.html ]
@@ -639,7 +641,7 @@ defaults:
         size:                           5x
 
       images:
-#       category-image:                 img26.jpg
+#       category-image:                 img26.webp
         dir:                            /assets/images/collections/blog/featured
 
       resource_options:
@@ -674,7 +676,7 @@ defaults:
         size:                           5x
 
       images:
-#       category-image:                 img26.jpg
+#       category-image:                 img26.webp
         dir:                            /assets/images/collections/blog/series
 
 
@@ -846,6 +848,5 @@ compress_html:
   ignore:
     envs:                               []
 
-
-# END config
 # ------------------------------------------------------------------------------
+# END config

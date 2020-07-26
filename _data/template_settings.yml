@@ -137,9 +137,8 @@ cookies:
 #
 #   NOTE: Used for developent mode ONLY
 #   NOTE: See ~/packages/300_template_src/_layouts/default.html
-#
 # ------------------------------------------------------------------------------
-flicker_timeout:                        150
+flicker_timeout:                        250
 
 # ------------------------------------------------------------------------------
 # HTML PrettyPrint
@@ -200,6 +199,99 @@ bootstrap:
   popovers:
     enabled:                            true
     trigger:                            hover
+
+# ------------------------------------------------------------------------------
+# SEO settings (optimization)
+#
+
+# ------------------------------------------------------------------------------
+# PRELOAD settings
+# ------------------------------------------------------------------------------
+# NOTE:
+#   Specify resources that your page will need very soon, which you want
+#   to start loading early in the page lifecycle, before browsers' main
+#   rendering machinery starts. This may improve the performace for the RENDER
+#   phase to improve the FCP (First Contentful Paint). FCP marks the time
+#   at which the first text or image is shown to the user.
+# ------------------------------------------------------------------------------
+# NOTE:
+#   Preloading fonts,the crossorigin attribute is needed to handle
+#   CORS issues.
+# ------------------------------------------------------------------------------
+# NOTE:
+#   Preloading applies ONLY if the requested resource is NOT cached (304).
+#   If a resource is already cached (by the browser OR the web server), some
+#   browser (e.g. Chrome) issue WARNINGS, but can be ignored.
+# ------------------------------------------------------------------------------
+# INFO:
+#   https://stackoverflow.com/questions/1330825/preloading-font-face-fonts
+#   https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content
+#   https://github.com/GoogleChromeLabs/critters/issues/18 (crossorigin)
+# ------------------------------------------------------------------------------
+# font:
+#   preload:                              true
+#   cors:                                 crossorigin
+#   fonts:                                [
+#                                           /assets/themes/j1/core/fonts/roboto/fonts/Roboto-Thin.woff,
+#                                           /assets/themes/j1/core/fonts/roboto/fonts/Roboto-Thin.woff2,
+#                                           /assets/themes/j1/core/fonts/roboto/fonts/Roboto-Light.woff,
+#                                           /assets/themes/j1/core/fonts/roboto/fonts/Roboto-Light.woff2,
+#                                           /assets/themes/j1/core/fonts/roboto/fonts/Roboto-Regular.woff,
+#                                           /assets/themes/j1/core/fonts/roboto/fonts/Roboto-Regular.woff2,
+#                                           /assets/themes/j1/core/fonts/roboto/fonts/Roboto-Medium.woff,
+#                                           /assets/themes/j1/core/fonts/roboto/fonts/Roboto-Medium.woff2,
+#                                           /assets/themes/j1/core/fonts/roboto/fonts/Roboto-Bold.woff,
+#                                           /assets/themes/j1/core/fonts/roboto/fonts/Roboto-Bold.woff2,
+#                                           /assets/themes/j1/core/fonts/materialdesign_icons/fonts/materialdesignicons-webfont.woff,
+#                                           /assets/themes/j1/core/fonts/materialdesign_icons/fonts/materialdesignicons-webfont.woff2
+#                                         ]
+
+font:
+  preload:                              true
+  cors:                                 crossorigin
+  fonts:                                [
+                                          /assets/themes/j1/core/fonts/roboto/fonts/Roboto-Regular.woff,
+                                          /assets/themes/j1/core/fonts/materialdesign_icons/fonts/materialdesignicons-webfont.woff
+                                        ]
+css:
+  preload:                              true
+  css:                                  [
+                                          /assets/themes/j1/core/css/uno,
+                                          /assets/themes/j1/core/css/vendor
+                                        ]
+  files:                                []
+
+js:
+  preload:                              true
+  js:                                   [
+                                          /assets/themes/j1/modules/bmd/js/bootstrap-material-design,
+                                          /assets/themes/j1/modules/backstretch/js/backstretch,
+                                          /assets/themes/j1/core/js/template
+                                        ]
+  files:                                [
+                                          /assets/themes/j1/adapter/js/attic.js,
+                                          /assets/themes/j1/adapter/js/logger.js,
+                                          /assets/themes/j1/adapter/js/mdb.js,
+                                          /assets/themes/j1/adapter/js/navigator.js
+                                        ]
+image:
+  preload:                              true
+  files:                                [ /assets/images/modules/icons/j1/j1-512x512.png ]
+
+# ------------------------------------------------------------------------------
+# PRECONNECT settings
+# ------------------------------------------------------------------------------
+# NOTE:
+#   Improve page load speed with preconnect|dns-prefetch for 3rd party
+#   origins. Establishing connections often involves significant time in
+#   slow networks (e.g. mobile 2|3G), particularly when it comes to secure
+#   connections (HTTPS), as it may involve DNS lookups, redirects, and
+#   several round trips to the final server that handles the user's request.
+# ------------------------------------------------------------------------------
+preconnect:
+  enabled:                              true
+  urls:                                 [ "https://bootswatch.com" ]
+
 
 # ------------------------------------------------------------------------------
 # Font AweSome settings
@@ -272,8 +364,8 @@ analytics:
 # Set 'provider' to the analytics provider you want to use
 #
 advertising:
-  enabled:                              false
-  provider:                             google
+  enabled:                              true
+  provider:                             custom
   google:
     publisher_id:                       ca-pub-6537273267695855
   custom:

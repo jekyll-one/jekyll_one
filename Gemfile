@@ -45,13 +45,13 @@ ruby RUBY_VERSION
 # See: https://github.com/jekyll/jekyll/issues/8049
 # gem "jekyll", github: "jekyll/jekyll"
 
-# Latest stable Jekyll version
+# Jekyll version
 #
 gem 'jekyll', '~> 4.0'
 
-# Theme Rubies, default: J1 Template
+# Theme Rubies, default: J1 Template (NOT used for the developmnet system)
 #
-gem 'j1-template', '~> 2020.0.11'
+gem 'j1-template', '~> 2020.0.14'
 
 # ------------------------------------------------------------------------------
 # PRODUCTION: Gem needed for the Jekyll and J1 prod environment
@@ -78,7 +78,7 @@ gem 'htmlbeautifier', '>= 1.2.1'
 gem 'middleman-core', '~> 4.2', '>= 4.2.1'
 
 # ------------------------------------------------------------------------------
-# Timezone support
+# Timezone support (multi-platform)
 #
 gem 'tzinfo', '>= 1.2.2'
 
@@ -86,15 +86,15 @@ gem 'tzinfo', '>= 1.2.2'
 # Platform specific Gem
 #
 
-#   Windows does not include zoneinfo files, so bundle the
-#   tzinfo-data gem
+# Windows does not include zoneinfo files (timezone support).
+# To provide zoneinfo, tzinfo-data gem is bundled on win platforms
 #
-gem "tzinfo-data"                                                               # if Gem.win_platform?
+gem 'tzinfo-data' if Gem.win_platform?
 
-#  Windows Directory Monitor (WDM) monitor directories
-#  for changes
+# Windows Directory Monitor (WDM) monitor directories
+# for changes
 #
-gem 'wdm', '>= 0.1.1'                                                           # if Gem.win_platform?
+gem 'wdm', '>= 0.1.1' if Gem.win_platform?
 
 # ------------------------------------------------------------------------------
 # Jekyll Plugins
@@ -208,6 +208,12 @@ gem 'date', '~> 2.0'
 gem 'scss_lint', '~> 0.56.0'
 gem 'sass', '~> 3.5.0'
 gem 'bump', '~> 0.5.4'
+
+# ------------------------------------------------------------------------------
+# Gem needed to compress JS and JSON files
+# Gem uglifier is an dependency of middleman-core
+# gem 'uglifier', '~> 3.2.0'
+gem 'json-minify', '~> 0.0.3'
 
 # ------------------------------------------------------------------------------
 # END

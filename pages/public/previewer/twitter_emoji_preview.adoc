@@ -8,18 +8,18 @@ index:                                  []
 categories:                             [ pages, manuals ]
 
 permalink:                              /pages/protected/previewer/twitter_emoji/
-regenerate:                             false 
+regenerate:                             true
 
 scrollbar:                              false
 
-resources:                              []
+resources:                              [ twemoji ]
 resource_options:
   - attic:
       padding_top:                      400
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/pages/roundtrip/emojies-1920x1280-bw.jpg
+        - url:                          /assets/images/pages/roundtrip/emojies-1920x1280-bw.webp
           alt:                          Photo by Fausto García on Unsplash
           badge:
             type:                       unsplash

@@ -20,7 +20,7 @@ resource_options:
   - masthead:
       opacity:                          0.2
       slides:
-        - url:                          /assets/images/widescreen/featured-1920x800.jpg
+        - url:                          /assets/images/widescreen/featured-1920x800.webp
           alt:                          featured-1920x800 
 ---
 

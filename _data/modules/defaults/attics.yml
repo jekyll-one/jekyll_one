@@ -38,8 +38,8 @@ defaults:
   # Global settings for text- and image-based header
   #
   debug:                                false
-  icon_family:                          ZMDI
-  icon_color:                           md_grey
+  icon_family:                          MDI
+  icon_color:                           "#9E9E9E"                               # md-grey
   icon_size:                            default
 
   raised_level:                         0                                       # was: 15
@@ -49,25 +49,26 @@ defaults:
   padding_bottom:                       50
   margin_bottom:                        50
 
-  title_size:                           xxlarge
-  title_color:                          rgba_lighten_800
+  title_size:                           3em
+  title_color:                          rgba(255, 255, 255, 0.8)                # rgba_lighten_800
   title_animate:                        fadeInLeft
   title_align:                          left
 
-  tagline_size:                         large
-  tagline_color:                        rgba_lighten_800
+  tagline_size:                         1.5em
+  tagline_color:                        rgba(255, 255, 255, 0.8)                # rgba_lighten_800
   tagline_animate:                      fadeInRight
   tagline_align:                        left
 
-  background_color_1:                   md_bluegrey_600
-  background_color_2:                   md_bluegrey_400
+  background_color_1:                   "#546E7A"                               # md_bluegrey_600
+  background_color_2:                   "#78909C"                               # md_bluegrey_400
 
   action_enabled:                       false
   action_url:                           "#"
   action_button:                        btn-default btn-raised
-  action_icon:                          cloud-action
-  action_icon_family:                   FontAweSome
+  action_icon:                          download                                # cloud-action
+  action_icon_family:                   MDI                                     # FontAweSome
   action_text:                          Download Now
+
 
   logo_enabled:                         false
   logo_url:                             /assets/images/modules/icons/j1/j1-512x512.png
@@ -87,7 +88,7 @@ defaults:
   #
   caption:                              ""
   caption_href:                         ""
-  caption_color:                        rgba_lighten
+  caption_color:                        rgba(255, 255, 255, 0.5)                # rgba-lighten
 
   # Sets the opacity for all header images. Can be
   #  any number between 0.0 and 1.0
@@ -191,19 +192,19 @@ defaults:
         raised_level:                   0                                       # was: 15
         text_emphasis:                  strong
         title:
-          color:                        rgba_lighten_800
+          color:                        rgba(255, 255, 255, 0.8)                # rgba-lighten-800
         tagline:
-          color:                        rgba_lighten_800
+          color:                        rgba(255, 255, 255, 0.8)                # rgba-lighten-800
         image_attic:
          duration:                      3000
          transitionDuration:            2500
          animateFirst:                  false
          slides:
-           - url:                       "/assets/images/modules/attics/pagehead-default-1200.jpg"
+           - url:                       "/assets/images/modules/attics/pagehead-default-1200.webp"
              alt:                       "Image attic - Default image for Layout PAGE"
              caption:                   "Caption for the header image with a link"
              caption_href:              "#"
-             caption_color:             "rgba(255, 255, 255, 0.8)"
+             caption_color:             rgba(255, 255, 255, 0.8)                # rgba-lighten-800
 
     # --------------------------------------------------------------------------
     #  Text attic (used for layouts collection|app|raw|blog, text-based)

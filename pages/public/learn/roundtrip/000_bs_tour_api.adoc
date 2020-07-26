@@ -20,7 +20,7 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/pages/roundtrip/images-1920x1280-bw.jpg
+        - url:                          /assets/images/pages/roundtrip/images/bootstrap-1920x1000-bw.webp
           alt:                          Photo by Ricardo Gomez Angel on Unsplash
           badge:
             type:                       unsplash
@@ -145,7 +145,7 @@ http://getbootstrap.com/javascript/#popovers[Popover]._
 |autoscroll
 |Boolean
 |`true`
-|Autoscrolls the window when the step popover is out of view. 
+|Autoscrolls the window when the step popover is out of view.
 
 |keyboard
 |Boolean
@@ -167,18 +167,18 @@ Storage interfaces]._
 |Boolean
 |`false`
 |Set this option to true to have some useful
-informations printed in the console. 
+informations printed in the console.
 
 |backdrop
 |Boolean
 |`false`
 |Show a dark backdrop behind the popover and its
-element, highlighting the current step. 
+element, highlighting the current step.
 
 |backdropContainer
 |String
 |`body`
-|HTML element (jQuery selector) on which the backdrop should be shown. 
+|HTML element (jQuery selector) on which the backdrop should be shown.
 
 |backdropPadding
 |Number\|Object
@@ -238,7 +238,7 @@ template so you can easily rewrite it. However, Bootstrap Tour maps the
 _previous_, _next_ and _end_ logics to the elements which have the
 related `data-role` attribute. Therefore, you can also have multiple
 elements with the same `data-role` attribute. +
-            
+
 |afterGetState \| afterSetState \| afterRemoveState  callout:2[]
 |Function
 |`name(key, value){}`
@@ -258,7 +258,7 @@ A simple example if to send a post request to your server each time
 there is a change.
 
 |onStart
-|Function 
+|Function
 |`name(tour){}`
 |Function to execute when the tour starts.
 
@@ -341,7 +341,7 @@ var tour = Tour({
   afterSetState: function (key, value) {
     $.post("/some/path", value);
   }
-});            
+});
 ----
 
 
@@ -449,7 +449,7 @@ _This option should be used in conjunction with `next`._
 |container
 |String
 |`body`
-|Attachment of popover. Pass an element (jQuery selector) to append the 
+|Attachment of popover. Pass an element (jQuery selector) to append the
 popover to. By default the popover is appended
 after the 'element' above. This option is particularly helpful for
 Internet Explorer.
@@ -460,10 +460,10 @@ Internet Explorer.
 |Show a dark backdrop behind the popover and its
 element, highlighting the current step.
 
-|backdropContainer NEW 
+|backdropContainer NEW
 |String (jQuery selector)
 |`body`
-|HTML element on which the backdrop should be shown. 
+|HTML element on which the backdrop should be shown.
 
 |backdropPadding NEW
 |Boolean\|Object
@@ -475,7 +475,7 @@ It can be a number or a object containing optional `top`, `right`,
 |redirect
 |Boolean\|Function
 |`true`
-|Set a custom function to execute as redirect function. The default 
+|Set a custom function to execute as redirect function. The default
 redirect relies on the traditional `document.location.href`.
 
 |reflex UPDATED
@@ -497,7 +497,7 @@ The step is fixed positioned in the middle of the page. +
 You can use a string or function that returns a string of the HTML
 template for the orphan popovers.
 
-|duration NEW 
+|duration NEW
 |Boolean\|String
 |`false`
 |Set a expiration time for the steps. When
@@ -580,7 +580,7 @@ the path of the step. It overrides the global `onRedirectError` option.
 
 === Methods
 
-If, for some reasons, you want to force the tour to be displayed, pass 
+If, for some reasons, you want to force the tour to be displayed, pass
 *true* to the *start()* method.
 
 [cols="3,9a",options="header",]
@@ -632,13 +632,11 @@ word)_ .
 |Get the index of the current step.
 
 |setCurrentStep(`i`)
-|Override the current step. Pass `i` as the index of the step in the 
+|Override the current step. Pass `i` as the index of the step in the
 tour (0-based).
 
 |redraw()
-|Triggers a redraw on the overlay element. Useful for dynamically sized 
+|Triggers a redraw on the overlay element. Useful for dynamically sized
 tour targets.
 
 |===============================================================================
-
-

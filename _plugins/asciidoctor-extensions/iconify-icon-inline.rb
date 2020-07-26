@@ -19,7 +19,7 @@ Asciidoctor::Extensions.register do
     use_dsl
     named :iconify
     name_positional_attributes 'size', 'modifier'
-    default_attrs 'size' => '1x', 'modifier' => 'md-grey'
+    default_attrs 'size' => '1x', 'modifier' => ''
 
     def process parent, target, attributes
       doc = parent.document

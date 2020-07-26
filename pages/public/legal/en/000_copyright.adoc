@@ -17,7 +17,7 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5 
       slides:
-        - url:                          /assets/images/modules/attics/giammarco-boscaro-1920x1280.jpg
+        - url:                          /assets/images/modules/attics/giammarco-boscaro-1920x1280.webp
           alt:                          Photo by Giammarco Boscaro
           alignY:                       0.5
           badge:

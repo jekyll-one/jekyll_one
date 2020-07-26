@@ -49,7 +49,21 @@ resource_options:
 // -----------------------------------------------------------------------------
 
 ++++
-<div class="sidebar">
+    <div id="adblock" class="row no-gutters adblock">
+      <div class="doc-example mb-3">
+        <button type="button" class="btn btn-primary btn-raised">Primary</button>
+        <button type="button" class="btn btn-secondary btn-raised">Secondary</button>
+        <button type="button" class="btn btn-success btn-raised">Success</button>
+        <button type="button" class="btn btn-info btn-raised">Info</button>
+        <button type="button" class="btn btn-warning btn-raised">Warning</button>
+        <button type="button" class="btn btn-danger btn-raised">Danger</button>
+        <button type="button" class="btn btn-link btn-raised">Link</button>
+      </div>
+    </div>
+++++
+
+++++
+<div class="">
   <div class="floating-div">
     <p>This "floating div" could be a form, a call to action, an ad,
       or whatever other content you want to float in sidebar as the user
@@ -106,12 +120,20 @@ and pages.
 ++++
 <style>
 
+  .adblock {
+  }
+
+  .adblock-fixed {
+    position: fixed;
+  }
+
   .sidebar {
     width:33.33%;
     float:left;
     padding: 0 10px;
   }
 
+/*
   .floating-div {
     background-color: #333;
     padding: 10px 50px;
@@ -120,6 +142,16 @@ and pages.
     margin-top:10px;
     position: absolute;
     right: -40px;
+  }
+*/
+  .floating-div {
+      background-color: #333;
+      /* padding: 10px 50px; */
+      color: #EEE;
+      font-size: 20px;
+      /* margin-top: 10px; */
+      /* position: absolute; */
+      /* right: -40px; */
   }
 
   .sticky {

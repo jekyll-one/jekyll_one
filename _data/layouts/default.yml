@@ -122,6 +122,16 @@ lanes:
       base:                             _includes/themes/j1
       path:                             modules/connectors
       file:                             analytics
+  # ----------------------------------------------------------------------------
+  # TRANSLATOR connector
+  #
+  - lane:
+      enabled:                          false
+      region:                           head
+      type:                             sync
+      base:                             _includes/themes/j1
+      path:                             modules/connectors
+      file:                             translator
 
   # ------------------------------------------------------------------
   # CONNECTORS (Google Ads)

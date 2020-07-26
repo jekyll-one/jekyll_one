@@ -1,22 +1,23 @@
 ---
 layout:                                 page
 
-title:                                  Archive
+title:                                  Creators Blog
 tagline:                                all posts
+description:                            Browse all articles
 
 #permalink:                             /pages/private/blog/navigator/archive/
 noindex:                                true
 
-regenerate:                             false 
+regenerate:                             false
 
 resources:                              []
 resource_options:
   - attic:
       padding_top:                      400
       padding_bottom:                   50
-      opacity:                          0.5 
+      opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/matthaeus-1920x1280.jpg
+        - url:                          /assets/images/modules/attics/matthaeus-1920x1280.webp
           alt:                          Photo by Matthaeus
           alignY:                       top
           badge:
@@ -37,12 +38,12 @@ resource_options:
 {% assign view_description    = view_config.description %}
 
 {% if site.permalink == 'none' %}
-  {% capture browser_page_url %}{{ page.url }}.html{% endcapture %}
+  {% capture browser_page_url %}{{page.url}}.html{% endcapture %}
 {% else %}
-  {% capture browser_page_url %}{{ page.url }}{% endcapture %}
+  {% capture browser_page_url %}{{page.url}}{% endcapture %}
 {% endif %}
 
-{% include {{get_page_path}} mode='absolute' %} 
+{% include {{get_page_path}} mode='absolute' %}
 
 {% capture navigator %}{{page_path}}/{% endcapture %}
 {% capture blog_preview %}{{page_path}}/archive/preview/{% endcapture %}
@@ -54,7 +55,7 @@ resource_options:
 {% comment %} Main
 -------------------------------------------------------------------------------- {% endcomment %}
 <!-- [INFO   ] [ {{page.url}} ] [Generate HTML}] -->
-<div class="paginator ml-2"> 
+<div class="paginator ml-2">
   <ul class="pagination raised-z0">
     <li class="page-item"><a class="page-link" href="{{navigator     | prepend: site.baseurl}}" title="Blog View">Navigator</a></li>
     <li class="page-item"><a class="page-link" href="{{category_view | prepend: site.baseurl}}" title="View by Category">By Category</a></li>
@@ -65,31 +66,36 @@ resource_options:
 
 <div id="index" class="post-archive-search-results col-md-10 col-sm-10 col-xs-11">
   <div class="view-description">{{view_description}}</div>
-  <div class="post-headline"> 
+  <div class="post-headline">
     <h2 id="post-headline" class="mt-5">All Posts</h2>
   </div>
+
   <!-- ul class="list-unstyled link-news" -->
   {% for post in site.posts %}
     {% assign excerpt = post.excerpt | truncatewords: 50 | strip_html | strip_newlines | strip %}
-    <div class="card card-flat mb-4">        
+    <div class="card card-flat" style="background-color: #fafafa">
       <div class="card-body">
         <!-- <span class="post-meta">{{post.date|date: "%B %d, %Y"}}</span> -->
-        <h3 id="{{ 100000 | rand }}" class="card-title">{{ post.title }}</h3>
-        <h5 class="notoc card-subtitle text-muted mb-2">{{ post.tagline }}</h5>
-        <div class="card-text"><p>{{ excerpt }}</p></div>
+        <h3 id="{{100000 | rand}}" class="card-title">{{post.title}}</h3>
+        <h5 class="notoc card-subtitle text-muted mb-2">{{post.tagline}}</h5>
+        <div class="card-text"><p>{{excerpt}}</p></div>
+        <span class="d-block text-muted text-uppercase g-font-weight-600 g-font-size-12">
+          <i class="mdi mdi-calendar-blank"></i>
+          {{post.date|date:'%Y %B, %e'}}
+        </span>
       </div>
-      <div class="card-footer">
+      <div class="card-footer" style="background-color: #fafafa">
         <!-- <a class="card-link" href="{{post.url}}#readmore" target="_blank">Read more ..</a> -->
         <a class="btn btn-primary btn-raised btn-flex" href="{{post.url}}#readmore">
-          <i class="fa fa-eye fa-lg" style="color:#FFFFFF;"></i>
-          Read more
+          <i class="fa fa-eye fa-lg mr-2" style="color:#FFFFFF;"></i>
+          Read · {{post.tagline}}
         </a>
       </div>
     </div>
   {% endfor %}
 </div>
 
-<!-- [INFO   ] [j1.pages.blog.navigator.archive          ] [{{page.title}} - Save the current page to cookieUserState cookie: {{ browser_page_url }}] -->
+<!-- [INFO   ] [j1.pages.blog.navigator.archive          ] [{{page.title}} - Save the current page to cookieUserState cookie: {{browser_page_url}}] -->
 {% comment %} Update cookie for lastpage
 -------------------------------------------------------------------------------- {% endcomment %}
 <script type="text/javascript">
@@ -102,7 +108,7 @@ resource_options:
     user_state.last_page            = user_state_last_page;
 //  j1.setUserState( {last_page:user_state_last_page} );
     j1.writeCookie({
-      name: user_state_cookie_name, 
+      name: user_state_cookie_name,
       data: user_state
     });
     logger.info('Saved current Post Browser page to cookie: {{browser_page_url}}');

@@ -38,8 +38,8 @@
 #                     all CSS and JS files are to be loaded for a page.
 #   body-navigation   <body> NAV section. Contains the main navigation bar.
 #                     Placed a the BEGINNING of the <body> section.
-#   body-header       <body> HEADER section. Contains the page banner (header).
-#                     Placed AFTER the page navigation but BEFORE the main
+#   body-header       <body> HEADER section. Contains the page header (attic).
+#                     Placed AFTER the navigation but BEFORE the main
 #                     content (body-main) of a page.
 #   body-main         <body> MAIN section. J1 template puts a <main> container
 #                     element in the <body> section to place the (main) content.
@@ -121,6 +121,17 @@ lanes:
       file:                             generator.html
 
   # ----------------------------------------------------------------------------
+  # Ad Block
+  #
+  - lane:
+      enabled:                          true
+      region:                           body-header
+      type:                             sync
+      base:                             _includes/themes/j1
+      path:                             blocks/ads
+      file:                             ad.html
+
+  # ----------------------------------------------------------------------------
   # PAGE CONTENT (region body-main)
   #
   # NOTE:
@@ -149,17 +160,6 @@ lanes:
   # ----------------------------------------------------------------------------
 
   # ----------------------------------------------------------------------------
-  # TRANSLATOR connector
-  #
-  - lane:
-      enabled:                          true
-      region:                           body-main
-      type:                             sync
-      base:                             _includes/themes/j1
-      path:                             modules/connectors
-      file:                             translator
-  
-  # ----------------------------------------------------------------------------
   # CONTENT
   #
   - lane:
@@ -171,7 +171,7 @@ lanes:
       file:                             content_generator_page.html
 
   # ----------------------------------------------------------------------------
-  # COMMENT connector
+  # COMMENT connector (e.g. for DISQUS as part of the CONTENT section)
   #
   - lane:
       enabled:                          true
@@ -180,7 +180,6 @@ lanes:
       base:                             _includes/themes/j1
       path:                             modules/connectors
       file:                             comments
-
 
 # ------------------------------------------------------------------------------
 # END config

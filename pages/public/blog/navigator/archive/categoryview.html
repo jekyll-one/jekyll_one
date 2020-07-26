@@ -1,8 +1,9 @@
 ---
 layout:                                 page
 
-title:                                  Categories
+title:                                  Creators Blog
 tagline:                                posts by category
+description:                            Browse articles by category
 
 sort:                                   date
 #permalink:                             /pages/private/blog/navigator/archive/categoryview/
@@ -17,9 +18,9 @@ resource_options:
   - attic:
       padding_top:                      400
       padding_bottom:                   50
-      opacity:                          0.5 
+      opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/matthaeus-1920x1280.jpg
+        - url:                          /assets/images/modules/attics/matthaeus-1920x1280.webp
           alt:                          Photo by Matthaeus
           alignY:                       top
           badge:
@@ -30,7 +31,7 @@ resource_options:
 
 {% comment %} Debugging|Helpers
 -------------------------------------------------------------------------------- {% endcomment %}
-{% comment %} site_category_word_list:  {{ site_category_word_list | debug }} {% endcomment %}
+{% comment %} site_category_word_list:  {{site_category_word_list|debug}} {% endcomment %}
 
 
 {% comment %} Liquid procedures
@@ -46,13 +47,13 @@ resource_options:
 {% assign view_description    = view_config.description %}
 
 {% if site.permalink == 'none' %}
-  {% capture browser_page_url %}{{ page.url }}.html{% endcapture %}
+  {% capture browser_page_url %}{{page.url}}.html{% endcapture %}
 {% else %}
-  {% capture browser_page_url %}{{ page.url }}{% endcapture %}
+  {% capture browser_page_url %}{{page.url}}{% endcapture %}
 {% endif %}
 
-{% include {{get_page_path}} mode='absolute' %} 
-{% assign navigator_path = page_path | remove_first:'archive' %}
+{% include {{get_page_path}} mode='absolute' %}
+{% assign navigator_path = page_path|remove_first:'archive' %}
 
 {% capture navigator %}{{navigator_path}}{% endcapture %}
 {% capture date_view %}{{page_path}}/dateview/{% endcapture %}
@@ -61,21 +62,21 @@ resource_options:
 {% capture all_view %}{{page_path}}/{% endcapture %}
 
 {% if page.sort == 'title' %}
-  {% assign sorted_posts = site.posts | sort: 'title' %}
+  {% assign sorted_posts = site.posts|sort: 'title' %}
 {% elsif page.sort == 'date' %}
-  {% assign sorted_posts = site.posts | sort: 'date' %}
+  {% assign sorted_posts = site.posts|sort: 'date' %}
 {% else %}
-  {% assign sorted_posts = site.posts | sort: 'date' %}
+  {% assign sorted_posts = site.posts|sort: 'date' %}
 {% endif %}
 
 {% comment %} TODO: skip_words configured by yaml data file?
 -------------------------------------------------------------------------------- {% endcomment %}
-{% capture site_category_word_list %}{% for tag in site.categories %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-{% assign categories = site_category_word_list | split:',' %}
+{% capture site_category_word_list %}{% for tag in site.categories %}{{tag|first}}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign categories = site_category_word_list|split:',' %}
 
 {% for category in categories %}
   {% if page.skip_words contains category %} {% continue %} {% endif %}
-  {% capture category_list %}{{ category_list | append: category }}{% unless forloop.last %},{% endunless %}{% endcapture %} 
+  {% capture category_list %}{{category_list|append: category}}{% unless forloop.last %},{% endunless %}{% endcapture %}
 {% endfor %}
 
 {% comment %} Main
@@ -85,44 +86,48 @@ resource_options:
 
 <div class="paginator ml-3">
   <ul class="pagination raised-z0">
-    <li class="page-item"><a class="page-link" href="{{navigator | prepend: site.baseurl}}" title="Blog View">Navigator</a></li>
-    <li class="page-item"><a class="page-link" href="{{date_view | prepend: site.baseurl}}" title="View by Date">By Date</a></li>
-    <!-- li class="page-item"><a class="page-link" href="{{tag_view  | prepend: site.baseurl}}" title="View by Tag">By Tag</a></li -->
-    <li class="page-item"><a class="page-link" href="{{all_view  | prepend: site.baseurl}}" title="View All">All Posts</a></li>
+    <li class="page-item"><a class="page-link" href="{{navigator|prepend: site.baseurl}}" title="Blog View">Navigator</a></li>
+    <li class="page-item"><a class="page-link" href="{{date_view|prepend: site.baseurl}}" title="View by Date">By Date</a></li>
+    <!-- li class="page-item"><a class="page-link" href="{{tag_view |prepend: site.baseurl}}" title="View by Tag">By Tag</a></li -->
+    <li class="page-item"><a class="page-link" href="{{all_view |prepend: site.baseurl}}" title="View All">All Posts</a></li>
   </ul>
 </div>
 
 <div class="post-search-results col-md-10 col-sm-10 col-xs-11">
 
   <div class="view-description">{{view_description}}</div>
-  <div class="post-headline"> <h2 id="post-headline" class="mt-5">Categories</h2></div>
-  {% assign tags = site.categories | sort %}
+  <div class="post-headline">
+    <h2 id="post-headline" class="mt-5">Posts by Category</h2>
+  </div>
+  {% assign tags = site.categories|sort %}
   {% for tag in tags %}
     {% assign category = tag|first %}
     {% unless category_list contains category %} {% continue %} {% endunless %}
-    <!-- h2 id="{{tag|first}}" class="toc-link mt-5 mb-4"><i class="fa fa-thumbtack mr-3"></i>{{tag|first|capitalize}} <i class="badge ml-1">{{tag|last|size}}</i></h2 -->
-    <h3 id="{{tag|first}}" class="toc-link mt-5 mb-4"><i class="fa fa-thumbtack mr-3"></i>{{tag|first|capitalize}}</h3>
+    <h3 id="{{tag|first}}" class="toc-link"><i class="mdi mdi-pin mr-1"></i>{{tag|first|capitalize}}</h3>
 
       {% for post in sorted_posts %}
         {%if post.categories contains tag[0]%}
-          {% assign category = tag | first %}
+          {% assign category = tag|first %}
           {% include {{get_category_item}} category=category %}
           {% include {{select_icon_size}} family=icon_family size=icon_size %}
           {% assign icon_size = size %}
-          {% assign excerpt = post.excerpt | truncatewords: 50 | strip_html | strip_newlines | strip %}
+          {% assign excerpt = post.excerpt|truncatewords: 50|strip_html|strip_newlines|strip %}
 
-          <div class="card card-flat mb-4">        
+          <div class="card card-flat" style="background-color: #fafafa">
             <div class="card-body">
               <!-- <span class="post-meta">{{post.date|date: "%B %d, %Y"}}</span> -->
-              <h4 id="{{ 100000 | rand }}" class="card-title">{{ post.title }}</h4>
-              <h5 class="notoc card-subtitle text-muted mb-2">{{ post.tagline }}</h5>
-              <div class="card-text"><p>{{ excerpt }}</p></div>
+              <h4 id="{{100000|rand}}" class="card-title">{{post.title}}</h4>
+              <h5 class="notoc card-subtitle text-muted mb-2">{{post.tagline}}</h5>
+              <div class="card-text"><p>{{excerpt}}</p></div>
+              <span class="d-block text-muted text-uppercase g-font-weight-600 g-font-size-12">
+                <i class="mdi mdi-calendar-blank"></i>
+                {{post.date|date:"%Y %B, %e"}}
+              </span>
             </div>
-            <div class="card-footer">
-              <!-- <a class="card-link" href="{{post.url}}#readmore" target="_blank">Read more ..</a> -->
+            <div class="card-footer" style="background-color: #fafafa">
               <a class="btn btn-primary btn-raised btn-flex" href="{{post.url}}#readmore">
-                <i class="fa fa-eye fa-lg" style="color:#FFFFFF;"></i>
-                Read more
+                <i class="mdi mdi-eye mdi-lg mr-2" style="color:#FFFFFF;"></i>
+                Read · {{post.tagline}}
               </a>
             </div>
           </div>
@@ -131,7 +136,7 @@ resource_options:
   {% endfor %}
 </div>
 
-<!-- [INFO   ] [j1.page.{{page.title}}                   ] [Save the current page to cookieUserState cookie: {{ browser_page_url }}] -->
+<!-- [INFO   ] [j1.page.{{page.title}}                   ] [Save the current page to cookieUserState cookie: {{browser_page_url}}] -->
 {% comment %} Update cookie for lastpage
 -------------------------------------------------------------------------------- {% endcomment %}
 <script type="text/javascript">
@@ -144,7 +149,7 @@ resource_options:
     user_state.last_page            = user_state_last_page;
 //  j1.setUserState( {last_page:user_state_last_page} );
     j1.writeCookie({
-      name: user_state_cookie_name, 
+      name: user_state_cookie_name,
       data: user_state
     });
     logger.info('Saved current Post Browser page to cookie: {{browser_page_url}}');

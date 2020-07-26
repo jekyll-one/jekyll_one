@@ -1,8 +1,10 @@
 ---
 layout:                                 page
 
-title:                                  Tags
+title:                                  Creators Blog
 tagline:                                blog posts by tag
+description:                            Browse articles by tag
+
 #permalink:                             /pages/private/blog/navigator/archive/tagview/
 
 skip_words:                             [ posts ]
@@ -14,7 +16,7 @@ resource_options:
   - attic:
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/library-1920x1280-bw.jpg
+        - url:                          /assets/images/modules/attics/library-1920x1280-bw.webp
           alt:                          library-1920x1280-bw
 ---
 
@@ -35,9 +37,9 @@ resource_options:
 {% assign view_description      = view_config.description %}
 
 {% if site.permalink == 'none' %}
-  {% capture browser_page_url %}{{ page.url }}.html{% endcapture %}
+  {% capture browser_page_url %}{{page.url}}.html{% endcapture %}
 {% else %}
-  {% capture browser_page_url %}{{ page.url }}{% endcapture %}
+  {% capture browser_page_url %}{{page.url}}{% endcapture %}
 {% endif %}
 
 {% comment %} jadams: skip_words needs to be configured by yaml data file
@@ -48,7 +50,7 @@ resource_options:
 {% assign letter_group_counter  = 0 %}
 {% assign letter_group_written  = false %}
 
-{% include {{get_page_path}} mode='absolute' %} 
+{% include {{get_page_path}} mode='absolute' %}
 {% assign navigator_path = page_path | remove_first:'archive' %}
 
 {% capture navigator %}{{navigator_path}}{% endcapture %}
@@ -61,18 +63,18 @@ resource_options:
 {% comment %} TODO: skip_words should configured by yaml data file?
 -------------------------------------------------------------------------------- {% endcomment %}
 {% assign tags = site.tags | sort %}
-{% capture site_tag_word_list %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% capture site_tag_word_list %}{% for tag in site.tags %}{{tag | first}}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign tags = site_tag_word_list | split:',' %}
 
 {% for tag in tags %}
   {% if page.skip_words contains tag %} {% continue %} {% endif %}
-  {% capture tag_list %}{{ tag_list | append: tag }}{% unless forloop.last %},{% endunless %}{% endcapture %} 
+  {% capture tag_list %}{{tag_list | append: tag}}{% unless forloop.last %},{% endunless %}{% endcapture %}
 {% endfor %}
 
 
-{% comment %} Main 
--------------------------------------------------------------------------------- {% endcomment %}  
-<!-- [INFO   ] [ {{page.url}} ] [Generate HTML}] --> 
+{% comment %} Main
+-------------------------------------------------------------------------------- {% endcomment %}
+<!-- [INFO   ] [ {{page.url}} ] [Generate HTML}] -->
 {% include {{create_word_cloud}} word_list=tag_list source="tags" %}
 
 <div class="paginator ml-3">
@@ -90,7 +92,7 @@ resource_options:
   {% assign letter_group = letter_group_array[letter_group_counter] %}
 
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-    {% capture this_word %}{{ word_array[item] | strip_newlines }}{% endcapture %}
+    {% capture this_word %}{{word_array[item] | strip_newlines}}{% endcapture %}
 
     {% for skip_word in skip_word_array %}
       {% if skip_word contains this_word %} {% assign skip = true %} {% else %} {% assign skip = false %} {% endif %}
@@ -107,7 +109,7 @@ resource_options:
       --------------------------------------------------------------------------
       <!-- jadams, 2018-01-17: logic seems NOT work. Disabled. -->
       {% if letter_group_written == false %}
-        <h3 id="id_{{letter_group}}" class="toc-link mt-5 mb-5"><a title="Back to top" href="#"><i class="fa fa-tags mr-2"></i></a>{{ letter_group | upcase }}</h3>
+        <h3 id="id_{{letter_group}}" class="toc-link mt-5 mb-5"><a title="Back to top" href="#"><i class="fa fa-tags mr-2"></i></a>{{letter_group | upcase}}</h3>
         {% assign letter_group_written = true %}
       {% endif %}
       -------------------------------------------------------------------------- {% endcomment %}
@@ -115,26 +117,26 @@ resource_options:
       {% assign letter_group_counter = letter_group_counter | plus:1 %}
       {% assign letter_group = letter_group_array[letter_group_counter] %}
 
-      {% comment %} jadams, 2018-01-17: logic seems NOT work. 
-                    Added workaround by checking if letter_group has a value 
+      {% comment %} jadams, 2018-01-17: logic seems NOT work.
+                    Added workaround by checking if letter_group has a value
       -------------------------------------------------------------------------- {% endcomment %}
       {% if letter_group %}
       <h3 id="id_{{letter_group}}" class="toc-link mb-3">
         <a title="Back to top" href="#">
           <i class="fa fa-tags mr-2"></i>
-        </a>{{ letter_group | upcase }}
+        </a>{{letter_group | upcase}}
       </h3>
       {% endif %}
       {% assign letter_group_written = true %}
     {% endif %}
 
     {% comment %}
-    letter_group: {{ letter_group | debug }}
-    this_word: {{ this_word | debug }}
-    first_letter: {{ first_letter | debug }}
+    letter_group: {{letter_group | debug}}
+    this_word: {{this_word | debug}}
+    first_letter: {{first_letter | debug}}
     {% endcomment %}
 
-    <h4 id="{{this_word | replace: '+','_' | replace: ' ','_' | downcase }}" class="toc-link"><a title="Back to top" href="#"><i class="fa fa-tag mr-2"></i></a>{{ this_word }}</h4>
+    <h4 id="{{this_word | replace: '+','_' | replace: ' ','_' | downcase}}" class="toc-link"><a title="Back to top" href="#"><i class="fa fa-tag mr-2"></i></a>{{this_word}}</h4>
 
     {% for post in site.tags[this_word] %}{% if post.title != null %}
       {% include {{get_category}} post=post %}
@@ -147,18 +149,17 @@ resource_options:
       {% assign excerpt = post.excerpt | truncatewords: 50 | strip_html | strip_newlines | strip %}
 
       <!-- place post  -->
-      <div class="card card-flat mb-4">        
+      <div class="card card-flat mb-4">
         <div class="card-body">
           <!-- <span class="post-meta">{{post.date|date: "%B %d, %Y"}}</span> -->
-          <h5 id="{{ 100000 | rand }}" class="card-title">{{ post.title }}</h5>
-          <h6 class="notoc card-subtitle text-muted mb-2">{{ post.tagline }}</h6>
-          <div class="card-text"><p>{{ excerpt }}</p></div>
+          <h5 id="{{100000 | rand}}" class="card-title">{{post.title}}</h5>
+          <h6 class="notoc card-subtitle text-muted mb-2">{{post.tagline}}</h6>
+          <div class="card-text"><p>{{excerpt}}</p></div>
         </div>
         <div class="card-footer">
-          <!-- <a class="card-link" href="{{post.url}}#readmore" target="_blank">Read more ..</a> -->
           <a class="btn btn-primary btn-raised btn-flex" href="{{post.url}}#readmore">
-            <i class="fa fa-eye fa-lg" style="color:#FFFFFF;"></i>
-            Read more
+            <i class="mdi mdi-eye mdi-lg mr-2" style="color:#FFFFFF;"></i>
+            Read · {{post.tagline}}
           </a>
         </div>
       </div>
@@ -166,7 +167,7 @@ resource_options:
   {% endunless %}{% endfor %}
 </div>
 
-<!-- [INFO   ] [j1.page.{{page.title}}                   ] [Save the current page to cookieUserState cookie: {{ browser_page_url }}] -->
+<!-- [INFO   ] [j1.page.{{page.title}}                   ] [Save the current page to cookieUserState cookie: {{browser_page_url}}] -->
 <script type="text/javascript">
   function setLastPage() {
     var logger = log4javascript.getLogger('j1.BlogNavigator');
@@ -177,11 +178,10 @@ resource_options:
     user_state.last_page            = user_state_last_page;
 //  j1.setUserState( {last_page:user_state_last_page} );
     j1.writeCookie({
-      name: user_state_cookie_name, 
+      name: user_state_cookie_name,
       data: user_state
     });
     logger.info('Saved current Post Browser page to cookie: {{browser_page_url}}');
   }
   window.onload = setLastPage();
 </script>
-

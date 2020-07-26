@@ -1,7 +1,7 @@
 ---
 title:                                  Using Docker
 tagline:                                docker on windows
-description:                            Docker on Windows 
+description:                            Docker on Windows
 
 date:                                   2018-11-01 00:00:00 +0100
 series:                                 Docker
@@ -13,7 +13,7 @@ tags:                                   [ Tutorial, kickstarter ]
 index:                                  [ Docker, Windows, Shared, Folder, Folders ]
 categories:                             []
 
-regenerate:                             true 
+regenerate:                             true
 
 resources:                              []
 resource_options:
@@ -24,11 +24,11 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/banner/docker-1280x600-bw.jpg
+        - url:                          /assets/images/modules/attics/banner/docker-1280x600-bw.webp
           alt:                          docker_banner_r-1280x500-bw
 ---
 
-// NOTE:  General Asciidoc page attributes settings 
+// NOTE:  General Asciidoc page attributes settings
 // -----------------------------------------------------------------------------
 :page-liquid:
 
@@ -499,6 +499,3 @@ lorem:sentences[3]
 
 ./etc/fstab
 &#47;&#47;win10pc/Public /c/Users/Public cifs uid=1000,gid=5555,credentials=/home/jadams/.smbcredentials,iocharset=utf8,rw  0 0
-
-
-

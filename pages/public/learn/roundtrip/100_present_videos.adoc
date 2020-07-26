@@ -26,7 +26,7 @@ resource_options:
         color_2:                        md_grey_400
       slides:
         # Broadway Underground - still image (animate default)
-        - url:                          /assets/videos/headers/still/underground-broadway.png
+        - url:                          /assets/videos/headers/still/underground-broadway.webp
           alt:                          Broadway Underground
           alignY:                       top
           animateFirst:                 false
@@ -37,7 +37,7 @@ resource_options:
           loop:                         false
           duration:                     12000
         # Broadway Underground - still image (animate random)
-        - url:                          /assets/videos/headers/still/underground-broadway.png
+        - url:                          /assets/videos/headers/still/underground-broadway.webp
           alt:                          Broadway Underground
           alignY:                       top
           transition:                   push_left|push_right|cover_up|cover_down|fade|fadeInOut

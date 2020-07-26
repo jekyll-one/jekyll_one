@@ -26,7 +26,7 @@ description:
 settings:
 
   enabled:                            true
+  show_cookie_icon:                   true
 
-
-# END config
 # ------------------------------------------------------------------------------
+# END config

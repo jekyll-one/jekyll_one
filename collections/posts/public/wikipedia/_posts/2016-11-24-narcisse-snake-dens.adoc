@@ -21,7 +21,7 @@ resource_options:
   - attic:
       padding_top:                      400
       padding_bottom:                   50
-      opacity:                          0.5 
+      opacity:                          0.5
       slides:
         - url:                          /assets/images/collections/blog/wikipedia/narcise-snake-pits.1200x400.jpg
           alt:                          Narcisse Snake Pits
@@ -58,8 +58,8 @@ image::/assets/images/collections/blog/wikipedia/narcise-snake-pits.1200x400.jpg
 
 These pits are the largest concentration in the world of this particular type
 of snake. Their winter dens are subterranean caverns formed by the area's
-water-worn limestone bedrock. In the spring, they come up from their dens to 
-the snake pits, where they engage in mating rituals. Then they disperse into 
+water-worn limestone bedrock. In the spring, they come up from their dens to
+the snake pits, where they engage in mating rituals. Then they disperse into
 the nearby marshes for the summer.
 
 The population of red-sided garter snakes around Narcisse was roughly 70,000

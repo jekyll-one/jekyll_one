@@ -8,7 +8,7 @@ index:                                  []
 categories:                             [ pages, manuals ]
 
 permalink:                              /pages/protected/previewer/mdi_font/
-regenerate:                             false 
+regenerate:                             false
 
 scrollbar:                              false
 
@@ -19,7 +19,7 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/pages/roundtrip/icon-fonts-1920x1280-bw.jpg
+        - url:                          /assets/images/pages/roundtrip/icon-fonts-1920x1280-bw.webp
           alt:                          icon-fonts-1920x1280-bw
 ---
 

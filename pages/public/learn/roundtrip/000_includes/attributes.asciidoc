@@ -89,7 +89,7 @@ tag::tags[]
 :dotdot:                                          &#46;&#46;
 :middot:                                          &middot;
 
-end::tags[] 
+end::tags[]
 
 // Data - Data elements for Asciidoctor extensions
 // -----------------------------------------------------------------------------

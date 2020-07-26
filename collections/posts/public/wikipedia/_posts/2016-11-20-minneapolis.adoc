@@ -17,7 +17,7 @@ resource_options:
   - attic:
       padding_top:                      400
       padding_bottom:                   50
-      opacity:                          0.5 
+      opacity:                          0.5
       slides:
         - url:                          /assets/images/collections/blog/wikipedia/minneapolis.1200x400.jpg
           alt:                          Minnesota
@@ -122,5 +122,3 @@ One branch of the river coming from the west, Minnehaha Creek receded only a
 few hundred yards from one of the channels of the Mississippi. Minnehaha Falls
 remains as a picturesque and informative relic of River Warren Falls, and the
 limestone-over-sandstone construction is readily apparent in its small gorge.
-
-

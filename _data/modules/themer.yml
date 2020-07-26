@@ -125,23 +125,22 @@ settings:
   saveToCookie:                         true
   debug:                                false
   preview_page:                         /pages/public/previewer/theme/
-# default_theme_css:                    /assets/themes/j1/core/css/uno.css
-# default_theme_name:                   Uno
-# default_theme_author:                 J1 Team
-# default_theme_link:                   https://jekyll.one/
-  menu_icon_family:                     FontAwesome
-  menu_icon_color:                      rgba_darken
-  menu_icon_size:                       large
+  default_theme_css:                    /assets/themes/j1/core/css/uno.css
+  default_theme_name:                   Uno
+  default_theme_author:                 J1 Team
+  default_theme_link:                   https://jekyll.one/
+  menu_icon_family:                     MDI
+  menu_icon_color:                      "#9E9E9E"
+  menu_icon_size:                       mdi-sm
   cssThemeLink:                         bootstrapTheme
-  defaultCssFile:                       https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css
+  defaultCssFile:                       https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css
   bootswatchApiUrl:                     https://bootswatch.com/api
   bootswatchApiVersion:                 4
   loadFromBootswatch:                   true
   localFeed:                            /assets/data/themes.json
-  excludeBootswatch:                    default, Lux, Sketchy
+  excludeBootswatch:                    default,Default,Lux,Sketchy
   includeBootswatch:                    /assets/themes/j1/core/css/theme_extensions.css
   skipIncludeBootswatch:                Uno
-
 
 # ------------------------------------------------------------------------------
 # END config

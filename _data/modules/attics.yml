@@ -12,7 +12,7 @@
 #
 # ------------------------------------------------------------------------------
 # NOTE:
-#   If NO attic (top page header) is assigned to a LAYOUT, all pages based 
+#   If NO attic (top page header) is assigned to a LAYOUT, all pages based
 #   on this layout will have NO top page header.
 # ------------------------------------------------------------------------------
 # NOTE:
@@ -38,42 +38,6 @@ settings:
   # Global settings for text- and image-based header
   #
   debug:                                false
-  icon_family:                          ZMDI
-  icon_color:                           md_grey
-  icon_size:                            default
-
-  raised_level:                         0                                       # was: 15
-  r_text:                               enabled
-  text_emphasis:                        stronger
-  padding_top:                          200
-  padding_bottom:                       50
-  margin_bottom:                        50
-
-  title_size:                           xxlarge
-  title_color:                          rgba_lighten_800
-  title_animate:                        fadeInLeft
-  title_align:                          left
-
-  tagline_size:                         large
-  tagline_color:                        rgba_lighten_800
-  tagline_animate:                      fadeInRight
-  tagline_align:                        left
-
-  background_color_1:                   md_bluegrey_600
-  background_color_2:                   md_bluegrey_400
-
-  action_enabled:                       false
-  action_url:                           "#"
-  action_button:                        btn-default btn-raised
-  action_icon:                          cloud-action
-  action_icon_family:                   FontAweSome
-  action_text:                          Download Now
-
-  logo_enabled:                         false
-  logo_url:                             /assets/images/modules/icons/j1/j1-512x512.png
-  logo_alt:                             Jekyll-One-Template
-  logo_height:                          196
-  logo_animate:                         slideInDown
 
   # ----------------------------------------------------------------------------
   # Global settings for image-based attics only
@@ -199,7 +163,7 @@ settings:
 #        transitionDuration:            2500
 #        animateFirst:                  false
 #        slides:
-#          - url:                       "/assets/images/modules/attics/pagehead-default-1200.jpg"
+#          - url:                       "/assets/images/modules/attics/pagehead-default-1200.webp"
 #            alt:                       "J1 Master Header - Default image for Layout PAGE"
 #            caption:                   "Caption for the header image with a link"
 #            caption_href:              "#"

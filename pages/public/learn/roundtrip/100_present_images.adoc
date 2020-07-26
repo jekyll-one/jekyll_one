@@ -11,10 +11,10 @@ toc:                                    true
 scrollbar:                              false
 
 permalink:                              /pages/public/learn/roundtrip/present_images/
-regenerate:                             false
+regenerate:                             true
 
 resources:                              [
-                                          bs_tour, carousel, lightbox,
+                                          carousel, lightbox,
                                           justified_gallery, light_gallery
                                         ]
 resource_options:
@@ -23,7 +23,7 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/pages/roundtrip/images-1920x1280-bw.jpg
+        - url:                          /assets/images/pages/roundtrip/images-1920x1280-bw.webp
           alt:                          Photo by Ricardo Gomez Angel on Unsplash
           badge:
             type:                       unsplash

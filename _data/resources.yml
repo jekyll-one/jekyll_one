@@ -341,24 +341,21 @@ resources:
   # ----------------------------------------------------------------------------
   #   J1 Template Core, integrated JS Resources
   #
-  #   no  ressource id              module_name@version
+  #   no  ressource id                  module_name@version
   #   --------------------------------------------------------------------------
   #   1   n/a                           jquery@3.2.1
   #   2   n/a                           popper@1.12.9
-  #   3   n/a                           jquery-mousewheel@3.1.13
-  #   4   n/a                           nouislider@10.0.0
-  #   5   n/a                           js-cookie@2.2.0
-  #   6   n/a                           moment@2.19.2
-  #   7   log4javascript                log4javascript@1.4.15
-  #   8   clipboard                     clipboard@1.7.1
-  #   10  bs_material_design            bootstrap-material-design@4.0.0-beta.4
-  #   11  j1_template_4                 j1_template_4@0.0.1
-  #   12  tocbot                        tocbot@4.11.2
-  #   13  jekyll_search                 simple_jekyll_search@1.1.5
-  #   15  bs_theme_switcher             bs_theme_switcher@1.1.5
-  #   16  backstretch                   backstretch@2.1.16
-  #   17  cookie consent                cookieConsent@2019-07-24
-  #   18  bootstrap_datepicker          datepicker@1.7.1
+  #   3   n/a                           js-cookie@2.2.0
+  #   4   n/a                           moment@2.19.2
+  #   5   log4javascript                log4javascript@1.4.15
+  #   6   Bootstrap                     bootstrap@4.4.1
+  #   6   bs_material_design            bootstrap-material-design@4.0.0-beta.4
+  #   7   j1_template                   j1_template_4@2020.0.14
+  #   8   tocbot                        tocbot@4.11.2
+  #   9   jekyll_search                 simple_jekyll_search@1.1.5
+  #   10  bs_theme_switcher             bs_theme_switcher@1.1.5
+  #   11  backstretch                   backstretch@2.1.16
+  #   12  cookiebar                     cookiebar@2020.0.0
   #
   # ----------------------------------------------------------------------------
   #   J1 Template Core, integrated CSS Resources
@@ -377,18 +374,34 @@ resources:
       layout:                           [ all ]
       required:                         always
       script_load:                      sync
-      dependencies:                     [ logger ]
+      dependencies:                     false
       pass_init_data:                   true
       data:
-        css:                            [ core/css/vendor, core/css/globals ]
-        files:                          [ adapter/js/j1.js ]
-        js:                             [ core/js/template ]
+        css:                            [
+                                          core/css/uno,
+                                          core/css/vendor,
+                                          core/css/material-design-icons,
+                                          core/css/fontawesome
+                                        ]
+        files:                          [
+                                          modules/util/js/js.cookie.js,
+                                          modules/util/js/lite-url.js,
+                                          modules/util/js/platform.js,
+                                          modules/polyfills/js/msie.js,
+                                          adapter/js/j1.js
+                                        ]
+        js:                             [
+                                          modules/jquery/js/jquery,
+                                          modules/popper/js/popper,
+                                          modules/bootstrap/js/bootstrap,
+                                          core/js/template
+                                        ]
         init_function:                  [ j1.init ]
 
   # ----------------------------------------------------------------------------
   # J1 Logger
   #
-  - name:                               J1 Logger
+  - name:                               Logger
     resource:
       id:                               logger
       enabled:                          true
@@ -401,9 +414,32 @@ resources:
       pass_init_data:                   false
       data:
         css:                            []
-        files:                          [ adapter/js/logger.js ]
+        files:                          [
+                                          modules/util/js/log4javascript.js,
+                                          adapter/js/logger.js
+                                        ]
         js:                             []
         init_function:                  [ j1.adapter.logger.init ]
+
+  # ----------------------------------------------------------------------------
+  # Backstretch
+  #
+  - name:                               Backstretch
+    resource:
+      id:                               backstretch
+      enabled:                          true
+      comment:                          Backstretch
+      region:                           head
+      layout:                           [ all ]
+      required:                         always
+      script_load:                      sync
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            []
+        files:                          []
+        js:                             [ modules/backstretch/js/backstretch ]
+        init_function:                  []
 
   # ----------------------------------------------------------------------------
   # Top Header
@@ -426,26 +462,6 @@ resources:
         init_function:                  [ j1.adapter.attic.init ]
 
   # ----------------------------------------------------------------------------
-  # Themer
-  #
-  - name:                               J1 Themer
-    resource:
-      id:                               themer
-      enabled:                          true
-      comment:                          module themer
-      region:                           head
-      layout:                           [ all ]
-      required:                         always
-      script_load:                      defer                                   # Warum defer???
-      dependencies:                     [ logger ]
-      pass_init_data:                   false
-      data:
-        css:                            []
-        files:                          [ adapter/js/themer.js ]
-        js:                             []
-        init_function:                  [ j1.adapter.themer.init ]
-
-  # ----------------------------------------------------------------------------
   # Navigator
   #
   - name:                               J1 Navigator
@@ -457,13 +473,58 @@ resources:
       layout:                           [ all ]
       required:                         always
       script_load:                      sync
-      dependencies:                     [ themer ]
+      dependencies:                     false
       pass_init_data:                   false
       data:
         css:                            []
         files:                          [ adapter/js/navigator.js ]
         js:                             []
         init_function:                  [ j1.adapter.navigator.init ]
+
+  # ----------------------------------------------------------------------------
+  # MMenu Light
+  #
+  - name:                               Mobile Menu
+    resource:
+      id:                               mmenu
+      enabled:                          true
+      comment:                          module mmenu
+      region:                           head
+      layout:                           [ all ]
+      required:                         always
+      script_load:                      sync
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            [
+                                          modules/mmenuLight/css/mmenu,
+                                          modules/mmenuLight/css/theme/uno
+                                        ]
+        files:                          [
+                                          modules/mmenuLight/js/mmenu.js,
+                                          adapter/js/mmenu.js ]
+        js:                             []
+        init_function:                  [ j1.adapter.mmenu.init ]
+
+  # ----------------------------------------------------------------------------
+  # Themer
+  #
+  - name:                               J1 Themer
+    resource:
+      id:                               themer
+      enabled:                          true
+      comment:                          module themer
+      region:                           head
+      layout:                           [ all ]
+      required:                         always
+      script_load:                      sync
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            []
+        files:                          [ adapter/js/themer.js ]
+        js:                             []
+        init_function:                  [ j1.adapter.themer.init ]
 
   # ----------------------------------------------------------------------------
   # Toccer
@@ -476,13 +537,16 @@ resources:
       layout:                           [ page, post, collection, blog_archive ]
       region:                           head
       required:                         always
-      script_load:                      defer                                   # Warum defer???
-      dependencies:                     [ navigator ]
+      script_load:                      sync
+      dependencies:                     false
       pass_init_data:                   true
       data:
-        css:                            []
+        css:                            [
+                                          modules/tocbot/css/tocbot,
+                                          modules/tocbot/css/theme/uno
+                                        ]
         files:                          [ adapter/js/toccer.js ]
-        js:                             []
+        js:                             [ modules/tocbot/js/tocbot ]
         init_function:                  [ j1.adapter.toccer.init ]
 
   # ----------------------------------------------------------------------------
@@ -496,34 +560,34 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
-      script_load:                      defer
+      script_load:                      sync
       dependencies:                     false
       pass_init_data:                   false
       data:
         css:                            []
         files:                          [ adapter/js/searcher.js ]
-        js:                             []
+        js:                             [ modules/jekyllSearch/js/simple-jekyll-search ]
         init_function:                  [ j1.adapter.searcher.init ]
 
   # ----------------------------------------------------------------------------
-  # Cookie Consent
+  # CookieBar
   #
-  - name:                               J1 Cookie Consent
+  - name:                               CookieBar
     resource:
-      id:                               cookie_consent
+      id:                               cookiebar
       enabled:                          true
-      comment:                          module cookie consent
+      comment:                          module cookiebar
       region:                           head
       layout:                           [ all ]
       required:                         always
-      script_load:                      defer
-      dependencies:                     [ logger ]                              # [ j1.adapter.navigator ]
+      script_load:                      sync
+      dependencies:                     false
       pass_init_data:                   false
       data:
         css:                            []
-        files:                          [ adapter/js/cookie_consent.js ]
+        files:                          [ adapter/js/cookiebar.js ]
         js:                             []
-        init_function:                  [ j1.adapter.cookie_consent.init ]
+        init_function:                  [ j1.adapter.cookiebar.init ]
 
   # ----------------------------------------------------------------------------
   # Sticky Side Menu
@@ -534,9 +598,9 @@ resources:
       enabled:                          true
       comment:                          module ssm
       region:                           head
-      layout:                           [ page, post, app, collection, blog_archive ]
+      layout:                           [ page, post, collection, blog_archive ]
       required:                         always
-      script_load:                      defer
+      script_load:                      sync
       dependencies:                     false
       pass_init_data:                   true
       data:
@@ -545,10 +609,137 @@ resources:
         js:                             []
         init_function:                  [ j1.adapter.ssm.init ]
 
+  # ----------------------------------------------------------------------------
+  # jqMouseWheel
+  #
+  - name:                               jqMouseWheel
+    resource:
+      id:                               jq_mouse_wheel
+      enabled:                          false
+      comment:                          module jqMouseWheel
+      region:                           head
+      layout:                           [ all ]
+      required:                         always
+      script_load:                      sync
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            []
+        files:                          []
+        js:                             [ modules/jqMouseWheel/js/jquery.mousewheel ]
+        init_function:                  []
+
+  # ----------------------------------------------------------------------------
+  # bsThemeSwitcher
+  #
+  - name:                               bsThemeSwitcher
+    resource:
+      id:                               theme_switcher
+      enabled:                          true
+      comment:                          module theme_switcher
+      region:                           head
+      layout:                           [ all ]
+      required:                         always
+      script_load:                      sync
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            []
+        files:                          []
+        js:                             [ modules/bsThemeSwitcher/js/switcher ]
+        init_function:                  []
+
+  # ----------------------------------------------------------------------------
+  # Bootstrap Material Design (BMD)
+  #
+  - name:                               Bootstrap Material Design
+    resource:
+      id:                               bmd
+      enabled:                          true
+      comment:                          Material Design for Bootstrap
+      region:                           head
+      layout:                           [ all ]
+      required:                         always
+      script_load:                      sync
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            []
+        files:                          [ adapter/js/mdb.js ]
+        js:                             [ modules/bmd/js/bootstrap-material-design ]
+        init_function:                  [ j1.adapter.mdb.init ]
 
 # ==============================================================================
-# J1 Core MODULES initialized 'ondemand' for a layout
+# MODULES initialized 'ondemand' for a layout
 # ------------------------------------------------------------------------------
+
+# ==============================================================================
+# Apps and Modules loaded SYCHRONOUSLY (sync)
+# ------------------------------------------------------------------------------
+
+# ==============================================================================
+# Apps and Modules loaded ASYCHRONOUSLY (defer)
+# ------------------------------------------------------------------------------
+
+  # ----------------------------------------------------------------------------
+  # Rouge
+  #
+  - name:                               Rouge Highlighter
+    resource:
+      id:                               rouge
+      enabled:                          true
+      comment:                          theme rouge
+      region:                           head
+      layout:                           [ page, post, collection ]
+      required:                         ondemand
+      script_load:                      defer
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            []
+        files:                          [ modules/rouge/css/base16/theme.css ]
+        js:                             []
+        init_function:                  []
+
+  # ----------------------------------------------------------------------------
+  # Twitter Emoji
+  #
+  - name:                               Twemoji
+    resource:
+      id:                               twemoji
+      enabled:                          true
+      comment:                          Twemoji
+      region:                           head
+      layout:                           [ page, post, collection ]
+      required:                         ondemand
+      script_load:                      defer
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            [ core/css/twemoji ]
+        files:                          []
+        js:                             []
+        init_function:                  []
+
+  # ----------------------------------------------------------------------------
+  # Animate CSS
+  #
+  - name:                               Animate CSS
+    resource:
+      id:                               animate
+      enabled:                          true
+      comment:                          Animate
+      region:                           head
+      layout:                           [ all ]
+      required:                         ondemand
+      script_load:                      defer
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            [ core/css/animate ]
+        files:                          []
+        js:                             []
+        init_function:                  []
 
   # ----------------------------------------------------------------------------
   # Gallery Customizer
@@ -578,11 +769,11 @@ resources:
       id:                               framer
       enabled:                          true
       comment:                          module framer
-      layout:                           [ page, post, app ]
+      layout:                           [ page, post, collection, app ]
       region:                           head
       required:                         ondemand
       script_load:                      defer
-      dependencies:                     [ logger ]
+      dependencies:                     false
       pass_init_data:                   true
       data:
         css:                            []
@@ -598,60 +789,61 @@ resources:
       id:                               lightbox
       enabled:                          true
       comment:                          module lightbox
-      layout:                           [ home, page, post, app, raw ]
+      layout:                           [ home, page, post, collection ]
       region:                           head
       required:                         ondemand
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   true
       data:
-        css:                            []
+        css:                            [
+                                          modules/lightbox/css/lightbox,
+                                          modules/lightbox/css/theme/uno
+                                        ]
         files:                          [ adapter/js/lightbox.js ]
-        js:                             []
+        js:                             [ modules/lightbox/js/lightbox ]
         init_function:                  [ j1.adapter.lightbox.init ]
 
-
-# ==============================================================================
-# Additional Apps and Modules - loaded SYCHRONOUSLY (sync)
-# ------------------------------------------------------------------------------
-
   # ----------------------------------------------------------------------------
-  # Rouge
+  # Twitter Emoji
   #
-  - name:                               Rouge Highlighter
+  - name:                               Twitter Emoji Picker
     resource:
-      id:                               rouge
+      id:                               twemoji
       enabled:                          true
-      comment:                          theme rouge
+      comment:                          module twemoji_picker
+      layout:                           [ home, page, post, collection ]
       region:                           head
-      layout:                           [ home, page, post ]
-      required:                         always
-      script_load:                      sync
+      required:                         ondemand
+      script_load:                      deferred
       dependencies:                     false
       pass_init_data:                   false
       data:
         css:                            []
-        files:                          [ extensions/rouge/css/base16/theme.css ]
-        js:                             []
+        files:                          []
+        js:                             [
+#                                         modules/twemoji/js/twemoji,
+                                          modules/twemoji/js/picker/twemoji-picker
+                                        ]
         init_function:                  []
 
   # ----------------------------------------------------------------------------
-  # iconify framework
+  # Iconify Framework
   #
-  - name:                               iconify
+  - name:                               Iconify Framework
     resource:
       id:                               iconify
       enabled:                          true
-      comment:                          iconify framework
+      comment:                          Iconify framework
       region:                           head
-      layout:                           [ all ]
-      required:                         always
+      layout:                           [ home, page, post, collection ]
+      required:                         ondemand
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   false
       data:
-        css:                            []
-        files:                          [ extensions/iconify/js/iconify.min.js ]
+        css:                            [ core/css/iconify-icons ]
+        files:                          [ modules/iconifyAPI/js/iconify.min.js ]
         js:                             []
         init_function:                  []
 
@@ -663,9 +855,9 @@ resources:
       id:                               algolia
       comment:                          Resources used by Algolia Instantsearch
       region:                           head
-      layout:                           [ page, post, app ]
+      layout:                           [ home, page, post, collection ]
       required:                         ondemand
-      script_load:                      sync
+      script_load:                      defer
       data:
         files:                          [
                                           adapter/js/algolia.js,
@@ -676,131 +868,24 @@ resources:
         init_function:                  [ j1.adapter.algolia.init ]
 
   # ----------------------------------------------------------------------------
-  # MMenu Light
+  # Clipboard
   #
-  - name:                               Mobile Menu
+  - name:                               Clipboard
     resource:
-      id:                               mmenu
+      id:                               clipboard
       enabled:                          true
-      comment:                          module mmenu
+      comment:                          module clipboard
       region:                           head
-      layout:                           [ all ]
-      required:                         always
-      script_load:                      sync
-      dependencies:                     false
-      pass_init_data:                   false
-      data:
-        css:                            []
-        files:                          [ adapter/js/mmenu.js ]
-        js:                             []
-        init_function:                  [ j1.adapter.mmenu.init ]
-
-# ==============================================================================
-# Additional Apps and Modules - loaded ASYCHRONOUSLY (defer)
-# ------------------------------------------------------------------------------
-
-  # ----------------------------------------------------------------------------
-  # LightGallery
-  #
-  - name:                               LightGallery
-    resource:
-      id:                               light_gallery
-      enabled:                          true
-      comment:                          module lightgallery
-      region:                           head
-      layout:                           [ home, page, post, app, raw ]
+      layout:                           [ page, post, collection ]
       required:                         ondemand
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   false
       data:
-        css:                            [
-                                          extensions/light_gallery/css/core/lightgallery,
-                                          extensions/light_gallery/css/core/lg-transitions,
-                                          extensions/light_gallery/css/core/lg-fb-comment-box,
-                                          extensions/light_gallery/css/themes/uno
-                                        ]
-        files:                          []
-        js:                             [
-                                          extensions/light_gallery/js/core/lightgallery,
-                                          extensions/light_gallery/js/modules/j1/j1-video,
-                                          extensions/light_gallery/js/modules/lg-autoplay,
-                                          extensions/light_gallery/js/modules/lg-fullscreen,
-                                          extensions/light_gallery/js/modules/lg-hash,
-                                          extensions/light_gallery/js/modules/lg-pager,
-                                          extensions/light_gallery/js/modules/lg-share,
-                                          extensions/light_gallery/js/modules/lg-thumbnail,
-                                          extensions/light_gallery/js/modules/lg-zoom
-                                        ]
-        init_function:                  []
-
-  # ----------------------------------------------------------------------------
-  # VideoJS Player
-  #
-  - name:                               VideoJS Player
-    resource:
-      id:                               video_js
-      enabled:                          true
-      comment:                          module videojs
-      region:                           head
-      layout:                           [ home, page, post, app, raw ]
-      required:                         ondemand
-      script_load:                      sync
-      dependencies:                     false
-      pass_init_data:                   false
-      data:
-        css:                            [
-                                          extensions/videojs/css/video-js,
-                                          extensions/videojs/css/themes/city,
-                                          extensions/videojs/css/themes/fantasy,
-                                          extensions/videojs/css/themes/forest,
-                                          extensions/videojs/css/themes/sea
-                                        ]
-        files:                          []
-        js:                             [
-                                          extensions/videojs/js/video
-                                        ]
-        init_function:                  []
-
-  # ----------------------------------------------------------------------------
-  # Vimeo Froogaloop API
-  #
-  - name:                               VimeoFroogaloopAPI
-    resource:
-      id:                               vimeo_froogaloop
-      enabled:                          true
-      comment:                          module vimeo_froogaloop
-      region:                           head
-      layout:                           [ home, page, post, app, raw ]
-      required:                         ondemand
-      script_load:                      defer
-      dependencies:                     false
-      pass_init_data:                   false
-      data:
-        css:                            []
-        files:                          [ extensions/vimeo/froogaloop/js/froogaloop2.min.js ]
-        js:                             []
-        init_function:                  []
-
-  # ----------------------------------------------------------------------------
-  # Vimeo Player
-  #
-  - name:                               VimeoPlayerAPI
-    resource:
-      id:                               vimeo_player
-      enabled:                          true
-      comment:                          module vimeo_player
-      region:                           head
-      layout:                           [ home, page, post, app, raw ]
-      required:                         ondemand
-      script_load:                      defer
-      dependencies:                     false
-      pass_init_data:                   false
-      data:
-        css:                            []
-        files:                          []
-        js:                             [ extensions/vimeo/player/js/player ]
-        init_function:                  []
+        css:                            [ modules/clipboard/css/theme/uno ]
+        files:                          [ adapter/js/clipboard.js ]
+        js:                             [ modules/clipboard/js/clipboard ]
+        init_function:                  [ j1.adapter.clipboard.init ]
 
   # ----------------------------------------------------------------------------
   # Carousel
@@ -819,10 +904,10 @@ resources:
       data:
         css:                            []
         files:                          [
-                                          extensions/carousel/css/carousel.css,
-                                          extensions/carousel/css/carousel_transitions.css,
-                                          extensions/carousel/css/theme/uno.css,
-                                          extensions/carousel/js/carousel.js,
+                                          modules/carousel/css/carousel.css,
+                                          modules/carousel/css/carousel_transitions.css,
+                                          modules/carousel/css/theme/uno.css,
+                                          modules/carousel/js/carousel.js,
                                           adapter/js/carousel.js
                                         ]
         js:                             []
@@ -831,48 +916,168 @@ resources:
   # ----------------------------------------------------------------------------
   # Justified Gallery
   #
-  - name:                               J1 Justified Gallery
+  - name:                               Justified Gallery
     resource:
       id:                               justified_gallery
       enabled:                          true
       comment:                          module justified gallery
       region:                           head
-      layout:                           [ home, page, post, app, raw, collection ]
+      layout:                           [ home, page, post, collection, raw, app ]
       required:                         ondemand
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   true
       data:
         css:                            [
-                                          extensions/justified_gallery/css/justifiedGallery,
-                                          extensions/justified_gallery/css/theme/uno
+                                          modules/justifiedGallery/css/justifiedGallery,
+                                          modules/justifiedGallery/css/theme/uno
                                         ]
-        files:                          [
-                                          adapter/js/justified_gallery.js
-                                        ]
-        js:                             [ extensions/justified_gallery/js/justifiedGallery ]
+        files:                          [ adapter/js/jf_gallery.js ]
+        js:                             [ modules/justifiedGallery/js/justifiedGallery ]
         init_function:                  [ j1.adapter.jf_gallery.init ]
 
   # ----------------------------------------------------------------------------
-  # Bootstrap Tour - https://github.com/sorich87/bootstrap-tour/
+  # LightGallery
   #
-  # - name:                               J1 Bootstrap Tour
-  #   resource:
-  #     id:                               bs_tour
-  #     enabled:                          false
-  #     comment:                          module bs tour
-  #     region:                           head
-  #     layout:                           [ home, page, post, app, raw, collection ]
-  #     required:                         ondemand
-  #     script_load:                      defer
-  #     dependencies:                     false
-  #     pass_init_data:                   true
-  #     data:
-  #       css:                            [ extensions/bs_tour/css/bootstrap-tour ]
-  #       files:                          []
-  #       js:                             [ extensions/bs_tour/js/bootstrap-tour ]
-  #       init_function:                  []
+  - name:                               LightGallery
+    resource:
+      id:                               light_gallery
+      enabled:                          true
+      comment:                          module lightgallery
+      region:                           head
+      layout:                           [ home, page, post, collection, raw, app ]
+      required:                         ondemand
+      script_load:                      defer
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            [
+                                          modules/lightGallery/css/core/lightgallery,
+                                          modules/lightGallery/css/core/lg-transitions,
+                                          modules/lightGallery/css/core/lg-fb-comment-box,
+                                          modules/lightGallery/css/themes/uno
+                                        ]
+        files:                          []
+        js:                             [
+                                          modules/lightGallery/js/core/lightgallery,
+                                          modules/lightGallery/js/modules/j1/j1-video,
+                                          modules/lightGallery/js/modules/lg-autoplay,
+                                          modules/lightGallery/js/modules/lg-fullscreen,
+                                          modules/lightGallery/js/modules/lg-hash,
+                                          modules/lightGallery/js/modules/lg-pager,
+                                          modules/lightGallery/js/modules/lg-share,
+                                          modules/lightGallery/js/modules/lg-thumbnail,
+                                          modules/lightGallery/js/modules/lg-zoom
+                                        ]
+        init_function:                  []
 
+  # ----------------------------------------------------------------------------
+  # VideoJS Player
+  #
+  - name:                               VideoJS Player
+    resource:
+      id:                               video_js
+      enabled:                          true
+      comment:                          module videojs
+      region:                           head
+      layout:                           [ home, page, post, collection ]
+      required:                         ondemand
+      script_load:                      defer
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            [
+                                          modules/videojs/css/video-js,
+                                          modules/videojs/css/themes/city,
+                                          modules/videojs/css/themes/fantasy,
+                                          modules/videojs/css/themes/forest,
+                                          modules/videojs/css/themes/sea
+                                        ]
+        files:                          []
+        js:                             [
+                                          modules/videojs/js/video
+                                        ]
+        init_function:                  []
+
+  # ----------------------------------------------------------------------------
+  # Vimeo Froogaloop API
+  #
+  - name:                               VimeoFroogaloopAPI
+    resource:
+      id:                               vimeo_froogaloop
+      enabled:                          true
+      comment:                          module vimeo_froogaloop
+      region:                           head
+      layout:                           [ home, page, post, collection ]
+      required:                         ondemand
+      script_load:                      defer
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            []
+        files:                          [ modules/vimeo/froogaloop/js/froogaloop2.min.js ]
+        js:                             []
+        init_function:                  []
+
+  # ----------------------------------------------------------------------------
+  # Vimeo Player
+  #
+  - name:                               Vimeo Player
+    resource:
+      id:                               vimeo_player
+      enabled:                          true
+      comment:                          module vimeo_player
+      region:                           head
+      layout:                           [ home, page, post, collection ]
+      required:                         ondemand
+      script_load:                      defer
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            []
+        files:                          []
+        js:                             [ modules/vimeo/player/js/player ]
+        init_function:                  []
+
+  # ----------------------------------------------------------------------------
+  # noUiSlider
+  #
+  - name:                               noUiSlider
+    resource:
+      id:                               nouislider
+      enabled:                          false
+      comment:                          module nouislider
+      region:                           head
+      layout:                           [ page, post, collection ]
+      required:                         ondemand
+      script_load:                      defer
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            [ modules/noUISlider/css/noUISlider ]
+        files:                          []
+        js:                             [ modules/noUISlider/js/noUISlider ]
+        init_function:                  []
+
+  # ----------------------------------------------------------------------------
+  # iFrameResizer
+  #
+  - name:                               iFrameResizer
+    resource:
+      id:                               iframe_resizer
+      enabled:                          true
+      comment:                          module iframeResizer
+      region:                           head
+      layout:                           [ page, post, collection, app, raw ]
+      required:                         ondemand
+      script_load:                      sync
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            []
+        files:                          []
+        js:                             [ modules/iframeResizer/js/iframeResizer ]
+        init_function:                  []
 
 # ------------------------------------------------------------------------------
 # END config

@@ -8,9 +8,10 @@ index:                                  [ Template, Roundtrip, Typography ]
 categories:                             [ pages ]
 
 permalink:                              /pages/public/learn/roundtrip/typography/
-regenerate:                             false
+regenerate:                             true
 
 toc:                                    true
+advertising:                            false
 
 resources:                              []
 resource_options:
@@ -21,8 +22,11 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.3
       slides:
-        - url:                          /assets/images/pages/roundtrip/typography-1920x1280-bw.jpg
+        - url:                          /assets/images/pages/roundtrip/typography-1920x1280-bw.webp
           alt:                          Photo by Alice Donovan Rousel on Unsplash
+          preload:                      0
+          transitionDuration:           fast
+          resolutionRefreshRate:        500
           badge:
             type:                       unsplash
             author:                     Alice Donovan Rousel

@@ -24,29 +24,10 @@ about_config:
 # User configuration settings
 #
 settings:
-  enabled:                              true
-  placement:                            navbar
-  target:                               _blank
-  search_input:                         jss-input
-  results_output:                       jss-panel
-  results_container:                    jss-results
-  index_data:                           /assets/data/search.yml
-  result_limit:                         1000
-  result_truncate:                      100
-  no_results_text:                      The search has no results
-  min_search_item_len:                  3
-  search_fuzzy:                         false
-  search_exlude:                        [ Impress, License ]
-  result_template: >
-                                        <li>
-                                          <div>
-                                            <h4 class="result-item"> <a href="{url}" target="{target}">{title}</a> </h4>
-                                            <h6 class="result-item">{tagline}</h6>
-                                            <p class="result-group-item-text">{excerpt}</p>
-                                            <p> <small class="result-group-item-text">{tags}</small></p>
-                                          </div>
-                                        </li>
 
+  enabled:                              true
+  min_search_item_len:                  3
+  search_exlude:                        [ Impress, License ]
 
 # ------------------------------------------------------------------------------
 # END config

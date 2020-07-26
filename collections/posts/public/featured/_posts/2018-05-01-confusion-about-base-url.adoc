@@ -21,8 +21,8 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/banner/jekyll.1200x600-bw.jpg
-          alt:                          jekyll.1200x600-bw
+        - url:                          /assets/images/modules/attics/banner/jekyll.1200x600-bw.webp
+          alt:                          jekyll.1200x600-bw.webp
 ---
 
 // NOTE:  General Asciidoc page attributes settings

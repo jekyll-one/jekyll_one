@@ -38,22 +38,22 @@ settings:
         id:                             home_intro_panel
         comment:                        Home Intro Panel
         type:                           intro
-        animate:                        
+        animate:
         title:                          All in One
         tagline:                        top features
         description: >
-                                        People quite often ask, if static websites make sense for 
+                                        People quite often ask, if static websites make sense for
                                         anything beyond a one-page website. Some other see in static websites
                                         the stone age of the World Wide Web. What's about of static websites
                                         today? What's achiveable?
                                         <br/><br/>
-                                        This board highlights top features, what make static webs not 
-                                        only an option, but an attractive method to create fast, secure 
+                                        This board highlights top features, what make static webs not
+                                        only an option, but an attractive method to create fast, secure
                                         and sophisticated websites for many use cases.
         style:                          flat
         raised:
         lane_span:                      fixed
-        helper_classes:
+        helper_classes:                 mt-2
 
         cards:
 
@@ -68,7 +68,7 @@ settings:
               icon_size:                3x
               icon_color:               bg-primary                              # md-indigo
               text: >
-                                        The Web is everywhere. J1 Template supports modern 
+                                        The Web is everywhere. J1 Template supports modern
                                         web browsers on all devices. For best results on PCs,
                                         Tablets and SmartPhones.
 
@@ -88,7 +88,7 @@ settings:
             card:
               enabled:                  true
               type:                     text
-              title:                    HTML5 &#xB7; CSS3 &#xB7; JS
+              title:                    HTML &#xB7; CSS &#xB7; JS
               tagline:                  J1 Template
               icon:                     language-html5
               icon_family:              MDI
@@ -122,8 +122,8 @@ settings:
               icon_size:                3x
               icon_color:               bg-primary                              # md-indigo
               text: >
-                                        No programming is needed to start using J1. The Template 
-                                        provides a large number of building blocks to create 
+                                        No programming is needed to start using J1. The Template
+                                        provides a large number of building blocks to create
                                         modern web pages in minutes.
 
               buttons:
@@ -154,7 +154,7 @@ settings:
         icon_family:                    MDI
         style:                          flat
         lane_span:                      fixed
-        helper_classes:
+        helper_classes:                 mt-2
 
         header:
           enabled:                      true
@@ -193,7 +193,7 @@ settings:
               enabled:                  true
               type:                     service
               icon:                     bullseye
-              icon_size:                8x
+              icon_size:                mdi-6x
               icon_color:               md-grey-800
               href:                     /pages/public/panel/service_panel/core
               title:                    J1 Template
@@ -226,7 +226,7 @@ settings:
               enabled:                  true
               type:                     service
               icon:                     locker-multiple
-              icon_size:                8x
+              icon_size:                mdi-6x
               icon_color:               md-grey-800
               href:                     /pages/public/panel/service_panel/components/
               title:                    J1 Template
@@ -259,7 +259,7 @@ settings:
               enabled:                  true
               type:                     service
               icon:                     language-javascript
-              icon_size:                8x
+              icon_size:                mdi-6x
               icon_color:               md-grey-800
               href:                     /pages/public/panel/service_panel/modules/
               title:                    J1 Template
@@ -300,15 +300,15 @@ settings:
         id:                             home_news_panel
         comment:                        Home News Panel
         type:                           news
-        animate:        
+        animate:
         title:                          Creators Blog
         tagline:                        latest news
-        helper_classes:
+        helper_classes:                 mt-2
         description: >
                                         Explore the blog and find some interesting articles around Jekyll and
                                         website creation processes in general. And this blog is an excellent
-                                        example how J1 and Jekyll can be used for blogging.                                      
-                                        <br/><br/>
+                                        example how J1 and Jekyll can be used for blogging.
+                                        <br/>
                                         Have fun!
 
         cards:
@@ -319,7 +319,7 @@ settings:
               category:                 featured
 #             truncatewords:            30                                      # currently NOT used
               max_posts:                3
-              readmore_text:            read more
+              readmore_text:            Read
 
   # # ----------------------------------------------------------------------------
   # # STEP Panel
@@ -335,14 +335,14 @@ settings:
   #       type:                       step
   #       style:                      dark
   #       lane_span:                  fixed
-  # 
+  #
   #       cards:
   #         - card:
   #             title:                Marketing & Consulting
   #             tagline: >
   #                                   Donec id elit non mi porta gravida at eget
   #                                   metus id elit mi egetine. Fusce dapibus
-  
+
 
 # ------------------------------------------------------------------------------
 # END config

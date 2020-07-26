@@ -7,9 +7,9 @@ date:                                   2016-11-26 00:00:00 +0100
 series:
 
 tags:                                   [ Wikipedia ]
-index:                                  [ 
-                                          USA, Northwest Region, Rocky 
-                                          Mountains, Rivers 
+index:                                  [
+                                          USA, Northwest Region, Rocky
+                                          Mountains, Rivers
                                         ]
 categories:                             []
 
@@ -20,7 +20,7 @@ resource_options:
   - attic:
       padding_top:                      400
       padding_bottom:                   50
-      opacity:                          0.5 
+      opacity:                          0.5
       slides:
         - url:                          /assets/images/collections/blog/wikipedia/columbia-river.1200x400.jpg
           alt:                          Columbia River

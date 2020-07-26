@@ -4,7 +4,7 @@ tagline:                                common components
 description:                            Themes Previewer for common components of a selected theme.
 
 tags:                                   [ App, Previewer ]
-index:                                   [
+index:                                  [
                                           Bootstrap, Theme, Preview, Common,
                                           Component, Navbars, Buttons, Typography,
                                           Tables, Forms, Navs, Pills, Breadcrumbs,
@@ -20,14 +20,14 @@ flowtext:                               false
 permalink:                              /pages/public/previewer/theme/
 regenerate:                             false
 
-resources:                              []
+resources:                              [ rouge ]
 resource_options:
   - attic:
       padding_top:                      400
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/pages/roundtrip/themes-1920x1280-bw.jpg
+        - url:                          /assets/images/pages/roundtrip/themes-1920x1280-bw.webp
           alt:                          Photo by Clem Onojeghuo on Unsplash
           badge:
             type:                       unsplash
@@ -59,7 +59,6 @@ include::{includedir}/attributes.asciidoc[tag=urls]
 
 // Additional ASCIIDOC attributes goes here
 //
-
 
 ++++
   <!-- Prepend H1 tag here -->
@@ -230,6 +229,7 @@ pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-bg-primary"></i>]
 Refer to: link:{bs_doc_components_buttons}[Bootstrap Docs, window="_blank"].
 
 === Active buttons
+
 Buttons will appear pressed (with a darker background, darker border, and
 inset shadow) when active.
 ++++
@@ -245,6 +245,7 @@ inset shadow) when active.
 ++++
 
 === Disabled buttons
+
 Buttons look inactive by adding the disabled boolean attribute to any
 <button> element.
 ++++
@@ -260,6 +261,7 @@ Buttons look inactive by adding the disabled boolean attribute to any
 ++++
 
 === Outline buttons
+
 In need of a button, but not the hefty background colors they bring? Replace
 the default modifier classes with the `.btn-outline-*` ones to remove all
 background images and colors on any button.
@@ -318,13 +320,13 @@ state for these buttons is only updated via click event on the button.
 ++++
 <div class="doc-example mb-3">
   <div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-primary btn-raised active">
+    <label class="btn btn-primary btn-raised btn-flex active">
       <input type="checkbox" checked> Checkbox 1
     </label>
-    <label class="btn btn-primary btn-raised">
+    <label class="btn btn-primary btn-raised btn-flex">
       <input type="checkbox"> Checkbox 2
     </label>
-    <label class="btn btn-primary btn-raised">
+    <label class="btn btn-primary btn-flex btn-raised">
       <input type="checkbox"> Checkbox 3
     </label>
   </div>
@@ -334,13 +336,13 @@ state for these buttons is only updated via click event on the button.
 ++++
 <div class="doc-example mb-5">
   <div class="btn-group btn-group-toggle" data-toggle="buttons">
-    <label class="btn btn-secondary btn-raised active">
+    <label class="btn btn-secondary btn-raised btn-flex active">
       <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
     </label>
-    <label class="btn btn-secondary btn-raised">
+    <label class="btn btn-secondary btn-raised btn-flex">
       <input type="radio" name="options" id="option2" autocomplete="off"> Radio
     </label>
-    <label class="btn btn-secondary btn-raised">
+    <label class="btn btn-secondary btn-raised btn-flex">
       <input type="radio" name="options" id="option3" autocomplete="off"> Radio
     </label>
   </div>
@@ -1149,9 +1151,6 @@ pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-bg-primary"></i>]
 Refer to: link:{bs_doc_components_cards}[Bootstrap Docs, window="_blank"].
 
 ++++
-<!-- Containers  - Cards
-============================================================================ -->
-
 <div class="doc-example mb-3">
   <div class="row">
 
@@ -1632,7 +1631,6 @@ include popper.min.js before bootstrap.js or use bootstrap.bundle.min.js or
 bootstrap.bundle.js which contains Popper.js in order for popovers to work.
 
 Note: Popovers require the tooltip plugin as a dependency.
-
 
 pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-bg-primary"></i>]
 Refer to: link:{bs_doc_components_popovers}[Bootstrap Docs, window="_blank"].

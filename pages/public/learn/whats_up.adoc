@@ -9,8 +9,9 @@ categories:                             [ pages ]
 
 permalink:                              /pages/public/learn/whats_up/
 regenerate:                             false
+toc:                                    true
 
-resources:                              [ lightbox ]
+resources:                              []
 resource_options:
   - ssm:
       mode:                             menu
@@ -19,7 +20,7 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/runner-1920x1200-bw.jpg
+        - url:                          /assets/images/modules/attics/runner-1920x1200-bw.webp
           alt:                          Photo by Alexander Redl on Unsplash
           badge:
             type:                       unsplash
@@ -82,7 +83,6 @@ countries and cultures go for RTL, but currently we've *no* support for RTL
 implemented.
 
 For that reason, it was a good decision to start from here.
-
 
 == Whats up
 

@@ -19,7 +19,7 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/pages/roundtrip/bootstrap-1920x1000-bw.jpg
+        - url:                          /assets/images/pages/roundtrip/bootstrap-1920x1000-bw.webp
           alt:                          bootstrap
 ---
 
@@ -57,27 +57,27 @@ include::{includedir}/attributes.asciidoc[tag=data]
 // Include sub-documents
 // -----------------------------------------------------------------------------
 
-Advanced Bootstrap Modals are based on the free package of 
-link:{mdb-home}[Material Design for Bootstrap, {window}] on version 
+Advanced Bootstrap Modals are based on the free package of
+link:{mdb-home}[Material Design for Bootstrap, {window}] on version
 *4.3.2*. This version can be found following this link:
-link:{mdb-bs-modals-legacy}[Enhanced Bootstrap Modals, {window}]. A more 
+link:{mdb-bs-modals-legacy}[Enhanced Bootstrap Modals, {window}]. A more
 current version is available from here: link:{mdb-bs-modals}[Modal examples & templates, {window}].
 
-Bootstrap modals are used to add dialogs to your web pages for user 
-notifications. To highlight important information to your vistors. Modals 
-are positioned over everything else in the document so that the notification 
+Bootstrap modals are used to add dialogs to your web pages for user
+notifications. To highlight important information to your vistors. Modals
+are positioned over everything else in the document so that the notification
 gets the users attention.
 
 
 == BS advanced Modals
 
 To improve your visitors experience on important information that shouldn't
-missed, modals are a good choice to bring the users attention on. Using J1 
+missed, modals are a good choice to bring the users attention on. Using J1
 Template BS enhanced predefined modal styles, some emotional weight is added
-to the information displayed - ranging from an info level, simple warning to 
+to the information displayed - ranging from an info level, simple warning to
 critical messages.
 
-NOTE: For more information on how to use Bootstrap’s JavaScript modal 
+NOTE: For more information on how to use Bootstrap’s JavaScript modal
 plugin, refer to: link:{bs_doc_components_modal}[Bootstrap Docs, {window}].
 
 
@@ -125,4 +125,3 @@ what the link:{roundtrip-responsive-tables}[BS tables extensions] can do!
 // -------------------------------------------------------------------
 
 include::{documentsdir}/419_advanced_modals_html.asciidoc[]
-

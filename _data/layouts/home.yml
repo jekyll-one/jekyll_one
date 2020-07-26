@@ -173,13 +173,13 @@ lanes:
       id:                               home_teaser_banner
       region:                           body-main
       type:                             async
-      helper_classes:                   mt-5 mb-3
+      helper_classes:                   mt-5 mb-5
 
   # ----------------------------------------------------------------------------
   # DIVIDER banner
   #
   - lane:
-      enabled:                          false
+      enabled:                          true
       id:                               divider-1
       region:                           body-main
       type:                             async
@@ -203,7 +203,7 @@ lanes:
       id:                               divider-2
       region:                           body-main
       type:                             async
-      helper_classes: 
+      helper_classes:
 
   # ----------------------------------------------------------------------------
   # PARALLAX banner
@@ -219,7 +219,7 @@ lanes:
   # TEASER banner
   #
   - lane:
-      enabled:                          true
+      enabled:                          false
       id:                               home_welcome_banner
       region:                           body-main
       type:                             async
@@ -253,7 +253,7 @@ lanes:
       id:                               divider-3
       region:                           body-main
       type:                             async
-      helper_classes: 
+      helper_classes:
 
   # ----------------------------------------------------------------------------
   # NEWS panel
@@ -263,7 +263,7 @@ lanes:
       id:                               home_news_panel
       region:                           body-main
       type:                             async
-      helper_classes:                   mt-0 mb-5
+      helper_classes:                   mt-5 mb-5
 
 
 # ------------------------------------------------------------------------------

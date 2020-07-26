@@ -22,7 +22,7 @@ Asciidoctor::Extensions.register do
     use_dsl
     named :emoji
     name_positional_attributes 'size', 'modifier'
-    default_attrs 'size' => '1x', 'modifier' => 'no-modifier'
+    default_attrs 'size' => '1x', 'modifier' => ''
 
     def process parent, target, attributes
       doc = parent.document

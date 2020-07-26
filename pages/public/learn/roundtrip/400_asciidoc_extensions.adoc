@@ -10,14 +10,14 @@ categories:                             [ pages ]
 permalink:                              /pages/public/learn/roundtrip/asciidoc_extensions/
 regenerate:                             false
 
-resources:                              [ lightbox ]
+resources:                              [ lightbox, iconify, twemoji ]
 resource_options:
   - attic:
       padding_top:                      400
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/pages/roundtrip/puzzle-1920x1280-bw.jpg
+        - url:                          /assets/images/pages/roundtrip/puzzle-1920x1280-bw.webp
           alt:                          puzzle-1920x1280-bw
 #         badge:
 #           type:                       unsplash

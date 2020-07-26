@@ -1,6 +1,6 @@
 ---
 title:                                  Framer
-tagline:                                Test page for J1 module framer
+tagline:                                automagic iframes
 description:                            Test page for J1 module framer
 
 tags:                                   [ App, Previewer ]
@@ -9,17 +9,18 @@ categories:                             [ pages ]
 
 permalink:                              /pages/public/iframer/
 regenerate:                             false
+toc:                                    false
 
-resources:                             []
+resources:                             [ iframe_resizer ]
 resource_options:
   - attic:
       padding_top:                      400
       padding_bottom:                   50
-      opacity:                          0.5 
+      opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/jessica-ruscello-1920x1280.jpg
+        - url:                          /assets/images/modules/attics/jessica-ruscello-1920x1280.webp
           alt:                          Photo by Jessica Ruscello Unsplash
-#         caption:                      
+#         caption:
 #           text:                       Photo by Jessica Ruscello on Unsplash
 #           href:                       https://unsplash.com/@jasonrosewell
           badge:
@@ -33,7 +34,8 @@ resource_options:
 :page-liquid:
 
 // Set other global page attributes here
-// -------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+
 
 == Automagic iFrame
 
@@ -42,8 +44,8 @@ Resize window or click one of the links in the iFrame to watch it resize.
 ++++
 <p id="callback" class="ml-2"></p>
 
-<iframe 
-  src="/assets/themes/j1/extensions/iframe_resizer/examples/frame.content.html" 
+<iframe
+  src="/assets/themes/j1/modules/iframeResizer/examples/frame.content.html"
   width="100%"
   style="border-width:0;"
   scrolling="no">
@@ -53,8 +55,8 @@ Resize window or click one of the links in the iFrame to watch it resize.
 	iFrameResize({
 		log:                    true,
     minHeight:              250,
-		resizedCallback: function(messageData){
-     
+		onResized: function(messageData){
+
 			$('p#callback').html(
 				'<b>Frame ID:</b> '    + messageData.iframe.id +
 				' <b>Height:</b> '     + messageData.height +
@@ -62,17 +64,17 @@ Resize window or click one of the links in the iFrame to watch it resize.
 				' <b>Event type:</b> ' + messageData.type
 			);
 		},
-		messageCallback: function(messageData){
-     
+		onMessage: function(messageData){
+
 			$('p#callback').html(
 				'<b>Frame ID:</b> '    + messageData.iframe.id +
 				' <b>Message:</b> '    + messageData.message
 			);
 			alert(messageData.message);
 			document.getElementsByTagName('iframe')[0].iFrameResizer.sendMessage('Hello back from parent page');
-		},    
-		closedCallback: function(id){
-     
+		},
+		onClosed: function(id){
+
 			$('p#callback').html(
 				'<b>IFrame (</b>'    + id +
 				'<b>) removed from page.</b>'
