@@ -140,7 +140,10 @@ defaults:
                                           <div>
                                             <h4 class="result-item"> <a href="{url}" target="{target}">{title} - {tagline}</a> </h4>
                                             <p class="result-group-item-text">{excerpt}</p>
-                                            <p class="result-group-item-text small text-muted mb-3"><i class="mdi mdi-18px mdi-tag mr-2"></i>{tags}</p>
+                                            <p class="result-group-item-text small text-muted mb-3">
+                                              <i class="mdi mdi-calendar-blank mdi-18px mr-1"></i>{date}
+                                              <i class="mdi mdi-tag mdi-18px ml-2 mr-1"></i>{tags}
+                                            </p>
                                           </div>
                                         </li>
 

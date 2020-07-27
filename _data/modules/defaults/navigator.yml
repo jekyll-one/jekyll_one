@@ -199,7 +199,7 @@ defaults:
     icon_size:                          mdi-2x
     search_icon:                        magnify
     close_icon:                         close
-    clear_icon:                         notification-clear-all
+    clear_icon:                         filter-remove
     input_color:                        rgba(0, 0, 0, 0.7)                      # rgba-darken-700
     background_color:                   "#FAFAFA"                               # md-grey-50
     placeholder:                        QuickSearch
