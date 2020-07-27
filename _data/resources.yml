@@ -350,7 +350,7 @@ resources:
   #   5   log4javascript                log4javascript@1.4.15
   #   6   Bootstrap                     bootstrap@4.4.1
   #   6   bs_material_design            bootstrap-material-design@4.0.0-beta.4
-  #   7   j1_template                   j1_template_4@2020.0.14
+  #   7   j1_template                   j1_template_4@2020.0.15
   #   8   tocbot                        tocbot@4.11.2
   #   9   jekyll_search                 simple_jekyll_search@1.1.5
   #   10  bs_theme_switcher             bs_theme_switcher@1.1.5

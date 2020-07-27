@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "j1_starter",
-  "version": "2020.0.14",
-  "description": "J1 Template starter Web",
+  "name": "jekyll_one",
+  "version": "2020.0.15",
+  "description": "J1 Template",
   "homepage": "https://your.site",
   "author": {
     "name": "Your Name",
