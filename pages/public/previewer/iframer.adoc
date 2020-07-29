@@ -18,7 +18,7 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/jessica-ruscello-1920x1280.webp
+        - url:                          /assets/images/modules/attics/jessica-ruscello-1920x1280.jpg
           alt:                          Photo by Jessica Ruscello Unsplash
 #         caption:
 #           text:                       Photo by Jessica Ruscello on Unsplash

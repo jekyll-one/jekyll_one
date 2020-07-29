@@ -95,8 +95,8 @@ end::tags[]
 // -----------------------------------------------------------------------------
 tag::data[]
 
-:data-images-standalone:                          "pages/roundtrip/100_present_images/lightbox-image-1.jpg, Golden Gate Bridge with San Francisco in distance, pages/roundtrip/100_present_images/lightbox-image-2.webp, Forest with mountains behind"
-:data-images-group:                               "pages/roundtrip/100_present_images/lightbox-image-1.jpg, Golden Gate Bridge with San Francisco in distance, pages/roundtrip/100_present_images/lightbox-image-2.webp, Forest with mountains behind"
+:data-images-standalone:                          "pages/roundtrip/100_present_images/lightbox-image-1.jpg, Golden Gate Bridge with San Francisco in distance, pages/roundtrip/100_present_images/lightbox-image-2.jpg, Forest with mountains behind"
+:data-images-group:                               "pages/roundtrip/100_present_images/lightbox-image-1.jpg, Golden Gate Bridge with San Francisco in distance, pages/roundtrip/100_present_images/lightbox-image-2.jpg, Forest with mountains behind"
 
 end::data[]
 

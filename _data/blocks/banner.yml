@@ -271,7 +271,7 @@ settings:
               gridify:                    false
               size_y:                     450
               darken:                     1
-              background_image:           /assets/images/modules/attics/ideas-start-here-1920x1280-bw.webp
+              background_image:           /assets/images/modules/attics/ideas-start-here-1920x1280-bw.jpg
 
 
   # ----------------------------------------------------------------------------
@@ -308,7 +308,7 @@ settings:
               gridify:                    true
               size_y:                     450
               darken:                     6
-              background_image:           /assets/images/modules/attics/ideas-start-here-1920x1280-bw.webp
+              background_image:           /assets/images/modules/attics/ideas-start-here-1920x1280-bw.jpg
 
     # --------------------------------------------------------------------------
     # parallax_banner_einstein

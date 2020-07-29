@@ -6,7 +6,7 @@ description:                            Auto-generated welcome post
 date:                                   2020-07-26 22:28:09 +0200
 series:
 adsense:                                false
-image:                                  /assets/images/modules/attics/welcome-1920x1280-bw.webp
+image:                                  /assets/images/modules/attics/welcome-1920x1280-bw.jpg
 
 tags:                                   [ Example, Post ]
 index:                                  []
@@ -19,7 +19,7 @@ resource_options:
   - attic:
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/welcome-1920x1280-bw.webp
+        - url:                          /assets/images/modules/attics/welcome-1920x1280-bw.jpg
           alt:                          Photo by Belinda Fewings on Unsplash
           alignY:                       0.3
 #         caption:

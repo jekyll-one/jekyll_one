@@ -24,7 +24,7 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/banner/docker-1280x600-bw.webp
+        - url:                          /assets/images/modules/attics/banner/docker-1280x600-bw.jpg
           alt:                          docker_banner_r-1280x500-bw
 ---
 

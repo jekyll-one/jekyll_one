@@ -6,7 +6,7 @@ description:                            Useful info on cookies and how they used
 date:                                   2019-06-01 00:00:00 +0200
 series:
 adsense:                                false
-image:                                  /assets/images/modules/attics/cookies-1920x1200-bw.webp
+image:                                  /assets/images/modules/attics/cookies-1920x1200-bw.jpg
 
 tags:                                   [ About, Cookies ]
 index:                                  [ Cookie, Usage, Type, Policy, Consent ]
@@ -21,7 +21,7 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/cookies-1920x1200-bw.webp
+        - url:                          /assets/images/modules/attics/cookies-1920x1200-bw.jpg
           alt:                          Photo by Miroslava on Unsplash
 #         caption:
 #           text:                       Photo by Miroslava on Unsplash

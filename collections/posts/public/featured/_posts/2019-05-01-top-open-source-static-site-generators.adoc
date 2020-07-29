@@ -6,7 +6,7 @@ description:                            Top open-source site generators
 date:                                   2019-05-01 00:00:00
 series:
 adsense:                                false
-image:                                  /assets/images/modules/attics/building-blocks-1920x1280-bw.webp
+image:                                  /assets/images/modules/attics/building-blocks-1920x1280-bw.jpg
 
 tags:                                   [ Jekyll, Generators ]
 index:                                  [ Jekyll, Top, Open, Source, Static, Site, Generators ]
@@ -21,7 +21,7 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/building-blocks-1920x1280-bw.webp
+        - url:                          /assets/images/modules/attics/building-blocks-1920x1280-bw.jpg
           alt:                          Photo by Ryan Quintal on Unsplash
 #         caption:
 #           text:                       Photo by Ryan Quintal on Unsplash

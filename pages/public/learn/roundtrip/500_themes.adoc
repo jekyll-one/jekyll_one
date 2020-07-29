@@ -17,7 +17,7 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/pages/roundtrip/themes-1920x1280-bw.webp
+        - url:                          /assets/images/pages/roundtrip/themes-1920x1280-bw.jpg
           alt:                          Photo by Clem Onojeghuo on Unsplash
           badge:
             type:                       unsplash

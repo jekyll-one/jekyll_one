@@ -17,7 +17,7 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5 
       slides:
-        - url:                          /assets/images/modules/attics/lianhao-1920x1280.webp
+        - url:                          /assets/images/modules/attics/lianhao-1920x1280.jpg
           alt:                          Photo by Lianhao Qu
           alignY:                       top
           badge:

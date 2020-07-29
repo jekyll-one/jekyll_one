@@ -20,7 +20,7 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/pages/roundtrip/images/bootstrap-1920x1000-bw.webp
+        - url:                          /assets/images/pages/roundtrip/images/bootstrap-1920x1000-bw.jpg
           alt:                          Photo by Ricardo Gomez Angel on Unsplash
           badge:
             type:                       unsplash

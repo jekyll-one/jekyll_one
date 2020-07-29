@@ -641,7 +641,7 @@ defaults:
         size:                           5x
 
       images:
-#       category-image:                 img26.webp
+#       category-image:                 img26.jpg
         dir:                            /assets/images/collections/blog/featured
 
       resource_options:
@@ -676,7 +676,7 @@ defaults:
         size:                           5x
 
       images:
-#       category-image:                 img26.webp
+#       category-image:                 img26.jpg
         dir:                            /assets/images/collections/blog/series
 
 

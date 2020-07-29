@@ -22,7 +22,7 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.3
       slides:
-        - url:                          /assets/images/pages/roundtrip/typography-1920x1280-bw.webp
+        - url:                          /assets/images/pages/roundtrip/typography-1920x1280-bw.jpg
           alt:                          Photo by Alice Donovan Rousel on Unsplash
           preload:                      0
           transitionDuration:           fast
