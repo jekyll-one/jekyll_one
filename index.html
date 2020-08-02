@@ -3,7 +3,7 @@ layout:                                 home
 regenerate:                             true
 
 title:                                  J1
-tagline:                                present unique
+tagline:                                create your web
 description:                            Jekyll One Template. Gem-based template made for Jekyll.
 
 tags:                                   [ Template, Jekyll, Clean, Responsive, Featured, Gem-Based ]
@@ -26,7 +26,7 @@ robots:
 #permalink:                             /
 scrollbar:                              false
 
-resources:                              [ animate ]
+resources:                              [ back2top, animate ]
 resource_options:
   - attic:
       padding_top:                      400
@@ -35,9 +35,6 @@ resource_options:
       slides:
         - url:                          /assets/images/modules/attics/alex-holyoake-1920x1280.jpg
           alt:                          Photo by Alex Holyoake on Unsplash
-#         caption:
-#           text:                       Photo by Alex Holyoake on Unsplash
-#           href:                       https://unsplash.com/@stairhopper
           badge:
             type:                       unsplash
             author:                     Alex Holyoake
@@ -45,10 +42,9 @@ resource_options:
 ---
 
 <pre>
-
   This page is created by the layout: {{ page.layout }}.
 
-  If this text is displaywd (instead of the home page expected),
+  If this text is displayed (instead of the home page expected),
   something went  wrong with the layout definitions. Check  the
   output of the Jekyll engine building this site.
 
@@ -59,14 +55,13 @@ resource_options:
   If you see this page within the J1 Template DEVELOPMENT system,
   re-run a site built running:
 
-    yarn rebuilt site
+    yarn rebuild site
 
   If you're on a RUNTIME system run a built like so:
 
-    yarn rebuilt
+    yarn rebuild
 
   and open the website again by:
 
     yarn site
-
 </pre>

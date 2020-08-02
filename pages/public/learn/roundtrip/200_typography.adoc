@@ -90,15 +90,15 @@ will happen in terms of responsiveness.
 
 ++++
 <div>
-  <button type="button" name="toggle-r-text" class="btn btn-secondary btn-raised btn-flex mt-3 mb-3">
+  <button type="button" name="toggle-r-text" class="btn btn-info btn-raised btn-flex mt-3 mb-3">
     <i class="toggle-button mdi mdi-toggle-switch-off mdi-lg mdi-md-bg-primary-50 mr-1"></i>
     Toggle rtext
   </button>
-  <div class="card card-flat mb-4">
+  <div class="mb-4">
     <div class="content">
-      <h4 class="notoc card-title">The Extremes of Good and Evil</h4>
-      <h6 class="notoc category text-gray mb-3">Cicero, Paragraph 1.10.32 · Translation by H. Rackham, Issue 1914 - De Finibus</h6>
-      <p class="card-description toggle-description no-r-text">
+      <h4 class="notoc">The Extremes of Good and Evil</h4>
+      <h6 class="notoc text-gray mb-3">Cicero, Paragraph 1.10.32 · Translation by H. Rackham, Issue 1914 - De Finibus</h6>
+      <p class="toggle-description no-r-text">
         But I must explain to you how all this mistaken idea of denouncing
         pleasure and praising pain was born and I will give you a complete
         account of the system, and expound the actual teachings of the great
@@ -146,15 +146,15 @@ of the text in action.
 
 ++++
 <div>
-  <button type="button" name="scale-r-text" class="btn btn-secondary btn-raised btn-flex mt-3 mb-3">
+  <button type="button" name="scale-r-text" class="btn btn-info btn-raised btn-flex mt-3 mb-3">
     <i class="scale-button mdi mdi-arrow-up mdi-lg mdi-md-bg-primary-50 mr-1"></i>
     Scale rtext
   </button>
-  <div class="card card-flat mb-4">
+  <div class="mb-4">
     <div class="content">
-      <h4 class="notoc card-title">The Extremes of Good and Evil</h4>
-      <h6 class="notoc category text-gray mb-3">Cicero, Paragraph 1.10.33 · Translation by H. Rackham, Issue 1914 - De Finibus</h6>
-      <p class="card-description scale-description r-text-300">
+      <h4 class="notoc">The Extremes of Good and Evil</h4>
+      <h6 class="notoc text-gray mb-3">Cicero, Paragraph 1.10.33 · Translation by H. Rackham, Issue 1914 - De Finibus</h6>
+      <p class="scale-description r-text-300">
         On the other hand, we denounce with righteous indignation and dislike men who
         are so beguiled and demoralized by the charms of pleasure of the moment, so
         blinded by desire, that they cannot foresee the pain and trouble that are
@@ -198,7 +198,7 @@ base.
 That way, five series are available by the five scale factors. See the following
 table how `r-text` scales.
 
-[cols="3,2,7a", options="header", role="table-responsive-stacked-lg mb-5"]
+[cols="3,2,7a", options="header", role="table-responsive-stacked-lg"]
 |===============================================================================
 |Property | Factor |Example text
 
@@ -298,7 +298,7 @@ used. All Bootstrap base classes can be used to colorize:
 |`nav-pills-primary`
 |
 ++++
-<button type="button" class="btn btn-primary btn-raised btn-round">
+<button type="button" class="btn btn-secondary btn-raised btn-round">
   color example
 </button>
 ++++

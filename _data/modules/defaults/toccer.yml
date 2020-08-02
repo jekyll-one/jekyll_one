@@ -160,7 +160,7 @@ defaults:
   throttleTimeout:                      50
   scrollSmooth:                         true
   scrollSmoothDuration:                 300
-  scrollSmoothOffset:                   -90
+  scrollSmoothOffset:                   -90                                     # TODO: to be removed, calculated dynamically
 
 
 # ------------------------------------------------------------------------------

@@ -73,7 +73,7 @@ settings:
       enabled:                          false
 
       built:                              
-        execute:                        false                                   # rebuilt disabled for testing (as Jekyll is running in parallel)
+        execute:                        false                                   # rebuild disabled for testing (as Jekyll is running in parallel)
         response_success:               The built request to your local site finished successfully.
         response_failed:                "The built request to your local fite has failed. Reason: "
 

@@ -106,7 +106,7 @@ See examples for Bootstrap’s powerful, responsive navigation header, the
 navbar. Includes support for branding, navigation, and more, including
 support for the collapse plugin.
 
-pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-bg-primary"></i>]
+pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-blue-900"></i>]
 Refer to: link:{bs_doc_components_navbar}[Bootstrap Docs, window="_blank"].
 
 Theming the navbar has never been easier thanks to the combination of
@@ -225,7 +225,7 @@ more with support for multiple sizes, states, and more. Bootstrap includes
 several predefined button styles, each serving its own semantic purpose,
 with a few extras thrown in for more control.
 
-pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-bg-primary"></i>]
+pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-blue-900"></i>]
 Refer to: link:{bs_doc_components_buttons}[Bootstrap Docs, window="_blank"].
 
 === Active buttons
@@ -283,9 +283,9 @@ Beside the default size, small and large buttons are available.
 
 ++++
 <div class="doc-example mb-3">
-  <button type="button" class="btn btn-primary btn-raised btn-lg">Large button</button>
-  <button type="button" class="btn btn-primary btn-raised">Default button</button>
-  <button type="button" class="btn btn-primary btn-raised btn-sm">Small button</button>
+  <button type="button" class="btn btn-secondary btn-raised btn-lg">Large button</button>
+  <button type="button" class="btn btn-secondary btn-raised">Default button</button>
+  <button type="button" class="btn btn-secondary btn-raised btn-sm">Small button</button>
 </div>
 ++++
 
@@ -320,10 +320,10 @@ state for these buttons is only updated via click event on the button.
 ++++
 <div class="doc-example mb-3">
   <div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-primary btn-raised btn-flex active">
+    <label class="btn btn-secondary btn-raised btn-flex active">
       <input type="checkbox" checked> Checkbox 1
     </label>
-    <label class="btn btn-primary btn-raised btn-flex">
+    <label class="btn btn-secondary btn-raised btn-flex">
       <input type="checkbox"> Checkbox 2
     </label>
     <label class="btn btn-primary btn-flex btn-raised">
@@ -359,7 +359,7 @@ For a more inclusive and accessible type scale, it is assuemed that
 the browser default root font-size (typically 16px) so visitors can
 customize their browser defaults as needed.
 
-pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-bg-primary"></i>]
+pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-blue-900"></i>]
 Refer to: link:{bs_doc_content_typography}[Bootstrap Docs, window="_blank"].
 
 === Headings
@@ -443,7 +443,7 @@ Using the most basic table markup, here’s how .table-based tables look in
 Bootstrap. All table styles are inherited in Bootstrap 4, meaning any nested
 tables will be styled in the same manner as the parent.
 
-pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-bg-primary"></i>]
+pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-blue-900"></i>]
 Refer to: link:{bs_doc_content_tables}[Bootstrap Docs, window="_blank"].
 
 
@@ -521,7 +521,7 @@ of newer input controls like email verification, number selection, and more.
 Here’s a quick example to demonstrate Bootstrap’s form styles. Keep reading
 for documentation on required classes, form layout, and more.
 
-pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-bg-primary"></i>]
+pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-blue-900"></i>]
 Refer to: link:{bs_doc_components_forms}[Bootstrap Docs, window="_blank"].
 
 ++++
@@ -542,7 +542,7 @@ Refer to: link:{bs_doc_components_forms}[Bootstrap Docs, window="_blank"].
       <input type="checkbox" class="form-check-input" id="exampleCheck1">
       <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
-    <button type="submit" class="btn btn-primary btn-raised">Submit</button>
+    <button type="submit" class="btn btn-secondary btn-raised">Submit</button>
   </form>
 </div>
 ++++
@@ -608,7 +608,7 @@ for building all types of navigation components. It includes some style
 overrides (for working with lists), some link padding for larger hit areas,
 and basic disabled styling.
 
-pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-bg-primary"></i>]
+pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-blue-900"></i>]
 Refer to: link:{bs_doc_components_navs}[Bootstrap Docs, window="_blank"].
 
 === Tabs
@@ -851,7 +851,7 @@ button. For proper styling, use one of the eight required contextual classes
 (e.g., .alert-success). For inline dismissal, use the alerts
 https://getbootstrap.com/docs/4.0/components/alerts/#dismissing[jQuery plugin].
 
-pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-bg-primary"></i>]
+pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-blue-900"></i>]
 Refer to: link:{bs_doc_components_alerts}[Bootstrap Docs, window="_blank"].
 
 ++++
@@ -908,7 +908,7 @@ be presented with the content of the badge. Depending on the specific
 situation, these badges may seem like random additional words or numbers
 at the end of a sentence, link, or button.
 
-pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-bg-primary"></i>]
+pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-blue-900"></i>]
 Refer to: link:{bs_doc_components_badges}[Bootstrap Docs, window="_blank"].
 
 ++++
@@ -944,7 +944,7 @@ elements, some CSS to set the width, and a few attributes. We don’t use the
 HTML5 <progress> element, ensuring you can stack progress bars, animate them,
 and place text labels over them.
 
-pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-bg-primary"></i>]
+pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-blue-900"></i>]
 Refer to: link:{bs_doc_components_progress}[Bootstrap Docs, window="_blank"].
 
 === Basic
@@ -1040,7 +1040,7 @@ lorem:sentences[2]
 
 Lightweight, flexible component for showcasing hero unit style content.
 
-pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-bg-primary"></i>]
+pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-blue-900"></i>]
 Refer to: link:{bs_doc_components_jumbotron}[Bootstrap Docs, window="_blank"].
 
 ++++
@@ -1052,7 +1052,7 @@ Refer to: link:{bs_doc_components_jumbotron}[Bootstrap Docs, window="_blank"].
       <hr class="my-4">
       <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
       <p class="lead">
-        <a class="btn btn-primary btn-raised btn-lg" href="javascript:(void)" role="button">Learn more</a>
+        <a class="btn btn-secondary btn-raised btn-lg" href="javascript:(void)" role="button">Learn more</a>
       </p>
     </div>
   </div>
@@ -1064,7 +1064,7 @@ Refer to: link:{bs_doc_components_jumbotron}[Bootstrap Docs, window="_blank"].
 List groups are a flexible and powerful component for displaying a series of
 content. Modify and extend them to support just about any content within.
 
-pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-bg-primary"></i>]
+pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-blue-900"></i>]
 Refer to: link:{bs_doc_components_list_group}[Bootstrap Docs, window="_blank"].
 
 ++++
@@ -1147,7 +1147,7 @@ manage to deliver a ton of control and customization. Built with flexbox,
 they offer easy alignment and mix well with other Bootstrap components.
 They have no margin by default, so use spacing utilities as needed.
 
-pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-bg-primary"></i>]
+pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-blue-900"></i>]
 Refer to: link:{bs_doc_components_cards}[Bootstrap Docs, window="_blank"].
 
 ++++
@@ -1329,32 +1329,39 @@ built with HTML, CSS, and JavaScript. They’re positioned over everything
 else in the document and remove scroll from the <body> so that modal
 content scrolls instead.
 
-pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-bg-primary"></i>]
+pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-blue-900"></i>]
 Refer to: link:{bs_doc_components_modal}[Bootstrap Docs, window="_blank"].
 
 .Modal types
-[cols="3a,7a,2a", options="header", width="100%", role="table-responsive mt-3"]
+[cols="3a,6a,3a", options="header", width="100%", role="table-responsive-stacked-lg"]
 |===============================================================================
-|Type |Description |Launch
+|Type |Description |Launch Example
 
 |*Base*
-|Toggle a working modal demo by clicking the button below. It will slide
-down and fade in from the top of the page.
+|Lauch the modal by clicking the button below. It will slide down and fade in
+from the top of the page.
 |
 ++++
 <div class="ml-2 mb-5">
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary btn-round btn-raised" data-toggle="modal" data-target="#exampleSimpleModal">
-    Launch
+  <button type="button"
+    class="btn btn-secondary btn-raised"
+    data-toggle="modal"
+    data-target="#exampleSimpleModal">
+    Launch Example
   </button>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleSimpleModal" tabindex="-1" role="dialog" aria-labelledby="exampleSimpleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+<div id="exampleSimpleModal"
+  class="modal fade top"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleSimpleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title notoc" id="exampleSimpleModalLabel">Modal title</h5>
+        <h5 id="exampleSimpleModalLabel" class="modal-title notoc">Modal title</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -1363,8 +1370,51 @@ down and fade in from the top of the page.
         <p>Modal body text goes here.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-round btn-raised mr-2" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary btn-round btn-raised">Save changes</button>
+        <button type="button" class="btn btn-primary btn-raised mr-2" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary btn-raised">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+++++
+
+|*Static backdrop*
+|This model is set to *static* and is will *not* close when clicking outside
+it (the backdrop).
+|
+++++
+<div class="ml-2 mb-5">
+  <!-- Button trigger modal -->
+  <button type="button"
+    class="btn btn-secondary btn-raised"
+    data-toggle="modal"
+    data-target="#exampleStaticModal">
+    Launch Example
+  </button>
+</div>
+
+<!-- Modal -->
+<div id="exampleStaticModal"
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleStaticModalLabel" aria-hidden="true"
+  data-keyboard="false"
+  data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="exampleStatcModalLabel" class="modal-title notoc">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-raised mr-2" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary btn-raised">Save changes</button>
       </div>
     </div>
   </div>
@@ -1379,31 +1429,55 @@ the height.
 ++++
 <div class="ml-2 mb-5">
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary btn-round btn-raised" data-toggle="modal" data-target="#exampleModalLong">
-    Launch
+  <button type="button"
+    class="btn btn-secondary btn-raised"
+    data-toggle="modal"
+    data-target="#exampleModalLong">
+    Launch Example
   </button>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+<div
+  id="exampleModalLong"
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title notoc" id="exampleModalLongTitle">Modal title</h5>
+        <h5 class="modal-title notoc" id="exampleModalLongTitle">The Extremes of Good and Evil</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <h4 class="notoc card-title">The Extremes of Good and Evil</h4>
-        <h6 class="notoc category text-gray mb-3">Cicero, Paragraph 1.10.33 · Translation by H. Rackham, Issue 1914 - De Finibus</h6>
-        <p class="card-description scale-description r-text-200">
+        <p>
           On the other hand, we denounce with righteous indignation and dislike men who
           are so beguiled and demoralized by the charms of pleasure of the moment, so
           blinded by desire, that they cannot foresee the pain and trouble that are
           bound to ensue; and equal blame belongs to those who fail in their duty through
           weakness of will, which is the same as saying through shrinking from toil and pain.
-          <br/><br/>
+        </p>
+        <p>
+          These cases are perfectly simple and easy to distinguish. In a free hour, when
+          our power of choice is untrammelled and when nothing prevents our being able to
+          do what we like best, every pleasure is to be welcomed and every pain avoided.
+          But in certain circumstances and owing to the claims of duty or the obligations
+          of business is will frequently occur that pleasures have to be repudiated and
+          annoyances accepted. The wise man therefore always holds in these matters to
+          this principle of selection: he rejects pleasures to secure other greater
+          pleasures, or else he endures pains to avoid worse pains.
+        </p>
+        <p>
+          On the other hand, we denounce with righteous indignation and dislike men who
+          are so beguiled and demoralized by the charms of pleasure of the moment, so
+          blinded by desire, that they cannot foresee the pain and trouble that are
+          bound to ensue; and equal blame belongs to those who fail in their duty through
+          weakness of will, which is the same as saying through shrinking from toil and pain.
+        </p>
+        <p>
           These cases are perfectly simple and easy to distinguish. In a free hour, when
           our power of choice is untrammelled and when nothing prevents our being able to
           do what we like best, every pleasure is to be welcomed and every pain avoided.
@@ -1415,8 +1489,83 @@ the height.
         </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-round btn-raised mr-2" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary btn-round btn-raised">Save changes</button>
+        <button type="button" class="btn btn-primary btn-raised mr-2" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary btn-raised">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+++++
+
+|*Scrollable long content*
+|It#s also possible to create a scrollable modal that allows scroll the
+modal body. Try the demo and scroll the content.
+|
+++++
+<div class="ml-2 mb-5">
+  <!-- Button trigger modal -->
+  <button type="button"
+    class="btn btn-secondary btn-raised"
+    data-toggle="modal"
+    data-target="#exampleModalLongScrollable">
+    Launch Example
+  </button>
+</div>
+
+<!-- Modal -->
+<div
+  id="exampleModalLongScrollable"
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLongScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title notoc" id="exampleModalLongScrollableTitle">The Extremes of Good and Evil</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          On the other hand, we denounce with righteous indignation and dislike men who
+          are so beguiled and demoralized by the charms of pleasure of the moment, so
+          blinded by desire, that they cannot foresee the pain and trouble that are
+          bound to ensue; and equal blame belongs to those who fail in their duty through
+          weakness of will, which is the same as saying through shrinking from toil and pain.
+        </p>
+        <p>
+          These cases are perfectly simple and easy to distinguish. In a free hour, when
+          our power of choice is untrammelled and when nothing prevents our being able to
+          do what we like best, every pleasure is to be welcomed and every pain avoided.
+          But in certain circumstances and owing to the claims of duty or the obligations
+          of business is will frequently occur that pleasures have to be repudiated and
+          annoyances accepted. The wise man therefore always holds in these matters to
+          this principle of selection: he rejects pleasures to secure other greater
+          pleasures, or else he endures pains to avoid worse pains.
+        </p>
+        <p>
+          On the other hand, we denounce with righteous indignation and dislike men who
+          are so beguiled and demoralized by the charms of pleasure of the moment, so
+          blinded by desire, that they cannot foresee the pain and trouble that are
+          bound to ensue; and equal blame belongs to those who fail in their duty through
+          weakness of will, which is the same as saying through shrinking from toil and pain.
+        </p>
+        <p>
+          These cases are perfectly simple and easy to distinguish. In a free hour, when
+          our power of choice is untrammelled and when nothing prevents our being able to
+          do what we like best, every pleasure is to be welcomed and every pain avoided.
+          But in certain circumstances and owing to the claims of duty or the obligations
+          of business is will frequently occur that pleasures have to be repudiated and
+          annoyances accepted. The wise man therefore always holds in these matters to
+          this principle of selection: he rejects pleasures to secure other greater
+          pleasures, or else he endures pains to avoid worse pains.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-raised mr-2" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary btn-raised">Save changes</button>
       </div>
     </div>
   </div>
@@ -1429,17 +1578,23 @@ the height.
 ++++
 <div class="ml-2 mb-5">
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary btn-round btn-raised" data-toggle="modal" data-target="#exampleModalVerticalCenter">
-    Launch
+  <button type="button"
+    class="btn btn-secondary btn-raised"
+    data-toggle="modal" data-target="#exampleModalVerticalCenter">
+    Launch Example
   </button>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalVerticalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalVerticalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+<div id="exampleModalVerticalCenter"
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalVerticalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title notoc" id="exampleModalVerticalCenterTitle">Modal title</h5>
+        <h5 id="exampleModalVerticalCenterTitle" class="modal-title notoc">Modal title</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -1450,138 +1605,12 @@ the height.
         voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-round btn-raised mr-2" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary btn-round btn-raised">Save changes</button>
+        <button type="button" class="btn btn-primary btn-raised mr-2" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary btn-raised">Save changes</button>
       </div>
     </div>
   </div>
 </div>
-++++
-
-
-|*Form*
-|To save space on forms, dialogs can be part of a modal.
-|
-++++
-<div class="ml-2 mb-5">
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary btn-round btn-raised" data-toggle="modal" data-target="#modalContactForm">
-    Launch
-  </button>
-</div>
-
-<div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-  <div class="modal-dialog cascading-modal" role="document">
-    <!--Content-->
-    <div class="modal-content">
-      <!--Header-->
-      <div class="modal-header light-blue darken-3 white-text">
-        <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">×</span>
-        </button>
-        <h4 class="title notoc"><i class="fa fa-pencil"></i> Contact form</h4>
-      </div>
-      <!--Body-->
-      <div class="modal-body mb-0">
-        <div class="md-form form-sm">
-          <i class="fa fa-envelope prefix"></i>
-          <input type="text" id="form19" class="form-control">
-          <label for="form19">Your name</label>
-        </div>
-        <div class="md-form form-sm">
-          <i class="fa fa-lock prefix"></i>
-          <input type="password" id="form20" class="form-control">
-          <label for="form20">Your email</label>
-        </div>
-        <div class="md-form form-sm">
-          <i class="fa fa-tag prefix"></i>
-          <input type="text" id="form21" class="form-control">
-          <label for="form21">Subject</label>
-        </div>
-        <div class="md-form form-sm">
-          <i class="fa fa-pencil prefix"></i>
-          <textarea type="text" id="form8" class="md-textarea form-control mb-0"></textarea>
-          <label for="form8">Your message</label>
-        </div>
-        <div class="text-center mt-1-half">
-          <button class="btn btn-info mb-2 waves-effect waves-light">Send <i class="fa fa-send ml-1"></i></button>
-        </div>
-      </div>
-    </div>
-    <!--/.Content-->
-  </div>
-</div>
-++++
-
-|*Fluid*
-|For e.g larger summaries, a vertical fluid modal can be used for that.
-|
-++++
-<div class="ml-2 mb-5">
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary btn-round btn-raised" data-toggle="modal" data-target="#fluidModalRightSuccess">
-    Launch
-  </button>
-</div>
-
-<!-- Full Height Modal Right Success-->
-<div class="modal fade right" id="fluidModalRightSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-full-height modal-right modal-notify modal-success" role="document">
-        <!--Content-->
-        <div class="modal-content">
-            <!--Header-->
-            <div class="modal-header">
-                <p class="heading lead">Modal Success</p>
-
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true" class="white-text">&times;</span>
-                                        </button>
-            </div>
-
-            <!--Body-->
-            <div class="modal-body">
-                <div class="text-center">
-                    <i class="fa fa-check fa-4x mb-1 animated rotateIn"></i>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim, ab officiis totam.</p>
-                </div>
-                <ul class="list-group z-depth-0">
-                    <li class="list-group-item justify-content-between">
-                        Cras justo odio
-                        <span class="badge badge-primary badge-pill">14</span>
-                    </li>
-                    <li class="list-group-item justify-content-between">
-                        Dapibus ac facilisis in
-                        <span class="badge badge-primary badge-pill">2</span>
-                    </li>
-                    <li class="list-group-item justify-content-between">
-                        Morbi leo risus
-                        <span class="badge badge-primary badge-pill">1</span>
-                    </li>
-                    <li class="list-group-item justify-content-between">
-                        Cras justo odio
-                        <span class="badge badge-primary badge-pill">14</span>
-                    </li>
-                    <li class="list-group-item justify-content-between">
-                        Dapibus ac facilisis in
-                        <span class="badge badge-primary badge-pill">2</span>
-                    </li>
-                    <li class="list-group-item justify-content-between">
-                        Morbi leo risus
-                        <span class="badge badge-primary badge-pill">1</span>
-                    </li>
-                </ul>
-            </div>
-
-            <!--Footer-->
-            <div class="modal-footer">
-                <a type="button" class="btn btn-primary-modal">Get it now <i class="fa fa-diamond ml-1"></i></a>
-                <a type="button" class="btn btn-outline-secondary-modal waves-effect" data-dismiss="modal">No, thanks</a>
-            </div>
-        </div>
-        <!--/.Content-->
-    </div>
-</div>
-<!-- Full Height Modal Right Success-->
 ++++
 
 |*Tooltips and Popovers*
@@ -1591,14 +1620,21 @@ closed, any tooltips and popovers within are also automatically dismissed.
 ++++
 <div class="ml-2 mb-5">
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary btn-round btn-raised" data-toggle="modal" data-target="#exampleModalTooltip">
-    Launch
+  <button type="button"
+    class="btn btn-secondary btn-raised"
+    data-toggle="modal"
+    data-target="#exampleModalTooltip">
+    Launch Example
   </button>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalTooltip" tabindex="-1" role="dialog" aria-labelledby="exampleModalTooltipTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+<div id="exampleModalTooltip"
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalTooltipTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title notoc" id="exampleModalTooltipTitle">Modal title</h5>
@@ -1608,14 +1644,14 @@ closed, any tooltips and popovers within are also automatically dismissed.
       </div>
       <div class="modal-body">
         <h5>Popover in a modal</h5>
-        <p>This <a href="#" role="button" class="btn btn-secondary btn-round btn-raised popover-test" data-toggle="popover" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>
+        <p>This <a href="#" role="button" class="btn btn-secondary btn-raised popover-test" data-toggle="popover" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on hover or click.</p>
         <hr>
         <h5>Tooltips in a modal</h5>
         <p><a href="javascript:(void)" class="tooltip-test" data-toggle="tooltip" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" data-toggle="tooltip" title="Tooltip">that link</a> have tooltips on hover.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-round btn-raised mr-2" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary btn-round btn-raised">Save changes</button>
+        <button type="button" class="btn btn-primary btn-raised mr-2" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary btn-raised">Save changes</button>
       </div>
     </div>
   </div>
@@ -1632,7 +1668,7 @@ bootstrap.bundle.js which contains Popper.js in order for popovers to work.
 
 Note: Popovers require the tooltip plugin as a dependency.
 
-pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-bg-primary"></i>]
+pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-blue-900"></i>]
 Refer to: link:{bs_doc_components_popovers}[Bootstrap Docs, window="_blank"].
 
 ++++
@@ -1654,7 +1690,7 @@ bootstrap.bundle.js which contains Popper.js in order for tooltips to work.
 Note: Tooltips are opt-in for performance reasons, so you must initialize
 them yourself.
 
-pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-bg-primary"></i>]
+pass:[<i class="mdi mdi-book-open mdi-24px mdi-md-blue-900"></i>]
 Refer to: link:{bs_doc_components_tooltips}[Bootstrap Docs, window="_blank"].
 
 ++++

@@ -51,7 +51,7 @@ resource_options:
 ++++
     <div id="adblock" class="row no-gutters adblock">
       <div class="doc-example mb-3">
-        <button type="button" class="btn btn-primary btn-raised">Primary</button>
+        <button type="button" class="btn btn-secondary btn-raised">Primary</button>
         <button type="button" class="btn btn-secondary btn-raised">Secondary</button>
         <button type="button" class="btn btn-success btn-raised">Success</button>
         <button type="button" class="btn btn-info btn-raised">Info</button>

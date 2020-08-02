@@ -12,7 +12,7 @@ categories:                             [ pages ]
 
 toc:                                    false
 
-permalink:                              /pages/public/start/site_search/
+permalink:                              /pages/protected/site_search/
 regenerate:                             false
 
 resources:                              [ algolia ]
@@ -21,7 +21,7 @@ resource_options:
       opacity:                          0.2
       slides:
         - url:                          /assets/images/widescreen/featured-1920x800.jpg
-          alt:                          featured-1920x800 
+          alt:                          featured-1920x800
 ---
 
 // Enable the Liquid Preprocessor

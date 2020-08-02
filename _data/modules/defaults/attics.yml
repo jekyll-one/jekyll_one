@@ -59,8 +59,11 @@ defaults:
   tagline_animate:                      fadeInRight
   tagline_align:                        left
 
-  background_color_1:                   "#546E7A"                               # md_bluegrey_600
-  background_color_2:                   "#78909C"                               # md_bluegrey_400
+  # background_color_1:                   "#546E7A"                               # md_bluegrey_600
+  # background_color_2:                   "#78909C"                               # md_bluegrey_400
+
+  background_color_1:                   "#384d68"                                # blue
+  background_color_2:                   "#b9c5cc"                               # grey
 
   action_enabled:                       false
   action_url:                           "#"

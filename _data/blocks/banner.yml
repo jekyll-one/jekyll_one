@@ -299,8 +299,8 @@ settings:
               cite_text_size:             300%
               cite_text_quotes:           false
               cite_text: >
-                                          Making is like Wanting,
-                                          <br> but even <span style="color:red">Better</span>
+                                          <span style="color: #87aade">Making is</span> like Wanting,
+                                          <br> but even <span style="color: #87aade">Better</span>
               cite_size:                  200%
 #             cite:                       J1 Team
               text_color:                 rgba_lighten_900

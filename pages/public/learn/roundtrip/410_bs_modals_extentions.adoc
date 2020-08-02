@@ -68,7 +68,6 @@ notifications. To highlight important information to your vistors. Modals
 are positioned over everything else in the document so that the notification
 gets the users attention.
 
-
 == BS advanced Modals
 
 To improve your visitors experience on important information that shouldn't
@@ -80,33 +79,9 @@ critical messages.
 NOTE: For more information on how to use Bootstrap’s JavaScript modal
 plugin, refer to: link:{bs_doc_components_modal}[Bootstrap Docs, {window}].
 
-
 // Include sub-documents
 // -----------------------------------------------------------------------------
 include::{documentsdir}/410_table_3_column.asciidoc[]
-
-//////////
-include::{documentsdir}/410_top_info.asciidoc[]
-include::{documentsdir}/410_top_right_success.asciidoc[]
-include::{documentsdir}/410_top_left_info.asciidoc[]
-include::{documentsdir}/410_bottom_info.asciidoc[]
-include::{documentsdir}/410_bottom_right_danger.asciidoc[]
-include::{documentsdir}/410_bottom_left_warning.asciidoc[]
-include::{documentsdir}/410_full_height_right_success.asciidoc[]
-include::{documentsdir}/410_full_height_left_info.asciidoc[]
-//////////
-
-//////////
-include::{documentsdir}/410_position_and_sizes.asciidoc[]
-include::{documentsdir}/410_contact_form.asciidoc[]
-include::{documentsdir}/410_form_login_with_avatar.asciidoc[]
-include::{documentsdir}/410_omni_login.asciidoc[]
-include::{documentsdir}/410_central_large_info.asciidoc[]
-include::{documentsdir}/410_central_fluid_success.asciidoc[]
-include::{documentsdir}/410_full_height_top_warning.asciidoc[]
-include::{documentsdir}/410_full_height_bottom_danger.asciidoc[]
-include::{documentsdir}/410_full_height_right_success.asciidoc[]
-//////////
 
 == Whats next
 
@@ -123,5 +98,4 @@ what the link:{roundtrip-responsive-tables}[BS tables extensions] can do!
 
 // Include the modals HTML portion
 // -------------------------------------------------------------------
-
-include::{documentsdir}/419_advanced_modals_html.asciidoc[]
+include::{documentsdir}/419_advanced_modals_demo.asciidoc[]

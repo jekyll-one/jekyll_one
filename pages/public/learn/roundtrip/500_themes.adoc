@@ -85,7 +85,7 @@ Independendly from using Bootstrap or any other CSS framwork.
 Thanks to the people at link:{bootswatch-home}[Bootswatch, {window}], a great
 set of already prepared Bootstrap stylesheets in various designs are available
 at their website. No need to start from the scratch, to re-define all the
-Bootstrap variables and rebuilt the framework files to create a new theme. Many
+Bootstrap variables and rebuild the framework files to create a new theme. Many
 different styles are available. What is already available is at least a good
 base for your modifications: your unique design.
 

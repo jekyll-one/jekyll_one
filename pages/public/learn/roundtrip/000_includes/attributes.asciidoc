@@ -59,8 +59,8 @@ tag::urls[]
 :github-gist-home:                                https://gist.github.com/
 :asciidoc-extensions-gist-example:                https://gist.github.com/mojavelinux/5546622
 
-:previewer-emoji:                                 /pages/protected/previewer/twitter_emoji/
-:previewer-mdi:                                   /pages/protected/previewer/mdi_font/
+:previewer-emoji:                                 /pages/public/previewer/twitter_emoji/
+:previewer-mdi:                                   /pages/public/previewer/mdi_font/
 
 :previewer-theme:                                 /pages/public/previewer/theme/
 

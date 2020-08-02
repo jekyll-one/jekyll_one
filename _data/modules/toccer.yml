@@ -119,7 +119,7 @@ settings:
   throttleTimeout:                      50                                      # Timeout between firing events to make sure it's not too rapid
   scrollSmooth:                         true
   scrollSmoothDuration:                 300
-  scrollSmoothOffset:                   -80
+  scrollSmoothOffset:                   -80                                     # TODO: to be removed, calculated dynamically
 
 # ------------------------------------------------------------------------------
 # END config

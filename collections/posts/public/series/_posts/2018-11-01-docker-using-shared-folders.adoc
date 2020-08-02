@@ -13,7 +13,7 @@ tags:                                   [ Tutorial, kickstarter ]
 index:                                  [ Docker, Windows, Shared, Folder, Folders ]
 categories:                             []
 
-regenerate:                             true
+regenerate:                             false
 
 resources:                              []
 resource_options:
@@ -31,6 +31,7 @@ resource_options:
 // NOTE:  General Asciidoc page attributes settings
 // -----------------------------------------------------------------------------
 :page-liquid:
+
 
 // Additional Asciidoc page attributes goes here
 // -----------------------------------------------------------------------------

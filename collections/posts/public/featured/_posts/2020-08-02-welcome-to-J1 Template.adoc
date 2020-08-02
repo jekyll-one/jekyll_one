@@ -3,7 +3,7 @@ title:                                  Welcome
 tagline:                                jekyll for everyone
 description:                            Auto-generated welcome post
 
-date:                                   2020-07-26 22:28:09 +0200
+date:                                   2020-08-02 15:18:23 +0200
 series:
 adsense:                                false
 image:                                  /assets/images/modules/attics/welcome-1920x1280-bw.jpg

@@ -70,7 +70,6 @@ defaults:
   # ----------------------------------------------------------------------------
   j1_auth:
     enabled:                            false
-
     ssl:                                false
 
     content:
@@ -102,7 +101,7 @@ defaults:
       #       users:
       #         whitelist:                [ all ]
       #         blacklist:                []
-      # 
+      #
       # github:
       #   provider_url:                   https://github.com
       #   strategy:                       member
@@ -216,11 +215,11 @@ defaults:
     #                                     and mark a provider for authentication. You'll be *redirected*
     #                                     to authenticate with the provider *selected*. If signed in
     #                                     *successfully*, you get back to this site for the page requested.
-    # 
-    # 
+    #
+    #
     #                                     NOTE: To get access to secured pages of this site,
     #                                     authentication with a provider is needed only *once*.
-    # 
+    #
     # auth_disqus:
     #   id:                               1
     #   title:                            Disqus
@@ -246,15 +245,15 @@ defaults:
     #   title:                            Twitter
     #   text: >
     #                                     SignIn to Twitter. Get access to all *PROTECTED* content pages of this site.
-    # 
+    #
     # auth_signout_modal:
     #   title:                            SignOut
     #   body_text: >
     #                                     After signing out from this site, you'll be *redirected*
     #                                     to the *provider* you're currently authenticated. From your
     #                                     home page at the *provider*, you can *sign out* completely.
-    # 
-    # 
+    #
+    #
     #                                     NOTE: In order to signing out *completely*, check the switch
     #                                     below to *on*.
 
