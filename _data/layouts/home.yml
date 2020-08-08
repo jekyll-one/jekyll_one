@@ -173,7 +173,7 @@ lanes:
       id:                               home_teaser_banner
       region:                           body-main
       type:                             async
-      helper_classes:                   mt-5 mb-5
+      helper_classes:                   mt-4 mr-5 mb-0 ml-3
 
   # ----------------------------------------------------------------------------
   # DIVIDER banner
@@ -193,7 +193,7 @@ lanes:
       id:                               home_intro_panel
       region:                           body-main
       type:                             async
-      helper_classes:                   mt-5 mb-4
+      helper_classes:                   mt-4 mr-5 mb-0 ml-3
 
   # ----------------------------------------------------------------------------
   # DIVIDER banner
@@ -223,7 +223,7 @@ lanes:
       id:                               home_welcome_banner
       region:                           body-main
       type:                             async
-      helper_classes:                   mt-5 mb-5
+      helper_classes:                   mt-4 mr-5 mb-0 ml-3
 
   # ----------------------------------------------------------------------------
   # IMAGE banner
@@ -243,7 +243,7 @@ lanes:
       id:                               home_service_panel
       region:                           body-main
       type:                             async
-      helper_classes:                   mt-5 mb-5
+      helper_classes:                   mt-4 mr-5 mb-0 ml-3
 
   # ----------------------------------------------------------------------------
   # DIVIDER banner
@@ -263,8 +263,7 @@ lanes:
       id:                               home_news_panel
       region:                           body-main
       type:                             async
-      helper_classes:                   mt-5 mb-5
-
+      helper_classes:                   mt-4 mr-5 mb-0 ml-3
 
 # ------------------------------------------------------------------------------
 # END config
