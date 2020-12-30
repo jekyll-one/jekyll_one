@@ -5,7 +5,7 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2020 Juergen Adams
+# Copyright (C) 2021 Juergen Adams
 #
 # J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
@@ -16,7 +16,6 @@
 # DEFAULT settings
 #
 defaults:
-
   # ----------------------------------------------------------------------------
   # Global settings
   #
@@ -33,6 +32,7 @@ defaults:
     id:                               intro_panel_id
     type:                             intro
     icon_family:                      MDI
+
     style:                            flat
     raised:
     lane_span:                        fixed
@@ -111,6 +111,7 @@ defaults:
     id:                               service_panel_id
     type:                             service_panel
     icon_family:                      MDI
+
     style:                            flat
     lane_span:                        fixed
 
@@ -201,6 +202,7 @@ defaults:
     style:                            flat
     title:                            news-panel-title
     tagline:                          news-panel-tagline
+
     lane_span:                        fixed
 
     boxes:
@@ -226,7 +228,7 @@ defaults:
   #   type:                             step_panel
   #   style:                            dark
   #   lane_span:                        fixed
-  # 
+  #
   #   cards:
   #     - card:
   #         title:                      step-panel-title
@@ -247,10 +249,8 @@ defaults:
     enabled:                            true
     type:                               exception
     comment:                            Default Exception Panel
-  
+
     lane_span:                          fixed
-    helper_classes:                     mt-4 mb-4
 
-
-# END config
 # ------------------------------------------------------------------------------
+# END config

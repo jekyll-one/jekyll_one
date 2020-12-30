@@ -88,6 +88,22 @@
   href:                                 https://preview.jekyll.one/
 # target:                               blank
 
+# ------------------------------------------------------------------------------
+# Menu Themes
+#
+- item:                                 Themes
+  theme_select:
+    - local_themes:                     enabled
+      title:                            Jekyll One
+      icon:                             face
+    - bootswatch_themes:                enabled
+      title:                            Bootswatch
+      icon:                             face-profile
+    - preview:                          enabled
+      title:                            Previewer
+      href:                             /pages/public/previewer/theme/
+      icon:                             eye
+      
 - item:                                 About
   sublevel:
     - title:                            This site

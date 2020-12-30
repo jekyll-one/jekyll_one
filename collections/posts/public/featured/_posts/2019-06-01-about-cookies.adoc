@@ -1,16 +1,18 @@
 ---
 title:                                  Cookies
-tagline:                                good to know about
-description:                            Useful info on cookies and how they used
+tagline:                                good to know
+date:                                   2019-06-01 00:00:00
+description: >
+                                        Useful info on cookies and how they used
 
-date:                                   2019-06-01 00:00:00 +0200
+tags:                                   [ About, Cookies ]
+categories:                             [ Featured ]
+
 series:
 adsense:                                false
 image:                                  /assets/images/modules/attics/cookies-1920x1200-bw.jpg
-
-tags:                                   [ About, Cookies ]
-index:                                  [ Cookie, Usage, Type, Policy, Consent ]
-categories:                             []
+comments:                               true
+advertising:                            true
 
 regenerate:                             false
 
@@ -32,50 +34,53 @@ resource_options:
             href:                       https://unsplash.com/@miroslava
 ---
 
-// TODO:  For POSTS, currently the include:: macro does NOT work.
-// Path calculation needes to be fixec (includes the document file name)
-// -----------------------------------------------------------------------------
-
-// NOTE
-// -----------------------------------------------------------------------------
-// See: http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm
-
-// NOTE:  General Asciidoc page attributes settings
-// -----------------------------------------------------------------------------
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
 :page-liquid:
+
+// Set page (local) attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
 
 // Additional Asciidoc page attributes goes here
 // -----------------------------------------------------------------------------
 // :page-imagesdir: {{page.images.dir}}
 
-
-// NOTE: Place an excerpt at the most top position
+// Place an excerpt at the most top position
 // -----------------------------------------------------------------------------
-Is it needed for vistors to know what cookies are all about?
+Is it needed for visitors to know what cookies are all about?
 
-Not first place. Cookies are widely used. All users visting web sites are
-bothered all the time to accept on cookies. Because cookies are used that often.
+Not the first place. Cookies are widely used. All users visiting web sites are
+bothered all the time to accept cookies. Because cookies are used that often.
 For good reasons - but for *different* reasons.
 
 To answer the question: yes, you should.
 
-All people are part of the *real* and virtual worlds as well; the internet
-for example. In real world you've learned what cookies are. You can simply
-*see* them, smell them and eat some. In real world cookies are *real*, you
-know sweets from earliest days.
+All people are part of the *real* and virtual worlds as well; the internet,
+for example. In the real world, you've learned what cookies are. You can simply
+*see* them, smell them and eat some. For physical cookies, you know them as
+sweets from earliest days.
 
 But cookies in the digital world are different. Cookies in the sense of the
-internet, of the web are *not* dangerous but not nessearily a sort of sweets
+internet, of the web are *not* dangerous but not necessarily a sort of sweets
 to enjoy people.
 
 [role="clearfix mb-3"]
 excerpt__end
 
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="none" %}
+
 
 // Page content
-// -----------------------------------------------------------------------------
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 [[readmore]]
-
 == What are cookies technically
 
 [role="mb-3"]

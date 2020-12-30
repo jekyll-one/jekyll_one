@@ -6,7 +6,7 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2020 Juergen Adams
+# Copyright (C) 2021 Juergen Adams
 #
 # J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
@@ -65,7 +65,7 @@ defaults:
   icon_color:                           mdi-grey
   icon_size:                            mdi-sm
 
-  nav_primary_color:                    "#0D47A1"                               # md-blue-900, general color for navbar and nav-menus
+  nav_primary_color:                    "#2196F3"                               # md-blue, general color for navbar and nav-menus
 
   # ----------------------------------------------------------------------------
   # NavBar
@@ -85,9 +85,9 @@ defaults:
     position:                           left
     bottom_line_height:                 1
     bottom_line_color:                  "#EEEEEE"                               # md-grey-200
-    background_color_full:              rgba(0, 0, 0, 0.4)                      # rgba-darken-400
-    background_color_collapsed:         "#3F51B5"                               # md-indigo, was: md-blue-grey
-    background_color_scrolled:          "#3F51B5"                               # md-indigo, was: md-blue-grey
+    background_color_full:              rgba(0, 0, 0, 0.4)                      # darken-400
+    background_color_collapsed:         "#2196F3"                               # md-blue
+    background_color_scrolled:          "#2196F3"                               # md-blue
 
   # ----------------------------------------------------------------------------
   # NavMenu (Mobile)
@@ -118,7 +118,7 @@ defaults:
     xhr_container_id:                   navigator_nav_menu
     xhr_data_path:                      /assets/data/menu/index.html
 
-    raised_level:                       15                                      # level
+    raised_level:                       5                                       # level
     delay_menu_open:                    200                                     # milli seconds
     max_height:                         550                                     # px
     menu_font_size:                     larger
@@ -136,13 +136,13 @@ defaults:
     dropdown_animate_out:               fadeOutDown
     dropdown_animate_duration:          .75                                     # seconds
     dropdown_item_min_width:            15                                      # rem
-    dropdown_menu_max_height:           25                                      # rem
+    dropdown_menu_max_height:           35                                      # rem
     dropdown_font_size:                 small
-    dropdown_padding_x:                 15                                      # px
+    dropdown_padding_x:                 18                                      # rem
     dropdown_padding_y:                 10                                      # px
     dropdown_item_color:                "#212121"                               # md-grey-900
     dropdown_border_color:              "#3f51b5"                               # BS bg-primary
-    dropdown_border_top:                3                                       # px
+    dropdown_border_top:                0                                       # 3, px
     dropdown_border_radius:             0                                       # px
     dropdown_background_color_hover:    "#ECEFF1"                               # md-bluegrey-50
     dropdown_background_color_active:   "#CFD8DC"                               # md-bluegrey-100
@@ -201,12 +201,12 @@ defaults:
     icon_size:                          mdi-2x
     search_icon:                        magnify
     close_icon:                         close
-    clear_icon:                         filter-remove
+    clear_icon:                         format-clear
     input_color:                        rgba(0, 0, 0, 0.7)                      # rgba-darken-700
     background_color:                   "#FAFAFA"                               # md-grey-50
     placeholder:                        QuickSearch
     search_heading_lead:                ""
     result_heading_lead:                ""
 
-# END config
 # ------------------------------------------------------------------------------
+# END config

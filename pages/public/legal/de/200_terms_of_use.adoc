@@ -9,9 +9,10 @@ categories:                             [ pages ]
 
 permalink:                              /pages/public/legal/de/terms_of_use/
 regenerate:                             false
+exclude_from_search:                    true
 
 resources:                              []
-resource_options:
+resource_options:                       []
 ---
 
 == Nutzungsbedingungen

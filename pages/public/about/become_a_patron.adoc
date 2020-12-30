@@ -2,10 +2,8 @@
 title:                                  J1 Template
 tagline:                                become a patron
 description:                            Help to create premium content
-categories:                             [ pages ]
 
-tags:                                   [ business ]
-index:                                  [ Patron, Premium, Content ]
+tags:                                   [ Patron, Premium, Content ]
 categories:                             [ pages ]
 
 permalink:                              /pages/public/about/become_a_patron/

@@ -5,7 +5,7 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2020 Juergen Adams
+# Copyright (C) 2021 Juergen Adams
 #
 # J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
@@ -279,6 +279,7 @@
 #      region:                       head|body-footer
 #      layout:                       [ layout_name(s)|all ]
 #      required:                     always|ondemand
+#      preload:                      false|true
 #      script_load:                  sync|defer|async
 #      pass_init_data:               true|false
 #      data:
@@ -350,12 +351,12 @@ resources:
   #   5   log4javascript                log4javascript@1.4.15
   #   6   Bootstrap                     bootstrap@4.4.1
   #   6   bs_material_design            bootstrap-material-design@4.0.0-beta.4
-  #   7   j1_template                   j1_template_4@2020.0.18
-  #   8   tocbot                        tocbot@4.11.2
+  #   7   j1_template                   j1_template_4@2021.0.0
+  #   8   tocbot                        tocbot@4.12.0
   #   9   jekyll_search                 simple_jekyll_search@1.1.5
   #   10  bs_theme_switcher             bs_theme_switcher@1.1.5
   #   11  backstretch                   backstretch@2.1.16
-  #   12  cookiebar                     cookiebar@2020.0.0
+  #   12  cookiebar                     cookiebar@2021.0.0
   #
   # ----------------------------------------------------------------------------
   #   J1 Template Core, integrated CSS Resources
@@ -373,27 +374,28 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
+      preload:                          false                                   # property currently unused
       script_load:                      sync
       dependencies:                     false
       pass_init_data:                   true
       data:
         css:                            [
-                                          core/css/uno,
-                                          core/css/vendor,
-                                          core/css/material-design-icons,
-                                          core/css/fontawesome
+                                          core/css/themes/uno-light/bootstrap,
+                                          core/css/icon-fonts/materialdesign,
+                                          core/css/icon-fonts/fontawesome,
+                                          core/css/vendor
+
                                         ]
         files:                          [
                                           modules/util/js/js.cookie.js,
                                           modules/util/js/lite-url.js,
                                           modules/util/js/platform.js,
-                                          modules/polyfills/js/msie.js,
                                           adapter/js/j1.js
                                         ]
         js:                             [
                                           modules/jquery/js/jquery,
+                                          modules/jquery/js/jqueryUI,
                                           modules/popper/js/popper,
-                                          modules/bootstrap/js/bootstrap,
                                           core/js/template
                                         ]
         init_function:                  [ j1.init ]
@@ -409,6 +411,7 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
+      preload:                          false                                   # property currently unused
       script_load:                      sync
       dependencies:                     false
       pass_init_data:                   false
@@ -432,6 +435,7 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
+      preload:                          false                                   # property currently unused
       script_load:                      sync
       dependencies:                     false
       pass_init_data:                   false
@@ -452,6 +456,7 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
+      preload:                          false                                   # property currently unused
       script_load:                      sync
       dependencies:                     false
       pass_init_data:                   true
@@ -472,6 +477,7 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
+      preload:                          false                                   # property currently unused
       script_load:                      sync
       dependencies:                     false
       pass_init_data:                   false
@@ -492,6 +498,7 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
+      preload:                          false                                   # property currently unused
       script_load:                      sync
       dependencies:                     false
       pass_init_data:                   false
@@ -517,6 +524,7 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
+      preload:                          false                                   # property currently unused
       script_load:                      sync
       dependencies:                     false
       pass_init_data:                   false
@@ -537,16 +545,14 @@ resources:
       layout:                           [ page, post, collection, blog_archive ]
       region:                           head
       required:                         always
+      preload:                          false                                   # property currently unused
       script_load:                      sync
       dependencies:                     false
       pass_init_data:                   true
       data:
-        css:                            [
-                                          modules/tocbot/css/tocbot,
-                                          modules/tocbot/css/theme/uno
-                                        ]
+        css:                            []
         files:                          [ adapter/js/toccer.js ]
-        js:                             [ modules/tocbot/js/tocbot ]
+        js:                             []
         init_function:                  [ j1.adapter.toccer.init ]
 
   # ----------------------------------------------------------------------------
@@ -555,11 +561,12 @@ resources:
   - name:                               J1 Back2Top
     resource:
       id:                               back2top
-      enabled:                          true
+      enabled:                          false
       comment:                          module back2top
       region:                           head
       layout:                           [ all ]
       required:                         ondemand
+      preload:                          false                                   # property currently unused
       script_load:                      sync
       dependencies:                     false
       pass_init_data:                   false
@@ -570,21 +577,24 @@ resources:
         init_function:                  [ j1.adapter.back2top.init ]
 
   # ----------------------------------------------------------------------------
-  # Searcher
+  # SimpleSearch, search engine for Jekyll sites based on Simple-Jekyll-Search
+  # https://github.com/christian-fei/Simple-Jekyll-Search
   #
-  - name:                               J1 Searcher
+  #
+  - name:                               J1 SimpleSearch
     resource:
-      id:                               searcher
-      enabled:                          true
+      id:                               simple_search
+      enabled:                          false                                   # NOT longer used (lunr search preferred)
       comment:                          module quicksearch
       region:                           head
       layout:                           [ all ]
       required:                         always
+      preload:                          false                                   # property currently unused
       script_load:                      sync
       dependencies:                     false
       pass_init_data:                   false
       data:
-        css:                            []
+        css:                            [ modules/jekyllSearch/css/jekyll-search ]
         files:                          [ adapter/js/searcher.js ]
         js:                             [ modules/jekyllSearch/js/simple-jekyll-search ]
         init_function:                  [ j1.adapter.searcher.init ]
@@ -600,6 +610,7 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
+      preload:                          false                                   # property currently unused
       script_load:                      sync
       dependencies:                     false
       pass_init_data:                   false
@@ -610,36 +621,18 @@ resources:
         init_function:                  [ j1.adapter.cookiebar.init ]
 
   # ----------------------------------------------------------------------------
-  # Sticky Side Menu
-  #
-  - name:                               Sticky Side Menu
-    resource:
-      id:                               ssm
-      enabled:                          true
-      comment:                          module ssm
-      region:                           head
-      layout:                           [ page, post, collection, blog_archive ]
-      required:                         always
-      script_load:                      sync
-      dependencies:                     false
-      pass_init_data:                   true
-      data:
-        css:                            []
-        files:                          [ adapter/js/ssm.js ]
-        js:                             []
-        init_function:                  [ j1.adapter.ssm.init ]
-
-  # ----------------------------------------------------------------------------
-  # jqMouseWheel
+  # jqMouseWheel, jQuery plugin to add cross-browser mouse wheel support
+  # https://github.com/jquery/jquery-mousewheel
   #
   - name:                               jqMouseWheel
     resource:
       id:                               jq_mouse_wheel
-      enabled:                          false
+      enabled:                          false                                   # currently NOT used
       comment:                          module jqMouseWheel
       region:                           head
       layout:                           [ all ]
       required:                         always
+      preload:                          false                                   # property currently unused
       script_load:                      sync
       dependencies:                     false
       pass_init_data:                   false
@@ -650,9 +643,10 @@ resources:
         init_function:                  []
 
   # ----------------------------------------------------------------------------
-  # bsThemeSwitcher
+  # themeSwitcher, JS API for switching Bootstrap themes
+  # https://github.com/jguadagno/bootstrapThemeSwitcher
   #
-  - name:                               bsThemeSwitcher
+  - name:                               themeSwitcher
     resource:
       id:                               theme_switcher
       enabled:                          true
@@ -660,17 +654,19 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
+      preload:                          false                                   # property currently unused
       script_load:                      sync
       dependencies:                     false
       pass_init_data:                   false
       data:
         css:                            []
         files:                          []
-        js:                             [ modules/bsThemeSwitcher/js/switcher ]
+        js:                             [ modules/themeSwitcher/js/switcher ]
         init_function:                  []
 
   # ----------------------------------------------------------------------------
-  # Bootstrap Material Design (BMD)
+  # Bootstrap Material Design (BMD), responsive UI framework for Bootstrap
+  # https://mdbootstrap.github.io/bootstrap-material-design/
   #
   - name:                               Bootstrap Material Design
     resource:
@@ -680,14 +676,61 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
+      preload:                          false                                   # property currently unused
       script_load:                      sync
       dependencies:                     false
       pass_init_data:                   false
       data:
         css:                            []
-        files:                          [ adapter/js/mdb.js ]
+        files:                          [ adapter/js/bmd.js ]
         js:                             [ modules/bmd/js/bootstrap-material-design ]
-        init_function:                  [ j1.adapter.mdb.init ]
+        init_function:                  [ j1.adapter.bmd.init ]
+
+  # ----------------------------------------------------------------------------
+  # Materialize, responsive UI framework
+  # https://materializecss.com/
+  #
+  - name:                               Materialize
+    resource:
+      id:                               materialze
+      enabled:                          false                                   # currently NOT used
+      comment:                          Materialize
+      region:                           head
+      layout:                           [ all ]
+      required:                         ondemand
+      preload:                          false                                   # property currently unused
+      script_load:                      sync
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            []
+        files:                          [
+                                          modules/materialize/js/cash.js,
+                                          modules/materialize/js/fam.js
+                                        ]
+        js:                             []
+        init_function:                  []
+
+  # ----------------------------------------------------------------------------
+  # Responsive HTML tables for J! Template (rtable)
+  #
+  - name:                               Responsive Tables
+    resource:
+      id:                               rtable
+      enabled:                          true
+      comment:                          module rtable
+      region:                           head
+      layout:                           [ all ]
+      required:                         always
+      preload:                          false                                   # property currently unused
+      script_load:                      sync
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            [ modules/rtable/css/theme/uno ]
+        files:                          [ adapter/js/rtable.js ]
+        js:                             [ modules/rtable/js/rtable ]
+        init_function:                  [ j1.adapter.rtable.init ]
 
 # ==============================================================================
 # MODULES initialized 'ondemand' for a layout
@@ -702,7 +745,8 @@ resources:
 # ------------------------------------------------------------------------------
 
   # ----------------------------------------------------------------------------
-  # Rouge
+  # Rouge, pure Ruby themeable code highlighter
+  # https://github.com/rouge-ruby/rouge
   #
   - name:                               Rouge Highlighter
     resource:
@@ -712,34 +756,18 @@ resources:
       region:                           head
       layout:                           [ page, post, collection ]
       required:                         ondemand
+      preload:                          false                                   # property currently unused
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   false
       data:
         css:                            []
-        files:                          [ modules/rouge/css/base16/theme.css ]
+        files:                          [
+                                          modules/rouge/css/base16/theme.css,
+                                          adapter/js/rouge.js
+                                        ]
         js:                             []
-        init_function:                  []
-
-  # ----------------------------------------------------------------------------
-  # Twitter Emoji
-  #
-  - name:                               Twemoji
-    resource:
-      id:                               twemoji
-      enabled:                          true
-      comment:                          Twemoji
-      region:                           head
-      layout:                           [ page, post, collection ]
-      required:                         ondemand
-      script_load:                      defer
-      dependencies:                     false
-      pass_init_data:                   false
-      data:
-        css:                            [ core/css/twemoji ]
-        files:                          []
-        js:                             []
-        init_function:                  []
+        init_function:                  [ j1.adapter.rouge.init ]
 
   # ----------------------------------------------------------------------------
   # Animate CSS
@@ -752,6 +780,7 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         ondemand
+      preload:                          false                                   # property currently unused
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   false
@@ -772,6 +801,7 @@ resources:
       layout:                           [ app, raw ]
       region:                           head
       required:                         ondemand
+      preload:                          false                                   # property currently unused
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   true
@@ -782,23 +812,27 @@ resources:
         init_function:                  [ j1.adapter.gallery_customizer.init ]
 
   # ----------------------------------------------------------------------------
-  # iFrame Resizer
+  # iFrameResizer, creates dynamic, configurable, client|server
+  # based HTML iframes
   #
   - name:                               J1 Framer
     resource:
       id:                               framer
       enabled:                          true
       comment:                          module framer
-      layout:                           [ page, post, collection, app ]
+      layout:                           [ page, post, collection, app, raw ]
       region:                           head
       required:                         ondemand
-      script_load:                      defer
+      preload:                          false                                   # property currently unused
+      script_load:                      sync
       dependencies:                     false
       pass_init_data:                   true
       data:
         css:                            []
         files:                          [ adapter/js/framer.js ]
-        js:                             []
+        js:                             [
+                                          modules/iframeResizer/js/resizer      # server component
+                                        ]
         init_function:                  [ j1.adapter.framer.init ]
 
   # ----------------------------------------------------------------------------
@@ -812,6 +846,7 @@ resources:
       layout:                           [ home, page, post, collection ]
       region:                           head
       required:                         ondemand
+      preload:                          false                                   # property currently unused
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   true
@@ -825,21 +860,43 @@ resources:
         init_function:                  [ j1.adapter.lightbox.init ]
 
   # ----------------------------------------------------------------------------
-  # Twitter Emoji
+  # Twitter Emoji Icons
   #
-  - name:                               Twitter Emoji Picker
+  - name:                               Twitter Emoji Icons
     resource:
       id:                               twemoji
       enabled:                          true
-      comment:                          module twemoji_picker
+      comment:                          module twemoji
       layout:                           [ home, page, post, collection ]
       region:                           head
       required:                         ondemand
+      preload:                          false                                   # property currently unused
       script_load:                      deferred
       dependencies:                     false
       pass_init_data:                   false
       data:
-        css:                            []
+        css:                            [ core/css/icon-fonts/twemoji ]
+        files:                          []
+        js:                             []
+        init_function:                  []
+
+  # ----------------------------------------------------------------------------
+  # Twitter Emoji (Picker)
+  #
+  - name:                               Twitter Emoji Picker
+    resource:
+      id:                               twemoji_picker
+      enabled:                          true
+      comment:                          module twemoji_picker
+      layout:                           [ page ]
+      region:                           head
+      required:                         ondemand
+      preload:                          false                                   # property currently unused
+      script_load:                      deferred
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            [ modules/twemoji/css/picker/twemoji-picker ]
         files:                          []
         js:                             [
 #                                         modules/twemoji/js/twemoji,
@@ -848,7 +905,28 @@ resources:
         init_function:                  []
 
   # ----------------------------------------------------------------------------
-  # Iconify Framework
+  # MDI Previewer
+  #
+  - name:                               MDI Previewer
+    resource:
+      id:                               mdi_previewer
+      enabled:                          true
+      comment:                          module mdi_previewer
+      layout:                           [ page ]
+      region:                           head
+      required:                         ondemand
+      preload:                          false                                   # property currently unused
+      script_load:                      deferred
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            [ modules/mdiPreviewer/css/previewer ]
+        files:                          []
+        js:                             []
+        init_function:                  []
+
+  # ----------------------------------------------------------------------------
+  # Iconify (Icons) Framework
   #
   - name:                               Iconify Framework
     resource:
@@ -858,11 +936,12 @@ resources:
       region:                           head
       layout:                           [ home, page, post, collection ]
       required:                         ondemand
+      preload:                          false                                   # property currently unused
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   false
       data:
-        css:                            [ core/css/iconify-icons ]
+        css:                            [ core/css/icon-fonts/iconify ]
         files:                          [ modules/iconifyAPI/js/iconify.min.js ]
         js:                             []
         init_function:                  []
@@ -877,6 +956,7 @@ resources:
       region:                           head
       layout:                           [ home, page, post, collection ]
       required:                         ondemand
+      preload:                          false                                   # property currently unused
       script_load:                      defer
       data:
         files:                          [
@@ -898,6 +978,7 @@ resources:
       region:                           head
       layout:                           [ page, post, collection ]
       required:                         ondemand
+      preload:                          false                                   # property currently unused
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   false
@@ -918,6 +999,7 @@ resources:
       region:                           head
       layout:                           [ home, page, post, collection ]
       required:                         ondemand
+      preload:                          false                                   # property currently unused
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   true
@@ -944,6 +1026,7 @@ resources:
       region:                           head
       layout:                           [ home, page, post, collection, raw, app ]
       required:                         ondemand
+      preload:                          false                                   # property currently unused
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   true
@@ -967,6 +1050,7 @@ resources:
       region:                           head
       layout:                           [ home, page, post, collection, raw, app ]
       required:                         ondemand
+      preload:                          false                                   # property currently unused
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   false
@@ -1002,6 +1086,7 @@ resources:
       region:                           head
       layout:                           [ home, page, post, collection ]
       required:                         ondemand
+      preload:                          false                                   # property currently unused
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   false
@@ -1030,6 +1115,7 @@ resources:
       region:                           head
       layout:                           [ home, page, post, collection ]
       required:                         ondemand
+      preload:                          false                                   # property currently unused
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   false
@@ -1050,6 +1136,7 @@ resources:
       region:                           head
       layout:                           [ home, page, post, collection ]
       required:                         ondemand
+      preload:                          false                                   # property currently unused
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   false
@@ -1060,16 +1147,18 @@ resources:
         init_function:                  []
 
   # ----------------------------------------------------------------------------
-  # noUiSlider
+  # noUiSlider, creates responsive input sliders
+  # NOTE: This module is in state EXPERIMENTAL
   #
   - name:                               noUiSlider
     resource:
       id:                               nouislider
-      enabled:                          false
+      enabled:                          false                                   # currently NOT used
       comment:                          module nouislider
       region:                           head
       layout:                           [ page, post, collection ]
       required:                         ondemand
+      preload:                          false                                   # property currently unused
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   false
@@ -1080,24 +1169,84 @@ resources:
         init_function:                  []
 
   # ----------------------------------------------------------------------------
-  # iFrameResizer
+  # Stacker, transforms HTML tables into a responsive, stacked representaion
+  # NOTE: This module is in state EXPERIMENTAL
   #
-  - name:                               iFrameResizer
+  - name:                               stacker
     resource:
-      id:                               iframe_resizer
-      enabled:                          true
-      comment:                          module iframeResizer
+      id:                               stacker
+      enabled:                          false                                   # currently NOT used
+      comment:                          module stacker
       region:                           head
       layout:                           [ page, post, collection, app, raw ]
       required:                         ondemand
+      preload:                          false                                   # property currently unused
       script_load:                      sync
       dependencies:                     false
       pass_init_data:                   false
       data:
-        css:                            []
+        css:                            [ modules/stacker/css/stacker]
         files:                          []
-        js:                             [ modules/iframeResizer/js/iframeResizer ]
+        js:                             [ modules/stacker/js/stacker ]
         init_function:                  []
+
+  # ----------------------------------------------------------------------------
+  # Floating Button Menu (FAM)
+  # NOTE: This module is in state EXPERIMENTAL
+  #
+  - name:                               FAM
+    resource:
+      id:                               fam
+      enabled:                          true
+      comment:                          Floating Button Menu
+      region:                           head
+      layout:                           [ all ]
+      required:                         always
+      preload:                          false                                   # property currently unused
+      script_load:                      sync
+      dependencies:                     false
+      pass_init_data:                   true
+      data:
+        css:                            []
+        files:                          [
+                                          modules/fam/css/uno/fam.css,          # styles for (J1) theme Uno
+#                                         modules/cash/js/cash.js,              # current version|s of Cash NOT usable
+                                          modules/materialize/js/cash.js,       # adapted|old (1.3.5) version from Materialize
+                                          modules/fam/js/fam.js,                # modified version for J1 (former: button.js)
+                                          adapter/js/fam.js                     # adapter adopted from ssm module
+                                        ]
+        js:                             []
+        init_function:                  []
+        init_function:                  [ j1.adapter.fam.init ]
+
+  # ----------------------------------------------------------------------------
+  # lunr
+  # NOTE: This module is in state EXPERIMENTAL
+  #
+  - name:                               lunr
+    resource:
+      id:                               lunr
+      enabled:                          true
+      comment:                          lunr search
+      region:                           head
+      layout:                           [ all ]
+      required:                         always                                  # always | ondemand
+      preload:                          false                                   # property currently unused
+      script_load:                      defer
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            [ modules/lunrSearch/css/lunr_search ]
+        files:                          [ adapter/js/lunr_search.js ]
+        js:                             [
+                                          modules/lunrSearch/js/lunr,
+                                          modules/lunrSearch/js/mustache,
+                                          modules/lunrSearch/js/dateformat,
+                                          modules/lunrSearch/js/uri,
+#                                         modules/jquery/js/require,            # property currently unused, conflicts with some modules
+                                          modules/lunrSearch/js/lunr_search
+                                        ]
+        init_function:                  [ j1.adapter.lunr_search.init ]
 
 # ------------------------------------------------------------------------------
 # END config

@@ -1,13 +1,19 @@
 ---
 layout:                                 page
-
 title:                                  Creators Blog
 tagline:                                posts by date
 description:                            Browse articles by date
 
-#permalink:                             /pages/private/blog/navigator/archive/dateview/
+tags:                                   [ Blog, Creator ]
+categories:                             [ Navigator, Date, Viewer ]
+
+sort:                                   date
+toc:                                    true
+fam:                                    true
+fam_menu_id:                            open_toc
 noindex:                                true
 
+#permalink:                             /pages/private/blog/navigator/archive/dateview/
 regenerate:                             false
 
 resources:                              []
@@ -63,7 +69,7 @@ resource_options:
   </ul>
 </div>
 
-<div id="index" class="post-search-results col-md-10 col-sm-10 col-xs-11">
+<div id="index" class="post-search-results ml-3">
 
   <div class="view-description">{{view_description}}</div>
   <div class="post-headline">
@@ -78,9 +84,9 @@ resource_options:
     {% capture nmonth %}{{post.next.date|date:'%m%Y'}}{% endcapture %}
     {% capture monthHead %}
       {% if month != nmonth %}
-      {% if  forloop.index != 1  %}{{closeList}}{%endif %}
+      {% if forloop.index != 1  %}{{closeList}}{%endif %}
       <h3 id="{{100000|rand}}"
-        class="toc-link mt-5 mb-2">
+        class="toc-link mt-5 mb-3">
         {% if year != nyear %}
         <a id="{{post.date|date:'%Y'}}"></a>
         {% endif %}<a id="{{post.date|date:'%Y-%m' }}">
@@ -92,28 +98,40 @@ resource_options:
       {% endif %}
     {% endcapture %}
 
+    <!-- Collect comment provider details -->
+    {% for sharing in builder_config.sharing_provider %}
+      {% assign provider      = sharing.provider %}
+      {% assign likes_count   = sharing.likes_count %}
+      {% assign comment_count = sharing.comment_count %}
+    {% endfor %}
+
     {% capture link %}
-      {% assign excerpt = post.excerpt|truncatewords:50|strip_html|strip_newlines|strip %}
+      {% assign excerpt = post.excerpt|truncatewords:50|replace:'...',' ...'|strip_html|strip_newlines|strip %}
       <li>
-        <div class="card card-flat mb-4" style="background-color: #fafafa">
-          <div class="card-body">
-            <!-- <span class="post-meta">{{post.date|date:'%B %d, %Y'}}</span> -->
-            <h4 id="{{100000|rand}}" class="card-title">{{post.title}}</h4>
-            <h5 class="notoc card-subtitle text-muted mb-2">{{post.tagline}}</h5>
-            <div class="card-text"><p>{{excerpt}}</p></div>
-            <span class="d-block text-muted text-uppercase g-font-weight-600 g-font-size-12">
-              <i class="mdi mdi-calendar-blank"></i>
-              {{post.date|date:'%Y %B, %e'}}
-            </span>
-          </div>
-          <div class="card-footer" style="background-color: #fafafa">
-            <!-- <a class="card-link" href="{{post.url}}#readmore" target="_blank">Read more ..</a> -->
-            <a class="btn btn-secondary btn-raised btn-flex" href="{{post.url}}#readmore">
-              <i class="mdi mdi-eye mdi-lg mr-2" style="color:#FFFFFF;"></i>
-              Read · {{post.tagline}}
+        <article class="card raised-z5 mb-5">
+          <h3 id="{{100000|rand}}" class="card-header bg-primary notoc">{{post.title}}</h3>
+          <!-- h5 class="notoc card-subtitle text-muted mb-2">{{post.tagline}}</h5 -->
+          <div class="card-body r-text-300">{{excerpt}}</div>
+          <div class="card-footer r-text-200">
+            <div class="card-footer-text">
+              {% if post.date %}
+              <i class="mdi mdi-calendar-blank mr-1"></i> {{post.date | date: "%Y %B, %e"}}
+              {% endif %}
+              {% if likes_count %}
+              <span class="font-weight-bold"> · </span>
+              <i class="mdi mdi-heart mr-1"></i> {{likes_count}}
+              {% endif %}
+              {% if comment_count %}
+              <span class="font-weight-bold"> · </span>
+              <i class="mdi mdi-comment mr-1"></i> {{comment_count}}
+              {% endif %}
+            </div>
+            <a class="card-link md-grey-800 font-weight-bold g-font-size-12 text-uppercase"
+               href="{{post.url}}#readmore">
+               Read · {{post.tagline}}
             </a>
           </div>
-        </div>
+        </article>
       </li>
     {% endcapture %}
 

@@ -5,7 +5,7 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2020 Juergen Adams
+# Copyright (C) 2021 Juergen Adams
 #
 # J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
@@ -57,7 +57,7 @@ settings:
 
         log_folder:                   log
         log_file_name:                messages
-        log_file_ext:                 log      
+        log_file_ext:                 log
 
         create_on_start:              true
         reset_on_start:               true
@@ -67,7 +67,7 @@ settings:
     # --------------------------------------------------------------------------
     # POPUP appender
     - name:                           Popup Appender
-      appender:      
+      appender:
         name:                         popupAppender
         enabled:                      false
         type:                         PopUpAppender
@@ -115,7 +115,7 @@ settings:
     #     level:
     #       production:                 warn
     #       development:                debug
-    
+
     # --------------------------------------------------------------------------
     # MODULE CHILD logger (j1.module)
     # - log:
@@ -125,7 +125,6 @@ settings:
     #     level:
     #       production:                 warn
     #       development:                debug
-
 
 # ------------------------------------------------------------------------------
 # END config

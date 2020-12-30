@@ -6,9 +6,8 @@ description:                            Largest City in the state of Minnesota
 date:                                   2016-11-20 19:16:49 +0100
 series:
 
-tags:                                   [ Wikipedia ]
-index:                                  [ USA, Minnesota, City, Minneapolis ]
-categories:                             []
+tags:                                   [ USA, Minnesota, City, Minneapolis ]
+categories:                             [ Wikipedia ]
 
 regenerate:                             false
 
@@ -23,15 +22,15 @@ resource_options:
           alt:                          Minnesota
 ---
 
-// NOTE:  General Asciidoc page attributes settings
-// -----------------------------------------------------------------------------
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
 :page-liquid:
 
 // Additional Asciidoc page attributes goes here
 // -----------------------------------------------------------------------------
 :page-imagesdir:                        {{page.images.dir}}
 :wikipedia-article:                     https://en.wikipedia.org/wiki/Geography_of_Minneapolis
-
 
 // Place an excerpt at the most top position
 // -----------------------------------------------------------------------------
@@ -43,13 +42,22 @@ of it is land and 9.1 km² (3.5 mi²) of it (6.01%) is water.
 [role="clearfix mb-3"]
 excerpt__end
 
-// Page content
+//  Load Liquid procedures
 // -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="none" %}
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 [[readmore]]
 == Physical
 
 [role="mb-3"]
-image::/assets/images/collections/blog/wikipedia/minneapolis.1200x400.jpg[{{page.title}}]
+image::collections/blog/wikipedia/minneapolis.1200x400.jpg[{{page.title}}]
 
 // Read: link:{wikipedia-article}[From Wikipedia, the free encyclopedia, window="_blank"].
 

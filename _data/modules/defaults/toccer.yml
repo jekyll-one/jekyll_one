@@ -5,7 +5,7 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2020 Juergen Adams
+# Copyright (C) 2021 Juergen Adams
 #
 # J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
@@ -156,12 +156,13 @@ defaults:
   contentSelector:                      .js-toc-content
   headingSelector:                      "h2, h3, h4, h5, h6"
   ignoreSelector:                       .notoc
-  collapseDepth:                        2
-  throttleTimeout:                      50
+  collapseDepth:                        3
+  activeLinkColor:                      "#f44336"
+  throttleTimeout:                      150
   scrollSmooth:                         true
   scrollSmoothDuration:                 300
   scrollSmoothOffset:                   -90                                     # TODO: to be removed, calculated dynamically
-
+  scrollContainer:                      null                                    # ??? scrollContainer
 
 # ------------------------------------------------------------------------------
 # END config

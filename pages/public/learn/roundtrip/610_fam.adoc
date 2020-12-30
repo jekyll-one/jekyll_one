@@ -1,0 +1,294 @@
+---
+title:                                  Floating Action Menu
+tagline:                                using fam buttons
+date:                                   2020-11-08 12:00:00
+description: >
+                                        A floating action button (FAB) represents the primary action/s
+                                        of a page. Multiple actions can be configured as a FAM, the
+                                        floating action menu. See FAM buttons and menus in action
+
+tags:                                   [ Roundtrip, Introduction, FAM ]
+categories:                             [ Module ]
+
+toc:                                    true
+advertising:                            false
+scrollbar:                              false
+
+image:                                  /assets/images/modules/attics/cookies-1920x1200-bw.jpg
+permalink:                              /pages/public/learn/roundtrip/fam/
+regenerate:                             true
+
+resources:                              [ lightbox, rouge, clipboard, fam ]
+resource_options:
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+      opacity:                          0.5
+      slides:
+        - url:                          /assets/images/modules/attics/cookies-1920x1200-bw.jpg
+          alt:                          jekyll.1200x600-bw.jpg
+---
+
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set page (local) attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+// :debug:
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="none" %}
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// See: https://material.io/components/buttons-floating-action-button
+
+A floating action button (FAB) represents the primary action/s
+of a page. Multiple actions can be configured as a FAM, the
+floating action menu. See FAM buttons and menus in action
+
+== Floating Action Menu (FAM)
+
+If you want a fixed floating action button, you can add multiple actions
+that will appear on hover. Our demo is in the bottom righthand corner of
+the page.
+
+[source, html]
+----
+<div class="fam-btn">
+  <a class="btn-fab-floating btn-large red">
+    <i class="large material-icons">mode_edit</i>
+  </a>
+  <ul>
+    <li><a class="btn-fab-floating red"><i class="material-icons">insert_chart</i></a></li>
+    <li><a class="btn-fab-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+    <li><a class="btn-fab-floating green"><i class="material-icons">publish</i></a></li>
+    <li><a class="btn-fab-floating blue"><i class="material-icons">attach_file</i></a></li>
+  </ul>
+</div>
+----
+
+== Initialization
+
+[source, javascript]
+----
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fam-btn');
+    var instances = j1.fam.init(elems, options);
+  });
+----
+
+or using *jQuery*
+
+[source, javascript]
+----
+  $(document).ready(function(){
+    $('.fam-btn').j1.fam();
+  });
+----
+
+=== Options
+
+[cols=",,,", options="header", ]
+|===============================================================================
+|Name |Type |Default |Description
+
+|`direction`
+|String
+|`top`
+|Direction FAM menu opens. Can be `top`, `right`, `buttom`, or `left`
+
+|`hoverEnabled`
+|Boolean
+|`true`
+|If `true`, FAM menu will open on hover instead of click
+
+|`toolbarEnabled`
+|Boolean
+|`false`
+|Enable transit the FAM into a toolbar on click
+
+|===============================================================================
+
+== Methods
+
+Because jQuery is no longer a dependency, all the methods are called on
+the plugin instance. You can get the plugin instance like this:
+
+[source, javascript]
+----
+  var instance = j1.fam.getInstance(elem);
+----
+
+or using *jQuery*
+
+[source, javascript]
+----
+  $('.fam-btn').fam('methodName');
+  $('.fam-btn').fam('methodName', paramName);
+----
+
+WARNING: You can still use the old jQuery plugin method calls.
+But you won't be able to access instance properties.
+
+=== `open()`
+
+Opens a FAM.
+
+[source, javascript]
+----
+  instance.open();
+----
+
+=== `close()`
+
+Closes a FAM.
+
+[source, javascript]
+----
+  instance.close();
+----
+
+=== `destroy()`
+
+Destroy plugin instance and teardown
+
+[source, javascript]
+----
+  instance.destroy();
+----
+
+=== Properties
+
+[cols=",,", options="header", ]
+|===============================================================================
+|Name |Type |Description
+
+|`el`
+|Element
+|The DOM element the plugin was initialized with.
+
+|`options`
+|Object
+|The options the instance was initialized with.
+
+|`isOpen`
+|Boolean
+|Describes open/close state of the FAM.
+
+|===============================================================================
+
+== Horizontal FAM
+
+Creating a horizontal FAM is easy! Just set the direction option.
+
+[source, javascript]
+----
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fam-btn');
+    var instances = j1.fam.init(elems, {
+      direction: 'left'
+    });
+  });
+----
+
+== Click-only FAM
+
+If you want to disable the hover behaviour, and instead toggle the FAM
+menu when the user clicks on the large button (works great on mobile!),
+just add the `click-to-toggle` class to the FAM.
+
+[source, javascript]
+----
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fam-btn');
+    var instances = j1.fam.init(elems, {
+      direction: 'left',
+      hoverEnabled: false
+    });
+  });
+----
+
+/////
+== FAM to Toolbar
+
+Instead of displaying individual button options, you can transition your
+FAM into a toolbar on click. Just add the `toolbar` class to the FAM.
+
+[source, javascript]
+----
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fam-btn');
+    var instances = j1.fam.init(elems, {
+      toolbarEnabled: true
+    });
+  });
+----
+
+Or using jQuery
+
+[source, javascript]
+----
+  $('.fam-btn').fam({
+    toolbarEnabled: true
+  });
+----
+/////
+
+/////
+++++
+<div class="fam-btn">
+  <a id="page_ctrl_button" class="btn-fab-floating btn-large btn-md-red raised-z5"><i class="mdi mdi-chevron-down"></i></a>
+  <ul id="page_ctrl_items">
+    <li><a id="fam_reload_page" class="btn-fab-floating btn-md-red raised-z5"><i class="mdi mdi-reload"></i></a></li>
+    <li><a id="open_mmenu_toc" class="btn-fab-floating btn-md-blue raised-z5"><i class="mdi mdi-wrap"></i></a></li>
+    <li><a id="fam_scroll_to_top" class="btn-fab-floating btn-md-green raised-z5"><i class="mdi mdi-step-backward-2 mdi-rotate-90"></i></a></li>
+    <li><a id="fam_next_section" class="btn-fab-floating btn-md-green raised-z5"><i class="mdi mdi-step-forward mdi-rotate-90"></i></a></li>
+    <li><a id="fam_previous_section" class="btn-fab-floating btn-md-green raised-z5"><i class="mdi mdi-step-backward mdi-rotate-90"></i></a></li>
+    <!--
+    <li><a id="ssm_scroll_to_bottom" class="btn-fab-floating btn-md-green raised-z5"><i class="mdi mdi-step-forward-2 mdi-rotate-90"></i></a></li>
+    -->
+  </ul>
+</div>
+++++
+
+
+++++
+<script>
+  $(document).ready(function() {
+    var FloatingActionOptions = { direction: 'top',
+                                  hoverEnabled: true,
+                                  toolbarEnabled: false };
+
+    var elems         = document.querySelectorAll('.fam-btn');
+    var instances     = j1.fam.init(elems, FloatingActionOptions);
+//  var $instances    = $('.fam-btn').j1.fam(FloatingActionOptions);
+    var $ActionButton = $('#page_ctrl_button');
+
+    if (FloatingActionOptions.hoverEnabled) {
+      $ActionButton.hover(
+        function() {
+          $('.mdi').toggleClass('mdi-chevron-down mdi-chevron-up');
+        }, function() {
+          $('.mdi').toggleClass('mdi-chevron-down mdi-chevron-up');
+        }
+      );
+    } else {
+      $ActionButton.on('click', function (e) {
+        $('.mdi').toggleClass('mdi-chevron-down mdi-chevron-up');
+      });
+    }
+
+  });
+</script>
+++++
+/////

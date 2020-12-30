@@ -9,14 +9,13 @@ description: >
                                         J1 Template which all people needs to know for a successful
                                         way to a modern static website using Jekyll and J1 Template
 
-tags:                                   [ Kickstarter ]
-index:                                  [ Introduction, Web, Website, Jekyll ]
-categories:                             [ pages ]
+tags:                                   [ Kickstarter, Introduction ]
+categories:                             [ Jekyll, Knowledge, Tutorial ]
 
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
-regenerate:                             true
+regenerate:                             false
 
-resources:                              [ lightbox, carousel ]
+resources:                              [ lightbox, carousel, fam ]
 resource_options:
   - attic:
       padding_top:                      400
@@ -32,35 +31,30 @@ resource_options:
             href:                       https://unsplash.com/@jeshoots/portfolio
 ---
 
+// Page Initializer
+// =============================================================================
 // Enable the Liquid Preprocessor
-// -----------------------------------------------------------------------------
 :page-liquid:
 
-// Set other global page attributes here
+// Set page (local) attributes here
 // -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
 
-// Liquid procedures
+//  Load Liquid procedures
 // -----------------------------------------------------------------------------
-{% capture set_env_entry_document %}themes/{{site.template.name}}/procedures/global/set_env_entry_document.proc{%endcapture%}
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
 
-// Initialize entry document paths
+// Load page attributes
 // -----------------------------------------------------------------------------
-{% include {{set_env_entry_document}} init_folders=all %}
+{% include {{load_attributes}} scope="all" %}
 
-// Load tags and urls
-// -----------------------------------------------------------------------------
-include::{includedir}/attributes.asciidoc[tag=tags]
-include::{includedir}/attributes.asciidoc[tag=urls]
-include::{includedir}/attributes.asciidoc[tag=data]
 
-// Additional Asciidoc page attributes goes here
-// -----------------------------------------------------------------------------
-
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // Include sub-documents
 // -----------------------------------------------------------------------------
-include::{documentsdir}/100_meet_and_greet_jekyll.asciidoc[]
-
+include::{documentdir}/100_meet_and_greet_jekyll.asciidoc[]
 
 == Summarize!
 

@@ -5,7 +5,7 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2020 Juergen Adams
+# Copyright (C) 2021 Juergen Adams
 #
 # J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
@@ -109,7 +109,7 @@ defaults:
         title:                          J1 Template
         text: >
                                         Jekyll meets Bootstrap - and makes a lot of friends.
-                                        J1 Template combines the best of open source software for
+                                        J1 Template combines the best of OpenSource software for
                                         the Web and the Web site generator Jekyll. J1 is Open
                                         Source and the modules packed as well - no pain for private
                                         or professional use.
@@ -175,6 +175,5 @@ defaults:
           mail:                         contact@jekyll.one
           href:                         www.jekyll.one
 
-
 # ------------------------------------------------------------------------------
-# END configuration
+# END config

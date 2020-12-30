@@ -1,16 +1,16 @@
 ---
 title:                                  Jekyll URLs
 tagline:                                what is baseurl
-description:                            Jekyll URL Configuration
-
 date:                                   2018-05-01 00:00:00
+description: >
+                                        Jekyll URL Configuration
+
+tags:                                   [ Jekyll, Configuration ]
+categories:                             [ Featured ]
+
 series:
 adsense:                                false
 image:                                  /assets/images/collections/blog/featured/what-is-a-baseurl.jpg
-
-tags:                                   [ Jekyll, Configuration ]
-index:                                  [ Jekyll, Configuration, URL, base_url ]
-categories:                             [ featured ]
 
 regenerate:                             false
 
@@ -25,12 +25,14 @@ resource_options:
           alt:                          jekyll.1200x600-bw.jpg
 ---
 
-// NOTE:  General Asciidoc page attributes settings
-// -----------------------------------------------------------------------------
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
 :page-liquid:
 
-// Additional Asciidoc page attributes goes here
+// Set page (local) attributes here
 // -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
 :page-imagesdir: {{page.images.dir}}
 :wikipedia-article:                     https://en.wikipedia.org/wiki/Geography_of_Minneapolis
 
@@ -45,8 +47,17 @@ and how to use it.
 [role="clearfix mb-3"]
 excerpt__end
 
-// Page content
+//  Load Liquid procedures
 // -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="none" %}
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 [[readmore]]
 == Mimic GitHub Pages
 

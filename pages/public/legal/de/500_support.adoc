@@ -9,9 +9,10 @@ categories:                             [ pages ]
 
 permalink:                              /pages/public/legal/de/support/
 regenerate:                             false
+exclude_from_search:                    true
 
 resources:                              []
-resource_options:
+resource_options:                       []
 ---
 
 == Support

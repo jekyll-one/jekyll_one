@@ -1,17 +1,22 @@
 ---
 title:                                  Framer
 tagline:                                automagic iframes
-description:                            Test page for J1 module framer
+date:                                   2020-11-08 12:00:00
+description: >
+                                        Test page for J1 module framer. Framer enables the automatic
+                                        resizing of the height and width of both same and cross domain
+                                        iFrames to fit their contained content. It provides a range of
+                                        features to address the most common issues with using HTML iFrames.
 
-tags:                                   [ App, Previewer ]
-index:                                  [ Start, Template, Web, Day, Jekyll ]
-categories:                             [ pages ]
+tags:                                   [ HTML, iframe ]
+categories:                             [ App, Previewer ]
+
+toc:                                    false
 
 permalink:                              /pages/public/iframer/
 regenerate:                             false
-toc:                                    false
 
-resources:                             [ iframe_resizer ]
+resources:                              [ framer, fam ]
 resource_options:
   - attic:
       padding_top:                      400
@@ -29,13 +34,8 @@ resource_options:
             href:                       https://unsplash.com/@jruscello
 ---
 
-// Enable the Liquid Preprocessor
-//
-:page-liquid:
-
-// Set other global page attributes here
-// -----------------------------------------------------------------------------
-
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 == Automagic iFrame
 
@@ -48,38 +48,45 @@ Resize window or click one of the links in the iFrame to watch it resize.
   src="/assets/themes/j1/modules/iframeResizer/examples/frame.content.html"
   width="100%"
   style="border-width:0;"
-  scrolling="no">
+  scrolling="no"
+  title="Test Content">
 </iframe>
 
 <script>
-	iFrameResize({
-		log:                    true,
-    minHeight:              250,
-		onResized: function(messageData){
+  $(document).ready(function() {
+    var dependencies_met_page_finished = setInterval (function () {
+      if (j1.adapter.framer.getState() === 'finished') {
+        iFrameResize({
+          log:       true,
+          minHeight: 250,
+          onResized: function(messageData){
 
-			$('p#callback').html(
-				'<b>Frame ID:</b> '    + messageData.iframe.id +
-				' <b>Height:</b> '     + messageData.height +
-				' <b>Width:</b> '      + messageData.width +
-				' <b>Event type:</b> ' + messageData.type
-			);
-		},
-		onMessage: function(messageData){
+            $('p#callback').html(
+              '<b>Frame ID:</b> '    + messageData.iframe.id +
+              ' <b>Height:</b> '     + messageData.height +
+              ' <b>Width:</b> '      + messageData.width +
+              ' <b>Event type:</b> ' + messageData.type
+            );
+          },
+          onMessage: function(messageData){
 
-			$('p#callback').html(
-				'<b>Frame ID:</b> '    + messageData.iframe.id +
-				' <b>Message:</b> '    + messageData.message
-			);
-			alert(messageData.message);
-			document.getElementsByTagName('iframe')[0].iFrameResizer.sendMessage('Hello back from parent page');
-		},
-		onClosed: function(id){
-
-			$('p#callback').html(
-				'<b>IFrame (</b>'    + id +
-				'<b>) removed from page.</b>'
-			);
-		}
-	});
+            $('p#callback').html(
+              '<b>Frame ID:</b> '    + messageData.iframe.id +
+              ' <b>Message:</b> '    + messageData.message
+            );
+            alert(messageData.message);
+            document.getElementsByTagName('iframe')[0].iFrameResizer.sendMessage('Hello back from parent page');
+          },
+          onClosed: function(id){
+            $('p#callback').html(
+              '<b>IFrame (</b>'    + id +
+              '<b>) removed from page.</b>'
+            );
+          }
+        });
+        clearInterval(dependencies_met_page_finished);
+      }
+    }, 25);
+  });
 </script>
 ++++

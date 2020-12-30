@@ -5,7 +5,7 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2020 Juergen Adams
+# Copyright (C) 2021 Juergen Adams
 #
 # J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
@@ -47,79 +47,6 @@ settings:
   log:                                  false
   delay:                                400
 
-  # ----------------------------------------------------------------------------
-  # MODULE settings
-  #
-  # tocSelector
-  # ----------------------------------------------------------------------------
-  #   Specifies the <div> element where to render the table of contents.
-  #
-  #   type:                             string (HTML class)
-  #   values:                           any HTML class
-  #   default:                          .js-toc
-  #
-  #   headingSelector
-  #   --------------------------------------------------------------------------
-  #   Which headings to grab inside of the contentSelector element to build
-  #   the table of contents.
-  #
-  #     type:                           string (HTML class)
-  #     values:                         any HTML heading element class
-  #     default:                        "h1, h2, h3"
-  #
-  #   ignoreSelector
-  #   --------------------------------------------------------------------------
-  #   Headings that match the ignoreSelector will be skipped and ignored.
-  #   Use this HTML class to exclude a heading from TOC.
-  #
-  #     type:                           string (HTML class)
-  #     values:                         any HTML class
-  #     default:                        .notoc
-  #
-  #   contentSelector
-  #   --------------------------------------------------------------------------
-  #   Specifies the <div> element, typiclly your contet area, from which
-  #   the headings are taken to calculate the TOC.
-  #
-  #     type:                           string (HTML class)
-  #     default:                        .js-toc-content
-  #
-  #   activeLinkColor
-  #   --------------------------------------------------------------------------
-  #   Color of the TOC element that is marked as selected (active).
-  #
-  #     type:                           string (color)
-  #     default:                        "#204A87"
-  #
-  #   collapseDepth
-  #   --------------------------------------------------------------------------
-  #   Specifies how many heading levels should NOT collapsed (displayed).
-  #   For example, a value of 6 will show everything (since there are
-  #   only 6 heading levels (H1 .. H6) and a value of 1 will collapse
-  #   all. Hidden sections opened and closed (accordion effect) as the
-  #   content is being scrolled down.
-  #
-  #     type:                           integer ( [1..6] )
-  #     default:                        2
-  #
-  #   throttleTimeout
-  #   --------------------------------------------------------------------------
-  #   Timeout between events firing to make sure it's not too rapid
-  #   (for performance reasons).
-  #
-  #     type:                           integer
-  #     default:                        50
-  #
-  # ----------------------------------------------------------------------------
-  tocSelector:                          .js-toc                                 # Where to render the table of contents
-  contentSelector:                      .js-toc-content                         # Where to grab the headings to build the table of contents
-  headingSelector:                      "h2, h3, h4, h5"                        # Which headings to grab inside of the contentSelector element
-  ignoreSelector:                       .notoc                                  # Headings that match the ignoreSelector will be skipped
-  collapseDepth:                        2                                       # How many heading levels should not be collapsed
-  throttleTimeout:                      50                                      # Timeout between firing events to make sure it's not too rapid
-  scrollSmooth:                         true
-  scrollSmoothDuration:                 300
-  scrollSmoothOffset:                   -80                                     # TODO: to be removed, calculated dynamically
 
 # ------------------------------------------------------------------------------
 # END config

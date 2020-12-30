@@ -2,10 +2,8 @@
 title:                                  J1 Template
 tagline:                                about
 description:                            Things you should know about this site
-categories:                             [ pages ]
 
 tags:                                   [ About ]
-index:                                  []
 categories:                             [ pages ]
 
 permalink:                              /pages/public/about/site/
@@ -36,5 +34,7 @@ lorem:sentences[5]
 
 
 == Hall of fame
+
+Bratze
 
 lorem:sentences[5]

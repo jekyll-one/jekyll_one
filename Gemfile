@@ -37,28 +37,17 @@ ruby RUBY_VERSION
 
 # ------------------------------------------------------------------------------
 # Jekyll
-# NOTE: J1 Template is using Jekyll v3.8 and above
+# NOTE: J1 Template is using Jekyll v4.x
 #
-
-# ------------------------------------------------------------------------------
-# Use Jekyll version from GH master
-#
-# Support for Ruby version 2.7 (DEC 2019)
-# See: https://github.com/jekyll/jekyll/issues/8049
-# gem 'jekyll', github: 'jekyll/jekyll'
 
 # ------------------------------------------------------------------------------
 # Use Jekyll version from RubyGems
 #
-gem 'jekyll', '~> 4.0'
+gem 'jekyll', '~> 4.2'
 
-# Theme Rubie
-# Note: Currently, the version lookup range is LOCKED to the
-#       current version to NOT conflict with changes in higher
-#       versions available for unsupported settings
-# TODO: Open range if template settings are stable
+# Theme Rubies, default: J1 Template (NOT used for the developmnet system)
 #
-gem 'j1-template', '~> 2020.0.18' , '= 2020.0.18'
+gem 'j1-template', '~> 2021.0.0'
 
 # ------------------------------------------------------------------------------
 # PRODUCTION: Gem needed for the Jekyll and J1 prod environment
@@ -78,11 +67,15 @@ gem 'nokogiri-pretty', '>= 0.1.0'
 gem 'htmlbeautifier', '>= 1.2.1'
 
 # ------------------------------------------------------------------------------
-# Additional Gem for Asciidoctor (template|plugin support)
+# Gem needed to compress JS and JSON files
 #
-# gem 'slim', '~> 3.0.7'
-# gem 'thread_safe', '~> 0.3.5'
-gem 'middleman-core', '~> 4.2', '>= 4.2.1'
+gem 'uglifier', '~> 4.2'
+gem 'json-minify', '~> 0.0.3'
+
+# ------------------------------------------------------------------------------
+# Gem needed to run JS to create Lunr the index
+#
+gem 'execjs', '~> 2.7'
 
 # ------------------------------------------------------------------------------
 # Timezone support (multi-platform)
@@ -122,18 +115,6 @@ group :jekyll_plugins do
 end
 
 # ------------------------------------------------------------------------------
-# Additional Gem for Docker support
-#
-# gem 'parallel', '~> 1.15'
-# gem 'i18n', '0.9.5'
-
-# ------------------------------------------------------------------------------
-# Debugger specific RubyGems
-#
-# gem 'debase', '0.2.3'
-# gem 'ruby-debug-ide', '0.7.0.beta7'
-
-# ------------------------------------------------------------------------------
 # Web Application specific RubyGems
 #
 
@@ -142,7 +123,7 @@ end
 # web application, e.g. on Docker or a Heroku Dyno, to define and use
 # of identical Ruby runtime environments.
 #
-# ruby '2.4.5'
+# ruby '2.6.5'
 
 # ------------------------------------------------------------------------------
 # Enable the `rake` Gem if needed. For container-based apps, Rake can
@@ -185,18 +166,18 @@ gem "puma", '>= 4.3.1'
 # authentication. For default, the Omniauth (authentication) strategies
 # for Github, Twitter, Facebook and Patreon are implemented.
 #
-# gem 'rack', '~> 2.2', '>= 2.2.3'
-# gem 'rack-protection', '~> 2.0'
-# gem 'rack-ssl-enforcer', '~> 0.2'
-# gem 'rest-client', '~> 2.0'
+gem 'rack', '~> 2.2', '>= 2.2.3'
+gem 'rack-protection', '~> 2.0'
+gem 'rack-ssl-enforcer', '~> 0.2'
+gem 'rest-client', '~> 2.0'
 
-# gem 'omniauth', '>= 1.3.0'
-# gem 'omniauth-oauth2', '~> 1.4'
+gem 'omniauth', '>= 1.3.0'
+gem 'omniauth-oauth2', '~> 1.4'
 
-# gem 'sinatra', '~> 2.0'
-# gem 'sinatra-cross_origin', '~> 0.3.1'
+gem 'sinatra', '~> 2.0'
+gem 'sinatra-cross_origin', '~> 0.3.1'
 
-# gem 'warden', '~> 1.2'
+gem 'warden', '~> 1.2'
 
 # ------------------------------------------------------------------------------
 # Gem needed for J1 logger based on log4r (middleware)
@@ -215,12 +196,6 @@ gem 'date', '~> 2.0'
 gem 'scss_lint', '~> 0.56.0'
 gem 'sass', '~> 3.5.0'
 gem 'bump', '~> 0.5.4'
-
-# ------------------------------------------------------------------------------
-# Gem needed to compress JS and JSON files
-# Gem uglifier is an dependency of middleman-core
-# gem 'uglifier', '~> 3.2.0'
-gem 'json-minify', '~> 0.0.3'
 
 # ------------------------------------------------------------------------------
 # END

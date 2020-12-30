@@ -5,7 +5,7 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2020 Juergen Adams
+# Copyright (C) 2021 Juergen Adams
 #
 # J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
@@ -91,6 +91,40 @@ settings:
     #
 
     # --------------------------------------------------------------------------
+    # Example gallery
+    #
+    - gallery:
+        enabled:                        true
+        type:                           image
+        id:                             jg_example
+        title:                          Example of a Justified Gallery
+        show_delay:                     250
+        css_classes:                    mb-5
+        images_path:                    /assets/images/pages/roundtrip/100_present_images
+        thumb_path:                     /assets/images/pages/roundtrip/100_present_images
+        images:                         [
+                                          lightbox-image-1.jpg,
+                                          lightbox-image-2.jpg,
+                                          lightbox-image-3.jpg
+                                        ]
+        captions_gallery:               [
+                                          Golden Gate Bridge with San Francisco in distance,
+                                          Forest with mountains behind,
+                                          Bicyclist looking out over hill at ocean
+                                        ]
+        captions_lightbox:              []
+
+        gallery_options:
+          rowHeight:                    300
+          margins:                      1
+
+        lightbox_options:
+          lightbox:                     lg
+          mode:                         lg-fade
+          cssEasing:                    cubic-bezier(0.25, 0, 0.25, 1)
+
+
+    # --------------------------------------------------------------------------
     # Gallery Customizer (Mega Cities)
     #
     - gallery:
@@ -99,11 +133,11 @@ settings:
         id:                             jg_customizer
   #     title:                          Masonry grid layout of Justified Gallery
         show_delay:                     250
-        css_classes:                    mb-3
+        css_classes:                    mb-5
         images_path:                    /assets/images/modules/gallery/mega_cities
         thumb_path:                     /assets/images/modules/gallery/mega_cities
         images:                         [
-                                          banter-snaps_b.jpg, 
+                                          banter-snaps_b.jpg,
                                           denys-nevozhai-1_b.jpg,
                                           gints-gailis_b.jpg,
                                           steven-diaz_b.jpg,
@@ -132,7 +166,7 @@ settings:
                                           Lotte World Tower Seoul - South Korea,
                                           New York City, United States
                                         ]
-        captions_lightbox:
+        captions_lightbox:              []
 
         gallery_options:
           rowHeight:                    150
@@ -157,7 +191,7 @@ settings:
         id:                             jg_video_html5
         show_delay:                     300
         title:                          false                                   # HTML5 Video Gallery
-        css_classes:                    mb-3
+        css_classes:
         video_path:                     https://github.com/jekyll-one-org/jekyll-one-lfs/raw/master/videos
         image_path:                     /assets/videos/gallery
         thumb_path:                     /assets/videos/gallery
@@ -197,7 +231,7 @@ settings:
         id:                             jg_video_online_youtube
         show_delay:                     300
         title:                          false                                   # YouTube Video Gallery
-        css_classes:                    mb-3
+        css_classes:
         image_path:                     /assets/videos/gallery
         thumb_path:                     /assets/videos/gallery
         videos:                         [
@@ -213,10 +247,10 @@ settings:
                                           "Carpool Karaoke - First Lady Michelle Obama"
                                         ]
         captions_lightbox:              [
-                                          "<p>Carpool Karaoke by James Corden - Lady Gaga <br/> Lady Gaga joins James for a drive through Los Angeles singing her classics and tracks from her new album</p>",
-                                          "<p>Carpool Karaoke by James Corden - Adele <br/> James Corden is about the holidays in London and gets his girlfriend Adele off for a ride through the city. <br/> On the way they sing some of their biggest hits and Adele raps Nicki Minaj's <b>monster</b></p>",
-                                          "<p>Carpool Karaoke by James Corden - Gwen Stefani <br/> Gwen Stefani, Julia Roberts, George Clooney and James Corden singing Holla back girl, there's nothing left to see</p>",
-                                          "<p>Carpool Karaoke by James Corden - First Lady Michelle Obama <br/> James Corden's White House tour takes an unthinkable turn when First Lady Michelle Obama joins him for a drive around the grounds singing Stevie Wonder and Beyonce</p>"
+                                          "<p>Lady Gaga joins James for a drive through Los Angeles singing her classics and tracks from her new album</p>",
+                                          "<p>James Corden is about the holidays in London and gets Adele off for a ride through the city. On the way they sing some of their biggest hits and Adele raps Nicki Minaj's <b>monster</b></p>",
+                                          "<p>Gwen Stefani, Julia Roberts, George Clooney and James Corden singing Holla back girl, there's nothing left to see</p>",
+                                          "<p>James Corden's White House tour takes an unthinkable turn when First Lady Michelle Obama joins him for a drive around the grounds singing Stevie Wonder and Beyonce</p>"
                                         ]
         poster:                         [
                                           video_gaga-poster.jpg, video_adele-poster.jpg,
@@ -246,7 +280,7 @@ settings:
         thumb_spacing:                  5
         thumb_bordered:                 true
         thumb_animate:                  true
-        css_classes:                    mb-3
+        css_classes:
         image_path:                     /assets/videos/gallery
         thumb_path:                     /assets/videos/gallery
         videos:                         [
@@ -262,8 +296,8 @@ settings:
                                           "<p>Kick It Old School on Vimeo</p>"
                                         ]
         poster:                         [
-                                          adriana-lima-poster.jpg, 
-                                          kick-it-old-school-poster.jpg                                      
+                                          adriana-lima-poster.jpg,
+                                          kick-it-old-school-poster.jpg
                                         ]
         gallery_options:
           rowHeight:                    200
@@ -281,7 +315,7 @@ settings:
         id:                             jg_video_intro
         show_delay:                     300
         title:                          false                                   # Introduction Videos
-        css_classes:                    mb-3
+        css_classes:
         video_path:                     /assets/videos/tutorials
         image_path:                     /assets/videos/tutorials
         thumb_path:                     /assets/videos/tutorials
@@ -311,7 +345,6 @@ settings:
 #         cssEasing:                    cubic-bezier(0.25, 0, 0.25, 1)
           videojs:                      true
           videojsOptions:               {}
-
 
 # ------------------------------------------------------------------------------
 # END config

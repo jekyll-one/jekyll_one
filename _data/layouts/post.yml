@@ -6,7 +6,7 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2020 Juergen Adams
+# Copyright (C) 2021 Juergen Adams
 #
 # J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
@@ -182,6 +182,14 @@ lanes:
       path:                             modules/connectors
       file:                             comments
 
+  # ----------------------------------------------------------------------------
+  # FAM
+  #
+  - lane:
+      enabled:                          true
+      id:                               fam-container
+      region:                           body-main
+      type:                             async
 
 # ------------------------------------------------------------------------------
 # END config

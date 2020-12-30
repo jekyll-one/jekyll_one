@@ -1,11 +1,19 @@
 ---
 title:                                  Privacy
 tagline:                                your personal data
-description:                            Protection of your personal data
+date:                                   2020-10-23 12:00:00
+description: >
+                                        Protection of your personal data
 
 tags:                                   [ Privacy, Statement ]
-index:                                  []
-categories:                             [ pages ]
+categories:                             [ Legal, Info ]
+
+toc:                                    true
+fam:                                    false
+fam_menu_id:                            page_ctrl
+scrollbar:                              false
+indexed:                                false
+exclude_from_search:                    true
 
 permalink:                              /pages/public/legal/en/privacy/
 regenerate:                             false
@@ -15,7 +23,7 @@ resource_options:
   - attic:
       padding_top:                      400
       padding_bottom:                   50
-      opacity:                          0.5 
+      opacity:                          0.5
       slides:
         - url:                          /assets/images/modules/attics/lianhao-1920x1280.jpg
           alt:                          Photo by Lianhao Qu
@@ -26,11 +34,7 @@ resource_options:
             href:                       https://unsplash.com/@lianhao
 ---
 
-// NOTE: General Asciidoc page attributes settings
-//
-:page-liquid:
-
-// NOTE: Attributes settings for section control
+// Attribute settings for section control
 //
 :cookies:
 :revoke_cookie_consent:
@@ -38,12 +42,11 @@ resource_options:
 :content_permissions:
 :server-logs:
 
-
 The operators of this website take protection of your personal data extremely
 seriously. We treat your personal data as confidential and comply with the
 data protection legislation and this privacy policy.
 
-It is generally *not* possible to use our website without disclosing personal 
+It is generally *not* possible to use our website without disclosing personal
 data. Where personal data (for example a user name, page visits) is collected
 on our website, this is voluntary insofar as is possible. This data is never
 disclosed to third parties without your express consent.
@@ -52,32 +55,32 @@ ifdef::cookies[]
 == Cookies
 
 A cookie is a commonly used automated data collection method. Cookies are
-small text files that are placed on your computer or device by websites that 
+small text files that are placed on your computer or device by websites that
 you visit in order to make websites work, or work more efficiently.
 
 We, may our partners, make use of cookies, web beacons, pixel tags, scripts
-or other similar technologies on our websites to improve the browsing 
+or other similar technologies on our websites to improve the browsing
 experience of our pages:
 
 * Tailor information presented to you based on your browsing preferences,
-  such as language, user account data, selected content and geographical 
+  such as language, user account data, selected content and geographical
   region
 
 * Collect statistics regarding your website usage
 
-All personal data collected is stored in Cookies. We use different kinds 
-of cookies. Cookies are classified by its *lifespan* and the *domain* to 
+All personal data collected is stored in Cookies. We use different kinds
+of cookies. Cookies are classified by its *lifespan* and the *domain* to
 which it belongs.
-    
+
 Session Cookie::
-Classified by *lifespan*. Necessary to provide you with services and 
-features available through our websites for the time of your visit. If you 
+Classified by *lifespan*. Necessary to provide you with services and
+features available through our websites for the time of your visit. If you
 leave our pages, these Cookies are automatically deleted by your web browser.
 Without these cookies, services you may need cannot be provided.
 
 Persistent Cookie::
-Classified by *lifespan*. Necessary to provide you with services and 
-features available through our websites if you return the site. Without 
+Classified by *lifespan*. Necessary to provide you with services and
+features available through our websites if you return the site. Without
 these cookies, services cannot be provided.
 
 First-party Cookie::
@@ -85,13 +88,13 @@ Classified by the *domain*. First-party Cookies are created by *this* site.
 We are using both types: Session Cookies *and* Persistent Cookies.
 
 Second-party Cookie::
-Classified by the *domain*. Used to integrate services from *other* sites 
+Classified by the *domain*. Used to integrate services from *other* sites
 like Github, Patreon, Disqus and others.
 
 [NOTE]
 ====
 If you do not wish to receive cookies you may be able to refuse them by
-adjusting your browser settings to reject cookies. If you do so, we may 
+adjusting your browser settings to reject cookies. If you do so, we may
 *not* unable to offer you *any* of our functionalities, services or support.
 If you have previously visited our websites, you may also have to delete any
 existing cookies from your browser.
@@ -107,13 +110,13 @@ revoke the cookie consent you've given. Furthermore, you may be able to refuse
 them by adjusting your *browser* settings to *reject on cookies*.
 
 CAUTION: If you have previously visited our website -- or any pages this
-session -- *and* agreed on the use of cookies, you may also have to 
+session -- *and* agreed on the use of cookies, you may also have to
 *delete* already existing *cookies* by your *browser* in order to clean
 all cookies left.
 
 ++++
 <div class="ml-0 mb-0">
-  <button type="button" name="revokeCookieConsent" class="btn btn-secondary btn-raised btn-flex mb-3">
+  <button type="button" name="revokeCookieConsent" class="btn btn-primary btn-raised btn-flex mb-3" style="min-width: 25rem">
     <i class="toggle-button mdi mdi-toggle-switch-off mdi-lg mdi-md-bg-primary-50 mr-1"></i>
     Revoke Cookie Consent
   </button>
@@ -150,15 +153,15 @@ all cookies left.
     }
 
     /* Manage button click events from "Cookie Consent REVOKE" dialog */
-    $('a.btn').click(function() {  
+    $('a.btn').click(function() {
       if (this.id === 'revokeCookies') {
         logger.debug('User clicked revokeCookiesButton');
         user_state.cookies_accepted = 'declined';
         j1.writeCookie({
-          name: cookie_user_session_name, 
+          name: cookie_user_session_name,
           data: user_state
         });
-        
+
         $('.toggle-button').toggleClass('mdi-toggle-switch-off mdi-toggle-switch');
 
         // Hide cookie icon
@@ -180,16 +183,16 @@ ifdef::delete_cookies[]
 == Delete cookies
 
 If you have previously visited our website -- or any pages this
-session -- *and* agreed on the use of cookies, you may also have to 
+session -- *and* agreed on the use of cookies, you may also have to
 *delete* already existing *cookies* by your *browser* in order to clean
-all cookies left. 
+all cookies left.
 
-By clicking the button below, all cookies related to *this* site will be 
+By clicking the button below, all cookies related to *this* site will be
 deleted.
 
 ++++
 <div class="ml-0 mb-0">
-  <button type="button" name="deleteCookies" class="btn btn-secondary btn-raised btn-flex mb-3">
+  <button type="button" name="deleteCookies" class="btn btn-primary btn-raised btn-flex mb-3" style="min-width: 25rem">
     <i class="mdi mdi-cookie mdi-lg mdi-md-bg-primary-50 mr-1"></i>
     Delete Cookies
   </button>
@@ -227,9 +230,9 @@ endif::[]
 ifdef::server-logs[]
 == Server log files
 
-We gather certain information automatically by our webservers and store it in 
-log files. This information may include Internet protocol (IP) addresses, 
-browser type, internet service provider (ISP), referring/exit pages, operating 
+We gather certain information automatically by our webservers and store it in
+log files. This information may include Internet protocol (IP) addresses,
+browser type, internet service provider (ISP), referring/exit pages, operating
 system, date/time stamp, and/or clickstream data.
 
 These are:
@@ -391,4 +394,3 @@ Sie verhindern, indem Sie sich aus Ihrem YouTube Account ausloggen.
 Weitere Informationen zum Umgang von Nutzerdaten finden Sie in der
 https://www.google.de/intl/de/policies/privacy[Datenschutzerklärung von YouTube, window="_blank"].
 endif::[]
-

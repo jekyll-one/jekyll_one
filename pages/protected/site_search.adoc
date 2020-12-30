@@ -24,33 +24,22 @@ resource_options:
           alt:                          featured-1920x800
 ---
 
+// Page Initializer
+// =============================================================================
 // Enable the Liquid Preprocessor
-// -----------------------------------------------------------------------------
 :page-liquid:
 
-// Set other global page attributes here
+//  Load Liquid procedures
 // -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
 
-// Liquid procedures
+// Load page attributes
 // -----------------------------------------------------------------------------
-//{% capture set_env_entry_document %}themes/{{site.template.name}}/procedures/global/set_env_entry_document.proc{%endcapture%}
+{% include {{load_attributes}} scope="none"%}
 
-// Initialize entry document paths
-// -----------------------------------------------------------------------------
-//{% include {{set_env_entry_document}} init_folders=all %}
 
-// Load tags and urls
-// -----------------------------------------------------------------------------
-//include::{includedir}/attributes.asciidoc[tag=tags]
-//include::{includedir}/attributes.asciidoc[tag=urls]
-//include::{includedir}/attributes.asciidoc[tag=data]
-
-// Additional Asciidoc page attributes goes here
-// -----------------------------------------------------------------------------
-
-// Include sub-documents
-// -----------------------------------------------------------------------------
-
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 == Site Search
 
 J1 Template integrates an Algolia Search Index for all documents of this site.

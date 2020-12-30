@@ -9,10 +9,11 @@ categories:                             [ pages ]
 
 permalink:                              /pages/public/legal/de/impress/
 regenerate:                             false
+exclude_from_search:                    true
 
 toc:                                    false
 resources:                              []
-resource_options:
+resource_options:                       []
 ---
 
 .Postadresse

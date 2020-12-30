@@ -1,15 +1,19 @@
 ---
 layout:                                 page
-
 title:                                  Creators Blog
 tagline:                                blog posts by tag
 description:                            Browse articles by tag
 
-#permalink:                             /pages/private/blog/navigator/archive/tagview/
+tags:                                   [ Blog, Creator ]
+categories:                             [ Navigator, Tag, Viewer ]
 
-skip_words:                             [ posts ]
+sort:                                   date
+toc:                                    true
+fam:                                    true
+fam_menu_id:                            open_toc
 noindex:                                true
 
+#permalink:                             /pages/private/blog/navigator/archive/tagview/
 regenerate:                             false
 
 resource_options:
@@ -86,7 +90,7 @@ resource_options:
   </ul>
 </div>
 
-<div class="post-search-results col-md-10 col-sm-10 col-xs-11">
+<div class="post-search-results ml-3">
   <div class="view-description mb-1">{{view_description}}</div>
   <div class="post-headline"> <h2 id="post-headline" class="mt-5">Posts By Tag</h2></div>
   {% assign letter_group = letter_group_array[letter_group_counter] %}
@@ -146,23 +150,22 @@ resource_options:
       {% include {{select_icon_size}} family=icon_family size=icon_size %}
       {% assign icon_size = size %}
 
-      {% assign excerpt = post.excerpt | truncatewords: 50 | strip_html | strip_newlines | strip %}
+      {% assign excerpt = post.excerpt|truncatewords:50|replace:'...',' ...'|strip_html|strip_newlines|strip %}
 
       <!-- place post  -->
-      <div class="card card-flat mb-4">
-        <div class="card-body">
-          <!-- <span class="post-meta">{{post.date|date: "%B %d, %Y"}}</span> -->
-          <h5 id="{{100000 | rand}}" class="card-title">{{post.title}}</h5>
-          <h6 class="notoc card-subtitle text-muted mb-2">{{post.tagline}}</h6>
-          <div class="card-text"><p>{{excerpt}}</p></div>
+      <article class="card raised-z5 mb-5">
+        <h3 id="{{100000|rand}}" class="card-header bg-primary">{{post.title}}</h3>
+        <!-- h5 class="notoc card-subtitle text-muted mb-2">{{post.tagline}}</h5 -->
+        <div class="card-body r-text-300">{{excerpt}}</div>
+        <div class="card-body text-muted r-text-200">
+          <i class="mdi mdi-calendar-blank"></i> {{post.date|date:"%Y %B, %e"}}
         </div>
-        <div class="card-footer">
-          <a class="btn btn-secondary btn-raised btn-flex" href="{{post.url}}#readmore">
-            <i class="mdi mdi-eye mdi-lg mr-2" style="color:#FFFFFF;"></i>
-            Read · {{post.tagline}}
+        <div class="card-footer r-text-200">
+          <a class="card-link md-blue font-weight-bold g-font-size-12 text-uppercase"
+             href="{{post.url}}#readmore">Read · {{post.tagline}}
           </a>
         </div>
-      </div>
+      </article>
     {% endif %}{% endfor %}
   {% endunless %}{% endfor %}
 </div>

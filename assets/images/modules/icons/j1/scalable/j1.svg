@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="j1.svg"
-   inkscape:export-filename="X:\j1\github\j1_template\packages\300_template_src\assets\images\modules\icons\j1\j1-512x512.png"
+   inkscape:export-filename="X:\j1\github\j1-template\packages\300_template_src\assets\images\modules\icons\j1\j1-512x512.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <title
@@ -1313,9 +1313,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.3373274"
-     inkscape:cx="341.84077"
-     inkscape:cy="181.05754"
+     inkscape:zoom="1.71"
+     inkscape:cx="250"
+     inkscape:cy="250"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -1361,10 +1361,6 @@
        position="666.2542,249.0041"
        orientation="0,1"
        id="guide4541" />
-    <sodipodi:guide
-       position="-25.802752,175.45872"
-       orientation="0,1"
-       id="guide4547" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -1417,33 +1413,33 @@
      id="layer1"
      transform="translate(0,-552.36218)"
      style="display:inline">
-    <rect
-       style="fill:none;fill-opacity:1"
-       id="rect3745"
-       width="93.470009"
-       height="91.974487"
-       x="-267.69809"
-       y="556.59729" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1"
-       id="rect3747"
-       width="102.44314"
-       height="109.92074"
-       x="-222.08473"
-       y="631.37329" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:203.11209106px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#87aade;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-       x="57.554077"
-       y="1092.8141"
-       id="text4682"
-       sodipodi:linespacing="125%"
-       transform="scale(1.2190564,0.82030662)"><tspan
-         sodipodi:role="line"
-         id="tspan4684"
-         x="57.554077"
-         y="1092.8141"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:564.20019531px;font-family:'Brush Script MT';-inkscape-font-specification:'Brush Script MT Italic';fill:#87aade;">j1</tspan></text>
+    <g
+       id="g4482">
+      <text
+         transform="scale(-1.1438394,0.87424863)"
+         sodipodi:linespacing="125%"
+         id="text4513"
+         y="1111.0399"
+         x="-420.70685"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:541.57806396px;line-height:125%;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#757575;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="1111.0399"
+           x="-420.70685"
+           id="tspan4515"
+           sodipodi:role="line">1</tspan></text>
+      <text
+         transform="scale(1.1450956,-0.87328952)"
+         sodipodi:linespacing="125%"
+         id="text4513-3"
+         y="-723.17688"
+         x="15.25074"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:545.76879883px;line-height:125%;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;display:inline;fill:#0d47a1;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+         xml:space="preserve"><tspan
+           y="-723.17688"
+           x="15.25074"
+           id="tspan4515-9"
+           sodipodi:role="line">1</tspan></text>
+    </g>
   </g>
   <g
      style="display:none"

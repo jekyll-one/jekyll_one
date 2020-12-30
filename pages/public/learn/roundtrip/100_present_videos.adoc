@@ -1,21 +1,24 @@
 ---
 title:                                  Roundtrip
 tagline:                                present videos
-description:                            J1 Template Roundtrip - Present video based data
+date:                                   2020-11-04 12:00:00
+description: >
+                                        Playing video on web pages seems not that special since you can already
+                                        watch videos on web pages through plugins like Flash Player, Quicktime
+                                        or Silverlight.
+                                        A new standard goes to HTML5 Video, a pure HTML way to
+                                        show video on the web; instead of the previous de facto standard of using
+                                        proprietary software.
 
-tags:                                   [ Page, Roundtrip ]
-index:                                  [ Template, Roundtrip, Video ]
-categories:                             [ pages ]
-
-scrollbar:                              false
-toc:                                    true
+tags:                                   [ Roundtrip, Introduction ]
+categories:                             [ Video, Module ]
 
 permalink:                              /pages/public/learn/roundtrip/present_videos/
-regenerate:                             true
+regenerate:                             false
 
 resources:                              [
                                           light_gallery, justified_gallery, video_js,
-                                          vimeo_player, vimeo_player, vimeo_froogaloop
+                                          vimeo_player, vimeo_froogaloop
                                         ]
 resource_options:
   - attic:
@@ -44,96 +47,85 @@ resource_options:
 
 ---
 
+// Page Initializer
+// =============================================================================
 // Enable the Liquid Preprocessor
-// -----------------------------------------------------------------------------
 :page-liquid:
 
-// Set other global page attributes here
+// Set page (local) attributes here
 // -----------------------------------------------------------------------------
-//:my-asciidoc-attribute:
+// :page--attr:                         <attr-value>
+:images-dir:                            {imagesdir}/pages/roundtrip/100_present_images
 
 //  Load Liquid procedures
 // -----------------------------------------------------------------------------
-{% capture set_env_entry_document %}themes/{{site.template.name}}/procedures/global/set_env_entry_document.proc{%endcapture%}
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
 
-// Initialize entry document environmental attributes
+// Load page attributes
 // -----------------------------------------------------------------------------
-{% include {{set_env_entry_document}} %}
-
-// Load tag, url and data attributes
-// -----------------------------------------------------------------------------
-include::{includedir}/attributes.asciidoc[tag=tags]
-include::{includedir}/attributes.asciidoc[tag=urls]
-include::{includedir}/attributes.asciidoc[tag=data]
-
-// Set local page attributes
-// -----------------------------------------------------------------------------
-:images-dir:                            {imagesdir}/pages/roundtrip/100_present_images
+{% include {{load_attributes}} scope="all" %}
 
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-// Include sub-documents
-// -----------------------------------------------------------------------------
-
-Playing video on a web page seems not that special since you can already
+Playing video on web pages seems not that special since you can already
 watch videos on web pages through plugins like _Flash Player_, _Quicktime_
-or _Silverlight_. A new standard goes to *HTML5 Video*, a pure *HTML* way to
+or _Silverlight_. A new standard goes to HTML5 Video, a pure HTML way to
 show video on the web; instead of the previous de facto standard of using
-*proprietary* software.
+proprietary software.
 
 == Video Galleries
 
-*HTML5 Video* open the doors to *your way* presenting video content. Modern
-browsers support the video tag `<video>` for the HTML5 Video standard. Browsers
-have a build-in multimedia framework already for decoding and displaying
+HTML5 Video opens the doors to your way presenting video content. Modern
+browsers support the video tag `<video>` for the HTML5 video standard.
+Browsers have a built-in multimedia framework already for decoding and displaying
 video content. No need to use such proprietary software components anymore!
 
-HTML5 Video support is given by the App *gallery* combined with the Lightbox
-*LightGallery*.
+HTML5 Video support is given by the App gallery combined with the Lightbox
+LightGallery.
 
 Two types of video sources are supported:
 
-. videos from *local* files (your web space)
-. videos from *online* sources (on the Internet) like YouTube, Vimeo, etc.
+. videos from local files (your web space)
+. videos from online sources (on the Internet) like YouTube, Vimeo, etc.
 
-The combination of the App *gallery* and the lightbox *LightGallery* is quite
+The combination of the App gallery and the lightbox LightGallery is entirely
 usable for all the video content you want to present on your site. Galleries
 can be placed elsewhere with your content. You can use them for video blogs
-for example by placing them into your blog articles content.
+by putting them into your blog articles content.
 
-WARNING: *LightGallery* can be used *for free* for *private use* but for
-business use, a *commercial license* is needed. See link:{light-gallery-license}[Light Gallery license]
-how to use LightGallery for *commercial* webs and projects.
+WARNING: LightGallery can be used for free for private use but for
+business use, a commercial license is needed. See link:{light-gallery-license}[Light Gallery license]
+how to use LightGallery for commercial webs and projects.
 
 == Local video content
 
-Digital image content, simple pictures or vidoes, are quite easy to make.
-Today, each and every mobile has a camera - not that bad! Presenting a bunch
-of (digital) pictures is very easy by using *Justified Gallery* for example.
-Videos created by a digi cam or a mobile can played by J1 Template using the
-*HTML5 Video* support of *LightGallery*.
+Digital image content, simple pictures or vidoe, are easy to make. Today, each
+and every mobile has a camera - not that bad! Presenting a bunch
+of (digital) pictures is very easy by using Justified Gallery, for example.
+Videos created by a digicam or a mobile can be played by J1 Template using the
+HTML5 Video support of LightGallery.
 
-Two players are available with *LightGallery*:
+Two players are available with LightGallery:
 
 . an internal player used by default
 . http://videojs.com/[video.js], a excellent Javascript video library
 
 NOTE: The HTML5 specification does _not_ define which video and audio formats
-browsers _should_ support. J1 *LightGallery* supports all _typical_ types of
-HTML5 Video formats browsers support today such as *MP4*, *WebM*, and *Ogg*.
+browsers _should_ support. J1 LightGallery supports all _typical_ types of
+HTML5 Video formats browsers support today such as MP4, WebM, and Ogg.
 
 .HTML5 video gallery
 gallery::jg_video_html5[role="mb-5"]
 
 == Online video content
 
-The Internet is full of interesting content. Video content is very popular,
-the number of channels at e.g. _YouTube_ is enormous. If you want to present
-video content from the Internet, e.g. your channnel, the online video
-support of J1 Template may a good choice. Find some enjoyable videos from
-*James Cordon's* channel: *Carpool Karaoke*.
+The Internet is full of inspiring content. Video content is popular,
+the number of channels at _YouTube_ is enormous. If you want to present
+video content from the Internet, e.g. your channel, the online video
+support of J1 Template may be the right choice. Find some enjoyable videos
+from James Cordon's channel: Carpool Karaoke.
 
 .YouTube Video Gallery - Carpool Karaoke
 gallery::jg_video_online_youtube[role="mb-5"]
@@ -143,9 +135,9 @@ gallery::jg_video_online_vimeo[role="mb-5"]
 
 == Whats next
 
-Images and videos are quite *visual* - and could be impressive, for sure.
-But the most visual component is *text* for all pages, for all sites on the
+Images and videos are quite visual - and could be impressive, for sure.
+But the most visual component is the text for all pages, for all sites on the
 Internet. To see how text could be presented great for modern responsive
-websites, check the section *Typography* next.
+websites, check the section Typography next.
 
 What? Find out how it works. go for: link:{roundtrip-typography}[Typography].

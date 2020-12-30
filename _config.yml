@@ -1,11 +1,11 @@
 # ------------------------------------------------------------------------------
 # ~/_config.yml
-# Site specific configuration for J1 Template
+# Development configuration for J1 Template
 #
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2020 Juergen Adams
+# Copyright (C) 2021 Juergen Adams
 #
 # J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
@@ -53,14 +53,13 @@ environment:                            production
 # ------------------------------------------------------------------------------
 #   Sets the build version of J1 Template Gem
 #
-version:                                2020.0.18
+version:                                2021.0.0
 
 # version
 # ------------------------------------------------------------------------------
 #   Sets the build version of J1 Template
 #
-copyright:                              J1 · Copyright © 2020
-
+copyright:                              J1 · Copyright © 2021
 
 # ==============================================================================
 # 2. THEME configuration
@@ -75,7 +74,7 @@ copyright:                              J1 · Copyright © 2020
 # components are available public at RubyGems.org.
 #
 #
-# theme
+# theme (NOT set for development system)
 # ------------------------------------------------------------------------------
 #   Sets the name of the (gem-based) theme used for Jekyll
 #   serve and build
@@ -224,8 +223,8 @@ doctype:                                html
 #   values:                             boolean (true|false)
 #   default:                            false
 #
-title:                                  J1
-slogan:                                 j1 template · create your web
+title:                                  J1 Template
+slogan:                                 Starter Web
 description:                            Made for Jekyll · Made for Your Web
 keywords:                               Jekyll, One, Template, Ruby, Asciidoctor,
                                         Asciidoc, Bootstrap, Javascript,
@@ -250,8 +249,8 @@ robots:
 
 brand:
   image:                                modules/icons/j1/j1-512x512.png
-  image_height:                         64
-  text:                                 J1
+  image_height:                         48                                      # was: 64
+  text:                                 Starter Web
   text_color:                           "#9E9E9E"
 
 # Set the favicon (located in the asset_path/images) and type
@@ -348,7 +347,7 @@ base_path:                              ""
 #
 protocol:                               http
 host:                                   localhost
-port:                                   4000
+port:                                   44000
 timezone:                               Europe/Berlin
 encoding:                               UTF-8
 
@@ -364,7 +363,7 @@ show_dir_listing:                       false
 #   source:                             .
 #   destination:                        _site
 #
-source:                                 .
+source:   .
 destination:                            _site
 plugins_dir:                            _plugins
 layouts_dir:                            _layouts
@@ -428,7 +427,6 @@ sass:
 #show_drafts:                           false
 #unpublished:                           false
 #limit_posts:                           10
-
 
 # ------------------------------------------------------------------------------
 # LIQUID template engine
@@ -558,6 +556,31 @@ autopages:
     enabled:                            false
     layouts:                            [ paginator/autopage_collection.html ]
 
+# ------------------------------------------------------------------------------
+# COLLECTION settings
+# See: https://jekyllrb.com/docs/collections/#collections
+#
+collections:
+
+  # ----------------------------------------------------------------------------
+  # Featured articles
+  #
+  featured:
+    output:                             true
+    permalink:                          /collections/:collection/:name/
+
+  # ----------------------------------------------------------------------------
+  # Book shelf
+  #
+  biography:
+    output:                             true
+    permalink:                          /collections/public/:collection/:name/
+  fantasy:
+    output:                             true
+    permalink:                          /collections/public/:collection/:name/
+  romance:
+    output:                             true
+    permalink:                          /collections/public/:collection/:name/
 
 # ------------------------------------------------------------------------------
 # FRONTMATTER defaults
@@ -586,6 +609,7 @@ defaults:
       layout:                           page
       author:                           J1 Team
       toc:                              true
+      fam_menu_id:                      page_ctrl_simple
       resources:                        toccer
       analytics:                        false
       advertising:                      false
@@ -625,6 +649,7 @@ defaults:
       scrollbar:                        false
       author:                           J1 Team
       toc:                              true
+      fam_menu_id:                      page_ctrl_simple
       resources:                        toccer
       analytics:                        false
       advertising:                      false
@@ -660,6 +685,7 @@ defaults:
       scrollbar:                        false
       author:                           J1 Team
       toc:                              true
+      fam_menu_id:                      page_ctrl_simple
       resources:                        toccer
       analytics:                        false
       advertising:                      false
@@ -679,7 +705,6 @@ defaults:
 #       category-image:                 img26.jpg
         dir:                            /assets/images/collections/blog/series
 
-
   # ----------------------------------------------------------------------------
   # PUBLIC - WIKIPEDIA
   #
@@ -693,6 +718,7 @@ defaults:
       author:                           Wikipedia
       resources:                        toccer
       toc:                              true
+      fam_menu_id:                      page_ctrl_simple
       resources:                        toccer
       analytics:                        false
       advertising:                      false
@@ -711,6 +737,51 @@ defaults:
       images:
         category-image:
         dir:                            /assets/images/collections/blog/wikipedia
+
+  # ----------------------------------------------------------------------------
+  # Collections
+  #
+
+  # ----------------------------------------------------------------------------
+  # Featured Articles
+  #
+  - scope:
+      type:                             featured
+      path:                             collections/_featured
+
+    values:
+      layout:                           page
+
+  # ----------------------------------------------------------------------------
+  # Biography (Book Shelf)
+  #
+  - scope:
+      type:                             biography
+      path:                             collections/_biography
+
+    values:
+      layout:                           page
+
+  # ----------------------------------------------------------------------------
+  # Fantasy (Book Shelf)
+  #
+  - scope:
+      type:                             fantasy
+      path:                             collections/_fantasy
+
+    values:
+      layout:                           page
+
+  # ----------------------------------------------------------------------------
+  # Romance (Book Shelf)
+  #
+  - scope:
+      type:                             romance
+      path:                             collections/_romance
+
+    values:
+      layout:                           page
+
 
 # ==============================================================================
 # 6. LAYOUT configuration

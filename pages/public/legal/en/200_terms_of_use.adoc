@@ -1,17 +1,25 @@
 ---
 title:                                  Terms of Use
 tagline:                                Terms of Use for Software and Content
-description:                            Terms of Use for Software and Content
+date:                                   2020-10-23 12:00:00
+description: >
+                                        Terms of Use for Software and Content
 
-tags:                                   [ Terms, Use, Software,  Content ]
-index:                                  []
-categories:                             [ pages ]
+tags:                                   [ Terms, Use ]
+categories:                             [ Legal, Info ]
+
+toc:                                    false
+fam:                                    false
+fam_menu_id:                            page_ctrl
+scrollbar:                              false
+indexed:                                false
+exclude_from_search:                    true
 
 permalink:                              /pages/public/legal/en/terms_of_use/
 regenerate:                             false
 
 resources:                              []
-resource_options:
+resource_options:                       []
 ---
 
 == Terms of Use
@@ -37,12 +45,9 @@ Our website contains links to the websites of third parties, so-called
 *external links*. As the content of these websites is not under our control,
 we cannot assume any liability for such external content.
 
-In all cases, the provider of information of the linked websites is liable 
-for the content and accuracy of the information provided. At the point in time 
-when the links were placed, no infringements of the law were recognisable to us. 
+In all cases, the provider of information of the linked websites is liable
+for the content and accuracy of the information provided. At the point in time
+when the links were placed, no infringements of the law were recognisable to us.
 
-As soon as an infringement of the law becomes known to us, we will immediately 
+As soon as an infringement of the law becomes known to us, we will immediately
 remove the link in question.
-
-
-

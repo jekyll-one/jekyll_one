@@ -7,20 +7,19 @@
 # https://jekyll.one
 #
 # Copyright (C) 2002-2014 Will Norris
-# Copyright (C) 2020 Juergen Adams
+# Copyright (C) 2021 Juergen Adams
 #
 # symlink_watcher is licensed under the  MIT license
 # See: https://github.com/willnorris/willnorris.com/blob/master/LICENSE
 # J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
-#
 # ------------------------------------------------------------------------------
 # NOTE:
 #   The symlink_watcher plugin extends jekyll-watch to listen also
 #   for changes in any symlinked sub-directory.
 #
-#   For example, in _drafts directory is a symlink to a directory 
-#   elsewhere on the filesystem. This plugin will cause jekyll to 
+#   For example, in _drafts directory is a symlink to a directory
+#   elsewhere on the filesystem. This plugin will cause jekyll to
 #   regenerate the site when ANY file change in the drafts folder.
 # ------------------------------------------------------------------------------
 require "find"

@@ -1,16 +1,19 @@
 ---
 layout:                                 page
-
 title:                                  Creators Blog
 tagline:                                posts by category
 description:                            Browse articles by category
 
-sort:                                   date
-#permalink:                             /pages/private/blog/navigator/archive/categoryview/
+tags:                                   [ Blog, Creator ]
+categories:                             [ Navigator, Category, Viewer ]
 
-skip_words:                             [ posts, public, protected, private ]
+sort:                                   date
+toc:                                    true
+fam:                                    true
+fam_menu_id:                            open_toc
 noindex:                                true
 
+#permalink:                             /pages/private/blog/navigator/archive/categoryview/
 regenerate:                             false
 
 resources:                              []
@@ -32,7 +35,6 @@ resource_options:
 {% comment %} Debugging|Helpers
 -------------------------------------------------------------------------------- {% endcomment %}
 {% comment %} site_category_word_list:  {{site_category_word_list|debug}} {% endcomment %}
-
 
 {% comment %} Liquid procedures
 -------------------------------------------------------------------------------- {% endcomment %}
@@ -71,11 +73,14 @@ resource_options:
 
 {% comment %} TODO: skip_words configured by yaml data file?
 -------------------------------------------------------------------------------- {% endcomment %}
-{% capture site_category_word_list %}{% for tag in site.categories %}{{tag|first}}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-{% assign categories = site_category_word_list|split:',' %}
+{% capture skip_words %} Posts Public {% endcapture %}
+
+{% capture site_category_word_list %}{% for category in site.categories %}{{category|first|capitalize|lstrip|rstrip}}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign category_words = site_category_word_list|split:',' %}
+{% assign categories = category_words|uniq %}
 
 {% for category in categories %}
-  {% if page.skip_words contains category %} {% continue %} {% endif %}
+  {% if skip_words contains category %} {% continue %} {% endif %}
   {% capture category_list %}{{category_list|append: category}}{% unless forloop.last %},{% endunless %}{% endcapture %}
 {% endfor %}
 
@@ -93,7 +98,7 @@ resource_options:
   </ul>
 </div>
 
-<div class="post-search-results col-md-10 col-sm-10 col-xs-11">
+<div class="post-search-results ml-3">
 
   <div class="view-description">{{view_description}}</div>
   <div class="post-headline">
@@ -103,7 +108,7 @@ resource_options:
   {% for tag in tags %}
     {% assign category = tag|first %}
     {% unless category_list contains category %} {% continue %} {% endunless %}
-    <h3 id="{{tag|first}}" class="toc-link"><i class="mdi mdi-pin mr-1"></i>{{tag|first|capitalize}}</h3>
+    <h3 id="{{tag|first|downcase}}" class="anchor-link mb-4"><i class="mdi mdi-pin mr-1"></i>{{tag|first|capitalize}}</h3>
 
       {% for post in sorted_posts %}
         {%if post.categories contains tag[0]%}
@@ -111,26 +116,40 @@ resource_options:
           {% include {{get_category_item}} category=category %}
           {% include {{select_icon_size}} family=icon_family size=icon_size %}
           {% assign icon_size = size %}
-          {% assign excerpt = post.excerpt|truncatewords: 50|strip_html|strip_newlines|strip %}
+          {% assign excerpt = post.excerpt|truncatewords:50|replace:'...',' ...'|strip_html|strip_newlines|strip %}
 
-          <div class="card card-flat" style="background-color: #fafafa">
-            <div class="card-body">
-              <!-- <span class="post-meta">{{post.date|date: "%B %d, %Y"}}</span> -->
-              <h4 id="{{100000|rand}}" class="card-title">{{post.title}}</h4>
-              <h5 class="notoc card-subtitle text-muted mb-2">{{post.tagline}}</h5>
-              <div class="card-text"><p>{{excerpt}}</p></div>
-              <span class="d-block text-muted text-uppercase g-font-weight-600 g-font-size-12">
-                <i class="mdi mdi-calendar-blank"></i>
-                {{post.date|date:"%Y %B, %e"}}
-              </span>
-            </div>
-            <div class="card-footer" style="background-color: #fafafa">
-              <a class="btn btn-secondary btn-raised btn-flex" href="{{post.url}}#readmore">
-                <i class="mdi mdi-eye mdi-lg mr-2" style="color:#FFFFFF;"></i>
-                Read · {{post.tagline}}
+          <!-- Collect comment provider details -->
+          {% for sharing in builder_config.sharing_provider %}
+            {% assign provider      = sharing.provider %}
+            {% assign likes_count   = sharing.likes_count %}
+            {% assign comment_count = sharing.comment_count %}
+          {% endfor %}          
+
+          <article class="card raised-z5 mb-5">
+            <h3 id="{{100000|rand}}" class="card-header bg-primary notoc">{{post.title}}</h3>
+            <!-- h5 class="notoc card-subtitle text-muted mb-2">{{post.tagline}}</h5 -->
+            <div class="card-body r-text-300">{{excerpt}}</div>
+
+            <div class="card-footer r-text-200">
+              <div class="card-footer-text">
+                {% if post.date %}
+                <i class="mdi mdi-calendar-blank mr-1"></i> {{post.date | date: "%Y %B, %e"}}
+                {% endif %}
+                {% if likes_count %}
+                <span class="font-weight-bold"> · </span>
+                <i class="mdi mdi-heart mr-1"></i> {{likes_count}}
+                {% endif %}
+                {% if comment_count %}
+                <span class="font-weight-bold"> · </span>
+                <i class="mdi mdi-comment mr-1"></i> {{comment_count}}
+                {% endif %}
+              </div>
+              <a class="card-link md-grey-800 font-weight-bold g-font-size-12 text-uppercase"
+                 href="{{post.url}}#readmore">
+                 Read · {{post.tagline}}
               </a>
             </div>
-          </div>
+          </article>
         {% endif %}
       {% endfor %}
   {% endfor %}
@@ -139,7 +158,7 @@ resource_options:
 <!-- [INFO   ] [j1.page.{{page.title}}                   ] [Save the current page to cookieUserState cookie: {{browser_page_url}}] -->
 {% comment %} Update cookie for lastpage
 -------------------------------------------------------------------------------- {% endcomment %}
-<script type="text/javascript">
+<script>
   function setLastPage() {
     var logger = log4javascript.getLogger('j1.BlogNavigator');
     var cookie_names                = j1.getCookieNames();

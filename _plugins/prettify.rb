@@ -5,13 +5,11 @@
 # Product/Info:
 # http://jekyll.one
 #
-# Copyright (C) 2020 Juergen Adams
+# Copyright (C) 2021 Juergen Adams
 #
 # J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
-#
 # ------------------------------------------------------------------------------
-#
 #  NOTE:
 #  CustomFilters cannot be used in SAFE mode (e.g not usable for
 #  rendering pages with Jekyll on GitHub
@@ -23,7 +21,6 @@
 #
 #    {% endcapture %}
 #    {{ cache_name | pretty_print }}
-#
 # ------------------------------------------------------------------------------
 require 'nokogiri'
 require 'nokogiri-pretty'

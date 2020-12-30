@@ -5,7 +5,7 @@
 #  Product/Info:
 #  https://jekyll.one
 #
-#  Copyright (C) 2020 Juergen Adams
+#  Copyright (C) 2021 Juergen Adams
 #
 #  J1 Template is licensed under the MIT License.
 #  See: https://github.com/jekyll-one/J1 Template/blob/master/LICENSE
@@ -57,12 +57,14 @@ defaults:
     category_second_party:              2nd Party
 
   buttons:
-    policy_button:                      true
+    policy_button:                      false
     policy_button_text:                 Cookie Policy
     accept_button:                      true
     accept_button_text:                 Yes, I accept cookies
     decline_button:                     true
     decline_button_text:                No, I refuse cookies
+    revoke_button_text:                 Yes, please revoke cookie consent
+    do_nothing_button_text:             No, please do nothing
 
   policy_about: >
                                         This website uses cookies to ensure vistors get the best experience

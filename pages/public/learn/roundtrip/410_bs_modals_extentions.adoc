@@ -1,16 +1,20 @@
 ---
 title:                                  Roundtrip
 tagline:                                advanced bootstrap modals
-description:                            Advanced Bootstrap Modals for J1 Template
+date:                                   2020-11-08 12:00:00
+description: >
+                                        Bootstrap modals are used to add dialogues to your web pages for user
+                                        notifications. To highlight important information to your visitor's. Modals
+                                        are positioned over everything else in the document so that messages
+                                        get the users attention.
 
-tags:                                   [ Page, Roundtrip ]
-index:                                  [ Template, Roundtrip, Bootstrap, advanced, Modal]
-categories:                             [ pages ]
+tags:                                   [ Roundtrip, Introduction ]
+categories:                             [ Bootstrap, Modal, Extension ]
 
 flowtext:                               false
 
 permalink:                              /pages/public/learn/roundtrip/modals/
-regenerate:                             true
+regenerate:                             false
 
 resources:                              []
 resource_options:
@@ -23,79 +27,67 @@ resource_options:
           alt:                          bootstrap
 ---
 
+// Page Initializer
+// =============================================================================
 // Enable the Liquid Preprocessor
-// -----------------------------------------------------------------------------
 :page-liquid:
 
-// Set other global page attributes here
+// Set page (local) attributes here
 // -----------------------------------------------------------------------------
-//:my-asciidoc-attribute:
+// :page--attr:                         <attr-value>
+:images-dir:                            {imagesdir}/pages/roundtrip/100_present_images
 
 //  Load Liquid procedures
 // -----------------------------------------------------------------------------
-{% capture set_env_entry_document %}themes/{{site.template.name}}/procedures/global/set_env_entry_document.proc{%endcapture%}
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
 
-
-// Initialize entry document environmental attributes
+// Load page attributes
 // -----------------------------------------------------------------------------
-{% include {{set_env_entry_document}} %}
-
-// Load tag, url and data attributes
-// -----------------------------------------------------------------------------
-include::{includedir}/attributes.asciidoc[tag=tags]
-include::{includedir}/attributes.asciidoc[tag=urls]
-include::{includedir}/attributes.asciidoc[tag=data]
-
-// Set local page attributes
-// -----------------------------------------------------------------------------
-// :images-dir:                         {imagesdir}/path/to/page/images
+{% include {{load_attributes}} scope="all" %}
 
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-// Include sub-documents
-// -----------------------------------------------------------------------------
-
 Advanced Bootstrap Modals are based on the free package of
-link:{mdb-home}[Material Design for Bootstrap, {window}] on version
+link:{mdb-home}[Material Design for Bootstrap, {browser-window--new}] on version
 *4.3.2*. This version can be found following this link:
-link:{mdb-bs-modals-legacy}[Enhanced Bootstrap Modals, {window}]. A more
-current version is available from here: link:{mdb-bs-modals}[Modal examples & templates, {window}].
+link:{mdb-bs-modals-legacy}[Enhanced Bootstrap Modals, {browser-window--new}]. A more
+current version is available from here: link:{mdb-bs-modals}[Modal examples & templates, {browser-window--new}].
 
-Bootstrap modals are used to add dialogs to your web pages for user
-notifications. To highlight important information to your vistors. Modals
-are positioned over everything else in the document so that the notification
-gets the users attention.
+Bootstrap modals are used to add dialogues to your web pages for user
+notifications. To highlight important information to your visitor's. Modals
+are positioned over everything else in the document so that messages
+get the users attention.
 
 == BS advanced Modals
 
-To improve your visitors experience on important information that shouldn't
-missed, modals are a good choice to bring the users attention on. Using J1
+To improve your visitor's experience on important information that shouldn't
+missed, modals are a great choice to bring the users attention on. Using J1
 Template BS enhanced predefined modal styles, some emotional weight is added
-to the information displayed - ranging from an info level, simple warning to
+to the information displayed - ranging from an info level, a simple warning to
 critical messages.
 
 NOTE: For more information on how to use Bootstrap’s JavaScript modal
-plugin, refer to: link:{bs_doc_components_modal}[Bootstrap Docs, {window}].
+plugin, refer to: link:{bs_doc_components_modal}[Bootstrap Docs, {browser-window--new}].
 
 // Include sub-documents
 // -----------------------------------------------------------------------------
-include::{documentsdir}/410_table_3_column.asciidoc[]
+include::{documentdir}/410_table_3_column.asciidoc[]
 
 == Whats next
 
-Bootstrap is really a great CSS framework that offers in the current V4
+Bootstrap is really a helpful framework that offers in the current V4
 version a complete set of styles to create excellent responsive designs.
-In the sense of: all can be improved, the responsive tables support of BS
-needs some enhancement to display tables on low resolution devices or smaller
+In the sense of all can be improved, the responsive tables support of BS
+needs some enhancement to display tables on low-resolution devices or smaller
 (browser-) window sizes.
 
-A first version for improved responsive tables that scale better is available
+The first version for improved responsive tables that scale better is available
 for J1 Template on top of the classic BS CSS styles. Check out what from here
 what the link:{roundtrip-responsive-tables}[BS tables extensions] can do!
 
 
 // Include the modals HTML portion
 // -------------------------------------------------------------------
-include::{documentsdir}/419_advanced_modals_demo.asciidoc[]
+include::{documentdir}/419_advanced_modals_demo.asciidoc[]

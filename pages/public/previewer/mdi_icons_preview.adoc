@@ -1,18 +1,22 @@
 ---
 title:                                  MDI Icon Previewer
 tagline:                                search and select mdi icons
-description:                            Material Design Icons Preview for J1 Template
+date:                                   2020-11-08 12:00:00
+description: >
+                                        Previewer for Material Design Icons (MDI) for J1 Template.
+                                        Material Design Icons is a growing icon collection allows
+                                        designers and developers targeting various platforms to download
+                                        icons in the format, color and size they need for any project.
 
-tags:                                   [ Preview, Material, Design, MDI, FontAwesome, Icon, Fonts ]
-index:                                  []
-categories:                             [ pages, manuals ]
+tags:                                   [ Design, MDI, Icon, Fonts ]
+categories:                             [ App, Preview ]
+
+scrollbar:                              false
 
 permalink:                              /pages/public/previewer/mdi_font/
 regenerate:                             false
 
-scrollbar:                              false
-
-resources:                              []
+resources:                              [ clipboard, rouge, mdi_previewer, fam ]
 resource_options:
   - attic:
       padding_top:                      400
@@ -23,35 +27,26 @@ resource_options:
           alt:                          icon-fonts-1920x1280-bw
 ---
 
+// Page Initializer
+// =============================================================================
 // Enable the Liquid Preprocessor
-// -----------------------------------------------------------------------------
 :page-liquid:
 
-// Set other global page attributes here
+// Set page (local) attributes here
 // -----------------------------------------------------------------------------
+//:my-asciidoc-attribute:
 
-// Liquid procedures
+//  Load Liquid procedures
 // -----------------------------------------------------------------------------
-{% capture set_env_entry_document %}themes/{{site.template.name}}/procedures/global/set_env_entry_document.proc{%endcapture%}
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
 
-// Initialize entry document paths
+// Load page attributes
 // -----------------------------------------------------------------------------
-{% include {{set_env_entry_document}} init_folders=all %}
-
-// Load tags and urls
-// -----------------------------------------------------------------------------
-include::{includedir}/attributes.asciidoc[tag=tags]
-include::{includedir}/attributes.asciidoc[tag=urls]
-include::{includedir}/attributes.asciidoc[tag=data]
-
-// Additional Asciidoc page attributes goes here
-// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="local" %}
 
 
-// Include documents
-// -----------------------------------------------------------------------------
-
-
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 == Material Design Icons
 
 _Material Design Icons_ (MDI) is a very helpful design resource for Web Design

@@ -5,7 +5,7 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2020 Juergen Adams
+# Copyright (C) 2021 Juergen Adams
 #
 # J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
@@ -165,7 +165,6 @@ log4r_config:
         date_pattern:                   '%Y-%m-%d %H:%M:%S.%L'
         pattern:                        '[%X{timestamp}] [%X{id}] [%-5X{level}] [%-40X{path}] [%X{logger}] %X{message}'
         type:                           PatternFormatter
-
 
 # ------------------------------------------------------------------------------
 # END config

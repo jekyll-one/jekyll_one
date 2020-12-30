@@ -6,13 +6,8 @@ description:                            Largest snake population
 date:                                   2016-11-24 00:00:00 +0100
 series:
 
-tags:                                   [ Wikipedia ]
-index:                                  [
-                                          Canada, Geography, Narcisse, Manitoba,
-                                          Cities, Snakes, Largest population,
-                                          Wikipedia
-                                        ]
-categories:                             []
+tags:                                   [ Canada, Cities ]
+categories:                             [ Wikipedia ]
 
 regenerate:                             false
 

@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -14,11 +12,11 @@
    height="500"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    sodipodi:docname="d1.svg"
-   inkscape:export-filename="X:\j1\github\digitalme.one\assets\images\modules\icons\d1\d1-512x512.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
+   inkscape:export-filename="C:\Temp\d10n-2021.0.0\assets\images\modules\icons\d1\d1-256x256.png"
+   inkscape:export-xdpi="49.152"
+   inkscape:export-ydpi="49.152">
   <title
      id="title3791">lox</title>
   <defs
@@ -1313,23 +1311,24 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.3373274"
-     inkscape:cx="339.4438"
-     inkscape:cy="264.02058"
+     inkscape:zoom="1.71"
+     inkscape:cx="250"
+     inkscape:cy="173.07033"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1410"
-     inkscape:window-height="879"
-     inkscape:window-x="142"
-     inkscape:window-y="23"
-     inkscape:window-maximized="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1085"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
      inkscape:showpageshadow="false"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:snap-grids="false"
      inkscape:snap-to-guides="false"
-     showborder="true">
+     showborder="true"
+     inkscape:document-rotation="0">
     <inkscape:grid
        type="xygrid"
        id="grid3518"
@@ -1347,11 +1346,11 @@
        id="guide3522" />
     <sodipodi:guide
        orientation="0,1"
-       position="-112.16401,49.352163"
+       position="258.47953,64.912281"
        id="guide3343" />
     <sodipodi:guide
        orientation="0,1"
-       position="-108.94495,449.54128"
+       position="178.94737,429.82456"
        id="guide3345" />
     <sodipodi:guide
        position="250.57339,491.39908"
@@ -1361,10 +1360,6 @@
        position="666.2542,249.0041"
        orientation="0,1"
        id="guide4541" />
-    <sodipodi:guide
-       position="-25.802752,175.45872"
-       orientation="0,1"
-       id="guide4547" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -1417,26 +1412,34 @@
      id="layer1"
      transform="translate(0,-552.36218)"
      style="display:inline">
-    <rect
-       style="fill:none;fill-opacity:1"
-       id="rect3745"
-       width="93.470009"
-       height="91.974487"
-       x="-267.69809"
-       y="556.59729" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:211.00445557px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#87aade;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="49.993526"
-       y="949.14532"
-       id="text4682"
-       sodipodi:linespacing="125%"
-       transform="scale(0.95780651,1.0440522)"><tspan
-         sodipodi:role="line"
-         id="tspan4684"
-         x="49.993526"
-         y="949.14532"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:586.12347412px;font-family:'Brush Script MT';-inkscape-font-specification:'Brush Script MT Italic';fill:#87aade">d1</tspan></text>
+    <g
+       id="g365"
+       transform="matrix(1.0014607,0,0,1.0629679,-0.65862705,-51.56068)">
+      <text
+         transform="scale(-1.1787875,0.84832933)"
+         id="text4513"
+         y="1146.3646"
+         x="-429.00964"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.4094px;line-height:0%;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#757575;fill-opacity:1;stroke:none;stroke-width:1.03412px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="1146.3646"
+           x="-429.00964"
+           id="tspan4515"
+           sodipodi:role="line"
+           style="font-size:560.055px;line-height:1.25;stroke-width:1.03412px">1</tspan></text>
+      <text
+         transform="scale(1.0410399,0.96057798)"
+         id="text4513-3"
+         y="1012.2123"
+         x="26.727713"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.3459px;line-height:0%;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;display:inline;fill:#0d47a1;fill-opacity:1;stroke:none;stroke-width:0.862148px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="1012.2123"
+           x="26.727713"
+           id="tspan4515-9"
+           sodipodi:role="line"
+           style="font-size:470.532px;line-height:1.25;stroke-width:0.862148px">d</tspan></text>
+    </g>
   </g>
   <g
      style="display:none"
@@ -1811,7 +1814,7 @@
         <flowRoot
            xml:space="preserve"
            transform="translate(225.086,-334.88901)"
-           style="font-style:normal;font-weight:bold;font-size:144px;font-family:'Bitstream Vera Sans';fill:#ffffff;fill-opacity:1;stroke:none"
+           style="font-style:normal;font-weight:bold;line-height:0.01%;font-family:'Bitstream Vera Sans';fill:#ffffff;fill-opacity:1;stroke:none"
            id="flowRoot6830"><flowRegion
              id="flowRegion6832"><rect
                y="370.5899"
@@ -1820,7 +1823,9 @@
                style="font-weight:bold;fill:#ffffff;fill-opacity:1"
                id="rect6834"
                height="186.70943" /></flowRegion><flowPara
-             id="flowPara6836" /></flowRoot>      </g>
+             id="flowPara6836"
+             style="font-size:144px;line-height:1.25"> </flowPara></flowRoot>
+      </g>
       <g
          id="g3919"
          transform="matrix(0.26363811,0,0,0.25877756,258.76739,839.68638)">

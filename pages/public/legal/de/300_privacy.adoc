@@ -9,22 +9,18 @@ categories:                             [ pages ]
 
 permalink:                              /pages/public/legal/de/privacy/
 regenerate:                             false
+exclude_from_search:                    true
 
 resources:                              []
-resource_options:
+resource_options:                       []
 ---
 
-// NOTE: General Asciidoc page attributes settings
-//
-:page-liquid:
-
-// NOTE: Attributes settings for section control
+// Attribute settings for section control
 //
 :cookies:
 :revoke_cookie_consent:
 :content_permissions:
 :server-logs:
-
 
 Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr
 ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend
@@ -76,7 +72,7 @@ revoke the cookie consent you've given. Furthermore, you may be able to refuse
 them by adjusting your *browser* settings to *reject on cookies*.
 
 CAUTION: If you have previously visited our website -- or any pages this
-session -- *and* agreed on the use of cookies, you may also have to 
+session -- *and* agreed on the use of cookies, you may also have to
 *delete* already existing *cookies* by your *browser* in order to clean
 all cookies left.
 
@@ -119,15 +115,15 @@ all cookies left.
     }
 
     /* Manage button click events from "Cookie Consent REVOKE" dialog */
-    $('a.btn').click(function() {  
+    $('a.btn').click(function() {
       if (this.id === 'revokeCookies') {
         logger.debug('User clicked revokeCookiesButton');
         user_state.cookies_accepted = 'declined';
         j1.writeCookie({
-          name: cookie_user_session_name, 
+          name: cookie_user_session_name,
           data: user_state
         });
-        
+
         $('.toggle-button').toggleClass('mdi-toggle-switch-off mdi-toggle-switch');
 
         // Hide cookie icon
@@ -297,4 +293,3 @@ Sie verhindern, indem Sie sich aus Ihrem YouTube Account ausloggen.
 Weitere Informationen zum Umgang von Nutzerdaten finden Sie in der
 https://www.google.de/intl/de/policies/privacy[Datenschutzerklärung von YouTube, window="_blank"].
 endif::[]
-

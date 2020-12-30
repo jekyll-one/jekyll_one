@@ -1,50 +1,56 @@
 ---
-title:                                  Web in a Day 
+title:                                  Web in a Day
 tagline:                                preparations
-description:                            Modern static website in a day
+date:                                   2018-05-01 00:00:00
+description: >
+                                        Modern static website in a day
 
-tags:                                   [ Kickstarter, Introduction, Web, Day, Jekyll ]
-index:                                  []
-categories:                             [ pages ]
+tags:                                   [ Kickstarter, Introduction ]
+categories:                             [ Jekyll, Knowledge, Tutorial ]
 
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/preparations/
-regenerate:                             true
+regenerate:                             false
 
-resources:                              [ lightbox, carousel ]
+resources:                              [ lightbox, carousel, fam ]
 resource_options:
-  - toccer:
-      collapseDepth:                    2
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+      opacity:                          0.5
+      slides:
+        - url:                          /assets/images/pages/kickstarter/web_in_a_day/get-started-1920x1280-bw.jpg
+          alt:                          Photo by JESHOOTS.COM on Unsplash
+          alignY:                       top
+          badge:
+            type:                       unsplash
+            author:                     JESHOOTS.COM
+            href:                       https://unsplash.com/@jeshoots/portfolio
 ---
 
-// Enable the Liquid Preprocessor 
-// -----------------------------------------------------------------------------
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
 :page-liquid:
 
-// Set other global page attributes here
+// Set page (local) attributes here
 // -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
 
-// Liquid procedures
+//  Load Liquid procedures
 // -----------------------------------------------------------------------------
-{% capture set_env_entry_document %}themes/{{site.template.name}}/procedures/global/set_env_entry_document.proc{%endcapture%}
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
 
-// Initialize entry document paths
+// Load page attributes
 // -----------------------------------------------------------------------------
-{% include {{set_env_entry_document}} init_folders=all %}
+{% include {{load_attributes}} scope="none" %}
 
-// Load tags and urls
-// -----------------------------------------------------------------------------
-include::{includedir}/attributes.asciidoc[tag=tags]
-include::{includedir}/attributes.asciidoc[tag=urls]
-include::{includedir}/attributes.asciidoc[tag=data]
 
-// Additional Asciidoc page attributes goes here
-// -----------------------------------------------------------------------------
-
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // Include sub-documents
 // -----------------------------------------------------------------------------
-include::{documentsdir}/200_preparations.asciidoc[]
-
+include::{documentdir}/200_preparations.asciidoc[]
 
 == Summarize!
 
@@ -69,4 +75,3 @@ include::{includedir}/parts.asciidoc[tag=chapters_200_oauth_overview]
 
 include::{includedir}/parts.asciidoc[tag=further_reading_200_preparations]
 /////
-

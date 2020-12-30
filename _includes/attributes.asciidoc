@@ -1,0 +1,194 @@
+// ~/includes/attributes.asciidoc
+// Global Ascidoc attributes file
+// -----------------------------------------------------------------------------
+
+// URLS, global references to internal|external web links (macro link:)
+// -----------------------------------------------------------------------------
+tag::urls[]
+
+:url-asciidoctor-plugin--issue_166:               https://github.com/asciidoctor/jekyll-asciidoc/issues/166
+:url__asciidoctor-plugin--issue_166:              https://github.com/asciidoctor/jekyll-asciidoc/issues/166
+
+:url-asciidoctor--extensions_lab:                 https://github.com/asciidoctor/asciidoctor-extensions-lab
+:url-asciidoctor--extensions_use:                 https://github.com/asciidoctor/asciidoctor-extensions-lab#using-an-extension
+:url-asciidoctor--extensions_manual:              http://asciidoctor.org/docs/user-manual/#extensions
+
+:url-bs--themes:                                  https://themes.getbootstrap.com/
+:url-bs--expo:                                    https://expo.getbootstrap.com/
+
+:url-bs_docs:                                     http://getbootstrap.com/docs/4.0/getting-started/introduction/
+:url-bs_docs--examples:                           http://getbootstrap.com/docs/4.0/examples/
+
+:url-bs_docs--content_code:                       https://getbootstrap.com/docs/4.0/content/code/
+:url-bs_docs--content_figures:                    https://getbootstrap.com/docs/4.0/content/figures/
+:url-bs_docs--content_images:                     https://getbootstrap.com/docs/4.0/content/images/
+:url-bs_docs--content_typography:                 https://getbootstrap.com/docs/4.0/content/typography/
+:url-bs_docs--content_tables:                     https://getbootstrap.com/docs/4.0/content/tables/
+
+:url-bs_docs--components_alerts:                  http://getbootstrap.com/docs/4.0/components/alerts/
+:url-bs_docs--components_badges:                  http://getbootstrap.com/docs/4.0/components/badge/
+:url-bs_docs--components_breadcrumb:              http://getbootstrap.com/docs/4.0/components/breadcrumb/
+:url-bs_docs--components_buttons:                 http://getbootstrap.com/docs/4.0/components/buttons/
+:url-bs_docs--components_button_group:            http://getbootstrap.com/docs/4.0/components/button-group/
+:url-bs_docs--components_cards:                   http://getbootstrap.com/docs/4.0/components/card/
+:url-bs_docs--components_carousel:                http://getbootstrap.com/docs/4.0/components/carousel/
+:url-bs_docs--components_collapse:                http://getbootstrap.com/docs/4.0/components/collapse/
+:url-bs_docs--components_dropdowns:               http://getbootstrap.com/docs/4.0/components/dropdowns/
+:url-bs_docs--components_forms:                   http://getbootstrap.com/docs/4.0/components/forms/
+:url-bs_docs--components_input_group:             http://getbootstrap.com/docs/4.0/components/input-group/
+:url-bs_docs--components_jumbotron:               http://getbootstrap.com/docs/4.0/components/jumbotron/
+:url-bs_docs--components_list_group:              http://getbootstrap.com/docs/4.0/components/list-group/
+:url-bs_docs--components_modal:                   http://getbootstrap.com/docs/4.0/components/modal/
+:url-bs_docs--components_navs:                    http://getbootstrap.com/docs/4.0/components/navs/
+:url-bs_docs--components_navbar:                  http://getbootstrap.com/docs/4.0/components/navbar/
+:url-bs_docs--components_pagination:              http://getbootstrap.com/docs/4.0/components/pagination/
+:url-bs_docs--components_popovers:                http://getbootstrap.com/docs/4.0/components/popovers/
+:url-bs_docs--components_progress:                http://getbootstrap.com/docs/4.0/components/progress/
+:url-bs_docs--components_tooltips:                http://getbootstrap.com/docs/4.0/components/tooltips/
+
+:url-bs_docs--utils_borders:                      http://getbootstrap.com/docs/4.0/utilities/borders/
+:url-bs_docs--utils_clearfix:                     http://getbootstrap.com/docs/4.0/utilities/clearfix/
+:url-bs_docs--utils_close_icon:                   http://getbootstrap.com/docs/4.0/utilities/close-icon/
+:url-bs_docs--utils_colors:                       http://getbootstrap.com/docs/4.0/utilities/colors/
+:url-bs_docs--utils_display:                      http://getbootstrap.com/docs/4.0/utilities/display/
+:url-bs_docs--utils_embeds:                       http://getbootstrap.com/docs/4.0/utilities/embed/
+:url-bs_docs--utils_flex:                         http://getbootstrap.com/docs/4.0/utilities/flex/
+:url-bs_docs--utils_float:                        http://getbootstrap.com/docs/4.0/utilities/float/
+:url-bs_docs--utils_image_replacement:            http://getbootstrap.com/docs/4.0/utilities/image-replacement/
+:url-bs_docs--utils_screenreaders:                http://getbootstrap.com/docs/4.0/utilities/screenreaders/
+:url-bs_docs--utils_sizing:                       http://getbootstrap.com/docs/4.0/utilities/sizing/
+:url-bs_docs--utils_spacing:                      http://getbootstrap.com/docs/4.0/utilities/spacing/
+:url-bs_docs--utils_text:                         http://getbootstrap.com/docs/4.0/utilities/text/
+:url-bs_docs--utils_vertical_alignment:           http://getbootstrap.com/docs/4.0/utilities/vertical-align/
+:url-bs_docs--utils_visibility:                   http://getbootstrap.com/docs/4.0/utilities/visibility/
+
+:url-bs_docs--migration_to_v4:                    http://getbootstrap.com/docs/4.0/migration/
+
+:url-bootswatch--home:                            https://bootswatch.com/
+:url-bootswatch--api:                             https://bootswatch.com/help/#api
+
+:url-iconify--home:                               https://iconify.design/
+:url-iconify--icon_sets:                          https://iconify.design/icon-sets/
+:url-iconify--medical_icons:                      https://iconify.design/icon-sets/medical-icon/
+:url-iconify--brand_icons:                        https://iconify.design/icon-sets/logos/
+
+:url-light_gallery--license:                      http://sachinchoolur.github.io/lightGallery/docs/license.html
+
+:url-mdi--home:                                   https://materialdesignicons.com/
+:url-mdi--cheatsheet:                             https://cdn.materialdesignicons.com/3.3.92/
+
+:url-jekyll--home:                                https://jekyllrb.com/
+
+:url-git--home:                                   https://git-scm.com/
+
+:url-gist--home:                                  https://gist.github.com/
+:url-gist--asciidoc_extensions_example:           https://gist.github.com/mojavelinux/5546622
+
+:url-github--signin:                              https://github.com/login
+:url-github--pages:                               https://pages.github.com/
+:url-github--about_org:                           https://help.github.com/articles/about-organizations/
+
+:url-github_dev--oauth_app:                       https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/
+
+:url-github_repo--ruby_gem_bundler:               https://github.com/bundler/bundler
+:url-github_repo--ruby_gem_jekyll_auth:           https://github.com/benbalter/jekyll-auth
+:url-github_repo--md_icons:                       https://github.com/google/material-design-icons
+:url-github_repo--mdi_icons:                      https://github.com/Templarian/MaterialDesign
+
+:url-fontawesome--home:                           https://fontawesome.com/
+:url-fontawesome--icons:                          https://fontawesome.com/icons?d=gallery
+:url-fontawesome--get_started:                    https://fontawesome.com/get-started
+
+:url-j1--home:                                    https://jekyll.one/
+:url-j1--preview:                                 https://preview.jekyll.one/
+
+:url-j1_web_in_a_day--intro:                      /pages/public/learn/kickstarter/web_in_a_day/intro/
+:url-j1_web_in_a_day--meet_and_greet:             /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
+:url-j1_web_in_a_day--preparations:               /pages/public/learn/kickstarter/web_in_a_day/preparations/
+:url-j1_web_in_a_day--first_awesome_web:          /pages/public/learn/kickstarter/web_in_a_day/first_awesome_web/
+
+:url-j1_quick_references--jekyll:                 /pages/protected/manuals/quick_references/jekyll/
+:url-j1_downloads---quickstart_intro:             /pages/public/learn/downloads/quickstart/intro/
+
+:url-j1--learn_whats_up:                          https://jekyll.one/pages/public/learn/whats_up/
+:url-j1--learn_present_images:                    https://jekyll.one/pages/public/learn/roundtrip/present_images/
+:url-j1--learn_present_videos:                    https://jekyll.one/pages/public/learn/roundtrip/present_videos/
+:url-j1--learn_typography:                        https://jekyll.one/pages/public/learn/roundtrip/typography/
+:url-j1--learn_icon_fonts:                        https://jekyll.one/pages/public/learn/roundtrip/mdi_icon_font/
+:url-j1--learn_asciidoc_extensions:               https://jekyll.one/pages/public/learn/roundtrip/asciidoc_extensions/
+:url-j1--learn_extended_modals:                   https://jekyll.one/pages/public/learn/roundtrip/modals/
+:url-j1--learn_responsive_tables:                 https://jekyll.one/pages/public/learn/roundtrip/responsive_tables/
+:url-j1--learn_themes:                            https://jekyll.one/pages/public/learn/roundtrip/themes/
+
+:url-stackoverflow--usage_fonticons:              https://stackoverflow.com/questions/11135261/should-i-use-i-tag-for-icons-instead-of-span
+
+:url-w3org--css_spec:                             https://www.w3.org/Style/CSS/specs.en.html
+
+:url-w3schools--css_tutorial:                     https://www.w3schools.com/css/default.asp
+
+end::urls[]
+
+
+// TAGS, global asciidoc attributes (variables)
+// -----------------------------------------------------------------------------
+tag::tags[]
+
+:browser-window--new:                             window="_blank"
+:clipboard--noclip:                               noclip
+:level--beginner:                                 icon:battery-quarter[role="md-blue"]
+:level--advanced:                                 icon:battery-full[role="md-blue"]
+:figure-caption--text:                            Figure
+
+:icon-checked:                                    icon:check[role="green"]
+:icon-times:                                      icon:times[role="red"]
+:icon-file:                                       icon:file-alt[role="blue"]
+:icon-battery--quarter:                           icon:battery-quarter[role="md-blue"]
+:icon-battery--full:                              icon:battery-full[role="md-blue"]
+
+:char-emdash:                                     &#8212;
+:char-middot:                                     &middot;
+:char-dot:                                        &#46;
+:char-dot--double:                                &#46;&#46;
+:char-bullet:                                     &bull;
+:char-bullet--big:                                &#9679;
+:char-bullet--bigger:                             &#11044;
+
+end::tags[]
+
+
+// DATA, global references to data elements (asciidoc extensions)
+// -----------------------------------------------------------------------------
+tag::data[]
+:data-lightbox--example:                          "pages/roundtrip/100_present_images/lightbox-image-1.jpg, Golden Gate Bridge"
+end::data[]
+
+
+// DOCUMENTS, global document resources (macro include::)
+// -----------------------------------------------------------------------------
+tag::documents[]
+:docs-licenses--mit:                              {globaldocumentsdir}/licenses/mit.asciidoc
+end::documents[]
+
+
+// TABLES, global table resources (macro include::)
+// -----------------------------------------------------------------------------
+tag::tables[]
+:table-template--variables:                       {globaltablesdir}/template_variables.asciidoc
+:table-jekyll--variables:                         {globaltablesdir}/jekyll_variables.asciidoc
+end::tables[]
+
+
+// PRODUCTS, global product information (e.g. release)
+// -----------------------------------------------------------------------------
+tag::products[]
+:j1-license:                                      MIT License
+:j1-version:                                      2021.0.0
+end::products[]
+
+
+// AUTHORS, global author information (special variables)
+// -----------------------------------------------------------------------------
+tag::authors[]
+:author-adams--name:                              "Jürgen Adams"
+:author-adams--url:                               https://jekyll.one
+end::authors[]

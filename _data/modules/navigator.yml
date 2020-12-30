@@ -8,7 +8,7 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2020 Juergen Adams
+# Copyright (C) 2021 Juergen Adams
 #
 # J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one/J1 Template/blob/master/LICENSE
@@ -185,7 +185,7 @@ settings:
 #                     target:           none
 
       # ------------------------------------------------------------------------
-      # DRAWER Toc
+      # DRAWER TOC
       #
       - menu:
           enabled:                      true
@@ -201,7 +201,7 @@ settings:
             type:                       drawer
             title:                      Table of Contents
             theme:                      dark
-            button:                     "#ssm_toc"
+            button:                     "#open_mmenu_toc"
             button_activated:           "js-toc-content"
 
   # ----------------------------------------------------------------------------
@@ -215,7 +215,7 @@ settings:
 
     r_text_sizer:                       false                                   # true | false
 
-    github_url:                         https://github.com/jekyll-one
+    github_url:                         none                                    # https://github.com/jekyll-one
     disqus_url:                         none                                    # https://disqus.com/
     patreon_url:                        none                                    # https://www.patreon.com/jekyll_one/posts
 

@@ -1,16 +1,19 @@
 ---
 title:                                  Roundtrip
 tagline:                                themes
-description:                            J1 Template Roundtrip - Template Themes
+date:                                   2020-11-10 12:00:00
+description: >
+                                        The themes feature for J1 is in an experimental state for the template
+                                        system. Anyway, it makes sense to present what is possible using different
+                                        versions of Bootstrap's CSS styles for a website.
 
-tags:                                   [ Page, Roundtrip ]
-index:                                  [ Template, Roundtrip, Bootstrap, Themes ]
-categories:                             [ pages ]
+tags:                                   [ Roundtrip, Introduction ]
+categories:                             [ Theme, Module ]
 
 permalink:                              /pages/public/learn/roundtrip/themes/
 regenerate:                             false
 
-resources:                              []
+resources:                              [ rouge, clipboard ]
 resource_options:
   - attic:
       padding_top:                      400
@@ -25,39 +28,27 @@ resource_options:
             href:                       https://unsplash.com/@clemono
 ---
 
+// Page Initializer
+// =============================================================================
 // Enable the Liquid Preprocessor
-// -----------------------------------------------------------------------------
 :page-liquid:
 
-// Set other global page attributes here
+// Set page (local) attributes here
 // -----------------------------------------------------------------------------
-//:my-asciidoc-attribute:
+// :page--attr:                         <attr-value>
+:images-dir:                            {imagesdir}/pages/roundtrip/100_present_images
 
 //  Load Liquid procedures
 // -----------------------------------------------------------------------------
-{% capture set_env_entry_document %}themes/{{site.template.name}}/procedures/global/set_env_entry_document.proc{%endcapture%}
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
 
-
-// Initialize entry document environmental attributes
+// Load page attributes
 // -----------------------------------------------------------------------------
-{% include {{set_env_entry_document}} %}
-
-// Load tag, url and data attributes
-// -----------------------------------------------------------------------------
-include::{includedir}/attributes.asciidoc[tag=tags]
-include::{includedir}/attributes.asciidoc[tag=urls]
-include::{includedir}/attributes.asciidoc[tag=data]
-
-// Set local page attributes
-// -----------------------------------------------------------------------------
-// :images-dir:                         {imagesdir}/path/to/page/images
+{% include {{load_attributes}} scope="all" %}
 
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// Include sub-documents
-// -----------------------------------------------------------------------------
 
 ++++
 <!-- page_path:            {{page_path | debug}} -->
@@ -65,72 +56,167 @@ include::{includedir}/attributes.asciidoc[tag=data]
 <!-- site.source.size:     {{site.source.size | debug}} -->
 ++++
 
-The themes feature for J1 Template is in a *alpha status* of the template
-system. Anyway, it makes sense to present what is possible using *different*
+The themes feature for J1 is in an experimental state for the template
+system. Anyway, it makes sense to present what is possible using different
 versions of Bootstrap's CSS styles for a website.
 
-== Themes
+== Template themes
 
 It is expected that many people will change the template for their needs. To
-really create *unique* websites. Fundamental to do this is are CSS styles
+really create unique websites. Fundamental to do this is are CSS styles
 defined by Bootstrap.
 
-Modifying the CSS styles of link:{bootstrap-home}[Bootstrap, {window}] is not
-rocket science. But, to be honest, some knowledge is needed of
+Modifying the CSS styles of link:{bootstrap-home}[Bootstrap, {browser-window--new}]
+is not rocket science. But, to be honest, some knowledge is needed to
 link:{w3org-css-spec}[the CSS technology] to do so. We encourage you to spend
 some time first on learning CSS. To learn what is the
-link:{w3schools-css-tutorial}[design base, {window}] of each and every website.
-Independendly from using Bootstrap or any other CSS framwork.
+link:{w3schools-css-tutorial}[design base, {browser-window--new}] of each and every website.
 
-Thanks to the people at link:{bootswatch-home}[Bootswatch, {window}], a great
-set of already prepared Bootstrap stylesheets in various designs are available
-at their website. No need to start from the scratch, to re-define all the
-Bootstrap variables and rebuild the framework files to create a new theme. Many
-different styles are available. What is already available is at least a good
-base for your modifications: your unique design.
+Thanks to the people at link:{bootswatch-home}[Bootswatch, {browser-window--new}],
+a great set of already prepared Bootstrap stylesheets in various designs are
+available at their website. No need to start from scratch, to re-define all
+the Bootstrap variables and rebuild the framework files to create a new
+theme. Many different styles are available. What is already available at
+Bootswatch is at least a good base for your modifications; your unique design.
 
-Beside the bunch of different stylesheets at Bootswatch, an
-link:{bootswatch-api}[integration API, {window}] is available that helps a lot
-to integrate available designs into a existing site. This API is the base to
-integrate Bootswatch stylesheets into J1 Template for easy use.
-
-Thanks again the people at Bootswatch for this great work.
+Besides the bunch of different stylesheets at Bootswatch, a
+link:{bootswatch-api}[Integration API, {browser-window--new}] is available
+that helps a lot to integrate available designs into an existing site. This API
+is the base to integrate selectable Bootswatch stylesheets into the J1 Template
+navigation system for easy use.
 
 
-== Apply a theme
+=== Apply a template theme
 
-The base for designing pages using J1 Template is the theme *Uno*, a modern
+The base for designing pages using J1 Template is the theme Uno, a modern
 light theme that can be used for many types of websites. And what we mentioned
-already, web design is not: one size fits all. The theme *Uno* can be seen as
-good base, a starting point. Combining Uno and a different theme may a fast
+already, web design is not: one size fits all. The theme Uno can be seen as
+a good base, a starting point. Combining Uno and a different theme may a fast
 solution for your site!?
 
 You can find all available themes, all stylesheets to be applied to your pages
-from the menu *Themes*. You're invited to check how a page is changing for
+from the menu Themes. You're invited to check how a page is changing for
 their design if other stylesheets, other ideas of web design is used.
 
 NOTE: Changing BS-based styles is one thing, changing from one theme to the
-next at runtime a bit more challanging. For the alpha version of J1 Template,
+next at runtime a bit more challenging. For the first version of J1 Template,
 many styles are automatically changed for J1 specific components as well, but
-*not* all of them for now.
+not all of them for now.
 
-Simply select a theme from this menu and a new BS-based stylesheet is
+Simply select a theme from this menu, and a new BS-based stylesheet is
 automatically applied to your pages.
 
-Have fun!
+
+== Code Highlighter Rouge
+
+lorem:sentences[5]
+
+lorem:sentences[3]
+
+=== Apply a theme
+
+Make a selection of theme below to preview a theme.
+
+++++
+<div class="btn-group">
+  <button class="btn btn-primary btn-raised btn-flex btn-lg dropdown-toggle" type="button" data-toggle="dropdown" data-target="#navbarDropdown" aria-haspopup="true" aria-expanded="false">
+  Select a theme<span class="caret"></span>
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" active="true" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('base16')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>base16</a>
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('base16.dark')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>base16.dark</a>
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('base16.light')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>base16.light</a>
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('base16.monokai')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>base16.monokai</a>
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('base16.monokai.dark')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>base16.monokai.dark</a>
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('base16.monokai.light')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>base16.monokai.light</a>
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('base16.solarized')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>base16.solarized</a>
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('base16.solarized.dark')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>base16.solarized.dark</a>
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('base16.solarized.light')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>base16.solarized.light</a>
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('colorful')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>colorful</a>
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('github')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>github</a>
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('gruvbox')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>gruvbox</a>
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('gruvbox.light')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>gruvbox.light</a>
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('igorpro')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>igorpro</a>
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('molokai')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>molokai</a>
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('monokai')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>monokai</a>
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('monokai.sublime')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>monokai.sublime</a>
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('pastie')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>pastie</a>
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('thankful_eyes')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>thankful_eyes</a>
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('tulip')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>tulip</a>
+  </div>
+</div>
+<div id="selected" class="mt-1 mb-3"></div>
+++++
+
+=== Liquid
+
+{% raw %}
+[source, liquid]
+----
+Hello {{ 'now' | date: "%Y %h" }}
+
+{% comment %} if item.quantity is 4... {% endcomment %}
+{% for i in (1..item.quantity) %}
+  {{ i }}
+{% endfor %}
+----
+{% endraw %}
+
+=== Javascript
+
+[source, javascript]
+----
+// helper functions
+//
+function styleSheetLoaded(styleSheet) {
+  var sheets     = document.styleSheets,
+      stylesheet = sheets[(sheets.length - 1)];
+
+  // find CSS file 'styleSheetName' in document
+  for(var i in document.styleSheets) {
+    if(sheets[i].href && sheets[i].href.indexOf(styleSheet) > -1) {
+      return true;;
+    }
+  }
+}
+----
+
+=== Ruby
+
+[source, ruby]
+----
+require 'asciidoctor/extensions' unless RUBY_ENGINE == 'opal'
+include Asciidoctor <1>
+
+Asciidoctor::Extensions.register do
+  class J1BlockMacro < Extensions::BlockMacroProcessor
+    use_dsl
+    named :banner
+    name_positional_attributes 'role'
+
+    def process parent, target, attrs
+      html = %(<div id="#{target}" class="#{attrs['role']}"></div>)
+      create_pass_block parent, html, attrs, subs: nil
+    end
+  end
+  block_macro J1BlockMacro
+end
+----
+<1> don't miss to load the Asciidoctor ruby
+
 
 == Whats next
 
-Hopefully you've enjoyed exploring some of the possibilities J1 offers for
+You've explored some of the possibilities J1 offers for
 managing themes. But much, much more can the J1 do for your website.
 
 This was the last place to go for the roundtrip. More details of the most
 common elements of Bootstrap can be found on the previewer for a theme. Have
 a look at the link:{previewer-theme}[Theme previewer].
 
-To make things real for your new site, go for *Web in a day*. This tutorial
-guides you through all the steps how to build a website - your site using
-Jekyll  nd the template system J1. It's really a nice journey to *explore*
-and  *learn* creating a static web.
+To make things real for your new site, go for Web in a day. This tutorial
+guides you through all the steps on how to build a website - your site using
+Jekyll and the template system J1. It's really a pleasant journey to learn to
+create today's static webs.
 
 Start your journey from here: link:{kickstarter-web-in-a-day}[Web in a day].

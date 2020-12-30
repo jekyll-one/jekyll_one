@@ -1,18 +1,21 @@
 ---
-title:                                  Twitter Emoji Previewer
-tagline:                                search and select twitter emoji's
-description:                            Twitter Emoji Icons V1 Preview Page for J1 Template
+title:                                  Emoji Previewer
+tagline:                                search and select twitter emojis
+date:                                   2020-11-08 12:00:00
+description: >
+                                        Twitter Emoji Icons V1 Previewer.Twitter Emoji is a colored
+                                        icon font developed by Twitter. The full icon set  is fully
+                                        supported by J1 Template.
 
-tags:                                   [ Twitter, Emoji, Icons, Preview ]
-index:                                  []
-categories:                             [ pages, manuals ]
-
-permalink:                              /pages/public/previewer/twitter_emoji/
-regenerate:                             true
+tags:                                   [ Twitter, Emoji, Icons ]
+categories:                             [ App, Previewer ]
 
 scrollbar:                              false
 
-resources:                              [ twemoji ]
+permalink:                              /pages/public/previewer/twitter_emoji/
+regenerate:                             false
+
+resources:                              [ twemoji, twemoji_picker, fam ]
 resource_options:
   - attic:
       padding_top:                      400
@@ -20,42 +23,33 @@ resource_options:
       opacity:                          0.5
       slides:
         - url:                          /assets/images/pages/roundtrip/emojies-1920x1280-bw.jpg
-          alt:                          Photo by Fausto García on Unsplash
+          alt:                          Photo by Fausto Garcia on Unsplash
           badge:
             type:                       unsplash
-            author:                     Fausto García
+            author:                     Fausto Garcia
             href:                       https://unsplash.com/@faustogarmen/portfolio
 ---
 
+// Page Initializer
+// =============================================================================
 // Enable the Liquid Preprocessor
-// -----------------------------------------------------------------------------
 :page-liquid:
 
-// Set other global page attributes here
+// Set page (local) attributes here
 // -----------------------------------------------------------------------------
+:jollygoodcode--emoji:                  https://github.com/jollygoodcode/twemoji
 
-// Liquid procedures
+//  Load Liquid procedures
 // -----------------------------------------------------------------------------
-{% capture set_env_entry_document %}themes/{{site.template.name}}/procedures/global/set_env_entry_document.proc{%endcapture%}
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
 
-// Initialize entry document paths
+// Load page attributes
 // -----------------------------------------------------------------------------
-{% include {{set_env_entry_document}} init_folders=all %}
-
-// Load tags and urls
-// -----------------------------------------------------------------------------
-include::{includedir}/attributes.asciidoc[tag=tags]
-include::{includedir}/attributes.asciidoc[tag=urls]
-include::{includedir}/attributes.asciidoc[tag=data]
-
-// Additional Asciidoc page attributes goes here
-// -----------------------------------------------------------------------------
-:jollygoodcode-emoji:                   https://github.com/jollygoodcode/twemoji
-
-// Include documents
-// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="local" %}
 
 
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 == Twitter Emoji's
 
 J1 Template comes with the Twitter Emoji library (Twemoji) V1 included and
@@ -176,7 +170,9 @@ Simple like that!
 <div id="picker" class="mt-3 mb-5">
   <textarea id="twemoji-picker" class="form-control"></textarea>
 </div>
-
+<div class="paragraph mt-5">
+  <p style="color: transparent;"> dummy-text</p>
+</div>
 <script>
   $('#twemoji-picker').twemojiPicker({
     init: '',
