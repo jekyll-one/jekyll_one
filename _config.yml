@@ -223,8 +223,8 @@ doctype:                                html
 #   values:                             boolean (true|false)
 #   default:                            false
 #
-title:                                  J1 Template
-slogan:                                 Starter Web
+title:                                  J1
+slogan:                                 j1 template · create your web
 description:                            Made for Jekyll · Made for Your Web
 keywords:                               Jekyll, One, Template, Ruby, Asciidoctor,
                                         Asciidoc, Bootstrap, Javascript,
