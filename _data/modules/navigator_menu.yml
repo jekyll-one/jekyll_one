@@ -22,9 +22,13 @@
       href:                             /pages/public/learn/whats_up/
       icon:                             arrow-right
 
+    # --------------------------------------------------------------------------
+    # Roundtrip
+    #
     - title:                            Roundtrip
       icon:                             wallet-travel
       dropdown:
+
         - title:                        Present images
           href:                         /pages/public/learn/roundtrip/present_images/
           icon:                         image
@@ -48,10 +52,13 @@
           icon:                         table
         - title:                        BS themes
           href:                         /pages/public/learn/roundtrip/themes/
-          icon:                         face
-        - title:                        Material Design for Bootstrap
-          href:                         /pages/public/mdb_preview/
-          icon:                         face
+          icon:                         theme-light-dark
+        - title:                        Lunr search
+          href:                         /pages/public/learn/roundtrip/lunr/
+          icon:                         magnify
+        - title:                        FAM buttons
+          href:                         /pages/public/learn/roundtrip/fam/
+          icon:                         alpha-a-circle-outline
 
     - title:                            Web in a Day
       icon:                             rocket
