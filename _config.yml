@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 # ~/_config.yml
-# Development configuration for J1 Template
+# Global Jekyll site configuration
 #
 # Product/Info:
 # https://jekyll.one
@@ -53,7 +53,7 @@ environment:                            production
 # ------------------------------------------------------------------------------
 #   Sets the build version of J1 Template Gem
 #
-version:                                2021.0.0
+version:                                2021.0.3
 
 # version
 # ------------------------------------------------------------------------------
@@ -347,7 +347,7 @@ base_path:                              ""
 #
 protocol:                               http
 host:                                   localhost
-port:                                   44000
+port:                                   4000
 timezone:                               Europe/Berlin
 encoding:                               UTF-8
 

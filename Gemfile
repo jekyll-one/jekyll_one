@@ -6,7 +6,7 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2020 Juergen Adams
+# Copyright (C) 2021 Juergen Adams
 #
 # J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
@@ -37,17 +37,25 @@ ruby RUBY_VERSION
 
 # ------------------------------------------------------------------------------
 # Jekyll
-# NOTE: J1 Template is using Jekyll v4.x
+# NOTE: J1 Template is using Jekyll v3.8 and above
 #
+
+# ------------------------------------------------------------------------------
+# Use Jekyll version from GH master
+#
+# Support for Ruby version 2.7 (DEC 2019)
+# See: https://github.com/jekyll/jekyll/issues/8049
+# gem 'jekyll', github: 'jekyll/jekyll'
 
 # ------------------------------------------------------------------------------
 # Use Jekyll version from RubyGems
 #
 gem 'jekyll', '~> 4.2'
 
-# Theme Rubies, default: J1 Template (NOT used for the developmnet system)
+# Theme Rubies, default: J1 Template (NOT used for the development system)
 #
-gem 'j1-template', '~> 2021.0.0'
+# gem 'j1-template', '~> 2021.0.3'
+gem 'j1-template', '= 2021.0.3'
 
 # ------------------------------------------------------------------------------
 # PRODUCTION: Gem needed for the Jekyll and J1 prod environment
@@ -159,6 +167,7 @@ end
 # gem 'passenger', '>= 5.3'
 gem "puma", '>= 4.3.1'
 
+
 # ------------------------------------------------------------------------------
 # If J1 is transformed into a (Rack and Sinatra based) Web
 # application, the site can be secured using user authentication
@@ -171,18 +180,19 @@ gem 'rack-protection', '~> 2.0'
 gem 'rack-ssl-enforcer', '~> 0.2'
 gem 'rest-client', '~> 2.0'
 
-gem 'omniauth', '>= 1.3.0'
+gem 'omniauth', '>= 1.3'
 gem 'omniauth-oauth2', '~> 1.4'
 
 gem 'sinatra', '~> 2.0'
-gem 'sinatra-cross_origin', '~> 0.3.1'
+# gem 'sinatra-cross_origin', '~> 0.3.1'
 
 gem 'warden', '~> 1.2'
 
 # ------------------------------------------------------------------------------
 # Gem needed for J1 logger based on log4r (middleware)
 #
-gem 'log4r', '~> 1.1.10'
+#gem 'log4r', '~> 1.1.10'
+gem 'log4r', '~> 1.1', '>= 1.1.10'
 gem 'uuid', '~> 2.3', '>= 2.3.8'
 gem 'date', '~> 2.0'
 
@@ -195,7 +205,7 @@ gem 'date', '~> 2.0'
 #
 gem 'scss_lint', '~> 0.56.0'
 gem 'sass', '~> 3.5.0'
-gem 'bump', '~> 0.5.4'
+gem 'bump', '~> 0.8'
 
 # ------------------------------------------------------------------------------
 # END

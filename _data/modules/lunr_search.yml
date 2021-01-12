@@ -29,7 +29,7 @@ settings:
   placement:                            navbar
   target:                               _blank
 
-  stopwords_locale:                     en
+  stopwords_locale:                     de
   min_length:                           3
 
 # ------------------------------------------------------------------------------

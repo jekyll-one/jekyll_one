@@ -9,4 +9,3 @@ Have a good time, a good day learning Jekyll.
 
 lorem:sentences[5] +
 lorem:sentences[3] +
-

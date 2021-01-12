@@ -297,39 +297,40 @@ rouge:
 #                                           /assets/themes/j1/core/fonts/materialdesign_icons/fonts/materialdesignicons-webfont.woff,
 #                                           /assets/themes/j1/core/fonts/materialdesign_icons/fonts/materialdesignicons-webfont.woff2
 #                                         ]
+preload:
 
-font:
-  preload:                              false
-  cors:                                 crossorigin
-  fonts:                                []
-  # fonts:                              [
-  #                                         /assets/themes/j1/core/fonts/roboto/fonts/Roboto-Regular.woff,
-  #                                         /assets/themes/j1/core/fonts/materialdesign_icons/fonts/materialdesignicons-webfont.woff
-  #                                     ]
-css:
-  preload:                              true
-  css:                                  [
-                                          /assets/themes/j1/core/css/themes/uno-light/bootstrap,
-                                          /assets/themes/j1/core/css/vendor
-                                        ]
-  files:                                []
+  font:
+    preload:                              false
+    cors:                                 crossorigin
+    fonts:                                []
+    # fonts:                              [
+    #                                         /assets/themes/j1/core/fonts/roboto/fonts/Roboto-Regular.woff,
+    #                                         /assets/themes/j1/core/fonts/materialdesign_icons/fonts/materialdesignicons-webfont.woff
+    #                                     ]
+  css:
+    preload:                              true
+    css:                                  [
+                                            /assets/themes/j1/core/css/themes/uno-light/bootstrap,
+                                            /assets/themes/j1/core/css/vendor
+                                          ]
+    files:                                []
 
-js:
-  preload:                              true
-  js:                                   [
-                                          /assets/themes/j1/modules/bmd/js/bootstrap-material-design,
-                                          /assets/themes/j1/modules/backstretch/js/backstretch,
-                                          /assets/themes/j1/core/js/template
-                                        ]
-  files:                                [
-                                          /assets/themes/j1/adapter/js/attic.js,
-                                          /assets/themes/j1/adapter/js/logger.js,
-                                          /assets/themes/j1/adapter/js/bmd.js,
-                                          /assets/themes/j1/adapter/js/navigator.js
-                                        ]
-image:
-  preload:                              false
-  files:                                [ /assets/images/modules/icons/j1/j1-512x512.png ]
+  js:
+    preload:                              true
+    js:                                   [
+                                            /assets/themes/j1/modules/bmd/js/bootstrap-material-design,
+                                            /assets/themes/j1/modules/backstretch/js/backstretch,
+                                            /assets/themes/j1/core/js/template
+                                          ]
+    files:                                [
+                                            /assets/themes/j1/adapter/js/attic.js,
+                                            /assets/themes/j1/adapter/js/logger.js,
+                                            /assets/themes/j1/adapter/js/bmd.js,
+                                            /assets/themes/j1/adapter/js/navigator.js
+                                          ]
+  image:
+    preload:                              false
+    files:                                [ /assets/images/modules/icons/j1/j1-512x512.png ]
 
 # ------------------------------------------------------------------------------
 # PRECONNECT settings
