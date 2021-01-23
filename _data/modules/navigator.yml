@@ -78,7 +78,7 @@ settings:
       # DRAWER Sidebar
       #
       - menu:
-          enabled:                      true
+          enabled:                      false
 
           xhr_container_id:             navigator_sidebar_mmenu
           xhr_data_path:                /assets/data/mmenu_sidebar/index.html
