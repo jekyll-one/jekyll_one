@@ -351,12 +351,11 @@ resources:
   #   5   log4javascript                log4javascript@1.4.15
   #   6   Bootstrap                     bootstrap@4.4.1
   #   6   bs_material_design            bootstrap-material-design@4.0.0-beta.4
-  #   7   j1_template                   j1_template_4@2021.0.3
+  #   7   j1_template                   j1_template_4@2021.0.4
   #   8   tocbot                        tocbot@4.12.0
-  #   9   jekyll_search                 simple_jekyll_search@1.1.5
   #   10  bs_theme_switcher             bs_theme_switcher@1.1.5
   #   11  backstretch                   backstretch@2.1.16
-  #   12  cookiebar                     cookiebar@2021.0.3
+  #   12  cookiebar                     cookiebar@2021.0.4
   #
   # ----------------------------------------------------------------------------
   #   J1 Template Core, integrated CSS Resources
@@ -577,29 +576,6 @@ resources:
         init_function:                  [ j1.adapter.back2top.init ]
 
   # ----------------------------------------------------------------------------
-  # SimpleSearch, search engine for Jekyll sites based on Simple-Jekyll-Search
-  # https://github.com/christian-fei/Simple-Jekyll-Search
-  #
-  #
-  - name:                               J1 SimpleSearch
-    resource:
-      id:                               simple_search
-      enabled:                          false                                   # NOT longer used (lunr search preferred)
-      comment:                          module quicksearch
-      region:                           head
-      layout:                           [ all ]
-      required:                         always
-      preload:                          false                                   # property currently unused
-      script_load:                      sync
-      dependencies:                     false
-      pass_init_data:                   false
-      data:
-        css:                            [ modules/jekyllSearch/css/jekyll-search ]
-        files:                          [ adapter/js/searcher.js ]
-        js:                             [ modules/jekyllSearch/js/simple-jekyll-search ]
-        init_function:                  [ j1.adapter.searcher.init ]
-
-  # ----------------------------------------------------------------------------
   # CookieBar
   #
   - name:                               CookieBar
@@ -712,7 +688,7 @@ resources:
         init_function:                  []
 
   # ----------------------------------------------------------------------------
-  # Responsive HTML tables for J! Template (rtable)
+  # Responsive HTML tables for J1 Template (rtable)
   #
   - name:                               Responsive Tables
     resource:
@@ -1200,7 +1176,7 @@ resources:
       enabled:                          true
       comment:                          Floating Button Menu
       region:                           head
-      layout:                           [ all ]
+      layout:                           [ page, post, collection ]              # TODO: check if FAM makes sense for layout app
       required:                         always
       preload:                          false                                   # property currently unused
       script_load:                      sync
@@ -1220,14 +1196,14 @@ resources:
         init_function:                  [ j1.adapter.fam.init ]
 
   # ----------------------------------------------------------------------------
-  # lunr
+  # QuickSearch (lunr for J1 Template)
   # NOTE: This module is in state EXPERIMENTAL
   #
-  - name:                               lunr
+  - name:                               QuickSearch
     resource:
-      id:                               lunr
+      id:                               quicksearch
       enabled:                          true
-      comment:                          lunr search
+      comment:                          J1 QuickSearch
       region:                           head
       layout:                           [ all ]
       required:                         always                                  # always | ondemand
@@ -1236,17 +1212,38 @@ resources:
       dependencies:                     false
       pass_init_data:                   false
       data:
-        css:                            [ modules/lunrSearch/css/lunr_search ]
-        files:                          [ adapter/js/lunr_search.js ]
+        css:                            [ modules/lunrSearch/css/quicksearch ]
+        files:                          [ adapter/js/quicksearch.js ]
         js:                             [
                                           modules/lunrSearch/js/lunr,
                                           modules/lunrSearch/js/mustache,
                                           modules/lunrSearch/js/dateformat,
                                           modules/lunrSearch/js/uri,
-#                                         modules/jquery/js/require,            # property currently unused, conflicts with some modules
-                                          modules/lunrSearch/js/lunr_search
+#                                         modules/jquery/js/require,            # require.js currently unused, but conflicts with some modules
+                                          modules/lunrSearch/js/quicksearch
                                         ]
-        init_function:                  [ j1.adapter.lunr_search.init ]
+        init_function:                  [ j1.adapter.quicksearch.init ]
+
+  # ----------------------------------------------------------------------------
+  # Data tables for J1 Template
+  #
+  - name:                               Data Tables
+    resource:
+      id:                               datatables
+      enabled:                          false
+      comment:                          module datatables
+      region:                           head
+      layout:                           [ all ]
+      required:                         ondemand
+      preload:                          false                                   # property currently unused
+      script_load:                      async
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            [ modules/datatables/css/datatables ]
+        files:                          [ modules/datatables/css/theme/uno.css ]
+        js:                             [ modules/datatables/js/datatables ]
+        init_function:                  []
 
 # ------------------------------------------------------------------------------
 # END config

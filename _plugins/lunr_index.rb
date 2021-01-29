@@ -31,8 +31,8 @@ module Jekyll
         @module_path.slice! "_plugins"
         @module_config_path = File.join(@module_path, config['data_dir'], 'modules')
 
-        @module_config_default = YAML::load(File.open(File.join(@module_config_path, 'defaults', 'lunr_search.yml')))
-        @module_config_user = YAML::load(File.open(File.join(@module_config_path,'lunr_search.yml')))
+        @module_config_default = YAML::load(File.open(File.join(@module_config_path, 'defaults', 'quicksearch.yml')))
+        @module_config_user = YAML::load(File.open(File.join(@module_config_path,'quicksearch.yml')))
 
         @module_config_default_settings = @module_config_default['defaults']
         @module_config_user_settings = @module_config_user['settings']
@@ -83,17 +83,23 @@ module Jekyll
         #
         @strip_index_html = @lunr_config['strip_index_html']
 
+        # @strip_categories configuration
+        #
+        @strip_categories = @lunr_config['strip_categories']
+        @stripped_categories = @strip_categories.join(',').gsub!(',', ' ')
+
         # stop word exclusion configuration
         #
         @min_length = @lunr_config['min_length']
         @stopwords_file = @lunr_config['stopwords']
+
       end
 
       # Index all pages except pages matching any value in config['lunr_excludes']
       # or with frontmatter settings (exclude_from_search: true)
       #
       def generate(site)
-        Jekyll.logger.info 'J1 LunrSearch:', 'creating search index ...'
+        Jekyll.logger.info 'J1 QuickSearch:', 'creating search index ...'
 
         @site = site
         # gather posts and pages
@@ -103,7 +109,7 @@ module Jekyll
         # index = []
 
         index_js = open(@lunr_path).read
-        # all settings must be added within the index function
+        # NOTE: all settings must be added within the index function
         #
         index_js << 'var idx = lunr(function() {'
 
@@ -130,7 +136,11 @@ module Jekyll
             'body'        => entry.body
           }
 
+          # remove unwanted categories
+          doc['categories'] -= @strip_categories
+
           index_js << 'this.add(' << ::JSON.generate(doc, quirks_mode: true) << ');'
+
           # reduce the size of the doc array by deleting the body key
           doc.delete('body')
           @docs[i] = doc
@@ -146,12 +156,13 @@ module Jekyll
           'docs'  => @docs,
           'index' => ::JSON.parse(index, {:max_nesting => false})
         }
-
         filepath  = File.join(site.dest, filename)
+
         # create data path if not already exists
+        #
         FileUtils.mkdir_p(File.dirname(filepath))
         File.open(filepath, 'w') { |f| f.write(JSON.dump(total)) }
-        Jekyll.logger.info 'J1 LunrSearch:', "finished, index ready"
+        Jekyll.logger.info 'J1 QuickSearch:', "finished, index ready."
         added_files = [filename]
 
         # Keep the written files from being cleaned by Jekyll
@@ -250,7 +261,7 @@ module Jekyll
           elsif defined?(site.data['date'])
             date = site.data['date']
           else
-            date = '2020-01-01 00:00:00'
+            date = '2021-01-01 00:00:00'
           end
 
           tagline     = site.data['tagline']
@@ -311,6 +322,6 @@ end
 
 module Jekyll
   module J1LunrSearch
-    VERSION = '1.0.0'
+    VERSION = '2021.0.4'
   end
 end

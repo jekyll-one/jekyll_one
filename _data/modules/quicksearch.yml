@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 #  ~/_data/modules/lunr_search.yml
-#  User configuration settings for J1LunrSearch module
+#  User configuration settings for J1 QuickSearch module
 #
 #  Product/Info:
 #  https://jekyll.one
@@ -16,7 +16,7 @@
 #
 about_config:
 
-  title:                                J1LunrSearch
+  title:                                J1 LunrSearch
   scope:                                User settings
   location:                             _data/modules/lunr_search.yml
 
@@ -29,7 +29,7 @@ settings:
   placement:                            navbar
   target:                               _blank
 
-  stopwords_locale:                     de
+  stopwords_locale:                     en
   min_length:                           3
 
 # ------------------------------------------------------------------------------
