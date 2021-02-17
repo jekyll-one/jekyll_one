@@ -1,10 +1,7 @@
 ---
 title:                                  Minneapolis
 tagline:                                largest city in the state of minnesota
-description:                            Largest City in the state of Minnesota
-
 date:                                   2016-11-20 19:16:49 +0100
-series:
 
 tags:                                   [ USA, Minnesota, City, Minneapolis ]
 categories:                             [ Wikipedia ]
@@ -48,11 +45,15 @@ excerpt__end
 
 // Load page attributes
 // -----------------------------------------------------------------------------
-{% include {{load_attributes}} scope="none" %}
+{% include {{load_attributes}} scope="all" %}
 
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
 [[readmore]]
 == Physical
 

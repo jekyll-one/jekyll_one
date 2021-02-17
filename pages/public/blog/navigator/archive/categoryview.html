@@ -7,6 +7,8 @@ description:                            Browse articles by category
 tags:                                   [ Blog, Creator ]
 categories:                             [ Navigator, Category, Viewer ]
 
+exclude_from_search:                    true
+
 sort:                                   date
 toc:                                    true
 fam:                                    true
@@ -123,7 +125,7 @@ resource_options:
             {% assign provider      = sharing.provider %}
             {% assign likes_count   = sharing.likes_count %}
             {% assign comment_count = sharing.comment_count %}
-          {% endfor %}          
+          {% endfor %}
 
           <article class="card raised-z5 mb-5">
             <h3 id="{{100000|rand}}" class="card-header bg-primary notoc">{{post.title}}</h3>

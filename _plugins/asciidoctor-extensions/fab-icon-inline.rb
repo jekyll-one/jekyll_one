@@ -26,7 +26,7 @@ Asciidoctor::Extensions.register do
       size_class = (size = attributes['size']) ? %(fa-#{size}) : nil
       modifier_class = (modifier = attributes['modifier']) ? %(#{modifier}) : nil
       icon_name = target.tr '_', '-'
-      %(<i class="fab #{size_class} #{modifier} fa-#{icon_name}"></i>)
+      %(<i class="fab fa-#{icon_name} #{size_class} #{modifier}"></i>)
     end
   end
   inline_macro FabIconInlineMacro

@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 # ~/_config.yml
-# Global Jekyll site configuration
+# Global Jekyll site configuration (runtime)
 #
 # Product/Info:
 # https://jekyll.one
@@ -45,7 +45,7 @@
 # Sets the build environment of the website
 #
 #   values:                             development|production
-#   default:                            development
+#   default:                            production
 #
 environment:                            production
 
@@ -53,7 +53,7 @@ environment:                            production
 # ------------------------------------------------------------------------------
 #   Sets the build version of J1 Template Gem
 #
-version:                                2021.0.4
+version:                                2021.0.7
 
 # version
 # ------------------------------------------------------------------------------
@@ -224,7 +224,7 @@ doctype:                                html
 #   default:                            false
 #
 title:                                  J1
-slogan:                                 j1 template · create your web
+slogan:                                 create your web
 description:                            Made for Jekyll · Made for Your Web
 keywords:                               Jekyll, One, Template, Ruby, Asciidoctor,
                                         Asciidoc, Bootstrap, Javascript,
@@ -341,13 +341,13 @@ base_path:                              ""
 #  Defaults:
 #   protocol:                           http
 #   host:                               localhost
-#   port:                               4000
+#   port:                               13000
 #   timezone:                           Europe/Berlin
 #   encoding:                           UTF-8
 #
 protocol:                               http
 host:                                   localhost
-port:                                   4000
+port:                                   13000
 timezone:                               Europe/Berlin
 encoding:                               UTF-8
 
@@ -386,7 +386,7 @@ exclude:                                [
                                           '.sass-cache', '.vscode',
                                           '.idea', '*.ignore',
                                           '*.bat', '*.sh', '*.tmp', 'dot.*',
-                                          '*.txt', '*.log', '*.ppt*',
+                                          '*.txt', '*.log', '*.ppt*', '*.pdf',
                                           '*.zip', '*.7z', '*.tgz', '*.tar',
                                           '*.a2p', '*.asciidoc'
                                         ]

@@ -5,144 +5,347 @@
 // URLS, global references to internal|external web links (macro link:)
 // -----------------------------------------------------------------------------
 tag::urls[]
+:url-animate-css--home:                           https://animate.style/
+:url-anime--home:                                 https://animejs.com/
 
+:url-apache-log4j-v2--home:                       https://logging.apache.org/log4j/2.x/
+
+:url-oreilly-atlas--home:                         https://atlas.oreilly.com/
+
+:url-asciidoctor--home:                           https://asciidoctor.org/
+:url-asciidoctor-pdf--home:                       https://asciidoctor.org/docs/asciidoctor-pdf/
+:url-asciidoctor-rouge--home:                     https://github.com/jirutka/asciidoctor-rouge
+
+:url-asciidoctor-plugin--home:                    https://github.com/asciidoctor/jekyll-asciidoc
 :url-asciidoctor-plugin--issue_166:               https://github.com/asciidoctor/jekyll-asciidoc/issues/166
-:url__asciidoctor-plugin--issue_166:              https://github.com/asciidoctor/jekyll-asciidoc/issues/166
+:url-asciidoctor-plugin--issue_166:               https://github.com/asciidoctor/jekyll-asciidoc/issues/166
 
-:url-asciidoctor--extensions_lab:                 https://github.com/asciidoctor/asciidoctor-extensions-lab
-:url-asciidoctor--extensions_use:                 https://github.com/asciidoctor/asciidoctor-extensions-lab#using-an-extension
-:url-asciidoctor--extensions_manual:              http://asciidoctor.org/docs/user-manual/#extensions
+:url-asciidoctor--extensions-lab:                 https://github.com/asciidoctor/asciidoctor-extensions-lab
+:url-asciidoctor--extensions-use:                 https://github.com/asciidoctor/asciidoctor-extensions-lab#using-an-extension
+:url-asciidoctor--extensions-manual:              http://asciidoctor.org/docs/user-manual/#extensions
 
+:url-babel-js--home:                              https://babeljs.io/
+:url-babel-js--gh-repo:                           https://github.com/babel/babel
+
+:url-backstretch--home:                           https://www.jquery-backstretch.com/
+:url-backstretch--gh-repo:                        https://github.com/jquery-backstretch/jquery-backstretch
+
+:url-bs--home:                                    https://getbootstrap.com/
 :url-bs--themes:                                  https://themes.getbootstrap.com/
 :url-bs--expo:                                    https://expo.getbootstrap.com/
 
-:url-bs_docs:                                     http://getbootstrap.com/docs/4.0/getting-started/introduction/
-:url-bs_docs--examples:                           http://getbootstrap.com/docs/4.0/examples/
+:url-bs-docs:                                     http://getbootstrap.com/docs/4.1/getting-started/introduction/
+:url-bs-docs--examples:                           http://getbootstrap.com/docs/4.1/examples/
 
-:url-bs_docs--content_code:                       https://getbootstrap.com/docs/4.0/content/code/
-:url-bs_docs--content_figures:                    https://getbootstrap.com/docs/4.0/content/figures/
-:url-bs_docs--content_images:                     https://getbootstrap.com/docs/4.0/content/images/
-:url-bs_docs--content_typography:                 https://getbootstrap.com/docs/4.0/content/typography/
-:url-bs_docs--content_tables:                     https://getbootstrap.com/docs/4.0/content/tables/
+:url-bs-docs--content-code:                       https://getbootstrap.com/docs/4.1/content/code/
+:url-bs-docs--content-figures:                    https://getbootstrap.com/docs/4.1/content/figures/
+:url-bs-docs--content-images:                     https://getbootstrap.com/docs/4.1/content/images/
+:url-bs-docs--content-typography:                 https://getbootstrap.com/docs/4.1/content/typography/
+:url-bs-docs--content-tables:                     https://getbootstrap.com/docs/4.1/content/tables/
 
-:url-bs_docs--components_alerts:                  http://getbootstrap.com/docs/4.0/components/alerts/
-:url-bs_docs--components_badges:                  http://getbootstrap.com/docs/4.0/components/badge/
-:url-bs_docs--components_breadcrumb:              http://getbootstrap.com/docs/4.0/components/breadcrumb/
-:url-bs_docs--components_buttons:                 http://getbootstrap.com/docs/4.0/components/buttons/
-:url-bs_docs--components_button_group:            http://getbootstrap.com/docs/4.0/components/button-group/
-:url-bs_docs--components_cards:                   http://getbootstrap.com/docs/4.0/components/card/
-:url-bs_docs--components_carousel:                http://getbootstrap.com/docs/4.0/components/carousel/
-:url-bs_docs--components_collapse:                http://getbootstrap.com/docs/4.0/components/collapse/
-:url-bs_docs--components_dropdowns:               http://getbootstrap.com/docs/4.0/components/dropdowns/
-:url-bs_docs--components_forms:                   http://getbootstrap.com/docs/4.0/components/forms/
-:url-bs_docs--components_input_group:             http://getbootstrap.com/docs/4.0/components/input-group/
-:url-bs_docs--components_jumbotron:               http://getbootstrap.com/docs/4.0/components/jumbotron/
-:url-bs_docs--components_list_group:              http://getbootstrap.com/docs/4.0/components/list-group/
-:url-bs_docs--components_modal:                   http://getbootstrap.com/docs/4.0/components/modal/
-:url-bs_docs--components_navs:                    http://getbootstrap.com/docs/4.0/components/navs/
-:url-bs_docs--components_navbar:                  http://getbootstrap.com/docs/4.0/components/navbar/
-:url-bs_docs--components_pagination:              http://getbootstrap.com/docs/4.0/components/pagination/
-:url-bs_docs--components_popovers:                http://getbootstrap.com/docs/4.0/components/popovers/
-:url-bs_docs--components_progress:                http://getbootstrap.com/docs/4.0/components/progress/
-:url-bs_docs--components_tooltips:                http://getbootstrap.com/docs/4.0/components/tooltips/
+:url-bs-docs--components-alerts:                  http://getbootstrap.com/docs/4.1/components/alerts/
+:url-bs-docs--components-badges:                  http://getbootstrap.com/docs/4.1/components/badge/
+:url-bs-docs--components-breadcrumb:              http://getbootstrap.com/docs/4.1/components/breadcrumb/
+:url-bs-docs--components-buttons:                 http://getbootstrap.com/docs/4.1/components/buttons/
+:url-bs-docs--components-button_group:            http://getbootstrap.com/docs/4.1/components/button-group/
+:url-bs-docs--components-cards:                   http://getbootstrap.com/docs/4.1/components/card/
+:url-bs-docs--components-carousel:                http://getbootstrap.com/docs/4.1/components/carousel/
+:url-bs-docs--components-collapse:                http://getbootstrap.com/docs/4.1/components/collapse/
+:url-bs-docs--components-dropdowns:               http://getbootstrap.com/docs/4.1/components/dropdowns/
+:url-bs-docs--components-forms:                   http://getbootstrap.com/docs/4.1/components/forms/
+:url-bs-docs--components-input_group:             http://getbootstrap.com/docs/4.1/components/input-group/
+:url-bs-docs--components-jumbotron:               http://getbootstrap.com/docs/4.1/components/jumbotron/
+:url-bs-docs--components-list_group:              http://getbootstrap.com/docs/4.1/components/list-group/
+:url-bs-docs--components-modal:                   http://getbootstrap.com/docs/4.1/components/modal/
+:url-bs-docs--components-navs:                    http://getbootstrap.com/docs/4.1/components/navs/
+:url-bs-docs--components-navbar:                  http://getbootstrap.com/docs/4.1/components/navbar/
+:url-bs-docs--components-pagination:              http://getbootstrap.com/docs/4.1/components/pagination/
+:url-bs-docs--components-popovers:                http://getbootstrap.com/docs/4.1/components/popovers/
+:url-bs-docs--components-progress:                http://getbootstrap.com/docs/4.1/components/progress/
+:url-bs-docs--components-tooltips:                http://getbootstrap.com/docs/4.1/components/tooltips/
 
-:url-bs_docs--utils_borders:                      http://getbootstrap.com/docs/4.0/utilities/borders/
-:url-bs_docs--utils_clearfix:                     http://getbootstrap.com/docs/4.0/utilities/clearfix/
-:url-bs_docs--utils_close_icon:                   http://getbootstrap.com/docs/4.0/utilities/close-icon/
-:url-bs_docs--utils_colors:                       http://getbootstrap.com/docs/4.0/utilities/colors/
-:url-bs_docs--utils_display:                      http://getbootstrap.com/docs/4.0/utilities/display/
-:url-bs_docs--utils_embeds:                       http://getbootstrap.com/docs/4.0/utilities/embed/
-:url-bs_docs--utils_flex:                         http://getbootstrap.com/docs/4.0/utilities/flex/
-:url-bs_docs--utils_float:                        http://getbootstrap.com/docs/4.0/utilities/float/
-:url-bs_docs--utils_image_replacement:            http://getbootstrap.com/docs/4.0/utilities/image-replacement/
-:url-bs_docs--utils_screenreaders:                http://getbootstrap.com/docs/4.0/utilities/screenreaders/
-:url-bs_docs--utils_sizing:                       http://getbootstrap.com/docs/4.0/utilities/sizing/
-:url-bs_docs--utils_spacing:                      http://getbootstrap.com/docs/4.0/utilities/spacing/
-:url-bs_docs--utils_text:                         http://getbootstrap.com/docs/4.0/utilities/text/
-:url-bs_docs--utils_vertical_alignment:           http://getbootstrap.com/docs/4.0/utilities/vertical-align/
-:url-bs_docs--utils_visibility:                   http://getbootstrap.com/docs/4.0/utilities/visibility/
+:url-bs-docs--utils-borders:                      http://getbootstrap.com/docs/4.1/utilities/borders/
+:url-bs-docs--utils-clearfix:                     http://getbootstrap.com/docs/4.1/utilities/clearfix/
+:url-bs-docs--utils-close_icon:                   http://getbootstrap.com/docs/4.1/utilities/close-icon/
+:url-bs-docs--utils-colors:                       http://getbootstrap.com/docs/4.1/utilities/colors/
+:url-bs-docs--utils-display:                      http://getbootstrap.com/docs/4.1/utilities/display/
+:url-bs-docs--utils-embeds:                       http://getbootstrap.com/docs/4.1/utilities/embed/
+:url-bs-docs--utils-flex:                         http://getbootstrap.com/docs/4.1/utilities/flex/
+:url-bs-docs--utils-float:                        http://getbootstrap.com/docs/4.1/utilities/float/
+:url-bs-docs--utils-image_replacement:            http://getbootstrap.com/docs/4.1/utilities/image-replacement/
+:url-bs-docs--utils-screenreaders:                http://getbootstrap.com/docs/4.1/utilities/screenreaders/
+:url-bs-docs--utils-sizing:                       http://getbootstrap.com/docs/4.1/utilities/sizing/
+:url-bs-docs--utils-spacing:                      http://getbootstrap.com/docs/4.1/utilities/spacing/
+:url-bs-docs--utils-text:                         http://getbootstrap.com/docs/4.1/utilities/text/
+:url-bs-docs--utils-vertical_alignment:           http://getbootstrap.com/docs/4.1/utilities/vertical-align/
+:url-bs-docs--utils-visibility:                   http://getbootstrap.com/docs/4.1/utilities/visibility/
 
-:url-bs_docs--migration_to_v4:                    http://getbootstrap.com/docs/4.0/migration/
+:url-bs-docs--migration-to-v4:                    http://getbootstrap.com/docs/4.1/migration/
+
+:url-bs-material-design--home:                    https://mdbootstrap.github.io/bootstrap-material-design/
+:url-bs-material-design--gh-repo:                 https://github.com/mdbootstrap/bootstrap-material-design
+
+:url-bs-theme-switcher--gh-repo:                  https://github.com/jguadagno/bootstrapThemeSwitcher
 
 :url-bootswatch--home:                            https://bootswatch.com/
 :url-bootswatch--api:                             https://bootswatch.com/help/#api
 
-:url-iconify--home:                               https://iconify.design/
-:url-iconify--icon_sets:                          https://iconify.design/icon-sets/
-:url-iconify--medical_icons:                      https://iconify.design/icon-sets/medical-icon/
-:url-iconify--brand_icons:                        https://iconify.design/icon-sets/logos/
+:url-builder--gh-repo:                            https://github.com/jimweirich/builder
 
-:url-light_gallery--license:                      http://sachinchoolur.github.io/lightGallery/docs/license.html
+:url-bump--gh-repo:                               https://github.com/gregorym/bump
 
-:url-mdi--home:                                   https://materialdesignicons.com/
-:url-mdi--cheatsheet:                             https://cdn.materialdesignicons.com/3.3.92/
+:url-cash--gh-repo:                               https://github.com/fabiospampinato/cash
+:url-clipboard--gh-repo:                          https://github.com/zenorocha/clipboard.js/
+:url-cors--gh-repo:                               https://github.com/expressjs/cors
+:url-cross-env--gh-repo:                          https://github.com/kentcdodds/cross-env
+:url-cross-var--gh-repo:                          https://github.com/elijahmanor/cross-var
 
-:url-jekyll--home:                                https://jekyllrb.com/
+:url-datatables--home:                            https://datatables.net/
+:url-docker--home:                                https://getbootstrap.com/
+:url-docker--docs:                                https://docs.docker.com/
 
-:url-git--home:                                   https://git-scm.com/
+:url-eslint--home:                                https://eslint.org/
+:url-eslint--gh-repo:                             https://github.com/eslint/eslint
 
-:url-gist--home:                                  https://gist.github.com/
-:url-gist--asciidoc_extensions_example:           https://gist.github.com/mojavelinux/5546622
+:url-execjs--gh-repo:                             https://github.com/rails/execjs
 
-:url-github--signin:                              https://github.com/login
-:url-github--pages:                               https://pages.github.com/
-:url-github--about_org:                           https://help.github.com/articles/about-organizations/
-
-:url-github_dev--oauth_app:                       https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/
-
-:url-github_repo--ruby_gem_bundler:               https://github.com/bundler/bundler
-:url-github_repo--ruby_gem_jekyll_auth:           https://github.com/benbalter/jekyll-auth
-:url-github_repo--md_icons:                       https://github.com/google/material-design-icons
-:url-github_repo--mdi_icons:                      https://github.com/Templarian/MaterialDesign
+:url-filamentgroup--home:                         https://www.filamentgroup.com/
 
 :url-fontawesome--home:                           https://fontawesome.com/
 :url-fontawesome--icons:                          https://fontawesome.com/icons?d=gallery
-:url-fontawesome--get_started:                    https://fontawesome.com/get-started
+:url-fontawesome--get-started:                    https://fontawesome.com/get-started
+:url-fontawesome-free--gh-repo:                   https://github.com/FortAwesome/Font-Awesome
+:url-fsevents--gh-repo:                           https://github.com/fsevents/fsevents
+
+:url-getos--gh-repo:                              https://github.com/retrohacker/getos
+
+:url-git--home:                                   https://git-scm.com/
+
+:url-github--home:                                https://github.com/
+:url-github--signin:                              https://github.com/login
+:url-github--pages:                               https://pages.github.com/
+:url-github--about-org:                           https://help.github.com/articles/about-organizations/
+:url-github-dev--oauth-app:                       https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/
+
+:url-gist--home:                                  https://gist.github.com/
+:url-gist--asciidoc-extensions-example:           https://gist.github.com/mojavelinux/5546622
+
+:url-gdpr-eu--home:                               https://gdpr.eu/
+
+:url-google-material-design-icons--gh-repo:       https://github.com/google/material-design-icons
+
+:url-heroku--home:                                https://www.heroku.com/home
+
+:url-iconify--home:                               https://iconify.design/
+:url-iconify--icon-sets:                          https://iconify.design/icon-sets/
+:url-iconify--medical-icons:                      https://iconify.design/icon-sets/medical-icon/
+:url-iconify--brand-icons:                        https://iconify.design/icon-sets/logos/
+
+:url-iframe-resizer--gh-repo:                     https://github.com/davidjbradshaw/iframe-resizer
 
 :url-j1--home:                                    https://jekyll.one/
 :url-j1--preview:                                 https://preview.jekyll.one/
 
-:url-j1_web_in_a_day--intro:                      /pages/public/learn/kickstarter/web_in_a_day/intro/
-:url-j1_web_in_a_day--meet_and_greet:             /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
-:url-j1_web_in_a_day--preparations:               /pages/public/learn/kickstarter/web_in_a_day/preparations/
-:url-j1_web_in_a_day--first_awesome_web:          /pages/public/learn/kickstarter/web_in_a_day/first_awesome_web/
+:url-j1-web-in-a-day--intro:                      /pages/public/learn/kickstarter/web_in_a_day/intro/
+:url-j1-web-in-a-day--meet-and-greet:             /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
+:url-j1-web-in-a-day--preparations:               /pages/public/learn/kickstarter/web_in_a_day/preparations/
+:url-j1-web-in-a-day--first-awesome-web:          /pages/public/learn/kickstarter/web_in_a_day/first_awesome_web/
 
-:url-j1_quick_references--jekyll:                 /pages/protected/manuals/quick_references/jekyll/
-:url-j1_downloads---quickstart_intro:             /pages/public/learn/downloads/quickstart/intro/
+:url-j1-quick-references--jekyll:                 /pages/protected/manuals/quick_references/jekyll/
+:url-j1-downloads--quickstart-intro:              /pages/public/learn/downloads/quickstart/intro/
 
-:url-j1--learn_whats_up:                          https://jekyll.one/pages/public/learn/whats_up/
-:url-j1--learn_present_images:                    https://jekyll.one/pages/public/learn/roundtrip/present_images/
-:url-j1--learn_present_videos:                    https://jekyll.one/pages/public/learn/roundtrip/present_videos/
-:url-j1--learn_typography:                        https://jekyll.one/pages/public/learn/roundtrip/typography/
-:url-j1--learn_icon_fonts:                        https://jekyll.one/pages/public/learn/roundtrip/mdi_icon_font/
-:url-j1--learn_asciidoc_extensions:               https://jekyll.one/pages/public/learn/roundtrip/asciidoc_extensions/
-:url-j1--learn_extended_modals:                   https://jekyll.one/pages/public/learn/roundtrip/modals/
-:url-j1--learn_responsive_tables:                 https://jekyll.one/pages/public/learn/roundtrip/responsive_tables/
-:url-j1--learn_themes:                            https://jekyll.one/pages/public/learn/roundtrip/themes/
+:url-j1-learn--whats-up:                          https://jekyll.one/pages/public/learn/whats_up/
+:url-j1-learn--present-images:                    https://jekyll.one/pages/public/learn/roundtrip/present_images/
+:url-j1-learn--present-videos:                    https://jekyll.one/pages/public/learn/roundtrip/present_videos/
+:url-j1-learn--typography:                        https://jekyll.one/pages/public/learn/roundtrip/typography/
+:url-j1-learn--icon-fonts:                        https://jekyll.one/pages/public/learn/roundtrip/mdi_icon_font/
+:url-j1-learn--asciidoc_extensions:               https://jekyll.one/pages/public/learn/roundtrip/asciidoc_extensions/
+:url-j1-learn--extended-modals:                   https://jekyll.one/pages/public/learn/roundtrip/modals/
+:url-j1-learn--responsive-tables:                 https://jekyll.one/pages/public/learn/roundtrip/responsive_tables/
+:url-j1-learn--themes:                            https://jekyll.one/pages/public/learn/roundtrip/themes/
 
-:url-stackoverflow--usage_fonticons:              https://stackoverflow.com/questions/11135261/should-i-use-i-tag-for-icons-instead-of-span
+:url-jekyll--home:                                https://jekyllrb.com/
+:url-jekyll-asciidoc--gh-repo:                    https://github.com/asciidoctor/jekyll-asciidoc
+:url-jekyll-compress--gh-repo:                    http://jch.penibelst.de/
+:url-jekyll-feed--gh-repo:                        https://github.com/jekyll/jekyll-feed
+:url-jekyll-gist--gh-repo:                        https://github.com/jekyll/jekyll-gist
+:url-jekyll-paginate-v2--gh-repo:                 https://github.com/sverrirs/jekyll-paginate-v2
+:url-jekyll-redirect-from--gh-repo:               https://github.com/jekyll/jekyll-redirect-from
+:url-jekyll-sass-converter--gh-repo:              https://github.com/jekyll/jekyll-sass-converter
+:url-jekyll-sitemap--gh-repo:                     https://github.com/jekyll/jekyll-sitemap
 
-:url-w3org--css_spec:                             https://www.w3.org/Style/CSS/specs.en.html
+:url-jquery--home:                                https://jquery.com/
 
-:url-w3schools--css_tutorial:                     https://www.w3schools.com/css/default.asp
+:url-js-yaml--gh-repo:                            https://github.com/nodeca/js-yaml
+:url-js-json-minify--gh-repo:                     https://github.com/fkei/JSON.minify
 
+:url-justified-gallery--home:                     http://miromannino.github.io/Justified-Gallery
+:url-justified-gallery--gh-repo:                  https://github.com/miromannino/Justified-Gallery
+
+:url-lerna--home:                                 https://lerna.js.org/
+:url-lerna--gh-repo:                              https://github.com/lerna/lerna
+
+:url-license--creative-commons:                   https://creativecommons.org/licenses/by/4.0/
+:url-license--mit:                                https://opensource.org/licenses/MIT/
+:url-license--sil:                                https://scripts.sil.org/OFL
+
+:url-lightbox-v2--home:                           https://lokeshdhakar.com/projects/lightbox2/
+:url-lightbox-v2--gh-repo:                        https://github.com/lokesh/lightbox2
+
+:url-light-gallery--home:                         https://sachinchoolur.github.io/lightGallery
+:url-light-gallery--gh-repo:                      http://sachinchoolur.github.io/lightGallery
+:url-light-gallery--license:                      http://sachinchoolur.github.io/lightGallery/docs/license.html
+
+:url-liquid--home:                                https://shopify.github.io/liquid/
+:url-liquid--gh-repo:                             https://github.com/Shopify/liquid
+
+:url-log4javascript--home:                        http://log4javascript.org/
+
+:url-log4r--gh-repo:                              https://github.com/colbygk/log4r
+
+:url-lunr--home:                                  https://lunrjs.com/
+:url-lunr--gh-repo:                               https://github.com/olivernn/lunr.js
+
+:url-material-design-icons--home:                 https://materialdesignicons.com/
+:url-material-design-icons--gh-repo:              https://github.com/Templarian/MaterialDesign
+:url-material-design-icons--cheatsheet:           https://pictogrammers.github.io/@mdi/font/5.9.55/
+
+:url-materialize--home:                           https://materializecss.com/
+:url-materialize--gh-repo:                        https://github.com/Dogfalo/materialize
+
+:url-mobile-menu-light--home:                     https://www.mmenujs.com/mmenu-light/
+:url-mobile-menu-light--gh-repo:                  https://github.com/FrDH/mmenu-light
+
+:url-netlify--home:                               https://www.netlify.com/
+
+:url-node-sass--home:                             https://github.com/sass/node-sass
+
+:url-nodejs--home:                                https://nodejs.org/en/
+
+:url-nokogiri--home:                              https://nokogiri.org/
+:url-nokogiri--gh-repo:                           https://github.com/sparklemotion/nokogiri
+:url-nokogiri-pretty--gh-repo:                    https://github.com/tobym/nokogiri-pretty/
+
+:url-npm--home:                                   https://www.npmjs.com/
+
+:url-npm-run-all--gh-repo:                        https://github.com/mysticatea/npm-run-all
+
+:url-omniauth--gh-repo:                           https://github.com/omniauth/omniauth
+
+:url-omniauth-oauth-v2--gh-repo:                  https://github.com/omniauth/omniauth-oauth2
+
+:url-owl-carousel-v1--home:                       http://www.landmarkmlp.com/js-plugin/owl.carousel/
+
+:url-parseurl--gh-repo:                           https://github.com/pillarjs/parseurl
+
+:url-platform--gh-repo:                           https://github.com/bestiejs/platform.js/
+
+:url-popper--home:                                https://popper.js.org/
+:url-popper--gh-repo:                             https://github.com/popperjs/popper-core
+
+:url-puma--home:                                  https://puma.io/
+:url-puma--gh-repo:                               https://github.com/puma/puma
+
+:url-rack--home:                                  https://rack.github.io/
+:url-rack--gh-repo:                               https://github.com/rack/rack
+
+:url-rack-protection--home:                       http://sinatrarb.com/protection/
+:url-rack-protection--gh-repo:                    https://github.com/sinatra/sinatra/tree/master/rack-protection
+
+:url-rack-ssl-enforcer--gh-repo:                  https://github.com/tobmatth/rack-ssl-enforcer
+
+:url-roboto--home:                                https://fonts.google.com/specimen/Roboto
+
+:url-ruby-rouge--gh-repo:                         https://github.com/rouge-ruby/rouge
+
+:url-ruby-warden--home:                           https://github.com/wardencommunity/warden/wiki
+:url-ruby-warden--gh-repo:                        https://github.com/wardencommunity/warden
+
+
+:url-ruby-lang--home:                             https://www.ruby-lang.org/en/
+:url-ruby-lang--gh-repo:                          https://github.com/ruby/ruby
+
+:url-rubygems--home:                              https://rubygems.org/
+
+:url-ruby-gem-bundler--gh-repo:                   https://github.com/bundler/bundler
+:url-ruby-gem-jekyll-auth--gh-repo:               https://github.com/benbalter/jekyll-auth
+
+:url-ruby-sass--home:                             https://sass-lang.com/ruby-sass
+
+:url-sass-lang--home:                             https://sass-lang.com/dart-sass
+:url-sass-lang--gh-repo:                          https://github.com/sass/dart-sass
+
+:url-shopify--home:                               https://www.shopify.com/
+
+:url-stackoverflow--usage-fonticons:              https://stackoverflow.com/questions/11135261/should-i-use-i-tag-for-icons-instead-of-span
+
+:url-tablesaw-rtables--gh-repo:                   https://github.com/filamentgroup/tablesaw
+
+:url-terser--home:                                https://terser.org/
+:url-terser--gh-repo:                             https://github.com/terser/terser
+
+:url-theme-switcher--gh-repo:                     https://github.com/jguadagno/bootstrapThemeSwitcher
+
+:url-tocbot--home:                                https://tscanlin.github.io/tocbot
+:url-tocbot--gh-repo:                             https://github.com/tscanlin/tocbot
+
+:url-twitter-emoji--gh-repo:                      https://github.com/twitter/twemoji
+:url-twitter-emoji-picker--gh-repo:               https://github.com/xLs51/Twemoji-Picker
+
+:url-uglifier--gh-repo:                           https://github.com/lautis/uglifier
+
+:url-videojs--home:                               https://videojs.com/
+:url-videojs--gh-repo:                            https://github.com/videojs/video.js
+
+:url-vimeo--home:                                 https://vimeo.com
+
+:url-webpack--home:                               https://webpack.js.org/
+:url-webpack--gh-repo:                            https://github.com/webpack/webpack
+
+:url-webpack-cli--gh-repo:                        https://github.com/webpack/webpack
+
+:url-w3org--css-spec:                             https://www.w3.org/Style/CSS/specs.en.html
+
+:url-wikipedia-en--google:                        https://en.wikipedia.org/wiki/Google
+
+:url-w3schools--css-tutorial:                     https://www.w3schools.com/css/default.asp
+
+:url-yarn--home:                                  https://yarnpkg.com/
+:url-yarn--gh-repo:
+
+:url-youtube--home:                               https://www.youtube.com/
 end::urls[]
 
 
 // TAGS, global asciidoc attributes (variables)
 // -----------------------------------------------------------------------------
 tag::tags[]
-
 :browser-window--new:                             window="_blank"
 :clipboard--noclip:                               noclip
-:level--beginner:                                 icon:battery-quarter[role="md-blue"]
-:level--advanced:                                 icon:battery-full[role="md-blue"]
 :figure-caption--text:                            Figure
 
+// fa icons
+//
+:level--beginner:                                 icon:battery-quarter[role="md-blue"]
+:level--intermediate:                             icon:battery-half[role="md-blue"]
+:level--advanced:                                 icon:battery-three-quarters[role="md-blue"]
+:level--expert:                                   icon:battery-full[role="md-blue"]
+
+// mdi icons
+//
+// :level--beginner:                              mdi:battery-20[24px, mdi-md-blue]
+// :level--intermediate:                          mdi:battery-50[24px, mdi-md-blue]
+// :level--advanced:                              mdi:battery-70[24px, mdi-md-blue]
+// :level--expert:                                mdi:battery[24px, mdi-md-blue]
+
+// fa icons
+//
 :icon-checked:                                    icon:check[role="green"]
-:icon-times:                                      icon:times[role="red"]
+:icon-times:                                      icon:times[role="red mr-2"]
 :icon-file:                                       icon:file-alt[role="blue"]
 :icon-battery--quarter:                           icon:battery-quarter[role="md-blue"]
+:icon-battery--half:                              icon:battery-half[role="md-blue"]
+:icon-battery--three-quarter:                     icon:battery-three-quarters[role="md-blue"]
 :icon-battery--full:                              icon:battery-full[role="md-blue"]
 
 :char-emdash:                                     &#8212;
@@ -152,7 +355,6 @@ tag::tags[]
 :char-bullet:                                     &bull;
 :char-bullet--big:                                &#9679;
 :char-bullet--bigger:                             &#11044;
-
 end::tags[]
 
 
@@ -182,7 +384,7 @@ end::tables[]
 // -----------------------------------------------------------------------------
 tag::products[]
 :j1-license:                                      MIT License
-:j1-version:                                      2021.0.3
+:j1-version:                                      2021.0.7
 end::products[]
 
 

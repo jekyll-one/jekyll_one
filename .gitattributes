@@ -5,27 +5,13 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2020 Juergen Adams
+# Copyright (C) 2021 Juergen Adams
 #
 # J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
 #
 # ------------------------------------------------------------------------------
 
-# Enforce Unix newlines
+# Enforce Unix newlines, all text files
 #
-*.css   text eol=lf
-*.html  text eol=lf
-*.js    text eol=lf
-*.json  text eol=lf
-*.md    text eol=lf
-*.py    text eol=lf
-*.rb    text eol=lf
-*.scss  text eol=lf
-*.svg   text eol=lf
-*.yml   text eol=lf
-# Don't diff or textually merge source maps
-*.map   binary
-
-bootstrap.css linguist-vendored=false
-bootstrap.js linguist-vendored=false
+* text=auto eol=lf

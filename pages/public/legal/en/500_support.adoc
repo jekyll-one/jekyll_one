@@ -1,7 +1,7 @@
 ---
 title:                                  Support
 tagline:                                Where to get help
-date:                                   2020-10-23 12:00:00
+date:                                   2020-10-23 00:00:00
 description: >
                                         Where to get help and support
 

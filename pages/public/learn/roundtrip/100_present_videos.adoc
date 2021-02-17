@@ -1,7 +1,7 @@
 ---
 title:                                  Roundtrip
 tagline:                                present videos
-date:                                   2020-11-04 12:00:00
+date:                                   2020-11-04 00:00:00
 description: >
                                         Playing video on web pages seems not that special since you can already
                                         watch videos on web pages through plugins like Flash Player, Quicktime
@@ -11,7 +11,7 @@ description: >
                                         proprietary software.
 
 tags:                                   [ Roundtrip, Introduction ]
-categories:                             [ Video, Module ]
+categories:                             [ Video, Modules ]
 
 permalink:                              /pages/public/learn/roundtrip/present_videos/
 regenerate:                             false
@@ -44,7 +44,6 @@ resource_options:
           alt:                          Broadway Underground
           alignY:                       top
           transition:                   push_left|push_right|cover_up|cover_down|fade|fadeInOut
-
 ---
 
 // Page Initializer
@@ -52,7 +51,7 @@ resource_options:
 // Enable the Liquid Preprocessor
 :page-liquid:
 
-// Set page (local) attributes here
+// Set (local) page attributes here
 // -----------------------------------------------------------------------------
 // :page--attr:                         <attr-value>
 :images-dir:                            {imagesdir}/pages/roundtrip/100_present_images

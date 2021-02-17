@@ -3,13 +3,8 @@ title:                                  Site Search
 tagline:                                Full-text search engine
 description:                            Algolia Index for all documents
 
-tags:                                   [
-                                          Doc, Post, Documents, Full, Text,
-                                          Site, Search, Engine, Algolia
-                                        ]
-index:                                  []
-categories:                             [ pages ]
-
+tags:                                   [ Algolia ]
+categories:                             [ Search ]
 toc:                                    false
 
 permalink:                              /pages/protected/site_search/

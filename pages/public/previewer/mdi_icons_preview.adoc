@@ -1,7 +1,7 @@
 ---
 title:                                  MDI Icon Previewer
 tagline:                                search and select mdi icons
-date:                                   2020-11-08 12:00:00
+date:                                   2020-11-08 00:00:00
 description: >
                                         Previewer for Material Design Icons (MDI) for J1 Template.
                                         Material Design Icons is a growing icon collection allows
@@ -11,12 +11,12 @@ description: >
 tags:                                   [ Design, MDI, Icon, Fonts ]
 categories:                             [ App, Preview ]
 
-scrollbar:                              false
+scrollbar:                              true
 
 permalink:                              /pages/public/previewer/mdi_font/
 regenerate:                             false
 
-resources:                              [ clipboard, rouge, mdi_previewer, fam ]
+resources:                              [ clipboard, lightbox, rouge, mdi_previewer, fam ]
 resource_options:
   - attic:
       padding_top:                      400
@@ -32,7 +32,7 @@ resource_options:
 // Enable the Liquid Preprocessor
 :page-liquid:
 
-// Set page (local) attributes here
+// Set (local) page attributes here
 // -----------------------------------------------------------------------------
 //:my-asciidoc-attribute:
 
@@ -42,25 +42,29 @@ resource_options:
 
 // Load page attributes
 // -----------------------------------------------------------------------------
-{% include {{load_attributes}} scope="local" %}
+{% include {{load_attributes}} scope="all" %}
 
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
 == Material Design Icons
 
 _Material Design Icons_ (MDI) is a very helpful design resource for Web Design
-that is based on *_Google_'s Material Design*. _MDI_ is a community-driven
-project to create an increased icon-set based on _Google_'s official repository
-and MD style specification.
+that is based on _Google's_ specification of Material Design. *MDI* is a
+community-driven project to create an increased icon-set based on the official
+Material Design Icon repository provided by _Google_.
 
-_MDI_ is a growing collection to allow designers and developers targeting
-various platforms to download icons in the format, color and size they need
-for any project. The repo contains today 3400+ icons plus converted icons from
-the official set created by _Google_.
+*MDI* is a fast growing collection to allow designers and developers targeting
+various platforms to download icons in the format, color and size they needed
+for a project. In the current *MDI* version (v5.9.55), 5900+ icons - plus
+converted icons from the official icon set created by _Google_ - are available.
 
-_J1 Template_ supports the full set of _MDI_ for the Web (Webfont, WOFF). The
-icon set is fully integrated and can be used out-of-the-box.
+_J1 Template_ supports the full set of *MDI* icons for the Web (Webfont, WOFF).
+The icon set is fully integrated and can be used out-of-the-box.
 
 == HTML Markup
 
@@ -74,7 +78,8 @@ way, it's on you what to use for font icons.
 <i class="mdi mdi-name"></i> <1> <2>
 ----
 <1> Both forms are consistent with the HTML5 spec
-<2> It's short and the `<i>` tag may associated for an **i**mage (semantic meaning)
+<2> It's short and the `<i>` tag may associated for an **i**con
+    (semantic meaning)
 
 NOTE: The `<i>` tag provides more meaning to machines because of the HTML spec,
 it provides more meaning to *humans* because the `i` can easily associated with
@@ -83,6 +88,22 @@ include equivalent text either inside the `<i>` tag or right next to it
 (as Twitter for Bootstrap does), then screen readers understand where to
 click to reply, the link is usable if CSS doesn't load, and human readers
 with good eyesight and a decent browser see a pretty icon.
+
+/////
+== Asciidoc Markup
+
+[source, html]
+----
+pass:[<i class="mdi mdi-3x mdi-star"></i>] <1>
+mdi:star[3x] <2>
+----
+<1> Markup using a pass block
+<2> Markup using the Asciidoc extension
+
+NOTE: The `<i>` tag provides more meaning to machines because of the HTML spec,
+it provides more meaning to *humans* because the `i` can easily associated with
+`icon`.
+/////
 
 == Sizes
 
@@ -161,7 +182,7 @@ The implementation of _MDI_ font icons support the base color palette of
 Bootstrap range from `primary` to `danger`.
 
 .Bootstrap base color palette
-lightbox::lightbox-base-color-palette[ 300, {lightbox-image-data-base-color-palette} ]
+lightbox::base-color-palette[ 300, {lightbox-image-data--base-color-palette} ]
 
 include::{tabledir}/mdi_icons/510_bs_color_palette.asciidoc[]
 
@@ -171,7 +192,7 @@ For _J1 Template_, 17 additional color variations are available comply with
 the concepts of _Google Material Design_:
 
 .Material Design color palette
-lightbox::lightbox-md-color-palette[ 800, {lightbox-image-data-md-color-palette} ]
+lightbox::md-color-palette[ 800, {lightbox-image-data--md-color-palette} ]
 
 ==== Indigo
 
@@ -190,100 +211,12 @@ include::{tabledir}/mdi_icons/602_md_color_palette_pink.asciidoc[]
 
 ==  Icon Overview
 
-The Material Design Icon Font support a rich set of 3400+ icons from a wide
-varity of topics.
+The Material Design Icon Font support a rich set of 5900+ icons
+(version  v5.9.55)  from a wide varity of topics.
 
 NOTE: Click on the elements below to copy icon data to clipboard
 
 ++++
-<div class="icons" id="icons"></div>
-
-<script>
-  (function () {
-
-    var icons          = {};
-    var icon_database  = '/assets/data/mdi_icons.json';
-
-      function load_data_database() {
-        // Returns the icon database object
-        return $.ajax({
-          url:      icon_database,
-          success:  function (data) {
-            if (typeof data == 'string') {
-              icons = JSON.parse(data);
-            }
-            if (typeof data == 'object') {
-              icons = data;
-            }
-          }
-        })
-      };
-
-      $.when( load_data_database() ).done (
-        function( load_database_response ) {
-
-          icons.push({ "name": "blank", "value": "f68c" });
-
-          var copyText = function (text) {
-              var copyFrom = document.createElement('textarea');
-              copyFrom.setAttribute("style", "position:fixed;opacity:0;top:100px;left:100px;");
-              copyFrom.value = text;
-              document.body.appendChild(copyFrom);
-              copyFrom.select();
-              document.execCommand('copy');
-              var copied = document.createElement('div');
-              copied.setAttribute('class', 'copied');
-              copied.appendChild(document.createTextNode('Copied to Clipboard'));
-              document.body.appendChild(copied);
-              setTimeout(function () {
-                  document.body.removeChild(copyFrom);
-                  document.body.removeChild(copied);
-              }, 1500);
-          };
-          // Skip info record 0 (j=1)
-          for (var j = 1; j < icons.length; j++) {
-              var div = document.createElement('div'),
-                  i = document.createElement('i');
-              i.className = 'mdi mdi-' + icons[j].name;
-              div.appendChild(i);
-              var code = document.createElement('code');
-              code.appendChild(document.createTextNode('#' + icons[j].value));
-              div.appendChild(code);
-              var span = document.createElement('span');
-              //span.appendChild(document.createTextNode('mdi-' + icons[j].name));
-              span.appendChild(document.createTextNode(icons[j].name));
-              div.appendChild(span);
-
-              span.onclick = (function (icon) {
-                  return function () {
-                      //document.getElementById('name').innerHTML = icon.name;
-                  };
-              })(icons[j]);
-
-              i.onmouseup = (function (icon) {
-                  return function () {
-                      //copyText(String.fromCharCode(parseInt(icon.value, 16)));
-                      copyText('\\' + icon.value);
-                  };
-              })(icons[j]);
-
-              code.onmouseup = (function (icon) {
-                  return function () {
-                      copyText('#' + icon.value);
-                  };
-              })(icons[j]);
-
-              span.onmouseup = (function (icon) {
-                  return function () {
-                      copyText('mdi-' + icon.name);
-                      //copyText(icon.name);
-                  };
-              })(icons[j]);
-
-              document.getElementById('icons').appendChild(div);
-          }
-      });
-
-  })();
-</script>
+<!-- div class="my-popper">Popper element</div -->
+<div id="icons" class="icons"></div>
 ++++

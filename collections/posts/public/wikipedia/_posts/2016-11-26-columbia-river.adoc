@@ -1,10 +1,7 @@
 ---
 title:                                  Columbia River
 tagline:                                largest river in the pacific northwest region
-description:                            Rivers of the Pacific Northwest region
-
 date:                                   2016-11-26 00:00:00 +0100
-series:
 
 tags:                                   [ USA, Rivers ]
 categories:                             [ Wikipedia ]
@@ -41,8 +38,21 @@ Oregon before emptying into the Pacific Ocean.
 [role="clearfix mb-3"]
 excerpt__end
 
-// Page content
+//  Load Liquid procedures
 // -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="all" %}
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
 [[readmore]]
 == Columbia River
 

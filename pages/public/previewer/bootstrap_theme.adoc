@@ -1,21 +1,28 @@
 ---
 title:                                  Theme previewer
 tagline:                                common components
-date:                                   2020-11-08 12:00:00
+date:                                   2020-11-08 00:00:00
 description: >
-                                        Themes Previewer for common components of a selected theme.
-                                        Find base Bootstrap features and styles for the current
-                                        theme selected.
+                                        Bootstrap is a HTML, CSS & JS Library that focuses on
+                                        simplifying the development of modern web pages. The
+                                        primary purpose to apply the framework to J1 is to
+                                        provide a general standard colors, sizes, fonts and
+                                        the overall layout of a J1-based site. Bootstrap provides
+                                        basic style definitions for all common used HTML elements.
+                                        The Themes Previewer provides an overview for common components
+                                        of a selected theme. Find base Bootstrap features and styles for
+                                        the current theme selected.
 
-tags:                                   [ App, Previewer ]
-categories:                             [ pages ]
+tags:                                   [ Bootstrap, Themes ]
+categories:                             [ Configuration, Previewer ]
 
+scrollbar:                              true
 flowtext:                               false
 
 permalink:                              /pages/public/previewer/theme/
 regenerate:                             false
 
-resources:                              [ rouge, fam ]
+resources:                              [ rouge, fam, clipboard ]
 resource_options:
   - attic:
       padding_top:                      400
@@ -35,10 +42,9 @@ resource_options:
 // Enable the Liquid Preprocessor
 :page-liquid:
 
-// Set page (local) attributes here
+// Set (local) page attributes here
 // -----------------------------------------------------------------------------
-//:my-asciidoc-attribute:
-// :scrollbars:
+// :page--attr:                         <attr-value>
 
 //  Load Liquid procedures
 // -----------------------------------------------------------------------------
@@ -46,14 +52,34 @@ resource_options:
 
 // Load page attributes
 // -----------------------------------------------------------------------------
-{% include {{load_attributes}} scope="all" %}
+{% include {{load_attributes}} scope="global" %}
 
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
+Themes for the template system J1 are based on the free and open-source CSS
+front-end framework {url-bs--home}[Bootstrap, {browser-window--new}] of
+version V4.
+
+Bootstrap is a HTML, CSS & JS Library that focuses on simplifying the
+development of modern web pages. The primary purpose to apply the framework
+to J1 is to provide a general standard colors, sizes, fonts and the overall
+layout of a J1-based site. Bootstrap provides basic style definitions for all
+common used HTML elements.
+
+This results in a uniform appearance for the content in terms of the overall
+layout, text, tables and form elements across all modern web browsers available
+on the market. In addition, developers can take advantage of CSS classes
+defined in Bootstrap to customize content individually.
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ++++
   <!-- Prepend H1 tag here -->
-  <div id="h1_theme_name" class="row ml-0 mb-3">
+  <div id="theme" class="row ml-0 mb-3">
 
     <!-- Load the previously selected theme from the (user state) cookie -->
     <script>
@@ -76,8 +102,8 @@ resource_options:
           } else {
             themeName  = 'J1 Default';
           }
-          var themeNameHeadline = '<h1 id="theme_name">Theme ' +themeName+ '</h1>';
-          $('#h1_theme_name').prepend(themeNameHeadline);
+          var themeNameHeadline = '<h2 id="theme_name">Theme ' +themeName+ '</h2>';
+          $('#theme').prepend(themeNameHeadline);
           clearInterval(dependencies_met_themer);
           }
         if (interval_count > max_count) {
@@ -89,20 +115,25 @@ resource_options:
   </div>
 ++++
 
-== Bootstrap Material Design
+Themes step in the framework to further adjust the appearance of a website
+based on the core CSS rules and definitions of Bootstrap. Themes does not
+change the functionality of the framwork, but modifies rule-based e.g. the
+color scheme, fonts, sizes or the appearance of more complex elements like
+forms or tables. Additionally, a theme may add additonal components but in
+the *sense* of Bootstrap's framework rules and philosophy.
 
-lorem:sentences[5]
+== J1 Color Palette
 
-=== MD Color Palette
-
-The MD color palette comprises primary and accent colors that can be used for
-illustration or to develop your brand colors. They’ve been designed to work
-harmoniously with each other.
+The color palette used by J1 Template is based on the definitions of Google's
+*Material Design* (MD). The color scheme comprises primary and accent colors
+that can be used for illustration or to develop individual brand colors of a
+website. They’ve been designed to work harmoniously with each other.
 
 The color palette starts with primary colors and fills in the spectrum to
-create a complete and usable palette for Android, Web, and iOS. Google
-suggests using the 500 colors as the primary colors in your app and the
-other colors as accents colors.
+create a complete and usable palette for Desktop Wen and mobile sites based on
+Androi or iOS. Google suggests using the 500 colors as the primary colors for
+your web and the other colors as accents colors to support the content for
+better reading or orientation.
 
 === Red and Pink
 ++++
@@ -149,7 +180,6 @@ other colors as accents colors.
   </div>
 </div>
 ++++
-
 
 === Purple and Deep Purple
 ++++
@@ -546,8 +576,8 @@ See examples for Bootstrap’s powerful, responsive navigation header, the
 navbar. Includes support for branding, navigation, and more, including
 support for the collapse plugin.
 
-pass:[<i class="mdi mdi-book-open-variant mdi-24px mdi-md-grey"></i>]
-link:{bs_doc_components_navbar}[Bootstrap Docs {middot} Navbar, {browser-window--new}]
+mdi:bootstrap[24px, mdi-md-deep-purple]
+link:{url-bs-docs--components-navbar}[Bootstrap Docs {char-middot} Navbar, {browser-window--new}]
 
 Theming the navbar has never been easier thanks to the combination of
 theming classes and background-color utilities. Choose from `.navbar-light`
@@ -665,8 +695,10 @@ more with support for multiple sizes, states, and more. Bootstrap includes
 several predefined button styles, each serving its own semantic purpose,
 with a few extras thrown in for more control.
 
-pass:[<i class="mdi mdi-book-open-variant mdi-24px mdi-md-grey"></i>]
-link:{bs_doc_components_buttons}[Bootstrap Docs {middot} Buttons, {browser-window--new}]
+// pass:[<i class="mdi mdi-bootstrap mdi-md-deep-purple mdi-24px"></i>]
+// mdi:bootstrap[24px, mdi-pulsed mdi-md-deep-purple]
+mdi:bootstrap[24px, mdi-md-deep-purple]
+link:{url-bs-docs--components-buttons}[Bootstrap Docs {char-middot} Buttons, {browser-window--new}]
 
 === Active buttons
 
@@ -882,8 +914,8 @@ state for these buttons is only updated via click event on the button.
 A floating action button represents the primary action in an application,
 it is used for a promoted action.
 
-pass:[<i class="mdi mdi-book-open-variant mdi-24px mdi-md-grey"></i>]
-https://material.io/components/buttons-floating-action-button#types-of-transitions[Google Material Design {char-middot} Floating action buttons, {browser-window--new}]
+mdi:bootstrap[24px, mdi-md-deep-purple]
+https://material.io/components/buttons-floating-action-button#types-of-transitions[Google Material Design {char-char-middot} Floating action buttons, {browser-window--new}]
 
 ++++
 <div class="doc-example">
@@ -976,8 +1008,8 @@ For a more inclusive and accessible type scale, it is assuemed that
 the browser default root font-size (typically 16px) so visitors can
 customize their browser defaults as needed.
 
-pass:[<i class="mdi mdi-book-open-variant mdi-24px mdi-md-grey"></i>]
-link:{bs_doc_content_typography}[Bootstrap Docs {middot} Typography, {browser-window--new}]
+mdi:bootstrap[24px, mdi-md-deep-purple]
+link:{url-bs-docs--content-typography}[Bootstrap Docs {char-middot} Typography, {browser-window--new}]
 
 === Headings
 
@@ -1050,8 +1082,8 @@ Using the most basic table markup, here’s how .table-based tables look in
 Bootstrap. All table styles are inherited in Bootstrap 4, meaning any nested
 tables will be styled in the same manner as the parent.
 
-pass:[<i class="mdi mdi-book-open-variant mdi-24px mdi-md-grey"></i>]
-link:{bs_doc_content_tables}[Bootstrap Docs {middot} Tables, {browser-window--new}]
+mdi:bootstrap[24px, mdi-md-deep-purple]
+link:{url-bs-docs--content-tables}[Bootstrap Docs {char-middot} Tables, {browser-window--new}]
 
 
 ++++
@@ -1126,8 +1158,8 @@ of newer input controls like email verification, number selection, and more.
 Here’s a quick example to demonstrate Bootstrap’s form styles. Keep reading
 for documentation on required classes, form layout, and more.
 
-pass:[<i class="mdi mdi-book-open-variant mdi-24px mdi-md-grey"></i>]
-link:{bs_doc_components_forms}[Bootstrap Docs {middot} Forms, {browser-window--new}]
+mdi:bootstrap[24px, mdi-md-deep-purple]
+link:{url-bs-docs--components-forms}[Bootstrap Docs {char-middot} Forms, {browser-window--new}]
 
 ++++
 <div class="doc-example mb-3">
@@ -1213,8 +1245,8 @@ for building all types of navigation components. It includes some style
 overrides (for working with lists), some link padding for larger hit areas,
 and basic disabled styling.
 
-pass:[<i class="mdi mdi-book-open-variant mdi-24px mdi-md-grey"></i>]
-link:{bs_doc_components_navs}[Bootstrap Docs {middot} Navs, {browser-window--new}]
+mdi:bootstrap[24px, mdi-md-deep-purple]
+link:{url-bs-docs--components-navs}[Bootstrap Docs {char-middot} Navs, {browser-window--new}]
 
 === Tabs
 
@@ -1442,7 +1474,10 @@ it as a navigation section to screen readers and other assistive technologies.
 
 == Indicators
 
-lorem:sentences[5]
+With Bootstrap, indicators are elememts to raise the users awareness. Alerts
+are dynamic elememts that can be used to *indicate* success or something went
+wrong.  Contrasting *Badges, static BS elememts, to raise attention e.g for
+something *new*.
 
 === Alerts
 
@@ -1454,8 +1489,8 @@ button. For proper styling, use one of the eight required contextual classes
 (e.g., .alert-success). For inline dismissal, use the alerts
 https://getbootstrap.com/docs/4.0/components/alerts/#dismissing[jQuery plugin].
 
-pass:[<i class="mdi mdi-book-open-variant mdi-24px mdi-md-grey"></i>]
-link:{bs_doc_components_alerts}[Bootstrap Docs {middot} Alerts, {browser-window--new}]
+mdi:bootstrap[24px, mdi-md-deep-purple]
+link:{url-bs-docs--components-alerts}[Bootstrap Docs {char-middot} Alerts, {browser-window--new}]
 
 ++++
 <div class="doc-example mb-3">
@@ -1503,8 +1538,8 @@ be presented with the content of the badge. Depending on the specific
 situation, these badges may seem like random additional words or numbers
 at the end of a sentence, link, or button.
 
-pass:[<i class="mdi mdi-book-open-variant mdi-24px mdi-md-grey"></i>]
-link:{bs_doc_components_badges}[Bootstrap Docs {middot} Badge, {browser-window--new}]
+mdi:bootstrap[24px, mdi-md-deep-purple]
+link:{url-bs-docs--components-badges}[Bootstrap Docs {char-middot} Badge, {browser-window--new}]
 
 ++++
 <div class="doc-example mb-3">
@@ -1649,8 +1684,8 @@ elements, some CSS to set the width, and a few attributes. We don’t use the
 HTML5 <progress> element, ensuring you can stack progress bars, animate them,
 and place text labels over them.
 
-pass:[<i class="mdi mdi-book-open-variant mdi-24px mdi-md-grey"></i>]
-link:{bs_doc_components_progress}[Bootstrap Docs {middot} Progress, {browser-window--new}]
+mdi:bootstrap[24px, mdi-md-deep-purple]
+link:{url-bs-docs--components-progress}[Bootstrap Docs {char-middot} Progress, {browser-window--new}]
 
 === Basic
 
@@ -1753,16 +1788,22 @@ link:{bs_doc_components_progress}[Bootstrap Docs {middot} Progress, {browser-win
 
 == Containers
 
-lorem:sentences[3]
+In sense of Bootstrap, *containers* are more complex, eye-catching elements to
+showcase facts or topics of a site. Typical elements are:
 
-lorem:sentences[2]
+* Jumbotron
+* Lists
+* Cards
+
+Find below examples how BS can support the users awarenes.
+
 
 === Jumbotron
 
 Lightweight, flexible component for showcasing hero unit style content.
 
-pass:[<i class="mdi mdi-book-open-variant mdi-24px mdi-md-grey"></i>]
-link:{bs_doc_components_jumbotron}[Bootstrap Docs {middot} Jumbotron, {browser-window--new}]
+mdi:bootstrap[24px, mdi-md-deep-purple]
+link:{url-bs-docs--components-jumbotron}[Bootstrap Docs {char-middot} Jumbotron, {browser-window--new}]
 
 ++++
 <div class="doc-example mb-3">
@@ -1783,8 +1824,8 @@ link:{bs_doc_components_jumbotron}[Bootstrap Docs {middot} Jumbotron, {browser-w
 List groups are a flexible and powerful component for displaying a series of
 content. Modify and extend them to support just about any content within.
 
-pass:[<i class="mdi mdi-book-open-variant mdi-24px mdi-md-grey"></i>]
-link:{bs_doc_components_list_group}[Bootstrap Docs {middot} List group, {browser-window--new}]
+mdi:bootstrap[24px, mdi-md-deep-purple]
+link:{url-bs-docs--components-list_group}[Bootstrap Docs {char-middot} List group, {browser-window--new}]
 
 ++++
 <div class="doc-example mb-3">
@@ -1792,15 +1833,15 @@ link:{bs_doc_components_list_group}[Bootstrap Docs {middot} List group, {browser
     <div class="col-md-4">
       <ul class="list-group">
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          Cras justo odio
+          Describe item #1
           <span class="badge badge-primary badge-pill">14</span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          Dapibus ac facilisis
+          Describe item #2
           <span class="badge badge-primary badge-pill">2</span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          Morbi leo risus
+          Describe item #3
           <span class="badge badge-primary badge-pill">1</span>
         </li>
       </ul>
@@ -1809,11 +1850,11 @@ link:{bs_doc_components_list_group}[Bootstrap Docs {middot} List group, {browser
     <div class="col-md-4">
       <div class="list-group">
         <a href="javascript:(void)" class="list-group-item list-group-item-action active">
-          Cras justo odio
+          Describe item #1
         </a>
-        <a href="javascript:(void)" class="list-group-item list-group-item-action">Dapibus ac facilisis
+        <a href="javascript:(void)" class="list-group-item list-group-item-action">Describe item #2
         </a>
-        <a href="javascript:(void)" class="list-group-item list-group-item-action disabled">Morbi leo risus
+        <a href="javascript:(void)" class="list-group-item list-group-item-action disabled">Describe item #3
         </a>
       </div>
     </div>
@@ -1825,16 +1866,16 @@ link:{bs_doc_components_list_group}[Bootstrap Docs {middot} List group, {browser
             <h5 class="mb-1 notoc">List group item heading</h5>
             <small>3 days ago</small>
           </div>
-          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-          <small>Donec id elit non mi porta.</small>
+          <p class="mb-1">Some quick example text to build on a list and make up the bulk of the list group's content.</p>
+          <small>Summarize whats all about.</small>
         </a>
         <a href="javascript:(void)" class="list-group-item list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1 notoc">List group item heading</h5>
             <small class="text-muted">3 days ago</small>
           </div>
-          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-          <small class="text-muted">Donec id elit non mi porta.</small>
+          <p class="mb-1">Some quick example text to build on a list and make up the bulk of the list group's content.</p>
+          <small class="text-muted">Summarize whats all about.</small>
         </a>
       </div>
     </div>
@@ -1860,8 +1901,8 @@ manage to deliver a ton of control and customization. Built with flexbox,
 they offer easy alignment and mix well with other Bootstrap components.
 They have no margin by default, so use spacing utilities as needed.
 
-pass:[<i class="mdi mdi-book-open-variant mdi-24px mdi-md-grey"></i>]
-link:{bs_doc_components_cards}[Bootstrap Docs {middot} Card, {browser-window--new}]
+mdi:bootstrap[24px, mdi-md-deep-purple]
+link:{url-bs-docs--components-cards}[Bootstrap Docs {char-middot} Card, {browser-window--new}]
 
 ++++
 <div class="doc-example mb-3">
@@ -2002,11 +2043,7 @@ link:{bs_doc_components_cards}[Bootstrap Docs {middot} Card, {browser-window--ne
         <div class="card-body">
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Cras justo odio</li>
-          <li class="list-group-item">Dapibus ac facilisis</li>
-          <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
+
         <div class="card-body">
           <a href="javascript:(void)" class="card-link">Card link</a>
           <a href="javascript:(void)" class="card-link">Another link</a>
@@ -2023,7 +2060,8 @@ link:{bs_doc_components_cards}[Bootstrap Docs {middot} Card, {browser-window--ne
 
 == Dialogs
 
-lorem:sentences[5]
+Dialogs are important, interactive UI (user interface) components in Bootstrap
+to *inform* visitor of an website.
 
 === Modals
 
@@ -2033,8 +2071,8 @@ built with HTML, CSS, and JavaScript. They’re positioned over everything
 else in the document and remove scroll from the <body> so that modal
 content scrolls instead.
 
-pass:[<i class="mdi mdi-book-open-variant mdi-24px mdi-md-grey"></i>]
-link:{bs_doc_components_modal}[Bootstrap Docs {middot} Modal, {browser-window--new}]
+mdi:bootstrap[24px, mdi-md-deep-purple]
+link:{url-bs-docs--components-modal}[Bootstrap Docs {char-middot} Modal, {browser-window--new}]
 
 .Modal types
 [cols="2a,8a,2a", options="header", width="100%", role="rtable"]
@@ -2419,11 +2457,11 @@ Popovers and Tooltips rely on the 3rd party library __Popper.js__ for positionin
 To make them properly positioned, the Javascript library `popper.min.js` has to
 be included before `bootstrap.js` in order to make popovers and tooltips to work.
 
-pass:[<i class="mdi mdi-book-open-variant mdi-24px mdi-md-grey"></i>]
-link:{bs_doc_components_popovers}[Bootstrap Docs {middot} Popovers, {browser-window--new}]
+mdi:bootstrap[24px, mdi-md-deep-purple]
+link:{url-bs-docs--components-popovers}[Bootstrap Docs {char-middot} Popovers, {browser-window--new}]
 
-pass:[<i class="mdi mdi-book-open-variant mdi-24px mdi-md-grey"></i>]
-link:{bs_doc_components_tooltips}[Bootstrap Docs {middot} Tooltips, {browser-window--new}]
+mdi:bootstrap[24px, mdi-md-deep-purple]
+link:{url-bs-docs--components-tooltips}[Bootstrap Docs {char-middot} Tooltips, {browser-window--new}]
 
 NOTE: Popovers and Tooltips require the BS tooltip plugin as a dependency.
 

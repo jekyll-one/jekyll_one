@@ -49,11 +49,15 @@ defaults:
   placement:                            navbar
   target:                               _blank
 
-  excludes:                             [ /assets/*, /apps/*, /log/* , /node_modules/*, '/*\.htm*/' ]
+  excludes:                             [
+                                          /assets/*, /apps/*, /log/* ,
+                                          /node_modules/*, '/*\.htm*/'
+                                        ]
+
   stopwords:                            /assets/themes/j1/modules/lunrSearch/stopwords/en.txt
   stopwords_locale:                     en
   strip_index_html:                     false
-  strip_categories:                     [ pages, posts, public, featured ]
+  strip_categories:                     [ pages, posts, public, featured, wikipedia ]
   min_length:                           3
   date_format:                          mmm dd, yyyy
 
@@ -65,8 +69,13 @@ defaults:
   search_input:                         '#search-query'                         # '#jss-input'
   results:                              '#search-results'                       # selector for containing search results element
   template:                             '#search-results-template'              # selector for Mustache.js template
-  titleMsg:                                                                     # '<h1>Search results<h1>' message attached in front of results (can be empty)
-  emptyMsg:                                                                     # '<p>Nothing found.</p>' # shown message if search returns no results
+
+  # message attached in front of results (can be empty)
+  #
+  titleMsg:                                                                     # '<h3 class="ml-5 mb-2">Search results<h3>'
+  # message shown, if search returns no results (can be empty)
+  #
+  emptyMsg:                                                                     # '<p style="margin-left: 3.5rem">No matches.</p>'
 
 
 # ------------------------------------------------------------------------------

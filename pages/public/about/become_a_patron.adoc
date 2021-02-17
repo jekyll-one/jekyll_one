@@ -1,10 +1,14 @@
 ---
 title:                                  J1 Template
 tagline:                                become a patron
-description:                            Help to create premium content
+date:                                   2021-02-01 00:00:00
+description: >
+                                        Help to create premium content
 
 tags:                                   [ Patron, Premium, Content ]
 categories:                             [ pages ]
+
+exclude_from_search:                    true
 
 permalink:                              /pages/public/about/become_a_patron/
 regenerate:                             false
@@ -24,7 +28,28 @@ resource_options:
             href:                       https://unsplash.com/@annoand/portfolio
 ---
 
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set (local) page attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="global" %}
+
+
 // Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
 // -----------------------------------------------------------------------------
 
 _Patron_ allows fans -- the *patrons* -- to pay creators for their work. Many

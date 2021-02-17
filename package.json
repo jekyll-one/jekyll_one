@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "j1_starter",
-  "version": "2021.0.3",
+  "version": "2021.0.7",
   "description": "J1 Template Starter Web",
   "homepage": "https://your.site",
   "author": {
@@ -41,14 +41,14 @@
     "opt_skip_initial_build": "--skip-initial-build",
     "opt_webserver": "puma",
     "opt_interface": "0.0.0.0",
-    "opt_web_port": "4000",
-    "opt_web_url": "http://localhost:4000/",
-    "opt_app_port": "8000",
-    "opt_app_url": "http://localhost:8000/",
+    "opt_web_port": "13000",
+    "opt_web_url": "http://localhost:40000/",
+    "opt_app_port": "13010",
+    "opt_app_url": "http://localhost:40010/",
     "opt_profile": "",
     "opt_watch": "--watch",
     "opt_livereload": "--livereload",
-    "opt_livereload_port": "44000"
+    "opt_livereload_port": "13001"
   },
   "algolia": {
     "admin_key": "your-algolia-admin-key"
@@ -126,7 +126,7 @@
     "get_version:jekyll": "cross-var cross-env JEKYLL_ENV=$npm_package_config_mode BUNDLE_GEMFILE=$npm_package_jekyll_gemfile bundle exec jekyll --version"
   },
   "dependencies": {
-    "getos": "^3.1.0",
+    "getos": "^3.2.1",
     "getos-cli": "^1.0.0",
     "if-env": "^1.0.4",
     "j1-cli": "^2019.0.3",
@@ -134,7 +134,7 @@
     "opn-cli": "^3.1.0"
   },
   "devDependencies": {
-    "cross-env": "^5.2.1",
+    "cross-env": "^7.0.3",
     "cross-var": "^1.1.0",
     "lnk-cli": "^1.0.1",
     "npm-run-all": "^4.1.5",

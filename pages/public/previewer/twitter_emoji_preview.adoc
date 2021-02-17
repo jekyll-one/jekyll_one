@@ -1,7 +1,7 @@
 ---
 title:                                  Emoji Previewer
 tagline:                                search and select twitter emojis
-date:                                   2020-11-08 12:00:00
+date:                                   2020-11-08 00:00:00
 description: >
                                         Twitter Emoji Icons V1 Previewer.Twitter Emoji is a colored
                                         icon font developed by Twitter. The full icon set  is fully
@@ -10,7 +10,7 @@ description: >
 tags:                                   [ Twitter, Emoji, Icons ]
 categories:                             [ App, Previewer ]
 
-scrollbar:                              false
+scrollbar:                              true
 
 permalink:                              /pages/public/previewer/twitter_emoji/
 regenerate:                             false
@@ -35,7 +35,7 @@ resource_options:
 // Enable the Liquid Preprocessor
 :page-liquid:
 
-// Set page (local) attributes here
+// Set (local) page attributes here
 // -----------------------------------------------------------------------------
 :jollygoodcode--emoji:                  https://github.com/jollygoodcode/twemoji
 

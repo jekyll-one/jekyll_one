@@ -1,10 +1,7 @@
 ---
 title:                                  Narcisse Snake Dens
 tagline:                                largest snake population
-description:                            Largest snake population
-
 date:                                   2016-11-24 00:00:00 +0100
-series:
 
 tags:                                   [ Canada, Cities ]
 categories:                             [ Wikipedia ]
@@ -41,8 +38,21 @@ are the winter home of tens of thousands of red-sided garter snakes
 [role="clearfix mb-3"]
 excerpt__end
 
-// Page content
+//  Load Liquid procedures
 // -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="all" %}
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
 [[readmore]]
 == Conservation
 

@@ -1,7 +1,7 @@
 ---
 title:                                  Roundtrip
 tagline:                                advanced bootstrap modals
-date:                                   2020-11-08 12:00:00
+date:                                   2020-11-08 00:00:00
 description: >
                                         Bootstrap modals are used to add dialogues to your web pages for user
                                         notifications. To highlight important information to your visitor's. Modals
@@ -32,7 +32,7 @@ resource_options:
 // Enable the Liquid Preprocessor
 :page-liquid:
 
-// Set page (local) attributes here
+// Set (local) page attributes here
 // -----------------------------------------------------------------------------
 // :page--attr:                         <attr-value>
 :images-dir:                            {imagesdir}/pages/roundtrip/100_present_images
@@ -71,9 +71,8 @@ critical messages.
 NOTE: For more information on how to use Bootstrap’s JavaScript modal
 plugin, refer to: link:{bs_doc_components_modal}[Bootstrap Docs, {browser-window--new}].
 
-// Include sub-documents
-// -----------------------------------------------------------------------------
-include::{documentdir}/410_table_3_column.asciidoc[]
+// include::{documentdir}/tables/bs_modal_examples.asciidoc[]
+include::{documentdir}/410_table_bs_modal_examples.asciidoc[]
 
 == Whats next
 
@@ -89,5 +88,5 @@ what the link:{roundtrip-responsive-tables}[BS tables extensions] can do!
 
 
 // Include the modals HTML portion
-// -------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 include::{documentdir}/419_advanced_modals_demo.asciidoc[]

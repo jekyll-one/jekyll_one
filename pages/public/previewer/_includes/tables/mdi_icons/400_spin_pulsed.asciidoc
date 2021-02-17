@@ -1,6 +1,6 @@
 
-.Animate icons
-[cols="2,1,9a", options="header", role="rtable mb-5"]
+.Animated icons
+[cols="2,2,8a", options="header", role="rtable mb-5"]
 |===============================================================================
 |Class |Result |Code
 
@@ -29,11 +29,11 @@
 ----
 
 |`mdi-pulsed`
-|pass:[<i class="mdi mdi-3x mdi-heart mdi-pulsed">]
+|pass:[<i class="mdi mdi-3x mdi-heart mdi-md-red mdi-pulsed">]
 |
 [source, html]
 ----
-<i class="mdi mdi-3x mdi-heart mdi-pulsed">
+<i class="mdi mdi-3x mdi-heart mdi-md-red mdi-pulsed">
 ----
 
 |===============================================================================

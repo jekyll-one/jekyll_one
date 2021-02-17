@@ -19,8 +19,8 @@
 #
 about_config:
   title:                                Navigator
-  scope:                                Default settings
-  location:                             _data/modules/defaults/navigator.yml
+  scope:                                User settings
+  location:                             _data/modules/navigator.yml
 
 # ------------------------------------------------------------------------------
 # User configuration settings
@@ -32,7 +32,6 @@ settings:
   #
   nav_bar:
     enabled:                            true
-
     fixed:                              true
 
   # ----------------------------------------------------------------------------
@@ -40,7 +39,6 @@ settings:
   #
   nav_menu:
     enabled:                            true
-
     delay_open_menu:                    250
 
   # ----------------------------------------------------------------------------
@@ -210,7 +208,7 @@ settings:
   nav_quicklinks:
     enabled:                            true
 
-    home_url:                           https://jekyll.one/                     # none | URL
+    home_url:                           /                                       # none | URL
     back_url:                           none                                    # none | URL
 
     r_text_sizer:                       false                                   # true | false

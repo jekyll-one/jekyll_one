@@ -1,7 +1,7 @@
 ---
 title:                                  Rouge
 tagline:                                preview rouge themes
-date:                                   2020-11-08 12:00:00
+date:                                   2020-11-08 00:00:00
 description: >
                                         Previewer page for J1 module Rouge. Rouge is a pure Ruby
                                         syntax highlighter. It can highlight over 100 different
@@ -10,13 +10,16 @@ description: >
 tags:                                   [ Rouge, Highlighter ]
 categories:                             [ App, Previewer ]
 
+scrollbar:                              true
 toc:                                    true
 
 permalink:                              /pages/public/previewer/rouge/
-regenerate:                             false
+regenerate:                             true
 
 resources:                             [ rouge, clipboard, fam ]
 resource_options:
+  - toccer:
+      collapseDepth:                    4
   - attic:
       padding_top:                      400
       padding_bottom:                   50
@@ -33,27 +36,58 @@ resource_options:
             href:                       https://unsplash.com/@jruscello
 ---
 
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set (local) page attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
 // :source-highlighter: rouge
 // https://dzone.com/articles/awesome-asciidoctor-highlight-lines-in-source-code
-
+//
 :rouge-line-class: line
 :rouge-line-id: X%i
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="global" %}
 
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
 == Theme selector
 
-Make a selection of theme below to preview a theme.
+For the default theme `Uno` of J1 Template, the following _Rouge_ themes
+are used:
+
+* light: `igorpro`
+* dark: `monokai.sublime`
+
+NOTE: The default themes used for J1 Template can be configured with the
+global template config file `~/_data/j1_config.yml`.
+
+Make a selection of theme below to preview.
 
 ++++
 <div class="btn-group">
-  <button class="btn btn-primary btn-raised btn-flex btn-lg dropdown-toggle" type="button" data-toggle="dropdown" data-target="#navbarDropdown" aria-haspopup="true" aria-expanded="false">
+  <!-- See: https://stackoverflow.com/questions/47242702/force-bootstrap-dropdown-menu-to-always-display-at-the-bottom-and-allow-it-go-of -->
+  <!-- NOTE: control the behaviour of popper.js for positioning -->
+  <!-- NOTE: set attribute data-flip="false" to open the SELECT list at the BOTTOM of the BUTTON -->
+  <button class="btn btn-primary btn-raised btn-flex btn-lg dropdown-toggle" data-flip="false" type="button" data-toggle="dropdown" data-target="#navbarDropdown" aria-haspopup="true" aria-expanded="false">
   Select Theme<span class="caret"></span>
   </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" active="true" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('base16')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>base16</a>
+  <div class="dropdown-menu scrollable-menu">
+    <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('base16')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>base16</a>
     <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('base16.dark')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>base16.dark</a>
     <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('base16.light')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>base16.light</a>
     <a class="dropdown-item" href="javascript:void(0)" onclick="j1.adapter.rouge.reaplyStyles('base16.monokai')"> <i class="mdi mdi-view-quilt mdi-18px mr-2" style="color: #9E9E9E"></i>base16.monokai</a>
@@ -76,364 +110,52 @@ Make a selection of theme below to preview a theme.
   </div>
 </div>
 <div id="selected" class="mt-1 mb-3"></div>
+
+<style>
+/* jadams, 2021-02-16: unclear why global styles defined in CSS file */
+/* (bootsttrap.css) not applied. For that reason, given locally for now */
+.scrollable-menu {
+    height: auto;
+    max-height: 300px;
+    overflow-x: hidden;
+}
+
+.scrollable-menu::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 12px;
+    background-color: #f5f5f5;
+}
+
+.scrollable-menu::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+  background-color: #424242;
+}
+
+.scrollable-menu::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 0px;
+  background-color: #f5f5f5;
+}
+</style>
 ++++
 
-=== Liquid
+=== Language examples
 
-// [source, liquid, linenums, highlight='3-7']
-// [source, liquid, role="linenums"]
-[source, liquid]
-----
-Hello {{ 'now' | date: "%Y %h" }}
+Find below a selected number languages (code blocks) and their highlightning.
 
-{% comment %} if item.quantity is 4... {% endcomment %}
+include::{documentdir}/rouge/100_language_examples.asciidoc[]
 
-{% for i in (1..item.quantity) %}
-  {{ i }}
-{% endfor %}
-
-{% comment %} results in 1,2,3,4 {% endcomment %}
-----
-
-=== Javascript
-
-[source, javascript, linenums, highlight='3-7']
-----
-// ---------------------------------------------------------------
-// helper functions
-// ---------------------------------------------------------------
-function styleSheetLoaded(styleSheet) {
-  var sheets     = document.styleSheets,
-      stylesheet = sheets[(sheets.length - 1)];
-
-  // find CSS file 'styleSheetName' in document
-  for(var i in document.styleSheets) {
-    if(sheets[i].href && sheets[i].href.indexOf(styleSheet) > -1) {
-      return true;;
-    }
-  }
-}
-----
-
-=== Ruby
-
-// :source-highlighter: rouge
-// :source-highlighter: pygments
-// :pygments-style: emacs
-// :icons: font
-
-[source, ruby, linenums]
-----
-require 'asciidoctor/extensions' unless RUBY_ENGINE == 'opal'
-include Asciidoctor <1>
-
-Asciidoctor:Extensions.register do
-  class J1BlockMacro < Extensions:BlockMacroProcessor
-    use_dsl
-    named :banner
-    name_positional_attributes 'role'
-
-    def process parent, target, attrs
-      html = %(<div id="#{target}" class="#{attrs['role']}"></div>)
-      create_pass_block parent, html, attrs, subs: nil
-    end
-  end
-  block_macro J1BlockMacro
-end
-----
-<1> don't miss to load the Asciidoctor ruby
-
-=== Asciidoc
-
-// [source, text]
-// [source, apex]
-// [source, erlang]
-// [source, batchfile]
-// [source, turtle]
-[source, prometheus, linenums]
-----
-== Lightbox Examples
-
-Find below an example of using the lightbox Lightbox standalone.
-See how single (individual) images are linked for the use with
-Lightbox.
-
-.A Lightbox block for standalone images
-lightbox:example-standalone[ 400, {data-images-standalone} ]
-
-NOTE: The name LightGallery implies a sort of a Gallery but
-the library is a _lightbox_.
-----
-
-=== Attributes
+== Rouge attributes
 
 You can further customize the source block output with additional Rouge
-attributes:
+attributes.
 
-rouge-css::
-  Controls what method is used for applying CSS to the tokens.
-  Can be `class` (CSS classes), `style` (inline styles) or `external` (external styles).
-  When `class` is used, Rouge styles for the specified theme are included in an HTML header.
-  When `external` is specified, CSS classes are used but no styles will be added except
-  when `rouge-theme` is not empty in which case its value is interpreted as a URL to a
-  style sheet and a link to that style sheet will be added to the HTML header.
-  Default is `class`.
-
-rouge-theme::
-  Sets the name of the Rouge color theme to use.
-  Look into https://github.com/jneen/rouge/tree/master/lib/rouge/themes[lib/rouge/themes]
-  in the Rouge repository for a list of available themes.
-  Default is `github`.
-
-rouge-style::
-  Alternative name for the `rouge-theme` for compatibility with _asciidoctor-pdf_
-  (see https://github.com/{gh-name}/issues/3[#3]).
-
-rouge-highlighted-class::
-  CSS class to use on a line wrapper element for highlighted lines.
-  Default is `highlighted`.
-
-rouge-line-class::
-  CSS class to set on a line wrapper element
-  Default is `line`.
-
-rouge-line-id::
-  Format string for specifying an HTML `id` for each line (e.g. with
-  `rouge-line-id="L%i"` each line of the listing will get an id of the
-  form `id="L1"`, `id="L2"`, etc.). This really only makes sense if the
-  format string is distinct for each source listing, otherwise it will
-  lead to duplicate IDs which makes the generated HTML invalid.
-  Default is no line ids.
+include::{tabledir}/rouge/200_rouge_attributes.asciidoc[]
 
 == Supported languages
 
-Here the list of the supported languages and lexers.
+Here the list of the (current of Feb, 2021) supported languages and lexers
+(language highlighters).
 
-abap:: SAP - Advanced Business Application Programming
-actionscript:: ActionScript
-  * aliases: as,as3
-apache:: configuration files for Apache web server
-apiblueprint:: Markdown based API description language.
-  * aliases: apiblueprint,apib
-applescript::
-  The AppleScript scripting language by Apple Inc.
-  http://developer.apple.com/applescript/[applescript]
-  * aliases: applescript]
-awk:: pattern-directed scanning and processing language
-biml:: BIML, Business Intelligence Markup Language
-brainfuck:: The Brainfuck programming language
-bsl:: The 1C:Enterprise programming language
-c:: The C programming language
-ceylon:: Say more, more clearly.
-cfscript:: CFScript, the CFML scripting language
-  * aliases: cfc
-clojure:: The Clojure programming language
-  (clojure.org)
-  * aliases: clj,cljs
-cmake:: The cross-platform, open-source build system
-coffeescript:: The Coffeescript programming language
-  (coffeescript.org)
-  * aliases: coffee,coffee-script
-common_lisp::
-  The Common Lisp variant of Lisp
-  (common-lisp.net)
-  * aliases: cl,common-lisp,elisp,emacs-lisp]
-conf:: A generic lexer for configuration files
-  * aliases: config,configuration]
-console:: A generic lexer for shell sessions.
-  Accepts ?lang and ?output lexer options, a ?prompt option, and ?comments
-  to enable comments.
-   * aliases: terminal,shell_session,shell-session
-coq:: Coq (coq.inria.fr)
-cpp:: The C++ programming language
-  * aliases: c++
-crystal:: Crystal The Programming Language
-(crystal-lang.org)
-* aliases: cr
-csharp:: a multi-paradigm language targeting .NET
-   * aliases: c#,cs
-css:: Cascading Style Sheets, used to style web pages
-d:: The D programming language(dlang.org)
-  * aliases: dlang
-dart:: The Dart programming language
-  (dartlang.com)
-diff:: Lexes unified diffs or patches
-  * aliases: patch,udiff
-digdag:: A simple, open source, multi-cloud workflow engine
-  (https://www.digdag.io/)
-docker:: Dockerfile syntax
-  * aliases: dockerfile
-dot:: graph description language
-eiffel:: Eiffel programming language
-elixir:: Elixir language (elixir-lang.org)
-  * aliases: elixir,exs
-elm:: The Elm programming language
-  (http://elm-lang.org/)
-erb:: Embedded ruby template files
-  * aliases: eruby,rhtml
-erlang::
-  The Erlang programming language
-  (erlang.org)
-  * aliases: erl]
-escape:: A generic lexer for including escaped content - see Formatter.enable_escape!
-  * aliases: esc
-factor:: Factor, the practical stack language (factorcode.org)
-fortran:: Fortran 2008 (free-form)
-fsharp:: F# (fsharp.net)
-gherkin:: A business-readable spec DSL ( github.com/cucumber/cucumber/wiki/Gherkin )
-  * aliases: cucumber,behat
-glsl:: The GLSL shader language
-go:: The Go programming language (http://golang.org)
- * aliases: go,golang
-gradle:: A powerful build system for the JVM
-graphql:: GraphQL
-groovy:: The Groovy programming language (http://www.groovy-lang.org/)
-hack:: The Hack programming language (hacklang.org)
- * aliases: hack,hh
-haml:: The Haml templating system for Ruby (haml.info)
- * aliases: HAML
-handlebars:: the Handlebars and Mustache templating languages
- * aliases: hbs,mustache
-haskell:: The Haskell programming language (haskell.org)
- * aliases: hs
-hcl:: Hashicorp Configuration Language, used by Terraform and other Hashicorp tools
-html:: HTML, the markup language of the web
-http:: http requests and responses
-hylang:: The HyLang programming language (hylang.org)
- * aliases: hy
-idlang:: Interactive Data Language
-igorpro:: WaveMetrics Igor Pro
-ini:: the INI configuration format
-io:: The IO programming language (http://iolanguage.com)
-irb:: Shell sessions in IRB or Pry
- * aliases: pry
-java:: The Java programming language (java.com)
-javascript:: JavaScript, the browser scripting language
- * aliases: js
-jinja:: Django/Jinja template engine (jinja.pocoo.org)
- * aliases: django
-json:: JavaScript Object Notation (json.org)
-json-doc:: JavaScript Object Notation with extenstions for documentation
-jsonnet:: An elegant, formally-specified config language for JSON
-jsp:: JSP
-jsx:: React JSX (https://facebook.github.io/react/)
- * aliases: jsx,react
-julia:: The Julia programming language
- * aliases: jl
-kotlin:: Kotlin Programming Language (http://kotlinlang.org)
-lasso:: The Lasso programming language (lassosoft.com)
- * aliases: lassoscript
-liquid:: Liquid is a templating engine for Ruby (liquidmarkup.org)
-literate_coffeescript:: Literate coffeescript
- * aliases: litcoffee
-literate_haskell:: Literate haskell
- * aliases: lithaskell,lhaskell,lhs
-llvm:: The LLVM Compiler Infrastructure (http://llvm.org/)
-lua:: Lua (http://www.lua.org)
-m68k:: Motorola 68k Assembler
-magik:: Smallworld Magik
-make:: Makefile syntax
- * aliases: makefile,mf,gnumake,bsdmake
-markdown:: Markdown, a light-weight markup language for authors
- * aliases: md,mkd
-mathematica:: Wolfram Mathematica, the world's definitive system for modern technical computing.
- * aliases: wl
-matlab:: Matlab
- * aliases: m
-moonscript:: Moonscript (http://www.moonscript.org)
- * aliases: moon
-mosel:: An optimization language used by Fico's Xpress.
-mxml:: MXML
-nasm:: Netwide Assembler
-nginx:: configuration files for the nginx web server (nginx.org)
-nim:: The Nim programming language (http://nim-lang.org/)
- * aliases: nimrod
-nix:: The Nix expression language (https://nixos.org/nix/manual/#ch-expression-language)
- * aliases: nixos
-objective_c:: an extension of C commonly used to write Apple software
- * aliases: objc,obj-c,obj_c,objectivec
-ocaml:: Objective Caml (ocaml.org)
-pascal:: a procedural programming language commonly used as a teaching language.
-perl:: The Perl scripting language (perl.org)
- * aliases: pl
-php:: The PHP scripting language (php.net)
- * aliases: php,php3,php4,php5
-plaintext:: A boring lexer that doesn't highlight anything
- * aliases: text
-plist:: plist
-* aliases: plist
-powershell:: powershell
- * aliases: posh,microsoftshell,msshell
-praat:: The Praat scripting language (praat.org)
-prolog:: The Prolog programming language (http://en.wikipedia.org/wiki/Prolog)
- * aliases: prolog
-prometheus:: prometheus
- * aliases: prometheus
-properties:: .properties config files for Java
-protobuf:: Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data
- * aliases: proto
-puppet:: The Puppet configuration management language (puppetlabs.org)
- * aliases: pp
-python:: The Python programming language (python.org)
- * aliases: py
-q:: The Q programming language (kx.com)
- * aliases: kdb+
-qml:: QML, a UI markup language
- * aliases: qml
-r:: The R statistics language (r-project.org)
- * aliases: r,R,s,S
-racket:: Racket is a Lisp descended from Scheme (racket-lang.org)
-ruby:: The Ruby programming language (ruby-lang.org)
- * aliases: rb
-rust:: The Rust programming language (rust-lang.org)
- * aliases: rs,rust,no_run,rs,no_run,rust,ignore,rs,ignore,rust,should_panic,rs,should_panic
-sass:: The Sass stylesheet language language (sass-lang.com)
-scala:: The Scala programming language (scala-lang.org)
- * aliases: scala
-scheme:: The Scheme variant of Lisp
-scss:: SCSS stylesheets (sass-lang.com)
-sed:: sed, the ultimate stream editor
-shell:: Various shell languages, including sh and bash
- * aliases: bash,zsh,ksh,sh
-sieve:: mail filtering language
-slim:: The Slim template language
-smalltalk:: The Smalltalk programming language
- * aliases: st,squeak
-smarty:: Smarty Template Engine
- * aliases: smarty
-sml:: Standard ML
- * aliases: ml
-sqf:: Status Quo Function, a Real Virtuality engine scripting language
-sql:: Structured Query Language, for relational databases
-supercollider:: A cross-platform interpreted programming language for sound synthesis, algorithmic composition, and realtime performance
-swift:: Multi paradigm, compiled programming language developed by Apple for iOS and OS X development. (developer.apple.com/swift)
-tap:: Test Anything Protocol
- * aliases: tap
-tcl:: The Tool Command Language (tcl.tk)
-terraform:: Terraform HCL Interpolations
- * aliases: tf
-tex:: The TeX typesetting system
- * aliases: TeX,LaTeX,latex
-toml:: the TOML configuration format (https://github.com/mojombo/toml)
-tsx:: tsx
-tulip:: the tulip programming language (twitter.com/tuliplang)
- * aliases: tulip
-turtle:: Terse RDF Triple Language, TriG
-twig:: Twig template engine (twig.sensiolabs.org)
-typescript:: TypeScript, a superset of JavaScript
- * aliases: ts
-vala:: A programming language similar to csharp.
-vb:: Visual Basic
- * aliases: visualbasic
-verilog:: The System Verilog hardware description language
-vhdl:: Very High Speed Integrated Circuit Hardware Description Language
-viml:: VimL, the scripting language for the Vim editor (vim.org)
- * aliases: vim,vimscript,ex
-vue:: Vue.js single-file components
- * aliases: vuejs
-wollok:: Wollok lang
-xml:: XML
-xojo:: Xojo
- * aliases: realbasic
-yaml:: Yaml Ain't Markup Language (yaml.org)
- * aliases: yml
+include::{tabledir}/rouge/300_supported_languages.asciidoc[]

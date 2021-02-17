@@ -1,7 +1,7 @@
 ---
 title:                                  Roundtrip
 tagline:                                responsive tables
-date:                                   2020-11-09 12:00:00
+date:                                   2020-11-09 00:00:00
 description: >
                                         Creating a design for responsive tables is challenging. The approach used by
                                         J1 Template is based on pure CSS on top of the classic Bootstrap styles for
@@ -35,10 +35,9 @@ resource_options:
 // Enable the Liquid Preprocessor
 :page-liquid:
 
-// Set page (local) attributes here
+// Set (local) page attributes here
 // -----------------------------------------------------------------------------
 // :page--attr:                         <attr-value>
-:debug:
 :images-dir:                            {imagesdir}/pages/roundtrip/100_present_images
 
 //  Load Liquid procedures
@@ -56,58 +55,6 @@ resource_options:
 Creating a design for responsive tables is challenging. The approach used by
 J1 Template is based on pure CSS on top of the classic Bootstrap styles for
 simplicity and portability to be viewed best on all devices and browsers.
-
-ifdef::debug[]
-
-.Source, options NOT set
-[source, md, role="noclip"]
-----
-[cols=",", options="header", ]
-|===============================================================================
-|Bratze |Bru
-
-|Fick
-|dich
-
-|===============================================================================
-----
-
-
-.Options NOT set
-[cols=",", options="header", ]
-|===============================================================================
-|Bratze |Bru
-
-|Fick
-|dich
-
-|===============================================================================
-
-.Source, options SET
-[source, adoc, role="noclip"]
-----
-[cols="6a,6a", options="header", width="100%", role="table-responsive mt-3"]
-|===============================================================================
-|Bratze |Bru
-
-|Fick
-|dich
-
-|===============================================================================
-----
-
-.options set
-[cols="6a,6a", options="header", width="100%", role="table-responsive mt-3"]
-|===============================================================================
-|Bratze |Bru
-
-|Fick
-|dich
-
-|===============================================================================
-endif::[]
-
-
 
 == Table types
 

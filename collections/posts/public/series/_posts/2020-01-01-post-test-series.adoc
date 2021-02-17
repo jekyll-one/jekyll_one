@@ -3,7 +3,6 @@ title:                                  Test Post 1
 tagline:                                testing series elements
 date:                                   2020-01-01 00:00:00
 description: >
-                                        Testing series elements
 
 tags:                                   [ Post, Test ]
 categories:                             [ Series ]
@@ -34,27 +33,13 @@ resource_options:
 // Enable the Liquid Preprocessor
 :page-liquid:
 
-// Set page (local) attributes here
+// Set (local) page attributes here
 // -----------------------------------------------------------------------------
 // :page--attr:                         <attr-value>
-:debug:                                 false
-:page-imagesdir:                        {{page.images.dir}}/j1_using_docker
 
 // Place an excerpt at the most top position
 // -----------------------------------------------------------------------------
-.Marcus Tullius Cicero · Finibus Bonorum et Malorum
-
-The de Finibus Bonorum et Malorum is a treatise on the theory of Ethics. It
-expounds and criticizes the three ethical systems most prominent in Cicero’s
-day, the Epicurean, the Stoic and that of the Academy under Antiochus. The
-most elaborate of Cicero’s philosophical writings, it has had fewer readers
-than his less technical essays on moral subjects.
-
-But it is of importance to the student of philosophy as the only systematic
-account surviving from antiquity of those rules of life which divided the
-allegiance of thoughtful men during the centuries when the old religions had
-lost their hold and Christianity had not yet emerged. And the topics that it
-handles can never lose their interest.
+Testing series elements.
 
 [role="clearfix mb-3"]
 excerpt__end
@@ -65,11 +50,15 @@ excerpt__end
 
 // Load page attributes
 // -----------------------------------------------------------------------------
-{% include {{load_attributes}} scope="local" %}
+{% include {{load_attributes}} scope="none" %}
 
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
 [[readmore]]
 == The Extremes of Good and Evil
 

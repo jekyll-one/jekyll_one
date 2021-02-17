@@ -294,8 +294,8 @@ rouge:
 #                                           /assets/themes/j1/core/fonts/roboto/fonts/Roboto-Medium.woff2,
 #                                           /assets/themes/j1/core/fonts/roboto/fonts/Roboto-Bold.woff,
 #                                           /assets/themes/j1/core/fonts/roboto/fonts/Roboto-Bold.woff2,
-#                                           /assets/themes/j1/core/fonts/materialdesign_icons/fonts/materialdesignicons-webfont.woff,
-#                                           /assets/themes/j1/core/fonts/materialdesign_icons/fonts/materialdesignicons-webfont.woff2
+#                                           /assets/themes/j1/core/fonts/material_design_icons/fonts/materialdesignicons-webfont.woff,
+#                                           /assets/themes/j1/core/fonts/material_design_icons/fonts/materialdesignicons-webfont.woff2
 #                                         ]
 preload:
 
@@ -305,7 +305,7 @@ preload:
     fonts:                                []
     # fonts:                              [
     #                                         /assets/themes/j1/core/fonts/roboto/fonts/Roboto-Regular.woff,
-    #                                         /assets/themes/j1/core/fonts/materialdesign_icons/fonts/materialdesignicons-webfont.woff
+    #                                         /assets/themes/j1/core/fonts/material_design_icons/fonts/materialdesignicons-webfont.woff
     #                                     ]
   css:
     preload:                              true

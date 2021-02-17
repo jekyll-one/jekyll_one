@@ -1,6 +1,6 @@
 
 .Material Design (MD) color palette
-[cols="2,1,9a", options="header", role="rtable mb-5"]
+[cols="2,2,8a", options="header", role="rtable mb-5"]
 |===============================================================================
 |Class |Result |Code
 

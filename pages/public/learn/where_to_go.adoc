@@ -1,7 +1,7 @@
 ---
 title:                                  Where to go
 tagline:                                fasten your way
-date:                                   2020-11-03 12:00:00
+date:                                   2020-11-03 00:00:00
 description: >
                                         Where to go, Too Long; Didn't Read to fasten
                                         your way through the preview pages of J1 Template.
@@ -35,7 +35,7 @@ resource_options:
 // Enable the Liquid Preprocessor
 :page-liquid:
 
-// Set page (local) attributes here
+// Set (local) page attributes here
 // -----------------------------------------------------------------------------
 // :page--attr:                         <attr-value>
 

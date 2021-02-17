@@ -1,7 +1,7 @@
 ---
 title:                                  Roundtrip
 tagline:                                present images
-date:                                   2020-11-03 12:00:00
+date:                                   2020-11-03 00:00:00
 description: >
                                         This page show some of quite useful features of J1 Template to manage your
                                         image-based content using lightboxes, carousels (slider) and galleries.
@@ -17,7 +17,7 @@ tags:                                   [ Roundtrip, Introduction ]
 categories:                             [ Images, Module ]
 
 permalink:                              /pages/public/learn/roundtrip/present_images/
-regenerate:                             true
+regenerate:                             false
 
 resources:                              [
                                           clipboard, rouge, carousel, lightbox,
@@ -42,7 +42,7 @@ resource_options:
 // Enable the Liquid Preprocessor
 :page-liquid:
 
-// Set page (local) attributes here
+// Set (local) page attributes here
 // -----------------------------------------------------------------------------
 // :page--attr:                         <attr-value>
 :images-dir:                            {imagesdir}/pages/roundtrip/100_present_images
@@ -57,6 +57,10 @@ resource_options:
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
 Welcome to the first preview page focussing the image module. This page show
 some of quite useful features of J1 Template to manage your image-based content
 using lightboxes, carousels (slider) and galleries.
@@ -118,7 +122,7 @@ supports a gallery-style thumbnail preview plus image resizing, a dowload
 dialogue, sharing provider support and some more helpful. Check what
 LightGallery can do by the following example.
 
-// .Example of a Justified Gallery
+.Example of a LightGallery Gallery
 gallery::jg_example[]
 
 

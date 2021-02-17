@@ -33,6 +33,9 @@
 # rubocop:disable Layout/ExtraSpacing
 # rubocop:disable Metrics/AbcSize
 # ------------------------------------------------------------------------------
+# NOTE: To be checked if the gem uglifier can be replaced by the
+# JS module "Terser" already used for package 200_template_js
+# ------------------------------------------------------------------------------
 require 'uglifier'
 
 module Jekyll

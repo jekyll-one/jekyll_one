@@ -272,6 +272,17 @@ module Jekyll
           is_post     = site.is_a?(Jekyll::Document)
           body        = renderer.render(site)
 
+          if description.nil? || description.length == 0
+            description = 'No description available.'
+          end
+
+          if site.is_a?(Jekyll::Document)
+            excerpt = extract_excerpt(site)
+            unless excerpt.nil? || excerpt.length == 0
+              description = excerpt
+            end
+          end
+          
           SearchEntry.new(title, tagline, url, date, tags, categories, description, is_post, body, renderer)
         else
           raise 'Not supported'
@@ -281,6 +292,14 @@ module Jekyll
       def self.extract_title_and_url(item)
         data = item.to_liquid
         [ data['title'], data['url'] ]
+      end
+
+      def self.extract_excerpt(item)
+        data = item.to_liquid
+        parsed_data = Nokogiri::HTML.parse(data['excerpt']).text
+        parsed_data.gsub!(/\n+/, ' ')
+        parsed_data.gsub!(/^\s+/, '')
+        parsed_data.gsub!(/\s+$/, '')
       end
 
       attr_reader :title, :tagline, :url, :date, :tags, :categories, :description, :is_post, :body, :collection
@@ -322,6 +341,6 @@ end
 
 module Jekyll
   module J1LunrSearch
-    VERSION = '2021.0.4'
+    VERSION = '2021.0.7'
   end
 end

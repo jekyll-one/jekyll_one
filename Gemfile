@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------
-# ~/Gemfile (runtime)
+# ~/Gemfile (run-time)
 # Provides package information to bundle all Ruby gem needed
 # for Jekyll and J1 template (managed by Ruby Gem Bundler)
 #
@@ -52,9 +52,9 @@ ruby RUBY_VERSION
 #
 gem 'jekyll', '~> 4.2'
 
-# Theme Rubies, default: J1 Template (NOT used for the development system)
+# Theme Rubies, default: J1 Template
 #
-gem 'j1-template', '= 2021.0.4'
+gem 'j1-template', '~> 2021.0.7'
 
 # ------------------------------------------------------------------------------
 # PRODUCTION: Gem needed for the Jekyll and J1 prod environment
@@ -106,19 +106,22 @@ gem 'wdm', '>= 0.1.1' if Gem.win_platform?
 # ------------------------------------------------------------------------------
 # Jekyll Plugins
 # If any (additional) plugins are used, they goes here:
+# ------------------------------------------------------------------------------
+# NOTE: asciidoctor v2.x (automatically loaded via ???) creates corrupted
+#  asciidoctor-rouge output. Currently, older/latest version v1.x is used
 #
 group :jekyll_plugins do
-  gem 'asciidoctor', '= 1.5.8'
-# gem 'asciidoctor-pdf', '>= 1.5.0.alpha.16'
-  gem 'asciidoctor-rouge', '>= 0.3'
-  gem 'jekyll-asciidoc', '>= 2.1.0'
-# gem 'jekyll-algolia', '~> 1.0'
-# gem 'jekyll-feed', ">= 0.9"
-# gem 'jekyll-gist', '>= 1.5.0'
+  gem 'asciidoctor', '= 1.5.8'                                                  # See notes!!!
+# gem 'asciidoctor-pdf', '>= 1.5.4'                                             # Needed ???
+  gem 'asciidoctor-rouge', '>= 0.4.0'
+  gem 'jekyll-asciidoc', '>= 3.0.0'
+# gem 'jekyll-algolia', '~> 1.6'                                                # Needed ??? Supported ???
+# gem 'jekyll-feed', ">= 0.15.1"
+# gem 'jekyll-gist', '>= 1.5.0'                                                 # Needed ???, Gist supported asciidoc-extention
 # gem 'jekyll-sitemap', '>= 1.2.0'
-# gem 'jekyll-redirect-from', '>= 0.13.0'
+# gem 'jekyll-redirect-from', '>= 0.16.0'                                       # Needed ???
+# gem 'jekyll-sass-converter', '>= 2.1.0'                                       # Needed ??? Supported ???
   gem 'j1-paginator', '>= 2020.0.2'
-  gem 'jekyll-sass-converter', '>= 1.5.1'
 end
 
 # ------------------------------------------------------------------------------
@@ -166,7 +169,6 @@ end
 # gem 'passenger', '>= 5.3'
 gem "puma", '>= 4.3.1'
 
-
 # ------------------------------------------------------------------------------
 # If J1 is transformed into a (Rack and Sinatra based) Web
 # application, the site can be secured using user authentication
@@ -179,18 +181,17 @@ gem 'rack-protection', '~> 2.0'
 gem 'rack-ssl-enforcer', '~> 0.2'
 gem 'rest-client', '~> 2.0'
 
-gem 'omniauth', '>= 1.3'
-gem 'omniauth-oauth2', '~> 1.4'
+gem 'omniauth', '>= 2.0'
+gem 'omniauth-oauth2', '~> 1.7'
 
 gem 'sinatra', '~> 2.0'
-# gem 'sinatra-cross_origin', '~> 0.3.1'
+gem 'sinatra-cross_origin', '~> 0.3.1'
 
 gem 'warden', '~> 1.2'
 
 # ------------------------------------------------------------------------------
 # Gem needed for J1 logger based on log4r (middleware)
 #
-#gem 'log4r', '~> 1.1.10'
 gem 'log4r', '~> 1.1', '>= 1.1.10'
 gem 'uuid', '~> 2.3', '>= 2.3.8'
 gem 'date', '~> 2.0'

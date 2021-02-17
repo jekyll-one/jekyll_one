@@ -1,7 +1,7 @@
 ---
 title:                                  J1 Template
 tagline:                                creating responsive websites
-date:                                   2020-11-03 12:00:00
+date:                                   2020-11-03 00:00:00
 description: >
                                         A good user experience browsing a Web is one of
                                         the most important features a site has to offer as
@@ -25,8 +25,12 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/the-place-1920x1280-bw.jpg
-          alt:                          the-place-1920x1280-bw
+        - url:                          /assets/images/modules/attics/responsive-text-1920x1280.jpg
+          alt:                          responsive-text-1920x1280
+          badge:
+            type:                       unsplash
+            author:                     Alexander Andrews
+            href:                       https://unsplash.com/@alex_andrews
 ---
 
 // Page content
@@ -34,6 +38,9 @@ resource_options:
 
 [[responsive-design]]
 == Full Responsive
+
+[role="mb-3"]
+image::/assets/images/pages/panels/the-place-1920x800.jpg[{{page.title}}]
 
 A good user experience browsing a Web site is one of the most important
 feature a site has to offer as a must. Beside excellent content. Presenting
@@ -56,11 +63,13 @@ elements, cards, forms, etc.
 [[current-technology]]
 == HTML5 · CSS3 · JS
 
+[role="mb-3"]
+image::/assets/images/pages/panels/modules-apps-1920x800.jpg[{{page.title}}]
+
 The Internet is a rapidly changing world. Like the fashion industries, new
 trends are set every year. J1 Template combines modern technologies for the
 world of static Webs to make a site unique using current standards in terms
 of web development, languages, and tools.
-
 
 === HTML5 + CSS3
 
@@ -112,6 +121,9 @@ lightboxes, and so on.
 [[launch-ready]]
 == Start in No Time
 
+[role="mb-3"]
+image::/assets/images/pages/panels/no-time-1920x800.jpg[{{page.title}}]
+
 The base idea of the J1 Template is to give all people a toolset at their
 hands to create a website with no need to start by web development or
 web design from the beginning. A website based on J1 is using build-in
@@ -121,7 +133,6 @@ truly matters: your content.
 
 Using J1, you can instantly start a web project by creating your content and
 not by start learning the deep web development technologies.
-
 
 === Create your Web
 
