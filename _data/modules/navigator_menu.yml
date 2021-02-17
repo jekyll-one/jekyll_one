@@ -43,7 +43,7 @@
           icon:                         format-text
         - title:                        Icon fonts
           href:                         /pages/public/learn/roundtrip/mdi_icon_font/
-          icon:                         incognito
+          icon:                         fan
         - title:                        Asciidoc extensions
           href:                         /pages/public/learn/roundtrip/asciidoc_extensions/
           icon:                         format-annotation-plus
