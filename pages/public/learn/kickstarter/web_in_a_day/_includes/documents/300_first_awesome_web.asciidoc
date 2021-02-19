@@ -1,0 +1,11 @@
+lorem:sentences[5]
+
+To not waste time, get through the turorial and find out what is the *Jekyll Way*.
+And if this the way you want to go.
+
+Have a good time, a good day learning Jekyll.
+
+== First awesome website
+
+lorem:sentences[5] +
+lorem:sentences[3] +

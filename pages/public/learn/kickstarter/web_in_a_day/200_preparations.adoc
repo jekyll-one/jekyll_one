@@ -1,0 +1,77 @@
+---
+title:                                  Web in a Day
+tagline:                                preparations
+date:                                   2018-05-01 00:00:00
+description: >
+                                        Modern static website in a day
+
+tags:                                   [ Preparations ]
+categories:                             [ Jekyll, Knowledge, Tutorial ]
+
+permalink:                              /pages/public/learn/kickstarter/web_in_a_day/preparations/
+regenerate:                             false
+
+resources:                              [ lightbox, carousel, fam ]
+resource_options:
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+      opacity:                          0.5
+      slides:
+        - url:                          /assets/images/pages/kickstarter/web_in_a_day/get-started-1920x1280-bw.jpg
+          alt:                          Photo by JESHOOTS.COM on Unsplash
+          alignY:                       top
+          badge:
+            type:                       unsplash
+            author:                     JESHOOTS.COM
+            href:                       https://unsplash.com/@jeshoots/portfolio
+---
+
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set page (local) attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="all" %}
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+include::{documentdir}/200_preparations.asciidoc[]
+
+== Summarize!
+
+include::{includedir}/parts.asciidoc[tag=summarize]
+
+=== Recap
+
+include::{includedir}/parts.asciidoc[tag=recap_200_preparations]
+
+=== Whats Next
+
+include::{includedir}/parts.asciidoc[tag=whats_next_200_preparations]
+
+
+
+/////
+=== All Chapters
+
+include::{includedir}/parts.asciidoc[tag=chapters_200_oauth_overview]
+
+=== Further Reading
+
+include::{includedir}/parts.asciidoc[tag=further_reading_200_preparations]
+/////
