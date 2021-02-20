@@ -122,8 +122,7 @@ supports a gallery-style thumbnail preview plus image resizing, a dowload
 dialogue, sharing provider support and some more helpful. Check what
 LightGallery can do by the following example.
 
-.Example of a LightGallery Gallery
-gallery::jg_example[]
+gallery::jg_old_times[]
 
 
 == J1 Carousel App
@@ -182,7 +181,7 @@ A simple image show is useful for example as an animated (or not animated)
 banner presenting exciting things of your site or the products offered.
 
 .Simple Image Carousel
-carousel::demo_simple[role="mb-5"]
+carousel::demo_simple[role="mb-3"]
 
 === Carousel + Caption + Lightbox
 
@@ -192,7 +191,7 @@ a lightbox to enlarge images full size. For the example below, a almost simple
 lightbox is used: Lightbox V2; or short: lightbox.
 
 .Nice cats
-carousel::demo_cats[role="mb-5"]
+carousel::demo_cats[role="mb-3"]
 
 The J1 module lightbox is a simple Lightbox but offers a bunch of impressive
 features for displaying images. For example, the lightbox can display all
@@ -207,7 +206,7 @@ to browse all images back and forth. An indicator below the slider shows how
 many images the show contains.
 
 .Single Slide Carousel and a Lightbox
-carousel::demo_oneslide[role="mb-5"]
+carousel::demo_oneslide[role="mb-3"]
 
 == J1 Gallery App
 

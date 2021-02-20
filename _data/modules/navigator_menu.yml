@@ -152,9 +152,9 @@
 
 - item:                                 Collections
   sublevel:
-    - title:                            About Jekyll Collections
+    - title:                            Jekyll Collections
       href:                             /pages/public/collections/intro/
-      icon:                             hand-pointing-right
+      icon:                             paw
     - title:                            A Books Collection
       icon:                             book-open-variant
       dropdown:

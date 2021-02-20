@@ -161,8 +161,8 @@ defaults:
   throttleTimeout:                      150
   scrollSmooth:                         true
   scrollSmoothDuration:                 300
-  scrollSmoothOffset:                   -90                                     # TODO: to be removed, calculated dynamically
-  scrollContainer:                      null                                    # ??? scrollContainer
+  scrollSmoothOffset:                   10                                      # TODO: to checked, if set dynamically with toccer adapter
+  scrollContainer:                      null                                    # TODO: to checked, what this option does
 
 # ------------------------------------------------------------------------------
 # END config

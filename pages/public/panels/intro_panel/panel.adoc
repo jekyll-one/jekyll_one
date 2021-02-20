@@ -18,14 +18,17 @@ categories:                             [ Info, Introduction ]
 permalink:                              /pages/public/panels/intro_panel/
 regenerate:                             false
 
-resources:                              [ lightbox, carousel ]
+resources:                              [
+                                          clipboard, rouge, carousel, lightbox,
+                                          justified_gallery, light_gallery
+                                        ]
 resource_options:
   - attic:
       padding_top:                      400
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/responsive-text-1920x1280.jpg
+        - url:                          /assets/images/modules/attics/jessica-ruscello-1920x1280.jpg
           alt:                          responsive-text-1920x1280
           badge:
             type:                       unsplash
@@ -40,7 +43,7 @@ resource_options:
 == Full Responsive
 
 [role="mb-3"]
-image::/assets/images/pages/panels/the-place-1920x800.jpg[{{page.title}}]
+image::/assets/images/pages/panels/responsive-text-1920x800.jpg[{{page.title}}]
 
 A good user experience browsing a Web site is one of the most important
 feature a site has to offer as a must. Beside excellent content. Presenting
@@ -64,59 +67,85 @@ elements, cards, forms, etc.
 == HTML5 · CSS3 · JS
 
 [role="mb-3"]
-image::/assets/images/pages/panels/modules-apps-1920x800.jpg[{{page.title}}]
+image::/assets/images/pages/panels/florian-olivo-1920x800.jpg[{{page.title}}]
 
 The Internet is a rapidly changing world. Like the fashion industries, new
 trends are set every year. J1 Template combines modern technologies for the
 world of static Webs to make a site unique using current standards in terms
 of web development, languages, and tools.
 
-=== HTML5 + CSS3
+=== Coding web pages
 
-J1 is using HTML5 for structuring content on the World Wide Web. The current
-version of the HTML standard offers a lot of new features including detailed
-processing models to support more interoperable implementations. It extends
-and improves HTML markups available. HTML5 introduces application programming
-interfaces (APIs) for more complex web applications. For the same reasons,
-the new HTML standard is also a good choice for modern cross-platform mobile
-applications, because it includes features designed with mobile devices in mind.
+J1 is using HTML5, the latest major version of HTML, for structuring content
+on the World Wide Web. The current version of the HTML standard offers a lot
+of new features including detailed processing models to support more
+interoperable implementations. It extends and improves HTML markups available
+in older versions.
+
+HTML5 introduces application programming interfaces (APIs) for more complex
+web applications. For the same reasons, the new HTML standard is also a good
+choice for modern cross-platform mobile applications, because it includes
+features designed with mobile devices in mind.
 
 Many new features are included with HTML5. To natively support multimedia and
-graphical content, the new <video>, <audio> and <canvas> elements were added.
-Besides this, support for scalable vector graphics (SVG) and an API called
-MathML for mathematical formulas are now available.
+graphical content, the new `<video>`, `<audio>` and `<canvas>` elements were
+added. Besides this, support for *SVG* (scalable vector graphics), an API called
+*MathML* for mathematical formulas and a grid system called *Flex* are now
+available.
 
-The new standard allows to use so-called semantic markup elements for your
-documents. New structure elements such as <main>, <section>, <article>,
-<header> or <footer> (and many more) were added. Better structured HTML code
-can help people having disabilities to read the pages presented better.
+The new standard allows to use so-called *semantic* markup elements for your
+documents. New structure elements such as `<main>`, `<section>`, `<article>`,
+`<header>` or `<footer>` (and many more) were added. Better structured HTML
+code can help people having disabilities to read the pages presented better.
 
-CSS is designed to enable the separation of presentation and content. Including
-layout, colors, and fonts for example. This separation improves content
-accessibility, provide more flexibility and control in the presentation.
+*CSS* (cascadeded style sheets) is designed to enable the *separation* of
+presentation and content. Including layout, colors, and fonts for example.
+This separation improves content accessibility, provide more flexibility and
+control in the presentation.
 
 Separation of formatting and content also makes it feasible to present the
-same page in different styles. For example, the themes feature of J1 Template
+same page in different styles. For example, the *themes feature* of J1 Template
 makes use of this.
 
-CSS3 is divided into several separate components called modules. Each module
-adds new capabilities or extends features defined in the former CSS2 standard.
-HTML5 in combination with CSS3 allows creating modern and modular code for
-web pages that can be viewed on all current devices like Mobiles, Tablets,
-or the classic Desktop PC. The new HTML5 elements plus CSS3 modules can be
-used as a replacement for proprietary solutions like Adobe Flash to build
-modern webpages based on open standards.
+*CSS3*, the current standard for cascadeded style sheets, is divided into
+several separated components called *modules*. Each module adds new capabilities
+or extends features defined in the former CSS2 standard. HTML5 in combination
+with CSS3 allows creating modern and modular code for web pages that can be
+viewed on all current devices like Mobiles, Tablets, or the classic Desktop PC.
+The new HTML5 elements plus CSS3 modules can be used as a replacement for
+proprietary solutions like _Adobe Flash_ to build modern webpages based on
+open standards.
 
 === Javascript
 
-HTML5 and CSS3 can do a lot. Content placement and basic methods for the
-dynamic of elements can be done using pure HTML5 and CSS3. For more complex
-solutions like modules, the support of Javascript is needed.
+[role="mb-3"]
+image::/assets/images/pages/panels/modules-apps-1920x800.jpg[{{page.title}}]
+
+JavaScript is a text-based programming language used both on the client-side
+and server-side that allows you to make web pages interactive. Where HTML and
+CSS are languages that give structure and style to web pages, JavaScript gives
+web pages interactive elements that engage a user.
+
+Content placement and basic methods for the dynamic of elements can be done
+using pure HTML5 and CSS3. For more complex solutions like *modules* (to
+provide dynamic, interactive elements), the support of *Javascript* for a
+webpage is needed.
+
+JavaScript is used for J1 mainly as a client-side script-engine. A client-side
+script is a programming language that performs its tasks entirely on the
+client's machine and does not need to interact with the server to function.
+
+Some of the dynamic website enhancements performed by JavaScript are:
+
+* Loading (new) content or data onto the page without reloading the page
+* Rollover effects and dropdown menus
+* Animating page elements such as fading, resizing or relocating
+* Playing audio and video
 
 J1 Template has build-in a wide range of JS-powered modules to support a
-website e.g. the navigation, for presenting image data in galleries,
-lightboxes, and so on.
-
+website e.g. by a powerful navigation system, for presenting image data in
+galleries, lightboxes, and so on. Good news are: no programming JavaScript
+is needed to use the build-in JS-based modules.
 
 [[launch-ready]]
 == Start in No Time
@@ -163,6 +192,8 @@ galleries, video players, calendars, etc.
 This is a bit different for static webs as they don’t have a central Management
 System as CMS does to integrate external code. There no ecosystem, no
 marketplace to get apps and modules from.
+
+gallery::jg_old_times[]
 
 Luckily, it is not that hard to integrate external components into the world
 of Jekyll. But one of the objectives of J1 is to give people a ready-to-use

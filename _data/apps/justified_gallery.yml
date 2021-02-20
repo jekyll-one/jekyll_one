@@ -97,25 +97,23 @@ settings:
         enabled:                        true
         type:                           image
         id:                             jg_example
-        title:                          Example of a Justified Gallery
+        title:                          Example of LightGallery Lightbox
         show_delay:                     250
-        css_classes:                    mb-5
-        images_path:                    /assets/images/pages/roundtrip/100_present_images
-        thumb_path:                     /assets/images/pages/roundtrip/100_present_images
+        css_classes:                    mb-3
+        images_path:                    /assets/images/modules/gallery/mega_cities
+        thumb_path:                     /assets/images/modules/gallery/mega_cities
         images:                         [
-                                          lightbox-image-1.jpg,
-                                          lightbox-image-2.jpg,
-                                          lightbox-image-3.jpg
+                                          banter-snaps_b.jpg,
+                                          denys-nevozhai-1_b.jpg
                                         ]
         captions_gallery:               [
-                                          Golden Gate Bridge with San Francisco in distance,
-                                          Forest with mountains behind,
-                                          Bicyclist looking out over hill at ocean
+                                          Osaka - Japan,
+                                          Man posing at the rooftop of Jin Mao Tower Shanghai - China
                                         ]
         captions_lightbox:              []
 
         gallery_options:
-          rowHeight:                    300
+          rowHeight:                    250
           margins:                      1
 
         lightbox_options:
@@ -123,6 +121,36 @@ settings:
           mode:                         lg-fade
           cssEasing:                    cubic-bezier(0.25, 0, 0.25, 1)
 
+    # ----------------------------------------------------------------------------
+    # Old Times
+    #
+    - gallery:
+        enabled:                        true
+        type:                           image
+        id:                             jg_old_times
+        show_delay:                     200
+        title:                          Grand Pa around the 1930th
+        css_classes:                    mb-3
+        images_path:                    /assets/images/modules/gallery/old_times
+        thumb_path:                     /assets/images/modules/gallery/old_times
+        images:                         [
+                                          image_01.jpg, image_02.jpg,
+                                          image_03.jpg, image_04.jpg
+                                        ]
+        captions_gallery:               [
+                                          "Grand Pa's 80th Birthday",
+                                          "Grand Pa's 80th Birthday",
+                                          "Grand Pa's annual journey",
+                                          "Grand Pa's annual journey"
+                                        ]
+        captions_lightbox:              []
+        gallery_options:
+          rowHeight:                    200
+          margins:                      5
+        lightbox_options:
+          lightbox:                     lg
+          mode:                         lg-fade
+          cssEasing:                    cubic-bezier(0.25, 0, 0.25, 1)
 
     # --------------------------------------------------------------------------
     # Gallery Customizer (Mega Cities)
@@ -133,7 +161,7 @@ settings:
         id:                             jg_customizer
   #     title:                          Masonry grid layout of Justified Gallery
         show_delay:                     250
-        css_classes:                    mb-5
+        css_classes:                    mb-3
         images_path:                    /assets/images/modules/gallery/mega_cities
         thumb_path:                     /assets/images/modules/gallery/mega_cities
         images:                         [
@@ -192,7 +220,7 @@ settings:
         show_delay:                     300
         title:                          false                                   # HTML5 Video Gallery
         css_classes:
-        video_path:                     https://github.com/jekyll-one-org/jekyll-one-lfs/raw/master/videos
+        video_path:                     "https://github.com/jekyll-one-org/jekyll-one-lfs/raw/master/videos"
         image_path:                     /assets/videos/gallery
         thumb_path:                     /assets/videos/gallery
         videos:                         [

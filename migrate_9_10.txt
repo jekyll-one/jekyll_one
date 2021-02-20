@@ -1,0 +1,36 @@
+Changes not staged for commit:
+        modified:   Gemfile
+        modified:   _config.yml
+        modified:   _data/apps/justified_gallery.yml
+        modified:   _data/modules/defaults/toccer.yml
+        modified:   _data/modules/navigator_menu.yml
+        modified:   _includes/attributes.asciidoc
+        modified:   assets/images/collections/blog/featured/staticgen.jpg
+        deleted:    assets/images/modules/attics/runner-1920x1200-bw.jpg
+        deleted:    assets/images/modules/attics/the-place-1920x1280-bw.jpg
+        modified:   assets/images/modules/icons/d1/scalable/d1.svg
+        deleted:    collections/posts/public/featured/_posts/2020-04-01-confusion-about-base-url.adoc
+        deleted:    collections/posts/public/featured/_posts/2020-05-01-top-open-source-static-site-generators.adoc
+        modified:   collections/posts/public/featured/_posts/2020-06-01-about-cookies.adoc
+        deleted:    collections/posts/public/featured/_posts/2021-02-17-welcome-to-j1-template.adoc
+        modified:   package.json
+        modified:   pages/public/learn/roundtrip/100_present_images.adoc
+        modified:   pages/public/learn/roundtrip/500_themes.adoc
+        modified:   pages/public/learn/where_to_go.adoc
+        modified:   pages/public/panels/intro_panel/panel.adoc
+        modified:   pages/public/previewer/bootstrap_theme.adoc
+        modified:   pages/public/previewer/rouge.adoc
+
+Untracked files:
+        assets/images/collections/blog/featured/markus-spiske-2.jpg
+        assets/images/modules/attics/florian-olivo-1920x1280.jpg
+        assets/images/modules/attics/nicola-styles-1920x1280.jpg
+        assets/images/modules/attics/runner-1920x1200.jpg
+        assets/images/modules/attics/the-place-1920x1280.jpg
+        assets/images/modules/gallery/old_times/
+        assets/images/pages/panels/florian-olivo-1920x800.jpg
+        assets/images/pages/panels/responsive-text-1920x800.jpg
+        collections/posts/public/featured/_posts/2020-05-01-top-site-generators.adoc
+        collections/posts/public/featured/_posts/2021-01-01-welcome-to-j1.adoc
+        collections/posts/public/featured/_posts/2021-02-20-welcome-to-j1-template.adoc
+        migrate_9_10.txt

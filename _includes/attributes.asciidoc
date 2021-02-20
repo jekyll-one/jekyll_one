@@ -5,6 +5,9 @@
 // URLS, global references to internal|external web links (macro link:)
 // -----------------------------------------------------------------------------
 tag::urls[]
+
+:url-about-cookies--home:                         http://www.aboutcookies.org
+
 :url-animate-css--home:                           https://animate.style/
 :url-anime--home:                                 https://animejs.com/
 
@@ -96,6 +99,7 @@ tag::urls[]
 
 :url-cash--gh-repo:                               https://github.com/fabiospampinato/cash
 :url-clipboard--gh-repo:                          https://github.com/zenorocha/clipboard.js/
+
 :url-cors--gh-repo:                               https://github.com/expressjs/cors
 :url-cross-env--gh-repo:                          https://github.com/kentcdodds/cross-env
 :url-cross-var--gh-repo:                          https://github.com/elijahmanor/cross-var
@@ -146,13 +150,12 @@ tag::urls[]
 :url-j1--home:                                    https://jekyll.one/
 :url-j1--preview:                                 https://preview.jekyll.one/
 
-:url-j1-web-in-a-day--intro:                      /pages/public/learn/kickstarter/web_in_a_day/intro/
-:url-j1-web-in-a-day--meet-and-greet:             /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
-:url-j1-web-in-a-day--preparations:               /pages/public/learn/kickstarter/web_in_a_day/preparations/
-:url-j1-web-in-a-day--first-awesome-web:          /pages/public/learn/kickstarter/web_in_a_day/first_awesome_web/
+:url-j1-web-in-a-day--meet-and-greet:             https://jekyll.one/pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
 
 :url-j1-quick-references--jekyll:                 /pages/protected/manuals/quick_references/jekyll/
 :url-j1-downloads--quickstart-intro:              /pages/public/learn/downloads/quickstart/intro/
+
+:url-j1-roundtrip--present-images:                /pages/public/learn/roundtrip/present_images/
 
 :url-j1-learn--whats-up:                          https://jekyll.one/pages/public/learn/whats_up/
 :url-j1-learn--present-images:                    https://jekyll.one/pages/public/learn/roundtrip/present_images/
@@ -236,6 +239,8 @@ tag::urls[]
 
 :url-owl-carousel-v1--home:                       http://www.landmarkmlp.com/js-plugin/owl.carousel/
 
+:url-owasp-attacks--csrf:                         https://owasp.org/www-community/attacks/csrf
+
 :url-parseurl--gh-repo:                           https://github.com/pillarjs/parseurl
 
 :url-platform--gh-repo:                           https://github.com/bestiejs/platform.js/
@@ -274,6 +279,9 @@ tag::urls[]
 
 :url-sass-lang--home:                             https://sass-lang.com/dart-sass
 :url-sass-lang--gh-repo:                          https://github.com/sass/dart-sass
+
+:url-jamstack--home:                              https://jamstack.org/
+:url-jamstack--generators:                        https://jamstack.org/generators/
 
 :url-shopify--home:                               https://www.shopify.com/
 
@@ -384,7 +392,7 @@ end::tables[]
 // -----------------------------------------------------------------------------
 tag::products[]
 :j1-license:                                      MIT License
-:j1-version:                                      2021.0.7
+:j1-version:                                      2021.0.10
 end::products[]
 
 
