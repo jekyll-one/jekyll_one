@@ -70,7 +70,7 @@ excerpt__end
 // Include sub-documents
 // -----------------------------------------------------------------------------
 
-[[readmore]]
+// [[readmore]]
 == What are cookies technically
 
 In short words. A cookie is a small piece of data that a website asks your

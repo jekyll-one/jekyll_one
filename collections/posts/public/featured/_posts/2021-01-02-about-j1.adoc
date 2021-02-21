@@ -65,7 +65,7 @@ excerpt__end
 // Include sub-documents
 // -----------------------------------------------------------------------------
 
-[[readmore]]
+// [[readmore]]
 
 The template system was originally developed to create a simple, but fully
 configurable website creation toolset for document servers. Document servers
