@@ -25,7 +25,9 @@ resource_options:                       []
 // Attribute settings for section control
 //
 :mit-license:
-:unlicense-license:
+:year:                                  2021
+:full-name:                             Juergen Adams
+// :unlicense-license:
 
 J1 Template, and most of the software products used, are licensed under the
 conditions of Open source licenses. Open source licenses grant permission
@@ -38,9 +40,9 @@ https://opensource.org/licenses/category[opensource.org, window="_blank"]
 
 == J1 Template
 
-J1 Template is licensed under the term of the MIT licence. The Copyrightis given
-by Jürgen Adams, the owner of all software and content part provided by J1
-products and|or web sites:
+J1 Template is licensed under the term of the MIT licence. The Copyright is
+given by {full-name}, the owner of all software and content part provided by
+J1 products and|or web sites.
 
 == Licenses other software
 
@@ -57,15 +59,15 @@ feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutr
 
 === Open Source
 
-Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
-consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis,
-feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+Products using a Open Source license can be used *free of charge*. Users are
+*free* in using the in the Software *without* restriction. This includes the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software without any limitation.
 
 ifdef::mit-license[]
 ==== The MIT License
 
-Copyright (C) [year] [full name]
+Copyright (C) {year} {full-name}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

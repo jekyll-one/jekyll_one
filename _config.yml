@@ -230,17 +230,17 @@ keywords:                               Jekyll, One, Template, Ruby, Asciidoctor
                                         Asciidoc, Bootstrap, Javascript,
                                         JS, JS3, CSS, CSS3, HTML5, Material, Design
 author:
-  name:                                 username
-  email:                                username@email.domain
+  name:                                 Juergen Adams
+  email:                                juergen@jekyll.one
   github:                               username
   twitter:                              username
   feedburner:                           feedname
 
 webmaster:
-  email:                                webmaster@example.domain
+  email:                                webmaster@jekyll.one
 
 robots:
-  index:                                false
+  index:                                true
   follow:                               true
 
 # ------------------------------------------------------------------------------
@@ -249,7 +249,7 @@ robots:
 
 brand:
   image:                                modules/icons/j1/j1-512x512.png
-  image_height:                         48                                      # was: 64
+  image_height:                         48
   text:                                 Starter Web
   text_color:                           "#9E9E9E"
 
@@ -444,10 +444,10 @@ plugins:
 # - jekyll-algolia
 # - jekyll-feed
 # - jekyll-gist
-# - jekyll-sitemap
+  - jekyll-sitemap
 # - jekyll-redirect-from
   - j1-paginator
-  - jekyll-sass-converter
+# - jekyll-sass-converter
 
 # ------------------------------------------------------------------------------
 # JEKYLL FEED

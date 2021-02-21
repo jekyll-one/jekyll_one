@@ -11,7 +11,7 @@ description: >
 tags:                                   [ Overview ]
 categories:                             [ Software, Platforms, Contributers ]
 
-scrollbar:                              true
+scrollbar:                              false
 
 permalink:                              /pages/public/about/site/
 regenerate:                             false

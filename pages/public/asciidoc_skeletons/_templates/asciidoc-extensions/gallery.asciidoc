@@ -1,5 +1,0 @@
-// Find (JustifieGallery, jg) gallery configuration with:
-// ~/_data/apps/justified_gallery.yml
-
-//.Title
-gallery::jg_example[]

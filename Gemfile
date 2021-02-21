@@ -118,7 +118,7 @@ group :jekyll_plugins do
 # gem 'jekyll-algolia', '~> 1.6'                                                # Needed ??? Supported ???
 # gem 'jekyll-feed', ">= 0.15.1"
 # gem 'jekyll-gist', '>= 1.5.0'                                                 # Needed ???, Gist supported asciidoc-extention
-# gem 'jekyll-sitemap', '>= 1.2.0'
+  gem 'jekyll-sitemap', '>= 1.2.0'
 # gem 'jekyll-redirect-from', '>= 0.16.0'                                       # Needed ???
 # gem 'jekyll-sass-converter', '>= 2.1.0'                                       # Needed ??? Supported ???
   gem 'j1-paginator', '>= 2020.0.2'

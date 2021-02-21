@@ -3,8 +3,8 @@ title:                                  Cookies
 tagline:                                good to know
 date:                                   2020-06-01 00:00:00
 
-tags:                                   [ About, Cookies ]
 categories:                             [ Featured ]
+tags:                                   [ About, Cookies ]
 
 series:
 adsense:                                false
@@ -135,6 +135,8 @@ The danger lies in their ability to track individuals' browsing histories.
 Cookies generally can be classified by its *lifespan* and the *domain* to
 which it belongs.
 
+=== By Lifespan
+
 Cookies classified by *lifespan* are either a:
 
 Session cookie::
@@ -144,6 +146,8 @@ and all open window tabs.
 Persistent cookie::
 A persistent cookie *remains* on the user's computer/device for a pre-defined
 period of time.
+
+=== By Domain
 
 Cookies classified by the *domain* to which it belongs, are either of:
 
@@ -176,7 +180,7 @@ CRSF Page on {url-owasp-attacks--csrf}[OWASP, {browser-window--new}].
 == How to control cookies
 
 Users can take control, used or *not* used, or delete cookies. For more
-details, see {url-about-cookies--home}[aboutcookies.org]. You can delete
+details, see {url-about-cookies--home}[AboutCookies]. You can delete
 all cookies that are already on your computer and you can set most
 browsers to prevent them from being placed.
 
