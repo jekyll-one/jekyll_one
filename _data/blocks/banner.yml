@@ -164,7 +164,7 @@ settings:
                     icon:               eye
                     icon_color:         md_white
                     icon_size:          24px
-                    href:               /pages/public/learn/where_to_go/
+                    href:               /pages/public/learn/roundtrip/present_images/
                     target:
 
                 - name:                 Kickstarter button
