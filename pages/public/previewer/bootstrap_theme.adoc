@@ -16,7 +16,7 @@ description: >
 tags:                                   [ Bootstrap, Themes ]
 categories:                             [ Configuration, Previewer ]
 
-scrollbar:                              true
+scrollbar:                              false
 flowtext:                               false
 
 permalink:                              /pages/public/previewer/theme/

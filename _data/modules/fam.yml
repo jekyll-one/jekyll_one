@@ -88,6 +88,14 @@ settings:
       #
       items:
 
+        - item:                         To Top
+          enabled:                      true
+          id:                           fam_scroll_to_top
+          color:                        md-green
+          event_handler:                scroll_to_top
+          icon:                         step-backward-2
+          icon_properties:              rotate-90
+          
         - item:                         Previous Section
           enabled:                      true
           id:                           fam_previous_section

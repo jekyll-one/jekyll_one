@@ -150,24 +150,6 @@
       href:                             /pages/public/blog/navigator/archive/
       icon:                             archive
 
-- item:                                 Collections
-  sublevel:
-    - title:                            Jekyll Collections
-      href:                             /pages/public/collections/intro/
-      icon:                             paw
-    - title:                            A Books Collection
-      icon:                             book-open-variant
-      dropdown:
-        - title:                        Biography
-          href:                         /pages/public/collections/bookshelf/biography/
-          icon:                         nature-people
-        - title:                        Fantasy
-          href:                         /pages/public/collections/bookshelf/fantasy/
-          icon:                         pillar
-        - title:                        Romance
-          href:                         /pages/public/collections/bookshelf/romance/
-          icon:                         image-filter-vintage
-
 # ------------------------------------------------------------------------------
 # Menu ONLINE
 #
