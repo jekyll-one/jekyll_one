@@ -10,7 +10,7 @@ description: >
 tags:                                   [ Rouge, Highlighter ]
 categories:                             [ App, Previewer ]
 
-scrollbar:                              true
+scrollbar:                              false
 toc:                                    true
 
 permalink:                              /pages/public/previewer/rouge/

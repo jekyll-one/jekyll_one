@@ -10,7 +10,7 @@ description: >
 tags:                                   [ Twitter, Emoji, Icons ]
 categories:                             [ App, Previewer ]
 
-scrollbar:                              true
+scrollbar:                              false
 
 permalink:                              /pages/public/previewer/twitter_emoji/
 regenerate:                             false
