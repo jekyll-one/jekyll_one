@@ -44,9 +44,6 @@ resource_options:
 
 // Place an excerpt at the most top position
 // -----------------------------------------------------------------------------
-Things you should know about this site, about the software used. Read a bit
-what people, what companies has contributed to make a project like J1 Template
-real.
 
 [role="clearfix mb-3"]
 excerpt__end
@@ -62,6 +59,8 @@ excerpt__end
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+{badge-j1--license} {badge-j1--version-latest} {badge-j1-gh--last-commit} {badge-j1--downloads}
 
 // Include sub-documents
 // -----------------------------------------------------------------------------
