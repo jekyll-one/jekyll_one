@@ -54,7 +54,6 @@ resource_options:
 Welcome to the pages of J1 Template. If your here first time, a good decision
 you get on that page first. For sure, there is no better place to go.
 The crucial first step in to find your way to Jekyll is done. Congratulations.
-
 The *Learn* section contains all you need to learn what Jekyll and J1 can do
 for your website. For your new static web - if you like.
 
@@ -63,26 +62,16 @@ With this section you'll find a *tour* to show some of the main features of
 the template system *J1*. The tour covers how image data can be managed using
 J1, some background of the typography the template is using, discuss important
 extensions and some more what J1 can do. The roundtrip is a *visual* tour.
-No technical stuff, nothing academic.
-
-Asciidoc Skeletons::
-AsciiDoc is a human-readable document format using plain-text mark-up
-conventions. AsciiDoc documents can be created using any text editor and
-read *as-is*. J1 template renders Asciidoc code to HTML, your future awesome
-web pages. J1 is using *Asciidoc* for writing content. Documents in a web may
-simple in structure, but may also grow complex for e.g multi-chapter pages.
-The skeletons are discussed in the tutorial *Web in a Day* as a base for
-your content.
-
-You should go for *first* the *Roundtrip*. See what you will get. As an
+No technical stuff, nothing academic. See what you will get. As an
 overview of some of the main features of *J1*.  If you like, continue by
 walking through the roundtrip examples
 link:/pages/public/learn/roundtrip/present_images/[by starting the tour here].
 
+Web in a Day::
 To go deeper, your're invited to *Web in a Day*. This tutorial guides you
 through all the steps to build a website using Jekyll and the template system
 J1. The guide let you go more in-depth and make things real. You dive into
 the world of Jekyll. You'll have learned a lot at the end of that day about
-what Jekyll is, static webs and the template system J1 is all about.
-Try out the journey having some hours of fun at
+what Jekyll is, static webs and the template system J1 is all about. To go
+deeper, your're invited, try out the journey having some hours of fun at
 {url-j1-web-in-a-day--meet-and-greet}[Web in a Day, {browser-window--new}].
