@@ -54,11 +54,6 @@ resource_options:
 
 {badge-j1--license} {badge-j1--version-latest} {badge-j1-gh--last-commit} {badge-j1--downloads}
 
-// image:https://img.shields.io/github/license/jekyll-one-org/j1-template[GitHub]
-
-// badge-j1--license
-
-
 // Include sub-documents
 // -----------------------------------------------------------------------------
 
