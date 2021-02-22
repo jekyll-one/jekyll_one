@@ -23,12 +23,12 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/ian-schneider-1920x1280.jpg
-          alt:                          Photo by Ian Schneider on Unsplash
+        - url:                          /assets/images/modules/attics/alex-holyoake-1920x1280.jpg
+          alt:                          Photo by Alex Holyoake on Unsplash
           badge:
             type:                       unsplash
-            author:                     Ian Schneider
-            href:                       https://unsplash.com/@goian
+            author:                     Alex Holyoake
+            href:                       https://unsplash.com/@stairhopper
 ---
 
 // Page Initializer
@@ -39,6 +39,7 @@ resource_options:
 // Set (local) page attributes here
 // -----------------------------------------------------------------------------
 // :page--attr:                         <attr-value>
+:badges-enabled:                        true
 
 //  Load Liquid procedures
 // -----------------------------------------------------------------------------
@@ -52,7 +53,9 @@ resource_options:
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+ifeval::[{badges-enabled} == true]
 {badge-j1--license} {badge-j1--version-latest} {badge-j1-gh--last-commit} {badge-j1--downloads}
+endif::[]
 
 // Include sub-documents
 // -----------------------------------------------------------------------------
