@@ -60,53 +60,28 @@
           href:                         /pages/public/learn/roundtrip/quicksearch/
           icon:                         magnify
 
-# Currently NOT used
-#
-#       - title:                        FAM buttons
-#         href:                         /pages/public/learn/roundtrip/fam/
-#         icon:                         alpha-a-circle-outline
-
-    - title:                            Web in a Day
-      icon:                             rocket
+    # --------------------------------------------------------------------------
+    # Asciidoc Skeletons
+    #
+    - title:                            Asciidoc Skeletons
+      icon:                             television-guide
       dropdown:
-        - title:                        Meet & Greet Jekyll
-          href:                         /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
-          icon:                         flag-checkered
-        - title:                        Getting prepared
-          href:                         /pages/public/learn/kickstarter/web_in_a_day/preparations/
-          icon:                         cart
-        - title:                        A first awesome Web
-          href:                         /pages/public/learn/kickstarter/web_in_a_day/first_awesome_web/
-          icon:                         creation
-        - title:                        Writing Articles
-          href:                         "#"
-          icon:                         pencil
-        - title:                        Writing Blog Posts
-          href:                         "#"
-          icon:                         pencil
-        - title:                        Design your Site
-          href:                         "#"
-          icon:                         wrench
-        - title:                        Using Git
-          href:                         "#"
-          icon:                         git
-
-# Moved to publish.jekyll.one
-#
-#       - title:                        Deploy a Web
-#         href:                         /pages/public/learn/kickstarter/web_in_a_day/document/deploy_aw_eb/
-#         icon:                         web
-
-        - title:                        Wrapping up
-          href:                         "#"
-          icon:                         backup-restore
+        - title:                        Simple-Document
+          href:                         /pages/public/skeleton/simple/
+          icon:                         file-document-outline
+        - title:                        Multi-Document
+          href:                         /pages/public/skeleton/multi/
+          icon:                         file-document-multiple-outline
+        - title:                        Book
+          href:                         /pages/public/skeleton/book/
+          icon:                         book-open-blank-variant
 
 # ------------------------------------------------------------------------------
 # Item PUBLISH
 #
 - item:                                 Publish
   href:                                 https://publish.jekyll.one/
-  target:                               blank
+  target:                               _blank
 
 # ------------------------------------------------------------------------------
 # Menu TOOLS
@@ -125,12 +100,16 @@
     - title:                            Rouge Theme Previewer
       href:                             /pages/public/previewer/rouge/
       icon:                             code-parentheses
+    - title:                            MD Color Palette
+      href:                             /pages/public/previewer/color_palette/
+      icon:                             format-color-fill
 
 # Currently NOT used
 #
 #   - title:                            Automagic iFrame
 #     href:                             /pages/public/iframer/
 #     icon:                             image-filter-none
+
 
 # ------------------------------------------------------------------------------
 # Menu BLOG
@@ -150,6 +129,27 @@
       href:                             /pages/public/blog/navigator/archive/
       icon:                             archive
 
+# Currently NOT used
+#
+
+# - item:                                 Collections
+#   sublevel:
+#     - title:                            Jekyll Collections
+#       href:                             /pages/public/collections/intro/
+#       icon:                             paw
+#     - title:                            A Books Collection
+#       icon:                             book-open-variant
+#       dropdown:
+#         - title:                        Biography
+#           href:                         /pages/public/collections/bookshelf/biography/
+#           icon:                         nature-people
+#         - title:                        Fantasy
+#           href:                         /pages/public/collections/bookshelf/fantasy/
+#           icon:                         pillar
+#         - title:                        Romance
+#           href:                         /pages/public/collections/bookshelf/romance/
+#           icon:                         image-filter-vintage
+
 # ------------------------------------------------------------------------------
 # Menu ONLINE
 #
@@ -160,28 +160,28 @@
       column:
         - title:                        Bootstrap Home
           href:                         http://getbootstrap.com/
-          target:                       blank
+          target:                       _blank
           icon:                         bootstrap
         - title:                        Bootstrap CDN
           href:                         https://www.bootstrapcdn.com/
-          target:                       blank
+          target:                       _blank
           icon:                         bootstrap
         - title:                        FA Icons
           href:                         http://fontawesome.io/icons/
-          target:                       blank
+          target:                       _blank
           icon:                         font-awesome
         - title:                        MD Icons
           href:                         https://materialdesignicons.com/
 #         href:                         http://zavoloklom.github.io/material-design-iconic-font/cheatsheet.html
-          target:                       blank
+          target:                       _blank
           icon:                         google
         - title:                        Fonts
           href:                         https://fonts.google.com/
-          target:                       blank
+          target:                       _blank
           icon:                         google
         - title:                        cdnJS
           href:                         https://cdnjs.com/
-          target:                       blank
+          target:                       _blank
           icon:                         arrow-down-bold-hexagon-outline
 
     - title:                            Knowledge
@@ -189,39 +189,39 @@
       column:
         - title:                        Jekyll Home
           href:                         https://jekyllrb.com/
-          target:                       blank
+          target:                       _blank
           icon:                         flask
         - title:                        Jekyll Tips
           href:                         http://jekyll.tips/
-          target:                       blank
+          target:                       _blank
           icon:                         flask
         - title:                        Jekyll Stackoverflow
           href:                         https://stackoverflow.com/questions/tagged/jekyll
-          target:                       blank
+          target:                       _blank
           icon:                         flask
         - title:                        BS 4 Stackoverflow
           href:                         https://stackoverflow.com/questions/tagged/bootstrap-4
-          target:                       blank
+          target:                       _blank
           icon:                         bootstrap
         - title:                        W3 Schools
           href:                         http://www.w3schools.com/
-          target:                       blank
+          target:                       _blank
           icon:                         xml
         - title:                        SelfHTML
           href:                         https://wiki.selfhtml.org/
-          target:                       blank
+          target:                       _blank
           icon:                         xml
         - title:                        Asciidoc Language
           href:                         https://docs.asciidoctor.org/asciidoc/latest/
-          target:                       blank
+          target:                       _blank
           icon:                         format-color-text
         - title:                        Asciidoc FAQ
           href:                         http://www.methods.co.nz/asciidoc/faq.html
-          target:                       blank
+          target:                       _blank
           icon:                         format-color-text
         - title:                        Asciidoctor
           href:                         http://asciidoctor.org/
-          target:                       blank
+          target:                       _blank
           icon:                         hospital
 
     - title:                            Tools
@@ -229,43 +229,43 @@
       column:
         - title:                        FreeFormatter
           href:                         http://www.freeformatter.com/
-          target:                       blank
+          target:                       _blank
           icon:                         cached
         - title:                        Convert CSS to Sass
           href:                         http://sebastianpontow.de/css2compass/
-          target:                       blank
+          target:                       _blank
           icon:                         language-css3
         - title:                        CSS Matic Tools
           href:                         https://www.cssmatic.com
-          target:                       blank
+          target:                       _blank
           icon:                         language-css3
         - title:                        JSON Editor
           href:                         https://jsoneditoronline.org/
-          target:                       blank
+          target:                       _blank
           icon:                         code-json
         - title:                        YAML Parser
           href:                         http://yaml-online-parser.appspot.com/
-          target:                       blank
+          target:                       _blank
           icon:                         code-braces
         - title:                        XML-YAML Converter
           href:                         http://codebeautify.org/xml-to-yaml
-          target:                       blank
+          target:                       _blank
           icon:                         xml
         - title:                        Character Codes
           href:                         http://character-code.com/
-          target:                       blank
+          target:                       _blank
           icon:                         alpha-a-box-outline
         - title:                        Wordcloud Generator
           href:                         https://www.jasondavies.com/wordcloud/
-          target:                       blank
+          target:                       _blank
           icon:                         cloud
         - title:                        RegEx 101
           href:                         https://regex101.com/
-          target:                       blank
+          target:                       _blank
           icon:                         regex
         - title:                        RegEx Library
           href:                         http://www.regexlib.com/
-          target:                       blank
+          target:                       _blank
           icon:                         regex
 
 # ------------------------------------------------------------------------------
@@ -298,12 +298,6 @@
     - title:                            Impress
       icon:                             gavel
       href:                             /pages/public/legal/en/impress/
-
-# Currently NOT used
-#
-#   - title:                            Become a Patron
-#     icon:                             patreon
-#     href:                             /pages/public/about/become_a_patron/
 
 # ------------------------------------------------------------------------------
 # END config
