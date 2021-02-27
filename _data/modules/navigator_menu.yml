@@ -81,7 +81,6 @@
 #
 - item:                                 Publish
   href:                                 https://publish.jekyll.one/
-  target:                               _blank
 
 # ------------------------------------------------------------------------------
 # Menu TOOLS
