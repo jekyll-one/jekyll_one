@@ -1,17 +1,17 @@
 {
   "private": true,
-  "name": "j1_starter",
-  "version": "2021.0.13",
-  "description": "J1 Template Starter Web",
-  "homepage": "https://your.site",
+  "name": "jekyll_one",
+  "version": "2021.0.14",
+  "description": "J1 Home",
+  "homepage": "https://jekyll.one",
   "author": {
-    "name": "Your Name",
+    "name": "Jurgen Adams",
     "email": "name@mail.site",
-    "url": "https://your.site"
+    "url": "https://jekyll.one"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://your.site"
+    "url": "https://jekyll.one"
   },
   "config": {
     "bumplevel": "patch",
@@ -42,9 +42,9 @@
     "opt_webserver": "puma",
     "opt_interface": "0.0.0.0",
     "opt_web_port": "13000",
-    "opt_web_url": "http://localhost:40000/",
+    "opt_web_url": "http://localhost:13000/",
     "opt_app_port": "13010",
-    "opt_app_url": "http://localhost:40010/",
+    "opt_app_url": "http://localhost:13010/",
     "opt_profile": "",
     "opt_watch": "--watch",
     "opt_livereload": "--livereload",

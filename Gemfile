@@ -54,7 +54,7 @@ gem 'jekyll', '~> 4.2'
 
 # Theme Rubies, default: J1 Template
 #
-gem 'j1-template', '~> 2021.0.13'
+gem 'j1-template', '~> 2021.0.14'
 
 # ------------------------------------------------------------------------------
 # PRODUCTION: Gem needed for the Jekyll and J1 prod environment
@@ -118,9 +118,9 @@ group :jekyll_plugins do
 # gem 'jekyll-algolia', '~> 1.6'                                                # Needed ??? Supported ???
 # gem 'jekyll-feed', ">= 0.15.1"
 # gem 'jekyll-gist', '>= 1.5.0'                                                 # Needed ???, Gist supported asciidoc-extention
-  gem 'jekyll-sitemap', '>= 1.2.0'
 # gem 'jekyll-redirect-from', '>= 0.16.0'                                       # Needed ???
 # gem 'jekyll-sass-converter', '>= 2.1.0'                                       # Needed ??? Supported ???
+  gem 'jekyll-sitemap', '>= 1.2.0'
   gem 'j1-paginator', '>= 2020.0.2'
 end
 

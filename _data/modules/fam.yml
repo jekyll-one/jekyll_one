@@ -62,16 +62,27 @@ settings:
       enabled:                          true
       id:                               open_toc
       icon:                             plus
-      icon_hover:                       wrap
+      icon_hover:                       cursor-pointer
       color:                            md-blue
 
       # ------------------------------------------------------------------------
       # MENU items
       #
       items:
-        - item:
+        - item:                         To Top
           enabled:                      true
+          id:                           fam_scroll_to_top
+          color:                        md-green
+          event_handler:                scroll_to_top
+          icon:                         step-backward-2
+          icon_properties:              rotate-90
+
+        - item:                         Table of Contents
+          enabled:                      true
+          id:                           open_mmenu_toc
+          color:                        md-blue
           event_handler:                open_mmenu_toc
+          icon:                         wrap
 
     # --------------------------------------------------------------------------
     # FAM for in-page navigation (simplified)
@@ -95,7 +106,7 @@ settings:
           event_handler:                scroll_to_top
           icon:                         step-backward-2
           icon_properties:              rotate-90
-          
+
         - item:                         Previous Section
           enabled:                      true
           id:                           fam_previous_section

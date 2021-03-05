@@ -60,21 +60,36 @@
           href:                         /pages/public/learn/roundtrip/quicksearch/
           icon:                         magnify
 
-    # --------------------------------------------------------------------------
-    # Asciidoc Skeletons
-    #
-    - title:                            Asciidoc Skeletons
-      icon:                             television-guide
+    - title:                            Web in a Day
+      icon:                             rocket
       dropdown:
-        - title:                        Simple-Document
-          href:                         /pages/public/skeleton/simple/
-          icon:                         file-document-outline
-        - title:                        Multi-Document
-          href:                         /pages/public/skeleton/multi/
-          icon:                         file-document-multiple-outline
-        - title:                        Book
-          href:                         /pages/public/skeleton/book/
-          icon:                         book-open-blank-variant
+        - title:                        Meet & Greet Jekyll
+          href:                         /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
+          icon:                         flag-checkered
+        - title:                        Getting prepared
+          href:                         "#"
+          icon:                         cart
+        - title:                        A first awesome Web
+          href:                         "#"
+          icon:                         creation
+        - title:                        Writing Articles
+          href:                         "#"
+          icon:                         file-document-box-outline
+        - title:                        Creating Blog Posts
+          href:                         "#"
+          icon:                         file-document-box-multiple-outline
+        - title:                        Design your Site
+          href:                         "#"
+          icon:                         wrench
+        - title:                        Using Git
+          href:                         "#"
+          icon:                         git
+        - title:                        Dokument Skeleton
+          href:                         "#"                                     # /pages/public/learn/kickstarter/web_in_a_day/document/skeleton/
+          icon:                         book
+        - title:                        Wrapping up
+          href:                         "#"
+          icon:                         emoticon-excited
 
 # ------------------------------------------------------------------------------
 # Item PUBLISH

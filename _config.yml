@@ -53,7 +53,7 @@ environment:                            production
 # ------------------------------------------------------------------------------
 #   Sets the build version of J1 Template Gem
 #
-version:                                2021.0.13
+version:                                2021.0.14
 
 # version
 # ------------------------------------------------------------------------------
@@ -223,9 +223,11 @@ doctype:                                html
 #   values:                             boolean (true|false)
 #   default:                            false
 #
-title:                                  J1
+title:                                  J1 Template
 slogan:                                 create your web
-description:                            Made for Jekyll · Made for Your Web
+description: >
+                                        Made for Jekyll · Made for Your Web
+
 keywords:                               Jekyll, One, Template, Ruby, Asciidoctor,
                                         Asciidoc, Bootstrap, Javascript,
                                         JS, JS3, CSS, CSS3, HTML5, Material, Design

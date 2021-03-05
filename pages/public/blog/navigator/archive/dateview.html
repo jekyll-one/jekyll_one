@@ -4,18 +4,21 @@ title:                                  Creators Blog
 tagline:                                posts by date
 description:                            Browse articles by date
 
-tags:                                   [ Blog, Creator ]
-categories:                             [ Navigator, Date, Viewer ]
-
-exclude_from_search:                    true
+categories:                             [ Navigator ]
+tags:                                   [ Blog, Date, Viewer ]
 
 sort:                                   date
 toc:                                    true
-fam:                                    true
 fam_menu_id:                            open_toc
-noindex:                                true
 
-#permalink:                             /pages/private/blog/navigator/archive/dateview/
+indexed:                                false
+exclude_from_search:                    true
+
+
+pagination:
+  enabled:                              true
+  permalink:                            /page:num/
+
 regenerate:                             false
 
 resources:                              []
