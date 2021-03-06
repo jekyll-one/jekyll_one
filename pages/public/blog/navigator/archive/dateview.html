@@ -93,11 +93,13 @@ resource_options:
       <h3 id="{{100000|rand}}"
         class="toc-link mt-5 mb-3">
         {% if year != nyear %}
-        <a id="{{post.date|date:'%Y'}}"></a>
-        {% endif %}<a id="{{post.date|date:'%Y-%m' }}">
-        </a>
-        <a> <i class="mdi mdi-calendar-blank"></i></a>
+        <a href="#" id="{{post.date|date:'%Y'}}">
+        {% else %}
+        <a href="#" id="{{post.date|date:'%Y-%m' }}">
+        {% endif %}
+        <i class="mdi mdi-calendar-blank"></i>
         {{post.date|date:'%B %Y'}}
+        </a>        
       </h3>
       {{openList}}
       {% endif %}
