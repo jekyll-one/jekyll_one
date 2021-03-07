@@ -25,6 +25,10 @@
       href:                             /pages/public/learn/where_to_go/
       icon:                             paw
 
+    - title:                            Quickstart
+      href:                             /pages/public/learn/quickstart/
+      icon:                             flag-checkered
+
     # --------------------------------------------------------------------------
     # Roundtrip
     #

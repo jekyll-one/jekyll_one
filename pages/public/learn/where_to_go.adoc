@@ -10,7 +10,7 @@ description: >
 tags:                                   [ Roundtrip, Introduction ]
 categories:                             [ Info ]
 
-comments:                               false
+comments:                               true
 fam_menu_id:                            open_toc
 
 permalink:                              /pages/public/learn/where_to_go/
@@ -58,6 +58,20 @@ The crucial first step in to find your way to Jekyll is done. Congratulations.
 The *Learn* section contains all you need to learn what Jekyll and J1 can do
 for your website. For your new static web - if you like.
 
+Quickstart::
+For experienced people, familiar using Jekyll, the *Quickstart* section may
+helpful to start by creating a *Starter Web* - the buildin website for *J1*.
+This article gives an overview what software is needed and how to run the
+base (web development) commands for:
+
+* creating a J1 project
+* setting up your run-time
+* (re-)build a web
+* run a web
+
+Setting up a J1 project and creating a first website will take about 15
+minutes. But, you should know what your are doing!
+
 Roundtrip::
 With this section you'll find a *tour* to show some of the main features of
 the template system *J1*. The tour covers how image data can be managed using
@@ -76,3 +90,11 @@ the world of Jekyll. You'll have learned a lot at the end of that day about
 what Jekyll is, static webs and the template system J1 is all about. To go
 deeper, your're invited, try out the journey having some hours of fun at
 {url-j1-web-in-a-day--meet-and-greet}[Web in a Day, {browser-window--new}].
+
+The sections of *Learn* should help all people interested in modern Jekyll
+websites to get informed fast what Jekyll and J1 Template is all about. Now,
+it's on you where you start.
+
+Anyway, have a good start using *Jekyll and J1*!
+
+== Leave a comment

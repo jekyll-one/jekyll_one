@@ -12,6 +12,7 @@ tags:                                   [ Overview ]
 categories:                             [ Software, Platforms, Contributers ]
 
 scrollbar:                              false
+comments:                               true
 
 permalink:                              /pages/public/about/site/
 regenerate:                             false
@@ -1922,3 +1923,5 @@ Year:           2021
 
 |===============================================================================
 /////
+
+== Leave a comment

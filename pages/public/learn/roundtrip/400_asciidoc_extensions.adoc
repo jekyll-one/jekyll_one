@@ -14,6 +14,8 @@ description: >
 tags:                                   [ Roundtrip, Introduction ]
 categories:                             [ Asciidoc, Extension ]
 
+comments:                               true
+
 permalink:                              /pages/public/learn/roundtrip/asciidoc_extensions/
 regenerate:                             false
 
@@ -493,7 +495,6 @@ lorem:email[]
 // -----------------------------------------------------------------------------
 include::{documentdir}/100_gistblock.asciidoc[]
 
-
 == Whats next
 
 Asciidoc, respectively Asciidoctor, extensions open up the Markup language to
@@ -508,3 +509,5 @@ user dialogues using them!
 
 Have a look for the link:{roundtrip-extended-modals}[BS modal extensions]
 feature of J1 Template.
+
+== Leave a comment
