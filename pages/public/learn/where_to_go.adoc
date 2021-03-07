@@ -96,7 +96,7 @@ the world of Jekyll. You'll have learned a lot at the end of that day about
 what Jekyll is, static webs and the template system J1 is all about.
 
 To go deeper, your're invited, try out the journey having some hours of fun at
-{url-j1-web-in-a-day--meet-and-greet}[Web in a Day, {browser-window--new}].
+{url-j1-web-in-a-day--meet-and-greet}[Web in a Day].
 
 The sections of *Learn* should help all people interested in modern Jekyll
 websites to get informed fast what Jekyll and J1 Template is all about. Now,
