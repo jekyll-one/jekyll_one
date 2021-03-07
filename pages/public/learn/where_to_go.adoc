@@ -72,6 +72,8 @@ base (web development) commands for:
 Setting up a J1 project and creating a first website will take about 15
 minutes. But, you should know what your are doing!
 
+Go for the quick start from link:{url-j1--quickstart}[here]!
+
 Roundtrip::
 With this section you'll find a *tour* to show some of the main features of
 the template system *J1*. The tour covers how image data can be managed using
