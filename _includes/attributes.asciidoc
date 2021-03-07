@@ -1,7 +1,7 @@
- // ~/includes/attributes.asciidoc
+// ~/includes/attributes.asciidoc
 // Global Ascidoc attributes file
 // -----------------------------------------------------------------------------
-  
+
 // URLS, global references to internal|external web links (macro link:)
 // -----------------------------------------------------------------------------
 tag::urls[]
@@ -148,10 +148,11 @@ tag::urls[]
 :url-iframe-resizer--gh-repo:                     https://github.com/davidjbradshaw/iframe-resizer
 
 :url-j1--home:                                    https://jekyll.one/
-:url-j1--download:                                https://rubygems.org/gems/j1-template/versions/2021.0.15
-:url-j1-rubydoc--home:                            https://www.rubydoc.info/gems/j1-template/2021.0.15
+:url-j1--download:                                https://rubygems.org/gems/j1-template/versions/2021.0.16
+:url-j1-rubydoc--home:                            https://www.rubydoc.info/gems/j1-template/2021.0.16
 :url-j1--preview:                                 https://preview.jekyll.one/
 
+:url-j1-kickstarter--web-in-a-day:                https://jekyll.one/pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
 :url-j1-web-in-a-day--meet-and-greet:             https://jekyll.one/pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
 
 :url-j1-quick-references--jekyll:                 /pages/protected/manuals/quick_references/jekyll/
@@ -400,7 +401,7 @@ end::tables[]
 // -----------------------------------------------------------------------------
 tag::products[]
 :j1-license:                                      MIT License
-:j1-version:                                      2021.0.15
+:j1-version:                                      2021.0.16
 end::products[]
 
 

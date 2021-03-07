@@ -430,4 +430,4 @@ guides you through all the steps on how to build a website. Your site using
 Jekyll and the template system J1. It's really a pleasant journey to learn what
 modern static webs can offer today.
 
-// Start your journey from here: link:{kickstarter-web-in-a-day}[Web in a day].
+Start your journey from here: link:{url-j1-kickstarter--web-in-a-day}[Web in a day, {browser-window--new}].
