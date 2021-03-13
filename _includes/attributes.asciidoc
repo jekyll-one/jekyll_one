@@ -403,7 +403,7 @@ end::tables[]
 // -----------------------------------------------------------------------------
 tag::products[]
 :j1-license:                                      MIT License
-:j1-version:                                      2021.0.16
+:j1-version:                                      2021.1.0
 end::products[]
 
 

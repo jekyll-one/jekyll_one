@@ -102,6 +102,7 @@ module Jekyll
         Jekyll.logger.info 'J1 QuickSearch:', 'creating search index ...'
 
         @site = site
+
         # gather posts and pages
         #
         items = pages_to_index(site)
@@ -109,6 +110,7 @@ module Jekyll
         # index = []
 
         index_js = open(@lunr_path).read
+
         # NOTE: all settings must be added within the index function
         #
         index_js << 'var idx = lunr(function() {'
@@ -136,12 +138,14 @@ module Jekyll
             'body'        => entry.body
           }
 
-          # remove unwanted categories
-          doc['categories'] -= @strip_categories
+          # remove unwanted categories (if any)
+          #
+          doc['categories'] -= @strip_categories unless doc['categories'] == nil
 
           index_js << 'this.add(' << ::JSON.generate(doc, quirks_mode: true) << ');'
 
           # reduce the size of the doc array by deleting the body key
+          #
           doc.delete('body')
           @docs[i] = doc
 
@@ -282,7 +286,7 @@ module Jekyll
               description = excerpt
             end
           end
-          
+
           SearchEntry.new(title, tagline, url, date, tags, categories, description, is_post, body, renderer)
         else
           raise 'Not supported'
@@ -341,6 +345,6 @@ end
 
 module Jekyll
   module J1LunrSearch
-    VERSION = '2021.0.7'
+    VERSION = '2021.1.0'
   end
 end

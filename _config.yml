@@ -47,13 +47,13 @@
 #   values:                             development|production
 #   default:                            production
 #
-environment:                            production
+environment:                            development
 
 # version
 # ------------------------------------------------------------------------------
 #   Sets the build version of J1 Template Gem
 #
-version:                                2021.0.16
+version:                                2021.1.0
 
 # version
 # ------------------------------------------------------------------------------

@@ -9,11 +9,11 @@ description: >
                                         J1 Template which all people needs to know for a successful
                                         way to a modern static website using Jekyll and J1 Template
 
-tags:                                   [ Jekyll, Tutorial ]
 categories:                             [ Knowledge ]
+tags:                                   [ Jekyll, J1, Tutorial ]
 
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
-regenerate:                             false
+regenerate:                             true
 
 resources:                              [ lightbox, carousel, fam ]
 resource_options:
@@ -55,6 +55,7 @@ resource_options:
 // Include sub-documents
 // -----------------------------------------------------------------------------
 include::{documentdir}/100_meet_and_greet_jekyll.asciidoc[]
+
 
 == Summarize!
 

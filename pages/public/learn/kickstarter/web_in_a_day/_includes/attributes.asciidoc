@@ -67,6 +67,9 @@ end::tags[]
 // -----------------------------------------------------------------------------
 tag::data[]
 
+:data-kickstart-wiad--static-web-access:          "pages/kickstarter/web_in_a_day/100_meet_and_greet_jekyll/100-static-web-access.png, Accessing a static web"
+:data-kickstart-wiad--dynamic-web-access:         "pages/kickstarter/web_in_a_day/100_meet_and_greet_jekyll/111-dynamic-web-access.png, Accessing a dynamic web"
+
 :data-gh-oauth-autorization-page:                 "pages/kickstarter/app_in_a_day/gh-oauth-autorization-page.png, GH OAuth autorization page used by Jekyll One"
 :data-gh-oauth-login-page:                        "pages/kickstarter/app_in_a_day/gh-oauth-login-page.png, GH login page for autorization used by Jekyll One"
 
