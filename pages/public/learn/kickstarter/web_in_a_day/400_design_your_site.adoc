@@ -1,12 +1,12 @@
 ---
 title:                                  Web in a Day
 tagline:                                design your site
-date:                                   2018-05-01 00:00:00
+date:                                   2021-03-01 00:00:00
 description: >
                                         Modern static website in a day
 
-tags:                                   [ WebDesign ]
 categories:                             [ Jekyll, Knowledge, Tutorial ]
+tags:                                   [ WebDesign ]
 
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/design_your_site/
 regenerate:                             false

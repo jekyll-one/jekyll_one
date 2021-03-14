@@ -1,12 +1,12 @@
 ---
 title:                                  Web in a Day
 tagline:                                writing articles
-date:                                   2018-05-01 00:00:00
+date:                                   2021-03-01 00:00:00
 description: >
                                         Modern static website in a day
 
-tags:                                   [ WebDesign ]
 categories:                             [ Jekyll, Knowledge, Tutorial ]
+tags:                                   [ Writing, Articles ]
 
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/writing_articles/
 regenerate:                             false

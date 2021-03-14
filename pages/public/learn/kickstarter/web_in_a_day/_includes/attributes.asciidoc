@@ -70,10 +70,10 @@ end::tags[]
 // -----------------------------------------------------------------------------
 tag::data[]
 
-:data-kickstart-wiad--static-web-access:          "pages/kickstarter/web_in_a_day/100_meet_and_greet_jekyll/100-static-web-access.png, Accessing scheme for a static web"
-:data-kickstart-wiad--dynamic-web-access:         "pages/kickstarter/web_in_a_day/100_meet_and_greet_jekyll/110-dynamic-web-access.png, Accessing scheme for a dynamic web"
+:data-kickstart-wiad--static-web-access:          "pages/kickstarter/web_in_a_day/100_meet_and_greet/100-static-web-access.png, Accessing scheme for a static web"
+:data-kickstart-wiad--dynamic-web-access:         "pages/kickstarter/web_in_a_day/100_meet_and_greet/110-dynamic-web-access.png, Accessing scheme for a dynamic web"
 
-:data-kickstart-wiad--seo-results-gh-pages:       "pages/kickstarter/web_in_a_day/100_meet_and_greet_jekyll/200-lh-preview-gh-pages.png, SEO measures (Google Lighthouse) of a J1 Starter Web at Github Pages (jekyll-one-org.github.io)"
+:data-kickstart-wiad--seo-results-gh-pages:       "pages/kickstarter/web_in_a_day/100_meet_and_greet/200-lh-preview-gh-pages.png, SEO measures (Google Lighthouse) of a J1 Starter Web at Github Pages (jekyll-one-org.github.io)"
 
 :data-gh-oauth-autorization-page:                 "pages/kickstarter/app_in_a_day/gh-oauth-autorization-page.png, GH OAuth autorization page used by Jekyll One"
 :data-gh-oauth-login-page:                        "pages/kickstarter/app_in_a_day/gh-oauth-login-page.png, GH login page for autorization used by Jekyll One"

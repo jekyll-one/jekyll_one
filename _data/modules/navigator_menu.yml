@@ -67,7 +67,7 @@
     - title:                            Web in a Day
       icon:                             rocket
       dropdown:
-        - title:                        Meet & Greet Jekyll
+        - title:                        Meet & Greet
           href:                         /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
           icon:                         flask
         - title:                        Getting prepared

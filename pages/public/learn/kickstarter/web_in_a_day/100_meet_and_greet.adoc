@@ -1,7 +1,7 @@
 ---
 title:                                  Web in a Day
-tagline:                                meet & greet jekyll
-date:                                   2020-08-01 09:00:00
+tagline:                                meet & greet
+date:                                   2021-03-01 00:00:00
 description: >
                                         Web in a Day is the first in a series of tutorials to
                                         learn how to create modern websites using Jekyll. This
@@ -13,7 +13,7 @@ categories:                             [ Knowledge ]
 tags:                                   [ Jekyll, J1, Tutorial ]
 
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
-regenerate:                             false
+regenerate:                             true
 
 resources:                              [ lightbox ]
 resource_options:
@@ -22,7 +22,7 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/pages/kickstarter/web_in_a_day/100_meet_and_greet_jekyll/roman-kraft-1920x1280.jpg
+        - url:                          /assets/images/pages/kickstarter/web_in_a_day/100_meet_and_greet/roman-kraft-1920x1280.jpg
           alt:                          Photo by Roman Kraft on Unsplash
           alignY:                       top
           badge:
@@ -54,7 +54,7 @@ resource_options:
 
 // Include sub-documents
 // -----------------------------------------------------------------------------
-include::{documentdir}/100_meet_and_greet_jekyll.asciidoc[]
+include::{documentdir}/100_meet_and_greet.asciidoc[]
 
 
 == Summarize!
@@ -63,18 +63,18 @@ include::{includedir}/parts.asciidoc[tag=summarize]
 
 === Recap
 
-include::{includedir}/parts.asciidoc[tag=recap_100_meet_and_greet_jekyll]
+include::{includedir}/parts.asciidoc[tag=recap_100_meet_and_greet]
 
 === Whats Next
 
-include::{includedir}/parts.asciidoc[tag=whats_next_100_meet_and_greet_jekyll]
+include::{includedir}/parts.asciidoc[tag=whats_next_100_meet_and_greet]
 
 === All Chapters
 
 include::{includedir}/parts.asciidoc[tag=chapters]
-include::{includedir}/parts.asciidoc[tag=chapters_100_meet_and_greet_jekyll]
+include::{includedir}/parts.asciidoc[tag=chapters_100_meet_and_greet]
 
 === Further Reading
 
 include::{includedir}/parts.asciidoc[tag=further_reading]
-include::{includedir}/parts.asciidoc[tag=further_reading_100_meet_and_greet_jekyll]
+include::{includedir}/parts.asciidoc[tag=further_reading_100_meet_and_greet]

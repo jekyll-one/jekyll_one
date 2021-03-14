@@ -31,7 +31,7 @@ mdi:link-variant[24px, md-blue ml-3 mr-2]
 
 // Recap
 // -----------------------------------------------------------------------------
-//  tag::recap_100_meet_and_greet_jekyll[]
+//  tag::recap_100_meet_and_greet[]
 //
 You learned the general differences in the architecture of static and dynamic
 websites. A static site serves the content straight to the user as it's
@@ -51,7 +51,7 @@ simplicity, those sites are less in components, fast, robust and secure. The
 deployment of static webs is easy to manage, does not require costly high-end
 computers to run.
 //
-//  end::recap_100_meet_and_greet_jekyll[]
+//  end::recap_100_meet_and_greet[]
 
 //  tag::recap_110_getting_prepared[]
 //
@@ -74,7 +74,7 @@ lorem:sentences[3] +
 
 // Whats Next
 // -----------------------------------------------------------------------------
-// tag::whats_next_100_meet_and_greet_jekyll[]
+// tag::whats_next_100_meet_and_greet[]
 //
 A lot of theory and background information was discussed. Important to know
 for a better orientation for the next steps to do: making a static Jekyll web
@@ -89,7 +89,7 @@ mdi:page-next-outline[24px, md-blue ml-3 mr-2]
 Go for link:{j1-kickstart-wiad--getting-prepared}[Getting prepared] then! +
 
 //
-// end::whats_next_100_meet_and_greet_jekyll[]
+// end::whats_next_100_meet_and_greet[]
 
 // tag::whats_next_110_getting_prepared[]
 //
@@ -119,7 +119,7 @@ Find here an overview on *all* chapters this tutorial. +
 //
 // end::chapters[]
 
-// tag::chapters_100_meet_and_greet_jekyll[]
+// tag::chapters_100_meet_and_greet[]
 //
 mdi:format-section[24px, md-blue ml-3 mr-2]
 You are here -- Meet & Greet Jekyll +
@@ -141,7 +141,7 @@ mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--wrapping-up}[Wrapping up] +
 
 //
-// end::chapters_100_meet_and_greet_jekyll[]
+// end::chapters_100_meet_and_greet[]
 
 // tag::chapters_110_getting_prepared[]
 //
@@ -350,7 +350,7 @@ other experts have on their minds. +
 //
 // end::further_reading[]
 
-// tag::further_reading_100_meet_and_greet_jekyll[]
+// tag::further_reading_100_meet_and_greet[]
 //
 mdi:link-variant[24px, md-blue ml-3 mr-2]
 link:{url-jekyll--home}[Jekyll Home -- First address for Jekyll, {browser-window--new}] +
@@ -358,7 +358,7 @@ mdi:link-variant[24px, md-blue ml-3 mr-2]
 link:{url-jekyll-tips--why-use-static-site-generator}[Cloud Cannon -- Why use a static site generator?, {browser-window--new}]
 
 //
-// end::further_reading_100_meet_and_greet_jekyll[]
+// end::further_reading_100_meet_and_greet[]
 
 // tag::further_reading_110_getting_prepared[]
 //
