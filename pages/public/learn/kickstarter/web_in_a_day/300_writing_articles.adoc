@@ -11,6 +11,9 @@ tags:                                   [ Writing, Articles ]
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/writing_articles/
 regenerate:                             false
 
+scrollbar:                              false
+comments:                               true
+
 resources:                              [ lightbox ]
 resource_options:
   - attic:
@@ -75,3 +78,5 @@ include::{includedir}/parts.asciidoc[tag=chapters_300_writing_articles]
 
 include::{includedir}/parts.asciidoc[tag=further_reading]
 include::{includedir}/parts.asciidoc[tag=further_reading_110_getting_prepared]
+
+== Leave a comment

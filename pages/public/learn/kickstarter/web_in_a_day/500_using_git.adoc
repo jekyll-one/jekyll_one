@@ -12,6 +12,9 @@ tags:                                   [ Git, Source, Control ]
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/using_git/
 regenerate:                             false
 
+scrollbar:                              false
+comments:                               true
+
 resources:                              [ lightbox ]
 resource_options:
   - attic:
@@ -20,12 +23,8 @@ resource_options:
       opacity:                          0.5
       slides:
         - url:                          /assets/images/pages/kickstarter/web_in_a_day/500_using_git/git-logo-banner-1920x1280.jpg
-          alt:                          Photo by John Jennings on Unsplash
+          alt:                          git-logo-banner
           alignY:                       top
-          badge:
-            type:                       unsplash
-            author:                     John Jennings
-            href:                       https://unsplash.com/@john_jennings
 ---
 
 // Page Initializer
@@ -76,3 +75,5 @@ include::{includedir}/parts.asciidoc[tag=chapters_500_using_git]
 
 include::{includedir}/parts.asciidoc[tag=further_reading]
 include::{includedir}/parts.asciidoc[tag=further_reading_110_getting_prepared]
+
+== Leave a comment

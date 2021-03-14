@@ -1,6 +1,6 @@
 ---
 title:                                  Web in a Day
-tagline:                                a first awesome web
+tagline:                                first awesome web
 date:                                   2021-03-01 00:00:00
 description: >
                                         Modern static website in a day
@@ -11,6 +11,9 @@ tags:                                   [ Generating, Webs ]
 
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/a_first_awesome_web/
 regenerate:                             false
+
+scrollbar:                              false
+comments:                               true
 
 resources:                              [ lightbox, carousel, fam ]
 resource_options:
@@ -76,3 +79,5 @@ include::{includedir}/parts.asciidoc[tag=chapters_200_first_awesome_web]
 
 include::{includedir}/parts.asciidoc[tag=further_reading]
 include::{includedir}/parts.asciidoc[tag=further_reading_110_getting_prepared]
+
+== Leave a comment

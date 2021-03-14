@@ -11,6 +11,9 @@ categories:                             [ Jekyll, Knowledge, Tutorial ]
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/getting_prepared/
 regenerate:                             true
 
+scrollbar:                              false
+comments:                               true
+
 resources:                              [ lightbox ]
 resource_options:
   - attic:
@@ -74,3 +77,5 @@ include::{includedir}/parts.asciidoc[tag=chapters_110_getting_prepared]
 
 include::{includedir}/parts.asciidoc[tag=further_reading]
 include::{includedir}/parts.asciidoc[tag=further_reading_110_getting_prepared]
+
+== Leave a comment

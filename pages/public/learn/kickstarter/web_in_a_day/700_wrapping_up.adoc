@@ -11,6 +11,9 @@ tags:                                   [ Summary ]
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/wrapping_up/
 regenerate:                             false
 
+scrollbar:                              false
+comments:                               true
+
 resources:                              [ lightbox ]
 resource_options:
   - attic:
@@ -75,3 +78,5 @@ include::{includedir}/parts.asciidoc[tag=chapters_700_wrapping_up]
 
 include::{includedir}/parts.asciidoc[tag=further_reading]
 include::{includedir}/parts.asciidoc[tag=further_reading_110_getting_prepared]
+
+== Leave a comment

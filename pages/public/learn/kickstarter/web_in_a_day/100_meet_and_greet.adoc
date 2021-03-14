@@ -15,6 +15,9 @@ tags:                                   [ Jekyll, J1, Tutorial ]
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
 regenerate:                             true
 
+scrollbar:                              false
+comments:                               true
+
 resources:                              [ lightbox ]
 resource_options:
   - attic:
@@ -78,3 +81,5 @@ include::{includedir}/parts.asciidoc[tag=chapters_100_meet_and_greet]
 
 include::{includedir}/parts.asciidoc[tag=further_reading]
 include::{includedir}/parts.asciidoc[tag=further_reading_100_meet_and_greet]
+
+== Leave a comment
