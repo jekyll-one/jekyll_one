@@ -13,7 +13,7 @@ categories:                             [ Knowledge ]
 tags:                                   [ Jekyll, J1, Tutorial ]
 
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
-regenerate:                             true
+regenerate:                             false
 
 resources:                              [ lightbox ]
 resource_options:

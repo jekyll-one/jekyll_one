@@ -2,7 +2,7 @@ lorem:sentences[3]
 
 lorem:sentences[5]
 
-== First awesome website
+== First awesome web
 
 lorem:sentences[5]
 

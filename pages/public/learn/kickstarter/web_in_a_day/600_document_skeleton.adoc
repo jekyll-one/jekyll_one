@@ -9,7 +9,7 @@ tags:                                   [ WebDesign ]
 categories:                             [ Jekyll, Knowledge, Tutorial ]
 
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/document_skeleton/
-regenerate:                             true
+regenerate:                             false
 
 resources:                              [ lightbox ]
 resource_options:
@@ -74,4 +74,4 @@ include::{includedir}/parts.asciidoc[tag=chapters_600_document_skeleton]
 === Further Reading
 
 include::{includedir}/parts.asciidoc[tag=further_reading]
-include::{includedir}/parts.asciidoc[tag=further_reading_200_preparations]
+include::{includedir}/parts.asciidoc[tag=further_reading_110_getting_prepared]

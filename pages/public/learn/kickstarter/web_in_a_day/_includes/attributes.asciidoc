@@ -9,7 +9,7 @@ tag::urls[]
 
 :j1-kickstart-wiad--meet-and-greet:               /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
 :j1-kickstart-wiad--getting-prepared:             /pages/public/learn/kickstarter/web_in_a_day/getting_prepared/
-:j1-kickstart-wiad--a-first-awesome-web:          /pages/public/learn/kickstarter/web_in_a_day/a_first_awesome_web/
+:j1-kickstart-wiad--first-awesome-web:          /pages/public/learn/kickstarter/web_in_a_day/a_first_awesome_web/
 :j1-kickstart-wiad--writing-articles:             /pages/public/learn/kickstarter/web_in_a_day/writing_articles/
 :j1-kickstart-wiad--writing-blog-posts:           /pages/public/learn/kickstarter/web_in_a_day/writing_blog_posts/
 :j1-kickstart-wiad--design-your-site:             /pages/public/learn/kickstarter/web_in_a_day/design_your_site/

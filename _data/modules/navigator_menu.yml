@@ -69,11 +69,11 @@
       dropdown:
         - title:                        Meet & Greet Jekyll
           href:                         /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
-          icon:                         flag-checkered
+          icon:                         flask
         - title:                        Getting prepared
           href:                         /pages/public/learn/kickstarter/web_in_a_day/getting_prepared/
           icon:                         cart
-        - title:                        A first awesome Web
+        - title:                        First awesome Web
           href:                         /pages/public/learn/kickstarter/web_in_a_day/a_first_awesome_web/
           icon:                         creation
         - title:                        Writing Articles

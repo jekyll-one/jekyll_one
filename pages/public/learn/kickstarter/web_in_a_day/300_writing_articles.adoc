@@ -9,7 +9,7 @@ tags:                                   [ WebDesign ]
 categories:                             [ Jekyll, Knowledge, Tutorial ]
 
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/writing_articles/
-regenerate:                             true
+regenerate:                             false
 
 resources:                              [ lightbox ]
 resource_options:
@@ -74,4 +74,4 @@ include::{includedir}/parts.asciidoc[tag=chapters_300_writing_articles]
 === Further Reading
 
 include::{includedir}/parts.asciidoc[tag=further_reading]
-include::{includedir}/parts.asciidoc[tag=further_reading_200_preparations]
+include::{includedir}/parts.asciidoc[tag=further_reading_110_getting_prepared]

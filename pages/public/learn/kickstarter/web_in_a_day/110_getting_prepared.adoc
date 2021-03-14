@@ -50,7 +50,7 @@ resource_options:
 
 // Include sub-documents
 // -----------------------------------------------------------------------------
-include::{documentdir}/110_preparations.asciidoc[]
+include::{documentdir}/110_getting_prepared.asciidoc[]
 
 
 == Summarize!
