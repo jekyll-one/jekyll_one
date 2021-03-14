@@ -85,6 +85,9 @@ same by WordPress*? Well, having a database, what always requires a complex
 rendering system for dynamic pages, implies a lot of downsides. Here come the
 main advantages of using a static site over a dynamic.
 
+.SEO measures (Google Lighthouse) of a J1 Starter Web at Github Pages (jekyll-one-org.github.io)
+lightbox::kickstart-wiad--seo-results-gh-pages[ 800, {data-kickstart-wiad--seo-results-gh-pages} ]
+
 Performance::
 *The better performance and a crazy fast load time*.
 One of the main advantages of using a static site is the fact that

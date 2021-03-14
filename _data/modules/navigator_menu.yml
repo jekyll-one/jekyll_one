@@ -71,29 +71,29 @@
           href:                         /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
           icon:                         flag-checkered
         - title:                        Getting prepared
-          href:                         "#"
+          href:                         /pages/public/learn/kickstarter/web_in_a_day/getting_prepared/
           icon:                         cart
         - title:                        A first awesome Web
-          href:                         "#"
+          href:                         /pages/public/learn/kickstarter/web_in_a_day/a_first_awesome_web/
           icon:                         creation
         - title:                        Writing Articles
-          href:                         "#"
-          icon:                         file-document-box-outline
-        - title:                        Creating Blog Posts
-          href:                         "#"
-          icon:                         file-document-box-multiple-outline
+          href:                         /pages/public/learn/kickstarter/web_in_a_day/writing_articles/
+          icon:                         file-document-edit
+        - title:                        Writing Blog Posts
+          href:                         /pages/public/learn/kickstarter/web_in_a_day/writing_blog_posts/
+          icon:                         file-document-edit-outline
         - title:                        Design your Site
-          href:                         "#"
+          href:                         /pages/public/learn/kickstarter/web_in_a_day/design_your_site/
           icon:                         wrench
         - title:                        Using Git
-          href:                         "#"
+          href:                         /pages/public/learn/kickstarter/web_in_a_day/using_git/
           icon:                         git
-        - title:                        Dokument Skeleton
-          href:                         "#"                                     # /pages/public/learn/kickstarter/web_in_a_day/document/skeleton/
+        - title:                        Document Skeleton
+          href:                         /pages/public/learn/kickstarter/web_in_a_day/document_skeleton/
           icon:                         book
         - title:                        Wrapping up
-          href:                         "#"
-          icon:                         emoticon-excited
+          href:                         /pages/public/learn/kickstarter/web_in_a_day/wrapping_up/
+          icon:                         broom
 
 # ------------------------------------------------------------------------------
 # Item PUBLISH

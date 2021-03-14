@@ -7,17 +7,20 @@
 // -----------------------------------------------------------------------------
 tag::urls[]
 
-:j1-kickstarter-web-in-a-day-intro:               /pages/public/learn/kickstarter/web_in_a_day/intro/
-:j1-web-in-a-day-meet-and-greet:                  /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
-:j1-web-in-a-day-preparations:                    /pages/public/learn/kickstarter/web_in_a_day/preparations/
-:j1-web-in-a-day-first-awesome-web:               /pages/public/learn/kickstarter/web_in_a_day/first_awesome_web/
+:j1-kickstart-wiad--meet-and-greet:               /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
+:j1-kickstart-wiad--getting-prepared:             /pages/public/learn/kickstarter/web_in_a_day/getting_prepared/
+:j1-kickstart-wiad--a-first-awesome-web:          /pages/public/learn/kickstarter/web_in_a_day/a_first_awesome_web/
+:j1-kickstart-wiad--writing-articles:             /pages/public/learn/kickstarter/web_in_a_day/writing_articles/
+:j1-kickstart-wiad--writing-blog-posts:           /pages/public/learn/kickstarter/web_in_a_day/writing_blog_posts/
+:j1-kickstart-wiad--design-your-site:             /pages/public/learn/kickstarter/web_in_a_day/design_your_site/
+:j1-kickstart-wiad--using-git:                    /pages/public/learn/kickstarter/web_in_a_day/using_git/
+:j1-kickstart-wiad--document-skeleton:            /pages/public/learn/kickstarter/web_in_a_day/document_skeleton/
+:j1-kickstart-wiad--wrapping-up:                  /pages/public/learn/kickstarter/web_in_a_day/wrapping_up/
 
 
 :j1-quick-references-jekyll:                      /pages/protected/manuals/quick_references/jekyll/
 
-
 :j1-download-quickstart-intro:                    /pages/public/learn/downloads/quickstart/intro/
-
 
 :github-home:                                     https://github.com/
 :github-signin:                                   https://github.com/login
@@ -67,8 +70,10 @@ end::tags[]
 // -----------------------------------------------------------------------------
 tag::data[]
 
-:data-kickstart-wiad--static-web-access:          "pages/kickstarter/web_in_a_day/100_meet_and_greet_jekyll/100-static-web-access.png, Accessing a static web"
-:data-kickstart-wiad--dynamic-web-access:         "pages/kickstarter/web_in_a_day/100_meet_and_greet_jekyll/111-dynamic-web-access.png, Accessing a dynamic web"
+:data-kickstart-wiad--static-web-access:          "pages/kickstarter/web_in_a_day/100_meet_and_greet_jekyll/100-static-web-access.png, Accessing scheme for a static web"
+:data-kickstart-wiad--dynamic-web-access:         "pages/kickstarter/web_in_a_day/100_meet_and_greet_jekyll/110-dynamic-web-access.png, Accessing scheme for a dynamic web"
+
+:data-kickstart-wiad--seo-results-gh-pages:       "pages/kickstarter/web_in_a_day/100_meet_and_greet_jekyll/200-lh-preview-gh-pages.png, SEO measures (Google Lighthouse) of a J1 Starter Web at Github Pages (jekyll-one-org.github.io)"
 
 :data-gh-oauth-autorization-page:                 "pages/kickstarter/app_in_a_day/gh-oauth-autorization-page.png, GH OAuth autorization page used by Jekyll One"
 :data-gh-oauth-login-page:                        "pages/kickstarter/app_in_a_day/gh-oauth-login-page.png, GH login page for autorization used by Jekyll One"

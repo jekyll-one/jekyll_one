@@ -1,6 +1,6 @@
 ---
 title:                                  Web in a Day
-tagline:                                a first awesome web
+tagline:                                wrapping up
 date:                                   2018-05-01 00:00:00
 description: >
                                         Modern static website in a day
@@ -8,23 +8,23 @@ description: >
 tags:                                   [ WebDesign ]
 categories:                             [ Jekyll, Knowledge, Tutorial ]
 
-permalink:                              /pages/public/learn/kickstarter/web_in_a_day/first_awesome_web/
-regenerate:                             false
+permalink:                              /pages/public/learn/kickstarter/web_in_a_day/wrapping_up/
+regenerate:                             true
 
-resources:                              [ lightbox, carousel, fam ]
+resources:                              [ lightbox ]
 resource_options:
   - attic:
       padding_top:                      400
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/pages/kickstarter/web_in_a_day/get-started-1920x1280-bw.jpg
-          alt:                          Photo by JESHOOTS.COM on Unsplash
+        - url:                          /assets/images/pages/kickstarter/web_in_a_day/700_wrapping_up/jan-kopriva-1920x1280.jpg
+          alt:                          Photo by Jan Kopřiva on Unsplash
           alignY:                       top
           badge:
             type:                       unsplash
-            author:                     JESHOOTS.COM
-            href:                       https://unsplash.com/@jeshoots/portfolio
+            author:                     Jan Kopřiva
+            href:                       https://unsplash.com/@jxk
 ---
 
 // Page Initializer
@@ -50,7 +50,8 @@ resource_options:
 
 // Include sub-documents
 // -----------------------------------------------------------------------------
-include::{documentdir}/300_first_awesome_web.asciidoc[]
+include::{documentdir}/700_wrapping_up.asciidoc[]
+
 
 == Summarize!
 
@@ -58,18 +59,19 @@ include::{includedir}/parts.asciidoc[tag=summarize]
 
 === Recap
 
-include::{includedir}/parts.asciidoc[tag=recap_300_first_awesome_web]
+include::{includedir}/parts.asciidoc[tag=recap_200_a_first_awesome_web]
 
 === Whats Next
 
-include::{includedir}/parts.asciidoc[tag=whats_next_300_first_awesome_web]
+include::{includedir}/parts.asciidoc[tag=whats_next_200_a_first_awesome_web]
 
-/////
+
 === All Chapters
 
-include::{includedir}/parts.asciidoc[tag=chapters_200_oauth_overview]
+include::{includedir}/parts.asciidoc[tag=chapters]
+include::{includedir}/parts.asciidoc[tag=chapters_700_wrapping_up]
 
 === Further Reading
 
+include::{includedir}/parts.asciidoc[tag=further_reading]
 include::{includedir}/parts.asciidoc[tag=further_reading_200_preparations]
-/////

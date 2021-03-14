@@ -1,18 +1,14 @@
 ---
 title:                                  Web in a Day
-tagline:                                meet & greet jekyll
-date:                                   2020-08-01 09:00:00
+tagline:                                writing blog posts
+date:                                   2018-05-01 00:00:00
 description: >
-                                        Web in a Day is the first in a series of tutorials to
-                                        learn how to create modern websites using Jekyll. This
-                                        Kickstarter focus on the basics of Jekyll and the
-                                        J1 Template which all people needs to know for a successful
-                                        way to a modern static website using Jekyll and J1 Template
+                                        Modern static website in a day
 
-categories:                             [ Knowledge ]
-tags:                                   [ Jekyll, J1, Tutorial ]
+tags:                                   [ WebDesign ]
+categories:                             [ Jekyll, Knowledge, Tutorial ]
 
-permalink:                              /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
+permalink:                              /pages/public/learn/kickstarter/web_in_a_day/writing_blog_posts/
 regenerate:                             true
 
 resources:                              [ lightbox ]
@@ -22,13 +18,13 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/pages/kickstarter/web_in_a_day/100_meet_and_greet_jekyll/roman-kraft-1920x1280.jpg
-          alt:                          Photo by Roman Kraft on Unsplash
+        - url:                          /assets/images/pages/kickstarter/web_in_a_day/310_writing_blog_posts/art-lasovsky-l-1920x1280.jpg
+          alt:                          Photo by Art Lasovsky on Unsplash
           alignY:                       top
           badge:
             type:                       unsplash
-            author:                     Roman Kraft
-            href:                       https://unsplash.com/@romankraft
+            author:                     Art Lasovsky
+            href:                       https://unsplash.com/@artlasovsky
 ---
 
 // Page Initializer
@@ -54,7 +50,7 @@ resource_options:
 
 // Include sub-documents
 // -----------------------------------------------------------------------------
-include::{documentdir}/100_meet_and_greet_jekyll.asciidoc[]
+include::{documentdir}/310_writing_blog_posts.asciidoc[]
 
 
 == Summarize!
@@ -63,18 +59,19 @@ include::{includedir}/parts.asciidoc[tag=summarize]
 
 === Recap
 
-include::{includedir}/parts.asciidoc[tag=recap_100_meet_and_greet_jekyll]
+include::{includedir}/parts.asciidoc[tag=recap_200_a_first_awesome_web]
 
 === Whats Next
 
-include::{includedir}/parts.asciidoc[tag=whats_next_100_meet_and_greet_jekyll]
+include::{includedir}/parts.asciidoc[tag=whats_next_200_a_first_awesome_web]
+
 
 === All Chapters
 
 include::{includedir}/parts.asciidoc[tag=chapters]
-include::{includedir}/parts.asciidoc[tag=chapters_100_meet_and_greet_jekyll]
+include::{includedir}/parts.asciidoc[tag=chapters_310_writing_blog_posts]
 
 === Further Reading
 
 include::{includedir}/parts.asciidoc[tag=further_reading]
-include::{includedir}/parts.asciidoc[tag=further_reading_100_meet_and_greet_jekyll]
+include::{includedir}/parts.asciidoc[tag=further_reading_200_preparations]

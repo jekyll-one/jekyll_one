@@ -182,6 +182,9 @@ tag::urls[]
 :url-jekyll-sass-converter--gh-repo:              https://github.com/jekyll/jekyll-sass-converter
 :url-jekyll-sitemap--gh-repo:                     https://github.com/jekyll/jekyll-sitemap
 
+:url-jekyll-tips--home:                           https://learn.cloudcannon.com/
+:url-jekyll-tips--why-use-static-site-generator:  https://learn.cloudcannon.com/jekyll/why-use-a-static-site-generator/
+
 :url-jquery--home:                                https://jquery.com/
 
 :url-js-yaml--gh-repo:                            https://github.com/nodeca/js-yaml
@@ -334,6 +337,9 @@ end::urls[]
 // -----------------------------------------------------------------------------
 tag::tags[]
 :browser-window--new:                             window="_blank"
+:browser-window--rel:                             rel="noopener noreferrer"
+:browser-window--rel-noopener:                    rel="noopener"
+:browser-window--rel-noreferrer:                  rel="noreferrer"
 :clipboard--noclip:                               noclip
 :figure-caption--text:                            Figure
 

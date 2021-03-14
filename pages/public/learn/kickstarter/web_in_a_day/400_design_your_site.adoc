@@ -1,30 +1,30 @@
 ---
 title:                                  Web in a Day
-tagline:                                preparations
+tagline:                                design your site
 date:                                   2018-05-01 00:00:00
 description: >
                                         Modern static website in a day
 
-tags:                                   [ Preparations ]
+tags:                                   [ WebDesign ]
 categories:                             [ Jekyll, Knowledge, Tutorial ]
 
-permalink:                              /pages/public/learn/kickstarter/web_in_a_day/preparations/
-regenerate:                             false
+permalink:                              /pages/public/learn/kickstarter/web_in_a_day/design_your_site/
+regenerate:                             true
 
-resources:                              [ lightbox, carousel, fam ]
+resources:                              [ lightbox ]
 resource_options:
   - attic:
       padding_top:                      400
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/pages/kickstarter/web_in_a_day/get-started-1920x1280-bw.jpg
-          alt:                          Photo by JESHOOTS.COM on Unsplash
+        - url:                          /assets/images/pages/kickstarter/web_in_a_day/400_design_your_site/john-jennings-1920x1280.jpg
+          alt:                          Photo by John Jennings on Unsplash
           alignY:                       top
           badge:
             type:                       unsplash
-            author:                     JESHOOTS.COM
-            href:                       https://unsplash.com/@jeshoots/portfolio
+            author:                     John Jennings
+            href:                       https://unsplash.com/@john_jennings
 ---
 
 // Page Initializer
@@ -50,7 +50,8 @@ resource_options:
 
 // Include sub-documents
 // -----------------------------------------------------------------------------
-include::{documentdir}/200_preparations.asciidoc[]
+include::{documentdir}/400_design_your_site.asciidoc[]
+
 
 == Summarize!
 
@@ -58,20 +59,19 @@ include::{includedir}/parts.asciidoc[tag=summarize]
 
 === Recap
 
-include::{includedir}/parts.asciidoc[tag=recap_200_preparations]
+include::{includedir}/parts.asciidoc[tag=recap_200_a_first_awesome_web]
 
 === Whats Next
 
-include::{includedir}/parts.asciidoc[tag=whats_next_200_preparations]
+include::{includedir}/parts.asciidoc[tag=whats_next_200_a_first_awesome_web]
 
 
-
-/////
 === All Chapters
 
-include::{includedir}/parts.asciidoc[tag=chapters_200_oauth_overview]
+include::{includedir}/parts.asciidoc[tag=chapters]
+include::{includedir}/parts.asciidoc[tag=chapters_400_design_your_site]
 
 === Further Reading
 
+include::{includedir}/parts.asciidoc[tag=further_reading]
 include::{includedir}/parts.asciidoc[tag=further_reading_200_preparations]
-/////
