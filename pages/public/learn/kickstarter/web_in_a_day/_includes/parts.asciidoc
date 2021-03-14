@@ -126,7 +126,7 @@ You are here -- Meet & Greet Jekyll +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--getting-prepared}[Getting prepared] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
-link:{j1-kickstart-wiad--first-awesome-web}[A first awesome Web] +
+link:{j1-kickstart-wiad--first-awesome-web}[First awesome Web] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--writing-articles}[Writing Articles] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
@@ -150,7 +150,7 @@ link:{j1-kickstart-wiad--meet-and-greet}[Meet & Greet Jekyll] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 You are here -- Getting prepared +
 mdi:format-section[24px, md-blue ml-3 mr-2]
-link:{j1-kickstart-wiad--first-awesome-web}[A first awesome Web] +
+link:{j1-kickstart-wiad--first-awesome-web}[First awesome Web] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--writing-articles}[Writing Articles] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
@@ -174,7 +174,7 @@ link:{j1-kickstart-wiad--meet-and-greet}[Meet & Greet Jekyll] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--getting-prepared}[Getting prepared] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
-You are here -- A first awesome Web +
+You are here -- First awesome Web +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--writing-articles}[Writing Articles] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
@@ -198,7 +198,7 @@ link:{j1-kickstart-wiad--meet-and-greet}[Meet & Greet Jekyll] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--getting-prepared}[Getting prepared] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
-link:{j1-kickstart-wiad--first-awesome-web}[A first awesome Web] +
+link:{j1-kickstart-wiad--first-awesome-web}[First awesome Web] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 You are here -- Writing Articles +
 mdi:format-section[24px, md-blue ml-3 mr-2]
@@ -222,7 +222,7 @@ link:{j1-kickstart-wiad--meet-and-greet}[Meet & Greet Jekyll] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--getting-prepared}[Getting prepared] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
-link:{j1-kickstart-wiad--first-awesome-web}[A first awesome Web] +
+link:{j1-kickstart-wiad--first-awesome-web}[First awesome Web] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--writing-articles}[Writing Articles] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
@@ -246,7 +246,7 @@ link:{j1-kickstart-wiad--meet-and-greet}[Meet & Greet Jekyll] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--getting-prepared}[Getting prepared] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
-link:{j1-kickstart-wiad--first-awesome-web}[A first awesome Web] +
+link:{j1-kickstart-wiad--first-awesome-web}[First awesome Web] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--writing-articles}[Writing Articles] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
@@ -270,7 +270,7 @@ link:{j1-kickstart-wiad--meet-and-greet}[Meet & Greet Jekyll] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--getting-prepared}[Getting prepared] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
-link:{j1-kickstart-wiad--first-awesome-web}[A first awesome Web] +
+link:{j1-kickstart-wiad--first-awesome-web}[First awesome Web] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--writing-articles}[Writing Articles] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
@@ -294,7 +294,7 @@ link:{j1-kickstart-wiad--meet-and-greet}[Meet & Greet Jekyll] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--getting-prepared}[Getting prepared] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
-link:{j1-kickstart-wiad--first-awesome-web}[A first awesome Web] +
+link:{j1-kickstart-wiad--first-awesome-web}[First awesome Web] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--writing-articles}[Writing Articles] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
@@ -318,7 +318,7 @@ link:{j1-kickstart-wiad--meet-and-greet}[Meet & Greet Jekyll] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--getting-prepared}[Getting prepared] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
-link:{j1-kickstart-wiad--first-awesome-web}[A first awesome Web] +
+link:{j1-kickstart-wiad--first-awesome-web}[First awesome Web] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--writing-articles}[Writing Articles] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
