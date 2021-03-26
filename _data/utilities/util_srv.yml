@@ -28,7 +28,7 @@ about_config:
 #
 settings:
 
-  enabled:                              true
+  enabled:                              false
 
   ssl:                                  false
   origin:                               localhost

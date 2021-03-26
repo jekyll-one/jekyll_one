@@ -48,7 +48,7 @@ settings:
 
 #       if enabled, make sure that the >>logger_client<< (util_srv) is
 #       enabled ar well
-        enabled:                      true
+        enabled:                      false
         payload_url:                  http://localhost:40020/log2disk?request=write
 
     # --------------------------------------------------------------------------
