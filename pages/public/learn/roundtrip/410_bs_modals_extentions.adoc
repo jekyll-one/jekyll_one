@@ -12,7 +12,6 @@ tags:                                   [ Roundtrip, Introduction ]
 categories:                             [ Bootstrap, Modal, Extension ]
 
 flowtext:                               false
-comments:                               true
 
 permalink:                              /pages/public/learn/roundtrip/modals/
 regenerate:                             false
@@ -49,14 +48,6 @@ resource_options:
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// Include sub-documents
-// -----------------------------------------------------------------------------
-
-// Include the modals HTML portion
-// -----------------------------------------------------------------------------
-include::{documentdir}/419_advanced_modals_demo.asciidoc[]
-
 
 Advanced Bootstrap Modals are based on the free package of
 link:{mdb-home}[Material Design for Bootstrap, {browser-window--new}] on version
@@ -95,4 +86,7 @@ The first version for improved responsive tables that scale better is available
 for J1 Template on top of the classic BS CSS styles. Check out what from here
 what the link:{roundtrip-responsive-tables}[BS tables extensions] can do!
 
-== Leave a comment
+
+// Include the modals HTML portion
+// -----------------------------------------------------------------------------
+include::{documentdir}/419_advanced_modals_demo.asciidoc[]

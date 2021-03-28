@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------
-#  ~/_data/modules/lunr_search.yml
+#  ~/_data/modules/quicksearch.yml
 #  User configuration settings for J1 QuickSearch module
 #
 #  Product/Info:
@@ -16,9 +16,9 @@
 #
 about_config:
 
-  title:                                J1 LunrSearch
+  title:                                J1 QuickSearch
   scope:                                User settings
-  location:                             _data/modules/lunr_search.yml
+  location:                             _data/modules/quicksearch.yml
 
 # ------------------------------------------------------------------------------
 # User configuration settings

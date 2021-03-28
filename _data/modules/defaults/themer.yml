@@ -143,6 +143,7 @@ about_config:
 defaults:
 
   enabled:                              false
+  retries:                              30                                      # retry to load theme list from API
   saveToCookie:                         true
   debug:                                false
   preview_page:                         /pages/public/previewer/theme/

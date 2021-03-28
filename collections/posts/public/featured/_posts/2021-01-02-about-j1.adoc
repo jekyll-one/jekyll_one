@@ -8,7 +8,7 @@ tags:                                   [ About, J1 ]
 
 series:
 adsense:                                false
-image:                                  /assets/images/modules/attics/alex-holyoake-1920x1280.jpg
+image:                                  /assets/images/modules/attics/runner-1920x1200.jpg
 comments:                               true
 advertising:                            true
 
@@ -21,7 +21,7 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/alex-holyoake-1920x1280.jpg
+        - url:                          /assets/images/modules/attics/runner-1920x1200.jpg
           alt:                          Photo by Alex Holyoake on Unsplash
           badge:
             type:                       unsplash
@@ -44,6 +44,10 @@ resource_options:
 
 // Place an excerpt at the most top position
 // -----------------------------------------------------------------------------
+The template system was originally developed to create a simple, but fully
+configurable website creation toolset for document servers. Today, J1 Template
+is a robot-driven system that can be used for all types of websites, for all
+common formats of digital content.
 
 [role="clearfix mb-3"]
 excerpt__end

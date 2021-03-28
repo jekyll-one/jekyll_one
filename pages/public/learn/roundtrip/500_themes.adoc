@@ -12,7 +12,6 @@ tags:                                   [ Bootstrap, Themes ]
 categories:                             [ Introduction, Features ]
 
 scrollbar:                              false
-comments:                               true
 
 permalink:                              /pages/public/learn/roundtrip/themes/
 regenerate:                             false
@@ -249,5 +248,3 @@ your own theme, anayway.
 An important feature for larger webs is searching. The visitors should be able
 to search your site to find pages and posts they are interested in. Check what
 is searching a J1 websites all about at link:{roundtrip-quicksearch}[Quicksearch].
-
-== Leave a comment

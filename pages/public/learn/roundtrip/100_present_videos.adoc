@@ -13,13 +13,11 @@ description: >
 tags:                                   [ Roundtrip, Introduction ]
 categories:                             [ Video, Modules ]
 
-comments:                               true
-
 permalink:                              /pages/public/learn/roundtrip/present_videos/
 regenerate:                             false
 
 resources:                              [
-                                          light_gallery, justified_gallery, video_js,
+                                          lightGallery, justifiedGallery, video_js,
                                           vimeo_player, vimeo_froogaloop
                                         ]
 resource_options:
@@ -142,5 +140,3 @@ Internet. To see how text could be presented great for modern responsive
 websites, check the section Typography next.
 
 What? Find out how it works. go for: link:{roundtrip-typography}[Typography].
-
-== Leave a comment

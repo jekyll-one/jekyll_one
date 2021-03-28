@@ -143,10 +143,10 @@ article_navigator:
 article_previewer:
   enabled:                              true
   description: >
-                                        Browse Blog Posts in the previewer by the <b>Next</b> button from the
-                                        <b>Previewer Bar</b>. All articles are reverse ordered by date. The
-                                        current articles are displayed first. To go preview pages backwards, use
-                                        the <b>Back</b> button from the <b>Previewer Bar</b> for previous pages.
+                                        All articles are reverse ordered by date. The current articles are displayed
+                                        first. To preview older posts, use the button <b>Older Posts</b> from the
+                                        Preview Bar. For newer posts use the button <b>Newer Posts</b> for
+                                        more recent articles. 
 
 archive_view:
   enabled:                              true

@@ -15,30 +15,9 @@
 # About this configuration (used for J1 CC only)
 #
 about_config:
-  title:                                J1 LunrSearch
+  title:                                J1 QuickSearch
   scope:                                Default settings
-  location:                             _data/modules/defaults/lunr_search.yml
-
-# ------------------------------------------------------------------------------
-# J1LunrSearch settings
-#
-#   enabled
-#   ----------------------------------------------------------------------------
-#   Enables|Disables the use of J1 Search Manager
-#
-#   values:                         boolean (true|false)
-#   default:                        false
-#
-# ------------------------------------------------------------------------------
-
-# ------------------------------------------------------------------------------
-# About this configuration (used for J1 CC only)
-#
-about_config:
-
-  title:                                J1LunrSearch
-  scope:                                Default settings
-  location:                             _data/modules/defaults/jekyll_search.yml
+  location:                             _data/modules/defaults/quicksearch.yml
 
 # ------------------------------------------------------------------------------
 # Default settings
@@ -57,7 +36,7 @@ defaults:
   stopwords:                            /assets/themes/j1/modules/lunrSearch/stopwords/en.txt
   stopwords_locale:                     en
   strip_index_html:                     false
-  strip_categories:                     [ pages, posts, public, featured, wikipedia ]
+  strip_categories:                     [ pages, posts, series, public, featured, wikipedia ]
   min_length:                           3
   date_format:                          mmm dd, yyyy
 

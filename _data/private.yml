@@ -64,8 +64,8 @@ util_srv:
       strategy:                       members
       members:                        all
 
-    site_url:                         http://localhost:44444
-    site_redirect_url:                http://localhost:44444/auth/github/callback
+    site_url:                         http://localhost:40010
+    site_redirect_url:                http://localhost:40010/auth/github/callback
     client_scope:                     repo, user
     client_id:                        <your-client-id>
     client_secret:                    <your-client-secret>
@@ -91,8 +91,8 @@ middleware:
         name:                           <your-disqus-config-name>
         user:                           <your-disqus-user>
 
-      client_url:                       http://localhost:41010
-      client_redirect_url:              http://localhost:41010/auth/disqus/callback
+      client_url:                       http://localhost:40010
+      client_redirect_url:              http://localhost:40010/auth/disqus/callback
       client_id:                        <your-disqus-client-id>
       client_secret:                    <your-disqus-client-secret>
 
@@ -110,8 +110,8 @@ middleware:
         strategy:                       members
         members:                        all
 
-      client_url:                       http://localhost:41010
-      client_redirect_url:              http://localhost:41010/auth/github/callback
+      client_url:                       http://localhost:40010
+      client_redirect_url:              http://localhost:40010/auth/github/callback
       client_id:                        <your-gh-client-id>
       client_secret:                    <your-gh-client-secret>
 

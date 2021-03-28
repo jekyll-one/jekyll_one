@@ -49,8 +49,7 @@ resource_options:
 // -----------------------------------------------------------------------------
 Is it needed for visitors to know what cookies are about? No doubts, your're
 requested to inform - in Europe for legal reasons. All users visiting web sites
-are bothered all the time to accept on cookies. Cookies are used by sites
-of today. For good reasons?
+are bothered all the time to accept on cookies. For good reasons?
 
 [role="clearfix mb-3"]
 excerpt__end
