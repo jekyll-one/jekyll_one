@@ -15,6 +15,7 @@ fam:                                    true
 fam_menu_id:                            page_ctrl
 scrollbar:                              false
 indexed:                                false
+comments:                               true
 exclude_from_search:                    true
 
 permalink:                              /pages/public/legal/en/comment_policy/
@@ -57,23 +58,23 @@ resource_options:
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-//WARNING: This document *does not* constitute any *legal advice*. It is
-// highly recommended to verify legal aspects and implications.
-
 // Include sub-documents
 // -----------------------------------------------------------------------------
 
 First things first: We love comments and appreciate the time that our
 visitors spend to share ideas and give feedback. Thank you to everyone
-who comment at Jekyll One.
+who place a comment at Jekyll One.
 
 ifeval::[{disqus} == true]
 To access the public commenting feature you will need to register for
 an account as an individual at _Disqus_. One of the main purposes of
 encouraging comments on Jekyll One is to promote a sense of community.
 
-The provider _Disqus_ help us to ...
-
+NOTE: _Disqus_ (/dɪsˈkʌs/) is a blog comment hosting service for web
+sites and online communities that use a networked platform. The company's
+platform includes various features, such as social integration, social
+networking, user profiles, spam and moderation tools, analytics,
+email notifications, and mobile commenting.
 endif::[]
 
 == Discuss with Respect
@@ -117,3 +118,5 @@ respectful towards our contributors and those leaving comments.
 Anonymous::
 Anonymous comments will be deleted. We only accept comments from people who
 identify themselves.
+
+== Leave a Comment
