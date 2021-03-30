@@ -113,7 +113,7 @@ settings:
               type:                     comments
               statement:                Comments
               href:                     /pages/public/legal/en/comment_policy/
-              
+
         # ----------------------------------------------------------------------
         # BOXES
         #
@@ -189,15 +189,18 @@ settings:
             type:                       contact
             enabled:                    false
             title:                      Contacts
+
             address:
               enabled:                  false
               address_1:                JekyllOne Ltd.
               address_2:                795 Folsom Ave, Suite 600
               address_3:                San Francisco, CA 94107
+
             phone:
               enabled:                  false
               phone_1:                  (+123) 456 7890
               phone_2:                  (+123) 456 7891
+
             internet:
               enabled:                  false
               mail:                     contact@jekyll.one

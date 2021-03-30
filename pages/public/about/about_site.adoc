@@ -41,6 +41,7 @@ resource_options:
 // -----------------------------------------------------------------------------
 // :page--attr:                         <attr-value>
 :badges-enabled:                        true
+:legal-warning:                         true
 
 //  Load Liquid procedures
 // -----------------------------------------------------------------------------
@@ -137,9 +138,11 @@ and granted. Note, that some products using standard licenses may have
 additional restrictions for use. Therefor, if there a doubts in use,
 check the product licenses individualy.
 
+ifeval::[{legal-warning} == true]
 WARNING: This document *does not* constitute any *legal advice*. If software
 used licenced by others, especially for commercial use, it is highly
 recommended to verify legal aspects and implications.
+endif::[]
 
 [cols="4a,8a, options="header", width="100%", role="rtable mt-3"]
 |===============================================================================

@@ -19,6 +19,7 @@ resource_options:                       []
 .Postadresse
 ----
   Max Mustermann
+  
   Musterstraße 111
   Gebäude 44
   90210 Musterstadt

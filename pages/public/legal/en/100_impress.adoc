@@ -1,6 +1,6 @@
 ---
 title:                                  Impress
-tagline:                                Entries referred to § 5 TMG
+tagline:                                legal data
 date:                                   2020-10-23 00:00:00
 description: >
                                         Impressum
@@ -10,9 +10,10 @@ categories:                             [ Legal, Info ]
 
 toc:                                    false
 fam:                                    false
-fam_menu_id:                            page_ctrl
+fam_menu_id:                            page_ctrl_simple
 scrollbar:                              false
 indexed:                                false
+comments:                               false
 exclude_from_search:                    true
 
 permalink:                              /pages/public/legal/en/impress/
@@ -25,31 +26,61 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/aditya-joshi-1920x1280.jpg
-          alt:                          Photo by Aditya Joshi
-          alignY:                       0.5
-          badge:
-            type:                       unsplash
-            author:                     Aditya Joshi
-            href:                       https://unsplash.com/@adijoshi11
+        - url:                          /assets/images/modules/attics/runner-1920x1200.jpg
 ---
 
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set (local) page attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+:eu-region:                             true
+:legal-warning:                         false
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="global" %}
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ifeval::[{legal-warning} == true]
+WARNING: This document *does not* constitute any *legal advice*. It is
+highly recommended to verify legal aspects and implications.
+endif::[]
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
+
+ifeval::[{eu-region} == true]
 .Postal address
 ----
-  Juergen Adams
-  Erasmustrasse 28
-  40223 Duesseldorf
+  Jürgen Adams
+
+  Erasmusstrasse 28
+  40223 Düsseldorf
 ----
+endif::[]
 
 .Contact
 ----
-  E-Mail:	webmaster@jekyll.one
+  webmaster@jekyll.one
 ----
 
+ifeval::[{eu-region} == true]
 .Responsible for the content according to § 55 Abs. 2 RStV:
 ----
-  Juergen Adams
+  Jürgen Adams
 
-  Erasmustrasse 28
-  40223 Duesseldorf
+  Erasmusstrasse 28
+  40223 Düsseldorf
 ----
+endif::[]

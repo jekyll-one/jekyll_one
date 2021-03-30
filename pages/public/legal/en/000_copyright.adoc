@@ -10,9 +10,10 @@ categories:                             [ Legal, Info ]
 
 toc:                                    false
 fam:                                    false
-fam_menu_id:                            page_ctrl
+fam_menu_id:                            page_ctrl_simple
 scrollbar:                              false
 indexed:                                false
+comments:                               false
 exclude_from_search:                    true
 
 permalink:                              /pages/public/legal/en/copyright/
@@ -25,15 +26,38 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/giammarco-boscaro-1920x1280.jpg
-          alt:                          Photo by Giammarco Boscaro
-          alignY:                       0.5
-          badge:
-            type:                       unsplash
-            author:                     Giammarco Boscaro
-            href:                       https://unsplash.com/@giamboscaro
+        - url:                          /assets/images/modules/attics/runner-1920x1200.jpg
 ---
-:disclaimer:
+
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set (local) page attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+:disclaimer:                            true
+:legal-warning:                         false
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="global" %}
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ifeval::[{legal-warning} == true]
+WARNING: This document *does not* constitute any *legal advice*. It is
+highly recommended to verify legal aspects and implications.
+endif::[]
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
 
 
 == Copyright
@@ -55,7 +79,7 @@ As far as the content on this page was not created by the operator, the
 copyrights of third parties are respected. Nevertheless, you were on one
 copyright infringement, we friendly ask for a corresponding note.
 
-ifdef::disclaimer[]
+ifeval::[{disclaimer} == true]
 == Disclaimer
 
 The contents of the website were created with the greatest possible care

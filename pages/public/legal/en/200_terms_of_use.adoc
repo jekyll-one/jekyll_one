@@ -10,17 +10,56 @@ categories:                             [ Legal, Info ]
 
 toc:                                    false
 fam:                                    false
-fam_menu_id:                            page_ctrl
+fam_menu_id:                            page_ctrl_simple
 scrollbar:                              false
 indexed:                                false
+comments:                               false
 exclude_from_search:                    true
 
 permalink:                              /pages/public/legal/en/terms_of_use/
 regenerate:                             false
 
 resources:                              []
-resource_options:                       []
+resource_options:
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+      opacity:                          0.5
+      slides:
+        - url:                          /assets/images/modules/attics/runner-1920x1200.jpg
 ---
+
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set (local) page attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+:eu-region:                             true
+:legal-warning:                         false
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="global" %}
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ifeval::[{legal-warning} == true]
+WARNING: This document *does not* constitute any *legal advice*. It is
+highly recommended to verify legal aspects and implications.
+endif::[]
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
 
 == Terms of Use
 
