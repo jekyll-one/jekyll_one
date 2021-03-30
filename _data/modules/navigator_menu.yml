@@ -209,7 +209,7 @@
           href:                         https://jekyllrb.com/
           target:                       _blank
           icon:                         flask
-        - title:                        Jekyll Tips
+        - title:                        Jekyll Tips at CloudCannon
           href:                         http://jekyll.tips/
           target:                       _blank
           icon:                         flask
@@ -294,9 +294,11 @@
     - local_themes:                     enabled
       title:                            Jekyll One
       icon:                             alpha-j-box
+
     - bootswatch_themes:                enabled
       title:                            Bootswatch
       icon:                             bootstrap
+
     - preview:                          enabled
       title:                            Previewer
       href:                             /pages/public/previewer/theme/
@@ -310,16 +312,22 @@
     - title:                            This site
       icon:                             home-variant-outline
       href:                             /pages/public/about/site
-    - title:                            Privacy
-      icon:                             heart
-      href:                             /pages/public/legal/en/privacy/
+
+    - title:                            Copyright
+      icon:                             copyright
+      href:                             /pages/public/legal/en/copyright/
+
     - title:                            Impress
       icon:                             gavel
       href:                             /pages/public/legal/en/impress/
+
+    - title:                            Privacy
+      icon:                             heart
+      href:                             /pages/public/legal/en/privacy/
+
     - title:                            Comments
       icon:                             comment
       href:                             /pages/public/legal/en/comment_policy/
 
-      
 # ------------------------------------------------------------------------------
 # END config

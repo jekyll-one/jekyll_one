@@ -15,6 +15,8 @@ categories:                             [ Search ]
 
 toc:                                    true
 scrollbar:                              false
+comments:                               true
+fam_menu_id:                            page_ctrl_simple
 
 permalink:                              /pages/public/learn/roundtrip/quicksearch/
 regenerate:                             false
@@ -431,3 +433,5 @@ Jekyll and the template system J1. It's really a pleasant journey to learn what
 modern static webs can offer today.
 
 Start your journey from here: link:{url-j1-kickstarter--web-in-a-day}[Web in a day, {browser-window--new}].
+
+== Leave a comment

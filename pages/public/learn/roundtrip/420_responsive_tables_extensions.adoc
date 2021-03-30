@@ -11,6 +11,8 @@ tags:                                   [ Roundtrip, Introduction ]
 categories:                             [ Bootstrap, Table, Extension ]
 
 flowtext:                               false
+comments:                               true
+fam_menu_id:                            page_ctrl_simple
 
 permalink:                              /pages/public/learn/roundtrip/responsive_tables/
 regenerate:                             false
@@ -416,3 +418,5 @@ for your Web Site.
 
 Check out what themes can do. Have a look at link:{roundtrip-themes}[BS themes]
 feature!
+
+== Leave a comment

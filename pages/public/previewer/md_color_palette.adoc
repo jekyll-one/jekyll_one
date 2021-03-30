@@ -14,7 +14,8 @@ categories:                             [ Previewer ]
 tags:                                   [ MD, Colors ]
 
 scrollbar:                              false
-flowtext:                               false
+comments:                               true
+fam_menu_id:                            page_ctrl_simple
 
 permalink:                              /pages/public/previewer/color_palette/
 regenerate:                             false
@@ -509,3 +510,5 @@ better reading or orientation.
   </div>
 </div>
 ++++
+
+== Leave a comment

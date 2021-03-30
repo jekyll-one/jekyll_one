@@ -16,6 +16,9 @@ description: >
 tags:                                   [ Roundtrip, Introduction ]
 categories:                             [ Images, Module ]
 
+comments:                               true
+fam_menu_id:                            page_ctrl_simple
+
 permalink:                              /pages/public/learn/roundtrip/present_images/
 regenerate:                             false
 
@@ -245,3 +248,5 @@ and displaying digital image content. But much, much more can the J1 do for
 your web.
 
 Incredible? See the next example page link:{roundtrip-present-videos}[Present videos].
+
+== Leave a comment

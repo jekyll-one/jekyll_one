@@ -5,7 +5,10 @@ description:                            Algolia Index for all documents
 
 tags:                                   [ Algolia ]
 categories:                             [ Search ]
+
 toc:                                    false
+comments:                               true
+fam_menu_id:                            page_ctrl_simple
 
 permalink:                              /pages/protected/site_search/
 regenerate:                             false
@@ -178,3 +181,5 @@ em.ais-Highlight {
 
 </style>
 ++++
+
+== Leave a comment

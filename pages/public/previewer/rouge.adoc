@@ -12,6 +12,8 @@ categories:                             [ App, Previewer ]
 
 scrollbar:                              false
 toc:                                    true
+comments:                               true
+fam_menu_id:                            page_ctrl_simple
 
 permalink:                              /pages/public/previewer/rouge/
 regenerate:                             true
@@ -131,3 +133,5 @@ Here the list of the (current of Feb, 2021) supported languages and lexers
 (language highlighters).
 
 include::{tabledir}/rouge/300_supported_languages.asciidoc[]
+
+== Leave a comment

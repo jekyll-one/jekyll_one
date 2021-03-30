@@ -9,8 +9,8 @@ tags:                                   [ Impressum ]
 categories:                             [ Legal, Info ]
 
 toc:                                    false
-fam:                                    false
-fam_menu_id:                            page_ctrl_simple
+fam:                                    true
+fam_menu_id:                            default
 scrollbar:                              false
 indexed:                                false
 comments:                               false

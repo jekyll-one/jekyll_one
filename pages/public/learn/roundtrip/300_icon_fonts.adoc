@@ -13,6 +13,9 @@ description: >
 tags:                                   [ Roundtrip, Introduction ]
 categories:                             [ Icon, Module ]
 
+comments:                               true
+fam_menu_id:                            page_ctrl_simple
+
 permalink:                              /pages/public/learn/roundtrip/mdi_icon_font/
 regenerate:                             false
 
@@ -532,3 +535,5 @@ isn't it?
 
 To check more features of the template, go for the link:{roundtrip-asciidoc-extensions}[
 Asciidoc extensions] made for J1!
+
+== Leave a comment

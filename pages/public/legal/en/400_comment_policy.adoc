@@ -15,7 +15,7 @@ fam:                                    true
 fam_menu_id:                            page_ctrl_simple
 scrollbar:                              false
 indexed:                                false
-comments:                               true
+comments:                               false
 exclude_from_search:                    true
 
 permalink:                              /pages/public/legal/en/comment_policy/
@@ -118,5 +118,3 @@ respectful towards our contributors and those leaving comments.
 Anonymous::
 Anonymous comments will be deleted. We only accept comments from people who
 identify themselves.
-
-== Leave a Comment

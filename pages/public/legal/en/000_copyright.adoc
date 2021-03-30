@@ -8,8 +8,8 @@ description: >
 tags:                                   [ License, Copyright ]
 categories:                             [ Legal, Info ]
 
-toc:                                    false
-fam:                                    false
+toc:                                    true
+fam:                                    true
 fam_menu_id:                            page_ctrl_simple
 scrollbar:                              false
 indexed:                                false

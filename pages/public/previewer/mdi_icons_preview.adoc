@@ -12,6 +12,8 @@ tags:                                   [ Design, MDI, Icon, Fonts ]
 categories:                             [ App, Preview ]
 
 scrollbar:                              false
+comments:                               true
+fam_menu_id:                            page_ctrl_simple
 
 permalink:                              /pages/public/previewer/mdi_font/
 regenerate:                             false
@@ -209,7 +211,7 @@ from `50` to `900` but for `Pink` mostly the default `weight` of `500` is used.
 
 include::{tabledir}/mdi_icons/602_md_color_palette_pink.asciidoc[]
 
-==  Icon Overview
+== Icon Overview
 
 The Material Design Icon Font support a rich set of 5900+ icons
 (version  v5.9.55)  from a wide varity of topics.
@@ -220,3 +222,5 @@ NOTE: Click on the elements below to copy icon data to clipboard
 <!-- div class="my-popper">Popper element</div -->
 <div id="icons" class="icons"></div>
 ++++
+
+== Leave a comment

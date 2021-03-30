@@ -11,6 +11,8 @@ tags:                                   [ Twitter, Emoji, Icons ]
 categories:                             [ App, Previewer ]
 
 scrollbar:                              false
+comments:                               true
+fam_menu_id:                            page_ctrl_simple
 
 permalink:                              /pages/public/previewer/twitter_emoji/
 regenerate:                             false
@@ -189,3 +191,5 @@ Simple like that!
   });
 </script>
 ++++
+
+== Leave a comment

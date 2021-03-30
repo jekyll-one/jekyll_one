@@ -15,6 +15,9 @@ description: >
 tags:                                   [ Jekyll, Template ]
 categories:                             [ Info, Introduction ]
 
+comments:                               true
+fam_menu_id:                            page_ctrl_simple
+
 permalink:                              /pages/public/panels/intro_panel/
 regenerate:                             false
 
@@ -204,3 +207,5 @@ A rich set of modules are already included. The modules support common use
 cases of a website like a flexible navigation system, a local search,
 lightboxes to present pictures and videos, little helpers for scrolling or
 to automatically create TOCs (table of contents) for a page.
+
+== Leave a comment

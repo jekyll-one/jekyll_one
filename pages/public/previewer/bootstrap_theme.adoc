@@ -18,6 +18,8 @@ tags:                                   [ Bootstrap, Themes ]
 
 scrollbar:                              false
 flowtext:                               false
+comments:                               true
+fam_menu_id:                            page_ctrl_simple
 
 permalink:                              /pages/public/previewer/theme/
 regenerate:                             false
@@ -2079,3 +2081,5 @@ NOTE: Popovers and Tooltips require the BS tooltip plugin as a dependency.
     </div>
   </div>
 ----
+
+== Leave a comment

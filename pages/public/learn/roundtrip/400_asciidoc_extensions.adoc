@@ -14,6 +14,9 @@ description: >
 tags:                                   [ Roundtrip, Introduction ]
 categories:                             [ Asciidoc, Extension ]
 
+comments:                               true
+fam_menu_id:                            page_ctrl_simple
+
 permalink:                              /pages/public/learn/roundtrip/asciidoc_extensions/
 regenerate:                             false
 
@@ -501,3 +504,5 @@ user dialogues using them!
 
 Have a look for the link:{roundtrip-extended-modals}[BS modal extensions]
 feature of J1 Template.
+
+== Leave a comment

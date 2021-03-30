@@ -12,6 +12,8 @@ tags:                                   [ Roundtrip, Introduction ]
 categories:                             [ Bootstrap, Modal, Extension ]
 
 flowtext:                               false
+comments:                               true
+fam_menu_id:                            page_ctrl_simple
 
 permalink:                              /pages/public/learn/roundtrip/modals/
 regenerate:                             false
@@ -90,3 +92,5 @@ what the link:{roundtrip-responsive-tables}[BS tables extensions] can do!
 // Include the modals HTML portion
 // -----------------------------------------------------------------------------
 include::{documentdir}/419_advanced_modals_demo.asciidoc[]
+
+== Leave a comment
