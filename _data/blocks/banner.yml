@@ -113,7 +113,7 @@ settings:
   #
   teaser:
     # --------------------------------------------------------------------------
-    # home_teaser_banner
+    # HOME Teaser Banner
     #
     - name:                             Home Teaser Banner
       banner:
@@ -151,8 +151,7 @@ settings:
                                           to use as well. No license issues for private or professional use.
                                         </p>
                                         <p>
-                                          Explore what's possible if you statically
-                                          create websites.
+                                          Explore what's possible if you go for static websites.
                                         </p>
               buttons:
                 - name:                 Roundtrip button

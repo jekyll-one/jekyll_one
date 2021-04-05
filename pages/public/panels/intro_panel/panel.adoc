@@ -3,13 +3,11 @@ title:                                  J1 Template
 tagline:                                creating responsive websites
 date:                                   2020-11-03 00:00:00
 description: >
-                                        A good user experience browsing a Web is one of
-                                        the most important features a site has to offer as
-                                        a must. Beside excellent content. Presenting content
-                                        at it’s best on all devices, for all window sizes makes
-                                        an excellent Web brilliant. J1 Template support your Web
-                                        for full responsiveness, for the best user experience on
-                                        all modern devices.
+                                        A good user experience browsing a Web site is one of the most important
+                                        features a website offers as a must, besides excellent content. Presenting
+                                        content at its best on all devices for all window sizes makes a great Web
+                                        brilliant. J1 Template supports your Web for full responsiveness, for the
+                                        best user experience on all modern devices.
 
 
 tags:                                   [ Jekyll, Template ]
@@ -25,7 +23,7 @@ resources:                              [
                                           clipboard, rouge, carousel, lightbox,
                                           justifiedGallery, lightGallery
                                         ]
-                                        
+
 resource_options:
   - attic:
       padding_top:                      400
@@ -61,7 +59,7 @@ To not sidetrack your audience by irritating user interface (UI) components,
 the J1 Template is based on Bootstrap. Bootstrap is one of the most popular
 frameworks for web development used today. J1 is based on Bootstrap V4,
 the last current version to support your visitors by common navigation
-elements, data input, tables, and many other components more.
+elements, data input, tables, and many other components.
 
 Bootstrap simplifies HTML programming a lot, offers excellent JS support
 for interactive components like navigation elements, cards, forms, etc.
