@@ -21,18 +21,6 @@ about_config:
   location:                             _data/plugins/defaults/paginator.yml
 
 # ------------------------------------------------------------------------------
-# GENERAL plugin settings
-#
-# enabled
-# ------------------------------------------------------------------------------
-#   Enables|Disables the plugin for processing
-#
-#   values:                             true|false (boolean)
-#   default:                            false
-#
-enabled:                                false
-
-# ------------------------------------------------------------------------------
 # User configuration settings
 #
 settings:
@@ -51,13 +39,17 @@ settings:
   #
   #   values:                           string
   #   default:                          /assets/data/jupyther/notebooks
-  #  
+  #
 
   # ----------------------------------------------------------------------------
   # PAGINATION settings
   #
   pagination:
     enabled:                            false
+
+    title:                              :title                                  # currently NOT used
+    rebuild:                            true                                    # currently NOT used
+
     permalink:                          /page:num/
     per_page:                           4
     limit:                              0
@@ -71,12 +63,13 @@ settings:
   #
   autopages:
     enabled:                            false
+    rebuild:                            true                                    # currently NOT used
 
     tags:
       enabled:                          false
-      layouts:                          [ 
-                                          paginator/autopage_collections_tags.html, 
-                                          paginator/autopage_tags.html 
+      layouts:                          [
+                                          paginator/autopage_collections_tags.html,
+                                          paginator/autopage_tags.html
                                         ]
 
     categories:
@@ -86,7 +79,6 @@ settings:
     collections:
       enabled:                          false
       layouts:                          [ paginator/autopage_collection.html ]
-
 
 # ------------------------------------------------------------------------------
 # END config

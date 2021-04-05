@@ -8,8 +8,9 @@ description: >
                                         take on an important role of acting not only as plain text but will also serve
                                         as something like images.
 
-tags:                                   [ Roundtrip, Introduction ]
 categories:                             [ Typography, Module ]
+tags:                                   [ Roundtrip, Introduction ]
+
 
 comments:                               true
 fam_menu_id:                            page_ctrl_simple

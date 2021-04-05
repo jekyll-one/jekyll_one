@@ -8,7 +8,6 @@ description: >
 categories:                             [ Jekyll, Knowledge, Tutorial ]
 tags:                                   [ Git, Source, Control ]
 
-
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/using_git/
 regenerate:                             false
 

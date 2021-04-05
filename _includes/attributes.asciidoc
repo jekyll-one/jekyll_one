@@ -408,8 +408,9 @@ end::tables[]
 // PRODUCTS, global product information (e.g. release)
 // -----------------------------------------------------------------------------
 tag::products[]
-:j1-license:                                      MIT License
-:j1-version:                                      2021.1.0
+:j1--license:                                     MIT License
+:j1--version:                                     2021.1.0
+:j1--​site-name:                                   J1 Template
 end::products[]
 
 

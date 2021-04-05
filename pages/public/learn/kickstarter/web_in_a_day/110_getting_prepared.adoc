@@ -1,7 +1,7 @@
 ---
 title:                                  Web in a Day
 tagline:                                getting prepared
-date:                                   2021-03-01 00:00:00
+date:                                   2021-04-02 00:00:00
 description: >
                                         Modern static website in a day
 
@@ -14,7 +14,7 @@ regenerate:                             true
 scrollbar:                              false
 comments:                               true
 
-resources:                              [ lightbox ]
+resources:                              [ lightbox, clipboard, rouge ]
 resource_options:
   - attic:
       padding_top:                      400

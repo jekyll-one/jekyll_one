@@ -69,7 +69,7 @@
       dropdown:
         - title:                        Meet & Greet
           href:                         /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
-          icon:                         hand-heart
+          icon:                         handshake
         - title:                        Getting prepared
           href:                         /pages/public/learn/kickstarter/web_in_a_day/getting_prepared/
           icon:                         cart
