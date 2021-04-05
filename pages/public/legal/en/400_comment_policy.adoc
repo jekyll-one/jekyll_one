@@ -61,9 +61,9 @@ resource_options:
 // Include sub-documents
 // -----------------------------------------------------------------------------
 
-First things first: We love comments and appreciate our visitor's time to
-share ideas and give feedback. Thank you to everyone who places a comment on
-the {j1--site-name} website.
+We love comments and appreciate our visitor's time to share ideas and give
+feedback. Thank you to everyone who places a comment on the {j1--site-name}
+website.
 
 ifeval::[{disqus} == true]
 To access the public commenting feature, you will need to register for
