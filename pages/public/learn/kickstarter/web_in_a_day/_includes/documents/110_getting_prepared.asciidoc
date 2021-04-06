@@ -377,6 +377,35 @@ lightbox::nodejs--installer-dialog-8[ 600, {data-nodejs--installer-dialog-8} ]
 .Installed files for NodeJS
 lightbox::nodejs--installer-dialog-9[ 600, {data-nodejs--installer-dialog-9} ]
 
+==== Install/Update the package managers for _NodeJS_
+
+NodeJS comes with the package manager NPM pre-installed. The native CLI for
+the NodeJS package management is `npm`. Besides `npm` there's another quite
+handy CLI for NPM available: *Yarn*.
+
+The CLI `yarn` is developed at _Facebook_ and can be used as a replacement
+for `npm`. From a top-level perspective, both package management clients
+behave pretty much the *same*. The syntax `yarn` uses is shorter in writing,
+making the command-line look a bit more natural. Therefore, the use of
+`yarn` is preferred over `npm`
+
+NOTE: Yarn adds some additional features to the NodeJS package management
+implemented for the needs at Facebook. Regarding the J1 development system,
+those add-ons are neither needed nor used.
+
+Install the latest *NPM* and *Yarn* packages for _NodeJS_:
+
+[source, sh]
+----
+npm install -g npm@latest <1>
+npm install -g yarn@latest
+----
+<1> The package managers *npm* and *yarn* are installed *globally* (-g)
+
+The needed software to *manage* J1 *projects* is in place. Next, the _Ruby_
+language is to be installed to run _Jekyll_. Go next for *Installing _Ruby_*.
+
+
 === Installing _Ruby_
 
 The procedure to install _Ruby_ is quite similar to install _NodeJS_. Because

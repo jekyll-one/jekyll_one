@@ -39,6 +39,7 @@ tag::urls[]
 :url-nodejs--learn:                               https://nodejs.dev/learn
 :url-ruby-lang--intro:                            https://www.ruby-lang.org/en/documentation/quickstart/
 
+:url-vs-code--de-language-pack:                   https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-de#:~:text=You%20can%20override%20the%20default,the%20Configure%20Display%20Language%20command.
 
 end::urls[]
 
@@ -53,6 +54,8 @@ tag::data[]
 :data-kickstart-wiad--tool-versions:              "pages/kickstarter/web_in_a_day/110_getting_prepared/110-cmd-check-tool-versions.jpg, Example of installed tool versions"
 
 :data-kickstart-wiad--seo-results-gh-pages:       "pages/kickstarter/web_in_a_day/100_meet_and_greet/200-lh-preview-gh-pages.png, SEO measures (Google Lighthouse) of a J1 Starter Web at Github Pages (jekyll-one-org.github.io)"
+
+:data-kickstart-wiad--starter-web:                "pages/kickstarter/web_in_a_day/200_first_awesome_web/100-starter-web-1280x800.jpg, The J1 build-in stater web"
 
 :data-windows--create-a-link-1:                   "pages/kickstarter/web_in_a_day/110_getting_prepared/200-create-a-link-1.jpg, Run a create link dialog"
 :data-windows--create-a-link-2:                   "pages/kickstarter/web_in_a_day/110_getting_prepared/200-create-a-link-2.jpg, Type in the command to be linked"

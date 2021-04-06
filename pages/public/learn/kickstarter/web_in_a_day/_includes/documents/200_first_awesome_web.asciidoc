@@ -42,16 +42,339 @@ Remember:
   commands jekyll and j1.
 ----
 
-The J1 Template GEM contains such an command-line interface: *j1*. The command
+The J1 Template GEM contains such a command-line interface: *j1*. The command
 is used to create (generate) a web *project*. Generate such a project is the
 very first step to manage a *new* website.
 
-First, a project *folder* is needed to place the (project) files. A project
-can be gereated elsewhere, but I recommend to create a *Web* folder first
-to place (all) generated websites at a central place.
+=== Creating a J1 project
 
-.Base folder for all webs generated
+First, a project *folder* is needed. J1 can generate a project elsewhere, but
+I recommend creating a central *Web* folder to place (all) websites.
+
+Open a command shell (cmd.exe) and run:
+
+.Base folder for all webs
 [source, msshell]
 ----
-md C:\J1Webs
+md C:\J1Webs && cd C:\J1Webs
 ----
+Next, a project is to be created for the new website using the CLI *j1*. It
+is expected that your current folder (in that shell) is *C:\J1Webs*.
+
+.Generate a starter web
+[source, msshell]
+----
+j1 generate starter
+----
+
+This will take a while for the *first* J1 project because additional _Ruby_
+GEMs are to be downloaded. Because some of the GEMs are *platform-specific*,
+the DevKit (installed at the time the _Ruby_ language was installed) is
+called to *compile* specific components for the _Windows_ platform.
+
+----
+Running bundle install in C:/J1Webs/starter ...
+Install bundle in USER gem folder ~/.gem ...
+
+      Bundler: Fetching gem metadata from https://rubygems.org/...
+      Bundler: Fetching gem metadata from https://rubygems.org/...
+      Bundler: Resolving dependencies...
+      Bundler: Fetching rake 12.3.3
+      Bundler: Installing rake 12.3.3
+      ...
+      Bundler: Fetching wdm 0.1.1
+      Bundler: Installing wdm 0.1.1 with native extensions
+      Bundler: Bundle complete! 33 Gemfile dependencies, 85 gems now installed.
+      Bundler: Bundled gems are installed into `../../Users/<user_name>/.gem`
+
+Install patches in USER gem folder ~/.gem ...   <1>
+Install patches on path C:/Users/<user_name>/.gem/ruby/2.7.0 ...    <2>
+Generated Jekyll site installed in folder C:/J1Webs/starter   <3>
+----
+<1> For J1 projects, some _Ruby_ modules are patched to make them usable
+    on _Windows_
+<2> Ruby GEM folder for *userized* modules
+<3> J1 Project for the generated website
+
+NOTE: Some Ruby GEMs, *eventmachine*, and *execJS*, for example, have to be
+patched on _Windows_ respective for the newer versions of _Ruby_. As mentioned
+earlier, a massive number of libraries are provided by private persons but not 
+*continuously* updated to make them usable for the recent versions of Ruby's
+development system. The affected GEMs are currently *not* updated for the newer
+versions of _Ruby_ of v27 or v26. For J1, the needed (patched) components were
+added to the J1 Template system and applied when a project is generated.
+
+CAUTION: Patched versions of the _Ruby_ GEMs *eventmachine* and *execJS*
+are available only using *J1*. The original versions cannot be used and
+will make the generator engine _Jekyll_ fail.
+
+A J1 project consists of several files and folders. Find a typical structure
+as below:
+
+.J1 Project structure
+----
+  ├──── .
+  │     └─ _data  <1>
+  │     └─ _includes <2>
+  │     └─ _plugins <3>
+  │     └─ assets <4>
+  │     └─ collections <5>
+  │     └─ pages <6>
+  │     └─ utilsrv
+  ├──── _config.yml <7>
+  ├──── config.ru
+  ├──── dot.gitattributes
+  ├──── dot.gitignore
+  ├──── dot.nojekyll
+  ├──── favicon.ico
+  ├──── Gemfile <8>
+  ├──── index.html <9>
+  └──── package.json <10>
+----
+<1>   Configuration data for the website
+<2>   Asciidoc (global) includes
+<3>   Build-in (Ruby) plugins
+<4>   Assets for the web
+<5>   Folder that contains all blog posts
+<6>   Folder that contains all (article) pages
+<7>   Central (Jekyll) site configuration
+<8>   Ruby Gemfile
+<9>   Homepage for the web
+<10>  (NPM) Project file
+
+
+=== Setting up the project
+
+The next step, done only once, is to *initialize* the project to download and
+install all resources for your new website, followed by an *initial* creation
+process for the new website. Initializing a project is managed by the task
+*setup* run by the _NodeJS_ package manager.
+
+
+A bunch of sub-tasks get fired, all of them are controlled package manager
+*yarn* for you. The J1 project is generated in folder *C:\J1Webs\starter*.
+Change to that folder and *setup* the project using *yarn*.
+
+
+A bunch of sub-tasks gets fired. All of them are controlled package manager
+*yarn* for you. The J1 project is generated in folder *C:\J1Webs\starter*.
+Change to that folder and set up the project using yarn.
+
+.Setting up the J1 project
+[source, msshell]
+----
+cd C:\J1Webs\starter && yarn setup
+----
+
+Because a lot of sub-tasks getting started for a (first) `setup`, see below
+the output as a summary:
+
+----
+Setup project for first use ..
+Bootstrap base modules ..
+done.
+Configure environment ..
+done.
+Create project folders ..
+Create log folder ..
+Create archived log folder ..
+Create etc folder ..
+done.
+Bootstrap project modules ..
+Bootstrap utility server modules ..
+done.
+Detect OS ..
+OS detected: Windows_NT
+Build site incremental ..
+Configuration file: C:/J1Webs/starter/_config.yml
+            Source: C:/J1Webs/starter
+       Destination: C:/J1Webs/starter/_site
+ Incremental build: enabled
+      Generating...
+    J1 QuickSearch: creating search index ...
+    J1 QuickSearch: finished, index ready.
+      J1 Paginator: autopages, disabled|not configured
+      J1 Paginator: pagination enabled, start processing ...
+      J1 Paginator: finished, processed 1 pagination page|s
+                    done in 37.609 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+.. build finished.
+To open the site, run: yarn site
+Done in 94.94s.
+----
+
+The *setup* process takes a while. Typically some minutes for the *first* 
+run (depending on the performances of your Internet connection and your 
+Desktop PC). A bunch of NPM modules and Ruby Gems are downloaded and linked
+for the project. See the setup task as an extended *install* and *build*
+process to make your new website ready to use.
+
+=== Run a site
+
+As discussed, all project related *tasks* are managed by the package manager
+fo NodeJS -- in this case *yarn*. The task to run a website is *site* and can
+be issued like so:
+
+As discussed, all project-related *tasks* are managed by the package manager
+for NodeJS -- in this case, yarn. The job to run a website is *site* and can
+be issued like so:
+
+.Run a J1 website
+[source, msshell]
+----
+yarn site
+----
+
+The following messages appear in your command shell:
+
+----
+yarn run v1.22.10
+$ run-p -s site:*
+Startup the site ..
+UTILSRV disabled. Not started.
+Configuration file: C:/J1Webs/starter/_config.yml   <1>
+            Source: C:/J1Webs/starter   <2>
+       Destination: C:/J1Webs/starter/_site   <3>
+ Incremental build: enabled
+      Generating...
+    J1 QuickSearch: recreate index disabled.
+      J1 Paginator: autopages, disabled|not configured
+      J1 Paginator: pagination enabled, start processing ...
+      J1 Paginator: finished, processed 1 pagination page|s
+                    done in 9.618 seconds.
+ Auto-regeneration: enabled for '.'
+LiveReload address: http://localhost:40001    <5>
+    Server address: http://localhost:40000/   <4>
+  Server running... press ctrl-c to stop.
+        LiveReload: Browser connected   <6>
+----
+<1> The configuration file for the builder engine _Jekyll_
+<2> The project folder
+<3> The *WebRoot* folder for your website creaated
+<4> The *URL* to access the web
+<5> A *LiveReloader* is started and listens on port *40001*
+<6> A webbrowser has been started automatically and the *LiveReloader*
+    is connected
+
+Your *default* web browser is automatically started, and the website gets
+loaded. That should look like this way:
+
+.The J1 build-in stater web
+lightbox::kickstart-wiad--starter-web[ 800, {data-kickstart-wiad--starter-web} ]
+// <1> Navigation bar
+//<2> QuickLinks bar
+
+Now, after so much theory and technical stuff, you should *explore* your
+new website. The base navigation provided is the *Navigation* bar conum:1[].
+and the *QuickLink* bar conum:2[].
+
+Give your new starter web a try. Take some time to inspect your site. +
+*Have a pleasant walk-around*!
+
+
+=== Check your project in a code editor
+
+
+
+
+=== Rebuild a site
+
+A project runs Jekyll in *incremental* mode with *auto-regeneration* enabled.
+All changes made to the pages (posts) of your web at runtime are automatically
+detected and the affected are rebuild and (live) reloaded.
+
+To rebuild the *site* from the scratch, a web can be completely rebuild by
+running the task `rebuild`:
+
+[source, sh]
+----
+yarn rebuild
+----
+
+----
+Rebuild site incremental ..
+Clean up site files ..
+Configuration file: c:/Temp/starter/_config.yml
+           Cleaner: Removing _site...
+           Cleaner: Removing ./.jekyll-metadata...
+           Cleaner: Removing ./.jekyll-cache...
+           Cleaner: Nothing to do for .sass-cache.
+Configuration file: c:/Temp/starter/_config.yml
+            Source: c:/Temp/starter
+       Destination: c:/Temp/starter/_site
+ Incremental build: enabled
+      Generating...
+    J1 QuickSearch: creating search index ...
+    J1 QuickSearch: finished, index ready.
+      J1 Paginator: autopages, disabled|not configured
+      J1 Paginator: pagination enabled, start processing ...
+      J1 Paginator: finished, processed 5 pagination page|s
+                    done in 25.221 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+.. rebuild finished.
+To open the site, run: yarn site.
+Done in 34.88s.
+----
+
+If the site rebuild, re-run:
+
+[source, sh]
+----
+yarn site
+----
+
+and continue developing your website.
+
+=== Reset a project
+
+To start from the beginning, you can reset the runtime system to the
+factory state. The top-level task `reset` does the resetting work for you
+and cleans up each and everything except the NPM modules folder `node_modules`
+stored in the project root.
+
+[source, sh]
+----
+yarn reset
+----
+
+The cleanup runs some tasks for the root folder and in parallel sub-tasks
+using Jekyll for the Web:
+
+----
+Reset project to factory state ..
+Clean up base modules ..
+Clean up site files ..
+Configuration file: c:/Temp/starter/_config.yml
+           Cleaner: Removing _site...
+           Cleaner: Removing ./.jekyll-metadata...
+           Cleaner: Removing ./.jekyll-cache...
+           Cleaner: Nothing to do for .sass-cache.
+Clean up projects files ..
+Remove bundle config folder ..
+Remove log folder ..
+Remove etc folder ..
+Remove various log files ..
+Remove lock files ..
+Clean up utility server ..
+done.
+Done in 10.23s.
+----
+
+To reset the project *completely*, delete the folder `node_modules` manually
+and start from the beginning by running the `setup` task again:
+
+[source, sh]
+----
+yarn setup
+----
+
+If the project is newly setup, re-run:
+
+[source, sh]
+----
+yarn site
+----
+
+and continue developing your website.
+
+Happy Jekylling!

@@ -22,7 +22,7 @@ resource_options:
       padding_bottom:                   50
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/pages/kickstarter/web_in_a_day/200_a_first_awesome_web/joanna-kosinska-1920x1280.jpg
+        - url:                          /assets/images/pages/kickstarter/web_in_a_day/200_first_awesome_web/joanna-kosinska-1920x1280.jpg
           alt:                          Photo by Joanna Kosinska on Unsplash
           alignY:                       top
           badge:
