@@ -10,7 +10,7 @@ tags:                                   [ Generating, Webs ]
 
 
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/a_first_awesome_web/
-regenerate:                             false
+regenerate:                             true
 
 scrollbar:                              false
 comments:                               true

@@ -484,11 +484,6 @@ to be answered upfront the installation: *where* to install libraries used to
 extend a programming language? This open question is quite the same for all
 programming languages, not specific for _Ruby_.
 
-You've experienced, that the installation of a programming language will need
-*elevated* user rights (on _Windows_: think about *UAC*) to do so. The reason
-is, this installation provides access for *all users* of a system. Vice versa
-this raises the questions what libraries:
-
 You’ve experienced that installing a programming language will need *elevated*
 user rights (on  _Windows_: think about UAC) to do so. The reason is, this
 installation provides access for *all* users of a system. Vice versa, this
@@ -649,5 +644,45 @@ the versions as *expected*.
 
 == Installing an Development Editor
 
+Creating websites using J1, a good source code editor is needed. If you are
+using a code editor already, you can skip this section. Go for your favorite
+editor.
 
-Bla ..
+If you haven't used a source code editor, two of them can *recommend*. Both
+are Open-Source-Software, can be used for *free*:
+
+* Atom Editor
+* Visual Studio (VS) Code Editor
+
+VS Code Editor is well-known from the world of _Windows_ development (Visual
+Studio) provided by Microsoft, but independend from a VS development
+environment. Atom is a free and multi-platform editor, originally developed
+by _Github_ (but owned today by Microsoft).
+
+*VS Code Editor* is a multi-platform, well-known  editor for _Windows_
+development provided by _Microsoft_ but independent from a _Microsoft_
+development environment (Visual Studio).
+
+*Atom* is a free and multi-platform editor, initially developed by _Github_
+(but owned today by Microsoft).
+
+Both editors are using *Electron* as a base and are comparable by their
+features. VS Code Editor is closer to the _Windows_ world, Atom closer to
+the world of OpenSource.
+
+A source code editor is a crucial tool but should meet what developers like
+to use. But this depends on what is preferred, what the developer support at
+its best. Therefore what editor should be used cannot be answered in general.
+It depends on personal preferences rather than on the features an editor
+provides.
+
+It is up to you what code editor to use. Try the editors available on the
+market and decide what editor fits your needs. Find the download page for
+*Atom* and *VS Code* below.
+
+=== Downloads
+
+mdi:link-variant[24px, md-blue ml-3 mr-2]
+link:{atom-editor--home}[Download Atom Code Editor, {browser-window--new}] +
+mdi:link-variant[24px, md-blue ml-3 mr-2]
+link:{vs-code-editor--home}[Download VS Code Editor, {browser-window--new}]

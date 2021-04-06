@@ -55,10 +55,54 @@ computers to run.
 
 //  tag::recap_110_getting_prepared[]
 //
-lorem:sentences[5] +
-lorem:sentences[3] +
+Installing the development environment was not an easy job, many things to
+consider. If you install the software you’ve never seen before, it makes
+sense to know what needs to be done in more detail. And it is required to
+verify if the installation was successful and gives results for their
+(installation) locations respectively the versions as expected. You’ve
+learned that elevated user rights are needed to install the software
+(system-wide) but *not* needed to run, to use an application!
 
-//
+Especially for development tools, some more questions came up in terms of
+the libraries to be installed. All modern dynamic programming languages
+like NodeJS, Ruby, or Python support the extending their functionality by
+the system- and user-defined modules.
+
+System modules are to be installed with the installation path of the main
+application. This install type is called *global*. You’ve seen that this is
+not always a good choice for user-defined libraries. The install type for
+user-defined modules is called *local* if those modules are not installed
+system-wide.
+
+NodeJS and Ruby support different strategies to install modules *locally*.
+Two of them are:
+
+* userized
+* vendorized
+
+You’ve learned for _Ruby_, the default installation type for GEMs is *global*.
+Still, in many cases, it makes sense to install GEMs *userized* to not pollute
+the central installation by libraries *not* needed globally. NodeJS has a
+different approach for installing modules: *vendorized* for default. That
+means the modules are installed within the *project* folder.
+
+.Library folder hierarchy
+lightbox::library--folders-1[ 600, {data-library--folders-1} ]
+
+callout::1["Library folder hierarchy"]
+callout::2["Storage strategy"]
+callout::3["Search path", ml-2 mb-3]
+
+Library folders build a hierarchy. A search path is needed to locate a module
+along this hierarchy to get access to these resources. For Ruby GEMs, the
+decision to install J1 and Ruby GEMs was *userized*. The user environment was
+adjusted to locate the (Ruby) main installation path (system modules) and
+the user’s path to get full access to all GEMS installed userized.
+
+For NodeJS, no adjustments are needed because, for default, the *project* path
+is used. If you run commands later on to control a *J1 project*, you will do
+this out of the project path. This will implicitly set the *vendorized* path
+to the current (project) path.
 // end::recap_110_getting_prepared[]
 
 //  tag::recap_200_a_first_awesome_web[]
@@ -93,8 +137,11 @@ Go for link:{j1-kickstart-wiad--getting-prepared}[Getting prepared] then! +
 
 // tag::whats_next_110_getting_prepared[]
 //
-lorem:sentences[5] +
-lorem:sentences[3] +
+Almost all of the technical stuff is behind you. The following section,
+First awesome Web, is much more related to what the title of this tutorial
+implies: *Web in Day*.
+
+Create from here your link:{j1-kickstart-wiad--first-awesome-web}[First awesome Web]!
 
 //
 // end::whats_next_110_getting_prepared[]
@@ -355,7 +402,7 @@ other experts have on their minds. +
 mdi:link-variant[24px, md-blue ml-3 mr-2]
 link:{url-jekyll--home}[Jekyll Home -- First address for Jekyll, {browser-window--new}] +
 mdi:link-variant[24px, md-blue ml-3 mr-2]
-link:{url-jekyll-tips--why-use-static-site-generator}[Cloud Cannon -- Why use a static site generator?, {browser-window--new}]
+link:{url-jekyll-tips--why-use-static-site-generator}[CloudCannon -- Why use a static site generator?, {browser-window--new}]
 
 //
 // end::further_reading_100_meet_and_greet[]
@@ -363,9 +410,13 @@ link:{url-jekyll-tips--why-use-static-site-generator}[Cloud Cannon -- Why use a 
 // tag::further_reading_110_getting_prepared[]
 //
 mdi:link-variant[24px, md-blue ml-3 mr-2]
-link:{url-jekyll--home}[Jekyll Home -- First address for Jekyll, {browser-window--new}] +
+link:{url-nodejs--learn}[NodeJS -- Introduction to Node.js, {browser-window--new}] +
 mdi:link-variant[24px, md-blue ml-3 mr-2]
-link:{url-jekyll-tips--why-use-static-site-generator}[Cloud Cannon -- Why use a static site generator?, {browser-window--new}]
+link:{url-ruby-lang--intro}[Ruby -- Ruby in Twenty Minutes, {browser-window--new}] +
+mdi:link-variant[24px, md-blue ml-3 mr-2]
+link:{url-jekyll--home}[Jekyll Home -- Install Jekyll, {browser-window--new}] +
+mdi:link-variant[24px, md-blue ml-3 mr-2]
+link:{url-cloudcannon--install-jekyll-on-windows}[CloudCannon -- Install Jekyll on Windows, {browser-window--new}]
 
 //
 // end::further_reading_110_getting_prepared[]

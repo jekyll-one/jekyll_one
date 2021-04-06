@@ -7,6 +7,8 @@
 // -----------------------------------------------------------------------------
 tag::urls[]
 
+:atom-editor--home:                               https://atom.io/
+
 :j1-kickstart-wiad--meet-and-greet:               /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
 :j1-kickstart-wiad--getting-prepared:             /pages/public/learn/kickstarter/web_in_a_day/getting_prepared/
 :j1-kickstart-wiad--first-awesome-web:            /pages/public/learn/kickstarter/web_in_a_day/a_first_awesome_web/
@@ -26,7 +28,17 @@ tag::urls[]
 :rubyinstaller--home:                             https://rubyinstaller.org/
 :ruby--download-v27-devkit:                       https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.7.2-1/rubyinstaller-devkit-2.7.2-1-x64.exe
 
+:vs-code-editor--home:                            https://code.visualstudio.com/
+
 :wikipedia-en--filename:                          https://en.wikipedia.org/wiki/Filename
+
+:url-cloudcannon--install-jekyll-on-windows:      https://learn.cloudcannon.com/jekyll/install-jekyll-on-windows/
+
+:url-jekyll--install-jekyll:                      https://jekyllrb.com/docs/installation/
+
+:url-nodejs--learn:                               https://nodejs.dev/learn
+:url-ruby-lang--intro:                            https://www.ruby-lang.org/en/documentation/quickstart/
+
 
 end::urls[]
 
@@ -70,6 +82,7 @@ tag::data[]
 :data-ruby--installer-dialog-2:                   "pages/kickstarter/web_in_a_day/110_getting_prepared/400-ruby-install-2.jpg, Package selection"
 :data-ruby--installer-dialog-3:                   "pages/kickstarter/web_in_a_day/110_getting_prepared/400-ruby-install-3.jpg, Install the DevKit"
 
+:data-library--folders-1:                         "pages/kickstarter/web_in_a_day/110_getting_prepared/600-library-folders-1.jpg, Library folder hierarchy"
 
 end::data[]
 
