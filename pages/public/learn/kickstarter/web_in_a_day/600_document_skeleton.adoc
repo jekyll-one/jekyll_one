@@ -14,7 +14,7 @@ regenerate:                             false
 scrollbar:                              false
 comments:                               true
 
-resources:                              [ lightbox ]
+resources:                              [ lightbox, clipboard, rouge ]
 resource_options:
   - attic:
       padding_top:                      400

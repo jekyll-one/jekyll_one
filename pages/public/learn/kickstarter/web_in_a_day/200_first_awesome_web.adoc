@@ -15,7 +15,7 @@ regenerate:                             true
 scrollbar:                              false
 comments:                               true
 
-resources:                              [ lightbox, carousel, fam ]
+resources:                              [ lightbox, clipboard, rouge ]
 resource_options:
   - attic:
       padding_top:                      400
