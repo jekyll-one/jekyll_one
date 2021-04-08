@@ -223,9 +223,10 @@ LiveReload address: http://localhost:40001    <5>
     is connected
 
 Your *default* web browser is automatically started, and the website gets
-loaded. That should look like this way:
+loaded. +
+That should look like this way:
 
-.The J1 build-in stater web
+.The J1 build-in Starter Web
 lightbox::kickstart-wiad--starter-web[ 800, {data-kickstart-wiad--starter-web} ]
 // <1> Navigation bar
 //<2> QuickLinks bar
@@ -278,12 +279,12 @@ to know:
   language *YAML* is used
 
 In computer *text* processing, a markup language is a system for *annotating*
-a (text-)document by *control* information: the markups. *Asciidoc* is used to
-*annotate* the sources of your web content.
+a (text-)document by *control* information: the markups.
 
-The Asciidoc markups indicate, for example, what text in a page should be
-displayed in *boldface*, what text should be *headlines*, where to place
-*images*, or what text should be transformed in *tables* or *lists*.
+*Asciidoc* is used to *annotate* the sources of your web content. The Asciido
+markups indicate, for example, what text in a page should be displayed in
+*boldface*, what text should be *headlines*, where to place *images*, or what
+should be transformed in *tables* or *lists*.
 
 *YAML* is used to indicate text as *data structures* like simple *variables*
 or more complex structures like *arrays*. The data is used by the builder
@@ -292,8 +293,8 @@ their behavior.
 
 NOTE: J1 does *not* use a Database System in the sense of an *RDBMS*, a
 Relational Database Management System as CMS does. For making a template
-system like J1 flexible and configurable, a database is needed. The database
-for J1 consists of (text-)files and folders.
+system like J1 flexible and configurable, a *database* is *needed*. The
+*database* for J1 consists of (text-)files of type *YAML*.
 
 You are reading this for the first time. And, understandably, the codebase is
 difficult to understand. To become familiar with the codebase and folder
@@ -301,7 +302,7 @@ structure for a J1 project, have a look at your project by your favorite editor.
 Open the project folder for your Starter Web, for example, *C:\J1Webs\starter*.
 
 .Starter Web loaded by Atom Editor
-lightbox::kickstart-wiad--starter-web[ 800, {data-kickstart-wiad--starter-web} ]
+lightbox::kickstart-wiad--atom-starter-web[ 800, {data-kickstart-wiad--atom-starter-web} ]
 
 A J1 project consists of several files and folders. Find the structure
 as below:
@@ -348,9 +349,9 @@ directory and, as the name suggests, controls the configuration settings how
 
 Open this file in your editor. The configuration file is of type *text*, but
 structured! The extention of *.yml* indicates this file of type *YAML*
-containing *markups* to specify *data*. THe data in that file in in ordered in
-sections for easier reading, comments, starting with a hash (*#*) are comments
-not treated as data. Comments are ignored if such a file is being read and
+containing *markups* to specify *data*. The data in that file in in ordered in
+sections for easier reading. Comments, starting with a hash (*#*) are not
+treated as data. Comments are ignored if such a file is being read and
 processed for data extraction.
 
 Open this file in your editor. The configuration file is of type *text* but
@@ -359,8 +360,6 @@ containing markups to specify *data*. The data in that file is ordered in
 sections for easier reading. Comments, starting with a hash (#), are not
 treated as data. Comments are *ignored* if such a file is being read and
 processed for data extraction.
-
-
 
 .Selected configuration settings from `_config.yml`
 [source, yaml]
@@ -432,8 +431,9 @@ plugins:
 
 From the config file you see, your website is processed in `production` mode.
 The *variable* `environment` is assigned the *value* `production`. Pretty easy
-to read, isn't it?. Now the first *magic* of using a code editor. In your
-editor, press the keys kbd:[Ctrl+Shift+F] to open a project-wide search dialog.
+to read, isn't it? Now the first *magic* of using a code editor. In your
+editor, press the keys kbd:[Ctrl+Shift+F] to open a *project-wide* search
+dialog.
 
 .Search the project folder (Atom)
 lightbox::kickstart-wiad--atom-project-search[ 800, {data-kickstart-wiad--atom-project-search} ]
@@ -445,7 +445,7 @@ for all YAML data files. Your'done in no-time and no endless digging in endless
 GUI menus is needed.
 
 All data for a J1 project are configured with *YAML* data files. Search
-project-wide for the variable `environment` to find what data file specifies
+project-wide for the variable `environment` to find *what* data file specifies
 this. Search for the data *assignment* markup *environment:* (keep attention
 on the colon) for all YAML data files in your project. You’re done in no time.
 No endless digging in never-ending GUI menus and dialogs are needed.
@@ -459,13 +459,14 @@ be found at CloudCannon: link:{url-cloudcannon--jekyll-file-structure}[The File 
 
 == Exercise -- Environment modes
 
-Environment modes are used to specify the built *environment* of a website.
-J1 uses these modes to control the output of *HTML pages*.
+Environment modes are used to specify the built *environment* of a website,
+controls the HTML processing. J1 uses these modes to control the *output*
+of *HTML pages*.
 
 .Environment modes
 [cols="^3a,^3a,6a, subs=+macros, options="header", width="100%", role="rtable mt-3"]
 |===============================================================================
-|Name |Value |Description
+|Variable |Value |Description
 
 |`environment`
 |`production`
@@ -487,17 +488,18 @@ destination:                            _site
 ----
 
 You'll find a folder *_site* in your project root. Open that folder in your
-editor and open the file *index.html*. The (HTML) paged generated is a *single*
-line. All elements *not* needed for the browser are deleted.
+editor and open the file *index.html*, the *home page* for your web. The (HTML)
+page generated is a *single* line. All elements *not* needed for the browser
+are deleted.
 
 .Home page in production mode (index.html)
 lightbox::kickstart-wiad--atom-home-page-1[ 800, {data-kickstart-wiad--atom-home-page-1} ]
 
-Generating HTML output for production this way is called *compression*,
-deleting all elements not needed. The file size gets reduced to a minimum for
-faster loading by the webserver. Compressed output is excellent for websites
-that should be deployed (make them available) to a *public place*, to a server
-providing your page on the *Internet*.
+Generating HTML output for *production* this is called *compression*,
+deleting all (HTML) elements not needed. The file size gets reduced to a
+minimum for faster loading by the webserver. Compressed output is excellent
+for websites that should be deployed (make them available) to a *public place*,
+to a server providing your page on the *Internet*.
 
 For *development*, compressed HTML pages are not useful. You'll see why in
 a minute. Reconfigure the *value* for environment. Load the config file
@@ -514,7 +516,7 @@ the web needs to be *rebuild*. This is a drawback for static websites.
 
 Because a *global* configuration setting has changed, the web needs to be
 *re-created*. This process is called *rebuilding* a site. Stop the running
-web in the command shell by typing: kbd:[CTRL+C].
+web in the *command shell* by typing: kbd:[CTRL+C].
 
 A J1 project runs _Jekyll_ in *incremental* mode with *auto-regeneration*
 enabled. All changes made to your posts and pages at *runtime* are
@@ -614,8 +616,8 @@ home page looks very different:
 
 The HTML output is *no* longer a vast single line. Many (HTML-)comments are
 available that explain what had happened while processing this page. The
-comments provide helpful information, what *component* of the Template was
-involved in what *processing step*.
+comments provide helpful information, what *component* of the Template system
+was involved in what *processing step* to *create* a page.
 
 NOTE: For this tutorial, or for creating webs in general, it's not needed
 to know how J1 processes HTML pages. But for people interested in more

@@ -61,9 +61,9 @@ tag::data[]
 
 :data-kickstart-wiad--seo-results-gh-pages:       "pages/kickstarter/web_in_a_day/100_meet_and_greet/200-lh-preview-gh-pages.png, SEO measures (Google Lighthouse) of a J1 Starter Web at Github Pages (jekyll-one-org.github.io)"
 
-:data-kickstart-wiad--starter-web:                "pages/kickstarter/web_in_a_day/200_first_awesome_web/100-atom-j1-project-1280x800.jpg, Starter Web loaded by Atom Editor"
+:data-kickstart-wiad--starter-web:                "pages/kickstarter/web_in_a_day/200_first_awesome_web/100-starter-web-1280x800.jpg, The J1 build-in Starter Web"
 
-:data-kickstart-wiad--atom-starter-web:           "pages/kickstarter/web_in_a_day/200_first_awesome_web/100-starter-web-1280x800.jpg, The J1 build-in stater web"
+:data-kickstart-wiad--atom-starter-web:           "pages/kickstarter/web_in_a_day/200_first_awesome_web/100-atom-j1-project-1280x800.jpg, Starter Web loaded by Atom Editor"
 
 :data-kickstart-wiad--atom-project-search:        "pages/kickstarter/web_in_a_day/200_first_awesome_web/200-atom-search-in-project-1280x800.jpg, Search the project folder (Atom)"
 
