@@ -189,6 +189,9 @@ and  *pages* using J1. These sections discuss the *writing* and the use of the
 markup language *Asciidoc* for your content. +
 *Make your website real*!
 
+Continue on section: link:{j1-kickstart-wiad--writing-articles}[Writing Articles]
+to create pages on your own!
+
 //
 // end::whats_next_200_first_awesome_web[]
 
