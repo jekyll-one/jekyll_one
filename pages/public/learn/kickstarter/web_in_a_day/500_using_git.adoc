@@ -58,11 +58,11 @@ include::{includedir}/parts.asciidoc[tag=summarize]
 
 === Recap
 
-include::{includedir}/parts.asciidoc[tag=recap_200_a_first_awesome_web]
+include::{includedir}/parts.asciidoc[tag=recap_200_first_awesome_web]
 
 === Whats Next
 
-include::{includedir}/parts.asciidoc[tag=whats_next_200_a_first_awesome_web]
+include::{includedir}/parts.asciidoc[tag=whats_next_200_first_awesome_web]
 
 
 === All Chapters
