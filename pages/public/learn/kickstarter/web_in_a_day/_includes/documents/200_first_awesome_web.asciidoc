@@ -457,7 +457,7 @@ A good Overview on the config settings and folder structure _Jekyll_ can
 be found at CloudCannon: link:{url-cloudcannon--jekyll-file-structure}[The File structure, {browser-window--new}]
 
 
-==== Exercise: environment modes
+== Exercise -- Environment modes
 
 Environment modes are used to specify the built *environment* of a website.
 J1 uses these modes to control the output of *HTML pages*.
