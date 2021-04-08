@@ -105,13 +105,49 @@ this out of the project path. This will implicitly set the *vendorized* path
 to the current (project) path.
 // end::recap_110_getting_prepared[]
 
-//  tag::recap_200_a_first_awesome_web[]
+//  tag::recap_200_first_awesome_web[]
 //
-lorem:sentences[5] +
-lorem:sentences[3] +
+Again, a chapter full of *hard* stuff, You learned, a website managed a *J1*
+is a *project*. Creating *J1* projects is done by the CLI *j1*, part of the
+_Ruby_ GEM *j1-template*.
+
+J1 projects managed by a NodeJS project manager. The preferred manager tool
+is *yarn*. The manager tool yarn is used for all project-related *tasks*
+like *setting up*, *running*, or *rebuilding* a web.
+Find a summary of the tools and tasks in the table below.
+
+.Commans and tasks to manage a J1 project
+[cols="^3a,^3a,6a, subs=+macros, options="header", width="100%", role="rtable mt-3"]
+|===============================================================================
+|Command |Task |Description
+
+|j1
+|`generate`
+|Creating a J1 project is done by the CLI *j1*, provided by the (_Ruby_)
+GEM *j1-template*. The task `generate` creates an initial *scaffold* for a
+website.
+
+|yarn
+|`setup`
+|For managing a *J1* project, the (NodeJS) project manager *yarn* is used.
+Make an initial *scaffold* for a project a usable website, a project
+has to be initialized first.
+
+|yarn
+|`site`
+|Running a website out of a *J1* project, the project manager yarn is started
+by the task `site`.
+
+|yarn
+|`rebuild`
+|If making changes to the global configuration, a website needs to be
+*re-created*. To *rebuild*  a website from scratch, the (NodeJS) project
+manager yarn is called for the task `rebuild`.
+
+|===============================================================================
 
 //
-// end::recap_200_a_first_awesome_web[]
+// end::recap_200_first_awesome_web[]
 
 // End Recap -------------------------------------------------------------------
 
@@ -146,13 +182,15 @@ Create from here your link:{j1-kickstart-wiad--first-awesome-web}[First awesome 
 //
 // end::whats_next_110_getting_prepared[]
 
-// tag::whats_next_200_a_first_awesome_web[]
+// tag::whats_next_200_first_awesome_web[]
 //
-lorem:sentences[5] +
-lorem:sentences[3] +
+The following chapters focus on content creation, explain how to write *posts*
+and  *pages* using J1. These sections discuss the *writing* and the use of the
+markup language *Asciidoc* for your content. +
+*Make your website real*!
 
 //
-// end::whats_next_200_a_first_awesome_web[]
+// end::whats_next_200_first_awesome_web[]
 
 // End Whats Next --------------------------------------------------------------
 
@@ -420,5 +458,18 @@ link:{url-cloudcannon--install-jekyll-on-windows}[CloudCannon -- Install Jekyll 
 
 //
 // end::further_reading_110_getting_prepared[]
+
+// tag::further_200_first_awesome_web[]
+//
+mdi:link-variant[24px, md-blue ml-3 mr-2]
+link:{url-jekyll--docs-configuration}[Jekyll Home - Jekyll Configuration, {browser-window--new}] +
+mdi:link-variant[24px, md-blue ml-3 mr-2]
+link:{url-cloudcannon--jekyll-file-structure}[CloudCannon - The Jekyll File structure, {browser-window--new}] +
+mdi:link-variant[24px, md-blue ml-3 mr-2]
+link:{url-digitalocean--jekyll-tutorials}[DigitalOcean - Jekyll Tutorials, {browser-window--new}]
+
+//
+// end::further_200_first_awesome_web[]
+
 
 // End Further Reading ---------------------------------------------------------

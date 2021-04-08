@@ -1,7 +1,7 @@
 ---
 title:                                  Web in a Day
 tagline:                                first awesome web
-date:                                   2021-03-01 00:00:00
+date:                                   2021-04-08 00:00:00
 description: >
                                         Modern static website in a day
 
@@ -40,6 +40,10 @@ resource_options:
 // -----------------------------------------------------------------------------
 // :page--attr:                         <attr-value>
 
+// enable UI macros, e.g kbd:[], for Asciidoctor
+// See: https://docs.asciidoctor.org/asciidoc/latest/macros/keyboard-macro/
+:experimental:
+
 //  Load Liquid procedures
 // -----------------------------------------------------------------------------
 {% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
@@ -63,11 +67,11 @@ include::{includedir}/parts.asciidoc[tag=summarize]
 
 === Recap
 
-include::{includedir}/parts.asciidoc[tag=recap_200_a_first_awesome_web]
+include::{includedir}/parts.asciidoc[tag=recap_200_first_awesome_web]
 
 === Whats Next
 
-include::{includedir}/parts.asciidoc[tag=whats_next_200_a_first_awesome_web]
+include::{includedir}/parts.asciidoc[tag=whats_next_200_first_awesome_web]
 
 
 === All Chapters
@@ -78,6 +82,6 @@ include::{includedir}/parts.asciidoc[tag=chapters_200_first_awesome_web]
 === Further Reading
 
 include::{includedir}/parts.asciidoc[tag=further_reading]
-include::{includedir}/parts.asciidoc[tag=further_reading_110_getting_prepared]
+include::{includedir}/parts.asciidoc[tag=further_200_first_awesome_web]
 
 == Leave a comment

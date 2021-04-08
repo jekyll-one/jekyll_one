@@ -671,7 +671,7 @@ done in more detail. And it is required to *verify* if the installation was
 *successful* and gives results for their (installation) locations respectively
 the versions as *expected*.
 
-== Installing an Development Editor
+== Installing an Code Editor
 
 Creating websites using J1, a good source code editor is needed. If you are
 using a code editor already, you can skip this section. Go for your favorite
@@ -683,21 +683,24 @@ are Open-Source-Software, can be used for *free*:
 * Atom Editor
 * Visual Studio (VS) Code Editor
 
-VS Code Editor is well-known from the world of _Windows_ development (Visual
-Studio) provided by Microsoft, but independend from a VS development
-environment. Atom is a free and multi-platform editor, originally developed
-by _Github_ (but owned today by Microsoft).
+_VS Code Editor_ is well-known from the world of _Windows_ development and
+provided by Microsoft. VS Code is independend from a
+link:{url-vs-home--en}[Microsoft Visual Studio, {browser-window--new}]
+development environment, multi-platform, and can be used *standalone*.
+_Atom_ is a free and multi-platform editor as well, originally developed by
+_Github_ (_Github_ today owned by Microsoft):
 
-*VS Code Editor* is a multi-platform, well-known  editor for _Windows_
-development provided by _Microsoft_ but independent from a _Microsoft_
-development environment (Visual Studio).
+* *VS Code Editor* is a multi-platform, well-known  editor for _Windows_
+  development provided by _Microsoft_ but independent from a _Microsoft_
+  development environment (Visual Studio).
 
-*Atom* is a free and multi-platform editor, initially developed by _Github_
-(but owned today by Microsoft).
+* *Atom* is a free and multi-platform editor, initially developed by
+  _Github_ (but owned today by Microsoft).
 
 Both editors are using *Electron* as a base and are comparable by their
-features. VS Code Editor is closer to the _Windows_ world, Atom closer to
-the world of OpenSource.
+features. _VS Code Editor_ is closer to the _Windows_ world in terms of
+available _Windows_-specific *extensions*, _Atom_ more popular in the
+world of OpenSource providing a large number of *extensions* this world.
 
 A source code editor is a crucial tool but should meet what developers like
 to use. But this depends on what is preferred, what the developer support at
