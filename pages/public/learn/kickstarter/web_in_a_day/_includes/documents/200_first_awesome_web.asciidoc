@@ -466,18 +466,16 @@ of *HTML pages*.
 .Environment modes
 [cols="^3a,^3a,6a, subs=+macros, options="header", width="100%", role="rtable mt-3"]
 |===============================================================================
-|Variable |Value |Description
+|Variable |Value\|s |Description
 
 |`environment`
-|`production`
-|In *production* mode, the generated HTML pages are *compressed* for faster
-loading. All HTML elements not needed are stripped (comments), all whitespaces
-and not needed control characters are deleted.
+|`production` \| `development`
+|In *production* mode (default), the generated HTML pages are *compressed*
+for faster loading. All HTML elements not needed are stripped (comments), all
+whitespaces and not needed control characters are deleted.
 
-|`environment`
-|`development`
-|In *development* mode, the generated HTML pages are beatified for better
-(human) reading. *No* elements are available  for code inspection
+In *development* mode, the generated HTML pages are *beatified* for better
+(human) reading. *No* elements are deleted and available for code inspection.
 
 |===============================================================================
 

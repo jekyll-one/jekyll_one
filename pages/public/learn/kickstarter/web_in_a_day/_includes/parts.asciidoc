@@ -116,7 +116,7 @@ is *yarn*. The manager tool yarn is used for all project-related *tasks*
 like *setting up*, *running*, or *rebuilding* a web.
 Find a summary of the tools and tasks in the table below.
 
-.Commans and tasks to manage a J1 project
+.Commands and Tasks to manage a J1 project
 [cols="^3a,^3a,6a, subs=+macros, options="header", width="100%", role="rtable mt-3"]
 |===============================================================================
 |Command |Task |Description
