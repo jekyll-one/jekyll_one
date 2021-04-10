@@ -55,6 +55,11 @@ resource_options:
 // -----------------------------------------------------------------------------
 include::{documentdir}/400_design_your_site.asciidoc[]
 
+== Questions
+
+include::{includedir}/parts.asciidoc[tag=questions-chapter]
+
+
 
 == Summarize!
 

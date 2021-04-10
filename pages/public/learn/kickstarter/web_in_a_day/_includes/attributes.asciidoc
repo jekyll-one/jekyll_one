@@ -19,6 +19,70 @@ tag::urls[]
 :j1-kickstart-wiad--document-skeleton:            /pages/public/learn/kickstarter/web_in_a_day/document_skeleton/
 :j1-kickstart-wiad--wrapping-up:                  /pages/public/learn/kickstarter/web_in_a_day/wrapping_up/
 
+:j1-kickstart-wiad--questions:                    /pages/public/learn/kickstarter/web_in_a_day/questions/
+:j1-kickstart-wiad--question-1:                   /pages/public/learn/kickstarter/web_in_a_day/questions/#1-question
+:j1-kickstart-wiad--question-2:                   /pages/public/learn/kickstarter/web_in_a_day/questions/#2-question
+:j1-kickstart-wiad--question-3:                   /pages/public/learn/kickstarter/web_in_a_day/questions/#3-question
+:j1-kickstart-wiad--question-4:                   /pages/public/learn/kickstarter/web_in_a_day/questions/#4-question
+:j1-kickstart-wiad--question-5:                   /pages/public/learn/kickstarter/web_in_a_day/questions/#5-question
+:j1-kickstart-wiad--question-6:                   /pages/public/learn/kickstarter/web_in_a_day/questions/#6-question
+:j1-kickstart-wiad--question-7:                   /pages/public/learn/kickstarter/web_in_a_day/questions/#7-question
+:j1-kickstart-wiad--question-8:                   /pages/public/learn/kickstarter/web_in_a_day/questions/#8-question
+:j1-kickstart-wiad--question-9:                   /pages/public/learn/kickstarter/web_in_a_day/questions/#9-question
+:j1-kickstart-wiad--question-10:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#10-question
+:j1-kickstart-wiad--question-11:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#11-question
+:j1-kickstart-wiad--question-12:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#12-question
+:j1-kickstart-wiad--question-13:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#13-question
+:j1-kickstart-wiad--question-14:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#14-question
+:j1-kickstart-wiad--question-15:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#15-question
+:j1-kickstart-wiad--question-16:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#16-question
+:j1-kickstart-wiad--question-17:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#17-question
+:j1-kickstart-wiad--question-18:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#18-question
+:j1-kickstart-wiad--question-19:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#19-question
+:j1-kickstart-wiad--question-20:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#20-question
+:j1-kickstart-wiad--question-21:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#21-question
+:j1-kickstart-wiad--question-22:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#22-question
+:j1-kickstart-wiad--question-23:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#23-question
+:j1-kickstart-wiad--question-24:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#24-question
+:j1-kickstart-wiad--question-25:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#25-question
+:j1-kickstart-wiad--question-26:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#26-question
+:j1-kickstart-wiad--question-27:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#27-question
+:j1-kickstart-wiad--question-28:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#28-question
+:j1-kickstart-wiad--question-29:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#29-question
+:j1-kickstart-wiad--question-30:                  /pages/public/learn/kickstarter/web_in_a_day/questions/#30-question
+
+:j1-kickstart-wiad--answers:                      /pages/public/learn/kickstarter/web_in_a_day/answers/
+:j1-kickstart-wiad--answer-1:                     /pages/public/learn/kickstarter/web_in_a_day/answers/#1-answer
+:j1-kickstart-wiad--answer-2:                     /pages/public/learn/kickstarter/web_in_a_day/answers/#2-answer
+:j1-kickstart-wiad--answer-3:                     /pages/public/learn/kickstarter/web_in_a_day/answers/#3-answer
+:j1-kickstart-wiad--answer-4:                     /pages/public/learn/kickstarter/web_in_a_day/answers/#4-answer
+:j1-kickstart-wiad--answer-5:                     /pages/public/learn/kickstarter/web_in_a_day/answers/#5-answer
+:j1-kickstart-wiad--answer-6:                     /pages/public/learn/kickstarter/web_in_a_day/answers/#6-answer
+:j1-kickstart-wiad--answer-7:                     /pages/public/learn/kickstarter/web_in_a_day/answers/#7-answer
+:j1-kickstart-wiad--answer-8:                     /pages/public/learn/kickstarter/web_in_a_day/answers/#8-answer
+:j1-kickstart-wiad--answer-9:                     /pages/public/learn/kickstarter/web_in_a_day/answers/#9-answer
+:j1-kickstart-wiad--answer-10:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#10-answer
+:j1-kickstart-wiad--answer-11:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#11-answer
+:j1-kickstart-wiad--answer-12:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#12-answer
+:j1-kickstart-wiad--answer-13:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#13-answer
+:j1-kickstart-wiad--answer-14:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#14-answer
+:j1-kickstart-wiad--answer-15:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#15-answer
+:j1-kickstart-wiad--answer-16:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#16-answer
+:j1-kickstart-wiad--answer-17:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#17-answer
+:j1-kickstart-wiad--answer-18:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#18-answer
+:j1-kickstart-wiad--answer-19:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#19-answer
+:j1-kickstart-wiad--answer-20:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#20-answer
+:j1-kickstart-wiad--answer-21:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#21-answer
+:j1-kickstart-wiad--answer-22:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#22-answer
+:j1-kickstart-wiad--answer-23:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#23-answer
+:j1-kickstart-wiad--answer-24:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#24-answer
+:j1-kickstart-wiad--answer-25:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#25-answer
+:j1-kickstart-wiad--answer-26:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#26-answer
+:j1-kickstart-wiad--answer-27:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#27-answer
+:j1-kickstart-wiad--answer-28:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#28-answer
+:j1-kickstart-wiad--answer-29:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#29-answer
+:j1-kickstart-wiad--answer-30:                    /pages/public/learn/kickstarter/web_in_a_day/answers/#30-answer
+
 :j1--download-gem-rubygems:                       https://rubygems.org/gems/j1-template
 
 :nodejs--downloads:                               https://nodejs.org/de/download/
@@ -68,6 +132,8 @@ tag::data[]
 :data-kickstart-wiad--atom-project-search:        "pages/kickstarter/web_in_a_day/200_first_awesome_web/200-atom-search-in-project-1280x800.jpg, Search the project folder (Atom)"
 
 :data-kickstart-wiad--atom-home-page-1:           "pages/kickstarter/web_in_a_day/200_first_awesome_web/300-atom-edit-home-page-html-1-1280x800.jpg, Home page in production mode (index.html)"
+
+:data-kickstart-wiad--blog-navigator-1:           "pages/kickstarter/web_in_a_day/200_first_awesome_web/400-blog-navigator-1280x800.jpg, J1 Blog Navigator"
 
 
 :data-windows--create-a-link-1:                   "pages/kickstarter/web_in_a_day/110_getting_prepared/200-create-a-link-1.jpg, Run a create link dialog"

@@ -55,6 +55,11 @@ resource_options:
 // -----------------------------------------------------------------------------
 include::{documentdir}/310_writing_blog_posts.asciidoc[]
 
+== Questions
+
+include::{includedir}/parts.asciidoc[tag=questions-chapter]
+
+
 
 == Summarize!
 

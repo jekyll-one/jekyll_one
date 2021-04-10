@@ -61,11 +61,11 @@ include::{documentdir}/100_meet_and_greet.asciidoc[]
 
 == Questions
 
-include::{includedir}/parts.asciidoc[tag=questions-chapter]
+include::{includedir}/parts.asciidoc[tag=questions]
 
 [role="big bold"]
 mdi:head-question-outline[24px, md-grey-700 mb-5 mr-2]
-link:{j1-kickstart-wiad--answer-1}[Question 1, {browser-window--new}]
+Question 1
 
 [QUESTION]
 ====
@@ -75,7 +75,7 @@ of using databases?
 
 [role="big bold"]
 mdi:head-question-outline[24px, md-grey-700 mb-5 mr-2]
-link:{j1-kickstart-wiad--answer-2}[Question 2, {browser-window--new}]
+Question 2
 
 [QUESTION]
 ====
@@ -84,7 +84,7 @@ Static websites are considered to be safe. Are there any reasons for this?
 
 [role="big bold"]
 mdi:head-question-outline[24px, md-grey-700 mb-5 mr-2]
-link:{j1-kickstart-wiad--answer-3}[Question 3, {browser-window--new}]
+Question 2
 
 [QUESTION]
 ====

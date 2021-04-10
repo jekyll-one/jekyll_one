@@ -671,7 +671,7 @@ done in more detail. And it is required to *verify* if the installation was
 *successful* and gives results for their (installation) locations respectively
 the versions as *expected*.
 
-== Installing an Code Editor
+=== Installing an Code Editor
 
 Creating websites using J1, a good source code editor is needed. If you are
 using a code editor already, you can skip this section. Go for your favorite
@@ -712,7 +712,7 @@ It is up to you what code editor to use. Try the editors available on the
 market and decide what editor fits your needs. Find the download page for
 *Atom* and *VS Code* below.
 
-=== Downloads
+==== Downloads
 
 mdi:link-variant[24px, md-blue ml-3 mr-2]
 link:{atom-editor--home}[Download Atom Code Editor, {browser-window--new}] +

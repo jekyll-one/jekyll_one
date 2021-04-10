@@ -1,0 +1,114 @@
+---
+title:                                  Web in a Day
+tagline:                                answers
+date:                                   2021-03-01 00:00:00
+description:                            Answer blocks
+
+categories:                             [ Answers ]
+tags:                                   [ Jekyll, Knowledge, Tutorial  ]
+
+permalink:                              /pages/public/learn/kickstarter/web_in_a_day/answers/
+regenerate:                             true
+
+scrollbar:                              false
+comments:                               true
+
+resources:                              [ lightbox, clipboard, rouge ]
+resource_options:
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+      opacity:                          0.5
+      slides:
+        - url:                          /assets/images/pages/kickstarter/web_in_a_day/900_questionaire/michal-matlon-1920x1280.jpg
+          alt:                          Photo by Michal Matlon on Unsplash
+          alignY:                       top
+          badge:
+            type:                       unsplash
+            author:                     Michal Matlon
+            href:                       https://unsplash.com/@michalmatlon
+---
+
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set page (local) attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="all" %}
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
+
+== Answers
+
+include::{includedir}/parts.asciidoc[tag=answers]
+
+// Answers
+// -----------------------------------------------------------------------------
+
+=== Meet & Greet
+
+include::{includedir}/parts.asciidoc[tag=answers-section]
+
+
+include::{includedir}/parts.asciidoc[tag=answer-1]
+
+include::{includedir}/parts.asciidoc[tag=answer-2]
+
+include::{includedir}/parts.asciidoc[tag=answer-3]
+
+=== Getting prepared
+
+include::{includedir}/parts.asciidoc[tag=answers-section]
+
+
+include::{includedir}/parts.asciidoc[tag=answer-4]
+
+include::{includedir}/parts.asciidoc[tag=answer-5]
+
+include::{includedir}/parts.asciidoc[tag=answer-6]
+
+=== First awesome Web
+
+include::{includedir}/parts.asciidoc[tag=answers-section]
+
+
+include::{includedir}/parts.asciidoc[tag=answer-7]
+
+include::{includedir}/parts.asciidoc[tag=answer-8]
+
+include::{includedir}/parts.asciidoc[tag=answer-9]
+
+include::{includedir}/parts.asciidoc[tag=answer-10]
+
+=== Writing  Articles
+
+include::{includedir}/parts.asciidoc[tag=answers-section]
+
+
+include::{includedir}/parts.asciidoc[tag=answer-11]
+
+include::{includedir}/parts.asciidoc[tag=answer-12]
+
+include::{includedir}/parts.asciidoc[tag=answer-13]
+
+include::{includedir}/parts.asciidoc[tag=answer-14]
+
+
+
+== Leave a comment

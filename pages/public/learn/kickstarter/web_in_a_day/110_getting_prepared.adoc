@@ -55,6 +55,39 @@ resource_options:
 // -----------------------------------------------------------------------------
 include::{documentdir}/110_getting_prepared.asciidoc[]
 
+== Questions
+
+include::{includedir}/parts.asciidoc[tag=questions-chapter]
+
+
+[role="big bold"]
+mdi:head-question-outline[24px, md-grey-700 mb-5 mr-2]
+link:{j1-kickstart-wiad--answer-4}[Question 4, {browser-window--new}]
+
+[QUESTION]
+====
+What user can install software on Windows?
+====
+
+[role="big bold"]
+mdi:head-question-outline[24px, md-grey-700 mb-5 mr-2]
+link:{j1-kickstart-wiad--answer-5}[Question 5, {browser-window--new}]
+
+[QUESTION]
+====
+For _Ruby_, GEMs (libraries) can be installed *system-wide* or *userized*.
+What are the differences?
+====
+
+[role="big bold"]
+mdi:head-question-outline[24px, md-grey-700 mb-5 mr-2]
+link:{j1-kickstart-wiad--answer-6}[Question 6, {browser-window--new}]
+
+[QUESTION]
+====
+If _Ruby_ GEMs are installed *userized*, what is to be considered to make
+userized GEMs fully accessible?
+====
 
 == Summarize!
 

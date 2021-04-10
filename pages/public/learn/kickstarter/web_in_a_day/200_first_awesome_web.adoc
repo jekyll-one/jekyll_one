@@ -60,6 +60,48 @@ resource_options:
 // -----------------------------------------------------------------------------
 include::{documentdir}/200_first_awesome_web.asciidoc[]
 
+== Questions
+
+include::{includedir}/parts.asciidoc[tag=questions-chapter]
+
+[role="big bold"]
+mdi:head-question-outline[24px, md-grey-700 mb-5 mr-2]
+link:{j1-kickstart-wiad--answer-7}[Question 7, {browser-window--new}]
+
+[QUESTION]
+====
+The J1 Template System is using _NodeJS_. For what?
+====
+
+[role="big bold"]
+mdi:head-question-outline[24px, md-grey-700 mb-5 mr-2]
+link:{j1-kickstart-wiad--answer-8}[Question 8, {browser-window--new}]
+
+[QUESTION]
+====
+A code editor is a critical tool to manage J1 projects. What are the
+main reasons?
+====
+
+[role="big bold"]
+mdi:head-question-outline[24px, md-grey-700 mb-5 mr-2]
+link:{j1-kickstart-wiad--answer-9}[Question 9, {browser-window--new}]
+
+[QUESTION]
+====
+The Jekyll builder engine make use of a central configuration file.
+Give two examples of the settings and what do they control.
+====
+
+[role="big bold"]
+mdi:head-question-outline[24px, md-grey-700 mb-5 mr-2]
+link:{j1-kickstart-wiad--answer-10}[Question 10, {browser-window--new}]
+
+[QUESTION]
+====
+J1 is using two environment modes to control the HTML outputs for a website.
+What modes are available and what do they control?
+====
 
 == Summarize!
 

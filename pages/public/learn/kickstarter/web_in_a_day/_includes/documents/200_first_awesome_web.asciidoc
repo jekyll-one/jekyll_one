@@ -41,16 +41,14 @@ satisfied and what that means for your *First awesome Web*.
 
 == A first awesome Web
 
-The J1 Template GEM contains such a command-line interface: `j1`. The command
-is used to create (generate) a web *project*. Generate such a project is the
-very first step to manage a *new* website for the J1 Template system.
+To remind you of _Ruby_ GEMs, the module concept of _Ruby_ is
+different in comparison to other programming languages. For _Ruby_, a
+GEM *can* contain command-line interfaces (CLI, commands) to access
+higher-level functionality.
 
-[NOTE]
-====
-To remind you of _Ruby_ GEMs. A GEM can contain command-line interfaces (CLI, commands) to access
-higher-level functionality. Jekyll and J1 use that to provide the CLI
-commands `jekyll` and `j1`.
-====
+The J1 Template GEM contains such a CLI: `j1`. The command is used to create
+(generate) a web *project*. Generate such a project is the very first step
+to manage a *new* website for the J1 Template System.
 
 === Creating a J1 project
 
@@ -341,7 +339,7 @@ as below:
 NOTE: After setting up a project,some more files are created by the *setup*
 process in the *project* folder. For now, *ignore* these files.
 
-==== The Jekyll configuration file
+=== The Jekyll configuration file
 
 The Jekyll configuration file `_config.yml` sits in the *root* of your project
 directory and, as the name suggests, controls the configuration settings how
@@ -362,7 +360,7 @@ treated as data. Comments are *ignored* if such a file is being read and
 processed for data extraction.
 
 .Selected configuration settings from `_config.yml`
-[source, yaml]
+[source, yaml, role="noclip"]
 ----
 # ==============================================================================
 # 1. BUILD configuration
@@ -454,10 +452,17 @@ Discussing all available configuration setting for Jekyll and J1 would take
 at least another day. Find all settings for _Jekyll_ on the home page at:
 link:{url-jekyll--docs-configuration}[Jekyll Configuration, {browser-window--new}]
 A good Overview on the config settings and folder structure _Jekyll_ can
-be found at CloudCannon: link:{url-cloudcannon--jekyll-file-structure}[The File structure, {browser-window--new}]
+be found at CloudCannon:
+link:{url-cloudcannon--jekyll-file-structure}[The File structure, {browser-window--new}]
 
 
-== Exercise -- Environment modes
+== Exercises
+
+Learning is only possible by practicing. It is a matter of fact, that the
+learning success requires exercising. To support you, find in this section
+some examples to execute J1 for real-world usage.
+
+=== Environment modes
 
 Environment modes are used to specify the built *environment* of a website,
 controls the HTML processing. J1 uses these modes to control the *output*
@@ -480,7 +485,7 @@ In *development* mode, the generated HTML pages are *beatified* for better
 |===============================================================================
 
 The *destination* folder for the generated web pages were set by:
-[source, yaml]
+[source, yaml, role="noclip"]]
 ----
 destination:                            _site
 ----
@@ -504,7 +509,7 @@ a minute. Reconfigure the *value* for environment. Load the config file
 *_config.yml* in your editor, change the value from `production` to
 `development` and safe that file.
 
-[source, yaml]
+[source, yaml, role="noclip"]]
 ----
 environment:                            development
 ----
@@ -564,7 +569,7 @@ yarn site
 The HTML output has been changed for *development*. In your code editor, the
 home page looks very different:
 
-[source, html]
+[source, html, role="noclip"]
 ----
 <!DOCTYPE html>
 <html lang="en">
@@ -623,5 +628,119 @@ technical details, the comments explain what had happened in terms of the
 processing chain. The comments help understand the underlying builder engine
 and what modules were involved in creating the HTML page.
 
-Well done, folks! You managed to create a J1 project and run your first web. +
-*Have a break, save energy for the next*!
+=== The WebRoot folder
+
+Once Jekyll has built a website site, the resulting web, the entire static
+site, including all *assets*, gets written to the *destination* folder. In
+section <<The Jekyll configuration file>>, you'll find the configuration
+parameter `destination` that controls *what* folder is used.
+
+[source, yaml, role="noclip"]
+----
+destination:                            _site
+----
+
+.J1 WebRoot Structure in folder `destination`
+----
+  ├──── .
+  │     └─ assets   <1>
+  │     └─ pages    <2>
+  │     └─ posts    <3>
+  ├──── 204.html    <4>
+  ├──── 400.html    <4>
+  .
+  ├──── 533.html    <4>
+  ├──── favicon.ico <5>
+  ├──── index.html  <6>
+  ├──── robots.txt  <7>
+  └──── sitemap.xml <8>
+----
+<1>   Folder that contains all *Assets* of a website
+<2>   Folder that contains all *Articles*
+<3>   Folder that contains all *Blog Posts*
+<4>   Customized error pages
+<5>   Default favicon for the site
+<6>   The Home Page
+<7>   Info file for search engines (crawlers)
+<8>   Structure data of the site content used by search engines (crawlers)
+
+Open the *WebRoot* folder in your code editor. The *home page* of your websites
+is sitting in the WebRoot folder, all other generated HTML content gets written
+to:
+
+* *pages*, the folder that contains all *Articles*
+* *posts*, the folder that contains all *Blog Posts*
+
+Compare the folder structures for *posts* and *pages* by their corresponding
+*source* folders *collections* and *pages* in the *project* root folder. If
+the folders *pages* are compared for *source* and *destination*, you'll find
+some *differences*.
+
+Much more *different* is the picture if *collections* and *posts* are
+compared. First, why is the *source* folder for posts *collections*?
+The reason is that _Jekyll_ supports *three* content types:
+
+* posts
+* collections
+* pages
+
+The builder engine _Jekyll_ differentiate content into *two* classes:
+
+* ordered content
+* unordered content
+
+I hear your voices: what the hell is that! If not, that was what I did first.
+
+What criteria is _Jekyll_ using to *order* content? No big deal: it's the
+time. For _Jekyll_ websites, blog posts have a timestamp to make them
+*time-lined*. That is the same for all Blogging systems in general. The order
+over *time* makes it possible to differentiate *older* posts from the *newer*
+ones. The following criteria for *ordering* blogs post is the *category* they
+belong to.
+
+In short, blog articles are ordered by:
+
+* time *first*
+* followed by their *category*
+
+If you look at the *Blog* Navigator J1 provides, check the NavBar of your
+starter web for *Blog*, it becomes clearer why ordering content makes sense.
+
+.J1 Blog Navigator
+lightbox::kickstart-wiad--blog-navigator-1[ 800, {data-kickstart-wiad--blog-navigator-1} ]
+
+NOTE: The content-type *collections* are *not* discussed in that course, not
+to exceed the time frame of a day.
+
+Contrasting the *pages*, the unordered content. As the term implies, pages
+are *not* ordered. For J1, the content type is *sorted* using the build-in
+*navigation* module.
+
+Each content type follows a specific scheme, the generate so-called
+*perma-links*, the base to create URL's to access your web pages by a web
+browser. The *perma-links* gets discuseed in more detail in the following
+chapters focussing on *writing* content.
+
+Each content type follows a specific scheme, generating so-called
+*perma-links*, the base to create URLs to access your web pages by a web
+browser. The perma-links get discussed in more detail in the following
+chapters focussing on writing content.
+
+Finally, compare the *assets* folder for source and destination. You’ll
+find many folders were created on the output side but do not exist in your
+project folder.
+
+*Is it magic*?
+
+No, no magic. J1 is a **GEM**-based template, and some resources are part of
+the GEM, the _Ruby_ library. The folders *data* and *themes* are not part
+of a J1 project but available by the GEM and used to generate the web from the
+library location. The folders contain control information for the build-in
+modules and all the *CSS*, *Javascript*, and *Font* resources required for
+your new awesome web.
+
+The next *again*! You finished your *step-in* into the world of *J1* and
+_Jekyll_. Time to have a break. You have deserved a break!
+
+If you return, some stuff for wrapping up is provided to consolidate what is
+learned so far.
