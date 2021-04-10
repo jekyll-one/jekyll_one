@@ -993,10 +993,6 @@ link:{j1-kickstart-wiad--writing-blog-posts}[Writing Blog Posts] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--design-your-site}[Design your Site] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
-link:{j1-kickstart-wiad--using-git}[Using Git] +
-mdi:format-section[24px, md-blue ml-3 mr-2]
-link:{j1-kickstart-wiad--document-skeleton}[Document Skeleton] +
-mdi:format-section[24px, md-blue ml-3 mr-2]
 You are here -- Wrapping up +
 
 //
