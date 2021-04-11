@@ -581,7 +581,7 @@ defaults:
       toc:                              true
       fam_menu_id:                      page_ctrl_simple
       resources:                        toccer
-      analytics:                        false
+      analytics:                        true
       advertising:                      false
       comments:                         false
       scrollbar:                        false

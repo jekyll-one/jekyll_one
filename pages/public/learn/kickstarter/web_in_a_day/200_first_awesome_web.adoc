@@ -8,9 +8,8 @@ description: >
 categories:                             [ Jekyll, Knowledge, Tutorial ]
 tags:                                   [ Generating, Webs ]
 
-
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/a_first_awesome_web/
-regenerate:                             true
+regenerate:                             false
 
 scrollbar:                              false
 comments:                               true

@@ -9,7 +9,7 @@ tags:                                   [ Preparations ]
 categories:                             [ Jekyll, Knowledge, Tutorial ]
 
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/getting_prepared/
-regenerate:                             true
+regenerate:                             false
 
 scrollbar:                              false
 comments:                               true

@@ -9,7 +9,7 @@ categories:                             [ Jekyll, Knowledge, Tutorial ]
 tags:                                   [ Writing, Articles ]
 
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/writing_articles/
-regenerate:                             false
+regenerate:                             true
 
 scrollbar:                              false
 comments:                               true
