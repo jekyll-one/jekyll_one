@@ -1,0 +1,16 @@
+// ~/300_asciidoc_writers_guide/000_includes/documents
+// Sublevel Entry Document: 200_creating_documents.asciidoc
+// -----------------------------------------------------------------------------
+
+include::200_building_documents/200_building_documents.asciidoc[]
+
+include::200_building_documents/210_use_document_skeleton.asciidoc[]
+
+include::200_building_documents/220_skeleton_anatomy.asciidoc[]
+
+//include::200_building_documents/230_asciidoc_preprocessor.asciidoc[]
+
+//include::200_building_documents/230_files_and_folders.asciidoc[]
+
+//include::200_building_documents/240_setup_the_workbench.asciidoc[]
+

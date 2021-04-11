@@ -11,7 +11,7 @@ or post's source on GitHub. This can be overridden in the `YAML Front Matter`.
 
 |`site.collections_dir`
 |{{ site.collections_dir }}
-|lorem:sentences[1]
+|// lorem:sentences[1]
 
 |`page.images.dir`
 |{{ page.images.dir }}
@@ -41,7 +41,7 @@ sitewide configuration defined by `_config.yml`.
 
 |`includedir`
 |{{ includedir }}
-|lorem:sentences[1]
+|// lorem:sentences[1]
 
 |===============================================================================
 endif::[]

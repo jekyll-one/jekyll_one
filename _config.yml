@@ -315,7 +315,7 @@ permalink:                              pretty
 # site.url will be set to the value of host, port. This defaults to
 # url: http://localhost:4000.
 #
-url:                                    "http://localhost:44440/"
+url:                                    "https://jekyll.one/"
 
 # The subpath of your site, e.g. /blog/. Used in conjunction with
 # site.url (see above) when you want a link to something with the

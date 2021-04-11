@@ -1,0 +1,306 @@
+// ~/300_asciidoc_writers_guide/000_includes/documents
+// Chapter document: 000_intro.asciidoc
+// -----------------------------------------------------------------------------
+
+== Intro
+
+Let's start writing!
+
+Before you start writing, some general thoughts make sense to clarify what
+Speaking, Reading and Writing are all about. What are the differences, what
+the difficulties. I recomment to groove into that topic to become acquainted
+with the base how human use a language rather than step in directly to tools
+and techniques for writing.
+
+
+=== Speaking is Natural
+
+Spoken language is *hard-wired* inside the human brain. Language capacity in
+humans evolved about 100.000 years ago, and the human brain is fully adapted
+for language processing. Any healthy child will learn to talk because it is
+an innateness.
+
+Reading and Writing Are Not?
+
+A related fact should be self-evident: Reading and writing are *acquired
+skills* for which the human brain is not yet fully evolved. Human brains are
+naturally wired to speak. They are not naturally wired to read and write.
+With *teaching*, children typically learn to read at about age 5 or 6 and need
+several years to master the skill. Sophisticated reading comprehension is the
+goal of 8 to 16 more years of schooling. As all of you know, a long time, a
+long way to go.
+
+=== Writing is Unnatural
+
+Writing is an unnatural activity. Unlike talking, which all people learn on
+their own in the process of growing up, writing needs to be *taught* and
+requires the use of *tools*.
+
+You can carry on a conversation at any time and any place. You don't need any
+special equipment. The medium of speech is the air we breathe, and speech
+itself is just a different way of breathing. You do the whole job with just
+your own body. For that reason: *Speaking is natural*.
+
+But in order to write, you need specialized tools. You need a tool to write
+with -- a pencil. You need something to write on -- you need paper. But the
+most important tool we use in writing is one we often don't think of as a tool
+at all. You need a set of recognizable symbols to represent words -- an
+alphabet.
+
+The alphabet is a set of tools. Unlike the words we speak, the letters of the
+alphabet had to be *invented* by people. You learned to speak your native
+language by just hanging around and hearing it. But when you learned to read
+and write you had to sit down and study -- first to learn to recognize the
+letters and associate them with the correct sounds and then to produce them
+yourself with pencil and paper. That's basically the reason why it is hard
+to write.
+
+==== Speed
+
+Stop for a moment and think about the differences between writing and talking,
+because those differences account for much that is difficult -- or appears to
+be difficult -- about writing.
+
+First, writing is *much slower* than talking. It will take several times longer
+to type the sentence that makes up the previous paragraph as it takes to speak.
+Try the experiment yourself. Even with the wonderful tools available to us
+today, writing takes more time. Sometimes much time.
+
+Why is that important? One reason is that our brains are conditioned to work
+at the *speed of talk*, to react experientially to changing circumstances and
+to give feedback very quickly. Writing makes us spread out the process of
+*expressing ourselves*. That can be very uncomfortable, and it can require
+us to learn a whole *new way* of experiencing language.
+
+==== Loneliness
+
+Second, we always -- or almost always -- talk to *other* people. But we write,
+in an important sense *alone*. When I speak or listen I am usually looking at
+someone else, but when I write I am looking at myself or at what I am writing.
+Most of us learned to talk by looking at other people talk while we listened
+to them talk. And to this day, when we speak to someone we are usually looking
+at the person we are speaking to.
+
+==== Sight and Hearing
+
+We have learned to manage listening without seeing the speaker -- we can talk
+on the telephone or listen to the radio.
+
+But even then, we can imagine the expressions that accompany the speaker's
+voice. Why is television more popular than radio? Because it is more involving
+and natural to be able to see the person we are listening to. When we speak or
+listen, we usually have *direct input* from another person through two senses:
+*sight and hearing*.
+
+And it is dynamic, rapidly changing input, at the speed of natural speech.
+When we read or write we are not looking at another person at all and we are
+not hearing anything that's relevant to the meaning of the words. In reading,
+if we can read fairly rapidly, we can *imagine* the speaker speaking; we can
+*hear* in our *minds* what we can't hear in our ears. But when we write we
+have to watch *ourselves writing*.
+
+Because writing requires using complex tools (pen, paper, alphabet), we must
+look at ourselves doing it in order to get it right. Try this experiment:
+write longhand at a normal speed with your eyes closed or holding a piece of
+paper over your hand to hide the paper you're writing on. Many people cannot
+write at a normal speed under these circumstances. Those who can often produce
+a childish-looking scrawl that is hardly legible.
+
+=== Written language is visible
+
+If you are a touch typist, of course, you don't need to look at the keyboard
+as you type, but you do need to constantly monitor what you are typing on the
+screen or page. The fact that you do not get input from other people while you
+are writing means that writing requires a much higher degree of concentration
+than talking, listening, or even reading.
+
+That is both good news and bad news. The bad news is that writing can seem a
+lonely business, one in which you have to wait a long time to get the feedback
+that would come instantly if you were talking to someone.
+
+=== Written language is permanent
+
+The third difference between writing and speaking is that writing is permanent,
+and therefore more public, than spoken words. When you speak, as soon as the
+words are out of your mouth, they are gone. They exist only in the mind of the
+hearer. So speech, being so impermanent, is very changeable.
+
+If you see the person you talk to doesn't catch what you mean the first time,
+you'll just say it again, maybe a little different. If the person you talking
+to looks confused, you'll explain what you've meant. If you've ever read a
+direct transcript of someone speaking, you might have noticed how many fragments
+and false starts are commonplace in spoken language. We don't notice this very
+often as listeners because we are so used to it. As listeners and as speakers,
+we automatically *erase* errors and misstatements: a brain is an excellent
+filtering engine and replaces what does not make sense.
+
+When we speak, we are constantly *revising* what we are saying. It's easy to do.
+When we write, on the other hand, there is a record of what we've written that
+never changes and that is the *same for all readers*. Anyone who gets ahold of
+what we've written will see exactly the *same thing*. This *permanence* is one
+of the great strengths of writing. It *preserves* our ideas and allows us to
+spread them to as many people as can read them.
+
+=== Differences of Speaking and Writing
+
+So there are at least three important differences between speaking and writing.
+Speaking is faster; writing takes more time. Speaking is social, done in the
+presence of other people.
+
+Writing is in a sense private, requiring us to focus on the act of writing
+itself. Speaking is transitory, writing is permanent. We should think about
+these differences as we try to understand and grapple with the task of
+becoming *better* writers.
+
+One conclusion we can draw is that writing is, in some ways, inherently
+difficult. That is to say that the difficulty is caused by the very nature
+of the *act of writing*, so we will always encounter that difficulty. Writing,
+in this sense, is not like walking or talking or driving a car. These activities
+become easy with enough practice. Writing: *never*.
+
+=== Writing needs continuous practice
+
+Writing is more like sports or making music. It will always remain difficult
+even after you have done it a lot. In the sense that just doing it well takes
+much effort and concentration. This is bad news -- and good news.
+
+The bad news is that if we are expecting to get to some point where we can
+pass some test or class, master some technique or gimmick, or reach some
+level of practice where writing will no longer require real effort, then we
+are bound to be disappointed.
+
+The good news is that almost all the tasks that we seek out for their own sake
+in life are difficult in this way. No one devotes her life to casual walking.
+But sports, playing the guitar or writing can become a *career* or even an
+*obsession*. In the long run, only *inherently difficult* tasks are *interesting
+and involving*.
+
+If you find writing difficult and feel that you shouldn't or that you are
+alone or defective in having this experience, you can relax. It's difficult
+for you; it's difficult for me; it's difficult for all people.
+
+=== Meet the Challenge
+
+People who want to master any *complex skill* have a similar experience. If
+what you are looking for is a way to get results without any *effort*, you
+are *wasting your time*. But there are ways you can make your efforts *count
+for more*. Some of those things are suggested by the characteristics of
+writing that has been discussed.
+
+Since talking, listening, and reading are all easier than writing, you
+should use them to *prepare for writing*. It is much harder to decide how to
+say something before you have said it. And it is definitely harder to decide
+how to say something in writing that you have *never said* in conversation.
+
+Talk to people about what you believe. Test *your ideas* in the faster, less
+permanent medium of speech *before* you try to set them down in the slower,
+more permanent medium of writing. Read all you can about what you want to
+write about, and then talk to someone about it. Remember that you will have
+no chance to see how people react when you are writing to them, but you do
+have a chance to see how they react when you are talking to them.
+
+Use the skills you have to help you to develop new ones. It is easier for
+all of us to talk than to write. So even when you are writing, talk it out.
+Try to say what you think you want to say out loud, then write it down.
+
+As you write, stop to read what you have written aloud, so you can hear it.
+Talking and hearing bring parts of your brain into the task that will help
+you to focus on what you are saying and achieve the level of concentration
+you need. If you find your concentration wandering while writing, read what
+you have already written aloud, and then imagine you are talking with someone
+about it and carry on an imaginary conversation. Talking will help to ease
+you into writing in a more concentrated way. As far as I can tell, very
+experienced writers have developed the ability to *hear* what they write,
+so that for them the act of writing is closer to the act of speech than
+it is for the rest of us.
+
+=== Time counts
+
+Assume that writing will always take longer than you expect it to. Having an
+idea and writing the idea are different processes. Writing takes longer than
+talking. And because we *lack the feedback* when writing that keeps moving us
+along when talking, we are going to stop and start much more when writing
+than we would if we were explaining our ideas to someone. And because writing
+is permanent, we are often *afraid* to put our *ideas down on paper*.
+
+All of these things, which are normal and inevitable, mean that if we try to
+force ourselves to write fast, we probably won't write at all. If you think
+that the only way you can write is under a deadline and so put off writing
+until the last minute, you do yourself a great disservice. You have no idea
+what you could do if you gave yourself the time to do it.
+
+On the other hand, while we cannot force ourselves to write fast, if we can
+let ourselves write fast we will find that writing seems smoother and easier
+and more natural. The difference here is the difference between *force* and
+*let*. When we are thinking most experientially, when we are getting ideas
+out in the open most effectively, is when we experience writing as most like
+talking. It won't be as fast as talking, but it may seem even faster when we
+are doing it.
+
+What slows us down is that we are all afraid of the permanence of writing. We
+are afraid of making mistakes, of saying something that we didn't really mean,
+of appearing foolish. We can gain some control over this fear if we realize
+that we have some control over how permanent and how public our writing really
+is.
+
+We can keep some of our writing fairly private, letting people we trust look
+at it and give us feedback. We can test our writing before we make it public.
+If I know that the first draft of my essay will be seen only by me or only by
+a few people, I can relax and say whatever I want. I can let myself write my
+first draft fast because it is private. I can always fix it later.
+
+=== Writing is Natural
+
+Because writing is private when we produce it, we can sometimes believe that
+it can remain private. Much of the writing we do in school seems this way.
+We write only for the teacher, and we trust the teacher never to breathe a
+word. In fact, much of the student writing that I have seen as a teacher
+was apparently written by people who didn't expect anybody else to ever
+read it, or at least pay any attention to it. Writing that is just a
+classroom exercise, that has *no real* audience, is a *waste* of everyone's
+time.
+
+Why?
+
+Well, ask yourself this: What good is writing, potentially, to you? The
+answer has to be, in some form, that writing is a way you can influence
+people: change their behavior, open their minds, bring them around to
+your way of thinking, make them happy, make them angry, get them to ask
+questions, get them to answer questions. Writing will be important to
+you in your life because it is a way for you to shape your world. But
+it can do that only if people read and understand it. It will never make
+much difference to you whether you can produce a well formed sentence,
+unless the people who you want to influence read and understand that
+sentence.
+
+What was said above about writing being *unnatural* is true in a way, but
+in a *deeper sense* writing is *completely natural*. It's different than
+speaking, but underneath all of the differences, we write for the *same
+reason* we speak: we want others to understand us and we want to understand
+them.
+
+=== Writing is improved speech
+
+If we emphasize how different writing is so much that we miss its fundamental
+purpose, then we miss the whole point. Writing is *improved* speech. It is
+harder because it is better. It takes longer because it can carry more meaning.
+
+It requires more concentration because it carries more weight. It is more
+permanent because it is tested and refined. Writing is harder than talking
+because it counts for more, not less.
+
+=== What to do next
+
+As said in the beginning: Let's start writing!
+
+But a different way -- using new tools and new techniques for easier (*not
+easy*!) writing and better results. The following chapters help you manage the
+*act of writing* better. Simple tricks to get you into a *flow* of *writing*,
+modern but simple tools for text processing with no need of horrible computer
+programs like *word processors*.
+
+You learn *non disturbing techniques* for better concentration on what you want
+to express, you want to write down. You'll find better ways to structure your
+writing for better structured, better understandable results.
+
+Sounds good? Go ahead!

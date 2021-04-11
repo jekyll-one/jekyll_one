@@ -1,0 +1,412 @@
+// ~/300_asciidoc_writers_guide/000_includes/documents/200_building_documents/
+// Chapter document: 220_asciidoc_preprocessor.asciidoc
+// -----------------------------------------------------------------------------
+
+== AsciiDoc Preprocessor
+
+The AsciiDoc *Preprocessor* used by *Asciidoctor* is a powerful component of
+the AsciiDoc language engine to organize source files for AsciiDoc documents.
+The main pupose of the preprocessor is:
+
+* partitioning large documents into smaller files
+* load parts|snippets of a source file if used multiple times (e.g. examples)
+* create document variants for different use (e.g HTML or PDF output)
+
+=== Including Files
+
+The Preprocessor is a file merger. Based on the `include::` directive, the
+preprocessor performs a simple file merge *before* the lines are parsed by the
+language engine into a document structure.
+
+NOTE: The `include::` directive looks like a AsciiDoc *block macro*, but it
+is a preprocessor directive like `ifdef` or `ifeval`. That means *no*
+environmental information (attributes) are evaluated. To control a file merge,
+see chapter <<Conditional Processing>>.
+
+Merging files works with any sort of text files, not only files containing
+Ascidoc data. The content of all included files is *normalized*. What means,
+the *encoding* of the data is forced to *UTF-8* or converted from UTF-16 to
+UTF-8 if the file contains a BOM. Trailing whitespace and endlines are removed
+from each line and replaced with a *Unix line feed*.
+
+The files recognized as *AsciiDoc* files has one of the following extensions:
+
+[horizontal]
+{empty}:: `.asciidoc`  `.adoc`  `.ad`  `.asc`  `.txt`
+
+Asciidoctor runs the preprocessor on all the lines the `include::` directive
+is placed, loads the data and interprete the following directives:
+
+* includes
+* preprocessor conditionals (e.g., `ifdef`)
+* front matter (if enabled)
+
+This allows including files to be *nested*, and provides lot of *flexibility*
+in constructing quite different documents with a single master document
+and a few command line attributes.
+
+=== Conditional Processing
+
+You can include or exclude lines of text in your document using one of the
+following conditional preprocessor directives:
+
+* ifdef
+* ifndef
+* ifeval
+
+These directives tell the processor whether to include the enclosed content
+based on certain conditions. The conditions are based on the presence or value
+of document attributes.
+
+For example, say you want to include a certain section of content only when
+converting to HTML. Conditional preprocessor directives make this possible.
+You simply check for the presence of the `backend-html5` attribute using
+an `ifdef` directive.
+
+=== Checking multiple attributes
+
+Both the `ifdef` and `ifndef` directives accept multiple attribute names.
+The combinator can be "`and`" or "`or`".
+
+Any attribute (or)::
+Multiple comma-separated (,) directive names evaluate to true, allowing the
+content to be included, if one or more of the directives is defined.
+Otherwise the content is not included.
++
+.Any attribute example
+----
+\ifdef::backend-html5,backend-docbook5[Only shown when converting to HTML5 or DocBook 5.]
+----
+
+All attributes (and)::
+Multiple plus-separated (+) directive names evaluate to true, allowing the
+content to be included, if all of the directives are defined.
+Otherwise the content is not included.
++
+.All attributes example
+----
+\ifdef::env-github+backend-html5[Only shown when converting to HTML5 on GitHub.]
+----
+
+The `ifndef` directive negates the results of the expression.
+
+[WARNING]
+====
+Starting in Asciidoctor 1.5.6, the operator logic in the `ifndef` directive
+changed to align with the behavior of AsciiDoc Python. Specifically, when
+attributes are separated by commas, content is only included if none
+of the attributes are defined. When attributes are separated by multipe plus
+characters (`+`), content is included if at least one of the attributes is
+undefined.
+
+See https://github.com/asciidoctor/asciidoctor/issues/1983[issue #1983] to
+find the discussion about this behavior and the rationale for the change.
+====
+
+=== `include` Directive
+
+The include directive has the following anatomy:
+
+[subs=+quotes]
+----
+\include::path[leveloffset=__offset__,lines=__ranges__,tag(s)=__name(s)__,indent=__depth__]
+----
+
+The leveloffset, lines, tag(s) and indent attributes are optional, making the
+simplest case look like:
+
+----
+= Document Title
+
+\include::content.asciidoc[]
+----
+
+The sections that follow go into detail about how the include file is resolved
+and how each attribute is used.
+
+[[include-resolution]]
+==== File resolution
+
+The path used in an include directive may be either relative or absolute. If
+the path relative, the processor resolves the path using the following rules:
+
+* If the include directive is used in the main (top-level) document, relative paths are resolved relative to the base directory.
+(The base directory defaults to the directory of the main document and can be overridden from the CLI or API).
+* If the include directive is used in a file that has itself been included, the path is resolved relative to the including (i.e., current) file.
+
+//TODO show examples to contrast a relative vs an absolute include
+
+These defaults makes it easy to reason about how the path to the include file
+is resolved.
+
+If the preprocessor cannot locate the file (perhaps because you mistyped the
+path), you'll still be able to convert the document. However, you will get the
+following warning message during conversion:
+
+ asciidoctor: WARNING: master.adoc: line 3: include file not found: /.../content.adoc
+
+The following message will also be inserted into the output:
+
+ Unresolved directive in master.adoc - include::content.asciidoc[]
+
+To fix the problem, edit the file path and run the converter again.
+
+If you store your AsciiDoc files in nested folders at different levels,
+relative file paths can quickly become awkward and inflexible. A common
+pattern to help here is to define the paths in attributes defined in the
+header, then prefix all include paths with a reference to one of these
+attributes:
+
+[listing]
+....
+:includedir: _includes
+:sourcedir: ../src/main/java
+
+\include::{includedir}/fragment1.asciidoc[]
+
+[source,java]
+----
+\include::{sourcedir}/org/asciidoctor/Asciidoctor.java[]
+----
+....
+
+Keep in mind that no matter how Asciidoctor resolves the path to the file,
+access to that file is limited by the safe mode setting under which Asciidoctor
+is run. If a path violates the security restrictions, it may be truncated.
+
+
+==== Partitioning documents
+
+When your document gets large, you can split it up into subsections for easier
+editing as follows:
+
+[source, adoc, linenums, highlight='3-7']
+----
+= My book
+
+\include::chapter01.asciidoc[]
+
+\include::chapter02.asciidoc[]
+
+\include::chapter03.asciidoc[]
+----
+
+TIP: Note the *blank lines* before and after the include directives.
+
+This practice is recommended whenever including AsciiDoc content to avoid
+unexpected results (e.g., a section title getting interpreted as a line at
+the end of a previous paragraph).
+
+The leveloffset attribute can help here by pushing all headings in the
+included document down by the specified number of levels. This allows you
+to publish each chapter as a standalone document (complete with a document
+title), but still be able to include the chapters into a master document
+(which has its own document title).
+
+You can easily assemble your book so that the chapter document titles become
+level 1 headings using:
+
+[source, adoc, linenums]
+----
+= My Book
+
+\include::chapter01.asciidoc[leveloffset=+1]
+
+\include::chapter02.asciidoc[leveloffset=+1]
+
+\include::chapter03.asciidoc[leveloffset=+1]
+----
+
+Because the leveloffset is _relative_ (it begins with + or -), this works
+even if the included document has its own includes and leveloffsets. If you
+have lots of chapters to include and want them all to have the same offset,
+you can save some typing by setting leveloffset around the includes:
+
+[source, adoc, linenums]
+----
+= My book
+
+:leveloffset: +1
+
+\include::chapter01.asciidoc[]
+
+\include::chapter02.asciidoc[]
+
+\include::chapter03.asciidoc[]
+
+:leveloffset: -1
+----
+
+The final line returns the leveloffset to 0.
+
+Alternatively, you could use absolute levels:
+
+[source, adoc, linenums]
+----
+:leveloffset: 1
+
+//includes
+
+:leveloffset: 0
+----
+
+Relative levels are preferred. Absolute levels become awkward when you have
+nested includes since they aren't context aware.
+
+
+=== `ifdef` Directive
+
+Content between the `ifdef` and `endif` directives gets included if the
+specified attribute is set:
+
+.ifdef example
+----
+\ifdef::env-github[]
+This content is for GitHub only.
+\endif::[]
+----
+
+The syntax of the start directive is `ifdef::<attribute>[]`, where
+`<attribute>` is the name of an attribute.
+
+Keep in mind that the content is not limited to a single line.
+You can have any amount of content between the `ifdef` and `endif` directives.
+
+If you have a large amount of content inside the `ifdef` directive, you may
+find it more readable to use the long-form version of the directive, in which
+the attribute (aka condition) is referenced again in the `endif` directive.
+
+.ifdef long-form example
+[source, adoc, linenums]
+----
+\ifdef::env-github[]
+This content is for GitHub only.
+
+So much content in this section, I'd get confused reading the source without
+the closing `ifdef` directive.
+
+It isn't necessary for short blocks, but if you are conditionally
+including a section it may be something worth considering.
+
+Other readers reviewing your docs source code may go cross-eyed when
+reading your source docs if you don't.
+\endif::env-github[]
+----
+
+If you're only dealing with a single line of text, you can put the content
+directly inside the square brackets and drop the `endif` directive.
+
+.ifdef single line example
+----
+\ifdef::revnumber[This document has a version number of {revnumber}.]
+----
+
+The single-line block above is equivalent to this formal `ifdef` directive:
+
+[source,asciidoc]
+----
+\ifdef::revnumber[]
+This document has a version number of {revnumber}.
+\endif::[]
+----
+
+=== ifndef Directive
+
+`ifndef` is the logical opposite of `ifdef`. Content between `ifndef` and
+`endif` gets included only if the specified  attribute is _not_ set:
+
+.ifndef Example
+----
+\ifndef::env-github[]
+This content is not shown on GitHub.
+\endif::[]
+----
+
+The syntax of the start directive is `ifndef::<attribute>[]`, where
+`<attribute>` is the name of an attribute. The `ifndef` directive supports
+the same single-line and long-form variants as `ifdef`.
+
+
+=== `ifeval` Directive
+
+Content between `ifeval` and `endif` gets included if the expression inside
+the square brackets evaluates to true.
+
+.ifeval example
+----
+\ifeval::[{sectnumlevels} == 3]
+If the `sectnumlevels` attribute has the value 3, this sentence is included.
+\endif::[]
+----
+
+The `ifeval` directive does not have a single-line or long-form variant
+like `ifdef` and `ifndef`. The expression consists of a left-hand value and
+a right-hand value with an operator in between.
+
+.ifeval expression examples
+[source, adoc, linenums]
+----
+\ifeval::[2 > 1]
+...
+\endif::[]
+
+\ifeval::["{backend}" == "html5"]
+...
+\endif::[]
+
+\ifeval::[{sectnumlevels} == 3]
+...
+\endif::[]
+
+// the value of outfilesuffix includes a leading period (e.g., .html)
+\ifeval::["{docname}{outfilesuffix}" == "master.html"]
+...
+\endif::[]
+----
+
+
+==== Values
+
+Each expression value can reference the name of zero or more AsciiDoc
+attribute using the attribute reference syntax (for example, `+{backend}+`).
+Attribute references are resolved (substituted) first. Once attributes
+references have been resolved, each value is coerced to a recognized type.
+
+When the expected value is a string (i.e., a string of characters), we
+recommend that you enclose the expression in quotes.
+
+The following values types are recognized:
+
+[horizontal]
+number:: Either an integer or floating-point value.
+quoted string:: Enclosed in either single (') or double (") quotes.
+boolean:: Literal value of `true` or `false`.
+
+
+==== How value type coercion works
+
+If a value is enclosed in quotes, the characters between the quotes are
+preserved and coerced to a string.
+
+If a value is not enclosed in quotes, it is subject to the following type
+coercion rules:
+
+* an empty value becomes nil (aka null)
+* a value of `true` or `false` becomes a boolean value
+* a value of only repeating whitespace becomes a single whitespace string
+* a value containing a period (`.`) becomes a floating-point number
+* any other value is coerced to an integer value
+
+
+==== Operators
+
+The value on each side is compared using the operator to derive an outcome.
+[horizontal]
+`==`:: Checks if the two values are equal.
+`!=`:: Checks if the two values are not equal.
+`<`:: Checks whether the left-hand side is less than the right-hand side.
+`+<=+`:: Checks whether the left-hand side is less than or equal to the right-hand side.
+`>`:: Checks whether the left-hand side is greater than the right-hand side.
+`+>=+`:: Checks whether the left-hand side is greater than or equal to the right-hand side.
+
+NOTE: The operators follow the same rules as operators in Ruby.

@@ -1,0 +1,17 @@
+// ~/300_asciidoc_writers_guide/000_includes/documents/100_start_typing/
+// Chapter document: 100_start_typing.asciidoc
+// -----------------------------------------------------------------------------
+
+== Start typing
+
+* Explain the nature of the *Act of Writing*
+
+* Introduce formal, mindless steps on the way to a chapter, section, books
+
+    - document skeleton, the base structure
+    - first step: the top-level topic
+    - practise the use of an *editor*
+
+// lorem:sentences[5]
+
+// lorem:sentences[2]

@@ -1,9 +1,9 @@
-lorem:sentences[3]
+// lorem:sentences[3]
 
-lorem:sentences[5]
+// lorem:sentences[5]
 
 == Wrapping Up
 
-lorem:sentences[5]
+// lorem:sentences[5]
 
-lorem:sentences[3]
+// lorem:sentences[3]

@@ -1,9 +1,9 @@
-lorem:sentences[3]
+// lorem:sentences[3]
 
-lorem:sentences[5]
+// lorem:sentences[5]
 
 == Design Your Site
 
-lorem:sentences[5]
+// lorem:sentences[5]
 
-lorem:sentences[3]
+// lorem:sentences[3]

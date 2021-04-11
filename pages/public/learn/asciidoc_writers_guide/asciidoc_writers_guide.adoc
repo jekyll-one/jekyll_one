@@ -1,0 +1,48 @@
+---
+# ~/asciidoc_writers_guide.a2p
+# Master Document for HTML conversion
+#
+title:                                  Asciidoc Writer's Guide
+tagline:                                An Introduction to Writing in AsciiDoc
+description:                            An Introduction to Writing in AsciiDoc
+
+tags:                                   [ Asciidoctor, Guide, Writer ]
+index:                                  []
+categories:                             [ pages, manuals ]
+
+permalink:                              /pages/protected/manuals/asciidoc/writers_guide/
+regenerate:                             true
+
+resources:                              [ lightbox ]
+resource_options:
+  - toccer:
+      collapseDepth:                    3
+---
+
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set page (local) attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="all" %}
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+include::{documentdir}/000_intro.asciidoc[]
+
+include::{documentdir}/100_start_typing.asciidoc[]
+
+include::{documentdir}/200_building_documents.asciidoc[]

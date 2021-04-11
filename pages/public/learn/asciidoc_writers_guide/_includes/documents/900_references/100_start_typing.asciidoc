@@ -1,0 +1,24 @@
+// ~/300_asciidoc_writers_guide/000_includes/documents/900_references/
+// Chapter document: 100_start_typing.asciidoc
+// -----------------------------------------------------------------------------
+
+// URIs may moved to ~/000_includes/attributes.asciidoc
+// -----------------------------------------------------------------------------
+:uri-ref-stoyan-stefanov-1:       http://blog.stoyanstefanov.com/writing-vs-typing/
+
+
+=== Start Typing
+
+//.References - Start Typing
+[cols="3,5a,^1,^1,^1,^1", options="header", width="100%", role="table-responsive-stacked-lg mt-3"]
+|===============================================================================
+|Author |Title |Year |Level |Cite |Content
+
+|Stoyan Stefanov
+|{uri-ref-stoyan-stefanov-1}[Writing vs. typing, {window}]
+|2012
+|{beginner}
+|{y}
+|{y}
+
+|===============================================================================

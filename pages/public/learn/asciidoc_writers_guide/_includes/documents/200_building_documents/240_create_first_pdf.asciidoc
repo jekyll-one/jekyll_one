@@ -1,0 +1,9 @@
+// ~/300_asciidoc_writers_guide/000_includes/documents/200_building_documents/
+// Chapter document: 230_files_and_folders.asciidoc
+// -----------------------------------------------------------------------------
+
+== Create a first PDF document
+
+// lorem:sentences[3]
+
+// lorem:sentences[5]

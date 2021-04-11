@@ -1,0 +1,11 @@
+
+
+ifdef::backend-html5[]
+.Title
+lightbox::image-name[ 800, {data-image-name} ]
+endif::[]
+
+ifdef::backend-pdf[]
+.Title
+image::{images-dir}/sub_folder/image-name.png[Title, 800]
+endif::[]

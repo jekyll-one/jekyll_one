@@ -1,0 +1,82 @@
+// ~/300_asciidoc_writers_guide/000_includes/documents/200_building_documents/
+// Chapter document: 220_skeleton_anatomy.asciidoc
+// -----------------------------------------------------------------------------
+
+== Skeleton Anatomy
+
+A skeleton is a bunch of bones. See it as as biologist. Grput things togeter
+
+// lorem:sentences[3]
+
+=== Document types
+
+* Introduce document types
+
+  - master documents
+  - entry documents
+  - chapter documents
+  -
+
+=== Files and folders
+
+* Explain the general folder structure
+
+  - numbering scheme
+  - naming scheme
+
+=== AsciiDoc attributes
+
+  - numbering scheme
+
+
+
+
+* supporting _folders
+
+* planning the project size (1-3-5-7)
+
+//////////
+=== Source highlight lines
+//:pygments-style: manni
+
+
+==== Creating an application
+
+To create a simple Ratpack application we write
+the following code:
+
+.Simple Groovy Ratpack application
+[source,groovy,linenums,highlight='7-9']
+//[source,groovy,highlight='7-9']
+----
+package com.mrhaki
+
+import static ratpack.groovy.Groovy.ratpack
+
+ratpack {
+    handlers {
+        get {
+            render "Hello World!" // <1>
+        }
+    }
+}
+----
+<1> Render output
+
+[source, slim]
+----
+= My book
+
+\include::chapter01.asciidoc[]
+
+\include::chapter02.asciidoc[]
+
+\include::chapter03.asciidoc[]
+----
+//////////
+
+
+//////////
+['manni', 'igor', 'xcode', 'vim', 'autumn', 'vs', 'rrt', 'native', 'perldoc', 'borland', 'tango', 'emacs', 'friendly', 'monokai',
+ 'paraiso-dark', 'colorful', 'murphy', 'bw', 'pastie', 'paraiso-light', 'trac', 'default', 'fruity']
+//////////

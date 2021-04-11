@@ -1,0 +1,119 @@
+// ~/300_asciidoc_writers_guide/000_includes/documents/100_start_typing/
+// Chapter document: 110_heaven_hell_of_writing.asciidoc
+// -----------------------------------------------------------------------------
+
+== Heaven and Hell of writing
+
+//icon:tags[role="md-pink"] From: {uri-blog-stoyan-stefanov}[Stoyan Stefanov]
+
+Many people find the idea of writing a book or an article difficult. I think
+this is mainly due to a poor *definition* of what *writing* is.
+
+In movies, there is this romantic idea of the process, the *act of writing*.
+The author struggles, drama ensues. Then all of a sudden inspiration strikes.
+The author sits down all the night just listening to what inspiration says.
+In the morning, among a pile of cigarette butts and empty wine bottles,
+there is a brand new spanking *chef-d'œuvre* of a manuscript.
+
+Everyone who reads it says: it's the best thing ever! Or, if the author
+is ahead of his time (as may happen in drama) average Joe is saying:
+what a shit. But more in a theatrically way.
+
+The author is done. Let's celebrate, while waiting for the next visit by her
+majesty, the Muse.
+
+That's definitely *not how it works* with sophisticated text, articles or even
+books. I don't have first-hand experience with fiction, but from what I've read
+from fiction writers, that's not how it works with fiction either. Writing is a
+scilled craft. A technique, or a bunch of them.
+
+Let's dive into scilled crafted writing.
+
+=== The White page
+
+When people buy into the romantic idea of the Muse and one-off writing
+sessions, and they try to write, no wonder they fail. Imagine out hero
+saying: *"Heck! I'm going to write a computer book! I know a lot about Web
+Design. What a hell should be easier to do as I'm a specialist for the Web!*
+
+He creates a new folder, a new file called *book.doc* and proceeds typing
+the title: *Responsive Design with HTML5 and CSS3*. He likes it. Next, a
+subtitle: *Unleash the power of mobile, social, local, yadda and dadda*.
+
+OK, so how big should the title be? What about the subtitle? 20 minutes
+struggling with formatting options in a word processor. The future author
+goes: *Meh, I'll worry about formatting later*.
+
+New page. Next White page ... *Big white page*.
+
+The new author let the mind wander for once and perhaps even think about
+treating himself to a refreshing footbath. The energy will go up from the
+foots into the brain to the big white page.
+
+*"History of HTML? Mmmmh. Boring. Not that."*
+
+Still *White Page* ...
+
+*"Should I open with a joke? But what if it falls flat?"*
+
+*White page*.
+
+The next brilliant idea comes on his mind: *"Hey man, I'm connected to the
+internet"*. Open the browser. Search for *writer writing block*. The search
+engine is telling him: *85.400.000 matches*. Oh Mama, that's a lot.
+
+Trying the first results. The time goes by. The temperature of the refreshing
+footbath down.
+
+You see how the prospect of writing is scary for many people.
+
+=== What can be done about it?
+
+There are some magic words in the wild for making something entirely new:
+prepare, plan, act and check. Hard to find on a *writer's blog* and 85.400.000
+matches are not that helpful.
+
+[horizontal]
+[big]*Preparation*::  You already did this part by having this tutorial at your
+                      fingertips. Nothing more needed.
+[big]*Planning*::     It is always a good idea to divide, what you are intended
+                      to do, into steps. First unordered, writing down what do
+                      you think what's needed. If the a list of top-level items
+                      is in place, order them.
+[big]*Acting*::       Go for the first topic of the plan, thhe ordered items
+                      you've found.
+[big]*Checking*::     Check the results of what you've done so far on a topic.
+                      You'll find some things missing in the preparation or the
+                      planning. Add the missing parts and start from the
+                      beginning.
+
+The 4 steps are done in a cycle. And this cycle is well known: the *Deming Cycle*.
+
+.Deming Cycle or PDCA Cycle
+//image::{images-dir}/100_start_typing/deming-cycle.png[]
+image::pages/writers_guide/100_start_typing/deming-cycle.png/deming-cycle.png[]
+
+The Deming Cycle, or PDCA Cycle, is a continuous quality improvement model
+consisting out of a logical sequence of four repetitive steps for continuous
+improvement and learning: Plan, Do, Study (Check) and Act.
+
+As mentioned in the intro part: Writing is *improved speech*. And it is done
+in cycles. The Deming Cycle is the base for continuous improvement, the process
+needed for writing, for written language, for improved speech. That means vice
+versa it is *not needed* to have all things in place from the beginning. It is
+an iterative process to complete a step, a task, a level of learning. Furthermore
+it *not recommended* to bring all things in place from the beginning, to learn
+a bunch of things upfront - it won't work.
+
+Back again to the intro part: Writing is more like sports or making music. It
+will always *remain difficult* even after you have done it a lot. Playing a
+violine is a *life-long learning process* even you're part of a *world class
+orchestra*.
+
+For that reason: Do writing. Shake off the bad feelings if something is
+difficult or went wrong. Nothing you do will appear totally foolish. You are
+able to do things you had to learn for years. Nobody is perfect. Simple like
+this: it could be better. It is the next turn on the Deming Cycle, haha!
+
+Be ensured: all of this is part of the game accepted by all serious authors
+on that planet. Be cool, have fun.

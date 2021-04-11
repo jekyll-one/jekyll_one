@@ -1,0 +1,74 @@
+---
+# ~/300_asciidoc_writers_guide
+# Top Level Entry Document:             200_building_documents.adoc
+#
+title:                                  Asciidoc Writer's Guide
+tagline:                                References
+description:                            References
+
+tags:                                   [ Asciidoctor, Guide, Writer ]
+index:                                  [ References ]
+categories:                             [ pages, manuals ]
+
+permalink:                              /pages/protected/manuals/asciidoc/writers_guide/references/
+regenerate:                             false
+
+resources:                              [ lightbox ]
+resource_options:
+  - toccer:
+      collapseDepth:                    1
+---
+
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set page (local) attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="all" %}
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents
+// -----------------------------------------------------------------------------
+
+== References
+
+When we’re children, we learn (and fail) all the time. We fall off bikes,
+scrape knees, add sums incorrectly, and tell someone we have a crush on
+them when they’re clearly not interested (*cringe*). That’s just what kids do.
+
+As adults, we tend to move into areas of core competency, sigh a breath of
+relief (Hooray! No more feeling like I’m constantly failing at everything!),
+and then promptly *stagnate*. This, of course, is the quickest route towards
+the kind of career and life experiences that feel just kind of, well, “meh.”
+
+In order to keep yourself engaged and motivated, it’s important to continually
+form new and unexpected *neural connections*. As I said, a the humans brain is
+a tricky part of our body.  Talking to other people, reading what they have on
+their mind and *thinking* about will fire your brain for these new *neural
+connections*. Not only you as person, your brain is better *connected*.
+
+Fortunately, in the internet age, it’s not just easy to learn but easy to
+learn from other people. So you’ll have a model to go from and you won’t feel
+so alone in your endeavors.
+
+Writing needs *life experience*. The other way aroud: experience comes from
+*active* living. At *avery age*, that's important. Writing needs a lot of
+*Reading*.
+
+
+// Include documents
+// -------------------------------------------------------------------
+include::{documentdir}/900_references.asciidoc[]

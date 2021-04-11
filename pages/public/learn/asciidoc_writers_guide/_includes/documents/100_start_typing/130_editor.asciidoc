@@ -1,0 +1,21 @@
+// ~/300_asciidoc_writers_guide/000_includes/documents/100_start_writing/
+// Chapter document: 130_editor.asciidoc
+// -----------------------------------------------------------------------------
+
+== Editor - The Swiss Army Knife
+
+// lorem:sentences[5]
+
+//////////
+ifdef::backend-html5[]
+.Editor Atom
+lightbox::atom_editor[ 800, {data-atom-editor} ]
+endif::[]
+
+ifdef::backend-pdf[]
+.Editor Atom
+image::{images-dir}/100_start_typing/editor-atom-800x600.png[Editor Atom, 800]
+endif::[]
+//////////
+
+// lorem:sentences[2]

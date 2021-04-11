@@ -1,0 +1,239 @@
+// ~/300_asciidoc_writers_guide/000_includes/documents/100_start_typing/
+// Chapter document: 120_non_disturbing_techniques.asciidoc
+// -----------------------------------------------------------------------------
+
+[[non-disturbing]]
+== Non disturbing Techniques
+
+As said, writing is in a sense private, requiring us to focus on the act of
+writing itself. All what is private to humans is embossed by their individuality.
+No wonder: the act of writing depends on the author. But many things are in
+common for all writers: avoid all what is disturbing their writing processes,
+support them by all what is helpful.
+
+A bold statement: If you want to use a computer for writing, never use *word
+processors*.
+
+I hear you saying: hey, word processors are for writing. They are used on PC
+for ages, decades the main application for computers for business. I've never
+heard word processors playing music!
+
+Yes, that's true. Word processors are great tools for formal text, short one
+or two pages of text like cover letters. In general: a excellent choice for
+written business communication up to now. What they are indended for. But a
+horrible tool for intellectual work.
+
+You'll experience why. You learn that AsciiDoc is, as it's plain text, the
+better solution for writing demanding text for books, articles or blogs. And,
+AsciiDoc is both: your creative work and the base for processing engines to
+transform it into wonderful looking, state-of-the-art documents for the digital
+world. And last but not least -- if wanted -- the base for printing on paper
+as well.
+
+All the people working in the IT business will agree on that. More than this.
+They are delighted to hear that writing in AsciiDoc does not need any of the
+(quite common) word processing tools. What is needed is a good editor - nothing
+more. Writing in AsciiDoc is done the same way as programmers do for developing
+since ages up to now - each and every day.
+
+NOTE: If you're using an editor, an IDE already for your work, go for the
+toolset you already using. People havent't used editors before, or seldom,
+the chapter <<Editor - The Swiss Army Knife>> help for the first steps.
+
+=== Divide and Conquer
+
+In computer science, *divide and conquer* is a design paradigm based on
+recursion (doing things in cycles). A divide and conquer algorithm works by
+recursively breaking down a problem into two or more sub-problems of the same
+or related type, until these become simple enough to be solved directly. The
+solutions to the sub-problems are then combined to give a solution to the
+original problem.
+
+Writers are not nessesarily computer scientists but authors face quite the
+same challenges: break down complexity to focus on parts simple enough to be
+managed directly.
+
+Now I come to the *helpful* practices to make a writer's life easier: what are
+*design paradigm* for programmers (see them as writers as well) are split-down
+techniques like the following.
+
+You can split the process of writing in three phases.
+
+[horizontal]
+[big]*Thinking*::   Giving anwers: What am I going to say?
+[big]*Typing*::     Create your content. What ever it is.
+[big]*Editing*::    Improve, fix what you typed. Make the content more readable.
+
+You'll see later on, the process can be transformed into a Deming Cycle for
+writing. And more than this: the processes you'll learn get fit together. Beside
+excellent tools, you will need these techniques as writing is an intellectual
+but handcrafted work.
+
+=== Step #1: Thinking
+
+Most often people don't think about *#1* as writing, But it is. Thinking
+happens  all the time. When you walk, bike, do the dishes, and most often in
+the shower. Humans cannot prevent thinking without loosing their brains. That's
+why the aspiring author should make time for activities that seems mindless.
+
+There is a clear deliverable from this process: the *TOC* (table of contents).
+Don't see a TOC what it is in the very end. It is important from thhe beginning
+-- bullet points of what you want to say. Probably split into chapters, although
+not until later in the process. The first part is just a list. A todo. You can
+use paper and pen, a old fashioned but proven way. Or type in your mobile if
+you don't have paper handy (you're on a walk). This is not as intimidating as
+the big bad Writing, because the outcome is estimated not more than two to three
+pages.
+
+Although the more, the better, because it means you have a detailed todo and
+don't leave much to think about in the next phase.
+
+You can also take this TOC and do a slideshow. Give a presentation in a
+local meetup or your workplace. Writing is slow but the responses of readers
+even slower. Test *your ideas* in the faster, less permanent medium of speech,
+like an presentation, *before* you try to set them down in the medium of writing.
+
+This is a nice checkpoint. If you're not confident if people are willing to
+listen to what you're saying, what makes you think people are willing to read a
+book about this topic? Each slide heading is a subtopic, simply a thought from
+you, the writer. Any word on the slides are the key points of your thoughts.
+When it comes to step #2, you can just copy-paste the slide and clarify the key
+points, improve what you are intended do say, to write.
+
+=== Step #2: Typing
+
+This is what people often refer to writing and are scared of. But what it's
+definively not: writing. It's just typing. In compare to the final product
+mindless, easy typing. Anyone can do it. Modern people using email quite often,
+many all the day. People does not expect great literature, just info.
+
+You paste the TOC (or the slide content) and fill in the blanks. Add more
+explanation about what the meaning is, what do like to express with this
+item in your list.
+
+[NOTE]
+====
+{uri-wikipedia-people-douglas-crockford}[Douglas Crockford, {window}] said in
+a talk that if you take all the code you've written in a year and just retype
+it, it will take only a day or two. Three. A week. Long, unpleasant days. But
+just days. So what are you doing the rest of the year? Definitely not typing.
+
+The typing is to writing what a *hackathon* is to *software engineering*.
+The outcome is a *hack* but quick, fast. It's ugly but it works. It exists
+where it didn't exist yesterday. You've created something. Then you have to
+go back and make it right, rock solid and properly engineered.
+
+Coding and writing technical books have similarities, but there's one
+difference: you can run the code and see if it does what it's supposed to do.
+With a book there are many right answers and outcomes that work. You just have
+to do enough of it to discover *your* opinion and feel for what works. The
+book is like source code that doesn't print anything out. So you're working
+to make the source code of the book readable for others and maintainable for
+yourselves.
+====
+
+It's very important that you don't read or edit at this stage. No formatting.
+No editing. Just typing away, just filling the blanks. Like filling a form.
+That's why I called it *mindless*.
+
+[IMPORTANT]
+====
+If you type on pages, the headline is the important part. If you haven't
+additional words on the topic present, use blind text -- so-called *lorem*.
+Your AsciiDoc toolset supports blind text that is automatically generated.
+No need to fear for the White Page.
+
+.A lorem block look something like this
+
+// lorem:sentences[4]
+====
+
+Back to writing or reading email. Most people are OK with writing emails. They
+don't consider on this writing, reader's stand for mistakes or missing words.
+There's no writer's block for email - not needed. Someone asks you a question,
+you reply and type away. An email has a subject. What you're writing about has
+a subject (like the TOC items). It's just like answering a question.
+
+Next TOC item.
+
+And the next one.
+
+Before you know it, you've typed in lot. Resist the temptation to do editing.
+Keep typing.
+
+I found it really helpful to spend some time in the morning and type for half
+an hour. It's awesome. It's the morning and you already have something done.
+Something is accomplished. Words are down on paper (of course you haven't read
+the words and you have no idea how bad the writing is, and this is a good thing).
+
+You feel good the rest of the day. Even if the rest of the day is just busy work
+or sitting in meetings or stuck in the traffic: You have your morning, you have
+been productive already. In the night you may write more or you may not. You
+may enjoy going out or just being lazy.
+
+So think of this stage as just typing which is easy and brainless. But
+productive and save your mood. Have fun, don't underestimate this. A brain is
+tricky part of your body. Never punish. No *bad vibrations* on what you would
+like to do.
+
+=== Step #3: Editing
+
+This is a read-write loop: you read what you wrote and you fix it. You move
+stuff around. You add, you remove, you refactor. Then you do it again.
+
+You may be surprised initially that the stuff what you wrote in step #2 looks
+like, let me quote Frank Zappa here, _some of the most terriblest shit you've
+ever known_. But it's fixable. It's down on paper. Writing's done, you have
+pages and pages of text. You're an author! The rest is editing. And you can do
+it anywhere.
+
+The typing is the only part that requires you to sit down in front of a screen.
+Thinking (the TOC) is done outside the four walls. I do most of my editing
+outside too. By the pool, the beach, if I'm walking, even for the morning
+procedure. I can do it in while in line at the store. You just print what you
+wrote and scribble on top of it.
+
+I suggest the first edit is on the computer though because there will be too
+much scratching.
+
+You can do the formatting in this stage. And print and edit. For some reason
+it's easier to spot mistakes in printed words. If you're into grammar checks
+you can also read backwards. For me, English is not my mother tounge, so I
+don't even try to fix grammar. That's you have an editor. If you don't have
+a publisher, I hear you can hire an editor.
+
+Then there's the technical review, which is also critical. You try to find the
+best people on the topic to agree to read your stuff and point your mistakes.
+Because mistakes you will make. Fact of life, no matter how smart you are. So
+then another round of editing. Then the grammar Nazi kicks in and fixes your
+commas. And another round of editing.
+
+[NOTE]
+====
+.The blog hack
+
+Blogging is a nice way to *hack* writing; to do writing quite fast. You don't
+need a whole TOC, just one item. Then you type. Then you hit "publish". (ok,
+maybe read it once first, but then publish immediately). Then you edit if you
+want. No need to do much editing though. You have a feedback loop from the
+readers, if people point out mistakes in your logic, code, writing or whatever,
+it doesn't matter how polished and grammatically correct it is. You can edit
+the technical part first which is the most important. A technical book should
+first and foremost be *technically correct*.
+
+Repeat the blog hack enough times on related subjects and voila, you have a
+series of posts and in the very end: a book. You only need to tighten it up
+and do some more of editing.
+====
+
+All in all you'll spend more time editing than typing. Editing takes time.
+That's why you keep it off the typing phase. It takes time but it's not
+writing. Again, no writer's block here. You can do it outside in the Nature.
+
+=== What's next
+
+You read, more or less, a lot of *theory*. That's fine, good to know -- needed
+to know. That's why it's written. Simple like this.
+
+Now, it time to make things real. No longer only reading. Now go back to work!
+But: Stop writing and start typing already!
