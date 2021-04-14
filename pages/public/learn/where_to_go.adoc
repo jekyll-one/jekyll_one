@@ -1,17 +1,17 @@
 ---
 title:                                  Where to go
 tagline:                                fasten your way
-date:                                   2020-11-03 00:00:00
+date:                                   2020-11-03 00:00:00 +100
 description: >
                                         Welcome to the pages of J1 Template. If your here
                                         first time, a good decision you get on that page first.
                                         For sure, there is no better place to go.
 
-tags:                                   [ Roundtrip, Introduction ]
 categories:                             [ Info ]
+tags:                                   [ Roundtrip, Introduction ]
 
-comments:                               true
-fam_menu_id:                            open_toc
+comments:                               false
+fam_menu_id:                            default
 
 permalink:                              /pages/public/learn/where_to_go/
 regenerate:                             false
@@ -75,7 +75,7 @@ base (web development) commands for:
 Setting up a J1 project and creating the first website using J1 will take
 about 15 minutes. But, you should know what you doing!
 
-Go for the quick start from link:{url-j1--quickstart}[here]!
+Go for the quick start from link:{url-j1--quickstart}[here, {browser-window--new}]!
 
 Roundtrip::
 With this section, you'll find a *tour* to show some of the main features of
@@ -96,12 +96,10 @@ the world of Jekyll. You'll have learned a lot at the end of that day about
 what Jekyll is, static webs, and the template system J1 is all about.
 
 To go deeper, you’re invited, try out the journey having some hours of fun at
-{url-j1-web-in-a-day--meet-and-greet}[Web in a Day].
+{url-j1-web-in-a-day--meet-and-greet}[Web in a Day, {browser-window--new}].
 
 Study sections should help all people interested in modern Jekyll websites
 learn what Jekyll and J1 Template is all about. Now, it's on you where
 you start.
 
 Anyway, have a good start using *Jekyll and J1*!
-
-== Leave a comment
