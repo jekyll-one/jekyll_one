@@ -6,9 +6,13 @@ title:                                  Asciidoc Writer's Guide
 tagline:                                Introduction
 description:                            Asciidoc Writer's Guide
 
+categories:                             [ Pages, Manuals ]
 tags:                                   [ Asciidoctor, Guide, Writer ]
-index:                                  [ Introduction ]
-categories:                             [ pages, manuals ]
+
+sitemap:                                false
+robots:
+  index:                                false
+  follow:                               false
 
 permalink:                              /pages/protected/manuals/asciidoc/writers_guide/intro/
 regenerate:                             false

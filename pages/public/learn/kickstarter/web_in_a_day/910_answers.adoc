@@ -4,14 +4,19 @@ tagline:                                answers
 date:                                   2021-03-01 00:00:00
 description:                            Answer blocks
 
-categories:                             [ Answers ]
-tags:                                   [ Jekyll, Knowledge, Tutorial  ]
+categories:                             [ Knowledge, Tutorial ]
+tags:                                   [ Guide, Answers ]
 
-permalink:                              /pages/public/learn/kickstarter/web_in_a_day/answers/
-regenerate:                             true
+sitemap:                                false
+robots:
+  index:                                false
+  follow:                               false
 
 scrollbar:                              false
 comments:                               true
+
+permalink:                              /pages/public/learn/kickstarter/web_in_a_day/answers/
+regenerate:                             true
 
 resources:                              [ lightbox, clipboard, rouge ]
 resource_options:

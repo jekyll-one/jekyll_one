@@ -1,18 +1,23 @@
 ---
 title:                                  Web in a Day
 tagline:                                writing articles
-date:                                   2021-03-01 00:00:00
+date:                                   2021-03-16 00:00:00 +100
 description: >
                                         Modern static website in a day
 
-categories:                             [ Jekyll, Knowledge, Tutorial ]
-tags:                                   [ Writing, Articles ]
+categories:                             [ Knowledge, Tutorial ]
+tags:                                   [ Asciidoctor, Write, Articles ]
 
-permalink:                              /pages/public/learn/kickstarter/web_in_a_day/writing_articles/
-regenerate:                             true
+sitemap:                                false
+robots:
+  index:                                false
+  follow:                               false
 
 scrollbar:                              false
 comments:                               true
+
+permalink:                              /pages/public/learn/kickstarter/web_in_a_day/writing_articles/
+regenerate:                             false
 
 resources:                              [ lightbox, clipboard, rouge ]
 resource_options:

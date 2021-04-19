@@ -1,18 +1,18 @@
 ---
 title:                                  Web in a Day
 tagline:                                first awesome web
-date:                                   2021-04-08 00:00:00
+date:                                   2021-04-08 00:00:00 +100
 description: >
                                         Modern static website in a day
 
-categories:                             [ Jekyll, Knowledge, Tutorial ]
+categories:                             [ Knowledge, Tutorial ]
 tags:                                   [ Generating, Webs ]
-
-permalink:                              /pages/public/learn/kickstarter/web_in_a_day/a_first_awesome_web/
-regenerate:                             false
 
 scrollbar:                              false
 comments:                               true
+
+permalink:                              /pages/public/learn/kickstarter/web_in_a_day/a_first_awesome_web/
+regenerate:                             false
 
 resources:                              [ lightbox, clipboard, rouge ]
 resource_options:

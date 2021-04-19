@@ -53,7 +53,7 @@ environment:                            development
 # ------------------------------------------------------------------------------
 #   Sets the build version of J1 Template Gem
 #
-version:                                2021.1.0
+version:                                2021.1.1
 
 # version
 # ------------------------------------------------------------------------------
@@ -365,7 +365,7 @@ show_dir_listing:                       false
 #   source:                             .
 #   destination:                        _site
 #
-source:   .
+source:                                 .
 destination:                            _site
 plugins_dir:                            _plugins
 layouts_dir:                            _layouts
@@ -569,6 +569,24 @@ collections:
 defaults:
 
   # ----------------------------------------------------------------------------
+  # HTML partials (loaded via XHR) excluded from sitemap
+  #
+  - scope:
+      path:                             assets/data
+
+    values:
+      sitemap:                          false
+
+  # ----------------------------------------------------------------------------
+  # Module HTML docs and examples excluded from sitemap
+  #
+  - scope:
+      path:                             assets/themes/j1
+
+    values:
+      sitemap:                          false
+
+  # ----------------------------------------------------------------------------
   # Pages
   #
   - scope:
@@ -578,22 +596,22 @@ defaults:
     values:
       layout:                           page
       author:                           J1 Team
-      toc:                              true
-      fam_menu_id:                      page_ctrl_simple
-      resources:                        toccer
-      analytics:                        true
-      advertising:                      false
-      comments:                         false
-      scrollbar:                        false
-      indexed:                          true
 
       robots:
         index:                          true
         follow:                         true
 
+      analytics:                        true
+      advertising:                      false
+      comments:                         false
+
+      toc:                              true
+      fam_menu_id:                      page_ctrl_simple
+      scrollbar:                        false
+
       icons:
         family:                         MDI
-        color:                          md-indigo
+        color:                          md-blue
         size:                           5x
 
       images:
@@ -601,7 +619,7 @@ defaults:
 
       resource_options:
         - toccer:
-            collapseDepth:              2
+            collapseDepth:              3
 
   # ----------------------------------------------------------------------------
   # Posts
@@ -616,23 +634,26 @@ defaults:
 
     values:
       layout:                           post
-      scrollbar:                        false
       author:                           J1 Team
-      toc:                              true
-      fam_menu_id:                      page_ctrl_simple
-      resources:                        toccer
-      analytics:                        true
+
+#     robots:
+#       index:                          true
+#       follow:                         true
+
+      analytics:                        false
       advertising:                      false
       comments:                         true
 
-      robots:
-        index:                          true
-        follow:                         true
+      series:                           false
+
+      toc:                              true
+      fam_menu_id:                      page_ctrl_simple
+      scrollbar:                        false
 
       icons:
 #       category-icon:                  comment-text-outline
         family:                         MDI
-        color:                          md-indigo
+        color:                          md-blue
         size:                           5x
 
       images:
@@ -641,7 +662,7 @@ defaults:
 
       resource_options:
         - toccer:
-            collapseDepth:              2
+            collapseDepth:              3
 
   # ----------------------------------------------------------------------------
   # PUBLIC - SERIES
@@ -652,18 +673,21 @@ defaults:
 
     values:
       layout:                           post
-      scrollbar:                        false
       author:                           J1 Team
-      toc:                              true
-      fam_menu_id:                      page_ctrl_simple
-      resources:                        toccer
-      analytics:                        true
+
+#     robots:
+#       index:                          true
+#       follow:                         true
+
+      analytics:                        false
       advertising:                      false
       comments:                         true
 
-      robots:
-        index:                          true
-        follow:                         true
+      series:                           true
+
+      toc:                              true
+      fam_menu_id:                      page_ctrl_simple
+      scrollbar:                        false
 
       icons:
 #       category-icon:                  dots-horizontal-circle
@@ -684,19 +708,21 @@ defaults:
 
     values:
       layout:                           post
-      scrollbar:                        false
       author:                           Wikipedia
-      resources:                        toccer
-      toc:                              true
-      fam_menu_id:                      page_ctrl_simple
-      resources:                        toccer
-      analytics:                        true
-      advertising:                      false
-      comments:                         false
 
       robots:
         index:                          false
         follow:                         false
+
+      analytics:                        false
+      advertising:                      false
+      comments:                         false
+
+      series:                           false
+
+      toc:                              true
+      fam_menu_id:                      page_ctrl_simple
+      scrollbar:                        false
 
       icons:
 #       category-icon:                  wikipedia
@@ -721,37 +747,7 @@ defaults:
 
     values:
       layout:                           page
-
-  # ----------------------------------------------------------------------------
-  # Biography (Book Shelf)
-  #
-  - scope:
-      type:                             biography
-      path:                             collections/_biography
-
-    values:
-      layout:                           page
-
-  # ----------------------------------------------------------------------------
-  # Fantasy (Book Shelf)
-  #
-  - scope:
-      type:                             fantasy
-      path:                             collections/_fantasy
-
-    values:
-      layout:                           page
-
-  # ----------------------------------------------------------------------------
-  # Romance (Book Shelf)
-  #
-  - scope:
-      type:                             romance
-      path:                             collections/_romance
-
-    values:
-      layout:                           page
-
+      sitemap:                          false
 
 # ==============================================================================
 # 6. LAYOUT configuration

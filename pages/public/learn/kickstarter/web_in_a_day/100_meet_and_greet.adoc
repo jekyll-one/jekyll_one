@@ -1,7 +1,7 @@
 ---
 title:                                  Web in a Day
 tagline:                                meet & greet
-date:                                   2021-04-01 00:00:00
+date:                                   2021-04-01 00:00:00 +100
 description: >
                                         Web in a Day is the first in a series of tutorials to
                                         learn how to create modern websites using Jekyll. This
@@ -9,14 +9,14 @@ description: >
                                         J1 Template which all people needs to know for a successful
                                         way to a modern static website using Jekyll and J1 Template
 
-categories:                             [ Knowledge ]
-tags:                                   [ Jekyll, J1, Tutorial ]
-
-permalink:                              /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
-regenerate:                             false
+categories:                             [ Knowledge, Tutorial ]
+tags:                                   [ Jekyll, J1 ]
 
 scrollbar:                              false
 comments:                               true
+
+permalink:                              /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
+regenerate:                             false
 
 resources:                              [ lightbox ]
 resource_options:

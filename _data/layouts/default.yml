@@ -201,30 +201,6 @@ lanes:
       class:
 
   # ------------------------------------------------------------------
-  # SHIM loader (body-footer)
-  #   NOTE: UNUSED as it is moved to ???
-  #
-  # - lane:
-  #     enabled:                          false
-  #     region:                           body-footer
-  #     type:                             sync
-  #     base:                             _includes/themes/j1
-  #     path:                             layouts
-  #     file:                             layout_shim_generator.html
-
-  # ------------------------------------------------------------------
-  # THEME loader (body-footer)
-  #   NOTE: UNUSED as it is moved to themer.js
-  #
-  # - lane:
-  #     enabled:                          false
-  #     region:                           body-footer
-  #     type:                             sync
-  #     base:                             _includes/themes/j1
-  #     path:                             layouts
-  #     file:                             layout_theme_generator.html
-
-  # ------------------------------------------------------------------
   #   MODULE generator (body-footer)
   #
   #   NOTE:

@@ -117,8 +117,8 @@ end::urls[]
 // -----------------------------------------------------------------------------
 tag::data[]
 
-:data-kickstart-wiad--static-web-access:          "pages/kickstarter/web_in_a_day/100_meet_and_greet/100-static-web-access.png, Accessing scheme for a static web"
-:data-kickstart-wiad--dynamic-web-access:         "pages/kickstarter/web_in_a_day/100_meet_and_greet/110-dynamic-web-access.png, Accessing scheme for a dynamic web"
+:data-kickstart-wiad--static-web-access:          "pages/kickstarter/web_in_a_day/100_meet_and_greet/100-static-web-access.jpg, Accessing scheme for a static web"
+:data-kickstart-wiad--dynamic-web-access:         "pages/kickstarter/web_in_a_day/100_meet_and_greet/110-dynamic-web-access.jpg, Accessing scheme for a dynamic web"
 
 :data-kickstart-wiad--tools-flow:                 "pages/kickstarter/web_in_a_day/110_getting_prepared/100-tools-flow.jpg, Flow to create a website using J1"
 :data-kickstart-wiad--tool-versions:              "pages/kickstarter/web_in_a_day/110_getting_prepared/110-cmd-check-tool-versions.jpg, Example of installed tool versions"
@@ -135,6 +135,8 @@ tag::data[]
 
 :data-kickstart-wiad--blog-navigator-1:           "pages/kickstarter/web_in_a_day/200_first_awesome_web/400-blog-navigator-1280x800.jpg, J1 Blog Navigator"
 
+:data-kickstart-wiad--processing-chain-1:         "pages/kickstarter/web_in_a_day/300_writing_articles/100-processing-chain-1-1280x800.jpg, Processing chain (simplified)"
+:data-kickstart-wiad--processing-chain-2:         "pages/kickstarter/web_in_a_day/300_writing_articles/100-processing-chain-2-1280x800.jpg, Processing chain (Liquid + Asciidoc includes)"
 
 :data-windows--create-a-link-1:                   "pages/kickstarter/web_in_a_day/110_getting_prepared/200-create-a-link-1.jpg, Run a create link dialog"
 :data-windows--create-a-link-2:                   "pages/kickstarter/web_in_a_day/110_getting_prepared/200-create-a-link-2.jpg, Type in the command to be linked"

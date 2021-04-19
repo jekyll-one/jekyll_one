@@ -6,9 +6,13 @@ title:                                  Asciidoc Writer's Guide
 tagline:                                An Introduction to Writing in AsciiDoc
 description:                            An Introduction to Writing in AsciiDoc
 
+categories:                             [ Pages, Manuals ]
 tags:                                   [ Asciidoctor, Guide, Writer ]
-index:                                  []
-categories:                             [ pages, manuals ]
+
+sitemap:                                false
+robots:
+  index:                                false
+  follow:                               false
 
 permalink:                              /pages/protected/manuals/asciidoc/writers_guide/
 regenerate:                             true

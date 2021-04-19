@@ -6,9 +6,13 @@ title:                                  Asciidoc Writer's Guide
 tagline:                                References
 description:                            References
 
+categories:                             [ Pages, Manuals ]
 tags:                                   [ Asciidoctor, Guide, Writer ]
-index:                                  [ References ]
-categories:                             [ pages, manuals ]
+
+sitemap:                                false
+robots:
+  index:                                false
+  follow:                               false
 
 permalink:                              /pages/protected/manuals/asciidoc/writers_guide/references/
 regenerate:                             false

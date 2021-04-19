@@ -8,13 +8,15 @@ description: >
 categories:                             [ Legal ]
 tags:                                   [ Privacy, Statement ]
 
-toc:                                    true
-fam:                                    false
+sitemap:                                false
+robots:
+  index:                                false
+  follow:                               false
+
 fam_menu_id:                            page_ctrl_simple
 scrollbar:                              false
-indexed:                                false
 comments:                               false
-exclude_from_search:                    true
+toc:                                    true
 
 permalink:                              /pages/public/legal/en/privacy/
 regenerate:                             false

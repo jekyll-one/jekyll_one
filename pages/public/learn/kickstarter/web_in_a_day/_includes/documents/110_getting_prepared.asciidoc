@@ -661,7 +661,7 @@ jekyll --version && j1 --version
 The current versions (of April 2021) are:
 ----
 jekyll 4.2.0
-j1 2021.1.0
+j1 2021.1.1
 ----
 
 What a procedure! Yes, sure. And most of you haven’t expected that - guessed.

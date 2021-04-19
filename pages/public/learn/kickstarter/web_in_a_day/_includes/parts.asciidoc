@@ -866,6 +866,8 @@ mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--getting-prepared}[Getting prepared] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--first-awesome-web}[First awesome Web] +
+
+/////
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--writing-articles}[Writing Articles] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
@@ -874,6 +876,7 @@ mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--design-your-site}[Design your Site] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--wrapping-up}[Wrapping up] +
+/////
 
 //
 // end::chapters_100_meet_and_greet[]
@@ -886,6 +889,8 @@ mdi:format-section[24px, md-blue ml-3 mr-2]
 You are here -- Getting prepared +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--first-awesome-web}[First awesome Web] +
+
+/////
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--writing-articles}[Writing Articles] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
@@ -894,6 +899,7 @@ mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--design-your-site}[Design your Site] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--wrapping-up}[Wrapping up] +
+/////
 
 //
 // end::chapters_110_getting_prepared[]
@@ -906,6 +912,8 @@ mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--getting-prepared}[Getting prepared] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 You are here -- First awesome Web +
+
+/////
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--writing-articles}[Writing Articles] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
@@ -914,6 +922,7 @@ mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--design-your-site}[Design your Site] +
 mdi:format-section[24px, md-blue ml-3 mr-2]
 link:{j1-kickstart-wiad--wrapping-up}[Wrapping up] +
+/////
 
 //
 // end::chapters_200_first_awesome_web[]

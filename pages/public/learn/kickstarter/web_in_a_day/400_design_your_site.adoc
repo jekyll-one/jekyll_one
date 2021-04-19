@@ -5,14 +5,19 @@ date:                                   2021-03-01 00:00:00
 description: >
                                         Modern static website in a day
 
-categories:                             [ Jekyll, Knowledge, Tutorial ]
-tags:                                   [ WebDesign ]
+categories:                             [ Knowledge, Tutorial ]
+tags:                                   [ Web, Site, Design ]
 
-permalink:                              /pages/public/learn/kickstarter/web_in_a_day/design_your_site/
-regenerate:                             false
+sitemap:                                false
+robots:
+  index:                                false
+  follow:                               false
 
 scrollbar:                              false
 comments:                               true
+
+permalink:                              /pages/public/learn/kickstarter/web_in_a_day/design_your_site/
+regenerate:                             false
 
 resources:                              [ lightbox, clipboard, rouge ]
 resource_options:

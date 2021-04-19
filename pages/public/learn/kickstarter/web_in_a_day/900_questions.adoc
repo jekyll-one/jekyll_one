@@ -4,14 +4,19 @@ tagline:                                questionaire
 date:                                   2021-03-01 00:00:00
 description:                            Question blocks
 
-categories:                             [ Questions ]
-tags:                                   [ Jekyll, Knowledge, Tutorial  ]
+categories:                             [ Knowledge, Tutorial ]
+tags:                                   [ Guide Questions ]
 
-permalink:                              /pages/public/learn/kickstarter/web_in_a_day/questions/
-regenerate:                             true
+sitemap:                                false
+robots:
+  index:                                false
+  follow:                               false
 
 scrollbar:                              false
 comments:                               true
+
+permalink:                              /pages/public/learn/kickstarter/web_in_a_day/questions/
+regenerate:                             true
 
 resources:                              [ lightbox, clipboard, rouge ]
 resource_options:

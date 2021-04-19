@@ -1,18 +1,18 @@
 ---
 title:                                  Web in a Day
 tagline:                                getting prepared
-date:                                   2021-04-02 00:00:00
+date:                                   2021-04-02 00:00:00 +100
 description: >
                                         Modern static website in a day
 
+categories:                             [ Knowledge, Tutorial ]
 tags:                                   [ Preparations ]
-categories:                             [ Jekyll, Knowledge, Tutorial ]
-
-permalink:                              /pages/public/learn/kickstarter/web_in_a_day/getting_prepared/
-regenerate:                             false
 
 scrollbar:                              false
 comments:                               true
+
+permalink:                              /pages/public/learn/kickstarter/web_in_a_day/getting_prepared/
+regenerate:                             false
 
 resources:                              [ lightbox, clipboard, rouge ]
 resource_options:

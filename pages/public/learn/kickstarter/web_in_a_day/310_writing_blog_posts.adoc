@@ -5,8 +5,16 @@ date:                                   2021-03-01 00:00:00
 description: >
                                         Modern static website in a day
 
-categories:                             [ Jekyll, Knowledge, Tutorial ]
-tags:                                   [ Writing, Posts ]
+categories:                             [ Knowledge, Tutorial ]
+tags:                                   [ Asciidoctor, Guide, Writer, Posts ]
+
+sitemap:                                false
+robots:
+  index:                                false
+  follow:                               false
+
+scrollbar:                              false
+comments:                               true
 
 permalink:                              /pages/public/learn/kickstarter/web_in_a_day/writing_blog_posts/
 regenerate:                             false

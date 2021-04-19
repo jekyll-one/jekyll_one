@@ -366,7 +366,7 @@ processed for data extraction.
 # 1. BUILD configuration
 #
 environment:                            production
-version:                                2021.1.0
+version:                                2021.1.1
 copyright:                              J1 · Copyright © 2021
 theme:                                  j1-template
 
