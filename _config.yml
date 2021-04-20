@@ -47,7 +47,7 @@
 #   values:                             development|production
 #   default:                            production
 #
-environment:                            production
+environment:                            development
 
 # version
 # ------------------------------------------------------------------------------
@@ -602,7 +602,7 @@ defaults:
         follow:                         true
 
       analytics:                        true
-      advertising:                      false
+      advertising:                      true
       comments:                         false
 
       toc:                              true
@@ -640,8 +640,8 @@ defaults:
 #       index:                          true
 #       follow:                         true
 
-      analytics:                        false
-      advertising:                      false
+      analytics:                        true
+      advertising:                      true
       comments:                         true
 
       series:                           false

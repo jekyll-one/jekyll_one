@@ -409,10 +409,10 @@ analytics:
 # Set 'provider' to the analytics provider you want to use
 #
 advertising:
-  enabled:                              false
+  enabled:                              true
   provider:                             google
   google:
-    publisher_id:                       '<your-publisher_id>'
+    publisher_id:                       'ca-pub-9845710891660333'
   custom:
     custom_data:
 
