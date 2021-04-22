@@ -30,25 +30,21 @@ day learning Jekyll, learning how to use Jekyll and J1 for your new website.
 
 == What is a static site?
 
-A static site serves the content straight to the user as it's stored on the
-server-side (see conum:3[] below). To put it in another way, in opposition
-to a Content Management System (CMS) like _Joomla_ or _WordPress_, which use
-a database to load content dynamically, a static site will directly load the
-required data files already prepared on the server.
+A static site serves the content straight to the user as it's already prepared
+(rendered) on the webserver (see conum:3[] below).
 
 .Accessing scheme for a static web
 lightbox::kickstart-wiad--static-web-access[ 800, {data-kickstart-wiad--static-web-access} ]
 
 callout::1["Web Browser"]
 callout::2["Web Server"]
-callout::3["Server-side rendered (prepared) static content", ml-2 mb-3]
+callout::3["Prepared (static) content", ml-2 mb-3]
 
 // NOTE: The static content conum:3[] is generated (prepared) by Jekyll.
 
-As discussed, a static website uses *server-side rendering* to serve *pre-built*
-HTML, CSS, and JavaScript files to a web browser, in contrast to *dynamic
-sites* that work by *rendering* each and every webpage requested *at the time*
-of the *request* (if not loaded from a cache).
+A static website uses already rendered content to serve *pre-built* web pages
+to a web browser, in contrast to *dynamic sites* that work by *rendering* each
+and every webpage requested *at the time* of the *request*.
 
 .Accessing scheme for a dynamic web
 lightbox::kickstart-wiad--dynamic-web-access[ 800, {data-kickstart-wiad--dynamic-web-access} ]
@@ -57,15 +53,16 @@ callout::1["Web Browser"]
 callout::2["Web Server"]
 callout::3["Rendering Engine (e.g. PHP-based)"]
 callout::4["Database (e.g. MySQL, Postgres)"]
-callout::5["Static content (Images, Videos, JS- and CSS files) and Caches", ml-2 mb-3]
+callout::5["Static files like images, videos, JS- and CSS files", ml-2 mb-3]
 
 From the access schema shown above, it's obvious that static websites are
 incredibly simple. For this - and other good reasons - in the last few years,
-static sites have greatly increased in popularity. This increase in using static
-webs is primarily due to the availability of an increasing number of excellent
-developing tools for those webs and, not least, a stronger desire among
-businesses to optimize website performance and security beyond the limits of
-a database-driven CMS-based site.
+static sites have greatly increased in popularity.
+
+This increase in using static webs is primarily due to the availability of an
+increasing number of excellent developing tools for those webs. And not least,
+a stronger desire among businesses to optimize website performance and security
+beyond the limits of a database-driven CMS-based site.
 
 === What's different?
 
@@ -74,12 +71,11 @@ and a scripting engine like PHP (rendering engine) to generate the content
 of a page when a user requests it.
 
 Static sites can be written almost exclusively in HTML and serve a fixed set
-of data that renders the same for every site visitor. Static sites use
-server-side rendering to serve pre-built HTML, CSS, and JavaScript files to
-a web browser. Dynamic sites operate in a completely different way by
-leveraging HTML and CSS as well as server-side scripting languages like
-PHP to build webpages on the fly and serve different content to each site
-visitor.
+of data that renders the same for every site visitor. Static sites uses
+pre-built HTML, CSS, and JavaScript files to a web browser. Dynamic sites
+operate in a completely different way by leveraging HTML and CSS as well as
+server-side scripting languages like PHP to build webpages on the fly and serve
+different content to each site visitor.
 
 === Why use a static site?
 

@@ -8,6 +8,11 @@ description: >
 categories:                             [ Knowledge, Tutorial ]
 tags:                                   [ Generating, Webs ]
 
+sitemap:                                false
+robots:
+  index:                                false
+  follow:                               false
+
 scrollbar:                              false
 comments:                               true
 
