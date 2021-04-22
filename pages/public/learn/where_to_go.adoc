@@ -88,6 +88,7 @@ of some of the top features of J1.
 If you like, continue by walking through the roundtrip examples
 link:/pages/public/learn/roundtrip/present_images/[by starting the tour here].
 
+/////
 Web in a Day::
 To go deeper, you’re invited to *Web in a Day*. This tutorial guides you
 through all the steps to build a website using Jekyll and the template system
@@ -103,3 +104,4 @@ learn what Jekyll and J1 Template is all about. Now, it's on you where
 you start.
 
 Anyway, have a good start using *Jekyll and J1*!
+/////
