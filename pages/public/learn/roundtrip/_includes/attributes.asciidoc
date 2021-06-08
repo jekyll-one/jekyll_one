@@ -31,8 +31,6 @@ tag::urls[]
 :iconify-medical-icons:                           https://iconify.design/icon-sets/medical-icon/
 :iconify-brand-icons:                             https://iconify.design/icon-sets/logos/
 
-:jekyll-one-core-doc-color-scheme:                https://support.jekyll-one.com/user_guide/core/color_scheme
-
 :light-gallery-license:                           http://sachinchoolur.github.io/lightGallery/docs/license.html
 
 :asciidoctor-extensions-lab:                      https://github.com/asciidoctor/asciidoctor-extensions-lab
@@ -60,7 +58,7 @@ tag::urls[]
 
 :previewer-emoji:                                 /pages/public/previewer/twitter_emoji/
 :previewer-mdi:                                   /pages/public/previewer/mdi_font/
-
+:previewer-color-palette:                         /pages/public/previewer/color_palette/
 :previewer-theme:                                 /pages/public/previewer/theme/
 
 :kickstarter-web-in-a-day:                        /pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
