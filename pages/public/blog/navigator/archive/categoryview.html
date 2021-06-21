@@ -7,6 +7,10 @@ description:                            Browse articles by category
 categories:                             [ Navigator ]
 tags:                                   [ Blog, Categories, Viewer ]
 
+robots:
+  index:                                false
+  follow:                               false
+
 sort:                                   date
 toc:                                    true
 fam_menu_id:                            open_toc
@@ -15,7 +19,7 @@ pagination:
   enabled:                              false
   permalink:                            /page:num/
 
-regenerate:                             false
+regenerate:                             true
 
 resources:                              []
 resource_options:
@@ -47,6 +51,7 @@ resource_options:
 {% comment %} Variables
 -------------------------------------------------------------------------------- {% endcomment %}
 {% assign view_config         = site.data.builder.blog_navigator.category_view %}
+{% assign truncate_words      = site.excerpt_truncate_words %}
 {% assign view_description    = view_config.description %}
 {% assign defaults            = site.data.builder.blog_navigator.defaults %}
 
@@ -77,12 +82,16 @@ resource_options:
 -------------------------------------------------------------------------------- {% endcomment %}
 {% capture skip_words %} Posts Public {% endcapture %}
 
+{% assign skip_categories = view_config.skip_categories | split: ", " | join: " " %}
+
+{% comment %} skip_categories:  {{skip_categories | debug}} {% endcomment %}
+
 {% capture site_category_word_list %}{% for category in site.categories %}{{category|first|capitalize|lstrip|rstrip}}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign category_words = site_category_word_list|split:',' %}
 {% assign categories = category_words|uniq %}
 
 {% for category in categories %}
-  {% if skip_words contains category %} {% continue %} {% endif %}
+  {% if skip_categories contains category %} {% continue %} {% endif %}
   {% capture category_list %}{{category_list|append: category}}{% unless forloop.last %},{% endunless %}{% endcapture %}
 {% endfor %}
 
@@ -118,7 +127,7 @@ resource_options:
           {% include {{get_category_item}} category=category %}
           {% include {{select_icon_size}} family=icon_family size=icon_size %}
           {% assign icon_size = size %}
-          {% assign excerpt = post.excerpt|truncatewords:50|replace:'...',' ...'|strip_html|strip_newlines|strip %}
+          {% assign excerpt = post.excerpt|truncatewords: truncate_words|replace:'...',' ...'|strip_html|strip_newlines|strip %}
 
           <!-- Collect comment provider details -->
           {% for sharing in builder_config.sharing_provider %}
@@ -150,15 +159,15 @@ resource_options:
                   <div class="card-footer-text">
                     <hr class="my-3">
                     {% if post.date %}
-                    <i class="mdi mdi-calendar-blank mdi-md-grey mr-1"></i> {{post.date | date: "%Y %B, %e"}}
+                    <i class="mdi mdi-calendar-blank mr-1"></i> {{post.date | date: "%Y %B, %e"}}
                     {% endif %}
                     {% if likes_count %}
                     <span class="font-weight-bold"> · </span>
-                    <i class="mdi mdi-heart mdi-md-grey mr-1"></i> {{likes_count}}
+                    <i class="mdi mdi-heart mr-1"></i> {{likes_count}}
                     {% endif %}
                     {% if comment_count %}
                     <span class="font-weight-bold"> · </span>
-                    <i class="mdi mdi-comment mdi-md-grey mr-1"></i> {{comment_count}}
+                    <i class="mdi mdi-comment mr-1"></i> {{comment_count}}
                     {% endif %}
                   </div>
                   <a class="card-link text-muted text-lowercase"

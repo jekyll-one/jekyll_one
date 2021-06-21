@@ -53,7 +53,7 @@ environment:                            production
 # ------------------------------------------------------------------------------
 #   Sets the build version of J1 Template Gem
 #
-version:                                2021.1.2
+version:                                2021.1.3
 
 # version
 # ------------------------------------------------------------------------------
@@ -525,6 +525,7 @@ whitelist:
 # EXCERPT settings
 #
 excerpt_separator:                      excerpt__end
+excerpt_truncate_words:                 100
 
 # ------------------------------------------------------------------------------
 # COLLECTION settings

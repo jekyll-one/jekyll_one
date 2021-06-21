@@ -7,6 +7,10 @@ description:                            Browse all articles
 categories:                             [ Navigator ]
 tags:                                   [ Blog, Archive, Viewer ]
 
+robots:
+  index:                                false
+  follow:                               false
+
 sort:                                   date
 toc:                                    true
 fam_menu_id:                            open_toc
@@ -112,7 +116,7 @@ resource_options:
             <div class="card-footer-text">
               <hr class="my-3">
               {% if post.date %}
-              <i class="mdi mdi-calendar-blank mdi-md-grey mr-1"></i> {{post.date | date: "%Y %B, %e"}}
+              <i class="mdi mdi-calendar-blank mr-1"></i> {{post.date | date: "%Y %B, %e"}}
               {% endif %}
               {% if likes_count %}
               <span class="font-weight-bold"> · </span>

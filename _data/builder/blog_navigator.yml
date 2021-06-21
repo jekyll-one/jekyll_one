@@ -146,7 +146,7 @@ article_previewer:
                                         All articles are reverse ordered by date. The current articles are displayed
                                         first. To preview older posts, use the button <b>Older Posts</b> from the
                                         Preview Bar. For newer posts use the button <b>Newer Posts</b> for
-                                        more recent articles. 
+                                        more recent articles.
 
 archive_view:
   enabled:                              true
@@ -165,6 +165,7 @@ archive_view:
 category_view:
   enabled:                              true
   word_cloud:                           true
+  skip_categories:                      Posts, Public  
   description: >
                                         Check out <b>all</b> articles in the blog posts <b>archive</b>.
                                         Below, find articles available this site <b>grouped</b> by
