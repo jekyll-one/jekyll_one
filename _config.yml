@@ -53,7 +53,7 @@ environment:                            production
 # ------------------------------------------------------------------------------
 #   Sets the build version of J1 Template Gem
 #
-version:                                2021.1.4
+version:                                2021.1.5
 
 # version
 # ------------------------------------------------------------------------------
@@ -232,18 +232,22 @@ keywords:                               Jekyll, One, Template, Ruby, Asciidoctor
                                         Asciidoc, Bootstrap, Javascript,
                                         JS, JS3, CSS, CSS3, HTML5, Material, Design
 author:
-  name:                                 Juergen Adams
-  email:                                juergen@jekyll.one
+  name:                                 username
+  email:                                username@email.domain
   github:                               username
   twitter:                              username
   feedburner:                           feedname
 
 webmaster:
-  email:                                webmaster@jekyll.one
+  email:                                webmaster@example.domain
 
+# crawling/indexing DISABLED for default. Settings managed page-wise using
+# frontmatter defaults or by page settings to make sure that only WANTED
+# pages gets crawled.
+#
 robots:
-  index:                                true
-  follow:                               true
+  index:                                false
+  follow:                               false
 
 # ------------------------------------------------------------------------------
 # BRAND configuration
@@ -312,8 +316,7 @@ permalink:                              pretty
 # domain http|s://your-site.domain here. Accessible in Liquid as
 # "site.url". For the development environment there is an EXCEPTION:
 # if you are running jekyll serve in a development environment,
-# site.url will be set to the value of host, port. This defaults to
-# url: http://localhost:4000.
+# site.url will be set to the value of host, port.
 #
 url:                                    "https://jekyll.one"
 
@@ -323,12 +326,6 @@ url:                                    "https://jekyll.one"
 #
 baseurl:                                ""
 
-# TODO: Following parameters should moved to header or panel that uses
-# these values (production_url, download_url, base_path)
-#
-#production_url:                        http://jekyll.one
-#download_url:                          http://jekyll.one/downloads
-
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt. For most places will/should use base_path to
 # make the URLs.
@@ -336,14 +333,12 @@ baseurl:                                ""
 base_path:                              ""
 
 # ------------------------------------------------------------------------------
-# TODO: Following parameters should moved to the components that uses
-# these values (protocol, host, port)
 # Base hostname and protocol for the site
 #
 #  Defaults:
 #   protocol:                           http
 #   host:                               localhost
-#   port:                               13000
+#   port:                               40000
 #   timezone:                           Europe/Berlin
 #   encoding:                           UTF-8
 #
@@ -395,7 +390,7 @@ exclude:                                [
 keep_files:                             []
 
 safe:                                   false
-strict_front_matter:                    true
+strict_front_matter:                    false
 
 # ------------------------------------------------------------------------------
 # SASS conversion options
@@ -425,10 +420,10 @@ sass:
 # POSTS Management
 # Set the post articles to include, exclude and ignore
 #
-#future:                                false
-#show_drafts:                           false
-#unpublished:                           false
-#limit_posts:                           10
+future:                                 true                                    # workaround (non US) TZ issues (of April 2021)
+show_drafts:                            false
+unpublished:                            false
+limit_posts:                            1000000                                 # set to UNLIMITED
 
 # ------------------------------------------------------------------------------
 # LIQUID template engine
@@ -440,16 +435,16 @@ liquid:
 # PLUGIN configuration
 #
 plugins:
+# - algolia
   - asciidoctor
 # - asciidoctor-pdf
   - jekyll-asciidoc
-# - jekyll-algolia
 # - jekyll-feed
 # - jekyll-gist
-  - jekyll-sitemap
 # - jekyll-redirect-from
-  - j1-paginator
 # - jekyll-sass-converter
+# - jekyll-sitemap
+  - j1-paginator
 
 # ------------------------------------------------------------------------------
 # JEKYLL FEED
@@ -598,12 +593,12 @@ defaults:
       layout:                           page
       author:                           J1 Team
 
-      robots:
-        index:                          true
-        follow:                         true
+#     robots:
+#       index:                          true
+#       follow:                         true
 
-      analytics:                        true
-      advertising:                      true
+      analytics:                        false
+      advertising:                      false
       comments:                         false
 
       toc:                              true
@@ -630,20 +625,20 @@ defaults:
   # PUBLIC - FEATURED
   #
   - scope:
-      path:                             posts/public/featured
+      path:                             posts/public/featured/_posts
       type:                             posts
 
     values:
       layout:                           post
       author:                           J1 Team
 
-      robots:
-        index:                          true
-        follow:                         true
+#     robots:
+#       index:                          true
+#       follow:                         true
 
-      analytics:                        true
-      advertising:                      true
-      comments:                         true
+      analytics:                        false
+      advertising:                      false
+      comments:                         false
 
       series:                           false
 
@@ -680,9 +675,9 @@ defaults:
 #       index:                          true
 #       follow:                         true
 
-      analytics:                        true
-      advertising:                      true
-      comments:                         true
+      analytics:                        false
+      advertising:                      false
+      comments:                         false
 
       series:                           true
 
@@ -710,10 +705,6 @@ defaults:
     values:
       layout:                           post
       author:                           Wikipedia
-
-      robots:
-        index:                          false
-        follow:                         false
 
       analytics:                        false
       advertising:                      false

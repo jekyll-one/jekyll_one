@@ -130,7 +130,7 @@ defaults:
               icon_color:               md_white
               icon_size:                lg
               href:                     javascript:void(0)
-              target:                   blank
+              target:                   _blank
 
           - button:
               text:                     Button-2
@@ -139,7 +139,7 @@ defaults:
               icon_color:               md_white
               icon_size:                lg
               href:                     javascript:void(0)
-              target:                   blank
+              target:                   _blank
 
           - button:
               text:                     Button-3
@@ -148,7 +148,7 @@ defaults:
               icon_color:               md_white
               icon_size:                lg
               href:                     javascript:void(0)
-              target:                   blank
+              target:                   _blank
   # ----------------------------------------------------------------------------
   # IMAGE banner
   #
@@ -184,7 +184,7 @@ defaults:
             icon_color:                 md_white
             icon_size:                  lg
             href:                       javascript:void(0)
-            target:                     blank
+            target:                     _blank
 
   # ----------------------------------------------------------------------------
   # PARALLAX banner
@@ -229,7 +229,7 @@ defaults:
             icon_color:                 md_white
             icon_size:                  lg
             href:                       javascript:void(0)
-            target:                     blank
+            target:                     _blank
 
   # ----------------------------------------------------------------------------
   # EXCEPTION banner

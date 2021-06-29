@@ -129,6 +129,10 @@
 #
 # ------------------------------------------------------------------------------
 #
+
+defaults:
+  post_image:                           /assets/images/modules/attics/christa-dodoo-1920x1280.jpg
+
 previewer:                              timeline
 
 article_navigator:
@@ -165,7 +169,7 @@ archive_view:
 category_view:
   enabled:                              true
   word_cloud:                           true
-  skip_categories:                      Posts, Public  
+  skip_categories:                      Posts, Public
   description: >
                                         Check out <b>all</b> articles in the blog posts <b>archive</b>.
                                         Below, find articles available this site <b>grouped</b> by

@@ -225,7 +225,7 @@ the principal shading language for OpenGL.
 
 |`go`
 |golang
-|The https://golang.org/[Go, {browser-window--new}]
+|The https://golang.org/[Programming language Go, {browser-window--new}]
 programming language. Go is an open source programming language that makes it
 easy to build simple, reliable, and efficient software.
 

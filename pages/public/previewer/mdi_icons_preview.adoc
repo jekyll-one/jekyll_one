@@ -1,24 +1,22 @@
 ---
 title:                                  MDI Icon Previewer
 tagline:                                search and select mdi icons
-date:                                   2020-11-08 00:00:00
+date:                                   2020-11-08 00:00:00 +100
 description: >
                                         Previewer for Material Design Icons (MDI) for J1 Template.
                                         Material Design Icons is a growing icon collection allows
                                         designers and developers targeting various platforms to download
                                         icons in the format, color and size they need for any project.
 
-tags:                                   [ Design, MDI, Icon, Fonts ]
-categories:                             [ App, Preview ]
+categories:                             [ Preview ]
+tags:                                   [ MDI, Icons, Fonts ]
 
 scrollbar:                              false
-comments:                               true
-fam_menu_id:                            page_ctrl_simple
 
 permalink:                              /pages/public/previewer/mdi_font/
 regenerate:                             false
 
-resources:                              [ clipboard, lightbox, rouge, mdi_previewer, fam ]
+resources:                              [ clipboard, lightbox, rouge, mdi_previewer ]
 resource_options:
   - attic:
       padding_top:                      400
@@ -91,21 +89,19 @@ include equivalent text either inside the `<i>` tag or right next to it
 click to reply, the link is usable if CSS doesn't load, and human readers
 with good eyesight and a decent browser see a pretty icon.
 
-/////
 == Asciidoc Markup
+
+For pages using Asciidoc for the source (default), a easier solution is to
+use  Markups from Asciidoc.
 
 [source, html]
 ----
-pass:[<i class="mdi mdi-3x mdi-star"></i>] <1>
-mdi:star[3x] <2>
+pass:[<i class="mdi mdi-<name> mdi-<size> mdi-<modifier>"></i>] <1>
+mdi:<name>[<size>, <modifier>] <2>
 ----
 <1> Markup using a pass block
-<2> Markup using the Asciidoc extension
+<2> Markup using the Asciidoc extension (mdi:)
 
-NOTE: The `<i>` tag provides more meaning to machines because of the HTML spec,
-it provides more meaning to *humans* because the `i` can easily associated with
-`icon`.
-/////
 
 == Sizes
 
@@ -211,7 +207,7 @@ from `50` to `900` but for `Pink` mostly the default `weight` of `500` is used.
 
 include::{tabledir}/mdi_icons/602_md_color_palette_pink.asciidoc[]
 
-== Icon Overview
+==  Icon Overview
 
 The Material Design Icon Font support a rich set of 5900+ icons
 (version  v5.9.55)  from a wide varity of topics.
@@ -222,5 +218,3 @@ NOTE: Click on the elements below to copy icon data to clipboard
 <!-- div class="my-popper">Popper element</div -->
 <div id="icons" class="icons"></div>
 ++++
-
-== Leave a comment

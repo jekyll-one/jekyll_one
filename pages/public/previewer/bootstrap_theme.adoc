@@ -1,7 +1,7 @@
 ---
 title:                                  Theme previewer
 tagline:                                common components
-date:                                   2020-11-08 00:00:00
+date:                                   2020-11-08 00:00:00 +100
 description: >
                                         Bootstrap is a HTML, CSS & JS Library that focuses on
                                         simplifying the development of modern web pages. The
@@ -18,8 +18,6 @@ tags:                                   [ Bootstrap, Themes ]
 
 scrollbar:                              false
 flowtext:                               false
-comments:                               true
-fam_menu_id:                            page_ctrl_simple
 
 permalink:                              /pages/public/previewer/theme/
 regenerate:                             false
@@ -2081,5 +2079,3 @@ NOTE: Popovers and Tooltips require the BS tooltip plugin as a dependency.
     </div>
   </div>
 ----
-
-== Leave a comment

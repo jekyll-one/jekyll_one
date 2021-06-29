@@ -18,6 +18,8 @@ google*.html
 
 tmp/
 
+\.bundle/
+
 \.idea/
 
 \.vscode/
@@ -54,5 +56,3 @@ _site/
 .jekyll-cache/
 
 .sass-cache/
-
-.bundle/

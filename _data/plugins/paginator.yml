@@ -21,11 +21,23 @@ about_config:
   location:                             _data/plugins/paginator.yml
 
 # ------------------------------------------------------------------------------
+# GENERAL plugin settings
+#
+# enabled
+# ------------------------------------------------------------------------------
+#   Enables|Disables the plugin for processing
+#
+#   values:                             true|false (boolean)
+#   default:                            false
+#
+#enabled:                                true
+
+# ------------------------------------------------------------------------------
 # User configuration settings
 #
 settings:
 
-  # ------------------------------------------------------------------------------
+  # ----------------------------------------------------------------------------
   # PAGINATION settings
   #
   pagination:

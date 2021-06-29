@@ -1,17 +1,17 @@
 {
   "private": true,
-  "name": "jekyll_one",
-  "version": "2021.1.1",
-  "description": "J1 Home",
-  "homepage": "https://jekyll.one",
+  "name": "j1_starter",
+  "version": "2021.1.5",
+  "description": "J1 Template Starter Web",
+  "homepage": "https://your.site",
   "author": {
-    "name": "Jurgen Adams",
+    "name": "Your Name",
     "email": "name@mail.site",
-    "url": "https://jekyll.one"
+    "url": "https://your.site"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://jekyll.one"
+    "url": "https://your.site"
   },
   "config": {
     "bumplevel": "patch",
@@ -19,9 +19,9 @@
     "loglevel": "silent"
   },
   "engines": {
-    "node": ">=10.0",
+    "node": ">=12.0",
     "npm": ">=6.0",
-    "yarn": ">=1.6"
+    "yarn": ">=1.22"
   },
   "keywords": [
     "Jekyll",
@@ -41,14 +41,14 @@
     "opt_skip_initial_build": "--skip-initial-build",
     "opt_webserver": "puma",
     "opt_interface": "0.0.0.0",
-    "opt_web_port": "13000",
-    "opt_web_url": "http://localhost:13000/",
-    "opt_app_port": "13010",
-    "opt_app_url": "http://localhost:13010/",
+    "opt_web_port": "40000",
+    "opt_web_url": "http://localhost:40000/",
+    "opt_app_port": "40010",
+    "opt_app_url": "http://localhost:40010/",
     "opt_profile": "",
     "opt_watch": "--watch",
     "opt_livereload": "--livereload",
-    "opt_livereload_port": "13001"
+    "opt_livereload_port": "40001"
   },
   "algolia": {
     "admin_key": "your-algolia-admin-key"
@@ -57,7 +57,6 @@
     "app": "run-p -s app:*",
     "app:rackup": "cross-env SINATRA_ACTIVESUPPORT_WARNING=false WEBSERVER=$npm_package_jekyll_opt_webserver INTERFACE=$npm_package_jekyll_opt_interface PORT=$npm_package_jekyll_opt_app_port j1 rackup",
     "app:jekyll": "cross-var cross-env JEKYLL_ENV=$npm_package_config_mode BUNDLE_GEMFILE=$npm_package_ruby_gemfile bundle exec jekyll b -c $npm_package_jekyll_configfile $npm_package_jekyll_opt_incremental --watch",
-    "app:utilsrv": "echo Startup utility server .. && npm --prefix ./utilsrv --silent run utilsrv",
     "app:open": "npm run delay-3s && cross-var opn $npm_package_jekyll_opt_app_url",
     "delay-1s": "node ./node_modules/npm-delay 1000",
     "delay-2s": "node ./node_modules/npm-delay 2000",
@@ -117,8 +116,8 @@
     "setup:detect-os": "echo Detect OS .. && cross-env if-env OS=Windows_NT && cross-var echo \"OS detected: $OS\" || OS=$(echo $(getos)) && echo \"OS detected: $OS\" && echo done.",
     "setup:site": "run-s -s build",
     "site": "run-p -s site:*",
-    "site:utilsrv": "echo Startup utility server .. && npm --prefix ./utilsrv --silent run utilsrv",
     "site:jekyll": "echo Startup the site .. && cross-env SINATRA_ACTIVESUPPORT_WARNING=false bundle exec jekyll s --incremental --livereload --livereload-port $npm_package_jekyll_opt_livereload_port --open",
+    "site:utilsrv": "npm --prefix ./utilsrv --silent run utilsrv",
     "bump": "run-s -s ver && run-s -s bump:* && run-s -s ver",
     "ver": "cross-var cross-env echo \"Project version: $npm_package_version\"",
     "bump:project": "cross-var cross-env npm version $npm_package_config_bumplevel",

@@ -108,13 +108,13 @@ tag::urls[]
 :url-docker--home:                                https://getbootstrap.com/
 :url-docker--docs:                                https://docs.docker.com/
 
-:url-digitalocean--tutorials:                     https://www.digitalocean.com/community/tutorials
-:url-digitalocean--jekyll-tutorials:              https://www.digitalocean.com/community/tags/jekyll
-
 :url-eslint--home:                                https://eslint.org/
 :url-eslint--gh-repo:                             https://github.com/eslint/eslint
 
 :url-execjs--gh-repo:                             https://github.com/rails/execjs
+
+:url-facebook--privacy-policy-en:                 https://www.facebook.com/policy.php
+:url-facebook--privacy-policy-de:                 https://de-de.facebook.com/policy.php
 
 :url-filamentgroup--home:                         https://www.filamentgroup.com/
 
@@ -140,6 +140,8 @@ tag::urls[]
 :url-gdpr-eu--home:                               https://gdpr.eu/
 
 :url-google-material-design-icons--gh-repo:       https://github.com/google/material-design-icons
+:url-google--deactivate-ga-en:                    http://tools.google.com/dlpage/gaoptout?hl=en
+:url-google--privacy-policy-en:                   https://www.google.de/intl/en/policies/privacy
 
 :url-heroku--home:                                https://www.heroku.com/home
 
@@ -148,6 +150,8 @@ tag::urls[]
 :url-iconify--medical-icons:                      https://iconify.design/icon-sets/medical-icon/
 :url-iconify--brand-icons:                        https://iconify.design/icon-sets/logos/
 
+:url-instagram--privacy-policy:                   http://instagram.com/about/legal/privacy/
+
 :url-iframe-resizer--gh-repo:                     https://github.com/davidjbradshaw/iframe-resizer
 
 :url-j1--home:                                    https://jekyll.one/
@@ -155,8 +159,8 @@ tag::urls[]
 :url-j1--versions:                                https://rubygems.org/gems/j1-template/versions/
 :url-j1-rubydoc--home:                            https://www.rubydoc.info/gems/j1-template/
 :url-j1--preview:                                 https://preview.jekyll.one/
-
 :url-j1--quickstart:                              https://jekyll.one/pages/public/learn/quickstart/
+
 :url-j1-kickstarter--web-in-a-day:                https://jekyll.one/pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
 :url-j1-web-in-a-day--meet-and-greet:             https://jekyll.one/pages/public/learn/kickstarter/web_in_a_day/meet_and_greet/
 
@@ -184,9 +188,6 @@ tag::urls[]
 :url-jekyll-redirect-from--gh-repo:               https://github.com/jekyll/jekyll-redirect-from
 :url-jekyll-sass-converter--gh-repo:              https://github.com/jekyll/jekyll-sass-converter
 :url-jekyll-sitemap--gh-repo:                     https://github.com/jekyll/jekyll-sitemap
-
-:url-jekyll-tips--home:                           https://learn.cloudcannon.com/
-:url-jekyll-tips--why-use-static-site-generator:  https://learn.cloudcannon.com/jekyll/why-use-a-static-site-generator/
 
 :url-jquery--home:                                https://jquery.com/
 
@@ -310,6 +311,8 @@ tag::urls[]
 
 :url-twitter-emoji--gh-repo:                      https://github.com/twitter/twemoji
 :url-twitter-emoji-picker--gh-repo:               https://github.com/xLs51/Twemoji-Picker
+:url-twitter--privacy-en:                         https://twitter.com/en/privacy
+:url-twitter--login:                              https://twitter.com/login
 
 :url-uglifier--gh-repo:                           https://github.com/lautis/uglifier
 
@@ -340,9 +343,6 @@ end::urls[]
 // -----------------------------------------------------------------------------
 tag::tags[]
 :browser-window--new:                             window="_blank"
-:browser-window--rel:                             rel="noopener noreferrer"
-:browser-window--rel-noopener:                    rel="noopener"
-:browser-window--rel-noreferrer:                  rel="noreferrer"
 :clipboard--noclip:                               noclip
 :figure-caption--text:                            Figure
 
@@ -412,14 +412,14 @@ end::tables[]
 // -----------------------------------------------------------------------------
 tag::products[]
 :j1--license:                                     MIT License
-:j1--version:                                     2021.1.1
-:j1--​site-name:                                   J1 Template
+:j1--version:                                     2021.1.5
+:j1--site-name:                                   Jekyll One
 end::products[]
 
 
 // AUTHORS, global author information (special variables)
 // -----------------------------------------------------------------------------
 tag::authors[]
-:author-adams--name:                              "Jürgen Adams"
-:author-adams--url:                               https://jekyll.one
+:author--adams--name:                             "Jürgen Adams"
+:author--adams--url:                              https://jekyll.one
 end::authors[]
