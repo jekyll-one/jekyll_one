@@ -338,6 +338,26 @@ Used version:   4.6.0
 Year:           2021
 ----
 
+|{url-bs-cookie-banner--gh-repo}[Bootstrap Cookie Banner, {browser-window--new}]
+|Stefan Haack
+|JS
+|A modal dialog (cookie banner) and framework to handle the German and EU
+law (as written by EuGH link:{url-gdpr--C-673-17}[C-673/17, {browser-window--new}])
+about cookies in a website. Based on Bootstrap 4.
+
+NOTE: For the background of the privacy regulations introduces by
+{url-gdpr-eu--home}[GDPR, {browser-window--new}] in Europe and associated
+countries, cookie consent dialogs are required to inform your vistors to
+comply legal requirements. The API of _Bootstrap Cookie Banner_ is fully
+integrated with J1 Template.
+
+.Product details
+----
+License:        MIT license
+Used version:   1.1.2
+Year:           2020
+----
+
 |{url-bs-theme-switcher--gh-repo}[Bootstrap ThemeSwitcher, {browser-window--new}]
 |Joseph Guadagno
 |CSS, JS
@@ -572,29 +592,24 @@ Used version:   1.10.16
 Year:           2019
 ----
 
-|===============================================================================
-
-/////
-Unsinn da eigene Komponente
-
-|*Cookiebar*
-|Jürgen Adams
+|{url-ga-optin--home}[Google Analytics Opt In, {browser-window--new}]
+|Lucio Martinez
 |JS
-|Cookiebar implements simple but fully configurable cookie consent dialogs
-to accept or reject on cookies by the vistors of a J1-based website.
+|_Google Analytics Opt In_ is a browser library to opt-in in Google
+Analytics. As a plus, it configures Analytics to *anonymize* IP addresses.
 
-NOTE: For the background of the privacy regulations introduces by
-{url-gdpr-eu--home}[GDPR, {browser-window--new}] in Europe and associated
-countries, cookie consent dialogs are required to inform your vistors to
-comply legal requirements.
+NOTE: _Google Analytics Opt In_ is integrated with the CookieConsent module
+of J1 to enable the cookie consent fully compatible with the General Data
+Protection Regulation (GDPR) of the European Union.
 
 .Product details
 ----
 License:        MIT license
-Used version:   2021.1.1
-Year:           2021
+Used version:   2.0.0
+Year:           2020
 ----
-/////
+
+|===============================================================================
 
 === E - G
 

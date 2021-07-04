@@ -90,6 +90,8 @@ tag::urls[]
 
 :url-bs-theme-switcher--gh-repo:                  https://github.com/jguadagno/bootstrapThemeSwitcher
 
+:url-bs-cookie-banner--gh-repo:                   https://github.com/shaack/bootstrap-cookie-consent-settings
+
 :url-bootswatch--home:                            https://bootswatch.com/
 :url-bootswatch--api:                             https://bootswatch.com/help/#api
 
@@ -100,6 +102,8 @@ tag::urls[]
 :url-cash--gh-repo:                               https://github.com/fabiospampinato/cash
 :url-clipboard--gh-repo:                          https://github.com/zenorocha/clipboard.js/
 
+
+:url-gdpr--C-673-17:                              https://curia.europa.eu/juris/liste.jsf?oqp=&for=&mat=or&lgrec=de&jge=&td=%3BALL&jur=C%2CT%2CF&num=C-673%252F17&page=1&dates=&pcs=Oor&lg=&pro=&nat=or&cit=none%252CC%252CCJ%252CR%252C2008E%252C%252C%252C%252C%252C%252C%252C%252C%252C%252Ctrue%252Cfalse%252Cfalse&language=en&avg=&cid=25024752
 :url-cors--gh-repo:                               https://github.com/expressjs/cors
 :url-cross-env--gh-repo:                          https://github.com/kentcdodds/cross-env
 :url-cross-var--gh-repo:                          https://github.com/elijahmanor/cross-var
@@ -123,6 +127,8 @@ tag::urls[]
 :url-fontawesome--get-started:                    https://fontawesome.com/get-started
 :url-fontawesome-free--gh-repo:                   https://github.com/FortAwesome/Font-Awesome
 :url-fsevents--gh-repo:                           https://github.com/fsevents/fsevents
+
+:url-ga-optin--home:                              https://github.com/luciomartinez/gtag-opt-in
 
 :url-getos--gh-repo:                              https://github.com/retrohacker/getos
 
@@ -412,7 +418,7 @@ end::tables[]
 // -----------------------------------------------------------------------------
 tag::products[]
 :j1--license:                                     MIT License
-:j1--version:                                     2021.1.5
+:j1--version:                                     2021.1.8
 :j1--site-name:                                   Jekyll One
 end::products[]
 

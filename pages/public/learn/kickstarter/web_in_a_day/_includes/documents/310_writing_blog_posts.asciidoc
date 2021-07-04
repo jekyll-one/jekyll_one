@@ -1,9 +1,0 @@
-// lorem:sentences[3]
-
-// lorem:sentences[5]
-
-== Writing Blog Posts
-
-// lorem:sentences[5]
-
-// lorem:sentences[3]

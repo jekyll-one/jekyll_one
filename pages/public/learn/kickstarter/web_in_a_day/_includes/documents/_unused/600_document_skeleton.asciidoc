@@ -1,9 +1,0 @@
-// lorem:sentences[3]
-
-// lorem:sentences[5]
-
-== Document Skeleton
-
-// lorem:sentences[5]
-
-// lorem:sentences[3]

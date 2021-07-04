@@ -90,7 +90,7 @@ If you're an experienced user of _Jekyll_, the latest version is available at
 * Themeable source code highlighting (Rouge)
 * Desktop and Mobile Web and Navigation ready
 * Fully configurable
-* 100/100 Google Lighthouse scores
+* 100/100/100 Google Lighthouse scores (performance depends on the webbrowser)
 
 === Modules and Extensions
 
@@ -99,6 +99,7 @@ If you're an experienced user of _Jekyll_, the latest version is available at
 * Smooth-scoll support
 * Full-text search engine included (Lunr)
 * Blog Post navigation included
+* Cookie Consent module (GDPR compatible) included
 * Clipboard module included
 * Floating Action Buttons included
 * Navigation modules included
@@ -112,5 +113,5 @@ If you're an experienced user of _Jekyll_, the latest version is available at
 * Featured example content included
 * Royalty free images included
 * Disqus support
-* Google Analytics support
+* Google Analytics support (includes OptIn/OptOut support)
 * Deploy to Github Pages, Netlify and Heroku ready
