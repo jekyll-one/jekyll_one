@@ -387,7 +387,7 @@ comments:
   provider:                             disqus
 
   disqus:
-    short_name:                         '<your-site-id>'
+    short_name:                         jekyll-one
 
 # facebook:                                                                     # currently NOT supported
 #   appid:                              123
@@ -409,7 +409,7 @@ analytics:
   provider:                             google
 
   google:
-    tracking_id:                        '<your-tracking-id>'
+    tracking_id:                        'G-8ZGNE0WE42'
 
 # custom:                                                                       # currently NOT supported
 #   custom_data:
