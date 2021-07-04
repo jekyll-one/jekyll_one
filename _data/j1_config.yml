@@ -383,7 +383,7 @@ body:
 #
 # ------------------------------------------------------------------------------
 comments:
-  enabled:                              false
+  enabled:                              true
   provider:                             disqus
 
   disqus:
@@ -405,7 +405,7 @@ comments:
 # Set 'provider' to the analytics provider you want to use
 #
 analytics:
-  enabled:                              false
+  enabled:                              true
   provider:                             google
 
   google:
