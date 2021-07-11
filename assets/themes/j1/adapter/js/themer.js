@@ -114,6 +114,7 @@ j1.adapter['themer'] = (function (j1, window) {
   var _this;
   var logger;
   var logText;
+  var cookie_written;
 
   var cssExtension              = (environment === 'production')
                                   ? '.min.css'
@@ -190,18 +191,24 @@ j1.adapter['themer'] = (function (j1, window) {
            // jadams, 2021-07-11: unclear why the cookie consent is checked here
            if (!user_consent.analyses || !user_consent.personalization)  {
              // expire state cookie to session
-             j1.writeCookie({
+             cookie_written = j1.writeCookie({
                name:     cookie_names.user_state,
                data:     user_state,
                samesite: 'Strict'
              });
+             if (!cookie_written) {
+             	logger.error('failed to write cookie: ' + cookie_names.user_state);
+             }
            } else {
-             j1.writeCookie({
+             cookie_written = j1.writeCookie({
                name:     cookie_names.user_state,
                data:     user_state,
                samesite: 'Strict',
                expires:  365
              });
+             if (!cookie_written) {
+             	logger.error('failed to write cookie: ' + cookie_names.user_state);
+             }
            }
 
            if (themerOptions.enabled) {
