@@ -267,28 +267,51 @@ var j1 = (function () {
         var url;
         var baseUrl;
 
-        user_state.session_active     = false;
-        user_state.last_session_ts    = timestamp_now;
+        if (user_state) {
+          user_state.session_active     = false;
+          user_state.last_session_ts    = timestamp_now;
 
-        if (!user_consent.analyses || !user_consent.personalization)  {
-          // expire consent|state cookies to session
-          cookie_written = j1.writeCookie({
-            name:     cookie_names.user_consent,
-            data:     user_state,
-            samesite: 'Strict'
-          });
-          if (!cookie_written) {
-            logger.error('failed to write cookie: ' + cookie_names.user_consent);
-          }
-          cookie_written = j1.writeCookie({
-            name:     cookie_names.user_state,
-            data:     user_state,
-            samesite: 'Strict'
-          });
-          if (!cookie_written) {
-          	logger.error('failed to write cookie: ' + cookie_names.user_consent);
+          if (!user_consent.analyses || !user_consent.personalization)  {
+            // expire consent|state cookies to session
+            cookie_written = j1.writeCookie({
+              name:     cookie_names.user_consent,
+              data:     user_state,
+              samesite: 'Strict'
+            });
+            if (!cookie_written) {
+              logger.error('failed to write cookie: ' + cookie_names.user_consent);
+            }
+            cookie_written = j1.writeCookie({
+              name:     cookie_names.user_state,
+              data:     user_state,
+              samesite: 'Strict'
+            });
+            if (!cookie_written) {
+            	logger.error('failed to write cookie: ' + cookie_names.user_consent);
+            }
+          } else {
+            cookie_written = j1.writeCookie({
+              name:     cookie_names.user_state,
+              data:     user_state,
+              samesite: 'Strict',
+              expires:  365
+            });
+            if (!cookie_written) {
+            	logger.error('failed to write cookie: ' + cookie_names.user_state);
+            }
           }
         } else {
+          // jadams, 2021-07-11: write INITIAL values to user_state cookie
+          // if content detected as invalid (unknown reason for NOW)
+          user_state = {
+            'theme_css':            '',
+            'theme_name':           '',
+            'theme_author':         '',
+            'theme_version':        '{{site.version}}',
+            'session_active':       false,
+            'last_session_ts':      ''
+          };
+          logger.fatal('inconsistent state detected for cookie: ' + cookie_names.user_state);
           cookie_written = j1.writeCookie({
             name:     cookie_names.user_state,
             data:     user_state,
@@ -296,10 +319,11 @@ var j1 = (function () {
             expires:  365
           });
           if (!cookie_written) {
-          	logger.error('failed to write cookie: ' + cookie_names.user_state);
+            logger.error('failed to write cookie: ' + cookie_names.user_state);
+          } else {
+            logger.warn('write initial values to cookie: ' + cookie_names.user_state);
           }
         }
-
       }); // END beforeunload
 
       // -----------------------------------------------------------------------

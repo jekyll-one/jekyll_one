@@ -92,7 +92,7 @@ j1.adapter['cookieConsent'] = (function (j1, window) {
   var logger;
   var logText;
   var cookie_written;
-  
+
   // NOTE: RegEx for tracking_id: ^(G|UA|YT|MO)-[a-zA-Z0-9-]+$
   // See: https://stackoverflow.com/questions/20411767/how-to-validate-google-analytics-tracking-id-using-a-javascript-function/20412153
 
@@ -215,8 +215,9 @@ j1.adapter['cookieConsent'] = (function (j1, window) {
     // -------------------------------------------------------------------------
     cbCookie: function () {
       var gaCookies           = j1.findCookie('_ga');
-      var user_state          = j1.readCookie('j1.user.state');
-      var user_consent        = j1.readCookie('j1.user.consent');
+      var cookie_names        = j1.getCookieNames();
+      var user_state          = j1.readCookie(cookie_names.user_state);
+      var user_consent        = j1.readCookie(cookie_names.user_consent);
       var json                = JSON.stringify(user_consent);
       var user_agent          = platform.ua;
 
@@ -271,21 +272,21 @@ j1.adapter['cookieConsent'] = (function (j1, window) {
         if (!user_consent.analyses || !user_consent.personalization)  {
           // expire consent|state cookies to session
           cookie_written = j1.writeCookie({
-            name:     'j1.user.state',
+            name:     cookie_names.user_state,
             data:     user_state,
             samesite: 'Strict'
           });
           if (!cookie_written) {
-          	logger.error('failed to write cookie: j1.user.state');
+          	logger.error('failed to write cookie: ' + cookie_names.user_state);
           }
 
           cookie_written = j1.writeCookie({
-            name:     'j1.user.consent',
+            name:     cookie_names.user_consent,
             data:     user_consent,
             samesite: 'Strict'
           });
           if (!cookie_written) {
-          	logger.error('failed to write cookie: j1.user.consent');
+          	logger.error('failed to write cookie: ' + cookie_names.user_consent);
           }
         }
 
